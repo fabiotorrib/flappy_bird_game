@@ -1,0 +1,36 @@
+# Arquivos binários e objetos
+*.o
+*.obj
+*.so
+*.exe
+*.out
+*.a
+*.lib
+*.dll
+*.dylib
+
+# Diretórios de build
+/build/
+bin/
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+
+# Arquivos de IDEs
+.vscode/
+.idea/
+
+# Arquivos do CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
+CMakeScripts/
+
+# Arquivos de log
+*.log
+
+# Diretórios de dependências e bibliotecas externas (se estiver usando vcpkg ou outro gerenciador)
+/external/
