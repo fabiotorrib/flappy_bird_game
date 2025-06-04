@@ -1,6 +1,6 @@
-#ifndef DEFINES_H_INCLUDED
-#define DEFINES_H_INCLUDED
-
+#pragma once
+//estados
+enum ScreenState { MAIN_MENU, PLAY, PAUSE, GAME_OVER, EXIT};
 
 //resolucao
 #define SCREEN_H 720
@@ -10,4 +10,3 @@
 #define FPS 60.0
 
 
-#endif
