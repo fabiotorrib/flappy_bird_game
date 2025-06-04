@@ -27,6 +27,22 @@ extern ALLEGRO_BITMAP* icon;
 extern ALLEGRO_KEYBOARD_STATE keystate;
 extern ALLEGRO_MOUSE_STATE mousestate;
 
+//Imagens
+extern ALLEGRO_BITMAP *buttonExitDeselect;
+extern ALLEGRO_BITMAP *buttonExitSelect;
+extern ALLEGRO_BITMAP *buttonDifficultySelect;
+extern ALLEGRO_BITMAP *buttonLeaderboardSelect;
+extern ALLEGRO_BITMAP *buttonLoadGameSelect;
+extern ALLEGRO_BITMAP *buttonNewGameSelect;
+extern ALLEGRO_BITMAP *buttonSettingsSelect;
+extern ALLEGRO_BITMAP *buttonDifficultyDeselect;
+extern ALLEGRO_BITMAP *buttonLeaderboardDeselect;
+extern ALLEGRO_BITMAP *buttonLoadGameDeselect;
+extern ALLEGRO_BITMAP *buttonNewGameDeselect;
+extern ALLEGRO_BITMAP *buttonSettingsDeselect;
+extern ALLEGRO_BITMAP *logoBorred;
+extern ALLEGRO_BITMAP *logoNormal;
+extern ALLEGRO_BITMAP *background;
 
 void init();
 void deinit();
