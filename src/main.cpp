@@ -1,7 +1,7 @@
 #include "../include/init.hpp"
 #include "../include/states/states.hpp"
 
-int main(int agrc,char **argv){
+int main(){
 
     init();
     //definindo a screen inicial
