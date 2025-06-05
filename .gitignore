@@ -12,6 +12,8 @@
 # Diretórios de build
 /build/
 bin/
+obj/
+src/main
 
 # Arquivos temporários
 *.tmp

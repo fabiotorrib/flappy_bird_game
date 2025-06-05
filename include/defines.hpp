@@ -19,8 +19,19 @@ struct Button
     int buttonSelectState;
 };
 
+//forca do pulo
+#define JUMP_FORCE -10.0 
 
+//gravidade
+#define GRAVITY 0.8
 
+//multiplicador da rotacao do bird
+#define ROTATION 0.05
 
+//gap entre os canos
+#define GAP_SIZE 150
+
+//velocidade dos pipes
+#define PIPE_SPEED -5
 
 
