@@ -5,7 +5,7 @@
 #include <string>
 #include <map>
 #include <vector>
-#include <defines.hpp>
+#include "../../include/defines.hpp"
 
 
 ScreenState MainMenu::loop()

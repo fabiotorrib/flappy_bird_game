@@ -1,7 +1,7 @@
 #pragma once
 #include "../state.hpp"
 #include <vector>
-#include <defines.hpp>
+#include "../defines.hpp"
 
 class MainMenu : public State {
 public:
