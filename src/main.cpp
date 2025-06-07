@@ -12,9 +12,9 @@ int main(){
             screen = mainMenu.loop();
         } else if (screen == PLAY){
             screen = play.loop();
-        }// else if (screen == PAUSE){
-
-        // } else if (screen == GAME_OVER){
+        }else if (screen == LOAD_NAME){
+            screen = loadName.loop();
+        } //else if (screen == GAME_OVER){
 
         // }
 

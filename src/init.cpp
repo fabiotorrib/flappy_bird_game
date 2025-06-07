@@ -6,7 +6,18 @@ ALLEGRO_EVENT_QUEUE *event_queue = nullptr;
 ALLEGRO_TIMER *timer_FPS = nullptr;
 ALLEGRO_EVENT ev;
 
+// Iniciando fonte
+ALLEGRO_FONT *font = NULL;
+
 // Inciando Imagens
+ALLEGRO_BITMAP *buttonBackDeselect = NULL;
+ALLEGRO_BITMAP *buttonBackSelect = NULL;
+ALLEGRO_BITMAP *buttonInsertDeselect = NULL;
+ALLEGRO_BITMAP *buttonInsertSelect = NULL;
+ALLEGRO_BITMAP *nameCampDeselect = NULL;
+ALLEGRO_BITMAP *nameCampSelect = NULL;
+ALLEGRO_BITMAP *nameCampNewGameError = NULL;
+ALLEGRO_BITMAP *nameLoadGameError = NULL;
 ALLEGRO_BITMAP *buttonExitDeselect = NULL;
 ALLEGRO_BITMAP *buttonExitSelect = NULL;
 ALLEGRO_BITMAP *buttonDifficultySelect = NULL;
@@ -19,9 +30,10 @@ ALLEGRO_BITMAP *buttonLeaderboardDeselect = NULL;
 ALLEGRO_BITMAP *buttonLoadGameDeselect = NULL;
 ALLEGRO_BITMAP *buttonNewGameDeselect = NULL;
 ALLEGRO_BITMAP *buttonSettingsDeselect = NULL;
-ALLEGRO_BITMAP *logoBorred = NULL;
 ALLEGRO_BITMAP *logoNormal = NULL;
 ALLEGRO_BITMAP *background = NULL;
+ALLEGRO_BITMAP *icone = NULL;
+ALLEGRO_AUDIO_STREAM *background_music = NULL;
 
 void init()
 {
@@ -38,12 +50,26 @@ void init()
 
     // iniciando audio
     al_install_audio();
+    al_init_acodec_addon();
+    al_reserve_samples(16);
+    background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
+    al_attach_audio_stream_to_mixer(background_music, al_get_default_mixer());
+    al_set_audio_stream_playmode(background_music, ALLEGRO_PLAYMODE_LOOP);
 
     // iniciando fonte
     al_init_ttf_addon();
     al_init_font_addon();
+    font = al_load_font("assets/TextFont.ttf", 24, 0);
 
     // iniciando imagens
+    buttonBackDeselect = al_load_bitmap("assets/buttonBackDeselect.png");
+    buttonBackSelect = al_load_bitmap("assets/buttonBackSelect.png");
+    buttonInsertDeselect = al_load_bitmap("assets/buttonInsertDeselect.png");
+    buttonInsertSelect = al_load_bitmap("assets/buttonInsertSelect.png");
+    nameCampDeselect = al_load_bitmap("assets/nameCampDeselect.png");
+    nameCampSelect = al_load_bitmap("assets/nameCampSelect.png");
+    nameCampNewGameError = al_load_bitmap("assets/nameCampNewGameError.png");
+    nameLoadGameError = al_load_bitmap("assets/nameLoadGameError.png");
     buttonExitDeselect = al_load_bitmap("assets/buttonExitDeselect.png");
     buttonExitSelect = al_load_bitmap("assets/buttonExitSelect.png");
     buttonDifficultySelect = al_load_bitmap("assets/buttonDifficultySelect.png");
@@ -56,14 +82,16 @@ void init()
     buttonLoadGameDeselect = al_load_bitmap("assets/buttonLoadGameDeselect.png");
     buttonNewGameDeselect = al_load_bitmap("assets/buttonNewGameDeselect.png");
     buttonSettingsDeselect = al_load_bitmap("assets/buttonSettingsDeselect.png");
-    logoBorred = al_load_bitmap("assets/logoBorred.png");
     logoNormal = al_load_bitmap("assets/logoNormal.png");
     background = al_load_bitmap("assets/background.png");
+    icone = al_load_bitmap("assets/icon.png");
+    
 
     // iniciando display
     display = al_create_display(SCREEN_W, SCREEN_H);
     event_queue = al_create_event_queue();
     timer_FPS = al_create_timer(1.0 / FPS);
+    al_set_display_icon(display, icone);
 
     // registra fontes na fila (obrigatorio)
     al_register_event_source(event_queue, al_get_display_event_source(display));
@@ -84,14 +112,21 @@ void init()
 void deinit()
 {
     // destruir fontes
-    //  al_destroy_font(font_debug);
-    //  al_destroy_font();
+    al_destroy_font(font);
 
     // destruir audio
-
+    al_destroy_audio_stream(background_music);
     //
 
     // destruir imagens
+    al_destroy_bitmap(buttonBackDeselect);
+    al_destroy_bitmap(buttonBackSelect);
+    al_destroy_bitmap(buttonInsertDeselect);
+    al_destroy_bitmap(buttonInsertSelect);
+    al_destroy_bitmap(nameCampDeselect);
+    al_destroy_bitmap(nameCampSelect);
+    al_destroy_bitmap(nameCampNewGameError);
+    al_destroy_bitmap(nameLoadGameError);
     al_destroy_bitmap(buttonExitDeselect);
     al_destroy_bitmap(buttonExitSelect);
     al_destroy_bitmap(buttonDifficultySelect);
@@ -104,8 +139,8 @@ void deinit()
     al_destroy_bitmap(buttonLoadGameDeselect);
     al_destroy_bitmap(buttonNewGameDeselect);
     al_destroy_bitmap(buttonSettingsDeselect);
-    al_destroy_bitmap(logoBorred);
     al_destroy_bitmap(logoNormal);
+    al_destroy_bitmap(icone);
 
     al_stop_timer(timer_FPS);
     al_destroy_timer(timer_FPS);

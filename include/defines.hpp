@@ -19,6 +19,9 @@ struct Button
     int buttonSelectState;
 };
 
+//
+#define MAX_INPUT_LENGTH 33
+
 //forca do pulo
 #define JUMP_FORCE -10.0 
 

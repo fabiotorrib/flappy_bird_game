@@ -3,6 +3,8 @@
 #include <vector>
 #include "../defines.hpp"
 
+extern std::string inputNameScreen;
+
 class MainMenu : public State {
 public:
     ScreenState loop() override;

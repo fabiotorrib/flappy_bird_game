@@ -7,6 +7,7 @@
 #include <vector>
 #include "../../include/defines.hpp"
 
+std::string inputNameScreen = "";
 
 ScreenState MainMenu::loop()
 {
@@ -22,10 +23,14 @@ ScreenState MainMenu::loop()
             if (menuButtons[buttonPositionSelected].name == "NewGame")
             {
                 std::cerr << "Botão NewGame selecionado!" << std::endl;
+                inputNameScreen = "NewGame";
+                return ScreenState::LOAD_NAME;
             }
             else if (menuButtons[buttonPositionSelected].name == "LoadGame")
             {
                 std::cerr << "Botão LoadGame selecionado!" << std::endl;
+                inputNameScreen = "LoadGame";
+                return ScreenState::LOAD_NAME;
             }
             else if (menuButtons[buttonPositionSelected].name == "Settings")
             {
@@ -79,42 +84,42 @@ ScreenState MainMenu::loop()
     // Desenha o background
     al_draw_bitmap(background, 0, 0, 0);
     // Desenha a logo
-    al_draw_bitmap(logoNormal, 346.5, 100, 0);
+    al_draw_bitmap(logoNormal, -20, -10, 0);
     // Desenha o botão NewGame
     if (menuButtons[0].buttonSelectState)
-        al_draw_bitmap(buttonNewGameSelect, 496.5, 300, 0);
+        al_draw_bitmap(buttonNewGameSelect, 496.5, 270, 0);
     else
-        al_draw_bitmap(buttonNewGameDeselect, 496.5, 300, 0);
+        al_draw_bitmap(buttonNewGameDeselect, 496.5, 270, 0);
 
     // Desenha o botão LoadGame
     if (!menuButtons[1].buttonSelectState)
-        al_draw_bitmap(buttonLoadGameSelect, 496.5, 370, 0);
+        al_draw_bitmap(buttonLoadGameSelect, 496.5, 340, 0);
     else
-        al_draw_bitmap(buttonLoadGameDeselect, 496.5, 370, 0);
+        al_draw_bitmap(buttonLoadGameDeselect, 496.5, 340, 0);
 
     // Desenha o botão Settings
     if (!menuButtons[2].buttonSelectState)
-        al_draw_bitmap(buttonSettingsSelect, 496.5, 440, 0);
+        al_draw_bitmap(buttonSettingsSelect, 496.5, 410, 0);
     else
-        al_draw_bitmap(buttonSettingsDeselect, 496.5, 440, 0);
+        al_draw_bitmap(buttonSettingsDeselect, 496.5, 410, 0);
 
     // Desenha o botão Difficulty
     if (!menuButtons[3].buttonSelectState)
-        al_draw_bitmap(buttonDifficultySelect, 496.5, 510, 0);
+        al_draw_bitmap(buttonDifficultySelect, 496.5, 480, 0);
     else
-        al_draw_bitmap(buttonDifficultyDeselect, 496.5, 510, 0);
+        al_draw_bitmap(buttonDifficultyDeselect, 496.5, 480, 0);
 
     // Desenha o botão Leaderboard
     if (!menuButtons[4].buttonSelectState)
-        al_draw_bitmap(buttonLeaderboardSelect, 496.5, 580, 0);
+        al_draw_bitmap(buttonLeaderboardSelect, 496.5, 550, 0);
     else
-        al_draw_bitmap(buttonLeaderboardDeselect, 496.5, 580, 0);
+        al_draw_bitmap(buttonLeaderboardDeselect, 496.5, 550, 0);
 
     // Desenha o botão Exit
     if (!menuButtons[5].buttonSelectState)
-        al_draw_bitmap(buttonExitSelect, 496.5, 650, 0);
+        al_draw_bitmap(buttonExitSelect, 496.5, 620, 0);
     else
-        al_draw_bitmap(buttonExitDeselect, 496.5, 650, 0);
+        al_draw_bitmap(buttonExitDeselect, 496.5, 620, 0);
 
     // esse eh o update
     al_flip_display();
