@@ -34,6 +34,12 @@ ALLEGRO_BITMAP *logoNormal = NULL;
 ALLEGRO_BITMAP *background = NULL;
 ALLEGRO_BITMAP *icone = NULL;
 ALLEGRO_AUDIO_STREAM *background_music = NULL;
+ALLEGRO_BITMAP* lights = NULL;
+ALLEGRO_BITMAP* clouds = NULL;
+ALLEGRO_BITMAP* clouds2 = NULL;
+ALLEGRO_BITMAP* little = NULL;
+ALLEGRO_BITMAP* ground = NULL;
+ALLEGRO_BITMAP* ground2 = NULL;
 
 void init()
 {
@@ -85,6 +91,12 @@ void init()
     logoNormal = al_load_bitmap("assets/logoNormal.png");
     background = al_load_bitmap("assets/background.png");
     icone = al_load_bitmap("assets/icon.png");
+    lights = al_load_bitmap("assets/LightStrip.png");
+    clouds = al_load_bitmap("assets/Clouds.png");
+    clouds2 = al_load_bitmap("assets/Clouds.png");
+    little = al_load_bitmap("assets/LittleBirds.png");
+    ground = al_load_bitmap("assets/Ground.png");
+    ground2 = al_load_bitmap("assets/Ground.png");
     
 
     // iniciando display
@@ -141,6 +153,13 @@ void deinit()
     al_destroy_bitmap(buttonSettingsDeselect);
     al_destroy_bitmap(logoNormal);
     al_destroy_bitmap(icone);
+    al_destroy_bitmap(lights);
+    al_destroy_bitmap(background);
+    al_destroy_bitmap(clouds);
+    al_destroy_bitmap(clouds2);
+    al_destroy_bitmap(little);
+    al_destroy_bitmap(ground);
+    al_destroy_bitmap(ground2);
 
     al_stop_timer(timer_FPS);
     al_destroy_timer(timer_FPS);

@@ -57,6 +57,12 @@ extern ALLEGRO_BITMAP *buttonSettingsDeselect;
 extern ALLEGRO_BITMAP *logoNormal;
 extern ALLEGRO_BITMAP *background;
 extern ALLEGRO_BITMAP *icone;
+extern ALLEGRO_BITMAP *lights;
+extern ALLEGRO_BITMAP *clouds;
+extern ALLEGRO_BITMAP *clouds2;
+extern ALLEGRO_BITMAP *little;
+extern ALLEGRO_BITMAP *ground;
+extern ALLEGRO_BITMAP *ground2;
 
 void init();
 void deinit();
