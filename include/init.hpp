@@ -1,39 +1,22 @@
 #pragma once
-//libs
-#include <iostream>
-#include <list>
-#include <string>
+#include "libs.hpp"
 
-//libs allegro
-#include <allegro5/allegro.h>
-#include <allegro5/allegro_native_dialog.h>
-#include <allegro5/allegro_primitives.h>
-#include <allegro5/allegro_image.h>
-#include <allegro5/allegro_ttf.h>
-#include <allegro5/allegro_audio.h>   
-#include <allegro5/allegro_acodec.h>
-#include <allegro5/allegro_physfs.h>
-
-//Libs criadas
-#include "defines.hpp"
-#include "state.hpp"
-
-//Globais
-extern ALLEGRO_DISPLAY* display;
-extern ALLEGRO_EVENT_QUEUE* event_queue;
+// Globais
+extern ALLEGRO_DISPLAY *display;
+extern ALLEGRO_EVENT_QUEUE *event_queue;
 extern ALLEGRO_EVENT ev;
-extern ALLEGRO_TIMER* timer_FPS;
-extern ALLEGRO_BITMAP* icon;
+extern ALLEGRO_TIMER *timer;
+extern ALLEGRO_BITMAP *icon;
 extern ALLEGRO_KEYBOARD_STATE keystate;
 extern ALLEGRO_MOUSE_STATE mousestate;
 
-//Musicas
+// Musicas
 extern ALLEGRO_AUDIO_STREAM *background_music;
 
-//Fontes
-extern ALLEGRO_FONT* font;
+// Fontes
+extern ALLEGRO_FONT *font;
 
-//Imagens
+// Imagens
 extern ALLEGRO_BITMAP *buttonBackDeselect;
 extern ALLEGRO_BITMAP *buttonBackSelect;
 extern ALLEGRO_BITMAP *buttonInsertDeselect;
@@ -63,7 +46,8 @@ extern ALLEGRO_BITMAP *clouds2;
 extern ALLEGRO_BITMAP *little;
 extern ALLEGRO_BITMAP *ground;
 extern ALLEGRO_BITMAP *ground2;
+extern ALLEGRO_BITMAP *flappy;
+extern ALLEGRO_BITMAP *pipe_green;
 
-void init();
+bool init();
 void deinit();
-

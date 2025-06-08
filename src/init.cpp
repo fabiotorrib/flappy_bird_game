@@ -1,15 +1,21 @@
-#include "../include/init.hpp"
+#include "init.hpp"
+#include "defines.hpp"
+#include "libs.hpp"
+#include "state.hpp"
 
 // iniciando as variaveis
 ALLEGRO_DISPLAY *display = nullptr;
 ALLEGRO_EVENT_QUEUE *event_queue = nullptr;
-ALLEGRO_TIMER *timer_FPS = nullptr;
+ALLEGRO_TIMER *timer = nullptr;  // Corrigido o nome
 ALLEGRO_EVENT ev;
 
 // Iniciando fonte
 ALLEGRO_FONT *font = NULL;
 
-// Inciando Imagens
+// Iniciando audio
+ALLEGRO_AUDIO_STREAM *background_music = NULL;
+
+// Iniciando Imagens
 ALLEGRO_BITMAP *buttonBackDeselect = NULL;
 ALLEGRO_BITMAP *buttonBackSelect = NULL;
 ALLEGRO_BITMAP *buttonInsertDeselect = NULL;
@@ -33,137 +39,150 @@ ALLEGRO_BITMAP *buttonSettingsDeselect = NULL;
 ALLEGRO_BITMAP *logoNormal = NULL;
 ALLEGRO_BITMAP *background = NULL;
 ALLEGRO_BITMAP *icone = NULL;
-ALLEGRO_AUDIO_STREAM *background_music = NULL;
-ALLEGRO_BITMAP* lights = NULL;
-ALLEGRO_BITMAP* clouds = NULL;
-ALLEGRO_BITMAP* clouds2 = NULL;
-ALLEGRO_BITMAP* little = NULL;
-ALLEGRO_BITMAP* ground = NULL;
-ALLEGRO_BITMAP* ground2 = NULL;
+ALLEGRO_BITMAP *lights = NULL;
+ALLEGRO_BITMAP *clouds = NULL;
+ALLEGRO_BITMAP *clouds2 = NULL;
+ALLEGRO_BITMAP *little = NULL;
+ALLEGRO_BITMAP *ground = NULL;
+ALLEGRO_BITMAP *ground2 = NULL;
+ALLEGRO_BITMAP *flappy = NULL;
+ALLEGRO_BITMAP *pipe_green = NULL;
 
-void init()
-{
+bool init() {
+  al_init();
 
-    al_init();
+  // iniciando objetos
+  al_init_primitives_addon();
+  al_init_image_addon();
 
-    // iniciando objetos
-    al_init_primitives_addon();
-    al_init_image_addon();
+  // iniciando inputs
+  al_install_mouse();
+  al_install_keyboard();
 
-    // iniciando inputs
-    al_install_mouse();
-    al_install_keyboard();
-
-    // iniciando audio
-    al_install_audio();
-    al_init_acodec_addon();
-    al_reserve_samples(16);
-    background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
+  // iniciando audio
+  al_install_audio();
+  al_init_acodec_addon();
+  al_reserve_samples(16);
+  background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
+  if (background_music) {
     al_attach_audio_stream_to_mixer(background_music, al_get_default_mixer());
     al_set_audio_stream_playmode(background_music, ALLEGRO_PLAYMODE_LOOP);
+  }
 
-    // iniciando fonte
-    al_init_ttf_addon();
-    al_init_font_addon();
-    font = al_load_font("assets/TextFont.ttf", 24, 0);
+  // iniciando fonte
+  al_init_ttf_addon();
+  al_init_font_addon();
+  font = al_load_font("assets/TextFont.ttf", 24, 0);
 
-    // iniciando imagens
-    buttonBackDeselect = al_load_bitmap("assets/buttonBackDeselect.png");
-    buttonBackSelect = al_load_bitmap("assets/buttonBackSelect.png");
-    buttonInsertDeselect = al_load_bitmap("assets/buttonInsertDeselect.png");
-    buttonInsertSelect = al_load_bitmap("assets/buttonInsertSelect.png");
-    nameCampDeselect = al_load_bitmap("assets/nameCampDeselect.png");
-    nameCampSelect = al_load_bitmap("assets/nameCampSelect.png");
-    nameCampNewGameError = al_load_bitmap("assets/nameCampNewGameError.png");
-    nameLoadGameError = al_load_bitmap("assets/nameLoadGameError.png");
-    buttonExitDeselect = al_load_bitmap("assets/buttonExitDeselect.png");
-    buttonExitSelect = al_load_bitmap("assets/buttonExitSelect.png");
-    buttonDifficultySelect = al_load_bitmap("assets/buttonDifficultySelect.png");
-    buttonLeaderboardSelect = al_load_bitmap("assets/buttonLeaderboardSelect.png");
-    buttonLoadGameSelect = al_load_bitmap("assets/buttonLoadGameSelect.png");
-    buttonNewGameSelect = al_load_bitmap("assets/buttonNewGameSelect.png");
-    buttonSettingsSelect = al_load_bitmap("assets/buttonSettingsSelect.png");
-    buttonDifficultyDeselect = al_load_bitmap("assets/buttonDifficultyDeselect.png");
-    buttonLeaderboardDeselect = al_load_bitmap("assets/buttonLeaderboardDeselect.png");
-    buttonLoadGameDeselect = al_load_bitmap("assets/buttonLoadGameDeselect.png");
-    buttonNewGameDeselect = al_load_bitmap("assets/buttonNewGameDeselect.png");
-    buttonSettingsDeselect = al_load_bitmap("assets/buttonSettingsDeselect.png");
-    logoNormal = al_load_bitmap("assets/logoNormal.png");
-    background = al_load_bitmap("assets/background.png");
-    icone = al_load_bitmap("assets/icon.png");
-    lights = al_load_bitmap("assets/LightStrip.png");
-    clouds = al_load_bitmap("assets/Clouds.png");
-    clouds2 = al_load_bitmap("assets/Clouds.png");
-    little = al_load_bitmap("assets/LittleBirds.png");
-    ground = al_load_bitmap("assets/Ground.png");
-    ground2 = al_load_bitmap("assets/Ground.png");
-    
+  // iniciando imagens
+  buttonBackDeselect = al_load_bitmap("assets/buttonBackDeselect.png");
+  buttonBackSelect = al_load_bitmap("assets/buttonBackSelect.png");
+  buttonInsertDeselect = al_load_bitmap("assets/buttonInsertDeselect.png");
+  buttonInsertSelect = al_load_bitmap("assets/buttonInsertSelect.png");
+  nameCampDeselect = al_load_bitmap("assets/nameCampDeselect.png");
+  nameCampSelect = al_load_bitmap("assets/nameCampSelect.png");
+  nameCampNewGameError = al_load_bitmap("assets/nameCampNewGameError.png");
+  nameLoadGameError = al_load_bitmap("assets/nameLoadGameError.png");
+  buttonExitDeselect = al_load_bitmap("assets/buttonExitDeselect.png");
+  buttonExitSelect = al_load_bitmap("assets/buttonExitSelect.png");
+  buttonDifficultySelect = al_load_bitmap("assets/buttonDifficultySelect.png");
+  buttonLeaderboardSelect =
+      al_load_bitmap("assets/buttonLeaderboardSelect.png");
+  buttonLoadGameSelect = al_load_bitmap("assets/buttonLoadGameSelect.png");
+  buttonNewGameSelect = al_load_bitmap("assets/buttonNewGameSelect.png");
+  buttonSettingsSelect = al_load_bitmap("assets/buttonSettingsSelect.png");
+  buttonDifficultyDeselect =
+      al_load_bitmap("assets/buttonDifficultyDeselect.png");
+  buttonLeaderboardDeselect =
+      al_load_bitmap("assets/buttonLeaderboardDeselect.png");
+  buttonLoadGameDeselect = al_load_bitmap("assets/buttonLoadGameDeselect.png");
+  buttonNewGameDeselect = al_load_bitmap("assets/buttonNewGameDeselect.png");
+  buttonSettingsDeselect = al_load_bitmap("assets/buttonSettingsDeselect.png");
+  logoNormal = al_load_bitmap("assets/logoNormal.png");
+  background = al_load_bitmap("assets/background.png");
+  icone = al_load_bitmap("assets/icon.png");
+  lights = al_load_bitmap("assets/LightStrip.png");
+  clouds = al_load_bitmap("assets/Clouds.png");
+  clouds2 = al_load_bitmap("assets/Clouds.png");
+  little = al_load_bitmap("assets/LittleBirds.png");
+  ground = al_load_bitmap("assets/Ground.png");
+  ground2 = al_load_bitmap("assets/Ground.png");
+  flappy = al_load_bitmap("assets/flappy.png");
+  pipe_green = al_load_bitmap("assets/pipe-green.png");
+  // Criar display, event_queue e timer
+  display = al_create_display(SCREEN_W, SCREEN_H);
+  event_queue = al_create_event_queue();
+  timer = al_create_timer(1.0 / FPS);
 
-    // iniciando display
-    display = al_create_display(SCREEN_W, SCREEN_H);
-    event_queue = al_create_event_queue();
-    timer_FPS = al_create_timer(1.0 / FPS);
-    al_set_display_icon(display, icone);
+  // Verificar se foram criados com sucesso
+  if (!display || !event_queue || !timer) {
+    fprintf(stderr, "Erro ao criar display, event_queue ou timer!\n");
+    return false;
+  }
 
-    // registra fontes na fila (obrigatorio)
-    al_register_event_source(event_queue, al_get_display_event_source(display));
-    al_register_event_source(event_queue, al_get_keyboard_event_source());
-    al_register_event_source(event_queue, al_get_mouse_event_source());
-    al_register_event_source(event_queue, al_get_timer_event_source(timer_FPS));
+  al_set_display_icon(display, icone);
 
-    // titulo da janela
-    al_set_window_title(display, "Flappy Bird");
+  // registra fontes na fila (obrigatorio)
+  al_register_event_source(event_queue, al_get_display_event_source(display));
+  al_register_event_source(event_queue, al_get_keyboard_event_source());
+  al_register_event_source(event_queue, al_get_mouse_event_source());
+  al_register_event_source(event_queue, al_get_timer_event_source(timer));
 
-    // associa display e a fila ao statico do estado
-    State::setGlobals(display, event_queue);
+  // titulo da janela
+  al_set_window_title(display, "Flappy Bird");
 
-    // iniciando o timer
-    al_start_timer(timer_FPS);
+  // IMPORTANTE: Associa display e a fila ao statico do estado
+  State::setGlobals(display, event_queue);
+
+  // iniciando o timer
+  al_start_timer(timer);
 }
 
-void deinit()
-{
-    // destruir fontes
-    al_destroy_font(font);
+void deinit() {
+  // destruir fontes
+  if (font) al_destroy_font(font);
 
-    // destruir audio
-    al_destroy_audio_stream(background_music);
-    //
+  // destruir audio
+  if (background_music) al_destroy_audio_stream(background_music);
 
-    // destruir imagens
-    al_destroy_bitmap(buttonBackDeselect);
-    al_destroy_bitmap(buttonBackSelect);
-    al_destroy_bitmap(buttonInsertDeselect);
-    al_destroy_bitmap(buttonInsertSelect);
-    al_destroy_bitmap(nameCampDeselect);
-    al_destroy_bitmap(nameCampSelect);
-    al_destroy_bitmap(nameCampNewGameError);
-    al_destroy_bitmap(nameLoadGameError);
-    al_destroy_bitmap(buttonExitDeselect);
-    al_destroy_bitmap(buttonExitSelect);
-    al_destroy_bitmap(buttonDifficultySelect);
-    al_destroy_bitmap(buttonLeaderboardSelect);
-    al_destroy_bitmap(buttonLoadGameSelect);
-    al_destroy_bitmap(buttonNewGameSelect);
-    al_destroy_bitmap(buttonSettingsSelect);
-    al_destroy_bitmap(buttonDifficultyDeselect);
-    al_destroy_bitmap(buttonLeaderboardDeselect);
-    al_destroy_bitmap(buttonLoadGameDeselect);
-    al_destroy_bitmap(buttonNewGameDeselect);
-    al_destroy_bitmap(buttonSettingsDeselect);
-    al_destroy_bitmap(logoNormal);
-    al_destroy_bitmap(icone);
-    al_destroy_bitmap(lights);
-    al_destroy_bitmap(background);
-    al_destroy_bitmap(clouds);
-    al_destroy_bitmap(clouds2);
-    al_destroy_bitmap(little);
-    al_destroy_bitmap(ground);
-    al_destroy_bitmap(ground2);
+  // destruir imagens
+  if (buttonBackDeselect) al_destroy_bitmap(buttonBackDeselect);
+  if (buttonBackSelect) al_destroy_bitmap(buttonBackSelect);
+  if (buttonInsertDeselect) al_destroy_bitmap(buttonInsertDeselect);
+  if (buttonInsertSelect) al_destroy_bitmap(buttonInsertSelect);
+  if (nameCampDeselect) al_destroy_bitmap(nameCampDeselect);
+  if (nameCampSelect) al_destroy_bitmap(nameCampSelect);
+  if (nameCampNewGameError) al_destroy_bitmap(nameCampNewGameError);
+  if (nameLoadGameError) al_destroy_bitmap(nameLoadGameError);
+  if (buttonExitDeselect) al_destroy_bitmap(buttonExitDeselect);
+  if (buttonExitSelect) al_destroy_bitmap(buttonExitSelect);
+  if (buttonDifficultySelect) al_destroy_bitmap(buttonDifficultySelect);
+  if (buttonLeaderboardSelect) al_destroy_bitmap(buttonLeaderboardSelect);
+  if (buttonLoadGameSelect) al_destroy_bitmap(buttonLoadGameSelect);
+  if (buttonNewGameSelect) al_destroy_bitmap(buttonNewGameSelect);
+  if (buttonSettingsSelect) al_destroy_bitmap(buttonSettingsSelect);
+  if (buttonDifficultyDeselect) al_destroy_bitmap(buttonDifficultyDeselect);
+  if (buttonLeaderboardDeselect) al_destroy_bitmap(buttonLeaderboardDeselect);
+  if (buttonLoadGameDeselect) al_destroy_bitmap(buttonLoadGameDeselect);
+  if (buttonNewGameDeselect) al_destroy_bitmap(buttonNewGameDeselect);
+  if (buttonSettingsDeselect) al_destroy_bitmap(buttonSettingsDeselect);
+  if (logoNormal) al_destroy_bitmap(logoNormal);
+  if (icone) al_destroy_bitmap(icone);
+  if (lights) al_destroy_bitmap(lights);
+  if (background) al_destroy_bitmap(background);
+  if (clouds) al_destroy_bitmap(clouds);
+  if (clouds2) al_destroy_bitmap(clouds2);
+  if (little) al_destroy_bitmap(little);
+  if (ground) al_destroy_bitmap(ground);
+  if (ground2) al_destroy_bitmap(ground2);
+  if (flappy) al_destroy_bitmap(flappy);
+  if (pipe_green) al_destroy_bitmap(pipe_green);
 
-    al_stop_timer(timer_FPS);
-    al_destroy_timer(timer_FPS);
-    al_destroy_event_queue(event_queue);
-    al_destroy_display(display);
-    al_uninstall_system();
+  if (timer) {
+    al_stop_timer(timer);
+    al_destroy_timer(timer);
+  }
+  if (event_queue) al_destroy_event_queue(event_queue);
+  if (display) al_destroy_display(display);
+  al_uninstall_system();
 }

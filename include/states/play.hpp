@@ -1,8 +1,11 @@
 #pragma once
-#include "../state.hpp"
+#include "flappy_bird_controller.hpp"
+#include "init.hpp"
+#include "state.hpp"
+
 class Play : public State {
-public:
-    ScreenState loop() override;
-    //a funcao reset e utilizada ao iniciar uma nova partida
-    void reset();
+ public:
+  State* loop(FlappyBird* game);
+  // a funcao reset e utilizada ao iniciar uma nova partida
+  void reset();
 };

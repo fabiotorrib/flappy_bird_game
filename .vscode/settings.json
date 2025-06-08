@@ -2,7 +2,8 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "xaver.clang-format",
     "C_Cpp.default.includePath": [
-        "${workspaceFolder}/include"
+        "${workspaceFolder}/include",
+        "${workspaceFolder}/include/states",
     ],
     "files.associations": {
         "array": "cpp",

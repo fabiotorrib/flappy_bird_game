@@ -1,5 +1,6 @@
-obj/init.o: src/init.cpp src/../include/init.hpp \
- src/../include/defines.hpp src/../include/state.hpp
-src/../include/init.hpp:
-src/../include/defines.hpp:
-src/../include/state.hpp:
+obj/init.o: src/init.cpp include/init.hpp include/libs.hpp \
+ include/defines.hpp include/state.hpp
+include/init.hpp:
+include/libs.hpp:
+include/defines.hpp:
+include/state.hpp:

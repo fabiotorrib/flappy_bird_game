@@ -1,12 +1,12 @@
 # ---------------- CONFIGURAÇÃO -----------------------------------------
 CXX       := g++
-CXXFLAGS  := -std=c++17 -Wall -Wextra -Iinclude -MMD -MP
+CXXFLAGS  := -std=c++17 -Wall -Wextra -Iinclude -Iinclude/states -MMD -MP
 
 LDLIBS    := -lallegro_main -lallegro              \
              -lallegro_image -lallegro_font -lallegro_ttf \
              -lallegro_primitives -lallegro_audio -lallegro_acodec
 
-TARGET := flappy.exe
+TARGET := flappy.exe 
 SRCDIR := src
 OBJDIR := obj
 

@@ -1,7 +1,14 @@
-obj/states/play.o: src/states/play.cpp \
- src/states/../../include/states/play.hpp \
- src/states/../../include/states/../state.hpp \
- src/states/../../include/states/../defines.hpp
-src/states/../../include/states/play.hpp:
-src/states/../../include/states/../state.hpp:
-src/states/../../include/states/../defines.hpp:
+obj/states/play.o: src/states/play.cpp include/states/play.hpp \
+ include/flappy_bird_controller.hpp include/bird.hpp include/defines.hpp \
+ include/game_object.hpp include/libs.hpp include/pipe.hpp \
+ include/init.hpp include/state.hpp include/states/main_menu.hpp
+include/states/play.hpp:
+include/flappy_bird_controller.hpp:
+include/bird.hpp:
+include/defines.hpp:
+include/game_object.hpp:
+include/libs.hpp:
+include/pipe.hpp:
+include/init.hpp:
+include/state.hpp:
+include/states/main_menu.hpp:

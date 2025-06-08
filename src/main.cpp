@@ -1,25 +1,21 @@
-#include "../include/init.hpp"
-#include "../include/states/states.hpp"
+// Em src/main.cpp
 
-int main(){
+#include "allegro_interface.hpp"
 
-    init();
-    //definindo a screen inicial
-    ScreenState screen = MAIN_MENU;
+int main() {
+  AllegroController allegro(SCREEN_W, SCREEN_H);
 
-    while(screen != EXIT){
-        if (screen == MAIN_MENU){
-            screen = mainMenu.loop();
-        } else if (screen == PLAY){
-            screen = play.loop();
-        }else if (screen == LOAD_NAME){
-            screen = loadName.loop();
-        } //else if (screen == GAME_OVER){
+  // PASSO 1: INICIALIZAR O ALLEGRO
+  if (!allegro.initialize()) {
+    // Se a inicialização falhar, não continue.
+    return -1;
+  }
 
-        // }
+  // PASSO 2: RODAR O JOGO
+  allegro.run();
 
+  // PASSO 3: LIMPAR A MEMÓRIA (já é feito no destrutor, mas é bom saber)
+  // allegro.cleanup(); // O destrutor ~AllegroController já chama deinit()
 
-    }
-    deinit();
-    return 0;
+  return 0;
 }

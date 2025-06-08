@@ -1,23 +1,19 @@
 #pragma once
 
-#include "GameObject.hpp"
+#include "defines.hpp"
+#include "game_object.hpp"
+#include "libs.hpp"
 
 class Bird : public GameObject {
-private:
-    float gravity;
-    float jumpForce;
-    float vy = 0;
-public:
-    Bird(ALLEGRO_BITMAP* img,float x, float y) 
-        : GameObject(img, x, y, al_get_bitmap_width(img), al_get_bitmap_height(img)), gravity(GRAVITY) , jumpForce(JUMP_FORCE) {} 
+ private:
+  float rotation;
 
-    ~Bird() = default;
+ public:
+  Bird(float x = 0, float y = 0) : GameObject(x, y, 34, 24), rotation(0) {
+  }
 
-    void update();
-    void draw() const override;
+  ~Bird() = default;
 
-    void jump();
-
-    void destroy_bitmaps();
+  void update();
+  float get_rotation() const;
 };
-
