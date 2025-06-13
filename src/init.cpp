@@ -38,6 +38,11 @@ ALLEGRO_BITMAP* lights = NULL;
 ALLEGRO_BITMAP* clouds = NULL;
 ALLEGRO_BITMAP* clouds2 = NULL;
 ALLEGRO_BITMAP* little = NULL;
+ALLEGRO_BITMAP* little2 = NULL;
+ALLEGRO_BITMAP* little3 = NULL;
+ALLEGRO_BITMAP* bird1 = NULL;
+ALLEGRO_BITMAP* bird2 = NULL;
+ALLEGRO_BITMAP* bird3 = NULL;
 ALLEGRO_BITMAP* ground = NULL;
 ALLEGRO_BITMAP* ground2 = NULL;
 
@@ -94,7 +99,12 @@ void init()
     lights = al_load_bitmap("assets/LightStrip.png");
     clouds = al_load_bitmap("assets/Clouds.png");
     clouds2 = al_load_bitmap("assets/Clouds.png");
-    little = al_load_bitmap("assets/LittleBirds.png");
+    little = al_load_bitmap("assets/Frame1.png");
+    little2 = al_load_bitmap("assets/Frame2.png");
+    little3 = al_load_bitmap("assets/Frame3.png");
+    bird1 = al_load_bitmap("assets/B1.png");
+    bird2 = al_load_bitmap("assets/B2.png");
+    bird3 = al_load_bitmap("assets/B3.png");
     ground = al_load_bitmap("assets/Ground.png");
     ground2 = al_load_bitmap("assets/Ground.png");
     
@@ -158,6 +168,11 @@ void deinit()
     al_destroy_bitmap(clouds);
     al_destroy_bitmap(clouds2);
     al_destroy_bitmap(little);
+    al_destroy_bitmap(little2);
+    al_destroy_bitmap(little3);
+    al_destroy_bitmap(bird1);
+    al_destroy_bitmap(bird2);
+    al_destroy_bitmap(bird3);
     al_destroy_bitmap(ground);
     al_destroy_bitmap(ground2);
 

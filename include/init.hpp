@@ -61,8 +61,14 @@ extern ALLEGRO_BITMAP *lights;
 extern ALLEGRO_BITMAP *clouds;
 extern ALLEGRO_BITMAP *clouds2;
 extern ALLEGRO_BITMAP *little;
+extern ALLEGRO_BITMAP *little2;
+extern ALLEGRO_BITMAP *little3;
 extern ALLEGRO_BITMAP *ground;
 extern ALLEGRO_BITMAP *ground2;
+extern ALLEGRO_BITMAP *bird1;
+extern ALLEGRO_BITMAP *bird2;
+extern ALLEGRO_BITMAP *bird3;
+
 
 void init();
 void deinit();
