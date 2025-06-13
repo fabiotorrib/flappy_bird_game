@@ -6,7 +6,7 @@
 // iniciando as variaveis
 ALLEGRO_DISPLAY *display = nullptr;
 ALLEGRO_EVENT_QUEUE *event_queue = nullptr;
-ALLEGRO_TIMER *timer = nullptr;  // Corrigido o nome
+ALLEGRO_TIMER *timer = nullptr;
 ALLEGRO_EVENT ev;
 
 // Iniciando fonte
@@ -43,9 +43,13 @@ ALLEGRO_BITMAP *lights = NULL;
 ALLEGRO_BITMAP *clouds = NULL;
 ALLEGRO_BITMAP *clouds2 = NULL;
 ALLEGRO_BITMAP *little = NULL;
+ALLEGRO_BITMAP *little2 = NULL;
+ALLEGRO_BITMAP *little3 = NULL;
+ALLEGRO_BITMAP *bird1 = NULL;
+ALLEGRO_BITMAP *bird2 = NULL;
+ALLEGRO_BITMAP *bird3 = NULL;
 ALLEGRO_BITMAP *ground = NULL;
 ALLEGRO_BITMAP *ground2 = NULL;
-ALLEGRO_BITMAP *flappy = NULL;
 ALLEGRO_BITMAP *pipe_green = NULL;
 
 bool init() {
@@ -112,7 +116,10 @@ bool init() {
   bird3 = al_load_bitmap("assets/B3.png");
   ground = al_load_bitmap("assets/Ground.png");
   ground2 = al_load_bitmap("assets/Ground.png");
-  pipe_green = al_load_bitmap("assets/pippe-green.png");  // pipe para testar
+  pipe_green = al_load_bitmap("assets/pipe-green.png");  // pipe para testar
+  display = al_create_display(SCREEN_W, SCREEN_H);
+  timer = al_create_timer(1.0 / FPS);
+  event_queue = al_create_event_queue();
 
   // Verificar se foram criados com sucesso
   if (!display || !event_queue || !timer) {

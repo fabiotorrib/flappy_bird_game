@@ -9,7 +9,7 @@ class Bird : public GameObject {
   float rotation;
 
  public:
-  Bird(float x = 0, float y = 0) : GameObject(x, y, 34, 24), rotation(0) {
+  Bird(float x = 0, float y = 0) : GameObject(x, y, 59, 63), rotation(0) {
   }
 
   ~Bird() = default;
