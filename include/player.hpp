@@ -1,25 +1,24 @@
 #pragma once
 
-#include "../include/init.hpp"
-
-using namespace std;
+#include "libs.hpp"
 
 class Player {
-private:
-    string name;
-    int score;
+ private:
+  std::string name;
+  int score;
 
-public:
-    Player(string name); //construtor
+ public:
+  Player(std::string name);  // construtor
 
-    //getters e setters
-    string GetName();
-    int GetScore();
-    void SetScore(int points);
+  // getters e setters
+  std::string GetName();
+  int GetScore();
+  void SetScore(int points);
 
-    static vector<Player> ReadLeaderboard(string file_name);
-    static void SortLeaderboard(vector<Player>& ranking);
-    static void SaveLeaderboard(string fileName, vector<Player>& ranking);
-    static void ShowLeaderboard(vector<Player>& ranking, ALLEGRO_FONT* font);
-    bool operator<(const Player& other_p); //sobrecarga do operador <
+  static std::vector<Player> ReadLeaderboard(std::string file_name);
+  static void SortLeaderboard(std::vector<Player>& ranking);
+  static void SaveLeaderboard(std::string fileName,
+                              std::vector<Player>& ranking);
+  static void ShowLeaderboard(std::vector<Player>& ranking, ALLEGRO_FONT* font);
+  bool operator<(const Player& other_p);  // sobrecarga do operador <
 };

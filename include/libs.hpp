@@ -1,8 +1,11 @@
 #pragma once
 // libs
+#include <algorithm>
+#include <fstream>
 #include <iostream>
 #include <list>
 #include <memory>
+#include <sstream>
 #include <string>
 #include <vector>
 
