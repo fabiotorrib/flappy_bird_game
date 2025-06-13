@@ -104,15 +104,15 @@ bool init() {
   lights = al_load_bitmap("assets/LightStrip.png");
   clouds = al_load_bitmap("assets/Clouds.png");
   clouds2 = al_load_bitmap("assets/Clouds.png");
-  little = al_load_bitmap("assets/LittleBirds.png");
+  little = al_load_bitmap("assets/Frame1.png");
+  little2 = al_load_bitmap("assets/Frame2.png");
+  little3 = al_load_bitmap("assets/Frame3.png");
+  bird1 = al_load_bitmap("assets/B1.png");
+  bird2 = al_load_bitmap("assets/B2.png");
+  bird3 = al_load_bitmap("assets/B3.png");
   ground = al_load_bitmap("assets/Ground.png");
   ground2 = al_load_bitmap("assets/Ground.png");
-  flappy = al_load_bitmap("assets/flappy.png");
-  pipe_green = al_load_bitmap("assets/pipe-green.png");
-  // Criar display, event_queue e timer
-  display = al_create_display(SCREEN_W, SCREEN_H);
-  event_queue = al_create_event_queue();
-  timer = al_create_timer(1.0 / FPS);
+  pipe_green = al_load_bitmap("assets/pippe-green.png");  // pipe para testar
 
   // Verificar se foram criados com sucesso
   if (!display || !event_queue || !timer) {
@@ -173,15 +173,20 @@ void deinit() {
   if (clouds) al_destroy_bitmap(clouds);
   if (clouds2) al_destroy_bitmap(clouds2);
   if (little) al_destroy_bitmap(little);
+  if (little2) al_destroy_bitmap(little2);
+  if (little3) al_destroy_bitmap(little3);
+  if (bird1) al_destroy_bitmap(bird1);
+  if (bird2) al_destroy_bitmap(bird2);
+  if (bird3) al_destroy_bitmap(bird3);
   if (ground) al_destroy_bitmap(ground);
   if (ground2) al_destroy_bitmap(ground2);
-  if (flappy) al_destroy_bitmap(flappy);
   if (pipe_green) al_destroy_bitmap(pipe_green);
 
   if (timer) {
     al_stop_timer(timer);
     al_destroy_timer(timer);
   }
+
   if (event_queue) al_destroy_event_queue(event_queue);
   if (display) al_destroy_display(display);
   al_uninstall_system();

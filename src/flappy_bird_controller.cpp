@@ -78,7 +78,3 @@ void FlappyBird::update_score() {
     }
   }
 }
-
-int FlappyBird::get_score() {
-  return score;
-}

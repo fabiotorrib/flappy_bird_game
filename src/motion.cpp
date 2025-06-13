@@ -5,11 +5,10 @@
 #include <allegro5/allegro_primitives.h>
 #include "../include/motion.hpp"
 
+// Animação de todos sprites da tela de fundo
 void Motion::loop()
 {
     bool remake = false;
-
-    // Altera a varivel da posição a cada frame e verifica se ela já está fora da tela e retorna pra posição inicial
 
         // Altera a posição do feixe de luz
         positionL_x = positionL_x - speed_light;
@@ -25,7 +24,7 @@ void Motion::loop()
         positionF_x = positionF_x + speed_floor;
         positionF2_x = positionF2_x + speed_floor;
 
-        // Reinicia a posição
+        // Reinicia a posição de cada imagem quando ela sai da tela
         if (positionL_x <= -2560)
         {
             positionL_x = 0;
@@ -64,12 +63,38 @@ void Motion::loop()
     // Atualiza a tela com os frames andados
     if (remake == true)
     {
-
         remake = false;
 
         // Redesenhando cada imagem com a nova posição
         al_draw_bitmap(background, 0, 0, 0);
-        al_draw_bitmap(little, (positionB_x - 1280), 0, 0);
+
+        //Animação dos passaros do fundo batendo as asas
+        //Mesma logica do Bird que bate as asas
+        if((positionB_x <= cont) && (value == 0)){
+            al_draw_bitmap(little, (positionB_x - 1280), 0, 0);
+
+            if(positionB_x == cont){
+                cont = cont + 9;
+                value++;
+            }
+            
+        }
+        else if((positionB_x <= cont) && (value == 1)){
+            al_draw_bitmap(little2, (positionB_x - 1280), 2, 0);
+            if(positionB_x == cont){
+                cont = cont + 9;
+                value++;
+            }
+        }
+        else if((positionB_x <= cont) && (value == 2)){
+            al_draw_bitmap(little3, (positionB_x - 1280), 4, 0);
+
+            if(positionB_x == cont){
+                cont = cont + 9;
+                value = 0;
+            }
+        }
+
         al_draw_bitmap(clouds2, (positionCC_x - 1280), 0, 0);
         al_draw_bitmap(clouds, (positionC_x - 1280), 0, 0);
         al_draw_bitmap(ground, (positionF_x - 1280), 0, 0);

@@ -97,7 +97,7 @@ State* Play::loop(FlappyBird* game) {
   }
 
   // Desenha o bird
-  if (flappy) {
+  if (bird1) {
     // Calcula o centro do pássaro na tela
     float bird_center_x =
         game->get_bird().get_x() + game->get_bird().get_width() / 2;
@@ -106,12 +106,12 @@ State* Play::loop(FlappyBird* game) {
 
     // Desenha o bitmap rotacionado em seu ponto central
     al_draw_rotated_bitmap(
-        flappy,
-        al_get_bitmap_width(flappy) / 2,   // Centro x da imagem original
-        al_get_bitmap_height(flappy) / 2,  // Centro y da imagem original
-        bird_center_x,                     // Posição x de destino (centro)
-        bird_center_y,                     // Posição y de destino (centro)
-        game->get_bird().get_rotation(),   // Rotação
+        bird1,
+        al_get_bitmap_width(bird1) / 2,   // Centro x da imagem original
+        al_get_bitmap_height(bird1) / 2,  // Centro y da imagem original
+        bird_center_x,                    // Posição x de destino (centro)
+        bird_center_y,                    // Posição y de destino (centro)
+        game->get_bird().get_rotation(),  // Rotação
         0);
   }
 
