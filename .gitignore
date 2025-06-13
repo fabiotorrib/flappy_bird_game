@@ -1,5 +1,6 @@
 # Arquivos binários e objetos
 *.o
+*.d
 *.obj
 *.so
 *.exe
