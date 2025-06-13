@@ -32,6 +32,9 @@ class FlappyBird {
   const std::vector<Pipe>& get_pipes() const {
     return pipes;
   }
+  int get_score() {
+    return score;
+  }
 
   // Checagem de colisões
   bool check_bird_collision(const GameObject& other) const;
