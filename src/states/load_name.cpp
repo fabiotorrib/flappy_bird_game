@@ -1,5 +1,6 @@
 #include "states/load_game.hpp"
 #include "states/main_menu.hpp"
+#include "states/play.hpp"
 
 State* LoadName::loop(FlappyBird* game) {
   // aqui sao implementados os eventos de teclado e mouse
@@ -11,22 +12,34 @@ State* LoadName::loop(FlappyBird* game) {
       if (menuButtons[buttonPositionSelected].name == "Insert") {
         std::cerr << "Botão Insert selecionado!" << std::endl;
         std::cerr << "Nome: " << user_name_string << std::endl;
+
         if (user_name_string != "") {
           if (inputNameScreen == "NewGame") {
-            if (user_name_string == "EXISTE")
+            if (user_name_string == "EXISTE") {
               nameError = 1;
-            else
+            } else {
               nameError = 3;
+              // Apenas aqui, com o nome validado, mudamos para o estado Play.
+              game->setPlayerName(user_name_string);
+              game->reset();      // Reseta a posição do pássaro e os canos
+              return new Play();  // Inicia o jogo
+            }
           } else if (inputNameScreen == "LoadGame") {
-            if (user_name_string == "NAOEXISTE")
+            if (user_name_string == "NAOEXISTE") {
               nameError = 2;
-            else
+            } else {
               nameError = 3;
+              // Apenas aqui, com o nome validado, mudamos para o estado Play.
+              game->setPlayerName(user_name_string);
+              game->reset();      // Reseta a posição do pássaro e os canos
+              return new Play();  // Inicia o jogo
+            }
           }
         } else {
           nameError = 4;
         }
         std::cerr << nameError << std::endl;
+
       } else if (menuButtons[buttonPositionSelected].name == "Back") {
         std::cerr << "Botão Back selecionado!" << std::endl;
         user_name_string = "";
@@ -35,15 +48,13 @@ State* LoadName::loop(FlappyBird* game) {
         buttonPositionSelected = 2;
         menuButtons[buttonPositionSelected].buttonSelectState = 1;
         return new MainMenu();
+
       } else if (menuButtons[buttonPositionSelected].name == "NameCamp") {
         menuButtons[buttonPositionSelected].buttonSelectState = 0;
         buttonPositionSelected = 1;
         menuButtons[buttonPositionSelected].buttonSelectState = 1;
         std::cerr << "Campo de texto selecionado!" << std::endl;
       }
-      // reseta antes de começar a partida
-      // play.reset();
-      // return ScreenState::PLAY;
     }
 
     if (menuButtons[2].buttonSelectState) {
@@ -140,5 +151,5 @@ State* LoadName::loop(FlappyBird* game) {
   }
   // esse eh o update
   al_flip_display();
-  return new LoadName();
+  return this;
 }

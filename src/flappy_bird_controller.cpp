@@ -74,7 +74,7 @@ void FlappyBird::update_score() {
   // Implementar lógica de score se necessário
   for (auto& pipe : pipes) {
     if (pipe.check_score(bird.get_x())) {
-      // Incrementar score aqui
+      score++;
     }
   }
 }

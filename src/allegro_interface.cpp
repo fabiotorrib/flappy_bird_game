@@ -15,9 +15,13 @@ bool AllegroController::initialize() {
   return true;
 }
 
+void AllegroController::cleanup() {
+  deinit();
+}
+
 void AllegroController::run() {
   // Começa com o estado do Menu Principal
-  std::unique_ptr<State> currentState = std::make_unique<Play>();
+  std::unique_ptr<State> currentState = std::make_unique<MainMenu>();
 
   // O loop principal do jogo
   while (currentState != nullptr) {

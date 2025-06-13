@@ -10,11 +10,12 @@ class FlappyBird {
  private:
   Bird bird;
   std::vector<Pipe> pipes;
+  int score;
 
  public:
   // Use a lista de inicialização para construir o objeto 'bird'
   FlappyBird(float width = 1200, float height = 800)
-      : bird((float)SCREEN_W / 3, (float)SCREEN_H / 2) {
+      : bird((float)SCREEN_W / 3, (float)SCREEN_H / 2), score(0) {
     // O corpo do construtor agora pode ficar vazio
   }
 

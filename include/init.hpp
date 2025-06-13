@@ -46,8 +46,8 @@ extern ALLEGRO_BITMAP *clouds2;
 extern ALLEGRO_BITMAP *little;
 extern ALLEGRO_BITMAP *ground;
 extern ALLEGRO_BITMAP *ground2;
-extern ALLEGRO_BITMAP *flappy;
-extern ALLEGRO_BITMAP *pipe_green;
+extern ALLEGRO_BITMAP *flappy;      // flappy para testar;
+extern ALLEGRO_BITMAP *pipe_green;  // pipe para testar;
 
 bool init();
 void deinit();

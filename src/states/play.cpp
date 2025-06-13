@@ -3,7 +3,8 @@
 #include "init.hpp"
 #include "main_menu.hpp"
 #include "state.hpp"
-
+// PARA QUEM FOR FAZER ESSE METODO: eu fiz um so para testar, pode mudar o que
+// quiser Lembrando que os returns tem q ser do tipo State* e n ScreenState
 State* Play::loop(FlappyBird* game) {
   static float framerate = 0;
   static bool game_over = false;

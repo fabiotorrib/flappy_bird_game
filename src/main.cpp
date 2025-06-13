@@ -14,8 +14,8 @@ int main() {
   // PASSO 2: RODAR O JOGO
   allegro.run();
 
-  // PASSO 3: LIMPAR A MEMÓRIA (já é feito no destrutor, mas é bom saber)
-  // allegro.cleanup(); // O destrutor ~AllegroController já chama deinit()
+  // PASSO 3: LIMPAR A MEMÓRIA
+  allegro.cleanup();  // O destrutor ~AllegroController já chama deinit()
 
   return 0;
 }

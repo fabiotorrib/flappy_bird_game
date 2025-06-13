@@ -15,7 +15,7 @@
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
 
-// Libs criadas
+// Libs criadas eu tirei essas libs pq tava gerando uma dependencia circular
 // #include "bird.hpp"
 // #include "defines.hpp"
 // #include "flappy_bird_controller.hpp"
