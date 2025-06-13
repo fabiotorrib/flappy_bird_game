@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GameObject.hpp"
+#include "game_object.hpp"
 
 class Bird : public GameObject {
 private:

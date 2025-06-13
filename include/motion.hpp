@@ -20,8 +20,10 @@ class Motion {
 
 
     float positionB_x = 0;
-    float speed_little = 1.5;
-
+    float speed_little = 1;
+    float cont = 16;
+    float value = 0;
+    
     float positionF_x = 1280;
     float positionF2_x = 0;
     float speed_floor = 2.5;

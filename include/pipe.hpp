@@ -1,6 +1,6 @@
 #pragma once
 
-#include "GameObject.hpp"
+#include "game_object.hpp"
 
 class Pipe : public GameObject {
 private:
