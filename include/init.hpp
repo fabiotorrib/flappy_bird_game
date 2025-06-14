@@ -72,6 +72,11 @@ extern ALLEGRO_BITMAP *ground2;
 extern ALLEGRO_BITMAP *bird1;
 extern ALLEGRO_BITMAP *bird2;
 extern ALLEGRO_BITMAP *bird3;
+extern ALLEGRO_BITMAP *buttonDifficultyEasy;
+extern ALLEGRO_BITMAP *buttonDifficultyNormal;
+extern ALLEGRO_BITMAP *buttonDifficultyHard;
+extern ALLEGRO_BITMAP *buttonSaveSelect;
+extern ALLEGRO_BITMAP *buttonSaveDeselect;
 
 void init();
 void deinit();

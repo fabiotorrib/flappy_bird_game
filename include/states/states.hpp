@@ -1,13 +1,15 @@
 #pragma once
-#include "main_menu.hpp"
-#include "play.hpp"
-#include "load_game.hpp"
 #include "../motion.hpp"
 #include "../motion_bird.hpp"
+#include "difficulty_menu.hpp"
+#include "load_game.hpp"
+#include "main_menu.hpp"
+#include "play.hpp"
 
-//criando e distribuindo os objetos globais de cada estado
+// criando e distribuindo os objetos globais de cada estado
 inline MainMenu mainMenu;
 inline Play play;
 inline LoadName loadName;
 inline Motion motion;
 inline MotionBird motion_bird;
+inline DifficultyMenu difficultyMenu;
