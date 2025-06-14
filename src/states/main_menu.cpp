@@ -14,9 +14,13 @@ ScreenState MainMenu::loop()
     // aqui sao implementados os eventos de teclado e mouse
     while (al_get_next_event(queue, &ev))
     {
+
+        if (ev.type == ALLEGRO_EVENT_TIMER)
+            motion.loop();
+
         if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE)
             return ScreenState::EXIT;
-
+        
         if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
             (ev.keyboard.keycode == ALLEGRO_KEY_ENTER || ev.keyboard.keycode == ALLEGRO_KEY_SPACE))
         {
@@ -81,8 +85,6 @@ ScreenState MainMenu::loop()
     }
 
     // aqui sao implementados as partes visuais
-    // Desenha o background
-    al_draw_bitmap(background, 0, 0, 0);
     // Desenha a logo
     al_draw_bitmap(logoNormal, -20, -10, 0);
     // Desenha o botão NewGame
