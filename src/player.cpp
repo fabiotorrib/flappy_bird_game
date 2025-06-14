@@ -1,11 +1,7 @@
 #include "player.hpp"
 #include <ostream>  // Necessário para o bônus do Doctest
 
-// =====================================================================
-// ÚNICA IMPLEMENTAÇÃO DO CONSTRUTOR, CORRESPONDENDO AO SEU .hpp
-// =====================================================================
 Player::Player(std::string name, int score) : name(name), score(score) {
-  // O corpo pode ficar vazio, a lista de inicialização faz todo o trabalho.
 }
 
 std::string Player::GetName() const {
@@ -30,7 +26,6 @@ std::ostream& operator<<(std::ostream& os, const Player& p) {
   return os;
 }
 
-// O resto do arquivo permanece igual
 std::vector<Player> Player::ReadLeaderboard(std::string file_name) {
   std::vector<Player> ranking;
   std::ifstream file(file_name);
@@ -41,7 +36,6 @@ std::vector<Player> Player::ReadLeaderboard(std::string file_name) {
       std::string read_name;
       int points;
       if (name_and_score >> read_name >> points) {
-        // Agora podemos usar o novo construtor aqui também!
         ranking.push_back(Player(read_name, points));
       }
     }
