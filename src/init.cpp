@@ -67,6 +67,11 @@ bool init() {
   al_install_audio();
   al_init_acodec_addon();
   al_reserve_samples(16);
+
+  display = al_create_display(SCREEN_W, SCREEN_H);
+  timer = al_create_timer(1.0 / FPS);
+  event_queue = al_create_event_queue();
+
   background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
   if (background_music) {
     al_attach_audio_stream_to_mixer(background_music, al_get_default_mixer());
@@ -117,9 +122,6 @@ bool init() {
   ground = al_load_bitmap("assets/Ground.png");
   ground2 = al_load_bitmap("assets/Ground.png");
   pipe_green = al_load_bitmap("assets/pipe-green.png");  // pipe para testar
-  display = al_create_display(SCREEN_W, SCREEN_H);
-  timer = al_create_timer(1.0 / FPS);
-  event_queue = al_create_event_queue();
 
   // Verificar se foram criados com sucesso
   if (!display || !event_queue || !timer) {
@@ -143,6 +145,7 @@ bool init() {
 
   // iniciando o timer
   al_start_timer(timer);
+  return true;
 }
 
 void deinit() {

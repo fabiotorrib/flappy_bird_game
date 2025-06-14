@@ -4,11 +4,11 @@
 Player::Player(std::string name) : name(name), score(0) {
 }
 
-std::string Player::GetName() {
+std::string Player::GetName() const {
   return name;
 }
 
-int Player::GetScore() {
+int Player::GetScore() const {
   return score;
 }
 
@@ -54,7 +54,7 @@ void Player::SaveLeaderboard(std::string fileName,
   file.close();
 }
 
-bool Player::operator<(const Player& other_p) {
+bool Player::operator<(const Player& other_p) const {
   return this->score > other_p.score;
 }
 

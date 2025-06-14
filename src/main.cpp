@@ -1,8 +1,13 @@
 // Em src/main.cpp
 
+// Em src/main.cpp
+
 #include "allegro_interface.hpp"
 
-int main() {
+int main(int argc, char **argv) {
+  (void)argc;
+  (void)argv;
+
   AllegroController allegro(SCREEN_W, SCREEN_H);
 
   // PASSO 1: INICIALIZAR O ALLEGRO

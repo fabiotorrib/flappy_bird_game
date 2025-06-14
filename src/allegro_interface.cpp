@@ -11,8 +11,7 @@ AllegroController::~AllegroController() {
 }
 
 bool AllegroController::initialize() {
-  init();
-  return true;
+  return init();
 }
 
 void AllegroController::cleanup() {
@@ -21,18 +20,18 @@ void AllegroController::cleanup() {
 
 void AllegroController::run() {
   // Começa com o estado do Menu Principal
-  std::unique_ptr<State> currentState = std::make_unique<MainMenu>();
+  std::unique_ptr<State> current_state = std::make_unique<MainMenu>();
 
   // O loop principal do jogo
-  while (currentState != nullptr) {
+  while (current_state != nullptr) {
     // Chama o loop do estado atual e recebe o ponteiro para o próximo estado
-    State* nextStateRaw = currentState->loop(&game);
+    State* next_state_raw = current_state->loop(&game);
 
     // Se o estado atual retornou um ponteiro para si mesmo, não faça nada.
     // Se retornou um novo estado, atualize o unique_ptr.
-    if (nextStateRaw != currentState.get()) {
-      currentState.reset(
-          nextStateRaw);  // Transfere o controle para o novo estado
+    if (next_state_raw != current_state.get()) {
+      current_state.reset(
+          next_state_raw);  // Transfere o controle para o novo estado
     }
   }
 }

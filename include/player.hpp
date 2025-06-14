@@ -11,8 +11,8 @@ class Player {
   Player(std::string name);  // construtor
 
   // getters e setters
-  std::string GetName();
-  int GetScore();
+  std::string GetName() const;
+  int GetScore() const;
   void SetScore(int points);
 
   static std::vector<Player> ReadLeaderboard(std::string file_name);
@@ -20,5 +20,5 @@ class Player {
   static void SaveLeaderboard(std::string fileName,
                               std::vector<Player>& ranking);
   static void ShowLeaderboard(std::vector<Player>& ranking, ALLEGRO_FONT* font);
-  bool operator<(const Player& other_p);  // sobrecarga do operador <
+  bool operator<(const Player& other_p) const;  // sobrecarga do operador <
 };
