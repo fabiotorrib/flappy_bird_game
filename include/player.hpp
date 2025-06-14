@@ -15,6 +15,7 @@ class Player {
   int GetScore() const;
   void SetScore(int points);
 
+  static bool CheckingName(std::vector<Player>& ranking,std::string& Name);
   static std::vector<Player> ReadLeaderboard(std::string file_name);
   static void SortLeaderboard(std::vector<Player>& ranking);
   static void SaveLeaderboard(std::string fileName,

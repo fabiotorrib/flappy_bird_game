@@ -17,6 +17,15 @@ void Player::SetScore(int points) {
   score = points;
 }
 
+bool Player::CheckingName(std::vector<Player>& ranking,std::string& Name){
+  for (const Player& p : ranking){
+    if (p.GetName() == Name){
+      return true;
+    }
+  }
+  return false;
+}
+
 bool Player::operator<(const Player& other_p) const {
   return this->score > other_p.score;
 }
