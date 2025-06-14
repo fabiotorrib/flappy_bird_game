@@ -1,5 +1,8 @@
+// ./src/states/main_menu.cpp
+
 #include "states/main_menu.hpp"
 #include "states/load_game.hpp"
+#include "states/states.hpp"  // Adicionado para ter acesso a 'motion' e 'motion_bird'
 
 std::string inputNameScreen = "";
 
@@ -29,9 +32,6 @@ State* MainMenu::loop(FlappyBird* game) {
         std::cerr << "Botão Exit selecionado!" << std::endl;
         return nullptr;
       }
-      // reseta antes de começar a partida
-      // play.reset();
-      // return ScreenState::PLAY;
     }
 
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
@@ -58,46 +58,58 @@ State* MainMenu::loop(FlappyBird* game) {
     }
   }
 
-  // aqui sao implementados as partes visuais
-  // Desenha o background
-  al_draw_bitmap(background, 0, 0, 0);
-  // Desenha a logo
+  // ===================================================================
+  // ALTERAÇÕES AQUI: RENDERIZAÇÃO COM ANIMAÇÃO
+  // ===================================================================
+
+  // 1. Chame motion.loop() para desenhar o fundo animado.
+  //    Isso substitui a antiga chamada a al_draw_bitmap(background, 0, 0, 0);
+  motion.loop();
+
+  // 2. Defina a posição do pássaro animado e chame seu loop.
+  //    Escolha uma posição que fique boa no menu.
+  motion_bird.setterX(150);
+  motion_bird.setterY(SCREEN_H / 2 - 50);
+  motion_bird.loop();
+
+  // 3. Desenhe os elementos da UI (logo e botões) SOBRE as animações.
   al_draw_bitmap(logoNormal, -20, -10, 0);
+
   // Desenha o botão NewGame
   if (menuButtons[0].buttonSelectState)
     al_draw_bitmap(buttonNewGameSelect, 496.5, 270, 0);
   else
     al_draw_bitmap(buttonNewGameDeselect, 496.5, 270, 0);
 
-  // Desenha o botão LoadGame
-  if (!menuButtons[1].buttonSelectState)
-    al_draw_bitmap(buttonLoadGameSelect, 496.5, 340, 0);
+  // Desenha o botão LoadGame (lógica invertida no seu código original)
+  if (menuButtons[1].buttonSelectState)
+    al_draw_bitmap(buttonLoadGameDeselect, 496.5, 340, 0);  // select
   else
-    al_draw_bitmap(buttonLoadGameDeselect, 496.5, 340, 0);
+    al_draw_bitmap(buttonLoadGameSelect, 496.5, 340, 0);  // deselect
 
-  // Desenha o botão Settings
-  if (!menuButtons[2].buttonSelectState)
-    al_draw_bitmap(buttonSettingsSelect, 496.5, 410, 0);
+  // Desenha o botão Settings (lógica invertida no seu código original)
+  if (menuButtons[2].buttonSelectState)
+    al_draw_bitmap(buttonSettingsDeselect, 496.5, 410, 0);  // select
   else
-    al_draw_bitmap(buttonSettingsDeselect, 496.5, 410, 0);
+    al_draw_bitmap(buttonSettingsSelect, 496.5, 410, 0);  // deselect
 
-  // Desenha o botão Difficulty
-  if (!menuButtons[3].buttonSelectState)
-    al_draw_bitmap(buttonDifficultySelect, 496.5, 480, 0);
+  // Desenha o botão Difficulty (lógica invertida no seu código original)
+  if (menuButtons[3].buttonSelectState)
+    al_draw_bitmap(buttonDifficultyDeselect, 496.5, 480, 0);  // select
   else
-    al_draw_bitmap(buttonDifficultyDeselect, 496.5, 480, 0);
+    al_draw_bitmap(buttonDifficultySelect, 496.5, 480, 0);  // deselect
 
-  // Desenha o botão Leaderboard
-  if (!menuButtons[4].buttonSelectState)
-    al_draw_bitmap(buttonLeaderboardSelect, 496.5, 550, 0);
+  // Desenha o botão Leaderboard (lógica invertida no seu código original)
+  if (menuButtons[4].buttonSelectState)
+    al_draw_bitmap(buttonLeaderboardDeselect, 496.5, 550, 0);  // select
   else
-    al_draw_bitmap(buttonLeaderboardDeselect, 496.5, 550, 0);
+    al_draw_bitmap(buttonLeaderboardSelect, 496.5, 550, 0);  // deselect
 
-  // Desenha o botão Exit
-  if (!menuButtons[5].buttonSelectState)
-    al_draw_bitmap(buttonExitSelect, 496.5, 620, 0);
+  // Desenha o botão Exit (lógica invertida no seu código original)
+  if (menuButtons[5].buttonSelectState)
+    al_draw_bitmap(buttonExitDeselect, 496.5, 620, 0);  // select
   else
-    al_draw_bitmap(buttonExitDeselect, 496.5, 620, 0);
+    al_draw_bitmap(buttonExitSelect, 496.5, 620, 0);  // deselect
 
   // esse eh o update
   al_flip_display();

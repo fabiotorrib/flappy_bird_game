@@ -59,9 +59,6 @@ State* Play::loop(FlappyBird* game) {
   al_clear_to_color(al_map_rgb(135, 206, 235));  // Cor de céu azul
 
   // Desenha background se disponível
-  if (background) {
-    al_draw_bitmap(background, 0, 0, 0);
-  }
 
   // Desenha pipes
   auto pipes = game->get_pipes();
