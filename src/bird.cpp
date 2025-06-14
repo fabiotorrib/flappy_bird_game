@@ -1,22 +1,17 @@
-#include "../include/bird.hpp"
+#include "bird.hpp"
 
-void Bird::update(){
-    y+=vy;
-    vy+=gravity;
+void Bird::update() {
+  y += vy;
+  vy += GRAVITY;
+
+  // Atualiza rotação baseada na velocidade vertical
+  rotation = vy * ROTATION;
+
+  // Limita a rotação para não girar demais
+  if (rotation > 1.5) rotation = 1.5;
+  if (rotation < -1.5) rotation = -1.5;
 }
 
-void Bird::draw() const{
-    float rotation=vy*ROTATION;
-    al_draw_rotated_bitmap(obj_sprite,width/2,height/2,x,y,rotation,0);
-}
-
-void Bird::jump(){
-    vy=jumpForce;
-}
-
-void Bird::destroy_bitmaps() {
-    if (obj_sprite) {
-        al_destroy_bitmap(obj_sprite);
-        obj_sprite = nullptr;
-    }
+float Bird::get_rotation() const {
+  return rotation;
 }
