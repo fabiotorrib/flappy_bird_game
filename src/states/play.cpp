@@ -3,8 +3,8 @@
 #include "init.hpp"
 #include "main_menu.hpp"
 #include "state.hpp"
-// PARA QUEM FOR FAZER ESSE METODO: eu fiz um so para testar, pode mudar o que
-// quiser Lembrando que os returns tem q ser do tipo State* e n ScreenState
+#include "states/states.hpp"  // Adicionado para ter acesso ao 'motion' global
+
 State* Play::loop(FlappyBird* game) {
   static float framerate = 0;
   static bool game_over = false;
@@ -56,9 +56,9 @@ State* Play::loop(FlappyBird* game) {
   }
 
   // Renderização
-  al_clear_to_color(al_map_rgb(135, 206, 235));  // Cor de céu azul
 
-  // Desenha background se disponível
+  // Chama motion.loop() para desenhar todo o fundo animado e sincronizado.
+  motion.loop();
 
   // Desenha pipes
   auto pipes = game->get_pipes();
@@ -69,10 +69,7 @@ State* Play::loop(FlappyBird* game) {
 
     for (const auto& p : pipes) {
       // === Cano Superior ===
-      // A altura necessária é da borda de cima da tela (0) até o início do GAP.
       float top_pipe_h = p.get_y();
-      // Desenhamos a partir do canto superior esquerdo (x, 0) e esticamos a
-      // imagem para que ela tenha a altura calculada.
       al_draw_scaled_bitmap(pipe_green, 0, 0, pipe_w,
                             pipe_h,        // Origem (imagem inteira)
                             p.get_x(), 0,  // Destino (canto superior esquerdo)
@@ -80,11 +77,8 @@ State* Play::loop(FlappyBird* game) {
                             ALLEGRO_FLIP_VERTICAL);
 
       // === Cano Inferior ===
-      // A posição Y de início do cano inferior.
       float bottom_pipe_y = p.get_y() + GAP_SIZE;
-      // A altura necessária é do final do GAP até a borda de baixo da tela.
       float bottom_pipe_h = SCREEN_H - bottom_pipe_y;
-      // Desenhamos a partir de (x, y do cano inferior) e esticamos a imagem.
       al_draw_scaled_bitmap(
           pipe_green, 0, 0, pipe_w, pipe_h,  // Origem (imagem inteira)
           p.get_x(), bottom_pipe_y,  // Destino (canto superior esquerdo)

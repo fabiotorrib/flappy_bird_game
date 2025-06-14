@@ -2,7 +2,7 @@
 
 #include "states/main_menu.hpp"
 #include "states/load_game.hpp"
-#include "states/states.hpp"  // Adicionado para ter acesso a 'motion' e 'motion_bird'
+#include "states/states.hpp"  // Adicionado para ter acesso a 'motion' e 'motion_bird'states/load_game.hpp"
 
 std::string inputNameScreen = "";
 

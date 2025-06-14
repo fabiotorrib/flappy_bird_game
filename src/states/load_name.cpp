@@ -1,6 +1,7 @@
 #include "states/load_game.hpp"
 #include "states/main_menu.hpp"
 #include "states/play.hpp"
+#include "states/states.hpp"  // Adicionado para ter acesso ao 'motion' global
 
 State* LoadName::loop(FlappyBird* game) {
   // aqui sao implementados os eventos de teclado e mouse
@@ -76,7 +77,6 @@ State* LoadName::loop(FlappyBird* game) {
         }
       }
     }
-    ///////
 
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
       switch (ev.keyboard.keycode) {
@@ -108,47 +108,49 @@ State* LoadName::loop(FlappyBird* game) {
           break;
       }
     }
-
-    // aqui sao implementados as partes visuais
-    // Desenha o background
-    al_draw_bitmap(background, 0, 0, 0);
-
-    // Desenha o botão NewGame
-    if (menuButtons[0].buttonSelectState)
-      al_draw_bitmap(buttonBackSelect, 102.5, 400, 0);
-    else
-      al_draw_bitmap(buttonBackDeselect, 102.5, 400, 0);
-
-    if (menuButtons[1].buttonSelectState)
-      al_draw_bitmap(buttonInsertSelect, 890.5, 400, 0);
-    else
-      al_draw_bitmap(buttonInsertDeselect, 890.5, 400, 0);
-
-    if (menuButtons[2].buttonSelectState)
-      al_draw_bitmap(nameCampSelect, 102.5, 150, 0);
-    else
-      al_draw_bitmap(nameCampDeselect, 102.5, 150, 0);
-
-    al_draw_text(font, al_map_rgb(0, 0, 0), 210, 250, ALLEGRO_ALIGN_LEFT,
-                 user_name_string.c_str());
-
-    if (nameError == 1) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
-                   "Your player is already registered");
-    }
-    if (nameError == 2) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
-                   "This player does not exist!");
-    }
-    if (nameError == 3) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
-                   "Name entered successfully.");
-    }
-    if (nameError == 4) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
-                   "No name entered. Please enter a name!");
-    }
   }
+
+  // aqui sao implementados as partes visuais
+
+  // Desenha o fundo animado
+  motion.loop();
+
+  // Desenha os botões e campos de texto por cima do fundo
+  if (menuButtons[0].buttonSelectState)
+    al_draw_bitmap(buttonBackSelect, 102.5, 400, 0);
+  else
+    al_draw_bitmap(buttonBackDeselect, 102.5, 400, 0);
+
+  if (menuButtons[1].buttonSelectState)
+    al_draw_bitmap(buttonInsertSelect, 890.5, 400, 0);
+  else
+    al_draw_bitmap(buttonInsertDeselect, 890.5, 400, 0);
+
+  if (menuButtons[2].buttonSelectState)
+    al_draw_bitmap(nameCampSelect, 102.5, 150, 0);
+  else
+    al_draw_bitmap(nameCampDeselect, 102.5, 150, 0);
+
+  al_draw_text(font, al_map_rgb(0, 0, 0), 210, 250, ALLEGRO_ALIGN_LEFT,
+               user_name_string.c_str());
+
+  if (nameError == 1) {
+    al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
+                 "Your player is already registered");
+  }
+  if (nameError == 2) {
+    al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
+                 "This player does not exist!");
+  }
+  if (nameError == 3) {
+    al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
+                 "Name entered successfully.");
+  }
+  if (nameError == 4) {
+    al_draw_text(font, al_map_rgb(218, 15, 15), 210, 320, ALLEGRO_ALIGN_LEFT,
+                 "No name entered. Please enter a name!");
+  }
+
   // esse eh o update
   al_flip_display();
   return this;
