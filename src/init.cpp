@@ -53,37 +53,89 @@ ALLEGRO_BITMAP *ground2 = NULL;
 ALLEGRO_BITMAP *pipe_green = NULL;
 
 bool init() {
-  al_init();
-
-  // iniciando objetos
-  al_init_primitives_addon();
-  al_init_image_addon();
-
-  // iniciando inputs
-  al_install_mouse();
-  al_install_keyboard();
-
-  // iniciando audio
-  al_install_audio();
-  al_init_acodec_addon();
-  al_reserve_samples(16);
-
-  display = al_create_display(SCREEN_W, SCREEN_H);
-  timer = al_create_timer(1.0 / FPS);
-  event_queue = al_create_event_queue();
-
-  background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
-  if (background_music) {
-    al_attach_audio_stream_to_mixer(background_music, al_get_default_mixer());
-    al_set_audio_stream_playmode(background_music, ALLEGRO_PLAYMODE_LOOP);
+  // PASSO 1: Inicializar o Allegro primeiro
+  if (!al_init()) {
+    fprintf(stderr, "Erro ao inicializar Allegro!\n");
+    return false;
   }
 
-  // iniciando fonte
-  al_init_ttf_addon();
-  al_init_font_addon();
-  font = al_load_font("assets/TextFont.ttf", 24, 0);
+  // PASSO 2: Inicializar addons básicos
+  if (!al_init_primitives_addon()) {
+    fprintf(stderr, "Erro ao inicializar primitives addon!\n");
+    return false;
+  }
 
-  // iniciando imagens
+  if (!al_init_image_addon()) {
+    fprintf(stderr, "Erro ao inicializar image addon!\n");
+    return false;
+  }
+
+  // PASSO 3: Instalar dispositivos de entrada
+  if (!al_install_mouse()) {
+    fprintf(stderr, "Erro ao instalar mouse!\n");
+    return false;
+  }
+
+  if (!al_install_keyboard()) {
+    fprintf(stderr, "Erro ao instalar keyboard!\n");
+    return false;
+  }
+
+  // PASSO 4: Criar display
+  display = al_create_display(SCREEN_W, SCREEN_H);
+  if (!display) {
+    fprintf(stderr, "Erro ao criar display!\n");
+    return false;
+  }
+
+  // PASSO 5: Criar timer e event queue
+  timer = al_create_timer(1.0 / FPS);
+  if (!timer) {
+    fprintf(stderr, "Erro ao criar timer!\n");
+    al_destroy_display(display);
+    return false;
+  }
+
+  event_queue = al_create_event_queue();
+  if (!event_queue) {
+    fprintf(stderr, "Erro ao criar event queue!\n");
+    al_destroy_timer(timer);
+    al_destroy_display(display);
+    return false;
+  }
+
+  // PASSO 6: Inicializar audio
+  if (!al_install_audio()) {
+    fprintf(stderr, "Erro ao instalar audio!\n");
+  } else {
+    if (!al_init_acodec_addon()) {
+      fprintf(stderr, "Erro ao inicializar acodec addon!\n");
+    } else {
+      al_reserve_samples(16);
+      background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
+      if (background_music) {
+        al_attach_audio_stream_to_mixer(background_music,
+                                        al_get_default_mixer());
+        al_set_audio_stream_playmode(background_music, ALLEGRO_PLAYMODE_LOOP);
+      }
+    }
+  }
+
+  // PASSO 7: Inicializar fontes
+  if (!al_init_ttf_addon()) {
+    fprintf(stderr, "Erro ao inicializar TTF addon!\n");
+  } else {
+    if (!al_init_font_addon()) {
+      fprintf(stderr, "Erro ao inicializar font addon!\n");
+    } else {
+      font = al_load_font("assets/TextFont.ttf", 24, 0);
+      if (!font) {
+        fprintf(stderr, "Erro ao carregar fonte!\n");
+      }
+    }
+  }
+
+  // PASSO 8: Carregar imagens
   buttonBackDeselect = al_load_bitmap("assets/buttonBackDeselect.png");
   buttonBackSelect = al_load_bitmap("assets/buttonBackSelect.png");
   buttonInsertDeselect = al_load_bitmap("assets/buttonInsertDeselect.png");
@@ -121,34 +173,35 @@ bool init() {
   bird3 = al_load_bitmap("assets/B3.png");
   ground = al_load_bitmap("assets/Ground.png");
   ground2 = al_load_bitmap("assets/Ground.png");
-  pipe_green = al_load_bitmap("assets/pipe-green.png");  // pipe para testar
+  pipe_green = al_load_bitmap("assets/pipe-green.png");
 
-  // Verificar se foram criados com sucesso
-  if (!display || !event_queue || !timer) {
-    fprintf(stderr, "Erro ao criar display, event_queue ou timer!\n");
-    return false;
+  // PASSO 9: Configurar display
+  if (icone) {
+    al_set_display_icon(display, icone);
   }
+  al_set_window_title(display, "Flappy Bird");
 
-  al_set_display_icon(display, icone);
-
-  // registra fontes na fila (obrigatorio)
+  // PASSO 10: Registrar event sources
   al_register_event_source(event_queue, al_get_display_event_source(display));
   al_register_event_source(event_queue, al_get_keyboard_event_source());
   al_register_event_source(event_queue, al_get_mouse_event_source());
   al_register_event_source(event_queue, al_get_timer_event_source(timer));
 
-  // titulo da janela
-  al_set_window_title(display, "Flappy Bird");
-
-  // IMPORTANTE: Associa display e a fila ao statico do estado
+  // PASSO 11: Configurar State
   State::setGlobals(display, event_queue);
 
-  // iniciando o timer
+  // PASSO 12: Iniciar timer
   al_start_timer(timer);
+
   return true;
 }
 
 void deinit() {
+  // Parar timer primeiro
+  if (timer) {
+    al_stop_timer(timer);
+  }
+
   // destruir fontes
   if (font) al_destroy_font(font);
 
@@ -192,12 +245,11 @@ void deinit() {
   if (ground2) al_destroy_bitmap(ground2);
   if (pipe_green) al_destroy_bitmap(pipe_green);
 
-  if (timer) {
-    al_stop_timer(timer);
-    al_destroy_timer(timer);
-  }
-
+  // Destruir objetos principais na ordem inversa
+  if (timer) al_destroy_timer(timer);
   if (event_queue) al_destroy_event_queue(event_queue);
   if (display) al_destroy_display(display);
+
+  // Finalizar Allegro por último
   al_uninstall_system();
 }
