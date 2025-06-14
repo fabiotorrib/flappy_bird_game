@@ -1,0 +1,83 @@
+#include "player.hpp"
+#include <ostream>  // Necessário para o bônus do Doctest
+
+// =====================================================================
+// ÚNICA IMPLEMENTAÇÃO DO CONSTRUTOR, CORRESPONDENDO AO SEU .hpp
+// =====================================================================
+Player::Player(std::string name, int score) : name(name), score(score) {
+  // O corpo pode ficar vazio, a lista de inicialização faz todo o trabalho.
+}
+
+std::string Player::GetName() const {
+  return name;
+}
+
+int Player::GetScore() const {
+  return score;
+}
+
+void Player::SetScore(int points) {
+  score = points;
+}
+
+bool Player::operator<(const Player& other_p) const {
+  return this->score > other_p.score;
+}
+
+std::ostream& operator<<(std::ostream& os, const Player& p) {
+  os << "Player(Name: \"" << p.GetName() << "\", Score: " << p.GetScore()
+     << ")";
+  return os;
+}
+
+// O resto do arquivo permanece igual
+std::vector<Player> Player::ReadLeaderboard(std::string file_name) {
+  std::vector<Player> ranking;
+  std::ifstream file(file_name);
+  if (file.is_open()) {
+    std::string line;
+    while (getline(file, line)) {
+      std::istringstream name_and_score(line);
+      std::string read_name;
+      int points;
+      if (name_and_score >> read_name >> points) {
+        // Agora podemos usar o novo construtor aqui também!
+        ranking.push_back(Player(read_name, points));
+      }
+    }
+    file.close();
+  }
+  return ranking;
+}
+
+void Player::SaveLeaderboard(std::string fileName,
+                             std::vector<Player>& ranking) {
+  std::ofstream file(fileName, std::ios::out);
+  if (!file.is_open()) {
+    return;
+  }
+  for (auto& p : ranking) {
+    file << p.GetName() << " " << p.GetScore() << std::endl;
+  }
+  file.close();
+}
+
+void Player::SortLeaderboard(std::vector<Player>& ranking) {
+  sort(ranking.begin(), ranking.end());
+}
+
+void Player::ShowLeaderboard(std::vector<Player>& ranking, ALLEGRO_FONT* font) {
+  al_clear_to_color(al_map_rgb(0, 0, 0));
+  int x = 100;
+  int y = 100;
+  int vertical_distance = 40;
+  al_draw_text(font, al_map_rgb(255, 255, 0), x, y - 50, 0, "LEADERBOARD:");
+  for (size_t i = 0; i < ranking.size() && i < 10; ++i) {
+    std::string text = std::to_string(i + 1) + ". " + ranking[i].GetName() +
+                       " - " + std::to_string(ranking[i].GetScore());
+    al_draw_text(font, al_map_rgb(255, 255, 255), x, y + i * vertical_distance,
+                 0, text.c_str());
+  }
+  al_flip_display();
+  al_rest(5.0);
+}
