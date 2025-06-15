@@ -83,10 +83,6 @@ ScreenState LeaderboardMenu::loop() {
     al_draw_text(font, al_map_rgb(255, 255, 255), x_score_col, y_pos,
                  ALLEGRO_ALIGN_RIGHT, score_text.c_str());
   }
-
-  al_draw_text(font, al_map_rgb(200, 200, 200), SCREEN_W / 2, SCREEN_H - 80,
-               ALLEGRO_ALIGN_CENTER, "Pressione ESC ou ENTER para voltar");
-
   al_flip_display();
 
   return ScreenState::LEADERBOARD_MENU;

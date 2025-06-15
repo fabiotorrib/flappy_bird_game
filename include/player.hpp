@@ -15,11 +15,14 @@ class Player {
   int GetScore() const;
   void SetScore(int points);
 
-  static bool CheckingName(std::vector<Player>& ranking,std::string& Name);
+  static bool CheckingName(std::vector<Player>& ranking, std::string& Name);
   static std::vector<Player> ReadLeaderboard(std::string file_name);
   static void SortLeaderboard(std::vector<Player>& ranking);
   static void SaveLeaderboard(std::string fileName,
-                              std::vector<Player>& ranking, const Player& new_player);
+                              std::vector<Player>& ranking);
+  static void SaveLeaderboard(std::string fileName,
+                              std::vector<Player>& ranking,
+                              const Player& new_player);
   static void ShowLeaderboard(std::vector<Player>& ranking, ALLEGRO_FONT* font);
   bool operator<(const Player& other_p) const;  // sobrecarga do operador <
 };

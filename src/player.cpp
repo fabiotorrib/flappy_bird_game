@@ -55,19 +55,31 @@ std::vector<Player> Player::ReadLeaderboard(std::string file_name) {
 }
 
 void Player::SaveLeaderboard(std::string fileName,
-                             std::vector<Player>& ranking, const Player& new_player) {
+                             std::vector<Player>& ranking) {
+  std::ofstream file(fileName, std::ios::out);
+  if (!file.is_open()) {
+    return;
+  }
+  for (auto& p : ranking) {
+    file << p.GetName() << " " << p.GetScore() << std::endl;
+  }
+  file.close();
+}
+void Player::SaveLeaderboard(std::string fileName, std::vector<Player>& ranking,
+                             const Player& new_player) {
   bool found = false;
   for (auto& p : ranking) {
-    if (p.GetName()==new_player.GetName()){
-      if(p.GetScore()<new_player.GetScore()){
+    if (p.GetName() == new_player.GetName()) {
+      if (p.GetScore() < new_player.GetScore()) {
         p.SetScore(new_player.GetScore());
       }
-    found = true;
-    break;
-    }}
+      found = true;
+      break;
+    }
+  }
 
-  if(!found){
-    ranking.push_back(new_player); //adicionando somente novo jogador 
+  if (!found) {
+    ranking.push_back(new_player);  // adicionando somente novo jogador
   }
 
   std::ofstream file(fileName, std::ios::out);
@@ -75,10 +87,10 @@ void Player::SaveLeaderboard(std::string fileName,
     return;
   }
 
-  for(const Player& p:ranking){
+  for (const Player& p : ranking) {
     file << p.GetName() << " " << p.GetScore() << std::endl;
   }
-  
+
   file.close();
 }
 
