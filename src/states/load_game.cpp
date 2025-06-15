@@ -29,13 +29,17 @@ ScreenState LoadName::loop() {
             else
               nameError = 3;
             player = Player(user_name_string, 0);
-            //player.SaveLeaderboard("Leaderboard.txt", ranking, player);
+            player.SaveLeaderboard("Leaderboard.txt", ranking, player);
             return PLAY;
           } else if (inputNameScreen == "LoadGame") {
-            if (!player.CheckingName(ranking, user_name_string))
+            if (!player.CheckingName(ranking, user_name_string)){
               nameError = 2;
-            else
+            } else {
               nameError = 3;
+              player = Player(user_name_string, 0);
+              player.SaveLeaderboard("Leaderboard.txt", ranking, player);
+              return PLAY;
+            }
           }
         } else {
           nameError = 4;
@@ -55,9 +59,7 @@ ScreenState LoadName::loop() {
         menuButtons[buttonPositionSelected].buttonSelectState = 1;
         std::cerr << "Campo de texto selecionado!" << std::endl;
       }
-      // reseta antes de começar a partida
-      // play.reset();
-      // return ScreenState::PLAY;
+      
     }
 
     if (menuButtons[2].buttonSelectState) {
@@ -158,4 +160,4 @@ ScreenState LoadName::loop() {
   // esse eh o update
   al_flip_display();
   return ScreenState::LOAD_NAME;
-}
+  }

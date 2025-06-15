@@ -45,17 +45,19 @@ void FlappyBird::reset(){
   flappy_obj.reset_xy();
   flappy_obj.set_break(false);
   pipelist.reset();
+  currentPlayer = nullptr;
 }
 
-
-void FlappyBird::setPlayerName(const std::string& name) {
-  currentPlayer = std::make_unique<Player>(name);
+//PLAYER
+void FlappyBird::set_current_player(Player& player) {
+  currentPlayer = &player;
+}
+void FlappyBird::set_playerscore(){
+  currentPlayer->SetScore(score);
 }
 
 void FlappyBird::saveCurrentPlayerScore() {
-  if (!currentPlayer) {
-    return;
-  }
+  currentPlayer->SaveLeaderboard("Leaderboard.txt",ranking, *currentPlayer);
 }
 
 //funcao checa colisoes
@@ -147,9 +149,6 @@ int FlappyBird::get_state(){
   return state;
 }
 
-void FlappyBird::set_playerscore(){
-  currentPlayer->SetScore(score);
-}
   // const std::string leaderboard_file = "leaderboard.txt";
   // auto leaderboard = Player::ReadLeaderboard(leaderboard_file);
   // bool player_found = false;

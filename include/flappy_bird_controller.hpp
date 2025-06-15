@@ -19,7 +19,7 @@ class FlappyBird {
   float positionF_x = 0;
   float positionF2_x = SCREEN_W;
   int change_vel = 2;
-  std::unique_ptr<Player> currentPlayer;  // TROCADO: de std::optional para std::unique_ptr
+  Player *currentPlayer = nullptr;  // TROCADO: de std::optional para std::unique_ptr
 
  public:
   // Construtor
@@ -29,7 +29,7 @@ class FlappyBird {
   void draw();
   void update();
   void reset();
-  void setPlayerName(const std::string& name);
+  void set_current_player(Player& player);
   void saveCurrentPlayerScore();
   bool check_collisions();
 

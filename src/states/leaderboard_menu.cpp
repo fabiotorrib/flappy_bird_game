@@ -11,6 +11,12 @@
 ScreenState LeaderboardMenu::loop() {
   // aqui sao implementados os eventos de teclado e mouse
   while (al_get_next_event(queue, &ev)) {
+    //atualiza o ranking lendo o arquivo
+    ranking = player.ReadLeaderboard("Leaderboard.txt");
+    player.SortLeaderboard(ranking);
+    player.SaveLeaderboard("Leaderboard.txt", ranking);
+
+
     if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return ScreenState::EXIT;
 
     if (ev.type == ALLEGRO_EVENT_TIMER) motion.loop();
@@ -79,15 +85,16 @@ ScreenState LeaderboardMenu::loop() {
 
     std::string name_and_rank_text =
         std::to_string(i + 1) + ". " + ranking[i].GetName();
-    std::string score_text = std::to_string(ranking[i].GetScore());
 
     al_draw_text(font, al_map_rgb(255, 255, 255), x_name_col, y_pos,
                  ALLEGRO_ALIGN_LEFT, name_and_rank_text.c_str());
 
-    al_draw_text(font, al_map_rgb(255, 255, 255), x_score_col, y_pos,
-                 ALLEGRO_ALIGN_RIGHT, score_text.c_str());
+    al_draw_textf(font, al_map_rgb(255, 255, 255), x_score_col, y_pos,
+                 ALLEGRO_ALIGN_RIGHT,"%d", ranking[i].GetScore());
+
   }
   al_flip_display();
+  
 
   return ScreenState::LEADERBOARD_MENU;
 }
