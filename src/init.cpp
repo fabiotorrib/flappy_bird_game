@@ -53,6 +53,7 @@ ALLEGRO_BITMAP *buttonDifficultyNormal = NULL;
 ALLEGRO_BITMAP *buttonDifficultyHard = NULL;
 ALLEGRO_BITMAP *buttonSaveSelect = NULL;
 ALLEGRO_BITMAP *buttonSaveDeselect = NULL;
+ALLEGRO_BITMAP *campLeaderboard = NULL;
 
 void init() {
   al_init();
@@ -122,6 +123,7 @@ void init() {
   buttonDifficultyHard = al_load_bitmap("assets/buttonDifficultyHard.png");
   buttonSaveDeselect = al_load_bitmap("assets/buttonSaveDeselect.png");
   buttonSaveSelect = al_load_bitmap("assets/buttonSaveSelect.png");
+  campLeaderboard = al_load_bitmap("assets/campLeaderboard.png");
 
   // iniciando display
   display = al_create_display(SCREEN_W, SCREEN_H);

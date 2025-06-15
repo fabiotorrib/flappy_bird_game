@@ -1,12 +1,8 @@
-#include <allegro5/allegro_primitives.h>  // usado nesse exemplo aqui
-#include <map>
-#include <string>
-#include <vector>
-#include "../../include/defines.hpp"
-#include "../../include/init.hpp"
-#include "../../include/states/main_menu.hpp"
-#include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+#include "defines.hpp"
+#include "init.hpp"
 #include "player.hpp"
+#include "states/main_menu.hpp"
+#include "states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
 
 ScreenState LeaderboardMenu::loop() {
   // aqui sao implementados os eventos de teclado e mouse
@@ -61,7 +57,37 @@ ScreenState LeaderboardMenu::loop() {
       }
     }
   }
-  player.ShowLeaderboard(ranking, font);
+  if (campLeaderboard) {
+    al_draw_bitmap(campLeaderboard, 100, 100, 0);
+  } else {
+    al_clear_to_color(al_map_rgb(0, 0, 0));
+  }
+
+  int x_name_col = SCREEN_W / 4;  // Posição inicial para "Rank. Nome"
+  int x_score_col =
+      SCREEN_W / 1.35;  // Posição para a Pontuação (alinhada à direita)
+
+  int y_inicial = SCREEN_H / 2.5;
+  int vertical_distance = 45;
+
+  for (size_t i = 0; i < ranking.size() && i < 10; ++i) {
+    int y_pos = y_inicial + i * vertical_distance;
+
+    std::string name_and_rank_text =
+        std::to_string(i + 1) + ". " + ranking[i].GetName();
+    std::string score_text = std::to_string(ranking[i].GetScore());
+
+    al_draw_text(font, al_map_rgb(255, 255, 255), x_name_col, y_pos,
+                 ALLEGRO_ALIGN_LEFT, name_and_rank_text.c_str());
+
+    al_draw_text(font, al_map_rgb(255, 255, 255), x_score_col, y_pos,
+                 ALLEGRO_ALIGN_RIGHT, score_text.c_str());
+  }
+
+  al_draw_text(font, al_map_rgb(200, 200, 200), SCREEN_W / 2, SCREEN_H - 80,
+               ALLEGRO_ALIGN_CENTER, "Pressione ESC ou ENTER para voltar");
+
   al_flip_display();
+
   return ScreenState::LEADERBOARD_MENU;
 }

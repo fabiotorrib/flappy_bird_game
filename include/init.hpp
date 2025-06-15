@@ -4,6 +4,7 @@
 #include <fstream>
 #include <iostream>
 #include <list>
+#include <map>
 #include <memory>
 #include <sstream>
 #include <string>
@@ -83,6 +84,7 @@ extern ALLEGRO_BITMAP *buttonDifficultyNormal;
 extern ALLEGRO_BITMAP *buttonDifficultyHard;
 extern ALLEGRO_BITMAP *buttonSaveSelect;
 extern ALLEGRO_BITMAP *buttonSaveDeselect;
+extern ALLEGRO_BITMAP *campLeaderboard;
 
 void init();
 void deinit();

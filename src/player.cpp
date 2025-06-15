@@ -17,9 +17,9 @@ void Player::SetScore(int points) {
   score = points;
 }
 
-bool Player::CheckingName(std::vector<Player>& ranking,std::string& Name){
-  for (const Player& p : ranking){
-    if (p.GetName() == Name){
+bool Player::CheckingName(std::vector<Player>& ranking, std::string& Name) {
+  for (const Player& p : ranking) {
+    if (p.GetName() == Name) {
       return true;
     }
   }
@@ -68,20 +68,4 @@ void Player::SaveLeaderboard(std::string fileName,
 
 void Player::SortLeaderboard(std::vector<Player>& ranking) {
   sort(ranking.begin(), ranking.end());
-}
-
-void Player::ShowLeaderboard(std::vector<Player>& ranking, ALLEGRO_FONT* font) {
-  al_clear_to_color(al_map_rgb(0, 0, 0));
-  int x = 100;
-  int y = 100;
-  int vertical_distance = 40;
-  al_draw_text(font, al_map_rgb(255, 255, 0), x, y - 50, 0, "LEADERBOARD:");
-  for (size_t i = 0; i < ranking.size() && i < 10; ++i) {
-    std::string text = std::to_string(i + 1) + ". " + ranking[i].GetName() +
-                       " - " + std::to_string(ranking[i].GetScore());
-    al_draw_text(font, al_map_rgb(255, 255, 255), x, y + i * vertical_distance,
-                 0, text.c_str());
-  }
-  al_flip_display();
-  al_rest(5.0);
 }
