@@ -5,8 +5,9 @@
 #include "../../include/defines.hpp"
 #include "../../include/init.hpp"
 #include "../../include/states/main_menu.hpp"
-#include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+#include "../../include/states/leaderboard_menu.hpp" 
 #include "../../include/player.hpp"
+#include "../../include/states/states.hpp" 
 
 ScreenState LeaderboardMenu::loop() {
   // aqui sao implementados os eventos de teclado e mouse
@@ -22,65 +23,21 @@ ScreenState LeaderboardMenu::loop() {
     if (ev.type == ALLEGRO_EVENT_TIMER) motion.loop();
 
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
-        (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
-         ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
-      al_play_sample(selectSound, 0., 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL);
-      if (menuButtons[buttonPositionSelected].name == "Exit") {
-      } else if (menuButtons[buttonPositionSelected].name == "NextPage") {
-      }
-    }
-
-    if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
         (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE)) {
       return ScreenState::MAIN_MENU;
     }
     ///////
-
-    if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
-      switch (ev.keyboard.keycode) {
-        case ALLEGRO_KEY_DOWN:
-        case ALLEGRO_KEY_LEFT:
-          menuButtons[buttonPositionSelected].buttonSelectState = 0;
-
-          if (buttonPositionSelected == 1)
-            buttonPositionSelected = 0;
-          else
-            buttonPositionSelected++;
-
-          menuButtons[buttonPositionSelected].buttonSelectState = 1;
-          break;
-
-        case ALLEGRO_KEY_UP:
-        case ALLEGRO_KEY_RIGHT:
-          if (ev.keyboard.keycode == ALLEGRO_KEY_UP ||
-              ev.keyboard.keycode == ALLEGRO_KEY_RIGHT) {
-            menuButtons[buttonPositionSelected].buttonSelectState = 0;
-
-            if (buttonPositionSelected == 0)
-              buttonPositionSelected = 1;
-            else
-              buttonPositionSelected--;
-
-            menuButtons[buttonPositionSelected].buttonSelectState = 1;
-          }
-          break;
-      }
-    }
-  }
-  if (campLeaderboard) {
-    al_draw_bitmap(campLeaderboard, 100, 100, 0);
-  } else {
-    al_clear_to_color(al_map_rgb(0, 0, 0));
   }
 
-  int x_name_col = SCREEN_W / 4;  // Posição inicial para "Rank. Nome"
-  int x_score_col =
-      SCREEN_W / 1.35;  // Posição para a Pontuação (alinhada à direita)
+    al_draw_bitmap(campLeaderboard, 40, 100, 0);
 
-  int y_inicial = SCREEN_H / 2.5;
+  int x_name_col = 270;  // Posição inicial para "Rank. Nome"
+  int x_score_col = 888.14;  // Posição para a Pontuação (alinhada à direita)
+
+  int y_inicial = 288;
   int vertical_distance = 45;
 
-  for (size_t i = 0; i < ranking.size() && i < 10; ++i) {
+  for (size_t i = 0; i < ranking.size() && i < 7; ++i) {
     int y_pos = y_inicial + i * vertical_distance;
 
     std::string name_and_rank_text =
@@ -93,6 +50,8 @@ ScreenState LeaderboardMenu::loop() {
                  ALLEGRO_ALIGN_RIGHT,"%d", ranking[i].GetScore());
 
   }
+  al_draw_textf(font, al_map_rgb(0, 0, 0), 640, 60,
+                 ALLEGRO_ALIGN_CENTER,"Press Esc to back to main menu.");
   al_flip_display();
   
 

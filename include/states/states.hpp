@@ -2,7 +2,7 @@
 #include "../motion.hpp"
 
 #include "difficulty_menu.hpp"
-#include "leaderboard.hpp"
+#include "leaderboard_menu.hpp"
 #include "load_game.hpp"
 #include "main_menu.hpp"
 #include "play.hpp"

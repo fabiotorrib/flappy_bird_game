@@ -24,13 +24,16 @@ ScreenState LoadName::loop() {
         std::cerr << "Nome: " << user_name_string << std::endl;
         if (user_name_string != "") {
           if (inputNameScreen == "NewGame") {
-            if (player.CheckingName(ranking, user_name_string))
+            if (player.CheckingName(ranking, user_name_string)){
               nameError = 1;
-            else
+            } else {
               nameError = 3;
-            player = Player(user_name_string, 0);
-            player.SaveLeaderboard("Leaderboard.txt", ranking, player);
-            return PLAY;
+              player = Player(user_name_string, 0);
+              player.SaveLeaderboard("Leaderboard.txt", ranking, player);
+              user_name_string = "";
+              nameError = 0;
+              return PLAY;
+            }
           } else if (inputNameScreen == "LoadGame") {
             if (!player.CheckingName(ranking, user_name_string)){
               nameError = 2;
@@ -38,6 +41,8 @@ ScreenState LoadName::loop() {
               nameError = 3;
               player = Player(user_name_string, 0);
               player.SaveLeaderboard("Leaderboard.txt", ranking, player);
+              user_name_string = "";
+              nameError = 0;
               return PLAY;
             }
           }
