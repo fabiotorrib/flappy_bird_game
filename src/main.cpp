@@ -15,6 +15,8 @@ int main() {
       screen = loadName.loop();
     } else if (screen == DIFFICULTY_MENU) {
       screen = difficultyMenu.loop();
+    } else if (screen == LEADERBOARD_MENU) {
+      screen = leaderboardMenu.loop();
     }
   }
   deinit();

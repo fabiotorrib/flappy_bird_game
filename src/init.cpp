@@ -5,6 +5,8 @@ ALLEGRO_DISPLAY *display = nullptr;
 ALLEGRO_EVENT_QUEUE *event_queue = nullptr;
 ALLEGRO_TIMER *timer_FPS = nullptr;
 ALLEGRO_EVENT ev;
+Player player = Player(" ", 0);
+std::vector<Player> ranking = player.ReadLeaderboard("Leaderboard.txt");
 
 // Iniciando fonte
 ALLEGRO_FONT *font = NULL;
@@ -34,6 +36,7 @@ ALLEGRO_BITMAP *logoNormal = NULL;
 ALLEGRO_BITMAP *background = NULL;
 ALLEGRO_BITMAP *icone = NULL;
 ALLEGRO_AUDIO_STREAM *background_music = NULL;
+ALLEGRO_SAMPLE *selectSound = NULL;
 ALLEGRO_BITMAP *lights = NULL;
 ALLEGRO_BITMAP *clouds = NULL;
 ALLEGRO_BITMAP *clouds2 = NULL;
@@ -69,6 +72,7 @@ void init() {
   background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
   al_attach_audio_stream_to_mixer(background_music, al_get_default_mixer());
   al_set_audio_stream_playmode(background_music, ALLEGRO_PLAYMODE_LOOP);
+  selectSound = al_load_sample("assets/selectSound.wav");
 
   // iniciando fonte
   al_init_ttf_addon();

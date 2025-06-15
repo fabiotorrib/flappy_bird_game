@@ -2,6 +2,7 @@
 #include "../motion.hpp"
 #include "../motion_bird.hpp"
 #include "difficulty_menu.hpp"
+#include "leaderboard.hpp"
 #include "load_game.hpp"
 #include "main_menu.hpp"
 #include "play.hpp"
@@ -13,3 +14,4 @@ inline LoadName loadName;
 inline Motion motion;
 inline MotionBird motion_bird;
 inline DifficultyMenu difficultyMenu;
+inline LeaderboardMenu leaderboardMenu;

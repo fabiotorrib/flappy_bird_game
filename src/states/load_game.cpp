@@ -6,6 +6,7 @@
 #include "../../include/init.hpp"
 #include "../../include/states/main_menu.hpp"
 #include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+#include "player.hpp"
 
 ScreenState LoadName::loop() {
   // aqui sao implementados os eventos de teclado e mouse
@@ -17,17 +18,21 @@ ScreenState LoadName::loop() {
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
         (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
          ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
+      al_play_sample(selectSound, 0., 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL);
       if (menuButtons[buttonPositionSelected].name == "Insert") {
         std::cerr << "Botão Insert selecionado!" << std::endl;
         std::cerr << "Nome: " << user_name_string << std::endl;
         if (user_name_string != "") {
           if (inputNameScreen == "NewGame") {
-            if (user_name_string == "EXISTE")
+            if (player.CheckingName(ranking, user_name_string))
               nameError = 1;
             else
               nameError = 3;
+            player = Player(user_name_string, 0);
+            ranking.push_back(player);
+            player.SaveLeaderboard("Leaderboard.txt", ranking);
           } else if (inputNameScreen == "LoadGame") {
-            if (user_name_string == "NAOEXISTE")
+            if (!player.CheckingName(ranking, user_name_string))
               nameError = 2;
             else
               nameError = 3;

@@ -19,6 +19,7 @@ ScreenState MainMenu::loop() {
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
         (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
          ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
+      al_play_sample(selectSound, 0.3, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL);
       if (menuButtons[buttonPositionSelected].name == "NewGame") {
         std::cerr << "Botão NewGame selecionado!" << std::endl;
         inputNameScreen = "NewGame";
@@ -34,6 +35,7 @@ ScreenState MainMenu::loop() {
         return ScreenState::DIFFICULTY_MENU;
       } else if (menuButtons[buttonPositionSelected].name == "Leaderboard") {
         std::cerr << "Botão Leaderboard selecionado!" << std::endl;
+        return ScreenState::LEADERBOARD_MENU;
       } else if (menuButtons[buttonPositionSelected].name == "Exit") {
         std::cerr << "Botão Exit selecionado!" << std::endl;
         return ScreenState::EXIT;
