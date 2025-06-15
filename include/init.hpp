@@ -20,7 +20,10 @@
 
 // Libs criadas
 #include "defines.hpp"
+#include "player.hpp"
 #include "state.hpp"
+
+class Player;
 
 // Globais
 extern ALLEGRO_DISPLAY *display;
@@ -30,9 +33,12 @@ extern ALLEGRO_TIMER *timer_FPS;
 extern ALLEGRO_BITMAP *icon;
 extern ALLEGRO_KEYBOARD_STATE keystate;
 extern ALLEGRO_MOUSE_STATE mousestate;
+extern Player player;
+extern std::vector<Player> ranking;
 
-// Musicas
+// Musicas e efeitos sonoros
 extern ALLEGRO_AUDIO_STREAM *background_music;
+extern ALLEGRO_SAMPLE *selectSound;
 
 // Fontes
 extern ALLEGRO_FONT *font;

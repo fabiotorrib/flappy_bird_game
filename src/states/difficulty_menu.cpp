@@ -17,6 +17,7 @@ ScreenState DifficultyMenu::loop() {
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
         (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
          ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
+      al_play_sample(selectSound, 0.3, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL);
       if (menuButtons[buttonPositionSelected].name == "Easy") {
         std::cout << "Dificuldade Easy selecionada!" << std::endl;
         difficultySelected = "Easy";

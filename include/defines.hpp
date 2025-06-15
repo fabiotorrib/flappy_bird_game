@@ -15,6 +15,7 @@ enum ScreenState {
   NEW_NAME,
   LOAD_NAME,
   DIFFICULTY_MENU,
+  LEADERBOARD_MENU,
   PLAY,
   PAUSE,
   GAME_OVER,
