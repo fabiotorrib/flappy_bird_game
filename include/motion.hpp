@@ -1,6 +1,4 @@
 #pragma once
-
-#include "states/states.hpp"
 #include "init.hpp"
 #include "defines.hpp"
 #include <allegro5/allegro_primitives.h>

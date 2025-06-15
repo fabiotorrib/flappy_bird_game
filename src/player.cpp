@@ -1,6 +1,6 @@
-#include "player.hpp"
+#include "../include/player.hpp"
 #include <ostream>  // Necessário para o bônus do Doctest
-#include "init.hpp"
+#include "../include/init.hpp"
 
 Player::Player(std::string name, int score) : name(name), score(score) {
 }

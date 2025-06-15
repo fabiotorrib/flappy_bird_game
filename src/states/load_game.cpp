@@ -6,7 +6,7 @@
 #include "../../include/init.hpp"
 #include "../../include/states/main_menu.hpp"
 #include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
-#include "player.hpp"
+#include "../../include/player.hpp"
 
 ScreenState LoadName::loop() {
   // aqui sao implementados os eventos de teclado e mouse
@@ -29,8 +29,8 @@ ScreenState LoadName::loop() {
             else
               nameError = 3;
             player = Player(user_name_string, 0);
-            ranking.push_back(player);
-            player.SaveLeaderboard("Leaderboard.txt", ranking);
+            //player.SaveLeaderboard("Leaderboard.txt", ranking, player);
+            return PLAY;
           } else if (inputNameScreen == "LoadGame") {
             if (!player.CheckingName(ranking, user_name_string))
               nameError = 2;

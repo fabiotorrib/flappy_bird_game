@@ -1,6 +1,6 @@
 #pragma once
 #include "../motion.hpp"
-#include "../motion_bird.hpp"
+
 #include "difficulty_menu.hpp"
 #include "leaderboard.hpp"
 #include "load_game.hpp"
@@ -12,6 +12,5 @@ inline MainMenu mainMenu;
 inline Play play;
 inline LoadName loadName;
 inline Motion motion;
-inline MotionBird motion_bird;
 inline DifficultyMenu difficultyMenu;
 inline LeaderboardMenu leaderboardMenu;

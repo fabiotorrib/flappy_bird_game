@@ -1,29 +1,52 @@
-#include "flappy_bird_controller.hpp"
+#include "../include/flappy_bird_controller.hpp"
+#include <allegro5/bitmap_draw.h>
+#include <iostream>
+
+
+
+//funcao de desenhar as coisas
+void FlappyBird::draw(){
+  al_draw_bitmap(background, 0, 0, 0);
+  if(state == 0){
+    al_draw_bitmap(ground,0,0,0);
+    draw_intial_text();
+  } else if (state == 1){
+    flappy_obj.draw();
+    if (flappy_obj.get_x()>=X_INIT){
+      pipelist.draw();
+    }
+    draw_animated_ground(velocity);
+    draw_HUD();
+
+  }
+}
+
 
 void FlappyBird::update() {
-  bird.update();
-  for (auto it = pipes.begin(); it != pipes.end();) {
-    it->update();
-    if (it->is_off_screen()) {
-      it = pipes.erase(it);
-    } else {
-      ++it;
+  if (state == 1){
+    flappy_obj.update();
+    if (flappy_obj.get_x()>=X_INIT){
+      pipelist.set_start();
+      pipelist.set_vx(velocity);
+      pipelist.update();
     }
   }
-  update_score();
 }
 
-void FlappyBird::jump() {
-  bird.set_vy(JUMP_FORCE);
-}
-
-void FlappyBird::reset() {
-  bird.set_x(SCREEN_W / 3);
-  bird.set_y(SCREEN_H / 2);
-  bird.set_vy(0);
-  pipes.clear();
+void FlappyBird::reset(){
+  state = 0;
+  time = 0;
+  velocity = 1.0;
+  velocity_backup = 0;
   score = 0;
+  positionF_x = 0;
+  positionF2_x = SCREEN_W;
+  change_vel = 5;
+  flappy_obj.reset_xy();
+  flappy_obj.set_break(false);
+  pipelist.reset();
 }
+
 
 void FlappyBird::setPlayerName(const std::string& name) {
   currentPlayer = std::make_unique<Player>(name);
@@ -33,67 +56,123 @@ void FlappyBird::saveCurrentPlayerScore() {
   if (!currentPlayer) {
     return;
   }
-
-  const std::string leaderboard_file = "leaderboard.txt";
-  auto leaderboard = Player::ReadLeaderboard(leaderboard_file);
-  bool player_found = false;
-
-  // O acesso com 'currentPlayer->' também funciona da mesma forma.
-  for (auto& p : leaderboard) {
-    if (p.GetName() == currentPlayer->GetName()) {
-      player_found = true;
-      if (score > p.GetScore()) {
-        p.SetScore(score);
-      }
-      break;
-    }
-  }
-
-  if (!player_found) {
-    // E o acesso com '*' para obter o objeto também.
-    currentPlayer->SetScore(score);
-    leaderboard.push_back(*currentPlayer);
-  }
-
-  Player::SortLeaderboard(leaderboard);
-  Player::SaveLeaderboard(leaderboard_file, leaderboard);
 }
 
-bool FlappyBird::check_bird_collision(const GameObject& other) const {
-  bool is_inside_other_horizontal =
-      (bird.get_x() + bird.get_width() / 2.0f >= other.get_x()) &&
-      (bird.get_x() + bird.get_width() / 2.0f <=
-       other.get_x() + other.get_width());
-  if (is_inside_other_horizontal &&
-      ((bird.get_y() <= other.get_y()) ||
-       (bird.get_y() + bird.get_height() >= other.get_y() + GAP_SIZE))) {
+//funcao checa colisoes
+bool FlappyBird::check_collisions() {
+  if ((flappy_obj.check_collision_with_boundaries() && velocity != 0)||(pipelist.check_collision(flappy_obj))){
+    //colocar audio de morte aqui e alguma pisca na tela 
+    velocity = 0;
+    flappy_obj.set_break(true);
     return true;
   }
   return false;
 }
 
-bool FlappyBird::check_collision_with_boundaries() const {
-  if (bird.get_y() <= 0) {
-    return true;
+
+//ACTIONS
+
+void FlappyBird::jump() {
+  if (velocity != 0){
+    flappy_obj.jump();
   }
-  if (bird.get_y() + bird.get_height() >= SCREEN_H) {
-    return true;
-  }
-  return false;
 }
 
-void FlappyBird::spawn_pipe() {
-  Pipe p(SCREEN_W, 100 + rand() % (SCREEN_H - MIN_PIPE_H));
-  p.set_vx(PIPE_SPEED);
-  pipes.push_back(p);
-  std::cout << "INFO: Cano gerado na posicao x=" << p.get_x()
-            << ", y=" << p.get_y() << std::endl;
+void FlappyBird::starter(){
+  state = 1;
+}
+
+void FlappyBird::control_pipes(){
+  pipelist.add_pipe_pair();
+  pipelist.delete_pipe_pair();
+}
+
+void FlappyBird::draw_intial_text() {
+  time += 1.0/FPS;
+  float alpha = 0.5f + 0.5f * sinf(1.0f * time);
+  ALLEGRO_COLOR cor = al_map_rgba_f(1, 1, 1, alpha);
+  al_draw_text(font, cor, SCREEN_W/2, SCREEN_H/2, ALLEGRO_ALIGN_CENTRE,
+        "PRESS SPACE TO PLAY");
 }
 
 void FlappyBird::update_score() {
-  for (auto& pipe : pipes) {
-    if (pipe.check_score(bird.get_x())) {
-      score++;
-    }
+  pipelist.check_score(flappy_obj.get_x());
+  score = pipelist.get_points();
+}
+
+void FlappyBird::change_velocity() {
+  
+  if(score%change_vel==0 && score!=0){
+    velocity += 0.25;
+    change_vel+=2;
   }
 }
+
+
+void FlappyBird::draw_HUD(){
+  al_draw_textf(font, al_map_rgb(255,255,255), 60, 30, ALLEGRO_ALIGN_CENTRE,
+             "%d", score);
+}
+
+void FlappyBird::draw_animated_ground(float velocity){
+    positionF_x -= velocity;
+    positionF2_x -= velocity;
+
+    if (positionF_x <= -1280){
+        positionF_x = 0;
+    }
+        
+    if (positionF2_x <= 0){
+        positionF2_x = 1280;
+    }
+
+    al_draw_bitmap(ground, positionF_x, 0, 0);
+    al_draw_bitmap(ground2, positionF2_x, 0, 0);
+}
+void FlappyBird::breaker(){
+  velocity_backup = velocity;
+  velocity = 0;
+  flappy_obj.set_break(true);
+}
+void FlappyBird::unbreaker(){
+  velocity = velocity_backup;
+  flappy_obj.set_break(false);
+}
+
+
+//AUXILIARES
+
+
+int FlappyBird::get_state(){
+  return state;
+}
+
+void FlappyBird::set_playerscore(){
+  currentPlayer->SetScore(score);
+}
+  // const std::string leaderboard_file = "leaderboard.txt";
+  // auto leaderboard = Player::ReadLeaderboard(leaderboard_file);
+  // bool player_found = false;
+
+  // // O acesso com 'currentPlayer->' também funciona da mesma forma.
+  // for (auto& p : leaderboard) {
+  //   if (p.GetName() == currentPlayer->GetName()) {
+  //     player_found = true;
+  //     if (score > p.GetScore()) {
+  //       p.SetScore(score);
+  //     }
+  //     break;
+  //   }
+  // }
+
+  // if (!player_found) {
+  //   // E o acesso com '*' para obter o objeto também.
+  //   currentPlayer->SetScore(score);
+  //   leaderboard.push_back(*currentPlayer);
+  // }
+
+  // Player::SortLeaderboard(leaderboard);
+  // Player::SaveLeaderboard(leaderboard_file, leaderboard);
+
+
+

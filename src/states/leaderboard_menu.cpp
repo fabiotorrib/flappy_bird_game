@@ -1,8 +1,12 @@
-#include "defines.hpp"
-#include "init.hpp"
-#include "player.hpp"
-#include "states/main_menu.hpp"
-#include "states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+#include <allegro5/allegro_primitives.h>  // usado nesse exemplo aqui
+#include <map>
+#include <string>
+#include <vector>
+#include "../../include/defines.hpp"
+#include "../../include/init.hpp"
+#include "../../include/states/main_menu.hpp"
+#include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+#include "../../include/player.hpp"
 
 ScreenState LeaderboardMenu::loop() {
   // aqui sao implementados os eventos de teclado e mouse

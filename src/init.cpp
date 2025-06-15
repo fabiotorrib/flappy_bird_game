@@ -1,4 +1,6 @@
 #include "../include/init.hpp"
+#include <allegro5/bitmap_io.h>
+
 
 // iniciando as variaveis
 ALLEGRO_DISPLAY *display = nullptr;
@@ -54,6 +56,9 @@ ALLEGRO_BITMAP *buttonDifficultyHard = NULL;
 ALLEGRO_BITMAP *buttonSaveSelect = NULL;
 ALLEGRO_BITMAP *buttonSaveDeselect = NULL;
 ALLEGRO_BITMAP *campLeaderboard = NULL;
+ALLEGRO_BITMAP* flappy = NULL;
+ALLEGRO_BITMAP* pipe1 = NULL;
+ALLEGRO_BITMAP* pipeout = NULL;
 
 void init() {
   al_init();
@@ -71,6 +76,7 @@ void init() {
   al_init_acodec_addon();
   al_reserve_samples(16);
   background_music = al_load_audio_stream("assets/SoundTrack.ogg", 8, 4096);
+  if (background_music) fprintf(stderr, "Falha ao carregar som\n");
   al_attach_audio_stream_to_mixer(background_music, al_get_default_mixer());
   al_set_audio_stream_playmode(background_music, ALLEGRO_PLAYMODE_LOOP);
   selectSound = al_load_sample("assets/selectSound.wav");
@@ -124,6 +130,9 @@ void init() {
   buttonSaveDeselect = al_load_bitmap("assets/buttonSaveDeselect.png");
   buttonSaveSelect = al_load_bitmap("assets/buttonSaveSelect.png");
   campLeaderboard = al_load_bitmap("assets/campLeaderboard.png");
+  flappy = al_load_bitmap("assets/Flappy.png");
+  pipe1 = al_load_bitmap("assets/PipeWithBottom.png");
+  pipeout = al_load_bitmap("assets/PipeWithout.png");
 
   // iniciando display
   display = al_create_display(SCREEN_W, SCREEN_H);
@@ -139,6 +148,7 @@ void init() {
 
   // titulo da janela
   al_set_window_title(display, "Flappy Bird");
+  al_set_blender(ALLEGRO_ADD, ALLEGRO_ALPHA, ALLEGRO_INVERSE_ALPHA);
 
   // associa display e a fila ao statico do estado
   State::setGlobals(display, event_queue);
@@ -195,6 +205,9 @@ void deinit() {
   al_destroy_bitmap(buttonDifficultyHard);
   al_destroy_bitmap(buttonSaveSelect);
   al_destroy_bitmap(buttonSaveDeselect);
+  al_destroy_bitmap(flappy);
+  al_destroy_bitmap(pipe1);
+  al_destroy_bitmap(pipeout);
 
   al_stop_timer(timer_FPS);
   al_destroy_timer(timer_FPS);

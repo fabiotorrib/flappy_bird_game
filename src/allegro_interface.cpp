@@ -1,7 +1,7 @@
-#include "allegro_interface.hpp"
-#include "init.hpp"
-#include "states/main_menu.hpp"
-#include "states/play.hpp"
+#include "../include/allegro_interface.hpp"
+#include "../include/init.hpp"
+#include "../include/states/main_menu.hpp"
+#include "../include/states/play.hpp"
 
 AllegroController::AllegroController(float screen_w, float screen_h)
     : screen_width(screen_w), screen_height(screen_h) {
