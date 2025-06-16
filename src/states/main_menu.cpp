@@ -9,10 +9,8 @@
 
 std::string inputNameScreen = "";
 
-ScreenState MainMenu::loop() {
+ScreenState MainMenu::loop(const ALLEGRO_EVENT& ev) {
   // aqui sao implementados os eventos de teclado e mouse
-  while (al_get_next_event(queue, &ev)) {
-    if (ev.type == ALLEGRO_EVENT_TIMER) motion.loop();
 
     if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return ScreenState::EXIT;
 
@@ -40,9 +38,6 @@ ScreenState MainMenu::loop() {
         std::cerr << "Botão Exit selecionado!" << std::endl;
         return ScreenState::EXIT;
       }
-      // reseta antes de começar a partida
-      // play.reset();
-      // return ScreenState::PLAY;
     }
 
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
@@ -67,48 +62,47 @@ ScreenState MainMenu::loop() {
 
       menuButtons[buttonPositionSelected].buttonSelectState = 1;
     }
-  }
 
   // aqui sao implementados as partes visuais
   // Desenha a logo
-  al_draw_bitmap(logoNormal, -20, -10, 0);
-  // Desenha o botão NewGame
-  if (menuButtons[0].buttonSelectState)
-    al_draw_bitmap(buttonNewGameSelect, 496.5, 270, 0);
-  else
-    al_draw_bitmap(buttonNewGameDeselect, 496.5, 270, 0);
+  if(ev.type == ALLEGRO_EVENT_TIMER){
+    motion.loop();
+    al_draw_bitmap(logoNormal, -20, -10, 0);
+    // Desenha o botão NewGame
+    if (menuButtons[0].buttonSelectState)
+      al_draw_bitmap(buttonNewGameSelect, 496.5, 270, 0);
+    else
+      al_draw_bitmap(buttonNewGameDeselect, 496.5, 270, 0);
 
-  // Desenha o botão LoadGame
-  if (!menuButtons[1].buttonSelectState)
-    al_draw_bitmap(buttonLoadGameSelect, 496.5, 340, 0);
-  else
-    al_draw_bitmap(buttonLoadGameDeselect, 496.5, 340, 0);
+    // Desenha o botão LoadGame
+    if (!menuButtons[1].buttonSelectState)
+      al_draw_bitmap(buttonLoadGameSelect, 496.5, 340, 0);
+    else
+      al_draw_bitmap(buttonLoadGameDeselect, 496.5, 340, 0);
 
-  // Desenha o botão Settings
-  if (!menuButtons[2].buttonSelectState)
-    al_draw_bitmap(buttonSettingsSelect, 496.5, 410, 0);
-  else
-    al_draw_bitmap(buttonSettingsDeselect, 496.5, 410, 0);
+    // Desenha o botão Settings
+    if (!menuButtons[2].buttonSelectState)
+      al_draw_bitmap(buttonSettingsSelect, 496.5, 410, 0);
+    else
+      al_draw_bitmap(buttonSettingsDeselect, 496.5, 410, 0);
 
-  // Desenha o botão Difficulty
-  if (!menuButtons[3].buttonSelectState)
-    al_draw_bitmap(buttonDifficultySelect, 496.5, 480, 0);
-  else
-    al_draw_bitmap(buttonDifficultyDeselect, 496.5, 480, 0);
+    // Desenha o botão Difficulty
+    if (!menuButtons[3].buttonSelectState)
+      al_draw_bitmap(buttonDifficultySelect, 496.5, 480, 0);
+    else
+      al_draw_bitmap(buttonDifficultyDeselect, 496.5, 480, 0);
 
-  // Desenha o botão Leaderboard
-  if (!menuButtons[4].buttonSelectState)
-    al_draw_bitmap(buttonLeaderboardSelect, 496.5, 550, 0);
-  else
-    al_draw_bitmap(buttonLeaderboardDeselect, 496.5, 550, 0);
+    // Desenha o botão Leaderboard
+    if (!menuButtons[4].buttonSelectState)
+      al_draw_bitmap(buttonLeaderboardSelect, 496.5, 550, 0);
+    else
+      al_draw_bitmap(buttonLeaderboardDeselect, 496.5, 550, 0);
 
-  // Desenha o botão Exit
-  if (!menuButtons[5].buttonSelectState)
-    al_draw_bitmap(buttonExitSelect, 496.5, 620, 0);
-  else
-    al_draw_bitmap(buttonExitDeselect, 496.5, 620, 0);
-
-  // esse eh o update
-  al_flip_display();
+    // Desenha o botão Exit
+    if (!menuButtons[5].buttonSelectState)
+      al_draw_bitmap(buttonExitSelect, 496.5, 620, 0);
+    else
+      al_draw_bitmap(buttonExitDeselect, 496.5, 620, 0);
+  }
   return ScreenState::MAIN_MENU;
 }

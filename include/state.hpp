@@ -8,7 +8,7 @@ class State {
         virtual ~State() = default;
     
         //essa sera a funcao em que sera implementada a logica de cada estado
-        virtual ScreenState loop() = 0;
+        virtual ScreenState loop(const ALLEGRO_EVENT& ev) = 0;
         //usada para associar ao display criado no init()
         static void setGlobals(ALLEGRO_DISPLAY* d, ALLEGRO_EVENT_QUEUE* q);
     

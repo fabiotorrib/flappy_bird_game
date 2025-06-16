@@ -32,11 +32,9 @@ class Player;
 // Globais
 extern ALLEGRO_DISPLAY *display;
 extern ALLEGRO_EVENT_QUEUE *event_queue;
-extern ALLEGRO_EVENT ev;
 extern ALLEGRO_TIMER *timer_FPS;
 extern ALLEGRO_BITMAP *icon;
 extern ALLEGRO_KEYBOARD_STATE keystate;
-extern ALLEGRO_MOUSE_STATE mousestate;
 extern Player player;
 extern std::vector<Player> ranking;
 

@@ -6,7 +6,6 @@
 ALLEGRO_DISPLAY *display = nullptr;
 ALLEGRO_EVENT_QUEUE *event_queue = nullptr;
 ALLEGRO_TIMER *timer_FPS = nullptr;
-ALLEGRO_EVENT ev;
 Player player = Player(" ", 0);
 std::vector<Player> ranking = player.ReadLeaderboard("Leaderboard.txt");
 
@@ -68,7 +67,6 @@ void init() {
   al_init_image_addon();
 
   // iniciando inputs
-  al_install_mouse();
   al_install_keyboard();
 
   // iniciando audio
@@ -143,7 +141,6 @@ void init() {
   // registra fontes na fila (obrigatorio)
   al_register_event_source(event_queue, al_get_display_event_source(display));
   al_register_event_source(event_queue, al_get_keyboard_event_source());
-  al_register_event_source(event_queue, al_get_mouse_event_source());
   al_register_event_source(event_queue, al_get_timer_event_source(timer_FPS));
 
   // titulo da janela

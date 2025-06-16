@@ -5,7 +5,7 @@ void Bird::update(){
     this->set_by();
     this->set_finals();
     if (x<X_INIT){
-        x+=1;
+        x+=BIRD_VEL;
     } else {
         if(y_final <= SCREEN_H-101){
             y+=vy;

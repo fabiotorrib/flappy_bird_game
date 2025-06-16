@@ -5,5 +5,5 @@
 
 class LeaderboardMenu : public State {
  public:
-  ScreenState loop() override;
+  ScreenState loop(const ALLEGRO_EVENT& ev) override;
 };

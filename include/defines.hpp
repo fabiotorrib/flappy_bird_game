@@ -32,23 +32,29 @@ struct Button {
 #define MAX_INPUT_LENGTH 33
 
 //forca do pulo
-#define JUMP_FORCE -2.0
+#define JUMP_FORCE -4.0
 
 //gravidade
-#define GRAVITY 0.03
+#define GRAVITY 0.1
 
 
 //multiplicador da rotacao do bird
-#define ROTATION 0.2
+#define ROTATION 0.1
 
+//posicao inicial do movimento bird
 #define X_INIT 400
 
 //gap entre os canos
 #define GAP_SIZE 180
 #define GAP_X 500
-
+//velocidade x do bird
+#define BIRD_VEL 3
 // velocidade dos pipes
-#define PIPE_SPEED -5
+#define PIPE_SPEED 4.0
+//text oscilation
+#define OSCILATION 3.0
+//velocidade oscilation gif
+#define TIME_GIF_BIRD 8
 
 #define TETO_BIRD 0.368
-#define TIME_GIF_BIRD 35
+

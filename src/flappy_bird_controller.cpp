@@ -36,7 +36,7 @@ void FlappyBird::update() {
 void FlappyBird::reset(){
   state = 0;
   time = 0;
-  velocity = 1.0;
+  velocity = PIPE_SPEED;
   velocity_backup = 0;
   score = 0;
   positionF_x = 0;
@@ -91,7 +91,7 @@ void FlappyBird::control_pipes(){
 
 void FlappyBird::draw_intial_text() {
   time += 1.0/FPS;
-  float alpha = 0.5f + 0.5f * sinf(1.0f * time);
+  float alpha = 0.5f + 0.5f * sinf(OSCILATION * time);
   ALLEGRO_COLOR cor = al_map_rgba_f(1, 1, 1, alpha);
   al_draw_text(font, cor, SCREEN_W/2, SCREEN_H/2, ALLEGRO_ALIGN_CENTRE,
         "PRESS SPACE TO PLAY");
@@ -149,29 +149,6 @@ int FlappyBird::get_state(){
   return state;
 }
 
-  // const std::string leaderboard_file = "leaderboard.txt";
-  // auto leaderboard = Player::ReadLeaderboard(leaderboard_file);
-  // bool player_found = false;
-
-  // // O acesso com 'currentPlayer->' também funciona da mesma forma.
-  // for (auto& p : leaderboard) {
-  //   if (p.GetName() == currentPlayer->GetName()) {
-  //     player_found = true;
-  //     if (score > p.GetScore()) {
-  //       p.SetScore(score);
-  //     }
-  //     break;
-  //   }
-  // }
-
-  // if (!player_found) {
-  //   // E o acesso com '*' para obter o objeto também.
-  //   currentPlayer->SetScore(score);
-  //   leaderboard.push_back(*currentPlayer);
-  // }
-
-  // Player::SortLeaderboard(leaderboard);
-  // Player::SaveLeaderboard(leaderboard_file, leaderboard);
 
 
 

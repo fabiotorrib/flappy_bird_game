@@ -8,5 +8,5 @@ private:
     ScreenState status = PLAY;
 public:
     void init_objects();
-    ScreenState loop() override;
+    ScreenState loop(const ALLEGRO_EVENT& ev) override;
 };

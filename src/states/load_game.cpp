@@ -8,12 +8,9 @@
 #include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
 #include "../../include/player.hpp"
 
-ScreenState LoadName::loop() {
+ScreenState LoadName::loop(const ALLEGRO_EVENT& ev) {
   // aqui sao implementados os eventos de teclado e mouse
-  while (al_get_next_event(queue, &ev)) {
     if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return ScreenState::EXIT;
-
-    if (ev.type == ALLEGRO_EVENT_TIMER) motion.loop();
 
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
         (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
@@ -124,45 +121,44 @@ ScreenState LoadName::loop() {
           break;
       }
     }
+    if(ev.type == ALLEGRO_EVENT_TIMER){
+      motion.loop();
+      // Desenha o botão NewGame
+      if (menuButtons[0].buttonSelectState)
+        al_draw_bitmap(buttonBackSelect, 170, 490, 0);
+      else
+        al_draw_bitmap(buttonBackDeselect, 170, 490, 0);
 
-    // Desenha o botão NewGame
-    if (menuButtons[0].buttonSelectState)
-      al_draw_bitmap(buttonBackSelect, 170, 490, 0);
-    else
-      al_draw_bitmap(buttonBackDeselect, 170, 490, 0);
+      if (menuButtons[1].buttonSelectState)
+        al_draw_bitmap(buttonInsertSelect, 825, 490, 0);
+      else
+        al_draw_bitmap(buttonInsertDeselect, 825, 490, 0);
 
-    if (menuButtons[1].buttonSelectState)
-      al_draw_bitmap(buttonInsertSelect, 825, 490, 0);
-    else
-      al_draw_bitmap(buttonInsertDeselect, 825, 490, 0);
+      if (menuButtons[2].buttonSelectState)
+        al_draw_bitmap(nameCampSelect, 40, 100, 0);
+      else
+        al_draw_bitmap(nameCampDeselect, 40, 100, 0);
 
-    if (menuButtons[2].buttonSelectState)
-      al_draw_bitmap(nameCampSelect, 40, 100, 0);
-    else
-      al_draw_bitmap(nameCampDeselect, 40, 100, 0);
+      al_draw_text(font, al_map_rgb(0, 0, 0), 280, 286, ALLEGRO_ALIGN_LEFT,
+                  user_name_string.c_str());
 
-    al_draw_text(font, al_map_rgb(0, 0, 0), 280, 286, ALLEGRO_ALIGN_LEFT,
-                 user_name_string.c_str());
-
-    if (nameError == 1) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
-                   ALLEGRO_ALIGN_CENTER, "Your player is already registered");
-    }
-    if (nameError == 2) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
-                   ALLEGRO_ALIGN_CENTER, "This player does not exist!");
-    }
-    if (nameError == 3) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
-                   ALLEGRO_ALIGN_CENTER, "Name entered successfully.");
-    }
-    if (nameError == 4) {
-      al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
-                   ALLEGRO_ALIGN_CENTER,
-                   "No name entered. Please enter a name!");
-    }
+      if (nameError == 1) {
+        al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
+                    ALLEGRO_ALIGN_CENTER, "Your player is already registered");
+      }
+      if (nameError == 2) {
+        al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
+                    ALLEGRO_ALIGN_CENTER, "This player does not exist!");
+      }
+      if (nameError == 3) {
+        al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
+                    ALLEGRO_ALIGN_CENTER, "Name entered successfully.");
+      }
+      if (nameError == 4) {
+        al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380,
+                    ALLEGRO_ALIGN_CENTER,
+                    "No name entered. Please enter a name!");
+      }
   }
-  // esse eh o update
-  al_flip_display();
   return ScreenState::LOAD_NAME;
   }

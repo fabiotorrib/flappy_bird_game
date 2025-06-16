@@ -7,12 +7,9 @@
 #include "../../include/init.hpp"
 #include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
 
-ScreenState DifficultyMenu::loop() {
+ScreenState DifficultyMenu::loop(const ALLEGRO_EVENT& ev) {
   // aqui sao implementados os eventos de teclado e mouse
-  while (al_get_next_event(queue, &ev)) {
     if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return ScreenState::EXIT;
-
-    if (ev.type == ALLEGRO_EVENT_TIMER) motion.loop();
 
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
         (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
@@ -97,31 +94,30 @@ ScreenState DifficultyMenu::loop() {
           break;
       }
     }
+    if(ev.type == ALLEGRO_EVENT_TIMER){
+      motion.loop();
+      if (menuButtons[0].buttonSelectState)
+        al_draw_bitmap(buttonDifficultyEasy, 40, 80, 0);
+      else if (menuButtons[1].buttonSelectState)
+        al_draw_bitmap(buttonDifficultyNormal, 40, 80, 0);
+      else if (menuButtons[2].buttonSelectState)
+        al_draw_bitmap(buttonDifficultyHard, 40, 80, 0);
 
-    if (menuButtons[0].buttonSelectState)
-      al_draw_bitmap(buttonDifficultyEasy, 40, 80, 0);
-    else if (menuButtons[1].buttonSelectState)
-      al_draw_bitmap(buttonDifficultyNormal, 40, 80, 0);
-    else if (menuButtons[2].buttonSelectState)
-      al_draw_bitmap(buttonDifficultyHard, 40, 80, 0);
+      if (menuButtons[3].buttonSelectState) {
+        al_draw_bitmap(buttonSaveSelect, 496.5, 600, 0);
+      } else {
+        al_draw_bitmap(buttonSaveDeselect, 496.5, 600, 0);
+      }
 
-    if (menuButtons[3].buttonSelectState) {
-      al_draw_bitmap(buttonSaveSelect, 496.5, 600, 0);
-    } else {
-      al_draw_bitmap(buttonSaveDeselect, 496.5, 600, 0);
+      if (difficultySelected == "Easy")
+        al_draw_text(font, al_map_rgb(218, 15, 15), 640, 495,
+                    ALLEGRO_ALIGN_CENTER, "Easy Difficulty selected!");
+      else if (difficultySelected == "Normal")
+        al_draw_text(font, al_map_rgb(218, 15, 15), 640, 495,
+                    ALLEGRO_ALIGN_CENTER, "Normal Difficulty selected!");
+      else if (difficultySelected == "Hard")
+        al_draw_text(font, al_map_rgb(218, 15, 15), 640, 495,
+                    ALLEGRO_ALIGN_CENTER, "Hard Difficulty selected!");
     }
-
-    if (difficultySelected == "Easy")
-      al_draw_text(font, al_map_rgb(218, 15, 15), 640, 495,
-                   ALLEGRO_ALIGN_CENTER, "Easy Difficulty selected!");
-    else if (difficultySelected == "Normal")
-      al_draw_text(font, al_map_rgb(218, 15, 15), 640, 495,
-                   ALLEGRO_ALIGN_CENTER, "Normal Difficulty selected!");
-    else if (difficultySelected == "Hard")
-      al_draw_text(font, al_map_rgb(218, 15, 15), 640, 495,
-                   ALLEGRO_ALIGN_CENTER, "Hard Difficulty selected!");
-  }
-  // esse eh o update
-  al_flip_display();
   return ScreenState::DIFFICULTY_MENU;
 }

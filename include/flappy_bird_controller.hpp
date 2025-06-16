@@ -13,7 +13,7 @@ class FlappyBird {
   PipeList pipelist;
   int state = 0;
   float time = 0;
-  float velocity = 1.0;
+  float velocity = PIPE_SPEED;
   float velocity_backup = 0;
   int score = 0;
   float positionF_x = 0;

@@ -5,7 +5,7 @@
 
 class LeaderboardMenu : public State {
  public:
-  ScreenState loop() override;
+  ScreenState loop(const ALLEGRO_EVENT& ev) override;
   int buttonPositionSelected = 1;
   std::vector<Button> menuButtons = {{"Exit", 0}, {"NextPage", 1}};
 };
