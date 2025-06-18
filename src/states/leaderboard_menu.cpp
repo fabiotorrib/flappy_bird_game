@@ -21,12 +21,12 @@ ScreenState LeaderboardMenu::loop(const ALLEGRO_EVENT& ev) {
   }
 
 
-ScreenState LeaderboardMenu::draw (const ALLEGRO_EVENT& ev, Motion& motion) {
+ScreenState LeaderboardMenu::draw (Motion& motion) {
     motion.loop();
     al_draw_bitmap(campLeaderboard, 40, 100, 0);
 
     int x_name_col = 270;  // Posição inicial para "Rank. Nome"
-    int x_score_col = 888.14;  // Posição para a Pontuação (alinhada à direita)
+    float x_score_col = 888.14;  // Posição para a Pontuação (alinhada à direita)
 
     int y_inicial = 288;
     int vertical_distance = 45;

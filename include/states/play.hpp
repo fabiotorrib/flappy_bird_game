@@ -9,5 +9,5 @@ private:
 public:
     void init_objects();
     ScreenState loop(const ALLEGRO_EVENT& ev) override;
-    ScreenState draw(const ALLEGRO_EVENT& ev, Motion& motion) override;
+    ScreenState draw(Motion& motion);
 };

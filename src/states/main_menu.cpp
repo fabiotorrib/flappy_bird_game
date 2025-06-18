@@ -61,7 +61,7 @@ ScreenState MainMenu::loop(const ALLEGRO_EVENT& ev) {
 
   // aqui sao implementados as partes visuais
   // Desenha a logo
-ScreenState MainMenu::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
+ScreenState MainMenu::draw(Motion& motion) {
     motion.loop();
     al_draw_bitmap(logoNormal, -20, -10, 0);
     // Desenha o botão NewGame

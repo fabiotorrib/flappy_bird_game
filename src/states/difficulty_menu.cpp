@@ -90,7 +90,7 @@ ScreenState DifficultyMenu::loop(const ALLEGRO_EVENT& ev) {
     }
   return ScreenState::DIFFICULTY_MENU;
   }
-ScreenState DifficultyMenu::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
+ScreenState DifficultyMenu::draw(Motion& motion) {
       motion.loop();
       if (menuButtons[0].buttonSelectState)
         al_draw_bitmap(buttonDifficultyEasy, 40, 80, 0);

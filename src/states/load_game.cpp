@@ -121,7 +121,7 @@ ScreenState LoadName::loop(const ALLEGRO_EVENT& ev) {
 
 
 
-ScreenState LoadName::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
+ScreenState LoadName::draw(Motion& motion) {
       motion.loop();
       // Desenha o botão NewGame
       if (menuButtons[0].buttonSelectState)

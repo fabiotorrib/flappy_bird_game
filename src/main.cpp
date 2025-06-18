@@ -14,8 +14,6 @@ int main(){
   //definindo a screen inicial
   ScreenState screen = MAIN_MENU;
   bool onetime = true;
-  ALLEGRO_EVENT redraw_ev{};
-  redraw_ev.type = ALLEGRO_EVENT_TIMER;
 
   //inicializando estados
   std::unique_ptr<MainMenu> mainMenu = std::make_unique<MainMenu>();
@@ -61,19 +59,19 @@ int main(){
   // desenha a flipa a tela em 60 vezes por segundo
   if (redraw) {
     if (screen == MAIN_MENU) {
-            screen = mainMenu->draw(redraw_ev, *motion);
-          } else if (screen == PLAY) {
+            screen = mainMenu->draw(*motion);
+    } else if (screen == PLAY) {
             if (onetime){
                       play->init_objects();
                       onetime = false;
             }
-            screen = play->draw(redraw_ev, *motion);
-          } else if (screen == LOAD_NAME) {
-            screen = loadName->draw(redraw_ev, *motion);
-          } else if (screen == DIFFICULTY_MENU) {
-            screen = difficultyMenu->draw(redraw_ev, *motion);
+            screen = play->draw(*motion);
+    } else if (screen == LOAD_NAME) {
+            screen = loadName->draw(*motion);
+    } else if (screen == DIFFICULTY_MENU) {
+            screen = difficultyMenu->draw(*motion);
           } else if (screen == LEADERBOARD_MENU) {
-            screen = leaderboardMenu->draw(redraw_ev, *motion);
+            screen = leaderboardMenu->draw(*motion);
           }
     al_flip_display();
     }

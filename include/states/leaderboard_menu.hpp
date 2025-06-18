@@ -1,10 +1,9 @@
 #pragma once
-#include <vector>
 #include "../defines.hpp"
 #include "../state.hpp"
 
 class LeaderboardMenu : public State {
  public:
   ScreenState loop(const ALLEGRO_EVENT& ev) override;
-  ScreenState draw(const ALLEGRO_EVENT& ev, Motion& motion) override;
+  ScreenState draw(Motion& motion) override;
 };

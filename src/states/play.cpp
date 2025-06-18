@@ -28,8 +28,8 @@ ScreenState Play::loop(const ALLEGRO_EVENT& ev)
     return ScreenState::PLAY;
 }
 
-ScreenState Play::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
-        
+ScreenState Play::draw(Motion& motion) {
+    motion.loop();
     flappy->set_current_player(player);
 
     flappy->draw();
