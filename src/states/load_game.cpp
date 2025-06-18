@@ -41,15 +41,25 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
             return new Play();
           }
         } else if (inputNameScreen == "LoadGame") {
-          if (!player.CheckingName(ranking, user_name_string)) {
-            nameError = 2;
-          } else {
-            nameError = 3;
-            player = Player(user_name_string, 0);
-            player.SaveLeaderboard("Leaderboard.txt", ranking, player);
+          bool player_found = false;
+          // Itera sobre o ranking para encontrar o jogador existente
+          for (const auto& existing_player : ranking) {
+            if (existing_player.GetName() == user_name_string) {
+              player = existing_player;  // Atribui o jogador existente (com seu
+                                         // score) à variável global
+              player_found = true;
+              break;  // Para o loop assim que encontrar
+            }
+          }
+
+          if (player_found) {
+            // Sucesso, o jogador foi carregado
             user_name_string = "";
-            nameError = 0;
-            return new Play();
+            nameError = 0;      // Limpa qualquer erro anterior
+            return new Play();  // Inicia o jogo
+          } else {
+            // O nome não foi encontrado no ranking
+            nameError = 2;  // "This player does not exist!"
           }
         }
       } else {
