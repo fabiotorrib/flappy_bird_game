@@ -2,30 +2,26 @@
 #include <allegro5/bitmap_draw.h>
 #include <iostream>
 
-
-
-//funcao de desenhar as coisas
-void FlappyBird::draw(){
+// funcao de desenhar as coisas
+void FlappyBird::draw() {
   al_draw_bitmap(background, 0, 0, 0);
-  if(state == 0){
-    al_draw_bitmap(ground,0,0,0);
+  if (state == 0) {
+    al_draw_bitmap(ground, 0, 0, 0);
     draw_intial_text();
-  } else if (state == 1){
+  } else if (state == 1) {
     flappy_obj.draw();
-    if (flappy_obj.get_x()>=X_INIT){
+    if (flappy_obj.get_x() >= X_INIT) {
       pipelist.draw();
     }
     draw_animated_ground(velocity);
     draw_HUD();
-
   }
 }
 
-
 void FlappyBird::update() {
-  if (state == 1){
+  if (state == 1) {
     flappy_obj.update();
-    if (flappy_obj.get_x()>=X_INIT){
+    if (flappy_obj.get_x() >= X_INIT) {
       pipelist.set_start();
       pipelist.set_vx(velocity);
       pipelist.update();
@@ -33,7 +29,7 @@ void FlappyBird::update() {
   }
 }
 
-void FlappyBird::reset(){
+void FlappyBird::reset() {
   state = 0;
   time = 0;
   velocity = PIPE_SPEED;
@@ -48,22 +44,23 @@ void FlappyBird::reset(){
   currentPlayer = nullptr;
 }
 
-//PLAYER
+// PLAYER
 void FlappyBird::set_current_player(Player& player) {
   currentPlayer = &player;
 }
-void FlappyBird::set_playerscore(){
+void FlappyBird::set_playerscore() {
   currentPlayer->SetScore(score);
 }
 
 void FlappyBird::saveCurrentPlayerScore() {
-  currentPlayer->SaveLeaderboard("Leaderboard.txt",ranking, *currentPlayer);
+  currentPlayer->SaveLeaderboard("Leaderboard.txt", ranking, *currentPlayer);
 }
 
-//funcao checa colisoes
+// funcao checa colisoes
 bool FlappyBird::check_collisions() {
-  if ((flappy_obj.check_collision_with_boundaries() && velocity != 0)||(pipelist.check_collision(flappy_obj))){
-    //colocar audio de morte aqui e alguma pisca na tela 
+  if ((flappy_obj.check_collision_with_boundaries() && velocity != 0) ||
+      (pipelist.check_collision(flappy_obj))) {
+    // colocar audio de morte aqui e alguma pisca na tela
     velocity = 0;
     flappy_obj.set_break(true);
     return true;
@@ -71,30 +68,29 @@ bool FlappyBird::check_collisions() {
   return false;
 }
 
-
-//ACTIONS
+// ACTIONS
 
 void FlappyBird::jump() {
-  if (velocity != 0){
+  if (velocity != 0) {
     flappy_obj.jump();
   }
 }
 
-void FlappyBird::starter(){
+void FlappyBird::starter() {
   state = 1;
 }
 
-void FlappyBird::control_pipes(){
+void FlappyBird::control_pipes() {
   pipelist.add_pipe_pair();
   pipelist.delete_pipe_pair();
 }
 
 void FlappyBird::draw_intial_text() {
-  time += 1.0/FPS;
+  time += 1.0 / FPS;
   float alpha = 0.5f + 0.5f * sinf(OSCILATION * time);
   ALLEGRO_COLOR cor = al_map_rgba_f(1, 1, 1, alpha);
-  al_draw_text(font, cor, SCREEN_W/2, SCREEN_H/2, ALLEGRO_ALIGN_CENTRE,
-        "PRESS SPACE TO PLAY");
+  al_draw_text(font, cor, SCREEN_W / 2, SCREEN_H / 2, ALLEGRO_ALIGN_CENTRE,
+               "PRESS SPACE TO PLAY");
 }
 
 void FlappyBird::update_score() {
@@ -103,52 +99,44 @@ void FlappyBird::update_score() {
 }
 
 void FlappyBird::change_velocity() {
-  
-  if(score%change_vel==0 && score!=0){
+  if (score % change_vel == 0 && score != 0) {
     velocity += 0.25;
-    change_vel+=2;
+    change_vel += 2;
   }
 }
 
-
-void FlappyBird::draw_HUD(){
-  al_draw_textf(font, al_map_rgb(255,255,255), 60, 30, ALLEGRO_ALIGN_CENTRE,
-             "%d", score);
+void FlappyBird::draw_HUD() {
+  al_draw_textf(font, al_map_rgb(255, 255, 255), 60, 30, ALLEGRO_ALIGN_CENTRE,
+                "%d", score);
 }
 
-void FlappyBird::draw_animated_ground(float velocity){
-    positionF_x -= velocity;
-    positionF2_x -= velocity;
+void FlappyBird::draw_animated_ground(float velocity) {
+  positionF_x -= velocity;
+  positionF2_x -= velocity;
 
-    if (positionF_x <= -1280){
-        positionF_x = 0;
-    }
-        
-    if (positionF2_x <= 0){
-        positionF2_x = 1280;
-    }
+  if (positionF_x <= -1280) {
+    positionF_x = 0;
+  }
 
-    al_draw_bitmap(ground, positionF_x, 0, 0);
-    al_draw_bitmap(ground2, positionF2_x, 0, 0);
+  if (positionF2_x <= 0) {
+    positionF2_x = 1280;
+  }
+
+  al_draw_bitmap(ground, positionF_x, 0, 0);
+  al_draw_bitmap(ground2, positionF2_x, 0, 0);
 }
-void FlappyBird::breaker(){
+void FlappyBird::breaker() {
   velocity_backup = velocity;
   velocity = 0;
   flappy_obj.set_break(true);
 }
-void FlappyBird::unbreaker(){
+void FlappyBird::unbreaker() {
   velocity = velocity_backup;
   flappy_obj.set_break(false);
 }
 
+// AUXILIARES
 
-//AUXILIARES
-
-
-int FlappyBird::get_state(){
+int FlappyBird::get_state() {
   return state;
 }
-
-
-
-

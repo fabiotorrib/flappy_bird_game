@@ -1,7 +1,6 @@
 #include "../include/init.hpp"
 #include <allegro5/bitmap_io.h>
 
-
 // iniciando as variaveis
 ALLEGRO_DISPLAY *display = nullptr;
 ALLEGRO_EVENT_QUEUE *event_queue = nullptr;
@@ -55,9 +54,9 @@ ALLEGRO_BITMAP *buttonDifficultyHard = NULL;
 ALLEGRO_BITMAP *buttonSaveSelect = NULL;
 ALLEGRO_BITMAP *buttonSaveDeselect = NULL;
 ALLEGRO_BITMAP *campLeaderboard = NULL;
-ALLEGRO_BITMAP* flappy = NULL;
-ALLEGRO_BITMAP* pipe1 = NULL;
-ALLEGRO_BITMAP* pipeout = NULL;
+ALLEGRO_BITMAP *flappy = NULL;
+ALLEGRO_BITMAP *pipe1 = NULL;
+ALLEGRO_BITMAP *pipeout = NULL;
 
 void init() {
   al_init();

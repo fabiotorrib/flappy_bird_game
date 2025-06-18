@@ -43,6 +43,8 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
           return new MainMenu();
         }
         break;
+      default:
+        break;
     }
   }
   // Se nenhuma tecla de transição de estado foi apertada, continua no estado
@@ -59,9 +61,9 @@ State* Play::update(Motion& motion) {
     flappy->control_pipes();
     flappy->update_score();
     flappy->change_velocity();
-    flappy->set_current_player(player);
 
     if (flappy->check_collisions()) {
+      flappy->set_playerscore();
       flappy->saveCurrentPlayerScore();
       // Apenas muda o status interno. A transição para outra tela
       // (como MainMenu) será feita pelo handle_input quando o

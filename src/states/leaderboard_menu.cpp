@@ -5,10 +5,6 @@
 State* LeaderboardMenu::handle_input(const ALLEGRO_EVENT& ev) {
   // aqui sao implementados os eventos de teclado e mouse
   // atualiza o ranking lendo o arquivo
-  ranking = player.ReadLeaderboard("Leaderboard.txt");
-  player.SortLeaderboard(ranking);
-  player.SaveLeaderboard("Leaderboard.txt", ranking);
-
   if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return nullptr;
 
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
