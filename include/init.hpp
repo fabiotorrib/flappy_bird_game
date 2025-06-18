@@ -1,5 +1,6 @@
 #pragma once
 // libs
+#include <math.h>
 #include <algorithm>
 #include <fstream>
 #include <iostream>
@@ -8,7 +9,6 @@
 #include <memory>
 #include <sstream>
 #include <string>
-#include <math.h>
 
 // libs allegro
 #include <allegro5/allegro.h>
@@ -19,7 +19,6 @@
 #include <allegro5/allegro_physfs.h>
 #include <allegro5/allegro_primitives.h>
 #include <allegro5/allegro_ttf.h>
-#include <allegro5/allegro_physfs.h>
 #include <allegro5/bitmap.h>
 
 // Libs criadas
@@ -89,7 +88,6 @@ extern ALLEGRO_BITMAP *campLeaderboard;
 extern ALLEGRO_BITMAP *flappy;
 extern ALLEGRO_BITMAP *pipe1;
 extern ALLEGRO_BITMAP *pipeout;
-
 
 void init();
 void deinit();

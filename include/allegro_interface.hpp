@@ -9,7 +9,8 @@ class AllegroController {
   int screen_width;
   int screen_height;
 
-  std::unique_ptr<State> state;
+  std::unique_ptr<State> current_state;
+  std::unique_ptr<Motion> motion;
   FlappyBird game;
 
  public:

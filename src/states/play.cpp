@@ -1,59 +1,94 @@
 #include "../../include/states/play.hpp"
-
+#include "../../include/states/main_menu.hpp"  // Para 'new MainMenu()'
 
 //#include <iostream>
 
-void Play::init_objects(){
-    flappy = std::make_unique<FlappyBird>();
-
+void Play::enter() {
+  // Este código é chamado toda vez que o jogo começa.
+  // Garante que cada partida seja nova e limpa.
+  flappy = std::make_unique<FlappyBird>();
+  flappy->reset();
+  flappy->set_current_player(player);  // 'player' é a sua variável global
+  status = ScreenState::PLAY;          // Reseta o status interno para "jogando"
 }
-ScreenState Play::loop(const ALLEGRO_EVENT& ev)
-{
-    //aqui sao implementados os eventos de teclado e mouse
-    if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return ScreenState::EXIT;
-    //exemplo aqui embaixo
-    if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
-        ev.keyboard.keycode == ALLEGRO_KEY_SPACE){
-            if (flappy->get_state() == 0){
-                flappy->starter();
-            } else {
-                flappy->jump();
-            }
+
+// O método agora usa o membro 'flappy' da própria classe.
+State* Play::handle_input(const ALLEGRO_EVENT& ev) {
+  if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+    switch (status) {
+      case ScreenState::PLAY:
+        if (ev.keyboard.keycode == ALLEGRO_KEY_SPACE) {
+          // Correto: usando o ponteiro 'flappy' que pertence à classe Play
+          flappy->get_state() == 0 ? flappy->starter() : flappy->jump();
+        } else if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
+          status = ScreenState::PAUSE;
+          flappy->breaker();
         }
-    if(ev.type == ALLEGRO_EVENT_KEY_DOWN &&
-        ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE){
-            flappy->breaker();
-            status = PAUSE;
+        break;
+
+      case ScreenState::PAUSE:
+        if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
+          status = ScreenState::PLAY;
+          flappy->unbreaker();
+        }
+        break;
+
+      case ScreenState::GAME_OVER:
+        if (ev.keyboard.keycode == ALLEGRO_KEY_ENTER) {
+          // Para reiniciar, criamos uma instância completamente nova do estado
+          // Play. O novo 'enter()' cuidará da inicialização.
+          return new Play();
+        } else if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
+          // Retorna um novo estado MainMenu para voltar ao menu.
+          return new MainMenu();
+        }
+        break;
     }
-    return ScreenState::PLAY;
+  }
+  // Se nenhuma tecla de transição de estado foi apertada, continua no estado
+  // atual.
+  return this;
 }
 
-ScreenState Play::draw(Motion& motion) {
-    motion.loop();
-    flappy->set_current_player(player);
-
-    flappy->draw();
-    flappy->control_pipes();
+State* Play::update(Motion& motion) {
+  // A lógica do jogo só avança se o status interno for PLAY.
+  motion.update();
+  if (status == ScreenState::PLAY) {
+    // Correto: usando o ponteiro 'flappy' que pertence à classe.
     flappy->update();
+    flappy->control_pipes();
     flappy->update_score();
     flappy->change_velocity();
-    flappy->set_playerscore();
-    if (flappy->check_collisions()){
-        status = GAME_OVER;
-        flappy->saveCurrentPlayerScore();
-    }
+    flappy->set_current_player(player);
 
-    if (status == PAUSE){
-        //Desenhe aqui a tela de pause
-        //para liberar o jogo basta mudar o status para PLAY e puxar a função flappy->unbreak();
-        //de um tempo até soltar o unbreak
-
+    if (flappy->check_collisions()) {
+      flappy->saveCurrentPlayerScore();
+      // Apenas muda o status interno. A transição para outra tela
+      // (como MainMenu) será feita pelo handle_input quando o
+      // jogador pressionar uma tecla.
+      status = ScreenState::GAME_OVER;
     }
-    if (status == GAME_OVER){
-        //desenhe aqui a tela do game over
-        //se tiver botao de retry, muda o status para PLAY e chama flappy->reset();
-        //se for trocar de state(voltar para o menu) tbm de um reset
-    }
+  }
 
-    return ScreenState::PLAY;
+  // O 'update' por si só nunca causa uma transição para outra tela.
+  // Ele apenas atualiza o estado do mundo do jogo. Por isso,
+  // sempre retorna 'this'.
+  return this;
+}
+
+void Play::draw(Motion& motion) {
+  motion.draw();
+
+  flappy->draw();
+
+  if (status == PAUSE) {
+    // Desenhe aqui a tela de pause
+    // para liberar o jogo basta mudar o status para PLAY e puxar a função
+    // flappy->unbreak(); de um tempo até soltar o unbreak
+  }
+  if (status == GAME_OVER) {
+    // desenhe aqui a tela do game over
+    // se tiver botao de retry, muda o status para PLAY e chama flappy->reset();
+    // se for trocar de state(voltar para o menu) tbm de um reset
+  }
 }
