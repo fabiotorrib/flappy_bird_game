@@ -1,16 +1,10 @@
 #include "../../include/states/main_menu.hpp"
-#include <allegro5/allegro_primitives.h>  // usado nesse exemplo aqui
-#include <map>
-#include <string>
-#include <vector>
-#include "../../include/defines.hpp"
-#include "../../include/init.hpp"
-#include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+
 
 std::string inputNameScreen = "";
 
 ScreenState MainMenu::loop(const ALLEGRO_EVENT& ev) {
-  // aqui sao implementados os eventos de teclado e mouse
+  // aqui sao implementados os eventos de teclado
 
     if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return ScreenState::EXIT;
 
@@ -62,10 +56,12 @@ ScreenState MainMenu::loop(const ALLEGRO_EVENT& ev) {
 
       menuButtons[buttonPositionSelected].buttonSelectState = 1;
     }
+      return ScreenState::MAIN_MENU;
+}
 
   // aqui sao implementados as partes visuais
   // Desenha a logo
-  if(ev.type == ALLEGRO_EVENT_TIMER){
+ScreenState MainMenu::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
     motion.loop();
     al_draw_bitmap(logoNormal, -20, -10, 0);
     // Desenha o botão NewGame
@@ -103,6 +99,5 @@ ScreenState MainMenu::loop(const ALLEGRO_EVENT& ev) {
       al_draw_bitmap(buttonExitSelect, 496.5, 620, 0);
     else
       al_draw_bitmap(buttonExitDeselect, 496.5, 620, 0);
-  }
   return ScreenState::MAIN_MENU;
 }

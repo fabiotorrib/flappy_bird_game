@@ -1,8 +1,5 @@
 #include "../../include/states/play.hpp"
-#include "../../include/states/states.hpp"
-#include <allegro5/allegro_primitives.h>
-#include <allegro5/events.h>
-#include <allegro5/keycodes.h>
+
 
 //#include <iostream>
 
@@ -28,31 +25,34 @@ ScreenState Play::loop(const ALLEGRO_EVENT& ev)
             flappy->breaker();
             status = PAUSE;
     }
-    if(ev.type == ALLEGRO_EVENT_TIMER){
-        flappy->set_current_player(player);
+    return ScreenState::PLAY;
+}
 
-        flappy->draw();
-        flappy->control_pipes();
-        flappy->update();
-        flappy->update_score();
-        flappy->change_velocity();
-        flappy->set_playerscore();
-        if (flappy->check_collisions()){
-            status = GAME_OVER;
-            flappy->saveCurrentPlayerScore();
-        }
+ScreenState Play::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
+        
+    flappy->set_current_player(player);
 
-        if (status == PAUSE){
-            //Desenhe aqui a tela de pause
-            //para liberar o jogo basta mudar o status para PLAY e puxar a função flappy->unbreak();
-            //de um tempo até soltar o unbreak
+    flappy->draw();
+    flappy->control_pipes();
+    flappy->update();
+    flappy->update_score();
+    flappy->change_velocity();
+    flappy->set_playerscore();
+    if (flappy->check_collisions()){
+        status = GAME_OVER;
+        flappy->saveCurrentPlayerScore();
+    }
 
-        }
-        if (status == GAME_OVER){
-            //desenhe aqui a tela do game over
-            //se tiver botao de retry, muda o status para PLAY e chama flappy->reset();
-            //se for trocar de state(voltar para o menu) tbm de um reset
-        }
+    if (status == PAUSE){
+        //Desenhe aqui a tela de pause
+        //para liberar o jogo basta mudar o status para PLAY e puxar a função flappy->unbreak();
+        //de um tempo até soltar o unbreak
+
+    }
+    if (status == GAME_OVER){
+        //desenhe aqui a tela do game over
+        //se tiver botao de retry, muda o status para PLAY e chama flappy->reset();
+        //se for trocar de state(voltar para o menu) tbm de um reset
     }
 
     return ScreenState::PLAY;

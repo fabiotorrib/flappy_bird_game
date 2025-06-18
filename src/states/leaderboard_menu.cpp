@@ -1,13 +1,6 @@
-#include <allegro5/allegro_primitives.h>  // usado nesse exemplo aqui
-#include <map>
-#include <string>
-#include <vector>
-#include "../../include/defines.hpp"
-#include "../../include/init.hpp"
-#include "../../include/states/main_menu.hpp"
-#include "../../include/states/leaderboard_menu.hpp" 
-#include "../../include/player.hpp"
-#include "../../include/states/states.hpp" 
+#include "../../include/states/leaderboard_menu.hpp"
+
+
 
 ScreenState LeaderboardMenu::loop(const ALLEGRO_EVENT& ev) {
   // aqui sao implementados os eventos de teclado e mouse
@@ -23,7 +16,12 @@ ScreenState LeaderboardMenu::loop(const ALLEGRO_EVENT& ev) {
         (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE)) {
       return ScreenState::MAIN_MENU;
     }
-  if(ev.type == ALLEGRO_EVENT_TIMER){
+  
+  return ScreenState::LEADERBOARD_MENU;
+  }
+
+
+ScreenState LeaderboardMenu::draw (const ALLEGRO_EVENT& ev, Motion& motion) {
     motion.loop();
     al_draw_bitmap(campLeaderboard, 40, 100, 0);
 
@@ -48,7 +46,5 @@ ScreenState LeaderboardMenu::loop(const ALLEGRO_EVENT& ev) {
     }
     al_draw_textf(font, al_map_rgb(0, 0, 0), 640, 60,
                   ALLEGRO_ALIGN_CENTER,"Press Esc to back to main menu.");
-  }
-
   return ScreenState::LEADERBOARD_MENU;
 }

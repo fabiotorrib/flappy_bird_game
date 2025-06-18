@@ -6,4 +6,5 @@
 class LeaderboardMenu : public State {
  public:
   ScreenState loop(const ALLEGRO_EVENT& ev) override;
+  ScreenState draw(const ALLEGRO_EVENT& ev, Motion& motion) override;
 };

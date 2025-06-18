@@ -1,11 +1,5 @@
 #include "../../include/states/difficulty_menu.hpp"
-#include <allegro5/allegro_primitives.h>  // usado nesse exemplo aqui
-#include <map>
-#include <string>
-#include <vector>
-#include "../../include/defines.hpp"
-#include "../../include/init.hpp"
-#include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+
 
 ScreenState DifficultyMenu::loop(const ALLEGRO_EVENT& ev) {
   // aqui sao implementados os eventos de teclado e mouse
@@ -94,7 +88,9 @@ ScreenState DifficultyMenu::loop(const ALLEGRO_EVENT& ev) {
           break;
       }
     }
-    if(ev.type == ALLEGRO_EVENT_TIMER){
+  return ScreenState::DIFFICULTY_MENU;
+  }
+ScreenState DifficultyMenu::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
       motion.loop();
       if (menuButtons[0].buttonSelectState)
         al_draw_bitmap(buttonDifficultyEasy, 40, 80, 0);
@@ -118,6 +114,5 @@ ScreenState DifficultyMenu::loop(const ALLEGRO_EVENT& ev) {
       else if (difficultySelected == "Hard")
         al_draw_text(font, al_map_rgb(218, 15, 15), 640, 495,
                     ALLEGRO_ALIGN_CENTER, "Hard Difficulty selected!");
-    }
   return ScreenState::DIFFICULTY_MENU;
 }

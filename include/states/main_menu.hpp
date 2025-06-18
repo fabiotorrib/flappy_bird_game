@@ -8,6 +8,7 @@ extern std::string inputNameScreen;
 class MainMenu : public State {
 public:
     ScreenState loop(const ALLEGRO_EVENT& ev) override;
+    ScreenState draw(const ALLEGRO_EVENT& ev, Motion& motion) override;
     int buttonPositionSelected=0;
     std::vector<Button> menuButtons = {
     {"NewGame", 1},

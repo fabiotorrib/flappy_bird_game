@@ -1,12 +1,6 @@
-#include <allegro5/allegro_primitives.h>  // usado nesse exemplo aqui
-#include <map>
-#include <string>
-#include <vector>
-#include "../../include/defines.hpp"
-#include "../../include/init.hpp"
 #include "../../include/states/main_menu.hpp"
-#include "../../include/states/states.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
-#include "../../include/player.hpp"
+#include "../../include/states/load_game.hpp"  //necessario para modificar o objeto play (ou qualquer outro)
+
 
 ScreenState LoadName::loop(const ALLEGRO_EVENT& ev) {
   // aqui sao implementados os eventos de teclado e mouse
@@ -77,7 +71,7 @@ ScreenState LoadName::loop(const ALLEGRO_EVENT& ev) {
             user_name_string += toupper(static_cast<char>(ev.keyboard.unichar));
             std::cerr << "Caractere adicionado: "
                       << static_cast<char>(
-                             toupper(static_cast<char>(ev.keyboard.unichar)))
+                            toupper(static_cast<char>(ev.keyboard.unichar)))
                       << std::endl;
           }
         }
@@ -121,7 +115,13 @@ ScreenState LoadName::loop(const ALLEGRO_EVENT& ev) {
           break;
       }
     }
-    if(ev.type == ALLEGRO_EVENT_TIMER){
+  return ScreenState::LOAD_NAME;
+  }
+
+
+
+
+ScreenState LoadName::draw(const ALLEGRO_EVENT& ev, Motion& motion) {
       motion.loop();
       // Desenha o botão NewGame
       if (menuButtons[0].buttonSelectState)
@@ -159,6 +159,6 @@ ScreenState LoadName::loop(const ALLEGRO_EVENT& ev) {
                     ALLEGRO_ALIGN_CENTER,
                     "No name entered. Please enter a name!");
       }
-  }
+  
   return ScreenState::LOAD_NAME;
   }

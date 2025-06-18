@@ -6,6 +6,7 @@
 class LoadName : public State {
 public:
     ScreenState loop(const ALLEGRO_EVENT& ev) override;
+    ScreenState draw(const ALLEGRO_EVENT& ev, Motion& motion) override;
     std::string user_name_string = "";
     int buttonPositionSelected=2;
     int nameError = 0;
