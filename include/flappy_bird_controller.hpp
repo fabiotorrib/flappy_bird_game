@@ -19,11 +19,17 @@ class FlappyBird {
   float positionF_x = 0;
   float positionF2_x = SCREEN_W;
   int change_vel = 2;
-  Player *currentPlayer = nullptr;  // TROCADO: de std::optional para std::unique_ptr
+  float cloud_pos_x = 0;
+  float cloud_pos2_x = SCREEN_W;
+  float cloud_speed = 0.5;  // Velocidade de movimento das nuvens
+
+  Player* currentPlayer =
+      nullptr;  // TROCADO: de std::optional para std::unique_ptr
 
  public:
   // Construtor
-  FlappyBird(): flappy_obj(bird1, -100, 200,bird2, bird3),pipelist(){}
+  FlappyBird() : flappy_obj(bird1, -100, 200, bird2, bird3), pipelist() {
+  }
 
   // Métodos principais
   void draw();
@@ -33,8 +39,7 @@ class FlappyBird {
   void saveCurrentPlayerScore();
   bool check_collisions();
 
-
-  //actions
+  // actions
   void jump();
   void starter();
   void control_pipes();
@@ -46,11 +51,9 @@ class FlappyBird {
   void breaker();
   void unbreaker();
 
-  //auxiliares
+  // auxiliares
   int get_state();
   void set_playerscore();
-
-
 
   // Getters para a interface
   const Bird& get_bird() const {

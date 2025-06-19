@@ -5,6 +5,8 @@
 // funcao de desenhar as coisas
 void FlappyBird::draw() {
   al_draw_bitmap(background, 0, 0, 0);
+  al_draw_bitmap(clouds, cloud_pos_x, 0, 0);
+  al_draw_bitmap(clouds2, cloud_pos2_x, 0, 0);
   if (state == 0) {
     al_draw_bitmap(ground, 0, 0, 0);
     draw_intial_text();
@@ -26,6 +28,15 @@ void FlappyBird::update() {
       pipelist.set_vx(velocity);
       pipelist.update();
     }
+    cloud_pos_x -= cloud_speed;
+    cloud_pos2_x -= cloud_speed;
+
+    if (cloud_pos_x <= -SCREEN_W) {
+      cloud_pos_x = SCREEN_W;
+    }
+    if (cloud_pos2_x <= -SCREEN_W) {
+      cloud_pos2_x = SCREEN_W;
+    }
   }
 }
 
@@ -38,6 +49,8 @@ void FlappyBird::reset() {
   positionF_x = 0;
   positionF2_x = SCREEN_W;
   change_vel = 5;
+  cloud_pos_x = 0;
+  cloud_pos2_x = SCREEN_W;
   flappy_obj.reset_xy();
   flappy_obj.set_break(false);
   pipelist.reset();

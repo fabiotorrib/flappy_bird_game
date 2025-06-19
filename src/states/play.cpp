@@ -54,7 +54,6 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
 
 State* Play::update(Motion& motion) {
   // A lógica do jogo só avança se o status interno for PLAY.
-  motion.update();
   if (status == ScreenState::PLAY) {
     // Correto: usando o ponteiro 'flappy' que pertence à classe.
     flappy->update();
@@ -79,8 +78,6 @@ State* Play::update(Motion& motion) {
 }
 
 void Play::draw(Motion& motion) {
-  motion.draw();
-
   flappy->draw();
 
   if (status == PAUSE) {
