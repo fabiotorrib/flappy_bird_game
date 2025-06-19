@@ -3,6 +3,7 @@
 #include "../include/states/difficulty_menu.hpp"
 #include "../include/states/leaderboard_menu.hpp"
 #include "../include/states/load_game.hpp"
+#include "../include/states/settings_menu.hpp"
 #include <memory>
 
 MainMenu::MainMenu(){
@@ -60,6 +61,7 @@ State* MainMenu::handle_input(const ALLEGRO_EVENT& ev) {
       return new LoadName();
     } else if (menuButtons[buttonPositionSelected].name == "Settings") {
       std::cerr << "Botão Settings selecionado!" << std::endl;
+      return new SettingsMenu();
     } else if (menuButtons[buttonPositionSelected].name == "Difficulty") {
       std::cerr << "Botão Difficulty selecionado!" << std::endl;
       return new DifficultyMenu();

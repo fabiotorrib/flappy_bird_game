@@ -12,15 +12,9 @@
 
 // estados
 enum ScreenState {
-  MAIN_MENU,
-  NEW_NAME,
-  LOAD_NAME,
-  DIFFICULTY_MENU,
-  LEADERBOARD_MENU,
   PLAY,
   PAUSE,
   GAME_OVER,
-  EXIT
 };
 
 // Botões menus
@@ -31,7 +25,7 @@ struct Button {
 const float MAX_ROTATION_UP = -M_PI / 6.0f;   // Limite para cima (-30 graus)
 const float MAX_ROTATION_DOWN = M_PI / 6.0f;  // Limite para baixo (+30 graus)
 //
-#define MAX_INPUT_LENGTH 33
+#define MAX_INPUT_LENGTH 10
 
 // forca do pulo
 #define JUMP_FORCE -4.0

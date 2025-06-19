@@ -9,7 +9,7 @@ DifficultyMenu::DifficultyMenu(){
     buttonDifficultyHard = std::make_unique<Image>("assets/buttonDifficultyHard.png", 40, 80);
     buttonSaveSelect = std::make_unique<Image>("assets/buttonSaveSelect.png", 496.5, 600);
     buttonSaveDeselect = std::make_unique<Image>("assets/buttonSaveDeselect.png", 496.5, 600);
-    font = std::make_unique<TextFont>("assets/TextFont.ttf", 24);
+    font = std::make_unique<TextFont>("assets/TextFont.ttf", 50);
     font->setColor(218, 15, 15);
 }
 

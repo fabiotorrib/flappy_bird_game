@@ -54,7 +54,7 @@ void init() {
   // iniciando fonte
   al_init_ttf_addon();
   al_init_font_addon();
-  font = al_load_font("assets/TextFont.ttf", 24, 0);
+  font = al_load_font("assets/TextFont.ttf", 50, 0);
 
   // iniciando imagens
   background = al_load_bitmap("assets/background.png");

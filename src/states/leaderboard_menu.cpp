@@ -4,7 +4,7 @@
 #include <memory>
 
 LeaderboardMenu::LeaderboardMenu(){
-  font = std::make_unique<TextFont>("assets/TextFont.ttf", 24);
+  font = std::make_unique<TextFont>("assets/TextFont.ttf", 46);
   campLeaderboard = std::make_unique<Image>("assets/campLeaderboard.png", 40, 100);
 }
 

@@ -18,9 +18,9 @@ LoadName::LoadName() {
       std::make_unique<Image>("assets/nameCampSelect.png", 40, 100);
   nameCampDeselect =
       std::make_unique<Image>("assets/nameCampDeselect.png", 40, 100);
-  nameFont = std::make_unique<TextFont>("assets/TextFont.ttf", 30);
+  nameFont = std::make_unique<TextFont>("assets/TextFont.ttf", 46);
   nameFont->setColor(0, 0, 0);
-  errorFont = std::make_unique<TextFont>("assets/TextFont.ttf", 24);
+  errorFont = std::make_unique<TextFont>("assets/TextFont.ttf", 50);
   errorFont->setColor(218, 15, 15);
 }
 
