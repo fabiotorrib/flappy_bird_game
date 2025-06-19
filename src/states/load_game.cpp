@@ -1,17 +1,23 @@
 #include "../include/states/load_game.hpp"
+#include <memory>
+#include "../../include/assets.hpp"
 #include "../include/init.hpp"
 #include "../include/states/main_menu.hpp"
 #include "../include/states/play.hpp"
-#include "../../include/assets.hpp"
-#include <memory>
 
 LoadName::LoadName() {
-  buttonBackSelect = std::make_unique<Image>("assets/budttonBackSelect.png", 170, 490);
-  buttonBackDeselect = std::make_unique<Image>("assets/buttonBackDeselect.png", 170, 490);
-  buttonInsertSelect = std::make_unique<Image>("assets/buttonInsertSelect.png", 825, 490);
-  buttonInsertDeselect = std::make_unique<Image>("assets/buttonInsertDeselect.png", 825, 490);
-  nameCampSelect = std::make_unique<Image>("assets/nameCampSelect.png", 40, 100);
-  nameCampDeselect = std::make_unique<Image>("assets/nameCampDeselect.png", 40, 100);
+  buttonBackSelect =
+      std::make_unique<Image>("assets/buttonBackSelect.png", 170, 490);
+  buttonBackDeselect =
+      std::make_unique<Image>("assets/buttonBackDeselect.png", 170, 490);
+  buttonInsertSelect =
+      std::make_unique<Image>("assets/buttonInsertSelect.png", 825, 490);
+  buttonInsertDeselect =
+      std::make_unique<Image>("assets/buttonInsertDeselect.png", 825, 490);
+  nameCampSelect =
+      std::make_unique<Image>("assets/nameCampSelect.png", 40, 100);
+  nameCampDeselect =
+      std::make_unique<Image>("assets/nameCampDeselect.png", 40, 100);
   nameFont = std::make_unique<TextFont>("assets/TextFont.ttf", 30);
   nameFont->setColor(0, 0, 0);
   errorFont = std::make_unique<TextFont>("assets/TextFont.ttf", 24);
@@ -67,8 +73,8 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
 
           if (player_found) {
             playerNameString = "";
-            errorSituation = noError;      // Limpa qualquer erro anterior
-            return new Play();  // Inicia o jogo
+            errorSituation = noError;  // Limpa qualquer erro anterior
+            return new Play();         // Inicia o jogo
           } else {
             // O nome não foi encontrado no ranking
             errorSituation = noexistName;
@@ -162,33 +168,37 @@ State* LoadName::update(Motion& motion) {
 void LoadName::draw(Motion& motion) {
   motion.draw();
   // Desenha o botão NewGame
-    if (menuButtons[0].buttonSelectState)
-      buttonBackSelect->Draw();
-    else
-      buttonBackDeselect->Draw();
+  if (menuButtons[0].buttonSelectState)
+    buttonBackSelect->Draw();
+  else
+    buttonBackDeselect->Draw();
 
-    if (menuButtons[1].buttonSelectState)
-      buttonInsertSelect->Draw();
-    else
-      buttonInsertDeselect->Draw();
+  if (menuButtons[1].buttonSelectState)
+    buttonInsertSelect->Draw();
+  else
+    buttonInsertDeselect->Draw();
 
-    if (menuButtons[2].buttonSelectState)
-      nameCampSelect->Draw();
-    else
-      nameCampDeselect->Draw();
+  if (menuButtons[2].buttonSelectState)
+    nameCampSelect->Draw();
+  else
+    nameCampDeselect->Draw();
 
   nameFont->writeText(playerNameString.c_str(), ALLEGRO_ALIGN_LEFT, 280, 283);
 
-    if (errorSituation == existName) {
-      errorFont->writeText("Your player is already registered", ALLEGRO_ALIGN_CENTER, 640, 380);
-    }
-    if (errorSituation == noexistName) {
-      errorFont->writeText("This player does not exist!", ALLEGRO_ALIGN_CENTER, 640, 380);
-    }
-    if (errorSituation == successInsert) {
-      errorFont->writeText("Name entered successfully.", ALLEGRO_ALIGN_CENTER, 640, 380);
-    }
-    if (errorSituation == noName) {
-      errorFont->writeText("No name entered. Please enter a name!", ALLEGRO_ALIGN_CENTER, 640, 380);
-    }
+  if (errorSituation == existName) {
+    errorFont->writeText("Your player is already registered",
+                         ALLEGRO_ALIGN_CENTER, 640, 380);
+  }
+  if (errorSituation == noexistName) {
+    errorFont->writeText("This player does not exist!", ALLEGRO_ALIGN_CENTER,
+                         640, 380);
+  }
+  if (errorSituation == successInsert) {
+    errorFont->writeText("Name entered successfully.", ALLEGRO_ALIGN_CENTER,
+                         640, 380);
+  }
+  if (errorSituation == noName) {
+    errorFont->writeText("No name entered. Please enter a name!",
+                         ALLEGRO_ALIGN_CENTER, 640, 380);
+  }
 }
