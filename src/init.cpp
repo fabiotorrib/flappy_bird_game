@@ -57,6 +57,10 @@ ALLEGRO_BITMAP *campLeaderboard = NULL;
 ALLEGRO_BITMAP *flappy = NULL;
 ALLEGRO_BITMAP *pipe1 = NULL;
 ALLEGRO_BITMAP *pipeout = NULL;
+ALLEGRO_BITMAP* background_snow = NULL;
+ALLEGRO_BITMAP* flakesLittle = NULL;
+ALLEGRO_BITMAP* flakesLittle2 = NULL;
+ALLEGRO_BITMAP* flakesBig = NULL;
 
 void init() {
   al_init();
@@ -130,6 +134,10 @@ void init() {
   flappy = al_load_bitmap("assets/Flappy.png");
   pipe1 = al_load_bitmap("assets/PipeWithBottom.png");
   pipeout = al_load_bitmap("assets/PipeWithout.png");
+  background_snow = al_load_bitmap("assets/background_snow.png");
+  flakesLittle = al_load_bitmap("assets/flakesLittle.png");
+  flakesLittle2 = al_load_bitmap("assets/flakesLittle.png");
+  flakesBig = al_load_bitmap("assets/flakesBig.png");
 
   // iniciando display
   display = al_create_display(SCREEN_W, SCREEN_H);
@@ -204,6 +212,10 @@ void deinit() {
   al_destroy_bitmap(flappy);
   al_destroy_bitmap(pipe1);
   al_destroy_bitmap(pipeout);
+  al_destroy_bitmap(background_snow);
+  al_destroy_bitmap(flakesLittle);
+  al_destroy_bitmap(flakesLittle2);
+  al_destroy_bitmap(flakesBig);
 
   al_stop_timer(timer_FPS);
   al_destroy_timer(timer_FPS);

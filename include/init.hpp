@@ -88,6 +88,10 @@ extern ALLEGRO_BITMAP *campLeaderboard;
 extern ALLEGRO_BITMAP *flappy;
 extern ALLEGRO_BITMAP *pipe1;
 extern ALLEGRO_BITMAP *pipeout;
+extern ALLEGRO_BITMAP *background_snow;
+extern ALLEGRO_BITMAP *flakesLittle;
+extern ALLEGRO_BITMAP *flakesLittle2;
+extern ALLEGRO_BITMAP *flakesBig;
 
 void init();
 void deinit();
