@@ -70,6 +70,7 @@ State* Play::update(Motion& motion) {
       status = ScreenState::GAME_OVER;
     }
   }
+  motion.update();
 
   // O 'update' por si só nunca causa uma transição para outra tela.
   // Ele apenas atualiza o estado do mundo do jogo. Por isso,
@@ -78,6 +79,7 @@ State* Play::update(Motion& motion) {
 }
 
 void Play::draw(Motion& motion) {
+  motion.draw();
   flappy->draw();
 
   if (status == PAUSE) {

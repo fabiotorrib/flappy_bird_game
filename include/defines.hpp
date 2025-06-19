@@ -47,7 +47,7 @@ const float MAX_ROTATION_DOWN = M_PI / 6.0f;  // Limite para baixo (+90 graus)
 #define X_INIT 400
 
 // gap entre os canos
-#define GAP_SIZE 250
+#define GAP_SIZE 220
 #define GAP_X 500
 // velocidade x do bird
 #define BIRD_VEL 3
