@@ -16,14 +16,9 @@ int main() {
     deinit();
 
   } catch (const std::runtime_error& e) {
-    // --- MUDANÇA AQUI ---
-    // Em vez da caixa de diálogo nativa, imprimimos o erro no console.
-    // std::cerr é o fluxo padrão para saídas de erro.
     std::cerr << "\n!!! ERRO FATAL !!!\n" << std::endl;
-    std::cerr << "Exceção capturada: " << e.what() << std::endl;
     std::cerr << "O jogo será encerrado." << std::endl;
 
-    // Retornamos um código de erro para o sistema operacional.
     return -1;
   }
 }
