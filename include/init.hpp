@@ -47,25 +47,19 @@ extern std::unique_ptr<Sound> selectSound;
 // Imagens
 extern ALLEGRO_BITMAP *background;
 extern ALLEGRO_BITMAP *icone;
-extern ALLEGRO_BITMAP *lights;
-extern ALLEGRO_BITMAP *clouds;
-extern ALLEGRO_BITMAP *clouds2;
-extern ALLEGRO_BITMAP *little;
-extern ALLEGRO_BITMAP *little2;
-extern ALLEGRO_BITMAP *little3;
 extern ALLEGRO_BITMAP *ground;
 extern ALLEGRO_BITMAP *ground2;
-extern ALLEGRO_BITMAP *bird1;
-extern ALLEGRO_BITMAP *bird2;
-extern ALLEGRO_BITMAP *bird3;
 extern ALLEGRO_BITMAP *campLeaderboard;
 extern ALLEGRO_BITMAP *flappy;
 extern ALLEGRO_BITMAP *pipe1;
 extern ALLEGRO_BITMAP *pipeout;
-extern ALLEGRO_BITMAP *background_snow;
-extern ALLEGRO_BITMAP *flakesLittle;
-extern ALLEGRO_BITMAP *flakesLittle2;
-extern ALLEGRO_BITMAP *flakesBig;
+extern ALLEGRO_BITMAP *bird1;
+extern ALLEGRO_BITMAP *bird2;
+extern ALLEGRO_BITMAP *bird3;
+extern ALLEGRO_BITMAP *clouds;
+extern ALLEGRO_BITMAP *clouds2;
+
+
 
 void init();
 void deinit();

@@ -15,12 +15,6 @@ ALLEGRO_FONT *font = NULL;
 ALLEGRO_BITMAP *background = NULL;
 ALLEGRO_BITMAP *icone = NULL;
 ALLEGRO_AUDIO_STREAM *background_music = NULL;
-ALLEGRO_BITMAP *lights = NULL;
-ALLEGRO_BITMAP *clouds = NULL;
-ALLEGRO_BITMAP *clouds2 = NULL;
-ALLEGRO_BITMAP *little = NULL;
-ALLEGRO_BITMAP *little2 = NULL;
-ALLEGRO_BITMAP *little3 = NULL;
 ALLEGRO_BITMAP *bird1 = NULL;
 ALLEGRO_BITMAP *bird2 = NULL;
 ALLEGRO_BITMAP *bird3 = NULL;
@@ -30,10 +24,8 @@ ALLEGRO_BITMAP *campLeaderboard = NULL;
 ALLEGRO_BITMAP *flappy = NULL;
 ALLEGRO_BITMAP *pipe1 = NULL;
 ALLEGRO_BITMAP *pipeout = NULL;
-ALLEGRO_BITMAP* background_snow = NULL;
-ALLEGRO_BITMAP* flakesLittle = NULL;
-ALLEGRO_BITMAP* flakesLittle2 = NULL;
-ALLEGRO_BITMAP* flakesBig = NULL;
+ALLEGRO_BITMAP *clouds = NULL;
+ALLEGRO_BITMAP *clouds2 = NULL;
 
 void init() {
   al_init();
@@ -59,12 +51,6 @@ void init() {
   // iniciando imagens
   background = al_load_bitmap("assets/background.png");
   icone = al_load_bitmap("assets/icon.png");
-  lights = al_load_bitmap("assets/LightStrip.png");
-  clouds = al_load_bitmap("assets/Clouds.png");
-  clouds2 = al_load_bitmap("assets/Clouds.png");
-  little = al_load_bitmap("assets/Frame1.png");
-  little2 = al_load_bitmap("assets/Frame2.png");
-  little3 = al_load_bitmap("assets/Frame3.png");
   bird1 = al_load_bitmap("assets/B1.png");
   bird2 = al_load_bitmap("assets/B2.png");
   bird3 = al_load_bitmap("assets/B3.png");
@@ -74,10 +60,8 @@ void init() {
   flappy = al_load_bitmap("assets/Flappy.png");
   pipe1 = al_load_bitmap("assets/PipeWithBottom.png");
   pipeout = al_load_bitmap("assets/PipeWithout.png");
-  background_snow = al_load_bitmap("assets/background_snow.png");
-  flakesLittle = al_load_bitmap("assets/flakesLittle.png");
-  flakesLittle2 = al_load_bitmap("assets/flakesLittle.png");
-  flakesBig = al_load_bitmap("assets/flakesBig.png");
+  clouds = al_load_bitmap("assets/Clouds.png");
+  clouds2 = al_load_bitmap("assets/Clouds.png");
 
   // iniciando display
   display = al_create_display(SCREEN_W, SCREEN_H);
@@ -114,13 +98,7 @@ void deinit() {
 
   // destruir imagens
   al_destroy_bitmap(icone);
-  al_destroy_bitmap(lights);
   al_destroy_bitmap(background);
-  al_destroy_bitmap(clouds);
-  al_destroy_bitmap(clouds2);
-  al_destroy_bitmap(little);
-  al_destroy_bitmap(little2);
-  al_destroy_bitmap(little3);
   al_destroy_bitmap(bird1);
   al_destroy_bitmap(bird2);
   al_destroy_bitmap(bird3);
@@ -129,10 +107,9 @@ void deinit() {
   al_destroy_bitmap(flappy);
   al_destroy_bitmap(pipe1);
   al_destroy_bitmap(pipeout);
-  al_destroy_bitmap(background_snow);
-  al_destroy_bitmap(flakesLittle);
-  al_destroy_bitmap(flakesLittle2);
-  al_destroy_bitmap(flakesBig);
+  al_destroy_bitmap(clouds);
+  al_destroy_bitmap(clouds2);
+
 
   al_stop_timer(timer_FPS);
   al_destroy_timer(timer_FPS);
