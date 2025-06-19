@@ -25,6 +25,7 @@
 #include "defines.hpp"
 #include "player.hpp"
 #include "state.hpp"
+#include "assets.hpp"
 
 class Player;
 
@@ -37,35 +38,13 @@ extern ALLEGRO_KEYBOARD_STATE keystate;
 extern Player player;
 extern std::vector<Player> ranking;
 
-// Musicas e efeitos sonoros
-extern ALLEGRO_AUDIO_STREAM *background_music;
-extern ALLEGRO_SAMPLE *selectSound;
-
 // Fontes
 extern ALLEGRO_FONT *font;
 
+// Sons globais
+extern std::unique_ptr<Sound> selectSound;
+
 // Imagens
-extern ALLEGRO_BITMAP *buttonBackDeselect;
-extern ALLEGRO_BITMAP *buttonBackSelect;
-extern ALLEGRO_BITMAP *buttonInsertDeselect;
-extern ALLEGRO_BITMAP *buttonInsertSelect;
-extern ALLEGRO_BITMAP *nameCampDeselect;
-extern ALLEGRO_BITMAP *nameCampSelect;
-extern ALLEGRO_BITMAP *nameCampNewGameError;
-extern ALLEGRO_BITMAP *nameLoadGameError;
-extern ALLEGRO_BITMAP *buttonExitDeselect;
-extern ALLEGRO_BITMAP *buttonExitSelect;
-extern ALLEGRO_BITMAP *buttonDifficultySelect;
-extern ALLEGRO_BITMAP *buttonLeaderboardSelect;
-extern ALLEGRO_BITMAP *buttonLoadGameSelect;
-extern ALLEGRO_BITMAP *buttonNewGameSelect;
-extern ALLEGRO_BITMAP *buttonSettingsSelect;
-extern ALLEGRO_BITMAP *buttonDifficultyDeselect;
-extern ALLEGRO_BITMAP *buttonLeaderboardDeselect;
-extern ALLEGRO_BITMAP *buttonLoadGameDeselect;
-extern ALLEGRO_BITMAP *buttonNewGameDeselect;
-extern ALLEGRO_BITMAP *buttonSettingsDeselect;
-extern ALLEGRO_BITMAP *logoNormal;
 extern ALLEGRO_BITMAP *background;
 extern ALLEGRO_BITMAP *icone;
 extern ALLEGRO_BITMAP *lights;
@@ -79,11 +58,6 @@ extern ALLEGRO_BITMAP *ground2;
 extern ALLEGRO_BITMAP *bird1;
 extern ALLEGRO_BITMAP *bird2;
 extern ALLEGRO_BITMAP *bird3;
-extern ALLEGRO_BITMAP *buttonDifficultyEasy;
-extern ALLEGRO_BITMAP *buttonDifficultyNormal;
-extern ALLEGRO_BITMAP *buttonDifficultyHard;
-extern ALLEGRO_BITMAP *buttonSaveSelect;
-extern ALLEGRO_BITMAP *buttonSaveDeselect;
 extern ALLEGRO_BITMAP *campLeaderboard;
 extern ALLEGRO_BITMAP *flappy;
 extern ALLEGRO_BITMAP *pipe1;

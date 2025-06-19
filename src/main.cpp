@@ -15,10 +15,10 @@ int main() {
 
     deinit();
 
-  } catch (const std::runtime_error& e) {
+  } catch (const std::bad_alloc& e) {
     std::cerr << "\n!!! ERRO FATAL !!!\n" << std::endl;
     std::cerr << "O jogo será encerrado." << std::endl;
-
-    return -1;
+    exit(1);
   }
+  return 0;
 }

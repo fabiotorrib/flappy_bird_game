@@ -2,6 +2,17 @@
 #include "../defines.hpp"
 #include "../init.hpp"
 #include "../state.hpp"
+#include "../../include/assets.hpp"
+#include <memory>
+
+enum insertNameSituations
+{
+    noName,
+    existName,
+    noexistName,
+    noError,
+    successInsert
+};
 
 class LoadName : public State {
  public:
@@ -9,9 +20,21 @@ class LoadName : public State {
   State* update(Motion& motion) override;
   void draw(Motion& motion) override;
   void enter() override;
-  std::string user_name_string = "";
+  LoadName();
+  std::string playerNameString = "";
   int buttonPositionSelected = 2;
-  int nameError = 0;
+  int errorSituation = noError;
   std::vector<Button> menuButtons = {
       {"Back", 0}, {"Insert", 0}, {"NameCamp", 1}};
+  
+ private:
+    std::unique_ptr<Image> buttonBackSelect;
+    std::unique_ptr<Image> buttonBackDeselect;
+    std::unique_ptr<Image> buttonInsertSelect;
+    std::unique_ptr<Image> buttonInsertDeselect;
+    std::unique_ptr<Image> nameCampSelect;
+    std::unique_ptr<Image> nameCampDeselect;
+    std::unique_ptr<TextFont> nameFont;
+    std::unique_ptr<TextFont> errorFont;   
+
 };

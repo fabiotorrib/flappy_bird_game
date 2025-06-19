@@ -2,11 +2,26 @@
 #include "../include/init.hpp"
 #include "../include/states/main_menu.hpp"
 #include "../include/states/play.hpp"
+#include "../../include/assets.hpp"
+#include <memory>
+
+LoadName::LoadName() {
+  buttonBackSelect = std::make_unique<Image>("assets/budttonBackSelect.png", 170, 490);
+  buttonBackDeselect = std::make_unique<Image>("assets/buttonBackDeselect.png", 170, 490);
+  buttonInsertSelect = std::make_unique<Image>("assets/buttonInsertSelect.png", 825, 490);
+  buttonInsertDeselect = std::make_unique<Image>("assets/buttonInsertDeselect.png", 825, 490);
+  nameCampSelect = std::make_unique<Image>("assets/nameCampSelect.png", 40, 100);
+  nameCampDeselect = std::make_unique<Image>("assets/nameCampDeselect.png", 40, 100);
+  nameFont = std::make_unique<TextFont>("assets/TextFont.ttf", 30);
+  nameFont->setColor(0, 0, 0);
+  errorFont = std::make_unique<TextFont>("assets/TextFont.ttf", 24);
+  errorFont->setColor(218, 15, 15);
+}
 
 void LoadName::enter() {
   // Limpa os dados da última visita a esta tela
-  this->user_name_string = "";
-  this->nameError = 0;  // 0 significa "sem erro"
+  this->playerNameString = "";
+  this->errorSituation = noError;
 
   for (auto& button : menuButtons) {
     button.buttonSelectState = 0;
@@ -22,27 +37,27 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
       (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
        ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
-    al_play_sample(selectSound, 0., 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL);
+    selectSound->playSound(0.3);
     if (menuButtons[buttonPositionSelected].name == "Insert") {
       std::cerr << "Botão Insert selecionado!" << std::endl;
-      std::cerr << "Nome: " << user_name_string << std::endl;
-      if (user_name_string != "") {
+      std::cerr << "Nome: " << playerNameString << std::endl;
+      if (playerNameString != "") {
         if (inputNameScreen == "NewGame") {
-          if (player.CheckingName(ranking, user_name_string)) {
-            nameError = 1;
+          if (player.CheckingName(ranking, playerNameString)) {
+            errorSituation = existName;
           } else {
-            nameError = 3;
-            player = Player(user_name_string, 0);
+            errorSituation = successInsert;
+            player = Player(playerNameString, 0);
             player.SaveLeaderboard("Leaderboard.txt", ranking, player);
-            user_name_string = "";
-            nameError = 0;
+            playerNameString = "";
+            errorSituation = noError;
             return new Play();
           }
         } else if (inputNameScreen == "LoadGame") {
           bool player_found = false;
           // Itera sobre o ranking para encontrar o jogador existente
           for (const auto& existing_player : ranking) {
-            if (existing_player.GetName() == user_name_string) {
+            if (existing_player.GetName() == playerNameString) {
               player = existing_player;  // Atribui o jogador existente (com seu
                                          // score) à variável global
               player_found = true;
@@ -51,22 +66,22 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
           }
 
           if (player_found) {
-            user_name_string = "";
-            nameError = 0;      // Limpa qualquer erro anterior
+            playerNameString = "";
+            errorSituation = noError;      // Limpa qualquer erro anterior
             return new Play();  // Inicia o jogo
           } else {
             // O nome não foi encontrado no ranking
-            nameError = 2;
+            errorSituation = noexistName;
           }
         }
       } else {
-        nameError = 4;
+        errorSituation = noName;
       }
-      std::cerr << nameError << std::endl;
+      std::cerr << errorSituation << std::endl;
     } else if (menuButtons[buttonPositionSelected].name == "Back") {
       std::cerr << "Botão Back selecionado!" << std::endl;
-      user_name_string = "";
-      nameError = 0;
+      playerNameString = "";
+      errorSituation = 0;
       menuButtons[buttonPositionSelected].buttonSelectState = 0;
       buttonPositionSelected = 2;
       menuButtons[buttonPositionSelected].buttonSelectState = 1;
@@ -82,14 +97,14 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
   if (menuButtons[2].buttonSelectState) {
     if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
         ev.keyboard.keycode == ALLEGRO_KEY_BACKSPACE) {
-      if (!user_name_string.empty()) {
-        user_name_string.pop_back();
+      if (!playerNameString.empty()) {
+        playerNameString.pop_back();
         std::cerr << "Caractere apagado" << std::endl;
       }
     } else if (ev.type == ALLEGRO_EVENT_KEY_CHAR) {
       if (ev.keyboard.unichar >= 32 && ev.keyboard.unichar <= 126) {
-        if (user_name_string.length() < MAX_INPUT_LENGTH) {
-          user_name_string += toupper(static_cast<char>(ev.keyboard.unichar));
+        if (playerNameString.length() < MAX_INPUT_LENGTH) {
+          playerNameString += toupper(static_cast<char>(ev.keyboard.unichar));
           std::cerr << "Caractere adicionado: "
                     << static_cast<char>(
                            toupper(static_cast<char>(ev.keyboard.unichar)))
@@ -101,7 +116,7 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
 
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
       (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE)) {
-    nameError = 0;
+    errorSituation = noError;
     return new MainMenu();
   }
 
@@ -147,38 +162,33 @@ State* LoadName::update(Motion& motion) {
 void LoadName::draw(Motion& motion) {
   motion.draw();
   // Desenha o botão NewGame
-  if (menuButtons[0].buttonSelectState)
-    al_draw_bitmap(buttonBackSelect, 170, 490, 0);
-  else
-    al_draw_bitmap(buttonBackDeselect, 170, 490, 0);
+    if (menuButtons[0].buttonSelectState)
+      buttonBackSelect->Draw();
+    else
+      buttonBackDeselect->Draw();
 
-  if (menuButtons[1].buttonSelectState)
-    al_draw_bitmap(buttonInsertSelect, 825, 490, 0);
-  else
-    al_draw_bitmap(buttonInsertDeselect, 825, 490, 0);
+    if (menuButtons[1].buttonSelectState)
+      buttonInsertSelect->Draw();
+    else
+      buttonInsertDeselect->Draw();
 
-  if (menuButtons[2].buttonSelectState)
-    al_draw_bitmap(nameCampSelect, 40, 100, 0);
-  else
-    al_draw_bitmap(nameCampDeselect, 40, 100, 0);
+    if (menuButtons[2].buttonSelectState)
+      nameCampSelect->Draw();
+    else
+      nameCampDeselect->Draw();
 
-  al_draw_text(font, al_map_rgb(0, 0, 0), 280, 286, ALLEGRO_ALIGN_LEFT,
-               user_name_string.c_str());
+  nameFont->writeText(playerNameString.c_str(), ALLEGRO_ALIGN_LEFT, 280, 283);
 
-  if (nameError == 1) {
-    al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380, ALLEGRO_ALIGN_CENTER,
-                 "Your player is already registered");
-  }
-  if (nameError == 2) {
-    al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380, ALLEGRO_ALIGN_CENTER,
-                 "This player does not exist!");
-  }
-  if (nameError == 3) {
-    al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380, ALLEGRO_ALIGN_CENTER,
-                 "Name entered successfully.");
-  }
-  if (nameError == 4) {
-    al_draw_text(font, al_map_rgb(218, 15, 15), 640, 380, ALLEGRO_ALIGN_CENTER,
-                 "No name entered. Please enter a name!");
-  }
+    if (errorSituation == existName) {
+      errorFont->writeText("Your player is already registered", ALLEGRO_ALIGN_CENTER, 640, 380);
+    }
+    if (errorSituation == noexistName) {
+      errorFont->writeText("This player does not exist!", ALLEGRO_ALIGN_CENTER, 640, 380);
+    }
+    if (errorSituation == successInsert) {
+      errorFont->writeText("Name entered successfully.", ALLEGRO_ALIGN_CENTER, 640, 380);
+    }
+    if (errorSituation == noName) {
+      errorFont->writeText("No name entered. Please enter a name!", ALLEGRO_ALIGN_CENTER, 640, 380);
+    }
 }

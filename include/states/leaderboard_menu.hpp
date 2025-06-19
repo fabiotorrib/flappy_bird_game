@@ -2,6 +2,7 @@
 #include "../defines.hpp"
 #include "../init.hpp"
 #include "../state.hpp"
+#include "../assets.hpp"
 
 class LeaderboardMenu : public State {
  public:
@@ -9,4 +10,9 @@ class LeaderboardMenu : public State {
   State* update(Motion& motion) override;
   void draw(Motion& motion) override;
   void enter() override;
+  LeaderboardMenu();
+
+ private:
+  std::unique_ptr<TextFont> font;
+  std::unique_ptr<Image> campLeaderboard; 
 };

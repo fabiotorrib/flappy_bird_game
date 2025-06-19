@@ -20,7 +20,8 @@ class Music;
 class Sound;
 class TextFont;
 
-// Iniciar e deletar asssets globais
+// Iniciar e deletar assets globais
+extern std::unique_ptr<Sound> selectSound;
 void loadGlobalAssets();
 void unloadGlobalAssets();
 

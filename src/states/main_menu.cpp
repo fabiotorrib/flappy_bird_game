@@ -3,9 +3,25 @@
 #include "../include/states/difficulty_menu.hpp"
 #include "../include/states/leaderboard_menu.hpp"
 #include "../include/states/load_game.hpp"
+#include <memory>
+
+MainMenu::MainMenu(){
+    logoNormal = std::make_unique<Image>("assets/logoNormal.png", -20, -10);
+    buttonNewGameSelect = std::make_unique<Image>("assets/buttonNewGameSelect.png", 496.5, 270);
+    buttonNewGameDeselect = std::make_unique<Image>("assets/buttonNewGameDeselect.png", 496.5, 270);
+    buttonLoadGameSelect = std::make_unique<Image>("assets/buttonLoadGameSelect.png", 496.5, 340);
+    buttonLoadGameDeselect = std::make_unique<Image>("assets/buttonLoadGameDeselect.png", 496.5, 340);
+    buttonSettingsSelect = std::make_unique<Image>("assets/buttonSettingsSelect.png", 496.5, 410);
+    buttonSettingsDeselect = std::make_unique<Image>("assets/buttonSettingsDeselect.png", 496.5, 410);
+    buttonDifficultySelect = std::make_unique<Image>("assets/buttonDifficultySelect.png", 496.5, 480);
+    buttonDifficultyDeselect = std::make_unique<Image>("assets/buttonDifficultyDeselect.png", 496.5, 480);
+    buttonLeaderboardSelect = std::make_unique<Image>("assets/buttonLeaderboardSelect.png", 496.5, 550);
+    buttonLeaderboardDeselect = std::make_unique<Image>("assets/buttonLeaderboardDeselect.png", 496.5, 550);
+    buttonExitSelect = std::make_unique<Image>("assets/buttonExitSelect.png", 496.5, 620);
+    buttonExitDeselect = std::make_unique<Image>("assets/buttonExitDeselect.png", 496.5, 620);
+}
 
 std::string inputNameScreen = "";
-
 void MainMenu::enter() {
   // Este código é chamado toda vez que o menu se torna a tela ativa.
 
@@ -33,7 +49,7 @@ State* MainMenu::handle_input(const ALLEGRO_EVENT& ev) {
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
       (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
        ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
-    al_play_sample(selectSound, 0.3, 0.0, 1.0, ALLEGRO_PLAYMODE_ONCE, NULL);
+    selectSound->playSound(0.3);
     if (menuButtons[buttonPositionSelected].name == "NewGame") {
       std::cerr << "Botão NewGame selecionado!" << std::endl;
       inputNameScreen = "NewGame";
@@ -84,40 +100,40 @@ State* MainMenu::handle_input(const ALLEGRO_EVENT& ev) {
 // Desenha a logo
 void MainMenu::draw(Motion& motion) {
   motion.draw();
-  al_draw_bitmap(logoNormal, -20, -10, 0);
+  logoNormal->Draw();
   // Desenha o botão NewGame
   if (menuButtons[0].buttonSelectState)
-    al_draw_bitmap(buttonNewGameSelect, 496.5, 270, 0);
+    buttonNewGameSelect->Draw();
   else
-    al_draw_bitmap(buttonNewGameDeselect, 496.5, 270, 0);
+    buttonNewGameDeselect->Draw();
 
   // Desenha o botão LoadGame
   if (!menuButtons[1].buttonSelectState)
-    al_draw_bitmap(buttonLoadGameSelect, 496.5, 340, 0);
+    buttonLoadGameSelect->Draw();
   else
-    al_draw_bitmap(buttonLoadGameDeselect, 496.5, 340, 0);
+    buttonLoadGameDeselect->Draw();
 
   // Desenha o botão Settings
   if (!menuButtons[2].buttonSelectState)
-    al_draw_bitmap(buttonSettingsSelect, 496.5, 410, 0);
+    buttonSettingsSelect->Draw();
   else
-    al_draw_bitmap(buttonSettingsDeselect, 496.5, 410, 0);
+    buttonSettingsDeselect->Draw();
 
   // Desenha o botão Difficulty
   if (!menuButtons[3].buttonSelectState)
-    al_draw_bitmap(buttonDifficultySelect, 496.5, 480, 0);
+    buttonDifficultySelect->Draw();
   else
-    al_draw_bitmap(buttonDifficultyDeselect, 496.5, 480, 0);
+    buttonDifficultyDeselect->Draw();
 
   // Desenha o botão Leaderboard
   if (!menuButtons[4].buttonSelectState)
-    al_draw_bitmap(buttonLeaderboardSelect, 496.5, 550, 0);
+    buttonLeaderboardSelect->Draw();
   else
-    al_draw_bitmap(buttonLeaderboardDeselect, 496.5, 550, 0);
+    buttonLeaderboardDeselect->Draw();
 
   // Desenha o botão Exit
   if (!menuButtons[5].buttonSelectState)
-    al_draw_bitmap(buttonExitSelect, 496.5, 620, 0);
+    buttonExitSelect->Draw();
   else
-    al_draw_bitmap(buttonExitDeselect, 496.5, 620, 0);
+    buttonExitDeselect->Draw();
 }
