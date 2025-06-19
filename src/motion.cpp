@@ -5,7 +5,6 @@
 
 // Animação de todos sprites da tela de fundo
 void Motion::update() {
-  remake = false;
 
   // Altera a posição do feixe de luz
   positionL_x = positionL_x - speed_light;
@@ -46,11 +45,9 @@ void Motion::update() {
     positionF2_x = 0;
   }
 
-  remake = true;
 }
 // Atualiza a tela com os frames andados
 void Motion::draw() {
-  remake = false;
 
   // Redesenhando cada imagem com a nova posição
   al_draw_bitmap(background, 0, 0, 0);
@@ -85,4 +82,41 @@ void Motion::draw() {
   al_draw_bitmap(ground, (positionF_x - 1280), 0, 0);
   al_draw_bitmap(ground2, (positionF2_x - 1280), 0, 0);
   al_draw_bitmap(lights, (positionL_x + 1280), -20, 0);
+}
+
+//Metodo que muda o clima para neve, mudando o background e fazendo nevar na tela
+void Motion::snow_update(){
+
+    //Atualiza a posição a cada frame
+    positionF = positionF + speedFlakes;
+
+    positionF2 = positionF2 + speedFlakes2;
+
+    positionF3 = positionF3 + speedFlakes;
+
+    //If's que resetam a posição da animação quando ela sai da tela
+    if(positionF >= 2000 ){
+
+        positionF = 550;
+    }
+
+    if(positionF2 >= 2000){
+
+        positionF2 = 550;
+    }
+
+    if(positionF3 >= 2000){
+
+        positionF3 = 550;
+    }
+
+}
+
+//Método que atualiza a posição de cada desenho
+void Motion::snow_draw(){
+
+    al_draw_bitmap(background_snow, 0, 0, 0);
+    al_draw_bitmap(flakesLittle, 0, positionF - 1280, 0);
+    al_draw_bitmap(flakesLittle2, 0, positionF3 - 1280, 0);
+    al_draw_bitmap(flakesBig, 0, positionF2 - 1280, 0);
 }

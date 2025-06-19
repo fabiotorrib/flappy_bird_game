@@ -5,7 +5,13 @@
 class Motion {
   // Posição e velocidade de cada imagem
  private:
-  bool remake;
+  
+  float speedFlakes = 1.0;
+  float positionF = 500;
+  float positionF2 = 550;
+  float positionF3 = -210;
+  float speedFlakes2 = 0.4;
+
   float positionL_x = 0;
   float speed_light = 0.5;
 
@@ -25,4 +31,7 @@ class Motion {
  public:
   void draw();
   void update();
+
+  void snow_draw();
+  void snow_update();
 };
