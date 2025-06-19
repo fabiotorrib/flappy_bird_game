@@ -8,11 +8,9 @@ void LoadName::enter() {
   this->user_name_string = "";
   this->nameError = 0;  // 0 significa "sem erro"
 
-  // Reseta a seleção do botão para o padrão (o campo de nome)
   for (auto& button : menuButtons) {
     button.buttonSelectState = 0;
   }
-  // A posição 2, no seu código, corresponde ao campo de nome ("NameCamp")
   buttonPositionSelected = 2;
   menuButtons[buttonPositionSelected].buttonSelectState = 1;
 }
@@ -53,13 +51,12 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
           }
 
           if (player_found) {
-            // Sucesso, o jogador foi carregado
             user_name_string = "";
             nameError = 0;      // Limpa qualquer erro anterior
             return new Play();  // Inicia o jogo
           } else {
             // O nome não foi encontrado no ranking
-            nameError = 2;  // "This player does not exist!"
+            nameError = 2;
           }
         }
       } else {
@@ -107,7 +104,6 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
     nameError = 0;
     return new MainMenu();
   }
-  ///////
 
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
     switch (ev.keyboard.keycode) {
@@ -143,11 +139,8 @@ State* LoadName::handle_input(const ALLEGRO_EVENT& ev) {
 }
 
 State* LoadName::update(Motion& motion) {
-  // AVISO: Para que isto funcione perfeitamente, sua classe Motion deve ser
-  // separada em motion.update() e motion.render(), como discutimos.
   motion.update();
 
-  // O update do menu nunca causa uma transição de estado.
   return this;
 }
 

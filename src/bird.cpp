@@ -22,8 +22,8 @@ void Bird::draw() {
   } else {
     rotation = vy * ROTATION;
     if (rotation > MAX_ROTATION_DOWN) {
-      // Se a rotação para baixo for maior que o permitido (90 graus),
-      // trava em 90 graus.
+      // Se a rotação para baixo for maior que o permitido (30 graus),
+      // trava em 30 graus.
       rotation = MAX_ROTATION_DOWN;
     } else if (rotation < MAX_ROTATION_UP) {
       // Se a rotação para cima for maior que o permitido (-30 graus),

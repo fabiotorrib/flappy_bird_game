@@ -1,15 +1,13 @@
 #include "../../include/states/play.hpp"
 #include "../../include/states/main_menu.hpp"  // Para 'new MainMenu()'
 
-//#include <iostream>
-
 void Play::enter() {
   // Este código é chamado toda vez que o jogo começa.
   // Garante que cada partida seja nova e limpa.
   flappy = std::make_unique<FlappyBird>();
   flappy->reset();
-  flappy->set_current_player(player);  // 'player' é a sua variável global
-  status = ScreenState::PLAY;          // Reseta o status interno para "jogando"
+  flappy->set_current_player(player);
+  status = ScreenState::PLAY;  // Reseta o status interno para "jogando"
 }
 
 // O método agora usa o membro 'flappy' da própria classe.
@@ -18,7 +16,6 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
     switch (status) {
       case ScreenState::PLAY:
         if (ev.keyboard.keycode == ALLEGRO_KEY_SPACE) {
-          // Correto: usando o ponteiro 'flappy' que pertence à classe Play
           flappy->get_state() == 0 ? flappy->starter() : flappy->jump();
         } else if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
           status = ScreenState::PAUSE;
@@ -55,7 +52,6 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
 State* Play::update(Motion& motion) {
   // A lógica do jogo só avança se o status interno for PLAY.
   if (status == ScreenState::PLAY) {
-    // Correto: usando o ponteiro 'flappy' que pertence à classe.
     flappy->update();
     flappy->control_pipes();
     flappy->update_score();
@@ -72,9 +68,6 @@ State* Play::update(Motion& motion) {
   }
   motion.update();
 
-  // O 'update' por si só nunca causa uma transição para outra tela.
-  // Ele apenas atualiza o estado do mundo do jogo. Por isso,
-  // sempre retorna 'this'.
   return this;
 }
 

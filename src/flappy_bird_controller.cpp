@@ -138,11 +138,13 @@ void FlappyBird::draw_animated_ground(float velocity) {
   al_draw_bitmap(ground, positionF_x, 0, 0);
   al_draw_bitmap(ground2, positionF2_x, 0, 0);
 }
+
 void FlappyBird::breaker() {
   velocity_backup = velocity;
   velocity = 0;
   flappy_obj.set_break(true);
 }
+
 void FlappyBird::unbreaker() {
   velocity = velocity_backup;
   flappy_obj.set_break(false);

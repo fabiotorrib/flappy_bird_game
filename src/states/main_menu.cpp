@@ -8,7 +8,6 @@ std::string inputNameScreen = "";
 
 void MainMenu::enter() {
   // Este código é chamado toda vez que o menu se torna a tela ativa.
-  // Garante que o cursor do menu sempre comece na primeira opção.
 
   // Zera o estado de seleção de todos os botões
   for (auto& button : menuButtons) {
@@ -23,11 +22,8 @@ void MainMenu::enter() {
 }
 
 State* MainMenu::update(Motion& motion) {
-  // AVISO: Para que isto funcione perfeitamente, sua classe Motion deve ser
-  // separada em motion.update() e motion.render(), como discutimos.
   motion.update();
 
-  // O update do menu nunca causa uma transição de estado.
   return this;
 }
 

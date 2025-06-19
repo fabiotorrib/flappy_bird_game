@@ -36,6 +36,9 @@ class Image {
   void Draw(float x, float y);
   void Draw();
   ~Image();
+  ALLEGRO_BITMAP *getBitmap() {
+    return image;
+  }
 };
 
 class Music {

@@ -16,20 +16,14 @@ State* LeaderboardMenu::handle_input(const ALLEGRO_EVENT& ev) {
 }
 
 void LeaderboardMenu::enter() {
-  // TAREFA: Preparar os dados para serem exibidos.
-  // Este é o lugar perfeito para carregar e ordenar o placar.
-  // Isso agora só acontece UMA VEZ quando a tela abre.
+  // Isso agora só acontece uma vez quando a tela abre.
   ranking = Player::ReadLeaderboard("Leaderboard.txt");
   Player::SortLeaderboard(ranking);
-  // Não precisamos salvar aqui, apenas ler e ordenar para exibir.
 }
 
 State* LeaderboardMenu::update(Motion& motion) {
-  // AVISO: Para que isto funcione perfeitamente, sua classe Motion deve ser
-  // separada em motion.update() e motion.render(), como discutimos.
   motion.update();
 
-  // O update do menu nunca causa uma transição de estado.
   return this;
 }
 

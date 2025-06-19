@@ -93,12 +93,7 @@ State* DifficultyMenu::handle_input(const ALLEGRO_EVENT& ev) {
 }
 
 void DifficultyMenu::enter() {
-  // TAREFA: Resetar a tela para o estado inicial padrão.
-
-  // Garante que nenhuma dificuldade pré-selecionada de uma visita anterior
-  // permaneça.
-  difficultySelected =
-      "Normal";  // Ou "noOne" se preferir que nada venha selecionado
+  difficultySelected = "Normal";
 
   // Reseta a seleção visual dos botões
   for (auto& button : menuButtons) {
@@ -111,11 +106,8 @@ void DifficultyMenu::enter() {
 }
 
 State* DifficultyMenu::update(Motion& motion) {
-  // AVISO: Para que isto funcione perfeitamente, sua classe Motion deve ser
-  // separada em motion.update() e motion.render(), como discutimos.
   motion.update();
 
-  // O update do menu nunca causa uma transição de estado.
   return this;
 }
 
