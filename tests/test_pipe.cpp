@@ -25,16 +25,30 @@ TEST_CASE("Testando a Classe Pipe e PipeList") {
     PipeList list;
     list.reset();
     list.set_start();
-    list.add_pipe_pair();  // Adiciona um cano em x = SCREEN_W
+    list.add_pipe_pair();  // Adiciona um cano na posição x = SCREEN_W
+
+    // Verifica se o cano foi realmente adicionado
+    // REQUIRE é como o CHECK, mas para a execução do teste se ele falhar
+    REQUIRE(list.get_pipe_pairs().empty() == false);
+
+    // Pega o cano que acabamos de criar para inspecioná-lo
+    const auto& pipe_pair = list.get_pipe_pairs().front();
+    const auto& bottom_pipe = pipe_pair.bottom;
+
+    // Pega a coordenada REAL da borda direita do cano
+    float pipe_x_final = bottom_pipe.get_x_final();
 
     // Logo após criar o cano, o pássaro não passou por ele
     bool scored_too_early = list.check_score(X_INIT + 1);
     CHECK_FALSE(scored_too_early);
     CHECK(list.get_points() == 0);
 
-    // Simulamos que o pássaro (em x) passou da borda final do cano (x_final)
-    // O cano tem x = 1280 e largura = 50, então x_final = 1330
-    bool scored_correctly = list.check_score(1331);
+    // Agora, simulamos que o pássaro passou 1 pixel além da borda direita do
+    // cano
+    bool scored_correctly = list.check_score(pipe_x_final + 1.0f);
+
+    // As verificações agora devem passar, independentemente da largura real da
+    // imagem do cano
     CHECK(scored_correctly == true);
     CHECK(list.get_points() == 1);
   }

@@ -31,7 +31,7 @@ class GameObject {
   }  // <-- Getter para height
 
   void set_finals();
-  float get_x_final();
+  float get_x_final() const;
 
   virtual ~GameObject() {
   }

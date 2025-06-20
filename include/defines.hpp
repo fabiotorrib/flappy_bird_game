@@ -32,7 +32,7 @@ const float MAX_ROTATION_DOWN = M_PI / 6.0f;  // Limite para baixo (+90 graus)
 #define JUMP_FORCE -15.0
 
 // gravidade
-#define GRAVITY 0.8
+#define GRAVITY 1.0
 
 // multiplicador da rotacao do bird
 #define ROTATION 0.05
@@ -41,12 +41,12 @@ const float MAX_ROTATION_DOWN = M_PI / 6.0f;  // Limite para baixo (+90 graus)
 #define X_INIT 350
 
 // gap entre os canos
-#define GAP_SIZE 220
-#define GAP_X 500
+#define GAP_SIZE 250
+#define GAP_X 300
 // velocidade x do bird
 #define BIRD_VEL 3
 // velocidade dos pipes
-#define PIPE_SPEED 5.0
+#define PIPE_SPEED 5.5
 // text oscilation
 #define OSCILATION 3.0
 // velocidade oscilation gif

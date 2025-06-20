@@ -57,6 +57,6 @@ void GameObject::set_finals() {
   x_final = x + width;
 }
 
-float GameObject::get_x_final() {
+float GameObject::get_x_final() const {
   return x_final;
 }
