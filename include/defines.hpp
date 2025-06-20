@@ -23,29 +23,30 @@ struct Button {
   int buttonSelectState;
 };
 const float MAX_ROTATION_UP = -M_PI / 6.0f;   // Limite para cima (-30 graus)
-const float MAX_ROTATION_DOWN = M_PI / 6.0f;  // Limite para baixo (+30 graus)
+const float MAX_ROTATION_DOWN = M_PI / 6.0f;  // Limite para baixo (+90 graus)
+
 //
-#define MAX_INPUT_LENGTH 10
+#define MAX_INPUT_LENGTH 33
 
 // forca do pulo
-#define JUMP_FORCE -4.0
+#define JUMP_FORCE -15.0
 
 // gravidade
-#define GRAVITY 0.1
+#define GRAVITY 0.8
 
 // multiplicador da rotacao do bird
-#define ROTATION 0.1
+#define ROTATION 0.05
 
 // posicao inicial do movimento bird
 #define X_INIT 400
 
 // gap entre os canos
-#define GAP_SIZE 180
+#define GAP_SIZE 220
 #define GAP_X 500
 // velocidade x do bird
 #define BIRD_VEL 3
 // velocidade dos pipes
-#define PIPE_SPEED 4.0
+#define PIPE_SPEED 5.0
 // text oscilation
 #define OSCILATION 3.0
 // velocidade oscilation gif
