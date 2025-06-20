@@ -1,22 +1,33 @@
 #include "../include/states/settings_menu.hpp"
+#include <memory>
 #include "../include/init.hpp"
 #include "../include/states/main_menu.hpp"
-#include <memory>
 
-SettingsMenu::SettingsMenu(){
-    campSettingsMusic = std::make_unique<Image>("assets/CampSettings.png", 40, 70);
-    campSettingsNoMusic = std::make_unique<Image>("assets/CampSettingsWithoutMusic.png", 40, 70);
-    buttonMusicSelect = std::make_unique<Image>("assets/ContourSelect.png", 40, 70);
-    buttonMusicDaySelect = std::make_unique<Image>("assets/buttonMusicDaySelect.png", 40, 70);
-    buttonMusicRainSelect = std::make_unique<Image>("assets/buttonMusicRainSelect.png", 40, 70);
-    buttonMusicSnowSelect = std::make_unique<Image>("assets/buttonMusicSnowSelect.png", 40, 70);
-    buttonNoMusicDaySelect = std::make_unique<Image>("assets/buttonNoMusicDaySelect.png", 40, 70);
-    buttonNoMusicRainSelect = std::make_unique<Image>("assets/buttonNoMusicRainSelect.png", 40, 70);
-    buttonNoMusicSnowSelect = std::make_unique<Image>("assets/buttonNoMusicSnowSelect.png", 40, 70);
-    buttonBackSelect = std::make_unique<Image>("assets/buttonBackSelect.png", 496.5, 580);
-    buttonBackDeselect = std::make_unique<Image>("assets/buttonBackDeselect.png", 496.5, 580);
-    font = std::make_unique<TextFont>("assets/TextFont.ttf", 50);
-    font->setColor(218, 15, 15);
+SettingsMenu::SettingsMenu() {
+  campSettingsMusic =
+      std::make_unique<Image>("assets/CampSettings.png", 40, 70);
+  campSettingsNoMusic =
+      std::make_unique<Image>("assets/CampSettingsWithoutMusic.png", 40, 70);
+  buttonMusicSelect =
+      std::make_unique<Image>("assets/ContourSelect.png", 40, 70);
+  buttonMusicDaySelect =
+      std::make_unique<Image>("assets/buttonMusicDaySelect.png", 40, 70);
+  buttonMusicRainSelect =
+      std::make_unique<Image>("assets/buttonMusicRainSelect.png", 40, 70);
+  buttonMusicSnowSelect =
+      std::make_unique<Image>("assets/buttonMusicSnowSelect.png", 40, 70);
+  buttonNoMusicDaySelect =
+      std::make_unique<Image>("assets/buttonNoMusicDaySelect.png", 40, 70);
+  buttonNoMusicRainSelect =
+      std::make_unique<Image>("assets/buttonNoMusicRainSelect.png", 40, 70);
+  buttonNoMusicSnowSelect =
+      std::make_unique<Image>("assets/buttonNoMusicSnowSelect.png", 40, 70);
+  buttonBackSelect =
+      std::make_unique<Image>("assets/buttonBackSelect.png", 496.5, 580);
+  buttonBackDeselect =
+      std::make_unique<Image>("assets/buttonBackDeselect.png", 496.5, 580);
+  font = std::make_unique<TextFont>("assets/TextFont.ttf", 50);
+  font->setColor(218, 15, 15);
 }
 
 State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
@@ -28,13 +39,13 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
        ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
     selectSound->playSound(0.3);
     if (menuButtons[buttonPositionSelected].name == "Music") {
-        if(musicState){
-            std::cout << "Música desligada!" << std::endl;
-            musicState = false;
-        }else{
-            std::cout << "Música ligada!" << std::endl;
-            musicState = true;
-        }
+      if (musicState) {
+        std::cout << "Música desligada!" << std::endl;
+        musicState = false;
+      } else {
+        std::cout << "Música ligada!" << std::endl;
+        musicState = true;
+      }
 
     } else if (menuButtons[buttonPositionSelected].name == "Day") {
       std::cout << "Clima Dia selecionada!" << std::endl;
@@ -42,10 +53,10 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
     } else if (menuButtons[buttonPositionSelected].name == "Snow") {
       std::cout << "Clima Neve selecionada!" << std::endl;
       weatherSelected = "Snow";
-    }else if (menuButtons[buttonPositionSelected].name == "Rain") {
+    } else if (menuButtons[buttonPositionSelected].name == "Rain") {
       std::cout << "Clima Rain selecionada!" << std::endl;
       weatherSelected = "Rain";
-    }else if (menuButtons[buttonPositionSelected].name == "Back") {
+    } else if (menuButtons[buttonPositionSelected].name == "Back") {
       std::cout << "Clima " << weatherSelected << " salva!" << std::endl;
       return new MainMenu();
     }
@@ -57,7 +68,7 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
   }
   ///////
 
-   if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
+  if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
     switch (ev.keyboard.keycode) {
       case ALLEGRO_KEY_DOWN:
       case ALLEGRO_KEY_RIGHT:
@@ -73,14 +84,14 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
 
       case ALLEGRO_KEY_UP:
       case ALLEGRO_KEY_LEFT:
-          menuButtons[buttonPositionSelected].buttonSelectState = 0;
+        menuButtons[buttonPositionSelected].buttonSelectState = 0;
 
-          if (buttonPositionSelected == 0)
-            buttonPositionSelected = 4;
-          else
-            buttonPositionSelected--;
+        if (buttonPositionSelected == 0)
+          buttonPositionSelected = 4;
+        else
+          buttonPositionSelected--;
 
-          menuButtons[buttonPositionSelected].buttonSelectState = 1;
+        menuButtons[buttonPositionSelected].buttonSelectState = 1;
         break;
     }
   }
@@ -100,43 +111,52 @@ void SettingsMenu::enter() {
 
 State* SettingsMenu::update(Motion& motion) {
   motion.update();
+  if (weatherSelected == "Day") {
+    motion.setController(1);
+  }
+  if (weatherSelected == "Snow") {
+    motion.setController(2);
+  }
+  if (weatherSelected == "Rain") {
+    motion.setController(3);
+  }
   return this;
 }
 
 void SettingsMenu::draw(Motion& motion) {
   motion.draw();
 
-  if (menuButtons[0].buttonSelectState){
-    if(musicState)
-    campSettingsMusic->Draw();
+  if (menuButtons[0].buttonSelectState) {
+    if (musicState)
+      campSettingsMusic->Draw();
     else
-    campSettingsNoMusic->Draw();
+      campSettingsNoMusic->Draw();
 
     buttonMusicSelect->Draw();
   }
 
-  if(menuButtons[1].buttonSelectState){  
-    if(musicState)
-    buttonMusicDaySelect->Draw();
+  if (menuButtons[1].buttonSelectState) {
+    if (musicState)
+      buttonMusicDaySelect->Draw();
     else
-    buttonNoMusicDaySelect->Draw();
-  }else if (menuButtons[2].buttonSelectState){
-    if(musicState)
-    buttonMusicSnowSelect->Draw();
+      buttonNoMusicDaySelect->Draw();
+  } else if (menuButtons[2].buttonSelectState) {
+    if (musicState)
+      buttonMusicSnowSelect->Draw();
     else
-    buttonNoMusicSnowSelect->Draw();
-  }else if (menuButtons[3].buttonSelectState){
-    if(musicState)
-    buttonMusicRainSelect->Draw();
+      buttonNoMusicSnowSelect->Draw();
+  } else if (menuButtons[3].buttonSelectState) {
+    if (musicState)
+      buttonMusicRainSelect->Draw();
     else
-    buttonNoMusicRainSelect->Draw();
+      buttonNoMusicRainSelect->Draw();
   }
 
   if (menuButtons[4].buttonSelectState) {
-    if(musicState)
-    campSettingsMusic->Draw();
+    if (musicState)
+      campSettingsMusic->Draw();
     else
-    campSettingsNoMusic->Draw();
+      campSettingsNoMusic->Draw();
     buttonBackSelect->Draw();
   } else {
     buttonBackDeselect->Draw();

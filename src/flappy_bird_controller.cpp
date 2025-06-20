@@ -4,9 +4,6 @@
 
 // funcao de desenhar as coisas
 void FlappyBird::draw() {
-  al_draw_bitmap(background, 0, 0, 0);
-  al_draw_bitmap(clouds, cloud_pos_x, 0, 0);
-  al_draw_bitmap(clouds2, cloud_pos2_x, 0, 0);
   if (state == 0) {
     al_draw_bitmap(ground, 0, 0, 0);
     draw_intial_text();

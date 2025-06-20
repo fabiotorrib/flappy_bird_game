@@ -12,9 +12,9 @@ int main() {
 
     AllegroController game_controller(SCREEN_W, SCREEN_H);
     game_controller.run();
-
+    std::cout << "n passou ainda";
     deinit();
-
+    std::cout << "passou o deinit";
   } catch (const std::bad_alloc& e) {
     std::cerr << "\n!!! ERRO FATAL !!!\n" << std::endl;
     std::cerr << "O jogo será encerrado." << std::endl;

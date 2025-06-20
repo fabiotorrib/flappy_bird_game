@@ -1,13 +1,12 @@
 #pragma once
 #include <allegro5/allegro_primitives.h>
-#include "defines.hpp"
 #include "assets.hpp"
+#include "defines.hpp"
 
 class Motion {
-
   // Posição e velocidade de cada imagem
  private:
-  int controller = 3;
+  int controller = 1;
 
   float controll = 0;
   float contF = 0;
@@ -61,11 +60,11 @@ class Motion {
   std::unique_ptr<Image> ground;
   std::unique_ptr<Image> ground2;
 
-  public:
-    void draw();
-    void update();
+ public:
+  void draw();
+  void update();
 
-    Motion();
+  Motion();
 
-    void setterControll(int);
+  void setController(int);
 };

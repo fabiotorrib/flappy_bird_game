@@ -41,7 +41,6 @@ void init() {
   al_install_audio();
   al_init_acodec_addon();
   al_reserve_samples(16);
- 
 
   // iniciando fonte
   al_init_ttf_addon();
@@ -85,14 +84,14 @@ void init() {
   al_start_timer(timer_FPS);
 
   // Inicia a música de fundo e sons globais
-  static std::unique_ptr<Music> backgroundMusic = std::make_unique<Music>("assets/SoundTrack.ogg");
+  static std::unique_ptr<Music> backgroundMusic =
+      std::make_unique<Music>("assets/SoundTrack.ogg");
   backgroundMusic->playMusic();
 
   loadGlobalAssets();
-} 
+}
 
 void deinit() {
-
   unloadGlobalAssets();
   al_destroy_font(font);
 
@@ -109,7 +108,6 @@ void deinit() {
   al_destroy_bitmap(pipeout);
   al_destroy_bitmap(clouds);
   al_destroy_bitmap(clouds2);
-
 
   al_stop_timer(timer_FPS);
   al_destroy_timer(timer_FPS);

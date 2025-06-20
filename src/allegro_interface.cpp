@@ -37,6 +37,7 @@ void AllegroController::run() {
 
     if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) {
       next_state = nullptr;
+      std::cout << "fechou";
     }
 
     if (redraw && al_is_event_queue_empty(event_queue)) {
