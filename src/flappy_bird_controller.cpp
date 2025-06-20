@@ -51,7 +51,6 @@ void FlappyBird::reset() {
   flappy_obj.reset_xy();
   flappy_obj.set_break(false);
   pipelist.reset();
-  currentPlayer = nullptr;
 }
 
 // PLAYER
