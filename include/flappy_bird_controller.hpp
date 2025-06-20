@@ -19,9 +19,6 @@ class FlappyBird {
   float positionF_x = 0;
   float positionF2_x = SCREEN_W;
   int change_vel = 2;
-  float cloud_pos_x = 0;
-  float cloud_pos2_x = SCREEN_W;
-  float cloud_speed = 0.5;  // Velocidade de movimento das nuvens
 
   Player* currentPlayer =
       nullptr;  // TROCADO: de std::optional para std::unique_ptr

@@ -37,6 +37,7 @@ extern ALLEGRO_BITMAP *icon;
 extern ALLEGRO_KEYBOARD_STATE keystate;
 extern Player player;
 extern std::vector<Player> ranking;
+extern bool g_sound_on;
 
 // Fontes
 extern ALLEGRO_FONT *font;

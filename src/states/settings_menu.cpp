@@ -39,12 +39,20 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
        ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
     selectSound->playSound(0.3);
     if (menuButtons[buttonPositionSelected].name == "Music") {
-      if (musicState) {
-        std::cout << "Música desligada!" << std::endl;
-        musicState = false;
-      } else {
+      // --- INÍCIO DA MODIFICAÇÃO ---
+
+      // 1. Inverte o estado da nossa variável global
+      g_sound_on = !g_sound_on;
+
+      // 2. Aplica a mudança ao mixer de áudio
+      if (g_sound_on) {
+        // Volume normal (1.0f = 100%)
+        al_set_mixer_gain(al_get_default_mixer(), 1.0f);
         std::cout << "Música ligada!" << std::endl;
-        musicState = true;
+      } else {
+        // Mudo (volume 0.0f = 0%)
+        al_set_mixer_gain(al_get_default_mixer(), 0.0f);
+        std::cout << "Música desligada!" << std::endl;
       }
 
     } else if (menuButtons[buttonPositionSelected].name == "Day") {
@@ -126,40 +134,54 @@ State* SettingsMenu::update(Motion& motion) {
 void SettingsMenu::draw(Motion& motion) {
   motion.draw();
 
-  if (menuButtons[0].buttonSelectState) {
-    if (musicState)
+  bool is_music_button_selected = menuButtons[0].buttonSelectState;
+  bool is_back_button_selected = menuButtons[4].buttonSelectState;
+
+  if (is_music_button_selected) {
+    if (g_sound_on)
       campSettingsMusic->Draw();
     else
       campSettingsNoMusic->Draw();
-
     buttonMusicSelect->Draw();
   }
 
   if (menuButtons[1].buttonSelectState) {
-    if (musicState)
+    if (g_sound_on)
       buttonMusicDaySelect->Draw();
     else
       buttonNoMusicDaySelect->Draw();
   } else if (menuButtons[2].buttonSelectState) {
-    if (musicState)
+    if (g_sound_on)
       buttonMusicSnowSelect->Draw();
     else
       buttonNoMusicSnowSelect->Draw();
   } else if (menuButtons[3].buttonSelectState) {
-    if (musicState)
+    if (g_sound_on)
       buttonMusicRainSelect->Draw();
     else
       buttonNoMusicRainSelect->Draw();
   }
 
-  if (menuButtons[4].buttonSelectState) {
-    if (musicState)
+  if (is_back_button_selected) {
+    // Garante que o fundo correto é desenhado mesmo com o botão "Back"
+    // selecionado
+    if (g_sound_on)
       campSettingsMusic->Draw();
     else
       campSettingsNoMusic->Draw();
     buttonBackSelect->Draw();
   } else {
     buttonBackDeselect->Draw();
+  }
+
+  // Desenha o fundo principal se nenhum outro botão de clima o desenhou
+  if (!menuButtons[1].buttonSelectState && !menuButtons[2].buttonSelectState &&
+      !menuButtons[3].buttonSelectState && !is_music_button_selected &&
+      !is_back_button_selected) {
+    if (g_sound_on)
+      campSettingsMusic->Draw();
+    else
+      campSettingsNoMusic->Draw();
   }
 
   if (weatherSelected == "Day")

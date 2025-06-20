@@ -83,46 +83,41 @@ void Bird::loop_animation(int type) {
       }
     }
   } else if (type == 2) {
-    if (vy < 0) {
-      frames = frames + 1;
+    // --- INÍCIO DA MODIFICAÇÃO ---
 
-      if ((frames <= contB) && (valueB == 0)) {
-        al_draw_rotated_bitmap(bird1, width / 2, height / 2, x + width / 2,
-                               y + height / 2, rotation, 0);
+    // A lógica de animação de bater de asas agora fica fora do 'if (vy < 0)'
+    // para que sempre aconteça.
 
-        if (frames == contB) {
-          contB = contB + 8;
-          valueB++;
-        }
-      }
-      if ((frames <= contB) && (valueB == 1)) {
-        al_draw_rotated_bitmap(bird2, width / 2, height / 2, x + width / 2,
-                               y + height / 2 + 2, rotation, 0);
+    frames = frames + 1;
 
-        if (frames == contB) {
-          contB = contB + TIME_GIF_BIRD;
-          valueB++;
-        }
-      }
-      if ((frames <= contB) && (valueB == 2)) {
-        al_draw_rotated_bitmap(bird3, width / 2, height / 2, x + width / 2,
-                               y + height / 2 + 4, rotation, 0);
-        if (frames == contB) {
-          contB = contB + TIME_GIF_BIRD;
-          valueB++;
-        }
-      }
-      if ((frames <= contB) && (valueB == 3)) {
-        al_draw_rotated_bitmap(bird2, width / 2, height / 2, x + width / 2,
-                               y + height / 2 + 2, rotation, 0);
-        if (frames == contB) {
-          contB = contB + TIME_GIF_BIRD;
-          valueB = 0;
-        }
-      }
-    } else {
+    if ((frames <= contB) && (valueB == 0)) {
       al_draw_rotated_bitmap(bird1, width / 2, height / 2, x + width / 2,
                              y + height / 2, rotation, 0);
+      if (frames == contB) {
+        contB = contB + 8;
+        valueB++;
+      }
+    } else if ((frames <= contB) && (valueB == 1)) {
+      al_draw_rotated_bitmap(bird2, width / 2, height / 2, x + width / 2,
+                             y + height / 2 + 2, rotation, 0);
+      if (frames == contB) {
+        contB = contB + TIME_GIF_BIRD;
+        valueB++;
+      }
+    } else if ((frames <= contB) && (valueB == 2)) {
+      al_draw_rotated_bitmap(bird3, width / 2, height / 2, x + width / 2,
+                             y + height / 2 + 4, rotation, 0);
+      if (frames == contB) {
+        contB = contB + TIME_GIF_BIRD;
+        valueB++;
+      }
+    } else if ((frames <= contB) && (valueB == 3)) {
+      al_draw_rotated_bitmap(bird2, width / 2, height / 2, x + width / 2,
+                             y + height / 2 + 2, rotation, 0);
+      if (frames == contB) {
+        contB = contB + TIME_GIF_BIRD;
+        valueB = 0;
+      }
     }
   }
 }
@@ -152,4 +147,28 @@ void Bird::reset_xy() {
   x = -100;
   y = 200;
   vy = 0;
+}
+bool Bird::check_bird_collision(const GameObject& other) const {
+  const float HORIZONTAL_INSET = 8.0f;       // Diminui X pixels de cada lado
+  const float VERTICAL_INSET_TOP = 10.0f;    // Diminui X pixels do topo
+  const float VERTICAL_INSET_BOTTOM = 6.0f;  // Diminui X pixels de baixo
+
+  // Calcula as coordenadas da hitbox menor do pássaro
+  float bird_box_x1 = this->x + HORIZONTAL_INSET;
+  float bird_box_y1 = this->y + VERTICAL_INSET_TOP;
+  float bird_box_x2 = (this->x + this->width) - HORIZONTAL_INSET;
+  float bird_box_y2 = (this->y + this->height) - VERTICAL_INSET_BOTTOM;
+
+  // Pega as coordenadas da hitbox do outro objeto (o cano)
+  float other_box_x1 = other.get_x();
+  float other_box_y1 = other.get_y();
+  float other_box_x2 = other.get_x() + other.get_width();
+  float other_box_y2 = other.get_y() + other.get_height();
+
+  if (bird_box_x1 < other_box_x2 && bird_box_x2 > other_box_x1 &&
+      bird_box_y1 < other_box_y2 && bird_box_y2 > other_box_y1) {
+    return true;  // Há colisão
+  }
+
+  return false;  // Não há colisão
 }

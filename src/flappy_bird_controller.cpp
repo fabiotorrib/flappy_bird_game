@@ -4,36 +4,50 @@
 
 // funcao de desenhar as coisas
 void FlappyBird::draw() {
-  if (state == 0) {
-    al_draw_bitmap(ground, 0, 0, 0);
-    draw_intial_text();
-  } else if (state == 1) {
-    flappy_obj.draw();
-    if (flappy_obj.get_x() >= X_INIT) {
+  // A animação do chão e das nuvens agora acontece em todos os estados
+  draw_animated_ground(
+      state == 2 ? velocity : BIRD_VEL);  // Chão se move mais devagar na intro
+
+  switch (state) {
+    case 0:  // Animação de Entrada
+      flappy_obj.draw();
+      break;
+    case 1:  // Aguardando Input
+      flappy_obj.draw();
+      draw_intial_text();  // Mostra "PRESS SPACE"
+      break;
+    case 2:  // Jogando
+      flappy_obj.draw();
       pipelist.draw();
-    }
-    draw_animated_ground(velocity);
-    draw_HUD();
+      draw_HUD();
+      break;
   }
 }
 
 void FlappyBird::update() {
-  if (state == 1) {
-    flappy_obj.update();
-    if (flappy_obj.get_x() >= X_INIT) {
+  switch (state) {
+    case 0:                 // Animação de Entrada
+      flappy_obj.update();  // Isso vai mover o pássaro até X_INIT
+      if (flappy_obj.get_x() >= X_INIT) {
+        state = 1;  // Pássaro chegou, agora vamos aguardar o input
+      }
+      break;
+
+    case 1:  // Aguardando Input
+      // Não faz nada, o pássaro fica parado esperando o starter()
+      break;
+
+    case 2:                 // Jogando
+      flappy_obj.update();  // Agora a gravidade se aplica
+
+      // Lógica do jogo que só acontece quando está jogando
       pipelist.set_start();
       pipelist.set_vx(velocity);
       pipelist.update();
-    }
-    cloud_pos_x -= cloud_speed;
-    cloud_pos2_x -= cloud_speed;
-
-    if (cloud_pos_x <= -SCREEN_W) {
-      cloud_pos_x = SCREEN_W;
-    }
-    if (cloud_pos2_x <= -SCREEN_W) {
-      cloud_pos2_x = SCREEN_W;
-    }
+      control_pipes();
+      update_score();
+      change_velocity();
+      break;
   }
 }
 
@@ -46,8 +60,6 @@ void FlappyBird::reset() {
   positionF_x = 0;
   positionF2_x = SCREEN_W;
   change_vel = 5;
-  cloud_pos_x = 0;
-  cloud_pos2_x = SCREEN_W;
   flappy_obj.reset_xy();
   flappy_obj.set_break(false);
   pipelist.reset();
@@ -80,13 +92,17 @@ bool FlappyBird::check_collisions() {
 // ACTIONS
 
 void FlappyBird::jump() {
-  if (velocity != 0) {
+  if (velocity != 0 && state == 2) {
     flappy_obj.jump();
   }
 }
 
 void FlappyBird::starter() {
-  state = 1;
+  // starter() agora transita do estado 1 (Aguardando) para o 2 (Jogando)
+  if (state == 1) {
+    state = 2;
+    flappy_obj.jump();
+  }
 }
 
 void FlappyBird::control_pipes() {

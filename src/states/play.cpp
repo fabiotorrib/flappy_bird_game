@@ -22,7 +22,7 @@ void Play::enter() {
   flappy = std::make_unique<FlappyBird>();
   flappy->reset();
   flappy->set_current_player(player);
-  status = ScreenState::PLAY;  // Reseta o status interno para "jogando"
+  status = ScreenState::PLAY;  // Reseta o status interno para "play"
 }
 
 // O método agora usa o membro 'flappy' da própria classe.
@@ -31,7 +31,12 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
     switch (status) {
       case ScreenState::PLAY:
         if (ev.keyboard.keycode == ALLEGRO_KEY_SPACE) {
-          flappy->get_state() == 0 ? flappy->starter() : flappy->jump();
+          int flappy_state = flappy->get_state();
+          if (flappy_state == 1) {         // Se estiver aguardando input
+            flappy->starter();             // Começa o jogo
+          } else if (flappy_state == 2) {  // Se já estiver jogando
+            flappy->jump();                // Pula
+          }
         } else if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
           status = ScreenState::PAUSE;
           flappy->breaker();
@@ -48,7 +53,8 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
         break;
 
       case ScreenState::GAME_OVER:
-        if (ev.keyboard.keycode == ALLEGRO_KEY_ENTER) {
+        if (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
+            ev.keyboard.keycode == ALLEGRO_KEY_SPACE) {
           if (menuButtons[buttonPositionSelected].name == "TryAgain") {
             std::cerr << "Botão TryAgain selecionado!" << std::endl;
             status = ScreenState::PLAY;
@@ -100,9 +106,6 @@ State* Play::update(Motion& motion) {
   // A lógica do jogo só avança se o status interno for PLAY.
   if (status == ScreenState::PLAY) {
     flappy->update();
-    flappy->control_pipes();
-    flappy->update_score();
-    flappy->change_velocity();
 
     if (flappy->check_collisions()) {
       flappy->set_playerscore();
@@ -128,9 +131,6 @@ void Play::draw(Motion& motion) {
                     615, 340);
     font->writeText("Press Space to resume playing.", ALLEGRO_ALIGN_CENTER, 615,
                     390);
-    // Desenhe aqui a tela de pause
-    // para liberar o jogo basta mudar o status para PLAY e puxar a função
-    // flappy->unbreak(); de um tempo até soltar o unbreak
   }
   if (status == GAME_OVER) {
     logoGameOver->Draw();
@@ -144,9 +144,5 @@ void Play::draw(Motion& motion) {
       buttonExitSelect->Draw();
     else
       buttonExitDeselect->Draw();
-
-    // desenhe aqui a tela do game over
-    // se tiver botao de retry, muda o status para PLAY e chama flappy->reset();
-    // se for trocar de state(voltar para o menu) tbm de um reset
   }
 }

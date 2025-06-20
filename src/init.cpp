@@ -8,6 +8,7 @@ ALLEGRO_EVENT_QUEUE *event_queue = nullptr;
 ALLEGRO_TIMER *timer_FPS = nullptr;
 Player player = Player(" ", 0);
 std::vector<Player> ranking = player.ReadLeaderboard("Leaderboard.txt");
+bool g_sound_on = true;
 
 ALLEGRO_FONT *font = NULL;
 

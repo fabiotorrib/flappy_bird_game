@@ -35,6 +35,7 @@ class Bird : public GameObject {
 
   void jump();
   void loop_animation(int type);
+  bool check_bird_collision(const GameObject& other) const;
   void destroy_bitmaps();
   void set_by();
   void set_break(bool value);
