@@ -5,8 +5,6 @@
 // funcao de desenhar as coisas
 void FlappyBird::draw() {
   // A animação do chão e das nuvens agora acontece em todos os estados
-  draw_animated_ground(
-      state == 2 ? velocity : BIRD_VEL);  // Chão se move mais devagar na intro
 
   switch (state) {
     case 0:  // Animação de Entrada
@@ -22,6 +20,8 @@ void FlappyBird::draw() {
       draw_HUD();
       break;
   }
+  draw_animated_ground(
+      state == 2 ? velocity : BIRD_VEL);  // Chão se move mais devagar na intro
 }
 
 void FlappyBird::update() {

@@ -39,8 +39,6 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
        ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
     selectSound->playSound(0.3);
     if (menuButtons[buttonPositionSelected].name == "Music") {
-      // --- INÍCIO DA MODIFICAÇÃO ---
-
       // 1. Inverte o estado da nossa variável global
       g_sound_on = !g_sound_on;
 
