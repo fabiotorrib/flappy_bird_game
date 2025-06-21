@@ -2,21 +2,24 @@
 #include <ostream>  // Necessário para o bônus do Doctest
 #include "../include/init.hpp"
 
+//construtor
 Player::Player(std::string name, int score) : name(name), score(score) {
 }
 
+// getters para obter nome e pontuação
 std::string Player::GetName() const {
   return name;
 }
-
 int Player::GetScore() const {
   return score;
 }
 
+//setter para atualizar pontuação
 void Player::SetScore(int points) {
   score = points;
 }
 
+//checar se o nome já foi inserido anteriormente
 bool Player::CheckingName(std::vector<Player>& ranking, std::string& Name) {
   for (const Player& p : ranking) {
     if (p.GetName() == Name) {
@@ -26,16 +29,19 @@ bool Player::CheckingName(std::vector<Player>& ranking, std::string& Name) {
   return false;
 }
 
+//sobrecarga do operador <, para ordenação do ranking com sort
 bool Player::operator<(const Player& other_p) const {
   return this->score > other_p.score;
 }
 
+//permite imprimir jogador/pontuação usando std::cout<<
 std::ostream& operator<<(std::ostream& os, const Player& p) {
   os << "Player(Name: \"" << p.GetName() << "\", Score: " << p.GetScore()
      << ")";
   return os;
 }
 
+//ler arquivo com nomes/scores para criar um vector com o ranking ainda desordenado
 std::vector<Player> Player::ReadLeaderboard(std::string file_name) {
   std::vector<Player> ranking;
   std::ifstream file(file_name);
@@ -54,6 +60,7 @@ std::vector<Player> Player::ReadLeaderboard(std::string file_name) {
   return ranking;
 }
 
+//salvar no arquivo os nomes e scores dos jogadores
 void Player::SaveLeaderboard(std::string fileName,
                              std::vector<Player>& ranking) {
   std::ofstream file(fileName, std::ios::out);
@@ -65,6 +72,7 @@ void Player::SaveLeaderboard(std::string fileName,
   }
   file.close();
 }
+//salvar no arquivo os nomes e scores dos jogadores, atualizando a pontuação para a mais alta em caso de repetição de nome
 void Player::SaveLeaderboard(std::string fileName, std::vector<Player>& ranking,
                              const Player& new_player) {
   bool found = false;
@@ -94,6 +102,7 @@ void Player::SaveLeaderboard(std::string fileName, std::vector<Player>& ranking,
   file.close();
 }
 
+//ordenar ranking
 void Player::SortLeaderboard(std::vector<Player>& ranking) {
   sort(ranking.begin(), ranking.end());
 }
