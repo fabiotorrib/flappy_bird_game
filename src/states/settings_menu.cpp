@@ -1,13 +1,29 @@
-#include "../include/states/settings_menu.hpp"
+/**
+ * @file settings_menu.cpp
+ * @brief Implementação da classe SettingsMenu, que gerencia a tela de configurações do jogo.
+ * @details Este módulo contém a lógica para manipulação de entrada, atualização de estado e
+ * renderização dos elementos gráficos da tela de configurações.
+ */
+
+/** Bibliotecas necessárias */
 #include <memory>
+#include "../include/states/settings_menu.hpp"
 #include "../include/init.hpp"
 #include "../include/states/main_menu.hpp"
 
+/**
+ * @brief Construtor da classe SettingsMenu.
+ * @details Inicializa e carrega todos os recursos gráficos (imagens e fontes)
+ * necessários para a tela de configurações.
+ */
 SettingsMenu::SettingsMenu() {
+  // Carrega as imagens de fundo para os estados com e sem música.
   campSettingsMusic =
       std::make_unique<Image>("assets/CampSettings.png", 40, 70);
   campSettingsNoMusic =
       std::make_unique<Image>("assets/CampSettingsWithoutMusic.png", 40, 70);
+  
+  // Carrega as imagens de seleção para cada botão do menu.
   buttonMusicSelect =
       std::make_unique<Image>("assets/ContourSelect.png", 40, 70);
   buttonMusicDaySelect =
@@ -26,23 +42,34 @@ SettingsMenu::SettingsMenu() {
       std::make_unique<Image>("assets/buttonBackSelect.png", 496.5, 580);
   buttonBackDeselect =
       std::make_unique<Image>("assets/buttonBackDeselect.png", 496.5, 580);
+
+  // Inicializa a fonte de texto e define sua cor.    
   font = std::make_unique<TextFont>("assets/TextFont.ttf", 50);
   font->setColor(218, 15, 15);
 }
 
+/**
+ * @brief Processa a entrada do usuário (teclado e mouse).
+ * @param ev O evento da Allegro a ser processado.
+ * @return Retorna um ponteiro para o próximo estado do jogo. Retorna `this` para
+ * continuar neste estado, `nullptr` para fechar a aplicação, ou um novo estado
+ * para transição.
+ */
 State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
-  // aqui sao implementados os eventos de teclado e mouse
+  
+  // Permite fechar a janela.
   if (ev.type == ALLEGRO_EVENT_DISPLAY_CLOSE) return nullptr;
 
+  // Trata o evento de pressionar Enter ou Espaço para confirmar uma seleção.
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
       (ev.keyboard.keycode == ALLEGRO_KEY_ENTER ||
        ev.keyboard.keycode == ALLEGRO_KEY_SPACE)) {
     selectSound->playSound(0.3);
     if (menuButtons[buttonPositionSelected].name == "Music") {
-      // 1. Inverte o estado da nossa variável global
+      // Alterna o estado global da música.
       g_sound_on = !g_sound_on;
 
-      // 2. Aplica a mudança ao mixer de áudio
+      // Aplica a alteração de volume ao mixer principal da Allegro.
       if (g_sound_on) {
         // Volume normal (1.0f = 100%)
         al_set_mixer_gain(al_get_default_mixer(), 1.0f);
@@ -68,14 +95,16 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
     }
   }
 
+  // Permite retornar ao menu principal com a tecla ESC.
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN &&
       (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE)) {
     return new MainMenu();
   }
-  ///////
 
+  // Processa a navegação no menu com as teclas direcionais.
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
     switch (ev.keyboard.keycode) {
+      // Navega para o próximo item do menu.
       case ALLEGRO_KEY_DOWN:
       case ALLEGRO_KEY_RIGHT:
         menuButtons[buttonPositionSelected].buttonSelectState = 0;
@@ -88,6 +117,7 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
         menuButtons[buttonPositionSelected].buttonSelectState = 1;
         break;
 
+      // Navega para o item anterior do menu.
       case ALLEGRO_KEY_UP:
       case ALLEGRO_KEY_LEFT:
         menuButtons[buttonPositionSelected].buttonSelectState = 0;
@@ -104,19 +134,31 @@ State* SettingsMenu::handle_input(const ALLEGRO_EVENT& ev) {
   return this;
 }
 
+/**
+ * @brief Executa ações ao entrar neste estado.
+ * @details Garante que o menu de configurações seja inicializado em um estado visual previsível,
+ * com o primeiro botão ("Música") selecionado por padrão.
+ */
 void SettingsMenu::enter() {
-  // Reseta a seleção visual dos botões
+  // Garante que todos os botões comecem como não selecionados.
   for (auto& button : menuButtons) {
     button.buttonSelectState = 0;
   }
 
-  // Define a seleção inicial para o botão "Normal" (posição 1)
+  // Define o botão inicial como selecionado.
   buttonPositionSelected = 0;
   menuButtons[buttonPositionSelected].buttonSelectState = 1;
 }
 
+/**
+ * @brief Atualiza a lógica do estado de movimento/animação de fundo.
+ * @param motion Referência ao objeto de controle de movimento/animação do fundo.
+ * @return Retorna `this` para indicar a permanência no estado atual.
+ */
 State* SettingsMenu::update(Motion& motion) {
-  motion.update();
+  motion.update(); // Atualiza a animação de fundo.
+
+  // Define o controlador de clima com base na seleção do usuário.
   if (weatherSelected == "Day") {
     motion.setController(1);
   }
@@ -129,8 +171,14 @@ State* SettingsMenu::update(Motion& motion) {
   return this;
 }
 
+/**
+ * @brief Desenha todos os elementos visuais do estado na tela.
+ * @param motion Referência ao objeto de controle de movimento para desenhar o fundo.
+ * @details A função renderiza o fundo, os botões e os textos informativos
+ * com base no estado atual das configurações (música ligada/desligada, botão selecionado).
+ */
 void SettingsMenu::draw(Motion& motion) {
-  motion.draw();
+  motion.draw(); // Desenha o fundo animado.
 
   bool is_music_button_selected = menuButtons[0].buttonSelectState;
   bool is_back_button_selected = menuButtons[4].buttonSelectState;
@@ -182,6 +230,7 @@ void SettingsMenu::draw(Motion& motion) {
       campSettingsNoMusic->Draw();
   }
 
+  // Exibe o texto confirmando a seleção de clima atual.
   if (weatherSelected == "Day")
     font->writeText("Day weather selected!", ALLEGRO_ALIGN_CENTER, 640, 485);
   else if (weatherSelected == "Snow")
