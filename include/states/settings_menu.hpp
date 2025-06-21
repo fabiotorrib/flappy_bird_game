@@ -23,12 +23,12 @@ class SettingsMenu : public State {
   SettingsMenu();
   std::string weatherSelected = "noOne";
   bool musicState = true;
-  /// @brief Vetor que armazena os botões do menu e seus estados de seleção.
+  /// Vetor que armazena os botões do menu e seus estados de seleção.
   std::vector<Button> menuButtons = {
       {"Music", 1}, {"Day", 0}, {"Snow", 0}, {"Rain", 0},{"Back", 0}};
 
   private:
-    /// @brief Ponteiros inteligentes para todos os recursos visuais (imagens e fontes) do menu.
+    /// Ponteiros inteligentes para todos os recursos visuais (imagens e fontes) do menu.
     std::unique_ptr<Image> campSettingsMusic;
     std::unique_ptr<Image> campSettingsNoMusic;
     std::unique_ptr<Image> buttonMusicSelect;

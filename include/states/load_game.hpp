@@ -34,12 +34,12 @@ class LoadName : public State {
   int buttonPositionSelected = 2;
   int errorSituation = noError;
 
-  /// @brief Vetor que armazena os botões do menu e seus estados de seleção.
+  /// Vetor que armazena os botões do menu e seus estados de seleção.
   std::vector<Button> menuButtons = {
       {"Back", 0}, {"Insert", 0}, {"NameCamp", 1}};
   
  private:
-    /// @brief Ponteiros inteligentes para os recursos visuais (imagens e fontes) da tela.
+    /// Ponteiros inteligentes para os recursos visuais (imagens e fontes) da tela.
     std::unique_ptr<Image> buttonBackSelect;
     std::unique_ptr<Image> buttonBackDeselect;
     std::unique_ptr<Image> buttonInsertSelect;

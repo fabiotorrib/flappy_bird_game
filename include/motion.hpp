@@ -11,7 +11,7 @@ class Motion {
   float controll = 0;
   float contF = 0;
   float contB = 400;
-
+  
   float speedRain = 6;
   float positionR1 = 400;
   float positionR2 = -320;
@@ -61,6 +61,7 @@ class Motion {
   std::unique_ptr<Image> ground2;
 
  public:
+  // Metodos para desenhar e atualiza a posição da imagem
   void draw();
   void update();
 

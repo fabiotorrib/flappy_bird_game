@@ -31,7 +31,7 @@ class MainMenu : public State {
                                      {"Leaderboard", 0}, {"Exit", 0}};
 
  private:
-    /// @brief Ponteiros inteligentes para todos os recursos visuais (imagens) do menu.
+    /// Ponteiros inteligentes para todos os recursos visuais (imagens) do menu.
     std::unique_ptr<Image> logoNormal;
     std::unique_ptr<Image> buttonNewGameSelect;
     std::unique_ptr<Image> buttonNewGameDeselect;

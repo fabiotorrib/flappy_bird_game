@@ -32,12 +32,15 @@ Motion::Motion() {
   ground2 = std::make_unique<Image>("assets/Ground.png");
 }
 
+// Variavel que muda o estado do clima de fundo
 void Motion::setController(int x) {
   controller = x;
 }
 
 // Animação de todos sprites da tela de fundo
 void Motion::update() {
+
+  // Atualiza a posição do clima ensolarado
   if (controller == 1) {
     // Altera a posição do feixe de luz
     positionL_x = positionL_x - speed_light;
@@ -80,8 +83,7 @@ void Motion::update() {
     }
   }
 
-  // Metodo que muda o clima para neve, mudando o background e fazendo nevar na
-  // tela
+  // Atualiza a posição da neve
   if (controller == 2) {
     // Atualiza a posição a cada frame
     positionF = positionF + speedFlakes;
@@ -103,7 +105,7 @@ void Motion::update() {
       positionF3 = 550;
     }
   }
-
+  // Atualiza posição chuva
   if (controller == 3) {
     contF++;
     positionR1 += speedRain;
@@ -121,13 +123,15 @@ void Motion::update() {
 }
 
 // Atualiza a tela com os frames andados
+// Redesenhando cada imagem com a nova posição
 void Motion::draw() {
+
+  // Desenha animação ensolarada
   if (controller == 1) {
-    // Redesenhando cada imagem com a nova posição
+
     background->Draw(0, 0);
 
     // Animação dos passaros do fundo batendo as asas
-    // Mesma logica do Bird que bate as asas
     if ((positionB_x <= cont) && (value == 0)) {
       little->Draw(positionB_x - 1280, 0);
 
@@ -150,27 +154,26 @@ void Motion::draw() {
         value = 0;
       }
     }
-
+    // Desenhando as nuvens, chão e o feixe de luz
     clouds2->Draw(positionCC_x - 1280, 0);
     clouds->Draw(positionC_x - 1280, 0);
     ground->Draw(positionF_x - 1280, 0);
     ground2->Draw(positionF2_x - 1280, 0);
     lights->Draw(positionL_x + 1280, -20);
   }
-  // SNOW
+  // Desenha a animção da neve
   if (controller == 2) {
     background_snow->Draw(0, 0);
     flakesLittle->Draw(0, positionF - 1280);
     flakesLittle2->Draw(0, positionF3 - 1280);
     flakesBig->Draw(0, positionF2 - 1280);
   }
-  // rain
+  // Desenha a animação da chuva
   if (controller == 3) {
     background_rain->Draw(0, 0);
 
     if ((contF <= contB + 20) && (contF >= contB) && (controll == 0)) {
       thunder->Draw(0, 0);
-      // std::cerr << "1" << std::endl;
 
       if (contF == contB + 20) {
         controll = 1;
@@ -188,8 +191,8 @@ void Motion::draw() {
       }
     }
 
+    //Desenha os pingos de chuva
     drips1->Draw(0, positionR1 - 1280);
     drips2->Draw(0, positionR2 - 1280);
-    // std::cerr << contB << " " << contF << std::endl;
   }
 }

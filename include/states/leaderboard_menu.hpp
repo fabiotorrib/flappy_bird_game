@@ -12,12 +12,6 @@
 #include "../state.hpp"
 #include "../assets.hpp"
 
-/**
- * @class LeaderboardMenu
- * @brief Gerencia a lógica e a renderização da tela de ranking (placar de líderes).
- * @details Esta classe herda de 'State' e implementa o comportamento para ler
- * os dados de pontuação de um arquivo, ordená-los e exibi-los ao jogador em formato de tabela.
- */
 class LeaderboardMenu : public State {
  public:
   State* handle_input(const ALLEGRO_EVENT& ev) override;
@@ -27,7 +21,7 @@ class LeaderboardMenu : public State {
   LeaderboardMenu();
 
  private:
- /// @brief Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu.
+ /// Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu.
   std::unique_ptr<TextFont> font;
   std::unique_ptr<Image> campLeaderboard; 
 };
