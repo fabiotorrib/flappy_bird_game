@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/states/leaderboard_menu.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d451e3adc68fdcbbaffa01a2ce5a922.html">states</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">leaderboard_menu.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="leaderboard__menu_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../defines.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../init.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../state.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../assets.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classLeaderboardMenu.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLeaderboardMenu.html">LeaderboardMenu</a> : <span class="keyword">public</span> <a class="code" href="classState.html">State</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classLeaderboardMenu.html#a12c79190706d52e31815cf3992ca9f35">handle_input</a>(<span class="keyword">const</span> ALLEGRO_EVENT&amp; <a class="code" href="classState.html#a87442fa864f5080096f0055856ced22b">ev</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classLeaderboardMenu.html#a8e73c70836903711bc8599b8780be61b">update</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLeaderboardMenu.html#af5be1d3eea81adbc7822eaa4697cd9c4">draw</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLeaderboardMenu.html#a7eb26a277cc3ff52e703921a69f24fe4">enter</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <a class="code" href="classLeaderboardMenu.html#a5df2cd2dbc7208ccbea9e96271e93b59">LeaderboardMenu</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classLeaderboardMenu.html#a65e0e18330c21078c97b5e7866c9d05a">   29</a></span>&#160;  std::unique_ptr&lt;TextFont&gt; <a class="code" href="classLeaderboardMenu.html#a65e0e18330c21078c97b5e7866c9d05a">font</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classLeaderboardMenu.html#a90c7aad9fd5c345a78f943a39bf03a2e">   30</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classLeaderboardMenu.html#a90c7aad9fd5c345a78f943a39bf03a2e">campLeaderboard</a>; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
+<div class="ttc" id="aclassLeaderboardMenu_html"><div class="ttname"><a href="classLeaderboardMenu.html">LeaderboardMenu</a></div><div class="ttdoc">Exibe ranking de jogadores e permite retorno ao menu principal.</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.hpp:19</div></div>
+<div class="ttc" id="aclassLeaderboardMenu_html_a12c79190706d52e31815cf3992ca9f35"><div class="ttname"><a href="classLeaderboardMenu.html#a12c79190706d52e31815cf3992ca9f35">LeaderboardMenu::handle_input</a></div><div class="ttdeci">State * handle_input(const ALLEGRO_EVENT &amp;ev) override</div><div class="ttdoc">Gerencia a entrada do usuário (teclado).</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.cpp:34</div></div>
+<div class="ttc" id="aclassLeaderboardMenu_html_a5df2cd2dbc7208ccbea9e96271e93b59"><div class="ttname"><a href="classLeaderboardMenu.html#a5df2cd2dbc7208ccbea9e96271e93b59">LeaderboardMenu::LeaderboardMenu</a></div><div class="ttdeci">LeaderboardMenu()</div><div class="ttdoc">Construtor da classe LeaderboardMenu.</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.cpp:23</div></div>
+<div class="ttc" id="aclassLeaderboardMenu_html_a65e0e18330c21078c97b5e7866c9d05a"><div class="ttname"><a href="classLeaderboardMenu.html#a65e0e18330c21078c97b5e7866c9d05a">LeaderboardMenu::font</a></div><div class="ttdeci">std::unique_ptr&lt; TextFont &gt; font</div><div class="ttdoc">Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu.</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.hpp:29</div></div>
+<div class="ttc" id="aclassLeaderboardMenu_html_a7eb26a277cc3ff52e703921a69f24fe4"><div class="ttname"><a href="classLeaderboardMenu.html#a7eb26a277cc3ff52e703921a69f24fe4">LeaderboardMenu::enter</a></div><div class="ttdeci">void enter() override</div><div class="ttdoc">Executado uma vez ao entrar no estado do Leaderboard.</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.cpp:53</div></div>
+<div class="ttc" id="aclassLeaderboardMenu_html_a8e73c70836903711bc8599b8780be61b"><div class="ttname"><a href="classLeaderboardMenu.html#a8e73c70836903711bc8599b8780be61b">LeaderboardMenu::update</a></div><div class="ttdeci">State * update(Motion &amp;motion) override</div><div class="ttdoc">Atualiza a lógica do estado do movimento/animação do fundo.</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.cpp:63</div></div>
+<div class="ttc" id="aclassLeaderboardMenu_html_a90c7aad9fd5c345a78f943a39bf03a2e"><div class="ttname"><a href="classLeaderboardMenu.html#a90c7aad9fd5c345a78f943a39bf03a2e">LeaderboardMenu::campLeaderboard</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; campLeaderboard</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.hpp:30</div></div>
+<div class="ttc" id="aclassLeaderboardMenu_html_af5be1d3eea81adbc7822eaa4697cd9c4"><div class="ttname"><a href="classLeaderboardMenu.html#af5be1d3eea81adbc7822eaa4697cd9c4">LeaderboardMenu::draw</a></div><div class="ttdeci">void draw(Motion &amp;motion) override</div><div class="ttdoc">Desenha todos os elementos visuais do estado na tela.</div><div class="ttdef"><b>Definition:</b> leaderboard_menu.cpp:74</div></div>
+<div class="ttc" id="aclassMotion_html"><div class="ttname"><a href="classMotion.html">Motion</a></div><div class="ttdoc">Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.</div><div class="ttdef"><b>Definition:</b> motion.hpp:20</div></div>
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Define a interface que cada tela/estado deve implementar.</div><div class="ttdef"><b>Definition:</b> state.hpp:15</div></div>
+<div class="ttc" id="aclassState_html_a87442fa864f5080096f0055856ced22b"><div class="ttname"><a href="classState.html#a87442fa864f5080096f0055856ced22b">State::ev</a></div><div class="ttdeci">static ALLEGRO_EVENT ev</div><div class="ttdef"><b>Definition:</b> state.hpp:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

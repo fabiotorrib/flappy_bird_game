@@ -1,0 +1,4 @@
+<map id="Play" name="Play">
+<area shape="rect" id="node1" title="Estado principal de jogo: controla loop ativo, pontuação e game over." alt="" coords="8,80,59,107"/>
+<area shape="rect" id="node2" href="$classState.html" title="Define a interface que cada tela/estado deve implementar." alt="" coords="5,5,61,32"/>
+</map>

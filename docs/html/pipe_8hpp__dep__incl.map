@@ -1,0 +1,12 @@
+<map id="include/pipe.hpp" name="include/pipe.hpp">
+<area shape="rect" id="node1" title="Declaration of pipe&#45;related classes (Pipe, PipePair, PipeList)." alt="" coords="444,5,573,32"/>
+<area shape="rect" id="node2" href="$flappy__bird__controller_8hpp.html" title="Declaracao da classe FlappyBird (controlador principal)." alt="" coords="363,80,508,121"/>
+<area shape="rect" id="node10" href="$pipe_8cpp.html" title="Implementação das classes Pipe, PipePair e PipeList." alt="" coords="532,87,632,114"/>
+<area shape="rect" id="node3" href="$allegro__interface_8hpp.html" title="Declara o controlador que integra Allegro e a máquina de estados." alt="" coords="115,169,326,196"/>
+<area shape="rect" id="node6" href="$play_8hpp.html" title="Declaracao da classe Play, responsavel pelo estado de jogo ativo." alt="" coords="350,169,521,196"/>
+<area shape="rect" id="node9" href="$flappy__bird__controller_8cpp.html" title="Controlador de fluxo do jogo (pontuação, eventos globais)." alt="" coords="545,169,757,196"/>
+<area shape="rect" id="node4" href="$allegro__interface_8cpp.html" title="Implementação do controlador principal que integra Allegro às lógicas de estado do jogo." alt="" coords="135,244,317,271"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Ponto de entrada do jogo Flappy Bird." alt="" coords="5,244,111,271"/>
+<area shape="rect" id="node7" href="$load__game_8cpp.html" title="Implementação da classe LoadName, responsável pela tela de inserção de nome do jogador." alt="" coords="341,244,529,271"/>
+<area shape="rect" id="node8" href="$play_8cpp.html" title="Implementacao da classe Play." alt="" coords="553,244,696,271"/>
+</map>

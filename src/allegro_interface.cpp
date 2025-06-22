@@ -1,3 +1,11 @@
+/**
+ * @file allegro_interface.cpp
+ * @brief Implementação do controlador principal que integra Allegro às lógicas de estado do jogo.
+ *
+ * Este arquivo contém a implementação do `AllegroController`, responsável por
+ * inicializar o primeiro estado, executar o loop de eventos da biblioteca
+ * Allegro e orquestrar transições de estado, atualizações e renderizações.
+ */
 #include "../include/allegro_interface.hpp"
 #include "../include/init.hpp"
 #include "../include/state.hpp"  // Para o estado inicial MainMenu
@@ -8,19 +16,28 @@ AllegroController::AllegroController(float screen_w, float screen_h)
     : screen_width(screen_w), screen_height(screen_h) {
 }
 
+/**
+ * @brief Destrói o controlador Allegro liberando recursos.
+ */
 AllegroController::~AllegroController() {
 }
 
 /**
- O loop é responsável por:
- * 1. Esperar por eventos do Allegro (teclado, timer, etc.).
- * 2. Despachar os eventos para o estado atual para tratamento de input.
- * 3. Acionar as atualizações de lógica e desenho em um ritmo constante (via
- * ALLEGRO_EVENT_TIMER).
- * 4. Orquestrar as transições entre os diferentes estados do jogo.
- * A lógica de transição é baseada em ponteiros. O estado atual retorna
- * um ponteiro para si mesmo para continuar, um ponteiro para um novo estado
- * (alocado com 'new') para transicionar, ou 'nullptr' para encerrar o jogo.
+ * @brief Executa o loop principal do jogo.
+ *
+ * O método é dividido em quatro fases recorrentes:
+ *   1. **Input** – aguarda um @c ALLEGRO_EVENT na fila e encaminha-o ao
+ *      estado ativo para tratamento de entrada.
+ *   2. **Update** – em eventos de timer, avança a lógica do jogo e dos
+ *      objetos via @ref Motion.
+ *   3. **Render** – redesenha a cena quando necessário e a fila de eventos
+ *      está vazia.
+ *   4. **State Transition** – se o estado ativo retornar um ponteiro
+ *      diferente, realiza a troca, destruindo o estado anterior e chamando
+ *      @c enter() no novo estado.
+ *
+ * O loop continua até que @c current_state se torne @c nullptr (por exemplo,
+ * quando o usuário fecha a janela).
  */
 void AllegroController::run() {
   /// Inicializa os componentes que o controller gerencia.

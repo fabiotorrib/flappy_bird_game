@@ -1,0 +1,89 @@
+\hypertarget{classMusic}{}\doxysection{Referência da Classe Music}
+\label{classMusic}\index{Music@{Music}}
+
+
+Gerencia reprodução em loop de faixas de áudio.  
+
+
+
+
+{\ttfamily \#include $<$assets.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classMusic_a0411cb24f1fa6848d4a05fb5b2d6ba2e}{Music}} (const char $\ast$diretorio)
+\begin{DoxyCompactList}\small\item\em Constrói um objeto de música em loop. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMusic_a4b7c191c6bae70db92125b3886dbadd6}{play\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Inicia a reprodução da música. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMusic_a0b4f3b9a018207e0c08003505f1f87fe}{$\sim$\+Music}} ()
+\begin{DoxyCompactList}\small\item\em Libera o stream de áudio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+ALLEGRO\+\_\+\+AUDIO\+\_\+\+STREAM $\ast$ \mbox{\hyperlink{classMusic_a1a160d33ec550acbcf560a63a65e9e28}{music}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia reprodução em loop de faixas de áudio. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classMusic_a0411cb24f1fa6848d4a05fb5b2d6ba2e}\label{classMusic_a0411cb24f1fa6848d4a05fb5b2d6ba2e}} 
+\index{Music@{Music}!Music@{Music}}
+\index{Music@{Music}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{Music()}{Music()}}
+{\footnotesize\ttfamily Music\+::\+Music (\begin{DoxyParamCaption}\item[{const char $\ast$}]{diretorio }\end{DoxyParamCaption})}
+
+
+
+Constrói um objeto de música em loop. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em diretorio} & Caminho do arquivo de áudio. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::bad\+\_\+alloc} & Se falhar ao carregar o stream. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classMusic_a0b4f3b9a018207e0c08003505f1f87fe}\label{classMusic_a0b4f3b9a018207e0c08003505f1f87fe}} 
+\index{Music@{Music}!````~Music@{$\sim$Music}}
+\index{````~Music@{$\sim$Music}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{$\sim$Music()}{~Music()}}
+{\footnotesize\ttfamily Music\+::$\sim$\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera o stream de áudio. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMusic_a4b7c191c6bae70db92125b3886dbadd6}\label{classMusic_a4b7c191c6bae70db92125b3886dbadd6}} 
+\index{Music@{Music}!playMusic@{playMusic}}
+\index{playMusic@{playMusic}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{playMusic()}{playMusic()}}
+{\footnotesize\ttfamily void Music\+::play\+Music (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicia a reprodução da música. 
+
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classMusic_a1a160d33ec550acbcf560a63a65e9e28}\label{classMusic_a1a160d33ec550acbcf560a63a65e9e28}} 
+\index{Music@{Music}!music@{music}}
+\index{music@{music}!Music@{Music}}
+\doxysubsubsection{\texorpdfstring{music}{music}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+AUDIO\+\_\+\+STREAM$\ast$ Music\+::music = NULL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{assets_8hpp}{assets.\+hpp}}\item 
+src/\mbox{\hyperlink{assets_8cpp}{assets.\+cpp}}\end{DoxyCompactItemize}

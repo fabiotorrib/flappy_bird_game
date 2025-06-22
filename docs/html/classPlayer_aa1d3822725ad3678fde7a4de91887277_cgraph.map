@@ -1,0 +1,5 @@
+<map id="Player::SaveLeaderboard" name="Player::SaveLeaderboard">
+<area shape="rect" id="node1" title="Salva ranking adicionando ou atualizando um jogador." alt="" coords="5,31,189,57"/>
+<area shape="rect" id="node2" href="$classPlayer.html#affddef50f994746a860e2366e412917f" title="Retorna o nome do jogador." alt="" coords="237,5,371,32"/>
+<area shape="rect" id="node3" href="$classPlayer.html#a777fb06bddf27e2810053843cb0cc6f9" title="Retorna a pontuação atual." alt="" coords="239,56,369,83"/>
+</map>

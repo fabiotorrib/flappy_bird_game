@@ -1,0 +1,5 @@
+<map id="Bird::set_by" name="Bird::set_by">
+<area shape="rect" id="node1" title="Atualiza coordenada by (usada na HUD ou limites)." alt="" coords="348,5,447,32"/>
+<area shape="rect" id="node2" href="$classBird.html#ae2718aad2ef1de73e399482ab6068324" title="Atualiza fisica e posicao." alt="" coords="199,5,300,32"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,5,151,32"/>
+</map>

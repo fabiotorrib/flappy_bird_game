@@ -17,6 +17,10 @@
 // operar no modo "NewGame" ou "LoadGame".
 extern std::string inputNameScreen;
 
+/**
+ * @class MainMenu
+ * @brief Tela inicial do jogo, centraliza navegação para demais estados.
+ */
 class MainMenu : public State {
  public:
   State* handle_input(const ALLEGRO_EVENT& ev) override;

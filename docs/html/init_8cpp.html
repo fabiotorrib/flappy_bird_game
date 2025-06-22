@@ -1,0 +1,357 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Referência do Arquivo src/init.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Definições e Macros</a> &#124;
+<a href="#func-members">Funções</a> &#124;
+<a href="#var-members">Variáveis</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência do Arquivo init.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Inicialização de Allegro, fontes, addons e recursos globais.  
+<a href="#details">Mais...</a></p>
+<div class="textblock"><code>#include &quot;<a class="el" href="init_8hpp_source.html">../include/init.hpp</a>&quot;</code><br />
+<code>#include &lt;allegro5/bitmap_io.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="assets_8hpp_source.html">../include/assets.hpp</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Gráfico de dependência de inclusões para init.cpp:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8cpp__incl.svg" width="1856" height="426"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Definições e Macros</h2></td></tr>
+<tr class="memitem:af855c94dc540e943632089ce7496faac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#af855c94dc540e943632089ce7496faac">LOG</a>(x)&#160;&#160;&#160;std::cerr &lt;&lt; x &lt;&lt; '\n'</td></tr>
+<tr class="separator:af855c94dc540e943632089ce7496faac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#a02fd73d861ef2e4aabb38c0c9ff82947">init</a> ()</td></tr>
+<tr class="memdesc:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicializa Allegro, janela, áudio e recursos globais.  <a href="init_8cpp.html#a02fd73d861ef2e4aabb38c0c9ff82947">Mais...</a><br /></td></tr>
+<tr class="separator:a02fd73d861ef2e4aabb38c0c9ff82947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a967fb9235af58c66165b0d619c6cc584"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#a967fb9235af58c66165b0d619c6cc584">deinit</a> ()</td></tr>
+<tr class="memdesc:a967fb9235af58c66165b0d619c6cc584"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libera todos os recursos e encerra o subsistema Allegro.  <a href="init_8cpp.html#a967fb9235af58c66165b0d619c6cc584">Mais...</a><br /></td></tr>
+<tr class="separator:a967fb9235af58c66165b0d619c6cc584"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variáveis</h2></td></tr>
+<tr class="memitem:af64cc6c8a47e5ddbf510b5aa92e062b9"><td class="memItemLeft" align="right" valign="top">ALLEGRO_DISPLAY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#af64cc6c8a47e5ddbf510b5aa92e062b9">display</a> = nullptr</td></tr>
+<tr class="separator:af64cc6c8a47e5ddbf510b5aa92e062b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b547b3fd150c01ccf92506cf719a14d"><td class="memItemLeft" align="right" valign="top">ALLEGRO_EVENT_QUEUE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#a1b547b3fd150c01ccf92506cf719a14d">event_queue</a> = nullptr</td></tr>
+<tr class="separator:a1b547b3fd150c01ccf92506cf719a14d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22045c356beccd98008e6234d1c5f2d1"><td class="memItemLeft" align="right" valign="top">ALLEGRO_TIMER *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#a22045c356beccd98008e6234d1c5f2d1">timer_FPS</a> = nullptr</td></tr>
+<tr class="separator:a22045c356beccd98008e6234d1c5f2d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af61d6983a9396a11078805087518af88"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classPlayer.html">Player</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#af61d6983a9396a11078805087518af88">player</a> = <a class="el" href="classPlayer.html">Player</a>(&quot; &quot;, 0)</td></tr>
+<tr class="separator:af61d6983a9396a11078805087518af88"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab54dcbf6721b2315ef1e65ed98ee9863"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classPlayer.html">Player</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#ab54dcbf6721b2315ef1e65ed98ee9863">ranking</a> = player.ReadLeaderboard(&quot;Leaderboard.txt&quot;)</td></tr>
+<tr class="separator:ab54dcbf6721b2315ef1e65ed98ee9863"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab7cab289aa610b31d3e8688bff55528b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#ab7cab289aa610b31d3e8688bff55528b">g_sound_on</a> = true</td></tr>
+<tr class="separator:ab7cab289aa610b31d3e8688bff55528b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a016a5d341f375d13639c75bf5987fb23"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#a016a5d341f375d13639c75bf5987fb23">difficulty</a> = 1</td></tr>
+<tr class="separator:a016a5d341f375d13639c75bf5987fb23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4254615de94af5fc74d43e8b676dcf9"><td class="memItemLeft" align="right" valign="top">ALLEGRO_FONT *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#ae4254615de94af5fc74d43e8b676dcf9">font</a> = NULL</td></tr>
+<tr class="separator:ae4254615de94af5fc74d43e8b676dcf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a210f30a47fa4a1aea60a3bc0238fc1b7"><td class="memItemLeft" align="right" valign="top">ALLEGRO_BITMAP *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#a210f30a47fa4a1aea60a3bc0238fc1b7">icon</a> = NULL</td></tr>
+<tr class="separator:a210f30a47fa4a1aea60a3bc0238fc1b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19178a66a4a1d00d504b8a29aa6b5139"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classMusic.html">Music</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="init_8cpp.html#a19178a66a4a1d00d504b8a29aa6b5139">backgroundMusic</a></td></tr>
+<tr class="separator:a19178a66a4a1d00d504b8a29aa6b5139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Inicialização de Allegro, fontes, addons e recursos globais. </p>
+</div><h2 class="groupheader">Definições e macros</h2>
+<a id="af855c94dc540e943632089ce7496faac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af855c94dc540e943632089ce7496faac">&#9670;&nbsp;</a></span>LOG</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define LOG</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x</td><td>)</td>
+          <td>&#160;&#160;&#160;std::cerr &lt;&lt; x &lt;&lt; '\n'</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções</h2>
+<a id="a967fb9235af58c66165b0d619c6cc584"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a967fb9235af58c66165b0d619c6cc584">&#9670;&nbsp;</a></span>deinit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void deinit </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Libera todos os recursos e encerra o subsistema Allegro. </p>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8cpp_a967fb9235af58c66165b0d619c6cc584_cgraph.svg" width="268" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8cpp_a967fb9235af58c66165b0d619c6cc584_icgraph.svg" width="172" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a02fd73d861ef2e4aabb38c0c9ff82947"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02fd73d861ef2e4aabb38c0c9ff82947">&#9670;&nbsp;</a></span>init()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void init </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Inicializa Allegro, janela, áudio e recursos globais. </p>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947_cgraph.svg" width="236" height="88"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="init_8cpp_a02fd73d861ef2e4aabb38c0c9ff82947_icgraph.svg" width="156" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Variáveis</h2>
+<a id="a19178a66a4a1d00d504b8a29aa6b5139"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19178a66a4a1d00d504b8a29aa6b5139">&#9670;&nbsp;</a></span>backgroundMusic</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unique_ptr&lt;<a class="el" href="classMusic.html">Music</a>&gt; backgroundMusic</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a016a5d341f375d13639c75bf5987fb23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a016a5d341f375d13639c75bf5987fb23">&#9670;&nbsp;</a></span>difficulty</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int difficulty = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af64cc6c8a47e5ddbf510b5aa92e062b9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af64cc6c8a47e5ddbf510b5aa92e062b9">&#9670;&nbsp;</a></span>display</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_DISPLAY* display = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a1b547b3fd150c01ccf92506cf719a14d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b547b3fd150c01ccf92506cf719a14d">&#9670;&nbsp;</a></span>event_queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_EVENT_QUEUE* event_queue = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ae4254615de94af5fc74d43e8b676dcf9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4254615de94af5fc74d43e8b676dcf9">&#9670;&nbsp;</a></span>font</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_FONT* font = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab7cab289aa610b31d3e8688bff55528b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab7cab289aa610b31d3e8688bff55528b">&#9670;&nbsp;</a></span>g_sound_on</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool g_sound_on = true</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a210f30a47fa4a1aea60a3bc0238fc1b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a210f30a47fa4a1aea60a3bc0238fc1b7">&#9670;&nbsp;</a></span>icon</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_BITMAP* icon = NULL</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af61d6983a9396a11078805087518af88"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af61d6983a9396a11078805087518af88">&#9670;&nbsp;</a></span>player</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classPlayer.html">Player</a> player = <a class="el" href="classPlayer.html">Player</a>(&quot; &quot;, 0)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab54dcbf6721b2315ef1e65ed98ee9863"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab54dcbf6721b2315ef1e65ed98ee9863">&#9670;&nbsp;</a></span>ranking</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classPlayer.html">Player</a>&gt; ranking = player.ReadLeaderboard(&quot;Leaderboard.txt&quot;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a22045c356beccd98008e6234d1c5f2d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22045c356beccd98008e6234d1c5f2d1">&#9670;&nbsp;</a></span>timer_FPS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_TIMER* timer_FPS = nullptr</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

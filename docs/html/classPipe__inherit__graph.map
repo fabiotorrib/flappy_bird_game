@@ -1,0 +1,4 @@
+<map id="Pipe" name="Pipe">
+<area shape="rect" id="node1" title="Obstáculo individual que se move horizontalmente e gera pontuação." alt="" coords="31,80,82,107"/>
+<area shape="rect" id="node2" href="$classGameObject.html" title="Objeto genérico do jogo contendo posição, sprite e hitbox." alt="" coords="5,5,108,32"/>
+</map>

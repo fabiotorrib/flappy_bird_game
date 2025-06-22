@@ -1,0 +1,5 @@
+<map id="PipeList::delete_pipe_pair" name="PipeList::delete_pipe_pair">
+<area shape="rect" id="node1" title="Remove pipes that left the screen." alt="" coords="392,13,581,39"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a4984ed1f498df20ac647f427fae92e5d" title="Adiciona / remove canos conforme necessidade." alt="" coords="199,5,344,47"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,13,151,39"/>
+</map>

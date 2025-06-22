@@ -1,0 +1,4 @@
+<map id="DifficultyMenu::update" name="DifficultyMenu::update">
+<area shape="rect" id="node1" title="Atualiza a lógica do estado a cada quadro." alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node2" href="$classMotion.html#a01805ce60c0e4c9aae97979dd884b59c" title="Atualiza posições dos elementos de background conforme cenário." alt="" coords="224,5,344,32"/>
+</map>

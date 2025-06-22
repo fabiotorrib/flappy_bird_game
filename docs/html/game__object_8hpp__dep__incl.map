@@ -1,0 +1,16 @@
+<map id="include/game_object.hpp" name="include/game_object.hpp">
+<area shape="rect" id="node1" title="Classe base abstrata para todos os objetos renderizáveis." alt="" coords="281,5,467,32"/>
+<area shape="rect" id="node2" href="$bird_8hpp.html" title="Declaracao da classe Bird (personagem controlavel)." alt="" coords="148,80,275,107"/>
+<area shape="rect" id="node3" href="$flappy__bird__controller_8hpp.html" title="Declaracao da classe FlappyBird (controlador principal)." alt="" coords="263,155,408,196"/>
+<area shape="rect" id="node12" href="$pipe_8hpp.html" title="Declaration of pipe&#45;related classes (Pipe, PipePair, PipeList)." alt="" coords="361,80,491,107"/>
+<area shape="rect" id="node14" href="$game__object_8cpp.html" title="Métodos utilitários da classe base GameObject." alt="" coords="515,80,671,107"/>
+<area shape="rect" id="node10" href="$flappy__bird__controller_8cpp.html" title="Controlador de fluxo do jogo (pontuação, eventos globais)." alt="" coords="5,244,217,271"/>
+<area shape="rect" id="node11" href="$bird_8cpp.html" title="Implementação da classe Bird (animação, física e colisões)." alt="" coords="141,162,239,189"/>
+<area shape="rect" id="node4" href="$allegro__interface_8hpp.html" title="Declara o controlador que integra Allegro e a máquina de estados." alt="" coords="441,244,651,271"/>
+<area shape="rect" id="node7" href="$play_8hpp.html" title="Declaracao da classe Play, responsavel pelo estado de jogo ativo." alt="" coords="246,244,417,271"/>
+<area shape="rect" id="node5" href="$allegro__interface_8cpp.html" title="Implementação do controlador principal que integra Allegro às lógicas de estado do jogo." alt="" coords="427,319,609,345"/>
+<area shape="rect" id="node6" href="$main_8cpp.html" title="Ponto de entrada do jogo Flappy Bird." alt="" coords="633,319,739,345"/>
+<area shape="rect" id="node8" href="$load__game_8cpp.html" title="Implementação da classe LoadName, responsável pela tela de inserção de nome do jogador." alt="" coords="48,319,236,345"/>
+<area shape="rect" id="node9" href="$play_8cpp.html" title="Implementacao da classe Play." alt="" coords="260,319,403,345"/>
+<area shape="rect" id="node13" href="$pipe_8cpp.html" title="Implementação das classes Pipe, PipePair e PipeList." alt="" coords="432,162,532,189"/>
+</map>

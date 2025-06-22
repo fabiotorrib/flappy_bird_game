@@ -1,3 +1,8 @@
+/**
+ * @file init.cpp
+ * @brief Inicialização de Allegro, fontes, addons e recursos globais.
+ */
+
 #include "../include/init.hpp"
 #include <allegro5/bitmap_io.h>
 #include "../include/assets.hpp"
@@ -21,6 +26,9 @@ ALLEGRO_BITMAP *icon = NULL;
 std::unique_ptr<Music> backgroundMusic;
 
 
+/**
+ * @brief Inicializa Allegro, janela, áudio e recursos globais.
+ */
 void init() {
   al_init();
 
@@ -73,6 +81,9 @@ void init() {
   loadGlobalAssets();
 }
 
+/**
+ * @brief Libera todos os recursos e encerra o subsistema Allegro.
+ */
 void deinit() {
     al_stop_timer(timer_FPS);
 

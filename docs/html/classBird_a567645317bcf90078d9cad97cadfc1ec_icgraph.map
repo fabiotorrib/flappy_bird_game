@@ -1,0 +1,7 @@
+<map id="Bird::set_break" name="Bird::set_break">
+<area shape="rect" id="node1" title="Habilita/desabilita animacao apos colisao." alt="" coords="260,81,380,108"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a23bf3f77850cabdfa4a6bb9a7e9bfbe2" title="Pausa fisica e anima passaro colidido." alt="" coords="34,5,183,32"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#a229cec49a07214226a449da13eb90f9d" title="Verifica colisao entre passaro, limites ou canos." alt="" coords="5,56,212,83"/>
+<area shape="rect" id="node4" href="$classFlappyBird.html#a185beae77101e7a8be97f7a4ac6a19d8" title="Reseta jogo para configuracao inicial." alt="" coords="42,107,175,133"/>
+<area shape="rect" id="node5" href="$classFlappyBird.html#afbf176f9bfba9a2eb43f29e5e665d239" title="Retoma jogo apos pausa." alt="" coords="26,157,191,184"/>
+</map>

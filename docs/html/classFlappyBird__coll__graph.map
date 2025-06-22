@@ -1,0 +1,7 @@
+<map id="FlappyBird" name="FlappyBird">
+<area shape="rect" id="node1" title="Controlador principal do jogo: orquestra objetos, HUD, pontuação e fluxo de estados." alt="" coords="113,171,205,197"/>
+<area shape="rect" id="node2" href="$classBird.html" title="Personagem controlável: gerencia movimento, animação de asas, pulo e detecção de colisões." alt="" coords="33,81,81,108"/>
+<area shape="rect" id="node3" href="$classGameObject.html" title="Objeto genérico do jogo contendo posição, sprite e hitbox." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node4" href="$classPlayer.html" title="Armazena nome e pontuação e provê utilidades para ranking." alt="" coords="128,81,191,108"/>
+<area shape="rect" id="node5" href="$classPipeList.html" title="Gerencia vetor de PipePair: spawn, atualização, colisão e score." alt="" coords="245,81,319,108"/>
+</map>

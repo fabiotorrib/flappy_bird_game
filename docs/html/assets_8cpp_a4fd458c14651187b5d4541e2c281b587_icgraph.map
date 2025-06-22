@@ -1,0 +1,5 @@
+<map id="unloadGlobalAssets" name="unloadGlobalAssets">
+<area shape="rect" id="node1" title="Libera os recursos globais previamente carregados." alt="" coords="215,5,365,32"/>
+<area shape="rect" id="node2" href="$init_8hpp.html#a967fb9235af58c66165b0d619c6cc584" title="Libera todos os recursos e encerra o subsistema Allegro." alt="" coords="108,5,167,32"/>
+<area shape="rect" id="node3" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicializa, executa e encerra o jogo." alt="" coords="5,5,60,32"/>
+</map>

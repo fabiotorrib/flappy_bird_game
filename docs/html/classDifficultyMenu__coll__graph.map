@@ -1,0 +1,4 @@
+<map id="DifficultyMenu" name="DifficultyMenu">
+<area shape="rect" id="node1" title="Gerencia a lógica e a renderização da tela de seleção de dificuldade." alt="" coords="5,80,123,107"/>
+<area shape="rect" id="node2" href="$classState.html" title="Define a interface que cada tela/estado deve implementar." alt="" coords="36,5,92,32"/>
+</map>

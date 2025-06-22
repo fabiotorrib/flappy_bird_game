@@ -1,0 +1,5 @@
+<map id="Player::GetScore" name="Player::GetScore">
+<area shape="rect" id="node1" title="Retorna a pontuação atual." alt="" coords="237,31,368,57"/>
+<area shape="rect" id="node2" href="$player_8cpp.html#a188ce17516b9903d7097b8a0f7643538" title="Sobrecarga de operador de streaming para debug." alt="" coords="48,5,147,32"/>
+<area shape="rect" id="node3" href="$classPlayer.html#aa1d3822725ad3678fde7a4de91887277" title="Salva ranking adicionando ou atualizando um jogador." alt="" coords="5,56,189,83"/>
+</map>

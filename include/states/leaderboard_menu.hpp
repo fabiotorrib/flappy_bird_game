@@ -12,6 +12,10 @@
 #include "../state.hpp"
 #include "../assets.hpp"
 
+/**
+ * @class LeaderboardMenu
+ * @brief Exibe ranking de jogadores e permite retorno ao menu principal.
+ */
 class LeaderboardMenu : public State {
  public:
   State* handle_input(const ALLEGRO_EVENT& ev) override;

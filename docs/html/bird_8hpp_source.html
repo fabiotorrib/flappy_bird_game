@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/bird.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">bird.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="bird_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_primitives.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defines_8hpp.html">defines.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__object_8hpp.html">game_object.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classBird.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classBird.html">Bird</a> : <span class="keyword">public</span> <a class="code" href="classGameObject.html">GameObject</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classBird.html#ae8e3c99286c697b4d1fb46b5a1cdb0d4">   19</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classBird.html#ae8e3c99286c697b4d1fb46b5a1cdb0d4">gravity</a>;                 </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classBird.html#acac9c8e88e1a92ca06440987794dcc62">   20</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classBird.html#acac9c8e88e1a92ca06440987794dcc62">jumpForce</a>;               </div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classBird.html#ad9ff3a9c1d413787563e16075ed9b571">   21</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classBird.html#ad9ff3a9c1d413787563e16075ed9b571">vy</a> = 0;                  </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classBird.html#ae349b0c3de095131a88820721e6b2e8a">   22</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classBird.html#ae349b0c3de095131a88820721e6b2e8a">rotation</a> = 0;            </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classBird.html#a1eadac7dc7f612629365ac3a56ddd632">   23</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classBird.html#a1eadac7dc7f612629365ac3a56ddd632">valueB</a> = 0;              </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classBird.html#af66a92669f202a7b99aeaf07a83321c0">   24</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classBird.html#af66a92669f202a7b99aeaf07a83321c0">contB</a> = <a class="code" href="defines_8hpp.html#acec13f2cbd31bef90e1cbe72f1bf8d54">TIME_GIF_BIRD</a>;   </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classBird.html#a9c57c5b1e3d9b4bdf6c3b3606488a962">   25</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classBird.html#a9c57c5b1e3d9b4bdf6c3b3606488a962">frames</a> = 0;              </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classBird.html#a000a1994dc84399164995071069e7b20">   26</a></span>&#160;  ALLEGRO_BITMAP* <a class="code" href="classBird.html#a000a1994dc84399164995071069e7b20">frame1</a>;        </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classBird.html#ae274e8a97e1bd2b2caaf2159475667b1">   27</a></span>&#160;  ALLEGRO_BITMAP* <a class="code" href="classBird.html#ae274e8a97e1bd2b2caaf2159475667b1">frame2</a>;        </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classBird.html#ae0fffb275d3ddee41fad2f086be8950e">   28</a></span>&#160;  ALLEGRO_BITMAP* <a class="code" href="classBird.html#ae0fffb275d3ddee41fad2f086be8950e">frame3</a>;        </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classBird.html#a8b147834e38f950f76fb74b76a306701">   29</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classBird.html#a8b147834e38f950f76fb74b76a306701">breakanimation</a> = <span class="keyword">false</span>;   </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classBird.html#a896b0a544f439f1b43b171c0665832ea">   40</a></span>&#160;  <a class="code" href="classBird.html#a896b0a544f439f1b43b171c0665832ea">Bird</a>(ALLEGRO_BITMAP* img, <span class="keywordtype">float</span> <a class="code" href="classGameObject.html#ad4976cd29785cf9bd791148ff397c41e">x</a>, <span class="keywordtype">float</span> <a class="code" href="classGameObject.html#a9ac54f1c686ecf5656139a829ed62041">y</a>, ALLEGRO_BITMAP* img2,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;       ALLEGRO_BITMAP* img3)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      : <a class="code" href="classGameObject.html">GameObject</a>(img, <a class="code" href="classGameObject.html#ad4976cd29785cf9bd791148ff397c41e">x</a>, <a class="code" href="classGameObject.html#a9ac54f1c686ecf5656139a829ed62041">y</a>, al_get_bitmap_width(img),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                   al_get_bitmap_height(img)),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classBird.html#ae8e3c99286c697b4d1fb46b5a1cdb0d4">gravity</a>(<a class="code" href="defines_8hpp.html#a6801baa546c6112d19eb095111d24720">GRAVITY</a>),</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <a class="code" href="classBird.html#acac9c8e88e1a92ca06440987794dcc62">jumpForce</a>(<a class="code" href="defines_8hpp.html#ab8d0cabcc33a510ffa8cfadde6cd9ded">JUMP_FORCE</a>),</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="classBird.html#a000a1994dc84399164995071069e7b20">frame1</a>(img),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classBird.html#ae274e8a97e1bd2b2caaf2159475667b1">frame2</a>(img2),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <a class="code" href="classBird.html#ae0fffb275d3ddee41fad2f086be8950e">frame3</a>(img3) {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classBird.html#a31a45a161b401b28dc815d4a788a01e6">   52</a></span>&#160;  <a class="code" href="classBird.html#a31a45a161b401b28dc815d4a788a01e6">~Bird</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#ae2718aad2ef1de73e399482ab6068324">update</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#a7f672f464d181f24f03301f1713d23dc">draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#aaf8f7cdda8f072ee9d2643da8dc71ad6">jump</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#a2d551d652ad508b6ba3e5702a0bdb34d">loop_animation</a>(<span class="keywordtype">int</span> type);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classBird.html#a5b63706c73ef35ac37a8c01495abf4e3">check_bird_collision</a>(<span class="keyword">const</span> <a class="code" href="classGameObject.html">GameObject</a>&amp; other) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#a448b7fded4142e63b27c306b5a17e513">destroy_bitmaps</a>();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#af260e4528dadc8849a349b1221d41160">set_by</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#a567645317bcf90078d9cad97cadfc1ec">set_break</a>(<span class="keywordtype">bool</span> value);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classBird.html#a36a1dad86634842ebd97e869a2732aaf">reset_xy</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;};</div>
+<div class="ttc" id="aclassBird_html"><div class="ttname"><a href="classBird.html">Bird</a></div><div class="ttdoc">Personagem controlável: gerencia movimento, animação de asas, pulo e detecção de colisões.</div><div class="ttdef"><b>Definition:</b> bird.hpp:17</div></div>
+<div class="ttc" id="aclassBird_html_a000a1994dc84399164995071069e7b20"><div class="ttname"><a href="classBird.html#a000a1994dc84399164995071069e7b20">Bird::frame1</a></div><div class="ttdeci">ALLEGRO_BITMAP * frame1</div><div class="ttdoc">sprite asa para cima</div><div class="ttdef"><b>Definition:</b> bird.hpp:26</div></div>
+<div class="ttc" id="aclassBird_html_a1eadac7dc7f612629365ac3a56ddd632"><div class="ttname"><a href="classBird.html#a1eadac7dc7f612629365ac3a56ddd632">Bird::valueB</a></div><div class="ttdeci">float valueB</div><div class="ttdoc">indice da animacao</div><div class="ttdef"><b>Definition:</b> bird.hpp:23</div></div>
+<div class="ttc" id="aclassBird_html_a2d551d652ad508b6ba3e5702a0bdb34d"><div class="ttname"><a href="classBird.html#a2d551d652ad508b6ba3e5702a0bdb34d">Bird::loop_animation</a></div><div class="ttdeci">void loop_animation(int type)</div><div class="ttdoc">Gera animacao de bater de asas.</div><div class="ttdef"><b>Definition:</b> bird.cpp:56</div></div>
+<div class="ttc" id="aclassBird_html_a31a45a161b401b28dc815d4a788a01e6"><div class="ttname"><a href="classBird.html#a31a45a161b401b28dc815d4a788a01e6">Bird::~Bird</a></div><div class="ttdeci">~Bird()=default</div><div class="ttdoc">Destrutor padrao.</div></div>
+<div class="ttc" id="aclassBird_html_a36a1dad86634842ebd97e869a2732aaf"><div class="ttname"><a href="classBird.html#a36a1dad86634842ebd97e869a2732aaf">Bird::reset_xy</a></div><div class="ttdeci">void reset_xy()</div><div class="ttdoc">Reseta posicao inicial e velocidade.</div><div class="ttdef"><b>Definition:</b> bird.cpp:181</div></div>
+<div class="ttc" id="aclassBird_html_a448b7fded4142e63b27c306b5a17e513"><div class="ttname"><a href="classBird.html#a448b7fded4142e63b27c306b5a17e513">Bird::destroy_bitmaps</a></div><div class="ttdeci">void destroy_bitmaps()</div><div class="ttdoc">Libera bitmap principal (quando necessario).</div><div class="ttdef"><b>Definition:</b> bird.cpp:156</div></div>
+<div class="ttc" id="aclassBird_html_a567645317bcf90078d9cad97cadfc1ec"><div class="ttname"><a href="classBird.html#a567645317bcf90078d9cad97cadfc1ec">Bird::set_break</a></div><div class="ttdeci">void set_break(bool value)</div><div class="ttdoc">Habilita/desabilita animacao apos colisao.</div><div class="ttdef"><b>Definition:</b> bird.cpp:173</div></div>
+<div class="ttc" id="aclassBird_html_a5b63706c73ef35ac37a8c01495abf4e3"><div class="ttname"><a href="classBird.html#a5b63706c73ef35ac37a8c01495abf4e3">Bird::check_bird_collision</a></div><div class="ttdeci">bool check_bird_collision(const GameObject &amp;other) const</div><div class="ttdoc">Verifica colisao com outro GameObject.</div><div class="ttdef"><b>Definition:</b> bird.cpp:189</div></div>
+<div class="ttc" id="aclassBird_html_a7f672f464d181f24f03301f1713d23dc"><div class="ttname"><a href="classBird.html#a7f672f464d181f24f03301f1713d23dc">Bird::draw</a></div><div class="ttdeci">void draw() override</div><div class="ttdoc">Desenha sprite atual com rotacao.</div><div class="ttdef"><b>Definition:</b> bird.cpp:27</div></div>
+<div class="ttc" id="aclassBird_html_a896b0a544f439f1b43b171c0665832ea"><div class="ttname"><a href="classBird.html#a896b0a544f439f1b43b171c0665832ea">Bird::Bird</a></div><div class="ttdeci">Bird(ALLEGRO_BITMAP *img, float x, float y, ALLEGRO_BITMAP *img2, ALLEGRO_BITMAP *img3)</div><div class="ttdoc">Construtor.</div><div class="ttdef"><b>Definition:</b> bird.hpp:40</div></div>
+<div class="ttc" id="aclassBird_html_a8b147834e38f950f76fb74b76a306701"><div class="ttname"><a href="classBird.html#a8b147834e38f950f76fb74b76a306701">Bird::breakanimation</a></div><div class="ttdeci">bool breakanimation</div><div class="ttdoc">pausa animacao (quando colide)</div><div class="ttdef"><b>Definition:</b> bird.hpp:29</div></div>
+<div class="ttc" id="aclassBird_html_a9c57c5b1e3d9b4bdf6c3b3606488a962"><div class="ttname"><a href="classBird.html#a9c57c5b1e3d9b4bdf6c3b3606488a962">Bird::frames</a></div><div class="ttdeci">float frames</div><div class="ttdoc">contador de frames</div><div class="ttdef"><b>Definition:</b> bird.hpp:25</div></div>
+<div class="ttc" id="aclassBird_html_aaf8f7cdda8f072ee9d2643da8dc71ad6"><div class="ttname"><a href="classBird.html#aaf8f7cdda8f072ee9d2643da8dc71ad6">Bird::jump</a></div><div class="ttdeci">void jump()</div><div class="ttdoc">Aplica impulso de pulo.</div><div class="ttdef"><b>Definition:</b> bird.cpp:147</div></div>
+<div class="ttc" id="aclassBird_html_acac9c8e88e1a92ca06440987794dcc62"><div class="ttname"><a href="classBird.html#acac9c8e88e1a92ca06440987794dcc62">Bird::jumpForce</a></div><div class="ttdeci">float jumpForce</div><div class="ttdoc">impulso vertical ao pular</div><div class="ttdef"><b>Definition:</b> bird.hpp:20</div></div>
+<div class="ttc" id="aclassBird_html_ad9ff3a9c1d413787563e16075ed9b571"><div class="ttname"><a href="classBird.html#ad9ff3a9c1d413787563e16075ed9b571">Bird::vy</a></div><div class="ttdeci">float vy</div><div class="ttdoc">velocidade vertical</div><div class="ttdef"><b>Definition:</b> bird.hpp:21</div></div>
+<div class="ttc" id="aclassBird_html_ae0fffb275d3ddee41fad2f086be8950e"><div class="ttname"><a href="classBird.html#ae0fffb275d3ddee41fad2f086be8950e">Bird::frame3</a></div><div class="ttdeci">ALLEGRO_BITMAP * frame3</div><div class="ttdoc">sprite asa para baixo</div><div class="ttdef"><b>Definition:</b> bird.hpp:28</div></div>
+<div class="ttc" id="aclassBird_html_ae2718aad2ef1de73e399482ab6068324"><div class="ttname"><a href="classBird.html#ae2718aad2ef1de73e399482ab6068324">Bird::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Atualiza fisica e posicao.</div><div class="ttdef"><b>Definition:</b> bird.cpp:8</div></div>
+<div class="ttc" id="aclassBird_html_ae274e8a97e1bd2b2caaf2159475667b1"><div class="ttname"><a href="classBird.html#ae274e8a97e1bd2b2caaf2159475667b1">Bird::frame2</a></div><div class="ttdeci">ALLEGRO_BITMAP * frame2</div><div class="ttdoc">sprite asa meio</div><div class="ttdef"><b>Definition:</b> bird.hpp:27</div></div>
+<div class="ttc" id="aclassBird_html_ae349b0c3de095131a88820721e6b2e8a"><div class="ttname"><a href="classBird.html#ae349b0c3de095131a88820721e6b2e8a">Bird::rotation</a></div><div class="ttdeci">float rotation</div><div class="ttdoc">angulo de rotacao a desenhar</div><div class="ttdef"><b>Definition:</b> bird.hpp:22</div></div>
+<div class="ttc" id="aclassBird_html_ae8e3c99286c697b4d1fb46b5a1cdb0d4"><div class="ttname"><a href="classBird.html#ae8e3c99286c697b4d1fb46b5a1cdb0d4">Bird::gravity</a></div><div class="ttdeci">float gravity</div><div class="ttdoc">aceleracao gravitacional</div><div class="ttdef"><b>Definition:</b> bird.hpp:19</div></div>
+<div class="ttc" id="aclassBird_html_af260e4528dadc8849a349b1221d41160"><div class="ttname"><a href="classBird.html#af260e4528dadc8849a349b1221d41160">Bird::set_by</a></div><div class="ttdeci">void set_by()</div><div class="ttdoc">Atualiza coordenada by (usada na HUD ou limites).</div><div class="ttdef"><b>Definition:</b> bird.cpp:166</div></div>
+<div class="ttc" id="aclassBird_html_af66a92669f202a7b99aeaf07a83321c0"><div class="ttname"><a href="classBird.html#af66a92669f202a7b99aeaf07a83321c0">Bird::contB</a></div><div class="ttdeci">float contB</div><div class="ttdoc">limite de frames por ciclo</div><div class="ttdef"><b>Definition:</b> bird.hpp:24</div></div>
+<div class="ttc" id="aclassGameObject_html"><div class="ttname"><a href="classGameObject.html">GameObject</a></div><div class="ttdoc">Objeto genérico do jogo contendo posição, sprite e hitbox.</div><div class="ttdef"><b>Definition:</b> game_object.hpp:14</div></div>
+<div class="ttc" id="aclassGameObject_html_a9ac54f1c686ecf5656139a829ed62041"><div class="ttname"><a href="classGameObject.html#a9ac54f1c686ecf5656139a829ed62041">GameObject::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> game_object.hpp:17</div></div>
+<div class="ttc" id="aclassGameObject_html_ad4976cd29785cf9bd791148ff397c41e"><div class="ttname"><a href="classGameObject.html#ad4976cd29785cf9bd791148ff397c41e">GameObject::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> game_object.hpp:17</div></div>
+<div class="ttc" id="adefines_8hpp_html"><div class="ttname"><a href="defines_8hpp.html">defines.hpp</a></div><div class="ttdoc">Constantes globais, macros e estruturas auxiliares do jogo.</div></div>
+<div class="ttc" id="adefines_8hpp_html_a6801baa546c6112d19eb095111d24720"><div class="ttname"><a href="defines_8hpp.html#a6801baa546c6112d19eb095111d24720">GRAVITY</a></div><div class="ttdeci">#define GRAVITY</div><div class="ttdef"><b>Definition:</b> defines.hpp:46</div></div>
+<div class="ttc" id="adefines_8hpp_html_ab8d0cabcc33a510ffa8cfadde6cd9ded"><div class="ttname"><a href="defines_8hpp.html#ab8d0cabcc33a510ffa8cfadde6cd9ded">JUMP_FORCE</a></div><div class="ttdeci">#define JUMP_FORCE</div><div class="ttdef"><b>Definition:</b> defines.hpp:43</div></div>
+<div class="ttc" id="adefines_8hpp_html_acec13f2cbd31bef90e1cbe72f1bf8d54"><div class="ttname"><a href="defines_8hpp.html#acec13f2cbd31bef90e1cbe72f1bf8d54">TIME_GIF_BIRD</a></div><div class="ttdeci">#define TIME_GIF_BIRD</div><div class="ttdef"><b>Definition:</b> defines.hpp:65</div></div>
+<div class="ttc" id="agame__object_8hpp_html"><div class="ttname"><a href="game__object_8hpp.html">game_object.hpp</a></div><div class="ttdoc">Classe base abstrata para todos os objetos renderizáveis.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

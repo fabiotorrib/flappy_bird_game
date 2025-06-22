@@ -1,0 +1,4 @@
+<map id="Bird" name="Bird">
+<area shape="rect" id="node1" title="Personagem controlável: gerencia movimento, animação de asas, pulo e detecção de colisões." alt="" coords="33,80,81,107"/>
+<area shape="rect" id="node2" href="$classGameObject.html" title="Objeto genérico do jogo contendo posição, sprite e hitbox." alt="" coords="5,5,108,32"/>
+</map>

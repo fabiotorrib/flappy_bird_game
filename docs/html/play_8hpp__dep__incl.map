@@ -1,0 +1,6 @@
+<map id="include/states/play.hpp" name="include/states/play.hpp">
+<area shape="rect" id="node1" title="Declaracao da classe Play, responsavel pelo estado de jogo ativo." alt="" coords="221,5,391,32"/>
+<area shape="rect" id="node2" href="$allegro__interface_8cpp.html" title="Implementação do controlador principal que integra Allegro às lógicas de estado do jogo." alt="" coords="5,80,188,107"/>
+<area shape="rect" id="node3" href="$load__game_8cpp.html" title="Implementação da classe LoadName, responsável pela tela de inserção de nome do jogador." alt="" coords="212,80,400,107"/>
+<area shape="rect" id="node4" href="$play_8cpp.html" title="Implementacao da classe Play." alt="" coords="424,80,567,107"/>
+</map>

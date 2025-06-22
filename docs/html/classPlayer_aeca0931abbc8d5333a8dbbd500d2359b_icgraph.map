@@ -1,0 +1,4 @@
+<map id="Player::CheckingName" name="Player::CheckingName">
+<area shape="rect" id="node1" title="Verifica se um nome já existe no ranking." alt="" coords="237,5,408,32"/>
+<area shape="rect" id="node2" href="$classLoadName.html#a5ce4fb95dd055fc1530a548149a15cda" title="Gerencia toda a entrada de teclado do usuário." alt="" coords="5,5,189,32"/>
+</map>

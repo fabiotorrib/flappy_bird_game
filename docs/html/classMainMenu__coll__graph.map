@@ -1,0 +1,4 @@
+<map id="MainMenu" name="MainMenu">
+<area shape="rect" id="node1" title="Tela inicial do jogo, centraliza navegação para demais estados." alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node2" href="$classState.html" title="Define a interface que cada tela/estado deve implementar." alt="" coords="23,5,79,32"/>
+</map>

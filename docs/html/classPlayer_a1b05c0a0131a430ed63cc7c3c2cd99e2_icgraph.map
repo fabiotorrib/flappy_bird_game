@@ -1,0 +1,5 @@
+<map id="Player::SaveLeaderboard" name="Player::SaveLeaderboard">
+<area shape="rect" id="node1" title="Salva lista de jogadores no arquivo, sobrescrevendo conteúdo." alt="" coords="273,35,457,61"/>
+<area shape="rect" id="node2" href="$classLoadName.html#a5ce4fb95dd055fc1530a548149a15cda" title="Gerencia toda a entrada de teclado do usuário." alt="" coords="23,5,207,32"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#a5e5b5440c5ddd780e8011536f28058b5" title="Salva pontuacao no leaderboard externo." alt="" coords="5,57,225,98"/>
+</map>

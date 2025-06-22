@@ -1,0 +1,4 @@
+<map id="PipeList::check_collision" name="PipeList::check_collision">
+<area shape="rect" id="node1" title="Check bird collision against any pipe." alt="" coords="260,5,440,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a229cec49a07214226a449da13eb90f9d" title="Verifica colisao entre passaro, limites ou canos." alt="" coords="5,5,212,32"/>
+</map>

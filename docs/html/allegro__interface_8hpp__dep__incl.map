@@ -1,0 +1,5 @@
+<map id="include/allegro_interface.hpp" name="include/allegro_interface.hpp">
+<area shape="rect" id="node1" title="Declara o controlador que integra Allegro e a máquina de estados." alt="" coords="75,5,286,32"/>
+<area shape="rect" id="node2" href="$allegro__interface_8cpp.html" title="Implementação do controlador principal que integra Allegro às lógicas de estado do jogo." alt="" coords="5,80,188,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="Ponto de entrada do jogo Flappy Bird." alt="" coords="212,80,317,107"/>
+</map>

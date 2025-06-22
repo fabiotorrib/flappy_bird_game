@@ -1,0 +1,5 @@
+<map id="include/states/leaderboard_menu.hpp" name="include/states/leaderboard_menu.hpp">
+<area shape="rect" id="node1" title="Definição da classe LeaderboardMenu, que representa o estado da tela de ranking." alt="" coords="93,5,287,47"/>
+<area shape="rect" id="node2" href="$leaderboard__menu_8cpp.html" title="Implementação da classe LeaderboardMenu, responsável por exibir a tela de ranking." alt="" coords="5,95,172,136"/>
+<area shape="rect" id="node3" href="$main__menu_8cpp.html" title="Implementação da classe MainMenu, o estado principal e tela inicial do jogo." alt="" coords="196,102,389,129"/>
+</map>

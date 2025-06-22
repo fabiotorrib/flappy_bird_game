@@ -1,0 +1,223 @@
+\hypertarget{defines_8hpp}{}\doxysection{Referência do Arquivo include/defines.hpp}
+\label{defines_8hpp}\index{include/defines.hpp@{include/defines.hpp}}
+
+
+Constantes globais, macros e estruturas auxiliares do jogo.  
+
+
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+Gráfico de dependência de inclusões para defines.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=255pt]{defines_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{defines_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structButton}{Button}}
+\begin{DoxyCompactList}\small\item\em Estrutura auxiliar que representa um botão de menu e seu estado de seleção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Definições e Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a27cddfd509d28b4b2b0b44c093fac090}{SCREEN\+\_\+H}}~720
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a9b6bc9242882d1e758e06ed751a2e8ec}{SCREEN\+\_\+W}}~1280
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}}~60.\+0
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a975fc9874a52790d9a5ca6d4e6a228ce}{MAX\+\_\+\+INPUT\+\_\+\+LENGTH}}~33
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_ab8d0cabcc33a510ffa8cfadde6cd9ded}{JUMP\+\_\+\+FORCE}}~-\/15.\+0
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a6801baa546c6112d19eb095111d24720}{GRAVITY}}~1.\+0
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_aa71a3e5090454222acb73a5292d592a8}{ROTATION}}~0.\+05
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a7b9d648b74be095668a2dd56756b6d26}{X\+\_\+\+INIT}}~350
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a519edbabfb0b0953e9ebd8484b228576}{GAP\+\_\+\+SIZE}}~250
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_aaad1d131bded5c3da337b4d278eed9b8}{GAP\+\_\+X}}~300
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a61bb83ae7ac749d511a737a1eb72108f}{BIRD\+\_\+\+VEL}}~3
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a0d676224ec1857dc51cb4e1601ff8102}{PIPE\+\_\+\+SPEED}}~5.\+5
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_af9e54e7748df2f04562d793108d4de52}{PIPE\+\_\+\+VERTICAL\+\_\+\+SPEED}}~1.\+5
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a0ab754bbedd8cfb76254f00ecc643c31}{OSCILATION}}~3.\+0
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_acec13f2cbd31bef90e1cbe72f1bf8d54}{TIME\+\_\+\+GIF\+\_\+\+BIRD}}~8
+\item 
+\#define \mbox{\hyperlink{defines_8hpp_a574f9185dfc11586bf83cfdbf6b7e7dc}{TETO\+\_\+\+BIRD}}~0.\+368
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9b}{Screen\+State}} \{ \mbox{\hyperlink{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba0352906d1ea1dfcd663c918f3a86755b}{PLAY}}
+, \mbox{\hyperlink{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba56b36d0d0bb01b339cf1041adc08e262}{PAUSE}}
+, \mbox{\hyperlink{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba871723195985a4ae22d7e10d99bf8a00}{GAME\+\_\+\+OVER}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+const float \mbox{\hyperlink{defines_8hpp_a58e26021995be15b60291565a59ecf8b}{MAX\+\_\+\+ROTATION\+\_\+\+UP}} = -\/M\+\_\+\+PI / 6.\+0f
+\item 
+const float \mbox{\hyperlink{defines_8hpp_ada0ffdb6d76c8a00f4e518e551e25e04}{MAX\+\_\+\+ROTATION\+\_\+\+DOWN}} = M\+\_\+\+PI / 6.\+0f
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Constantes globais, macros e estruturas auxiliares do jogo. 
+
+Contém dimensões de tela, física do pássaro, velocidades, gaps dos canos e outros valores compartilhados entre módulos. 
+
+\doxysubsection{Definições e macros}
+\mbox{\Hypertarget{defines_8hpp_a61bb83ae7ac749d511a737a1eb72108f}\label{defines_8hpp_a61bb83ae7ac749d511a737a1eb72108f}} 
+\index{defines.hpp@{defines.hpp}!BIRD\_VEL@{BIRD\_VEL}}
+\index{BIRD\_VEL@{BIRD\_VEL}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{BIRD\_VEL}{BIRD\_VEL}}
+{\footnotesize\ttfamily \#define BIRD\+\_\+\+VEL~3}
+
+\mbox{\Hypertarget{defines_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}\label{defines_8hpp_ac92ca5ab87034a348decad7ee8d4bd1b}} 
+\index{defines.hpp@{defines.hpp}!FPS@{FPS}}
+\index{FPS@{FPS}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily \#define FPS~60.\+0}
+
+\mbox{\Hypertarget{defines_8hpp_a519edbabfb0b0953e9ebd8484b228576}\label{defines_8hpp_a519edbabfb0b0953e9ebd8484b228576}} 
+\index{defines.hpp@{defines.hpp}!GAP\_SIZE@{GAP\_SIZE}}
+\index{GAP\_SIZE@{GAP\_SIZE}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{GAP\_SIZE}{GAP\_SIZE}}
+{\footnotesize\ttfamily \#define GAP\+\_\+\+SIZE~250}
+
+\mbox{\Hypertarget{defines_8hpp_aaad1d131bded5c3da337b4d278eed9b8}\label{defines_8hpp_aaad1d131bded5c3da337b4d278eed9b8}} 
+\index{defines.hpp@{defines.hpp}!GAP\_X@{GAP\_X}}
+\index{GAP\_X@{GAP\_X}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{GAP\_X}{GAP\_X}}
+{\footnotesize\ttfamily \#define GAP\+\_\+X~300}
+
+\mbox{\Hypertarget{defines_8hpp_a6801baa546c6112d19eb095111d24720}\label{defines_8hpp_a6801baa546c6112d19eb095111d24720}} 
+\index{defines.hpp@{defines.hpp}!GRAVITY@{GRAVITY}}
+\index{GRAVITY@{GRAVITY}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{GRAVITY}{GRAVITY}}
+{\footnotesize\ttfamily \#define GRAVITY~1.\+0}
+
+\mbox{\Hypertarget{defines_8hpp_ab8d0cabcc33a510ffa8cfadde6cd9ded}\label{defines_8hpp_ab8d0cabcc33a510ffa8cfadde6cd9ded}} 
+\index{defines.hpp@{defines.hpp}!JUMP\_FORCE@{JUMP\_FORCE}}
+\index{JUMP\_FORCE@{JUMP\_FORCE}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{JUMP\_FORCE}{JUMP\_FORCE}}
+{\footnotesize\ttfamily \#define JUMP\+\_\+\+FORCE~-\/15.\+0}
+
+\mbox{\Hypertarget{defines_8hpp_a975fc9874a52790d9a5ca6d4e6a228ce}\label{defines_8hpp_a975fc9874a52790d9a5ca6d4e6a228ce}} 
+\index{defines.hpp@{defines.hpp}!MAX\_INPUT\_LENGTH@{MAX\_INPUT\_LENGTH}}
+\index{MAX\_INPUT\_LENGTH@{MAX\_INPUT\_LENGTH}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_INPUT\_LENGTH}{MAX\_INPUT\_LENGTH}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+INPUT\+\_\+\+LENGTH~33}
+
+\mbox{\Hypertarget{defines_8hpp_a0ab754bbedd8cfb76254f00ecc643c31}\label{defines_8hpp_a0ab754bbedd8cfb76254f00ecc643c31}} 
+\index{defines.hpp@{defines.hpp}!OSCILATION@{OSCILATION}}
+\index{OSCILATION@{OSCILATION}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{OSCILATION}{OSCILATION}}
+{\footnotesize\ttfamily \#define OSCILATION~3.\+0}
+
+\mbox{\Hypertarget{defines_8hpp_a0d676224ec1857dc51cb4e1601ff8102}\label{defines_8hpp_a0d676224ec1857dc51cb4e1601ff8102}} 
+\index{defines.hpp@{defines.hpp}!PIPE\_SPEED@{PIPE\_SPEED}}
+\index{PIPE\_SPEED@{PIPE\_SPEED}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{PIPE\_SPEED}{PIPE\_SPEED}}
+{\footnotesize\ttfamily \#define PIPE\+\_\+\+SPEED~5.\+5}
+
+\mbox{\Hypertarget{defines_8hpp_af9e54e7748df2f04562d793108d4de52}\label{defines_8hpp_af9e54e7748df2f04562d793108d4de52}} 
+\index{defines.hpp@{defines.hpp}!PIPE\_VERTICAL\_SPEED@{PIPE\_VERTICAL\_SPEED}}
+\index{PIPE\_VERTICAL\_SPEED@{PIPE\_VERTICAL\_SPEED}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{PIPE\_VERTICAL\_SPEED}{PIPE\_VERTICAL\_SPEED}}
+{\footnotesize\ttfamily \#define PIPE\+\_\+\+VERTICAL\+\_\+\+SPEED~1.\+5}
+
+\mbox{\Hypertarget{defines_8hpp_aa71a3e5090454222acb73a5292d592a8}\label{defines_8hpp_aa71a3e5090454222acb73a5292d592a8}} 
+\index{defines.hpp@{defines.hpp}!ROTATION@{ROTATION}}
+\index{ROTATION@{ROTATION}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{ROTATION}{ROTATION}}
+{\footnotesize\ttfamily \#define ROTATION~0.\+05}
+
+\mbox{\Hypertarget{defines_8hpp_a27cddfd509d28b4b2b0b44c093fac090}\label{defines_8hpp_a27cddfd509d28b4b2b0b44c093fac090}} 
+\index{defines.hpp@{defines.hpp}!SCREEN\_H@{SCREEN\_H}}
+\index{SCREEN\_H@{SCREEN\_H}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_H}{SCREEN\_H}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+H~720}
+
+\mbox{\Hypertarget{defines_8hpp_a9b6bc9242882d1e758e06ed751a2e8ec}\label{defines_8hpp_a9b6bc9242882d1e758e06ed751a2e8ec}} 
+\index{defines.hpp@{defines.hpp}!SCREEN\_W@{SCREEN\_W}}
+\index{SCREEN\_W@{SCREEN\_W}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{SCREEN\_W}{SCREEN\_W}}
+{\footnotesize\ttfamily \#define SCREEN\+\_\+W~1280}
+
+\mbox{\Hypertarget{defines_8hpp_a574f9185dfc11586bf83cfdbf6b7e7dc}\label{defines_8hpp_a574f9185dfc11586bf83cfdbf6b7e7dc}} 
+\index{defines.hpp@{defines.hpp}!TETO\_BIRD@{TETO\_BIRD}}
+\index{TETO\_BIRD@{TETO\_BIRD}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{TETO\_BIRD}{TETO\_BIRD}}
+{\footnotesize\ttfamily \#define TETO\+\_\+\+BIRD~0.\+368}
+
+\mbox{\Hypertarget{defines_8hpp_acec13f2cbd31bef90e1cbe72f1bf8d54}\label{defines_8hpp_acec13f2cbd31bef90e1cbe72f1bf8d54}} 
+\index{defines.hpp@{defines.hpp}!TIME\_GIF\_BIRD@{TIME\_GIF\_BIRD}}
+\index{TIME\_GIF\_BIRD@{TIME\_GIF\_BIRD}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{TIME\_GIF\_BIRD}{TIME\_GIF\_BIRD}}
+{\footnotesize\ttfamily \#define TIME\+\_\+\+GIF\+\_\+\+BIRD~8}
+
+\mbox{\Hypertarget{defines_8hpp_a7b9d648b74be095668a2dd56756b6d26}\label{defines_8hpp_a7b9d648b74be095668a2dd56756b6d26}} 
+\index{defines.hpp@{defines.hpp}!X\_INIT@{X\_INIT}}
+\index{X\_INIT@{X\_INIT}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{X\_INIT}{X\_INIT}}
+{\footnotesize\ttfamily \#define X\+\_\+\+INIT~350}
+
+
+
+\doxysubsection{Enumerações}
+\mbox{\Hypertarget{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9b}\label{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9b}} 
+\index{defines.hpp@{defines.hpp}!ScreenState@{ScreenState}}
+\index{ScreenState@{ScreenState}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{ScreenState}{ScreenState}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9b}{Screen\+State}}}
+
+\begin{DoxyEnumFields}{Enumeradores}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAY@{PLAY}!defines.hpp@{defines.hpp}}\index{defines.hpp@{defines.hpp}!PLAY@{PLAY}}}\mbox{\Hypertarget{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba0352906d1ea1dfcd663c918f3a86755b}\label{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba0352906d1ea1dfcd663c918f3a86755b}} 
+PLAY&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PAUSE@{PAUSE}!defines.hpp@{defines.hpp}}\index{defines.hpp@{defines.hpp}!PAUSE@{PAUSE}}}\mbox{\Hypertarget{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba56b36d0d0bb01b339cf1041adc08e262}\label{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba56b36d0d0bb01b339cf1041adc08e262}} 
+PAUSE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GAME\_OVER@{GAME\_OVER}!defines.hpp@{defines.hpp}}\index{defines.hpp@{defines.hpp}!GAME\_OVER@{GAME\_OVER}}}\mbox{\Hypertarget{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba871723195985a4ae22d7e10d99bf8a00}\label{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9ba871723195985a4ae22d7e10d99bf8a00}} 
+GAME\+\_\+\+OVER&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{defines_8hpp_ada0ffdb6d76c8a00f4e518e551e25e04}\label{defines_8hpp_ada0ffdb6d76c8a00f4e518e551e25e04}} 
+\index{defines.hpp@{defines.hpp}!MAX\_ROTATION\_DOWN@{MAX\_ROTATION\_DOWN}}
+\index{MAX\_ROTATION\_DOWN@{MAX\_ROTATION\_DOWN}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_ROTATION\_DOWN}{MAX\_ROTATION\_DOWN}}
+{\footnotesize\ttfamily const float MAX\+\_\+\+ROTATION\+\_\+\+DOWN = M\+\_\+\+PI / 6.\+0f}
+
+\mbox{\Hypertarget{defines_8hpp_a58e26021995be15b60291565a59ecf8b}\label{defines_8hpp_a58e26021995be15b60291565a59ecf8b}} 
+\index{defines.hpp@{defines.hpp}!MAX\_ROTATION\_UP@{MAX\_ROTATION\_UP}}
+\index{MAX\_ROTATION\_UP@{MAX\_ROTATION\_UP}!defines.hpp@{defines.hpp}}
+\doxysubsubsection{\texorpdfstring{MAX\_ROTATION\_UP}{MAX\_ROTATION\_UP}}
+{\footnotesize\ttfamily const float MAX\+\_\+\+ROTATION\+\_\+\+UP = -\/M\+\_\+\+PI / 6.\+0f}
+

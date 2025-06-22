@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/player.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">player.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="player_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="init_8hpp.html">init.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classPlayer.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPlayer.html">Player</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classPlayer.html#af9c920fabaafdeb7961a645315b521ff">   16</a></span>&#160;  std::string <a class="code" href="classPlayer.html#af9c920fabaafdeb7961a645315b521ff">name</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classPlayer.html#ace6abae8d66534ad0a1fd6458f786a6e">   17</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classPlayer.html#ace6abae8d66534ad0a1fd6458f786a6e">score</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <a class="code" href="classPlayer.html#a1b1eb725b1cd830c7ccb0d03459044f2">Player</a>(std::string <a class="code" href="classPlayer.html#af9c920fabaafdeb7961a645315b521ff">name</a>, <span class="keywordtype">int</span> <a class="code" href="classPlayer.html#ace6abae8d66534ad0a1fd6458f786a6e">score</a> = 0);  <span class="comment">// construtor</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="comment">// getters e setters</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  std::string <a class="code" href="classPlayer.html#affddef50f994746a860e2366e412917f">GetName</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classPlayer.html#a777fb06bddf27e2810053843cb0cc6f9">GetScore</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#aef973d65cfb24e3e88d72585087232ae">SetScore</a>(<span class="keywordtype">int</span> points);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classPlayer.html#aeca0931abbc8d5333a8dbbd500d2359b">CheckingName</a>(std::vector&lt;Player&gt;&amp; <a class="code" href="init_8hpp.html#ab54dcbf6721b2315ef1e65ed98ee9863">ranking</a>, std::string&amp; Name);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">static</span> std::vector&lt;Player&gt; <a class="code" href="classPlayer.html#aef5308fd57957507968e971d23ac3fe6">ReadLeaderboard</a>(std::string file_name);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a821a6a7bbfeeabc956d063d24eb15889">SortLeaderboard</a>(std::vector&lt;Player&gt;&amp; <a class="code" href="init_8hpp.html#ab54dcbf6721b2315ef1e65ed98ee9863">ranking</a>);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a1b05c0a0131a430ed63cc7c3c2cd99e2">SaveLeaderboard</a>(std::string fileName,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                              std::vector&lt;Player&gt;&amp; <a class="code" href="init_8hpp.html#ab54dcbf6721b2315ef1e65ed98ee9863">ranking</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a1b05c0a0131a430ed63cc7c3c2cd99e2">SaveLeaderboard</a>(std::string fileName,</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                              std::vector&lt;Player&gt;&amp; <a class="code" href="init_8hpp.html#ab54dcbf6721b2315ef1e65ed98ee9863">ranking</a>,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                              <span class="keyword">const</span> <a class="code" href="classPlayer.html">Player</a>&amp; new_player);</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classPlayer.html#a96278c3915928482a7780112498f7444">   35</a></span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classPlayer.html#a96278c3915928482a7780112498f7444">ShowLeaderboard</a>(std::vector&lt;Player&gt;&amp; <a class="code" href="init_8hpp.html#ab54dcbf6721b2315ef1e65ed98ee9863">ranking</a>, ALLEGRO_FONT* <a class="code" href="init_8hpp.html#ae4254615de94af5fc74d43e8b676dcf9">font</a>);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classPlayer.html#a720e6e65bed8ef26a7e126e40612bd55">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classPlayer.html">Player</a>&amp; other_p) <span class="keyword">const</span>;  <span class="comment">// sobrecarga do operador &lt;</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;};</div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Armazena nome e pontuação e provê utilidades para ranking.</div><div class="ttdef"><b>Definition:</b> player.hpp:14</div></div>
+<div class="ttc" id="aclassPlayer_html_a1b05c0a0131a430ed63cc7c3c2cd99e2"><div class="ttname"><a href="classPlayer.html#a1b05c0a0131a430ed63cc7c3c2cd99e2">Player::SaveLeaderboard</a></div><div class="ttdeci">static void SaveLeaderboard(std::string fileName, std::vector&lt; Player &gt; &amp;ranking)</div><div class="ttdoc">Salva lista de jogadores no arquivo, sobrescrevendo conteúdo.</div><div class="ttdef"><b>Definition:</b> player.cpp:93</div></div>
+<div class="ttc" id="aclassPlayer_html_a1b1eb725b1cd830c7ccb0d03459044f2"><div class="ttname"><a href="classPlayer.html#a1b1eb725b1cd830c7ccb0d03459044f2">Player::Player</a></div><div class="ttdeci">Player(std::string name, int score=0)</div><div class="ttdoc">Constrói um jogador com nome e pontuação inicial.</div><div class="ttdef"><b>Definition:</b> player.cpp:15</div></div>
+<div class="ttc" id="aclassPlayer_html_a720e6e65bed8ef26a7e126e40612bd55"><div class="ttname"><a href="classPlayer.html#a720e6e65bed8ef26a7e126e40612bd55">Player::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const Player &amp;other_p) const</div><div class="ttdoc">Define critério de ordenação decrescente por pontuação.</div><div class="ttdef"><b>Definition:</b> player.cpp:54</div></div>
+<div class="ttc" id="aclassPlayer_html_a777fb06bddf27e2810053843cb0cc6f9"><div class="ttname"><a href="classPlayer.html#a777fb06bddf27e2810053843cb0cc6f9">Player::GetScore</a></div><div class="ttdeci">int GetScore() const</div><div class="ttdoc">Retorna a pontuação atual.</div><div class="ttdef"><b>Definition:</b> player.cpp:24</div></div>
+<div class="ttc" id="aclassPlayer_html_a821a6a7bbfeeabc956d063d24eb15889"><div class="ttname"><a href="classPlayer.html#a821a6a7bbfeeabc956d063d24eb15889">Player::SortLeaderboard</a></div><div class="ttdeci">static void SortLeaderboard(std::vector&lt; Player &gt; &amp;ranking)</div><div class="ttdoc">Ordena vetor de jogadores por pontuação decrescente.</div><div class="ttdef"><b>Definition:</b> player.cpp:139</div></div>
+<div class="ttc" id="aclassPlayer_html_a96278c3915928482a7780112498f7444"><div class="ttname"><a href="classPlayer.html#a96278c3915928482a7780112498f7444">Player::ShowLeaderboard</a></div><div class="ttdeci">static void ShowLeaderboard(std::vector&lt; Player &gt; &amp;ranking, ALLEGRO_FONT *font)</div></div>
+<div class="ttc" id="aclassPlayer_html_ace6abae8d66534ad0a1fd6458f786a6e"><div class="ttname"><a href="classPlayer.html#ace6abae8d66534ad0a1fd6458f786a6e">Player::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> player.hpp:17</div></div>
+<div class="ttc" id="aclassPlayer_html_aeca0931abbc8d5333a8dbbd500d2359b"><div class="ttname"><a href="classPlayer.html#aeca0931abbc8d5333a8dbbd500d2359b">Player::CheckingName</a></div><div class="ttdeci">static bool CheckingName(std::vector&lt; Player &gt; &amp;ranking, std::string &amp;Name)</div><div class="ttdoc">Verifica se um nome já existe no ranking.</div><div class="ttdef"><b>Definition:</b> player.cpp:42</div></div>
+<div class="ttc" id="aclassPlayer_html_aef5308fd57957507968e971d23ac3fe6"><div class="ttname"><a href="classPlayer.html#aef5308fd57957507968e971d23ac3fe6">Player::ReadLeaderboard</a></div><div class="ttdeci">static std::vector&lt; Player &gt; ReadLeaderboard(std::string file_name)</div><div class="ttdoc">Lê arquivo de ranking e retorna vetor de jogadores.</div><div class="ttdef"><b>Definition:</b> player.cpp:72</div></div>
+<div class="ttc" id="aclassPlayer_html_aef973d65cfb24e3e88d72585087232ae"><div class="ttname"><a href="classPlayer.html#aef973d65cfb24e3e88d72585087232ae">Player::SetScore</a></div><div class="ttdeci">void SetScore(int points)</div><div class="ttdoc">Atualiza (sobrescreve) a pontuação do jogador.</div><div class="ttdef"><b>Definition:</b> player.cpp:32</div></div>
+<div class="ttc" id="aclassPlayer_html_af9c920fabaafdeb7961a645315b521ff"><div class="ttname"><a href="classPlayer.html#af9c920fabaafdeb7961a645315b521ff">Player::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> player.hpp:16</div></div>
+<div class="ttc" id="aclassPlayer_html_affddef50f994746a860e2366e412917f"><div class="ttname"><a href="classPlayer.html#affddef50f994746a860e2366e412917f">Player::GetName</a></div><div class="ttdeci">std::string GetName() const</div><div class="ttdoc">Retorna o nome do jogador.</div><div class="ttdef"><b>Definition:</b> player.cpp:19</div></div>
+<div class="ttc" id="ainit_8hpp_html"><div class="ttname"><a href="init_8hpp.html">init.hpp</a></div><div class="ttdoc">Declara funções de inicialização e finalização do Allegro.</div></div>
+<div class="ttc" id="ainit_8hpp_html_ab54dcbf6721b2315ef1e65ed98ee9863"><div class="ttname"><a href="init_8hpp.html#ab54dcbf6721b2315ef1e65ed98ee9863">ranking</a></div><div class="ttdeci">std::vector&lt; Player &gt; ranking</div><div class="ttdef"><b>Definition:</b> init.cpp:16</div></div>
+<div class="ttc" id="ainit_8hpp_html_ae4254615de94af5fc74d43e8b676dcf9"><div class="ttname"><a href="init_8hpp.html#ae4254615de94af5fc74d43e8b676dcf9">font</a></div><div class="ttdeci">ALLEGRO_FONT * font</div><div class="ttdef"><b>Definition:</b> init.cpp:20</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

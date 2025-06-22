@@ -1,0 +1,661 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Referência da Classe PipeList</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pri-attribs">Atributos Privados</a> &#124;
+<a href="#pri-static-attribs">Atributos Privados Estáticos</a> &#124;
+<a href="classPipeList-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe PipeList</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Gerencia vetor de <a class="el" href="classPipePair.html" title="Agrupa dois canos (superior e inferior) podendo ter movimento vertical.">PipePair</a>: spawn, atualização, colisão e score.  
+ <a href="classPipeList.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pipe_8hpp_source.html">pipe.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:abbc695a85ae51b64290c2fab6ade36f6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#abbc695a85ae51b64290c2fab6ade36f6">PipeList</a> (ALLEGRO_BITMAP *img)</td></tr>
+<tr class="memdesc:abbc695a85ae51b64290c2fab6ade36f6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a list manager.  <a href="classPipeList.html#abbc695a85ae51b64290c2fab6ade36f6">Mais...</a><br /></td></tr>
+<tr class="separator:abbc695a85ae51b64290c2fab6ade36f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ba16ab542cc297017747954866e800a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a4ba16ab542cc297017747954866e800a">draw</a> ()</td></tr>
+<tr class="memdesc:a4ba16ab542cc297017747954866e800a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw every pipe pair.  <a href="classPipeList.html#a4ba16ab542cc297017747954866e800a">Mais...</a><br /></td></tr>
+<tr class="separator:a4ba16ab542cc297017747954866e800a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1c8417430dd4a796ccc25481c0c1139d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a1c8417430dd4a796ccc25481c0c1139d">set_vx</a> (float vel)</td></tr>
+<tr class="memdesc:a1c8417430dd4a796ccc25481c0c1139d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set uniform horizontal velocity for all pipes.  <a href="classPipeList.html#a1c8417430dd4a796ccc25481c0c1139d">Mais...</a><br /></td></tr>
+<tr class="separator:a1c8417430dd4a796ccc25481c0c1139d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8b071b9187819c0d3d38f22452d6db0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#ad8b071b9187819c0d3d38f22452d6db0">update</a> ()</td></tr>
+<tr class="memdesc:ad8b071b9187819c0d3d38f22452d6db0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update positions of all pipes and handle vertical motion.  <a href="classPipeList.html#ad8b071b9187819c0d3d38f22452d6db0">Mais...</a><br /></td></tr>
+<tr class="separator:ad8b071b9187819c0d3d38f22452d6db0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3fa0a58e8017e08d80a5b9cabbff7385"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a3fa0a58e8017e08d80a5b9cabbff7385">add_pipe_pair</a> ()</td></tr>
+<tr class="memdesc:a3fa0a58e8017e08d80a5b9cabbff7385"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawn a new pair if gap condition is satisfied.  <a href="classPipeList.html#a3fa0a58e8017e08d80a5b9cabbff7385">Mais...</a><br /></td></tr>
+<tr class="separator:a3fa0a58e8017e08d80a5b9cabbff7385"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab588b7f5e210c66b0cfe754550ca4f09"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#ab588b7f5e210c66b0cfe754550ca4f09">delete_pipe_pair</a> ()</td></tr>
+<tr class="memdesc:ab588b7f5e210c66b0cfe754550ca4f09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remove pipes that left the screen.  <a href="classPipeList.html#ab588b7f5e210c66b0cfe754550ca4f09">Mais...</a><br /></td></tr>
+<tr class="separator:ab588b7f5e210c66b0cfe754550ca4f09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a993d7ac941ceba1eff657032df7e8fd4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a993d7ac941ceba1eff657032df7e8fd4">check_collision</a> (<a class="el" href="classGameObject.html">GameObject</a> &amp;bird)</td></tr>
+<tr class="memdesc:a993d7ac941ceba1eff657032df7e8fd4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check bird collision against any pipe.  <a href="classPipeList.html#a993d7ac941ceba1eff657032df7e8fd4">Mais...</a><br /></td></tr>
+<tr class="separator:a993d7ac941ceba1eff657032df7e8fd4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a05148696dde39f9b1b3bdd3154b1a67f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a05148696dde39f9b1b3bdd3154b1a67f">check_score</a> (float bird_x)</td></tr>
+<tr class="memdesc:a05148696dde39f9b1b3bdd3154b1a67f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if any pipe pair increments the score.  <a href="classPipeList.html#a05148696dde39f9b1b3bdd3154b1a67f">Mais...</a><br /></td></tr>
+<tr class="separator:a05148696dde39f9b1b3bdd3154b1a67f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a9ef3aaee030f0ff01c21121c549a24"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a6a9ef3aaee030f0ff01c21121c549a24">set_start</a> ()</td></tr>
+<tr class="memdesc:a6a9ef3aaee030f0ff01c21121c549a24"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin spawning logic (first call after game starts).  <a href="classPipeList.html#a6a9ef3aaee030f0ff01c21121c549a24">Mais...</a><br /></td></tr>
+<tr class="separator:a6a9ef3aaee030f0ff01c21121c549a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1cb8ddd5cf7c71189070d14699a26b6a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a1cb8ddd5cf7c71189070d14699a26b6a">get_points</a> ()</td></tr>
+<tr class="memdesc:a1cb8ddd5cf7c71189070d14699a26b6a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get current score.  <a href="classPipeList.html#a1cb8ddd5cf7c71189070d14699a26b6a">Mais...</a><br /></td></tr>
+<tr class="separator:a1cb8ddd5cf7c71189070d14699a26b6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac50083f33c6f14425302c76ff6e17650"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#ac50083f33c6f14425302c76ff6e17650">set_difficulty</a> (int diff)</td></tr>
+<tr class="memdesc:ac50083f33c6f14425302c76ff6e17650"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configure difficulty (1 = static, 2 = vertical movers).  <a href="classPipeList.html#ac50083f33c6f14425302c76ff6e17650">Mais...</a><br /></td></tr>
+<tr class="separator:ac50083f33c6f14425302c76ff6e17650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ccd09dadff5cfd9419c88fece81921b"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; <a class="el" href="classPipePair.html">PipePair</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a8ccd09dadff5cfd9419c88fece81921b">get_pipe_pairs</a> () const</td></tr>
+<tr class="memdesc:a8ccd09dadff5cfd9419c88fece81921b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Expose internal pipe vector (read-only).  <a href="classPipeList.html#a8ccd09dadff5cfd9419c88fece81921b">Mais...</a><br /></td></tr>
+<tr class="separator:a8ccd09dadff5cfd9419c88fece81921b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a542ce3b33a138db92365d668fd9f6e28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a542ce3b33a138db92365d668fd9f6e28">reset</a> ()</td></tr>
+<tr class="memdesc:a542ce3b33a138db92365d668fd9f6e28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear list and reset all counters.  <a href="classPipeList.html#a542ce3b33a138db92365d668fd9f6e28">Mais...</a><br /></td></tr>
+<tr class="separator:a542ce3b33a138db92365d668fd9f6e28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
+Atributos Privados</h2></td></tr>
+<tr class="memitem:a9886322d7893389a5b9eca3e2f29098a"><td class="memItemLeft" align="right" valign="top">ALLEGRO_BITMAP *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a9886322d7893389a5b9eca3e2f29098a">pipe1</a> = nullptr</td></tr>
+<tr class="memdesc:a9886322d7893389a5b9eca3e2f29098a"><td class="mdescLeft">&#160;</td><td class="mdescRight">bitmap reference for new pipes  <a href="classPipeList.html#a9886322d7893389a5b9eca3e2f29098a">Mais...</a><br /></td></tr>
+<tr class="separator:a9886322d7893389a5b9eca3e2f29098a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a23f3e5354a9c54dab4f8b3224bade650"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classPipePair.html">PipePair</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a23f3e5354a9c54dab4f8b3224bade650">Pipes</a></td></tr>
+<tr class="memdesc:a23f3e5354a9c54dab4f8b3224bade650"><td class="mdescLeft">&#160;</td><td class="mdescRight">active pipe pairs  <a href="classPipeList.html#a23f3e5354a9c54dab4f8b3224bade650">Mais...</a><br /></td></tr>
+<tr class="separator:a23f3e5354a9c54dab4f8b3224bade650"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18914a6e11ee573fd454fd1f837f11eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a18914a6e11ee573fd454fd1f837f11eb">start</a> = false</td></tr>
+<tr class="memdesc:a18914a6e11ee573fd454fd1f837f11eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">true after first pipe is spawned  <a href="classPipeList.html#a18914a6e11ee573fd454fd1f837f11eb">Mais...</a><br /></td></tr>
+<tr class="separator:a18914a6e11ee573fd454fd1f837f11eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac78cdd7d49f7f5309dad86597c7192a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#aac78cdd7d49f7f5309dad86597c7192a">points</a> = 0</td></tr>
+<tr class="memdesc:aac78cdd7d49f7f5309dad86597c7192a"><td class="mdescLeft">&#160;</td><td class="mdescRight">current score  <a href="classPipeList.html#aac78cdd7d49f7f5309dad86597c7192a">Mais...</a><br /></td></tr>
+<tr class="separator:aac78cdd7d49f7f5309dad86597c7192a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4521887bd41e7cf2fd81d4cf33470141"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#a4521887bd41e7cf2fd81d4cf33470141">difficulty_pipe</a> = 1</td></tr>
+<tr class="memdesc:a4521887bd41e7cf2fd81d4cf33470141"><td class="mdescLeft">&#160;</td><td class="mdescRight">1 = static, 2 = with movers  <a href="classPipeList.html#a4521887bd41e7cf2fd81d4cf33470141">Mais...</a><br /></td></tr>
+<tr class="separator:a4521887bd41e7cf2fd81d4cf33470141"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-attribs"></a>
+Atributos Privados Estáticos</h2></td></tr>
+<tr class="memitem:affe044de57cc6fdf15adfbd89a92ce2e"><td class="memItemLeft" align="right" valign="top">static std::mt19937&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classPipeList.html#affe044de57cc6fdf15adfbd89a92ce2e">gen</a> {std::random_device{}()}</td></tr>
+<tr class="separator:affe044de57cc6fdf15adfbd89a92ce2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Gerencia vetor de <a class="el" href="classPipePair.html" title="Agrupa dois canos (superior e inferior) podendo ter movimento vertical.">PipePair</a>: spawn, atualização, colisão e score. </p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="abbc695a85ae51b64290c2fab6ade36f6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abbc695a85ae51b64290c2fab6ade36f6">&#9670;&nbsp;</a></span>PipeList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">PipeList::PipeList </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_BITMAP *&#160;</td>
+          <td class="paramname"><em>img</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Construct a list manager. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">img</td><td>Bitmap to use when spawning new pipe pairs. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a3fa0a58e8017e08d80a5b9cabbff7385"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3fa0a58e8017e08d80a5b9cabbff7385">&#9670;&nbsp;</a></span>add_pipe_pair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PipeList::add_pipe_pair </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Spawn a new pair if gap condition is satisfied. </p>
+<p>Spawna novo par de canos conforme distância do último. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a3fa0a58e8017e08d80a5b9cabbff7385_icgraph.svg" width="570" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a993d7ac941ceba1eff657032df7e8fd4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a993d7ac941ceba1eff657032df7e8fd4">&#9670;&nbsp;</a></span>check_collision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PipeList::check_collision </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classGameObject.html">GameObject</a> &amp;&#160;</td>
+          <td class="paramname"><em>bird</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check bird collision against any pipe. </p>
+<p>Verifica colisão do pássaro com qualquer cano ativo.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bird</td><td><a class="el" href="classPlayer.html" title="Armazena nome e pontuação e provê utilidades para ranking.">Player</a> object (as <a class="el" href="classGameObject.html" title="Objeto genérico do jogo contendo posição, sprite e hitbox.">GameObject</a>). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true if a collision is detected. </dd></dl>
+<div class="dynheader">
+Este é o diagrama das funções utilizadas por essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a993d7ac941ceba1eff657032df7e8fd4_cgraph.svg" width="420" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a993d7ac941ceba1eff657032df7e8fd4_icgraph.svg" width="446" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a05148696dde39f9b1b3bdd3154b1a67f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a05148696dde39f9b1b3bdd3154b1a67f">&#9670;&nbsp;</a></span>check_score()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PipeList::check_score </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>bird_x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if any pipe pair increments the score. </p>
+<p>Atualiza pontuação se o pássaro ultrapassar algum cano.</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">bird_x</td><td><a class="el" href="classBird.html" title="Personagem controlável: gerencia movimento, animação de asas, pulo e detecção de colisões.">Bird</a> x coordinate. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true if score increases. </dd></dl>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a05148696dde39f9b1b3bdd3154b1a67f_icgraph.svg" width="559" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ab588b7f5e210c66b0cfe754550ca4f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab588b7f5e210c66b0cfe754550ca4f09">&#9670;&nbsp;</a></span>delete_pipe_pair()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PipeList::delete_pipe_pair </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Remove pipes that left the screen. </p>
+<p>Remove canos que saíram da tela. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_ab588b7f5e210c66b0cfe754550ca4f09_icgraph.svg" width="587" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a4ba16ab542cc297017747954866e800a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ba16ab542cc297017747954866e800a">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PipeList::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Draw every pipe pair. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a4ba16ab542cc297017747954866e800a_icgraph.svg" width="304" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a8ccd09dadff5cfd9419c88fece81921b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ccd09dadff5cfd9419c88fece81921b">&#9670;&nbsp;</a></span>get_pipe_pairs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;<a class="el" href="classPipePair.html">PipePair</a>&gt;&amp; PipeList::get_pipe_pairs </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Expose internal pipe vector (read-only). </p>
+
+</div>
+</div>
+<a id="a1cb8ddd5cf7c71189070d14699a26b6a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1cb8ddd5cf7c71189070d14699a26b6a">&#9670;&nbsp;</a></span>get_points()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PipeList::get_points </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get current score. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a1cb8ddd5cf7c71189070d14699a26b6a_icgraph.svg" width="547" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a542ce3b33a138db92365d668fd9f6e28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a542ce3b33a138db92365d668fd9f6e28">&#9670;&nbsp;</a></span>reset()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PipeList::reset </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear list and reset all counters. </p>
+<p>Limpa lista de canos e zera pontos. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a542ce3b33a138db92365d668fd9f6e28_icgraph.svg" width="307" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ac50083f33c6f14425302c76ff6e17650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac50083f33c6f14425302c76ff6e17650">&#9670;&nbsp;</a></span>set_difficulty()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PipeList::set_difficulty </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>diff</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configure difficulty (1 = static, 2 = vertical movers). </p>
+<p>Define dificuldade (1 estático, 2 com movimento vertical). </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_ac50083f33c6f14425302c76ff6e17650_icgraph.svg" width="358" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a6a9ef3aaee030f0ff01c21121c549a24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a9ef3aaee030f0ff01c21121c549a24">&#9670;&nbsp;</a></span>set_start()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PipeList::set_start </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Begin spawning logic (first call after game starts). </p>
+<p>Ativa geração de canos na primeira chamada.</p>
+<dl class="section return"><dt>Retorna</dt><dd>true on first activation, false otherwise. </dd></dl>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a6a9ef3aaee030f0ff01c21121c549a24_icgraph.svg" width="343" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1c8417430dd4a796ccc25481c0c1139d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c8417430dd4a796ccc25481c0c1139d">&#9670;&nbsp;</a></span>set_vx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PipeList::set_vx </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>vel</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set uniform horizontal velocity for all pipes. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_a1c8417430dd4a796ccc25481c0c1139d_icgraph.svg" width="328" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad8b071b9187819c0d3d38f22452d6db0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad8b071b9187819c0d3d38f22452d6db0">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PipeList::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update positions of all pipes and handle vertical motion. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classPipeList_ad8b071b9187819c0d3d38f22452d6db0_icgraph.svg" width="331" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a4521887bd41e7cf2fd81d4cf33470141"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4521887bd41e7cf2fd81d4cf33470141">&#9670;&nbsp;</a></span>difficulty_pipe</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PipeList::difficulty_pipe = 1</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>1 = static, 2 = with movers </p>
+
+</div>
+</div>
+<a id="affe044de57cc6fdf15adfbd89a92ce2e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affe044de57cc6fdf15adfbd89a92ce2e">&#9670;&nbsp;</a></span>gen</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::mt19937 PipeList::gen {std::random_device{}()}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9886322d7893389a5b9eca3e2f29098a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9886322d7893389a5b9eca3e2f29098a">&#9670;&nbsp;</a></span>pipe1</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_BITMAP* PipeList::pipe1 = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>bitmap reference for new pipes </p>
+
+</div>
+</div>
+<a id="a23f3e5354a9c54dab4f8b3224bade650"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a23f3e5354a9c54dab4f8b3224bade650">&#9670;&nbsp;</a></span>Pipes</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;<a class="el" href="classPipePair.html">PipePair</a>&gt; PipeList::Pipes</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>active pipe pairs </p>
+
+</div>
+</div>
+<a id="aac78cdd7d49f7f5309dad86597c7192a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac78cdd7d49f7f5309dad86597c7192a">&#9670;&nbsp;</a></span>points</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PipeList::points = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>current score </p>
+
+</div>
+</div>
+<a id="a18914a6e11ee573fd454fd1f837f11eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18914a6e11ee573fd454fd1f837f11eb">&#9670;&nbsp;</a></span>start</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool PipeList::start = false</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>true after first pipe is spawned </p>
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="pipe_8hpp_source.html">pipe.hpp</a></li>
+<li>src/<a class="el" href="pipe_8cpp.html">pipe.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

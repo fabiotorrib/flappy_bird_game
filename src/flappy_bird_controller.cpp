@@ -1,3 +1,8 @@
+/**
+ * @file flappy_bird_controller.cpp
+ * @brief Controlador de fluxo do jogo (pontuação, eventos globais).
+ */
+
 #include "../include/flappy_bird_controller.hpp"
 #include <allegro5/bitmap_draw.h>
 #include <iostream>
@@ -19,6 +24,9 @@ FlappyBird::FlappyBird()
 
 
 // funcao de desenhar as coisas
+/**
+ * @brief Desenha todos os elementos do jogo de acordo com o estado atual.
+ */
 void FlappyBird::draw() {
   // A animação do chão e das nuvens agora acontece em todos os estados
 
@@ -40,6 +48,9 @@ void FlappyBird::draw() {
       state == 2 ? velocity : BIRD_VEL);  // Chão se move mais devagar na intro
 }
 
+/**
+ * @brief Atualiza lógica do jogo segundo o estado e aplica física.
+ */
 void FlappyBird::update() {
   switch (state) {
     case 0:                 // Animação de Entrada
@@ -67,6 +78,9 @@ void FlappyBird::update() {
   }
 }
 
+/**
+ * @brief Reinicia variáveis, pontos e objetos para começar uma nova partida.
+ */
 void FlappyBird::reset() {
   state = 0;
   time = 0;
@@ -83,18 +97,31 @@ void FlappyBird::reset() {
 }
 
 // PLAYER
+/**
+ * @brief Define o jogador que receberá pontuação ao final da partida.
+ */
 void FlappyBird::set_current_player(Player& player) {
   currentPlayer = &player;
 }
+/**
+ * @brief Copia a pontuação atual do jogo para o objeto Player.
+ */
 void FlappyBird::set_playerscore() {
   currentPlayer->SetScore(score);
 }
 
+/**
+ * @brief Salva o placar do jogador corrente no arquivo de ranking.
+ */
 void FlappyBird::saveCurrentPlayerScore() {
   currentPlayer->SaveLeaderboard("Leaderboard.txt", ranking, *currentPlayer);
 }
 
 // funcao checa colisoes
+/**
+ * @brief Verifica colisões do pássaro com canos ou limites da tela.
+ * @return true se ocorrer colisão.
+ */
 bool FlappyBird::check_collisions() {
   if ((flappy_obj.check_collision_with_boundaries() && velocity != 0) ||
       (pipelist.check_collision(flappy_obj))) {
@@ -108,12 +135,18 @@ bool FlappyBird::check_collisions() {
 
 // ACTIONS
 
+/**
+ * @brief Solicita pulo do pássaro se o jogo estiver em andamento.
+ */
 void FlappyBird::jump() {
   if (velocity != 0 && state == 2) {
     flappy_obj.jump();
   }
 }
 
+/**
+ * @brief Inicia a partida a partir do estado de espera.
+ */
 void FlappyBird::starter() {
   // starter() agora transita do estado 1 (Aguardando) para o 2 (Jogando)
   if (state == 1) {
@@ -122,11 +155,17 @@ void FlappyBird::starter() {
   }
 }
 
+/**
+ * @brief Gerencia criação e remoção de canos na tela.
+ */
 void FlappyBird::control_pipes() {
   pipelist.add_pipe_pair();
   pipelist.delete_pipe_pair();
 }
 
+/**
+ * @brief Desenha o texto piscante "PRESS SPACE TO PLAY".
+ */
 void FlappyBird::draw_intial_text() {
   time += 1.0 / FPS;
   float alpha = 0.5f + 0.5f * sinf(OSCILATION * time);
@@ -135,6 +174,9 @@ void FlappyBird::draw_intial_text() {
                "PRESS SPACE TO PLAY");
 }
 
+/**
+ * @brief Atualiza contagem de pontos e toca som quando necessário.
+ */
 void FlappyBird::update_score() {
   if(pipelist.check_score(flappy_obj.get_x())){
     pointSound->playSound(0.3);
@@ -142,6 +184,9 @@ void FlappyBird::update_score() {
   score = pipelist.get_points();
 }
 
+/**
+ * @brief Aumenta gradualmente a velocidade dos canos conforme pontuação.
+ */
 void FlappyBird::change_velocity() {
   if (difficulty_game != 0){
     if (score % change_vel == 0 && score != 0) {
@@ -151,11 +196,18 @@ void FlappyBird::change_velocity() {
   }
 }
 
+/**
+ * @brief Desenha a pontuação atual na tela.
+ */
 void FlappyBird::draw_HUD() {
   al_draw_textf(font, al_map_rgb(255, 255, 255), 60, 30, ALLEGRO_ALIGN_CENTRE,
                 "%d", score);
 }
 
+/**
+ * @brief Desenha o chão em rolagem contínua para efeito de movimento.
+ * @param velocity Velocidade de deslocamento.
+ */
 void FlappyBird::draw_animated_ground(float velocity) {
   positionF_x -= velocity;
   positionF2_x -= velocity;
@@ -172,12 +224,18 @@ void FlappyBird::draw_animated_ground(float velocity) {
   ground2->Draw(positionF2_x, 0);
 }
 
+/**
+ * @brief Pausa o movimento (usado em menus).
+ */
 void FlappyBird::breaker() {
   velocity_backup = velocity;
   velocity = 0;
   flappy_obj.set_break(true);
 }
 
+/**
+ * @brief Restaura o movimento após pausa.
+ */
 void FlappyBird::unbreaker() {
   velocity = velocity_backup;
   flappy_obj.set_break(false);
@@ -185,6 +243,9 @@ void FlappyBird::unbreaker() {
 
 // AUXILIARES
 
+/**
+ * @brief Retorna o estado interno atual.
+ */
 int FlappyBird::get_state() {
   return state;
 }

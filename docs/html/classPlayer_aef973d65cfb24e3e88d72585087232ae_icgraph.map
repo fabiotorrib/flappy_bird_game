@@ -1,0 +1,4 @@
+<map id="Player::SetScore" name="Player::SetScore">
+<area shape="rect" id="node1" title="Atualiza (sobrescreve) a pontuação do jogador." alt="" coords="256,5,384,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a04721bca58a8ce945a9bbbc56f9f49c4" title="Atualiza score no objeto Player." alt="" coords="5,5,208,32"/>
+</map>

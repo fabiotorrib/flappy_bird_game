@@ -1,0 +1,10 @@
+<map id="include/states/main_menu.hpp" name="include/states/main_menu.hpp">
+<area shape="rect" id="node1" title="Definição da classe MainMenu, o estado que representa o menu principal do jogo." alt="" coords="593,5,744,47"/>
+<area shape="rect" id="node2" href="$allegro__interface_8cpp.html" title="Implementação do controlador principal que integra Allegro às lógicas de estado do jogo." alt="" coords="5,102,188,129"/>
+<area shape="rect" id="node3" href="$difficulty__menu_8cpp.html" title="Implementação da classe DifficultyMenu, que gerencia a tela de seleção de dificuldade." alt="" coords="213,95,359,136"/>
+<area shape="rect" id="node4" href="$leaderboard__menu_8cpp.html" title="Implementação da classe LeaderboardMenu, responsável por exibir a tela de ranking." alt="" coords="384,95,551,136"/>
+<area shape="rect" id="node5" href="$load__game_8cpp.html" title="Implementação da classe LoadName, responsável pela tela de inserção de nome do jogador." alt="" coords="575,102,763,129"/>
+<area shape="rect" id="node6" href="$main__menu_8cpp.html" title="Implementação da classe MainMenu, o estado principal e tela inicial do jogo." alt="" coords="787,102,980,129"/>
+<area shape="rect" id="node7" href="$play_8cpp.html" title="Implementacao da classe Play." alt="" coords="1004,102,1147,129"/>
+<area shape="rect" id="node8" href="$settings__menu_8cpp.html" title="Implementação da classe SettingsMenu, que gerencia a tela de configurações do jogo." alt="" coords="1171,95,1313,136"/>
+</map>

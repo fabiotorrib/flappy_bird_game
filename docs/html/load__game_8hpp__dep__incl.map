@@ -1,0 +1,5 @@
+<map id="include/states/load_game.hpp" name="include/states/load_game.hpp">
+<area shape="rect" id="node1" title="Definição da classe LoadName, que representa o estado de inserção de nome." alt="" coords="133,5,279,47"/>
+<area shape="rect" id="node2" href="$load__game_8cpp.html" title="Implementação da classe LoadName, responsável pela tela de inserção de nome do jogador." alt="" coords="5,95,193,121"/>
+<area shape="rect" id="node3" href="$main__menu_8cpp.html" title="Implementação da classe MainMenu, o estado principal e tela inicial do jogo." alt="" coords="217,95,411,121"/>
+</map>

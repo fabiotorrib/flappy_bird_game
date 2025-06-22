@@ -1,0 +1,124 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/states/difficulty_menu.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d451e3adc68fdcbbaffa01a2ce5a922.html">states</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">difficulty_menu.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="difficulty__menu_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../defines.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../init.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../state.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../assets.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDifficultyMenu.html">DifficultyMenu</a> : <span class="keyword">public</span> <a class="code" href="classState.html">State</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classDifficultyMenu.html#a280e5b4a774adb3df636a249e2d489b9">handle_input</a>(<span class="keyword">const</span> ALLEGRO_EVENT&amp; <a class="code" href="classState.html#a87442fa864f5080096f0055856ced22b">ev</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classDifficultyMenu.html#a024907d1a77fef3b969a90dc2cc2f26f">update</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classDifficultyMenu.html#acace55cbd6b946a87e133cfed19594f2">draw</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classDifficultyMenu.html#a1f0520bf92dbfb6c965b436d14343961">enter</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#a3a8d87022a680924c7d562d9bf268e8b">   26</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classDifficultyMenu.html#a3a8d87022a680924c7d562d9bf268e8b">buttonPositionSelected</a> = 1;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classDifficultyMenu.html#a12db87e9ce6e4a5253384f71907d7820">DifficultyMenu</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#a6e9b1b7e2881b2cba8feb8fa4fadd6d4">   28</a></span>&#160;  std::string <a class="code" href="classDifficultyMenu.html#a6e9b1b7e2881b2cba8feb8fa4fadd6d4">difficultySelected</a> = <span class="stringliteral">&quot;noOne&quot;</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#a3293fb820081a3d09454305acb0a8f14">   31</a></span>&#160;  std::vector&lt;Button&gt; <a class="code" href="classDifficultyMenu.html#a3293fb820081a3d09454305acb0a8f14">menuButtons</a> = {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      {<span class="stringliteral">&quot;Easy&quot;</span>, 0}, {<span class="stringliteral">&quot;Normal&quot;</span>, 1}, {<span class="stringliteral">&quot;Hard&quot;</span>, 0}, {<span class="stringliteral">&quot;Save&quot;</span>, 0}};</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#a17313182b56bb366337055941131d7b6">   36</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classDifficultyMenu.html#a17313182b56bb366337055941131d7b6">buttonDifficultyEasy</a>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#a327c4fcc0bc0911fadde75437c7eb84d">   37</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classDifficultyMenu.html#a327c4fcc0bc0911fadde75437c7eb84d">buttonDifficultyNormal</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#ad5d3ef38699673cff20b9e8995d0b60a">   38</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classDifficultyMenu.html#ad5d3ef38699673cff20b9e8995d0b60a">buttonDifficultyHard</a>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#a4a8830dcf44c69a4b4d85a42b6ff9642">   39</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classDifficultyMenu.html#a4a8830dcf44c69a4b4d85a42b6ff9642">buttonSaveSelect</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#ae52c2e5d8cf8f7ee539f4daac0ae7e79">   40</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classDifficultyMenu.html#ae52c2e5d8cf8f7ee539f4daac0ae7e79">buttonSaveDeselect</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classDifficultyMenu.html#a10f161f8fff1fdeb225d9fcd1381906c">   41</a></span>&#160;    std::unique_ptr&lt;TextFont&gt; <a class="code" href="classDifficultyMenu.html#a10f161f8fff1fdeb225d9fcd1381906c">font</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
+<div class="ttc" id="aclassDifficultyMenu_html"><div class="ttname"><a href="classDifficultyMenu.html">DifficultyMenu</a></div><div class="ttdoc">Gerencia a lógica e a renderização da tela de seleção de dificuldade.</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:20</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a024907d1a77fef3b969a90dc2cc2f26f"><div class="ttname"><a href="classDifficultyMenu.html#a024907d1a77fef3b969a90dc2cc2f26f">DifficultyMenu::update</a></div><div class="ttdeci">State * update(Motion &amp;motion) override</div><div class="ttdoc">Atualiza a lógica do estado a cada quadro.</div><div class="ttdef"><b>Definition:</b> difficulty_menu.cpp:152</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a10f161f8fff1fdeb225d9fcd1381906c"><div class="ttname"><a href="classDifficultyMenu.html#a10f161f8fff1fdeb225d9fcd1381906c">DifficultyMenu::font</a></div><div class="ttdeci">std::unique_ptr&lt; TextFont &gt; font</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:41</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a12db87e9ce6e4a5253384f71907d7820"><div class="ttname"><a href="classDifficultyMenu.html#a12db87e9ce6e4a5253384f71907d7820">DifficultyMenu::DifficultyMenu</a></div><div class="ttdeci">DifficultyMenu()</div><div class="ttdoc">Construtor da classe DifficultyMenu.</div><div class="ttdef"><b>Definition:</b> difficulty_menu.cpp:19</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a17313182b56bb366337055941131d7b6"><div class="ttname"><a href="classDifficultyMenu.html#a17313182b56bb366337055941131d7b6">DifficultyMenu::buttonDifficultyEasy</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonDifficultyEasy</div><div class="ttdoc">Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu.</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:36</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a1f0520bf92dbfb6c965b436d14343961"><div class="ttname"><a href="classDifficultyMenu.html#a1f0520bf92dbfb6c965b436d14343961">DifficultyMenu::enter</a></div><div class="ttdeci">void enter() override</div><div class="ttdoc">Executa ações ao entrar neste estado do menu.</div><div class="ttdef"><b>Definition:</b> difficulty_menu.cpp:134</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a280e5b4a774adb3df636a249e2d489b9"><div class="ttname"><a href="classDifficultyMenu.html#a280e5b4a774adb3df636a249e2d489b9">DifficultyMenu::handle_input</a></div><div class="ttdeci">State * handle_input(const ALLEGRO_EVENT &amp;ev) override</div><div class="ttdoc">Processa a entrada do usuário (teclado).</div><div class="ttdef"><b>Definition:</b> difficulty_menu.cpp:35</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a327c4fcc0bc0911fadde75437c7eb84d"><div class="ttname"><a href="classDifficultyMenu.html#a327c4fcc0bc0911fadde75437c7eb84d">DifficultyMenu::buttonDifficultyNormal</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonDifficultyNormal</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:37</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a3293fb820081a3d09454305acb0a8f14"><div class="ttname"><a href="classDifficultyMenu.html#a3293fb820081a3d09454305acb0a8f14">DifficultyMenu::menuButtons</a></div><div class="ttdeci">std::vector&lt; Button &gt; menuButtons</div><div class="ttdoc">Vetor que armazena os botões do menu e seus estados de seleção.</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:31</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a3a8d87022a680924c7d562d9bf268e8b"><div class="ttname"><a href="classDifficultyMenu.html#a3a8d87022a680924c7d562d9bf268e8b">DifficultyMenu::buttonPositionSelected</a></div><div class="ttdeci">int buttonPositionSelected</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:26</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a4a8830dcf44c69a4b4d85a42b6ff9642"><div class="ttname"><a href="classDifficultyMenu.html#a4a8830dcf44c69a4b4d85a42b6ff9642">DifficultyMenu::buttonSaveSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonSaveSelect</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:39</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_a6e9b1b7e2881b2cba8feb8fa4fadd6d4"><div class="ttname"><a href="classDifficultyMenu.html#a6e9b1b7e2881b2cba8feb8fa4fadd6d4">DifficultyMenu::difficultySelected</a></div><div class="ttdeci">std::string difficultySelected</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:28</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_acace55cbd6b946a87e133cfed19594f2"><div class="ttname"><a href="classDifficultyMenu.html#acace55cbd6b946a87e133cfed19594f2">DifficultyMenu::draw</a></div><div class="ttdeci">void draw(Motion &amp;motion) override</div><div class="ttdoc">Desenha todos os elementos visuais do estado na tela.</div><div class="ttdef"><b>Definition:</b> difficulty_menu.cpp:163</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_ad5d3ef38699673cff20b9e8995d0b60a"><div class="ttname"><a href="classDifficultyMenu.html#ad5d3ef38699673cff20b9e8995d0b60a">DifficultyMenu::buttonDifficultyHard</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonDifficultyHard</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:38</div></div>
+<div class="ttc" id="aclassDifficultyMenu_html_ae52c2e5d8cf8f7ee539f4daac0ae7e79"><div class="ttname"><a href="classDifficultyMenu.html#ae52c2e5d8cf8f7ee539f4daac0ae7e79">DifficultyMenu::buttonSaveDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonSaveDeselect</div><div class="ttdef"><b>Definition:</b> difficulty_menu.hpp:40</div></div>
+<div class="ttc" id="aclassMotion_html"><div class="ttname"><a href="classMotion.html">Motion</a></div><div class="ttdoc">Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.</div><div class="ttdef"><b>Definition:</b> motion.hpp:20</div></div>
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Define a interface que cada tela/estado deve implementar.</div><div class="ttdef"><b>Definition:</b> state.hpp:15</div></div>
+<div class="ttc" id="aclassState_html_a87442fa864f5080096f0055856ced22b"><div class="ttname"><a href="classState.html#a87442fa864f5080096f0055856ced22b">State::ev</a></div><div class="ttdeci">static ALLEGRO_EVENT ev</div><div class="ttdef"><b>Definition:</b> state.hpp:31</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

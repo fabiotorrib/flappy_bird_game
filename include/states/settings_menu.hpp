@@ -13,6 +13,11 @@
 #include "../assets.hpp"
 #include <memory>
 
+/**
+ * @class SettingsMenu
+ * @brief Tela de configurações: permite alterar clima e habilitar/desabilitar música.
+ */
+
 class SettingsMenu : public State {
  public:
   State* handle_input(const ALLEGRO_EVENT& ev) override;

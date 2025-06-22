@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['score_629',['score',['../classPlayer.html#ace6abae8d66534ad0a1fd6458f786a6e',1,'Player::score()'],['../classFlappyBird.html#a94f4c7846637cd30588b7cbe9fb3b049',1,'FlappyBird::score()']]],
+  ['scored_630',['scored',['../classPipe.html#a9902b7f9255f2c181977bf50689584d4',1,'Pipe']]],
+  ['screen_5fheight_631',['screen_height',['../classAllegroController.html#ad08bef3ebe3d4d650455687f297f925b',1,'AllegroController']]],
+  ['screen_5fwidth_632',['screen_width',['../classAllegroController.html#acd5b23d9652c46a8d1d4d3cc5fd66414',1,'AllegroController']]],
+  ['selectsound_633',['selectSound',['../assets_8cpp.html#aeaa41bb3528a365751d709ce587cef53',1,'selectSound():&#160;assets.cpp'],['../init_8hpp.html#aeaa41bb3528a365751d709ce587cef53',1,'selectSound():&#160;assets.cpp'],['../assets_8hpp.html#aeaa41bb3528a365751d709ce587cef53',1,'selectSound():&#160;assets.cpp']]],
+  ['signal_634',['signal',['../classPipePair.html#a2e9a0aa1c954f38a06234262dbafa7c6',1,'PipePair']]],
+  ['sound_635',['sound',['../classSound.html#ab84b6e7e172759e5188d2c294f7f90a4',1,'Sound']]],
+  ['speed_5fcloud_636',['speed_cloud',['../classMotion.html#a7b1b06ee5964dfb16b08e6f9df691af0',1,'Motion']]],
+  ['speed_5ffloor_637',['speed_floor',['../classMotion.html#ae921ee84c9257bcdf0cd3862ba44d430',1,'Motion']]],
+  ['speed_5flight_638',['speed_light',['../classMotion.html#aa5aa3a7fdcbf073f303ed42006a9cdab',1,'Motion']]],
+  ['speed_5flittle_639',['speed_little',['../classMotion.html#a2e68b1d6492e9ecfa89af726dc891384',1,'Motion']]],
+  ['speedflakes_640',['speedFlakes',['../classMotion.html#aef09d2e9111464349fdaed8760011af8',1,'Motion']]],
+  ['speedflakes2_641',['speedFlakes2',['../classMotion.html#a332c05cae943f4e396d76a7371fd85ae',1,'Motion']]],
+  ['speedrain_642',['speedRain',['../classMotion.html#a76601c0fb9e6dfb673f02299f220207f',1,'Motion']]],
+  ['start_643',['start',['../classPipeList.html#a18914a6e11ee573fd454fd1f837f11eb',1,'PipeList']]],
+  ['state_644',['state',['../classFlappyBird.html#a7ab4415f9ff0301d36897572f1b8c60a',1,'FlappyBird']]],
+  ['status_645',['status',['../classPlay.html#a6db98544543844d86a17d0e02cb379b5',1,'Play']]]
+];

@@ -1,0 +1,141 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/states/main_menu.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d451e3adc68fdcbbaffa01a2ce5a922.html">states</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">main_menu.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="main__menu_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../assets.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../defines.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../init.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../motion.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../state.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Esta variável é usada para comunicar ao estado &#39;LoadName&#39; se ele deve</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// operar no modo &quot;NewGame&quot; ou &quot;LoadGame&quot;.</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keyword">extern</span> std::string <a class="code" href="main__menu_8hpp.html#abb4f17d516e1da993635edde4b77513c">inputNameScreen</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classMainMenu.html">   24</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMainMenu.html">MainMenu</a> : <span class="keyword">public</span> <a class="code" href="classState.html">State</a> {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classMainMenu.html#ac248f0940004258153f8e4172a9a697b">handle_input</a>(<span class="keyword">const</span> ALLEGRO_EVENT&amp; <a class="code" href="classState.html#a87442fa864f5080096f0055856ced22b">ev</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classMainMenu.html#a00df3d6357e26f276850cc02e5a9cc46">update</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMainMenu.html#acb76d4f007c328dab0a34bfe379128e2">draw</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMainMenu.html#a69002a178254c429c2dd4adb24241ca4">enter</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf">MainMenu</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classMainMenu.html#aad4e8a1e88b5dfc4136ff0e9fd7a9a6a">   31</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classMainMenu.html#aad4e8a1e88b5dfc4136ff0e9fd7a9a6a">buttonPositionSelected</a> = 0;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classMainMenu.html#a6967bad09fcf2a73f7335cce35312cc2">   33</a></span>&#160;  std::vector&lt;Button&gt; <a class="code" href="classMainMenu.html#a6967bad09fcf2a73f7335cce35312cc2">menuButtons</a> = {{<span class="stringliteral">&quot;NewGame&quot;</span>, 1},     {<span class="stringliteral">&quot;LoadGame&quot;</span>, 0},</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                                     {<span class="stringliteral">&quot;Settings&quot;</span>, 0},    {<span class="stringliteral">&quot;Difficulty&quot;</span>, 0},</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                     {<span class="stringliteral">&quot;Leaderboard&quot;</span>, 0}, {<span class="stringliteral">&quot;Exit&quot;</span>, 0}};</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classMainMenu.html#a1a162acae2a1a4001f28175a5671d3bd">   39</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a1a162acae2a1a4001f28175a5671d3bd">logoNormal</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classMainMenu.html#a98320800f1ce7577ddcacb563c63de3b">   40</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a98320800f1ce7577ddcacb563c63de3b">buttonNewGameSelect</a>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classMainMenu.html#adcef91f6926fb97c7753480e6deb3e27">   41</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#adcef91f6926fb97c7753480e6deb3e27">buttonNewGameDeselect</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classMainMenu.html#a911a3a930b3a28d6bb3184abe815ce03">   42</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a911a3a930b3a28d6bb3184abe815ce03">buttonLoadGameSelect</a>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classMainMenu.html#a2a9986ede9723400702482a6465b800c">   43</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a2a9986ede9723400702482a6465b800c">buttonLoadGameDeselect</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classMainMenu.html#a52bb9916982dd1a9cb5755093e83f746">   44</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a52bb9916982dd1a9cb5755093e83f746">buttonSettingsSelect</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classMainMenu.html#a639271a61c51f44a4b1ba1e302ff6f0b">   45</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a639271a61c51f44a4b1ba1e302ff6f0b">buttonSettingsDeselect</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classMainMenu.html#aaf200307201bcbd75d2c59babddcc5bc">   46</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#aaf200307201bcbd75d2c59babddcc5bc">buttonDifficultySelect</a>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classMainMenu.html#a7ea1edad9bf02670d4a0cd48e1e61e15">   47</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a7ea1edad9bf02670d4a0cd48e1e61e15">buttonDifficultyDeselect</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classMainMenu.html#a3387544de3a7df64483ba1b0b6a15120">   48</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a3387544de3a7df64483ba1b0b6a15120">buttonLeaderboardSelect</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classMainMenu.html#a60ccb6f54c614a620c379f0bf40a4188">   49</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#a60ccb6f54c614a620c379f0bf40a4188">buttonLeaderboardDeselect</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classMainMenu.html#ade7276932c7b47ecd4d10af74fb9efb3">   50</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#ade7276932c7b47ecd4d10af74fb9efb3">buttonExitSelect</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classMainMenu.html#acecbb360baf96daed7baf8759a5132d4">   51</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classMainMenu.html#acecbb360baf96daed7baf8759a5132d4">buttonExitDeselect</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
+<div class="ttc" id="aclassMainMenu_html"><div class="ttname"><a href="classMainMenu.html">MainMenu</a></div><div class="ttdoc">Tela inicial do jogo, centraliza navegação para demais estados.</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:24</div></div>
+<div class="ttc" id="aclassMainMenu_html_a00df3d6357e26f276850cc02e5a9cc46"><div class="ttname"><a href="classMainMenu.html#a00df3d6357e26f276850cc02e5a9cc46">MainMenu::update</a></div><div class="ttdeci">State * update(Motion &amp;motion) override</div><div class="ttdoc">Atualiza a lógica do estado do movimento/animação de fundo a cada quadro.</div><div class="ttdef"><b>Definition:</b> main_menu.cpp:67</div></div>
+<div class="ttc" id="aclassMainMenu_html_a1a162acae2a1a4001f28175a5671d3bd"><div class="ttname"><a href="classMainMenu.html#a1a162acae2a1a4001f28175a5671d3bd">MainMenu::logoNormal</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; logoNormal</div><div class="ttdoc">Ponteiros inteligentes para todos os recursos visuais (imagens) do menu.</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:39</div></div>
+<div class="ttc" id="aclassMainMenu_html_a2a9986ede9723400702482a6465b800c"><div class="ttname"><a href="classMainMenu.html#a2a9986ede9723400702482a6465b800c">MainMenu::buttonLoadGameDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonLoadGameDeselect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:43</div></div>
+<div class="ttc" id="aclassMainMenu_html_a3387544de3a7df64483ba1b0b6a15120"><div class="ttname"><a href="classMainMenu.html#a3387544de3a7df64483ba1b0b6a15120">MainMenu::buttonLeaderboardSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonLeaderboardSelect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:48</div></div>
+<div class="ttc" id="aclassMainMenu_html_a52bb9916982dd1a9cb5755093e83f746"><div class="ttname"><a href="classMainMenu.html#a52bb9916982dd1a9cb5755093e83f746">MainMenu::buttonSettingsSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonSettingsSelect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:44</div></div>
+<div class="ttc" id="aclassMainMenu_html_a53eecf9d5ffd094f54ac4193e7e57eaf"><div class="ttname"><a href="classMainMenu.html#a53eecf9d5ffd094f54ac4193e7e57eaf">MainMenu::MainMenu</a></div><div class="ttdeci">MainMenu()</div><div class="ttdoc">Construtor da classe MainMenu.</div><div class="ttdef"><b>Definition:</b> main_menu.cpp:24</div></div>
+<div class="ttc" id="aclassMainMenu_html_a60ccb6f54c614a620c379f0bf40a4188"><div class="ttname"><a href="classMainMenu.html#a60ccb6f54c614a620c379f0bf40a4188">MainMenu::buttonLeaderboardDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonLeaderboardDeselect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:49</div></div>
+<div class="ttc" id="aclassMainMenu_html_a639271a61c51f44a4b1ba1e302ff6f0b"><div class="ttname"><a href="classMainMenu.html#a639271a61c51f44a4b1ba1e302ff6f0b">MainMenu::buttonSettingsDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonSettingsDeselect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:45</div></div>
+<div class="ttc" id="aclassMainMenu_html_a69002a178254c429c2dd4adb24241ca4"><div class="ttname"><a href="classMainMenu.html#a69002a178254c429c2dd4adb24241ca4">MainMenu::enter</a></div><div class="ttdeci">void enter() override</div><div class="ttdoc">Prepara o menu para exibição.</div><div class="ttdef"><b>Definition:</b> main_menu.cpp:49</div></div>
+<div class="ttc" id="aclassMainMenu_html_a6967bad09fcf2a73f7335cce35312cc2"><div class="ttname"><a href="classMainMenu.html#a6967bad09fcf2a73f7335cce35312cc2">MainMenu::menuButtons</a></div><div class="ttdeci">std::vector&lt; Button &gt; menuButtons</div><div class="ttdoc">Vetor que armazena os botões do menu e seus estados de seleção.</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:33</div></div>
+<div class="ttc" id="aclassMainMenu_html_a7ea1edad9bf02670d4a0cd48e1e61e15"><div class="ttname"><a href="classMainMenu.html#a7ea1edad9bf02670d4a0cd48e1e61e15">MainMenu::buttonDifficultyDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonDifficultyDeselect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:47</div></div>
+<div class="ttc" id="aclassMainMenu_html_a911a3a930b3a28d6bb3184abe815ce03"><div class="ttname"><a href="classMainMenu.html#a911a3a930b3a28d6bb3184abe815ce03">MainMenu::buttonLoadGameSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonLoadGameSelect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:42</div></div>
+<div class="ttc" id="aclassMainMenu_html_a98320800f1ce7577ddcacb563c63de3b"><div class="ttname"><a href="classMainMenu.html#a98320800f1ce7577ddcacb563c63de3b">MainMenu::buttonNewGameSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonNewGameSelect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:40</div></div>
+<div class="ttc" id="aclassMainMenu_html_aad4e8a1e88b5dfc4136ff0e9fd7a9a6a"><div class="ttname"><a href="classMainMenu.html#aad4e8a1e88b5dfc4136ff0e9fd7a9a6a">MainMenu::buttonPositionSelected</a></div><div class="ttdeci">int buttonPositionSelected</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:31</div></div>
+<div class="ttc" id="aclassMainMenu_html_aaf200307201bcbd75d2c59babddcc5bc"><div class="ttname"><a href="classMainMenu.html#aaf200307201bcbd75d2c59babddcc5bc">MainMenu::buttonDifficultySelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonDifficultySelect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:46</div></div>
+<div class="ttc" id="aclassMainMenu_html_ac248f0940004258153f8e4172a9a697b"><div class="ttname"><a href="classMainMenu.html#ac248f0940004258153f8e4172a9a697b">MainMenu::handle_input</a></div><div class="ttdeci">State * handle_input(const ALLEGRO_EVENT &amp;ev) override</div><div class="ttdoc">Gerencia a entrada do teclado para navegar e selecionar opções no menu.</div><div class="ttdef"><b>Definition:</b> main_menu.cpp:77</div></div>
+<div class="ttc" id="aclassMainMenu_html_acb76d4f007c328dab0a34bfe379128e2"><div class="ttname"><a href="classMainMenu.html#acb76d4f007c328dab0a34bfe379128e2">MainMenu::draw</a></div><div class="ttdeci">void draw(Motion &amp;motion) override</div><div class="ttdoc">Desenha todos os elementos visuais do menu principal na tela.</div><div class="ttdef"><b>Definition:</b> main_menu.cpp:141</div></div>
+<div class="ttc" id="aclassMainMenu_html_acecbb360baf96daed7baf8759a5132d4"><div class="ttname"><a href="classMainMenu.html#acecbb360baf96daed7baf8759a5132d4">MainMenu::buttonExitDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonExitDeselect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:51</div></div>
+<div class="ttc" id="aclassMainMenu_html_adcef91f6926fb97c7753480e6deb3e27"><div class="ttname"><a href="classMainMenu.html#adcef91f6926fb97c7753480e6deb3e27">MainMenu::buttonNewGameDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonNewGameDeselect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:41</div></div>
+<div class="ttc" id="aclassMainMenu_html_ade7276932c7b47ecd4d10af74fb9efb3"><div class="ttname"><a href="classMainMenu.html#ade7276932c7b47ecd4d10af74fb9efb3">MainMenu::buttonExitSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonExitSelect</div><div class="ttdef"><b>Definition:</b> main_menu.hpp:50</div></div>
+<div class="ttc" id="aclassMotion_html"><div class="ttname"><a href="classMotion.html">Motion</a></div><div class="ttdoc">Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.</div><div class="ttdef"><b>Definition:</b> motion.hpp:20</div></div>
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Define a interface que cada tela/estado deve implementar.</div><div class="ttdef"><b>Definition:</b> state.hpp:15</div></div>
+<div class="ttc" id="aclassState_html_a87442fa864f5080096f0055856ced22b"><div class="ttname"><a href="classState.html#a87442fa864f5080096f0055856ced22b">State::ev</a></div><div class="ttdeci">static ALLEGRO_EVENT ev</div><div class="ttdef"><b>Definition:</b> state.hpp:31</div></div>
+<div class="ttc" id="amain__menu_8hpp_html_abb4f17d516e1da993635edde4b77513c"><div class="ttname"><a href="main__menu_8hpp.html#abb4f17d516e1da993635edde4b77513c">inputNameScreen</a></div><div class="ttdeci">std::string inputNameScreen</div><div class="ttdef"><b>Definition:</b> main_menu.cpp:41</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

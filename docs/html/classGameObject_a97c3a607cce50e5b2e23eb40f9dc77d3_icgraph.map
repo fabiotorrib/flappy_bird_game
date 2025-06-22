@@ -1,0 +1,4 @@
+<map id="GameObject::get_y" name="GameObject::get_y">
+<area shape="rect" id="node1" title="Obtém coordenada Y." alt="" coords="240,5,387,32"/>
+<area shape="rect" id="node2" href="$classBird.html#a5b63706c73ef35ac37a8c01495abf4e3" title="Verifica colisao com outro GameObject." alt="" coords="5,5,192,32"/>
+</map>

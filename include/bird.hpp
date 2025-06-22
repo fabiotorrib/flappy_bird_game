@@ -10,6 +10,10 @@
 #include "defines.hpp"
 #include "game_object.hpp"
 
+/**
+ * @class Bird
+ * @brief Personagem controlável: gerencia movimento, animação de asas, pulo e detecção de colisões.
+ */
 class Bird : public GameObject {
  private:
   float gravity;                 //!< aceleracao gravitacional

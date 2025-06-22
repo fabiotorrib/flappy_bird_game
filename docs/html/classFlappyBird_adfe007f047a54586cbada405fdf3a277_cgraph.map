@@ -1,0 +1,4 @@
+<map id="FlappyBird::jump" name="FlappyBird::jump">
+<area shape="rect" id="node1" title="Comanda pulo do passaro (estado 2)." alt="" coords="5,5,139,32"/>
+<area shape="rect" id="node2" href="$classBird.html#aaf8f7cdda8f072ee9d2643da8dc71ad6" title="Aplica impulso de pulo." alt="" coords="187,5,276,32"/>
+</map>

@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/defines.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">defines.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="defines_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;cmath&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">// resolucao</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a27cddfd509d28b4b2b0b44c093fac090">   14</a></span>&#160;<span class="preprocessor">#define SCREEN_H 720</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a9b6bc9242882d1e758e06ed751a2e8ec">   15</a></span>&#160;<span class="preprocessor">#define SCREEN_W 1280</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">// fps</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="defines_8hpp.html#ac92ca5ab87034a348decad7ee8d4bd1b">   18</a></span>&#160;<span class="preprocessor">#define FPS 60.0</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment">// estados</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9b">   21</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba0352906d1ea1dfcd663c918f3a86755b">   22</a></span>&#160;  <a class="code" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba0352906d1ea1dfcd663c918f3a86755b">PLAY</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba56b36d0d0bb01b339cf1041adc08e262">   23</a></span>&#160;  <a class="code" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba56b36d0d0bb01b339cf1041adc08e262">PAUSE</a>,</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba871723195985a4ae22d7e10d99bf8a00">   24</a></span>&#160;  <a class="code" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba871723195985a4ae22d7e10d99bf8a00">GAME_OVER</a>,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Botões menus</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structButton.html">   32</a></span>&#160;<span class="keyword">struct </span><a class="code" href="structButton.html">Button</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="structButton.html#a3cab5b803fa9790afbd27ff6b7294050">   33</a></span>&#160;  std::string <a class="code" href="structButton.html#a3cab5b803fa9790afbd27ff6b7294050">name</a>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="structButton.html#a21c40cf837758a6a1d43c104224eb3cd">   34</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="structButton.html#a21c40cf837758a6a1d43c104224eb3cd">buttonSelectState</a>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;};</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a58e26021995be15b60291565a59ecf8b">   36</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="defines_8hpp.html#a58e26021995be15b60291565a59ecf8b">MAX_ROTATION_UP</a> = -M_PI / 6.0f;   <span class="comment">// Limite para cima (-30 graus)</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="defines_8hpp.html#ada0ffdb6d76c8a00f4e518e551e25e04">   37</a></span>&#160;<span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="defines_8hpp.html#ada0ffdb6d76c8a00f4e518e551e25e04">MAX_ROTATION_DOWN</a> = M_PI / 6.0f;  <span class="comment">// Limite para baixo (+90 graus)</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment">//</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a975fc9874a52790d9a5ca6d4e6a228ce">   40</a></span>&#160;<span class="preprocessor">#define MAX_INPUT_LENGTH 33</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="comment">// forca do pulo</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="defines_8hpp.html#ab8d0cabcc33a510ffa8cfadde6cd9ded">   43</a></span>&#160;<span class="preprocessor">#define JUMP_FORCE -15.0</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="comment">// gravidade</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a6801baa546c6112d19eb095111d24720">   46</a></span>&#160;<span class="preprocessor">#define GRAVITY 1.0</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">// multiplicador da rotacao do bird</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="defines_8hpp.html#aa71a3e5090454222acb73a5292d592a8">   49</a></span>&#160;<span class="preprocessor">#define ROTATION 0.05</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">// posicao inicial do movimento bird</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a7b9d648b74be095668a2dd56756b6d26">   52</a></span>&#160;<span class="preprocessor">#define X_INIT 350</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">// gap entre os canos</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a519edbabfb0b0953e9ebd8484b228576">   55</a></span>&#160;<span class="preprocessor">#define GAP_SIZE 250</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="defines_8hpp.html#aaad1d131bded5c3da337b4d278eed9b8">   56</a></span>&#160;<span class="preprocessor">#define GAP_X 300</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">// velocidade x do bird</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a61bb83ae7ac749d511a737a1eb72108f">   58</a></span>&#160;<span class="preprocessor">#define BIRD_VEL 3</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">// velocidade dos pipes</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a0d676224ec1857dc51cb4e1601ff8102">   60</a></span>&#160;<span class="preprocessor">#define PIPE_SPEED 5.5</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="defines_8hpp.html#af9e54e7748df2f04562d793108d4de52">   61</a></span>&#160;<span class="preprocessor">#define PIPE_VERTICAL_SPEED 1.5</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment">// text oscilation</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a0ab754bbedd8cfb76254f00ecc643c31">   63</a></span>&#160;<span class="preprocessor">#define OSCILATION 3.0</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">// velocidade oscilation gif</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="defines_8hpp.html#acec13f2cbd31bef90e1cbe72f1bf8d54">   65</a></span>&#160;<span class="preprocessor">#define TIME_GIF_BIRD 8</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="defines_8hpp.html#a574f9185dfc11586bf83cfdbf6b7e7dc">   67</a></span>&#160;<span class="preprocessor">#define TETO_BIRD 0.368</span></div>
+<div class="ttc" id="adefines_8hpp_html_a58e26021995be15b60291565a59ecf8b"><div class="ttname"><a href="defines_8hpp.html#a58e26021995be15b60291565a59ecf8b">MAX_ROTATION_UP</a></div><div class="ttdeci">const float MAX_ROTATION_UP</div><div class="ttdef"><b>Definition:</b> defines.hpp:36</div></div>
+<div class="ttc" id="adefines_8hpp_html_a5fc5d61fa8521ce5476183998579fa9b"><div class="ttname"><a href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a></div><div class="ttdeci">ScreenState</div><div class="ttdef"><b>Definition:</b> defines.hpp:21</div></div>
+<div class="ttc" id="adefines_8hpp_html_a5fc5d61fa8521ce5476183998579fa9ba0352906d1ea1dfcd663c918f3a86755b"><div class="ttname"><a href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba0352906d1ea1dfcd663c918f3a86755b">PLAY</a></div><div class="ttdeci">@ PLAY</div><div class="ttdef"><b>Definition:</b> defines.hpp:22</div></div>
+<div class="ttc" id="adefines_8hpp_html_a5fc5d61fa8521ce5476183998579fa9ba56b36d0d0bb01b339cf1041adc08e262"><div class="ttname"><a href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba56b36d0d0bb01b339cf1041adc08e262">PAUSE</a></div><div class="ttdeci">@ PAUSE</div><div class="ttdef"><b>Definition:</b> defines.hpp:23</div></div>
+<div class="ttc" id="adefines_8hpp_html_a5fc5d61fa8521ce5476183998579fa9ba871723195985a4ae22d7e10d99bf8a00"><div class="ttname"><a href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9ba871723195985a4ae22d7e10d99bf8a00">GAME_OVER</a></div><div class="ttdeci">@ GAME_OVER</div><div class="ttdef"><b>Definition:</b> defines.hpp:24</div></div>
+<div class="ttc" id="adefines_8hpp_html_ada0ffdb6d76c8a00f4e518e551e25e04"><div class="ttname"><a href="defines_8hpp.html#ada0ffdb6d76c8a00f4e518e551e25e04">MAX_ROTATION_DOWN</a></div><div class="ttdeci">const float MAX_ROTATION_DOWN</div><div class="ttdef"><b>Definition:</b> defines.hpp:37</div></div>
+<div class="ttc" id="astructButton_html"><div class="ttname"><a href="structButton.html">Button</a></div><div class="ttdoc">Estrutura auxiliar que representa um botão de menu e seu estado de seleção.</div><div class="ttdef"><b>Definition:</b> defines.hpp:32</div></div>
+<div class="ttc" id="astructButton_html_a21c40cf837758a6a1d43c104224eb3cd"><div class="ttname"><a href="structButton.html#a21c40cf837758a6a1d43c104224eb3cd">Button::buttonSelectState</a></div><div class="ttdeci">int buttonSelectState</div><div class="ttdef"><b>Definition:</b> defines.hpp:34</div></div>
+<div class="ttc" id="astructButton_html_a3cab5b803fa9790afbd27ff6b7294050"><div class="ttname"><a href="structButton.html#a3cab5b803fa9790afbd27ff6b7294050">Button::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> defines.hpp:33</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

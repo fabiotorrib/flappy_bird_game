@@ -1,0 +1,582 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\babel@toc {brazil}{}\relax 
+\contentsline {chapter}{\numberline {1}Flappy Bird Game}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Índice Hierárquico}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Hierarquia de Classes}{3}{section.2.1}%
+\contentsline {chapter}{\numberline {3}Índice dos Componentes}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Lista de Classes}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Índice dos Arquivos}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Lista de Arquivos}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}Classes}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Referência da Classe Allegro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller}{9}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Descrição detalhada}{10}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Construtores e Destrutores}{10}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}AllegroController()}{10}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}$\sim $AllegroController()}{10}{subsubsection.5.1.2.2}%
+\contentsline {subsection}{\numberline {5.1.3}Funções membros}{10}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}cleanup()}{11}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}initialize()}{11}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}load()}{11}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}run()}{11}{subsubsection.5.1.3.4}%
+\contentsline {subsection}{\numberline {5.1.4}Atributos}{12}{subsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.1}current\_state}{12}{subsubsection.5.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.1.4.2}game}{12}{subsubsection.5.1.4.2}%
+\contentsline {subsubsection}{\numberline {5.1.4.3}motion}{12}{subsubsection.5.1.4.3}%
+\contentsline {subsubsection}{\numberline {5.1.4.4}screen\_height}{12}{subsubsection.5.1.4.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.5}screen\_width}{12}{subsubsection.5.1.4.5}%
+\contentsline {section}{\numberline {5.2}Referência da Classe Bird}{13}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Descrição detalhada}{14}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Construtores e Destrutores}{14}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}Bird()}{15}{subsubsection.5.2.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2.2}$\sim $Bird()}{15}{subsubsection.5.2.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}Funções membros}{15}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}check\_bird\_collision()}{15}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}destroy\_bitmaps()}{16}{subsubsection.5.2.3.2}%
+\contentsline {subsubsection}{\numberline {5.2.3.3}draw()}{16}{subsubsection.5.2.3.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.4}jump()}{17}{subsubsection.5.2.3.4}%
+\contentsline {subsubsection}{\numberline {5.2.3.5}loop\_animation()}{17}{subsubsection.5.2.3.5}%
+\contentsline {subsubsection}{\numberline {5.2.3.6}reset\_xy()}{18}{subsubsection.5.2.3.6}%
+\contentsline {subsubsection}{\numberline {5.2.3.7}set\_break()}{18}{subsubsection.5.2.3.7}%
+\contentsline {subsubsection}{\numberline {5.2.3.8}set\_by()}{19}{subsubsection.5.2.3.8}%
+\contentsline {subsubsection}{\numberline {5.2.3.9}update()}{20}{subsubsection.5.2.3.9}%
+\contentsline {subsection}{\numberline {5.2.4}Atributos}{20}{subsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.4.1}breakanimation}{20}{subsubsection.5.2.4.1}%
+\contentsline {subsubsection}{\numberline {5.2.4.2}contB}{21}{subsubsection.5.2.4.2}%
+\contentsline {subsubsection}{\numberline {5.2.4.3}frame1}{21}{subsubsection.5.2.4.3}%
+\contentsline {subsubsection}{\numberline {5.2.4.4}frame2}{21}{subsubsection.5.2.4.4}%
+\contentsline {subsubsection}{\numberline {5.2.4.5}frame3}{21}{subsubsection.5.2.4.5}%
+\contentsline {subsubsection}{\numberline {5.2.4.6}frames}{21}{subsubsection.5.2.4.6}%
+\contentsline {subsubsection}{\numberline {5.2.4.7}gravity}{21}{subsubsection.5.2.4.7}%
+\contentsline {subsubsection}{\numberline {5.2.4.8}jumpForce}{22}{subsubsection.5.2.4.8}%
+\contentsline {subsubsection}{\numberline {5.2.4.9}rotation}{22}{subsubsection.5.2.4.9}%
+\contentsline {subsubsection}{\numberline {5.2.4.10}valueB}{22}{subsubsection.5.2.4.10}%
+\contentsline {subsubsection}{\numberline {5.2.4.11}vy}{22}{subsubsection.5.2.4.11}%
+\contentsline {section}{\numberline {5.3}Referência da Estrutura Button}{22}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Descrição detalhada}{23}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Atributos}{23}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}buttonSelectState}{23}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}name}{23}{subsubsection.5.3.2.2}%
+\contentsline {section}{\numberline {5.4}Referência da Classe Difficulty\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu}{23}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Descrição detalhada}{25}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Construtores e Destrutores}{25}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}DifficultyMenu()}{25}{subsubsection.5.4.2.1}%
+\contentsline {subsection}{\numberline {5.4.3}Funções membros}{25}{subsection.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.1}draw()}{25}{subsubsection.5.4.3.1}%
+\contentsline {subsubsection}{\numberline {5.4.3.2}enter()}{26}{subsubsection.5.4.3.2}%
+\contentsline {subsubsection}{\numberline {5.4.3.3}handle\_input()}{26}{subsubsection.5.4.3.3}%
+\contentsline {subsubsection}{\numberline {5.4.3.4}update()}{26}{subsubsection.5.4.3.4}%
+\contentsline {subsection}{\numberline {5.4.4}Atributos}{27}{subsection.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.4.1}buttonDifficultyEasy}{27}{subsubsection.5.4.4.1}%
+\contentsline {subsubsection}{\numberline {5.4.4.2}buttonDifficultyHard}{27}{subsubsection.5.4.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.4.3}buttonDifficultyNormal}{27}{subsubsection.5.4.4.3}%
+\contentsline {subsubsection}{\numberline {5.4.4.4}buttonPositionSelected}{28}{subsubsection.5.4.4.4}%
+\contentsline {subsubsection}{\numberline {5.4.4.5}buttonSaveDeselect}{28}{subsubsection.5.4.4.5}%
+\contentsline {subsubsection}{\numberline {5.4.4.6}buttonSaveSelect}{28}{subsubsection.5.4.4.6}%
+\contentsline {subsubsection}{\numberline {5.4.4.7}difficultySelected}{28}{subsubsection.5.4.4.7}%
+\contentsline {subsubsection}{\numberline {5.4.4.8}font}{28}{subsubsection.5.4.4.8}%
+\contentsline {subsubsection}{\numberline {5.4.4.9}menuButtons}{28}{subsubsection.5.4.4.9}%
+\contentsline {section}{\numberline {5.5}Referência da Classe Flappy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Bird}{29}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Descrição detalhada}{31}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Construtores e Destrutores}{31}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}FlappyBird()}{31}{subsubsection.5.5.2.1}%
+\contentsline {subsection}{\numberline {5.5.3}Funções membros}{31}{subsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.3.1}breaker()}{31}{subsubsection.5.5.3.1}%
+\contentsline {subsubsection}{\numberline {5.5.3.2}change\_velocity()}{32}{subsubsection.5.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.5.3.3}check\_collisions()}{32}{subsubsection.5.5.3.3}%
+\contentsline {subsubsection}{\numberline {5.5.3.4}control\_pipes()}{33}{subsubsection.5.5.3.4}%
+\contentsline {subsubsection}{\numberline {5.5.3.5}draw()}{33}{subsubsection.5.5.3.5}%
+\contentsline {subsubsection}{\numberline {5.5.3.6}draw\_animated\_ground()}{34}{subsubsection.5.5.3.6}%
+\contentsline {subsubsection}{\numberline {5.5.3.7}draw\_HUD()}{34}{subsubsection.5.5.3.7}%
+\contentsline {subsubsection}{\numberline {5.5.3.8}draw\_intial\_text()}{35}{subsubsection.5.5.3.8}%
+\contentsline {subsubsection}{\numberline {5.5.3.9}get\_bird()}{35}{subsubsection.5.5.3.9}%
+\contentsline {subsubsection}{\numberline {5.5.3.10}get\_pipes()}{35}{subsubsection.5.5.3.10}%
+\contentsline {subsubsection}{\numberline {5.5.3.11}get\_state()}{36}{subsubsection.5.5.3.11}%
+\contentsline {subsubsection}{\numberline {5.5.3.12}jump()}{36}{subsubsection.5.5.3.12}%
+\contentsline {subsubsection}{\numberline {5.5.3.13}reset()}{36}{subsubsection.5.5.3.13}%
+\contentsline {subsubsection}{\numberline {5.5.3.14}saveCurrentPlayerScore()}{37}{subsubsection.5.5.3.14}%
+\contentsline {subsubsection}{\numberline {5.5.3.15}set\_current\_player()}{37}{subsubsection.5.5.3.15}%
+\contentsline {subsubsection}{\numberline {5.5.3.16}set\_playerscore()}{37}{subsubsection.5.5.3.16}%
+\contentsline {subsubsection}{\numberline {5.5.3.17}starter()}{38}{subsubsection.5.5.3.17}%
+\contentsline {subsubsection}{\numberline {5.5.3.18}unbreaker()}{38}{subsubsection.5.5.3.18}%
+\contentsline {subsubsection}{\numberline {5.5.3.19}update()}{38}{subsubsection.5.5.3.19}%
+\contentsline {subsubsection}{\numberline {5.5.3.20}update\_score()}{39}{subsubsection.5.5.3.20}%
+\contentsline {subsection}{\numberline {5.5.4}Atributos}{40}{subsection.5.5.4}%
+\contentsline {subsubsection}{\numberline {5.5.4.1}bird1}{40}{subsubsection.5.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.5.4.2}bird2}{40}{subsubsection.5.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.5.4.3}bird3}{40}{subsubsection.5.5.4.3}%
+\contentsline {subsubsection}{\numberline {5.5.4.4}change\_vel}{40}{subsubsection.5.5.4.4}%
+\contentsline {subsubsection}{\numberline {5.5.4.5}currentPlayer}{41}{subsubsection.5.5.4.5}%
+\contentsline {subsubsection}{\numberline {5.5.4.6}difficulty\_game}{41}{subsubsection.5.5.4.6}%
+\contentsline {subsubsection}{\numberline {5.5.4.7}flappy\_obj}{41}{subsubsection.5.5.4.7}%
+\contentsline {subsubsection}{\numberline {5.5.4.8}gameOverSound}{41}{subsubsection.5.5.4.8}%
+\contentsline {subsubsection}{\numberline {5.5.4.9}ground}{41}{subsubsection.5.5.4.9}%
+\contentsline {subsubsection}{\numberline {5.5.4.10}ground2}{41}{subsubsection.5.5.4.10}%
+\contentsline {subsubsection}{\numberline {5.5.4.11}pipe}{42}{subsubsection.5.5.4.11}%
+\contentsline {subsubsection}{\numberline {5.5.4.12}pipelist}{42}{subsubsection.5.5.4.12}%
+\contentsline {subsubsection}{\numberline {5.5.4.13}pointSound}{42}{subsubsection.5.5.4.13}%
+\contentsline {subsubsection}{\numberline {5.5.4.14}positionF2\_x}{42}{subsubsection.5.5.4.14}%
+\contentsline {subsubsection}{\numberline {5.5.4.15}positionF\_x}{42}{subsubsection.5.5.4.15}%
+\contentsline {subsubsection}{\numberline {5.5.4.16}score}{42}{subsubsection.5.5.4.16}%
+\contentsline {subsubsection}{\numberline {5.5.4.17}state}{42}{subsubsection.5.5.4.17}%
+\contentsline {subsubsection}{\numberline {5.5.4.18}time}{43}{subsubsection.5.5.4.18}%
+\contentsline {subsubsection}{\numberline {5.5.4.19}velocity}{43}{subsubsection.5.5.4.19}%
+\contentsline {subsubsection}{\numberline {5.5.4.20}velocity\_backup}{43}{subsubsection.5.5.4.20}%
+\contentsline {section}{\numberline {5.6}Referência da Classe Game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Object}{43}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Descrição detalhada}{44}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Construtores e Destrutores}{44}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}GameObject()}{45}{subsubsection.5.6.2.1}%
+\contentsline {subsubsection}{\numberline {5.6.2.2}$\sim $GameObject()}{45}{subsubsection.5.6.2.2}%
+\contentsline {subsection}{\numberline {5.6.3}Funções membros}{45}{subsection.5.6.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.1}check\_bird\_collision()}{45}{subsubsection.5.6.3.1}%
+\contentsline {subsubsection}{\numberline {5.6.3.2}check\_collision\_with\_boundaries()}{46}{subsubsection.5.6.3.2}%
+\contentsline {subsubsection}{\numberline {5.6.3.3}draw()}{46}{subsubsection.5.6.3.3}%
+\contentsline {subsubsection}{\numberline {5.6.3.4}get\_height()}{46}{subsubsection.5.6.3.4}%
+\contentsline {subsubsection}{\numberline {5.6.3.5}get\_width()}{47}{subsubsection.5.6.3.5}%
+\contentsline {subsubsection}{\numberline {5.6.3.6}get\_x()}{47}{subsubsection.5.6.3.6}%
+\contentsline {subsubsection}{\numberline {5.6.3.7}get\_x\_final()}{47}{subsubsection.5.6.3.7}%
+\contentsline {subsubsection}{\numberline {5.6.3.8}get\_y()}{48}{subsubsection.5.6.3.8}%
+\contentsline {subsubsection}{\numberline {5.6.3.9}set\_finals()}{48}{subsubsection.5.6.3.9}%
+\contentsline {subsubsection}{\numberline {5.6.3.10}set\_x()}{48}{subsubsection.5.6.3.10}%
+\contentsline {subsubsection}{\numberline {5.6.3.11}set\_y()}{49}{subsubsection.5.6.3.11}%
+\contentsline {subsubsection}{\numberline {5.6.3.12}update()}{49}{subsubsection.5.6.3.12}%
+\contentsline {subsection}{\numberline {5.6.4}Atributos}{49}{subsection.5.6.4}%
+\contentsline {subsubsection}{\numberline {5.6.4.1}by}{49}{subsubsection.5.6.4.1}%
+\contentsline {subsubsection}{\numberline {5.6.4.2}height}{49}{subsubsection.5.6.4.2}%
+\contentsline {subsubsection}{\numberline {5.6.4.3}obj\_sprite}{49}{subsubsection.5.6.4.3}%
+\contentsline {subsubsection}{\numberline {5.6.4.4}width}{49}{subsubsection.5.6.4.4}%
+\contentsline {subsubsection}{\numberline {5.6.4.5}x}{50}{subsubsection.5.6.4.5}%
+\contentsline {subsubsection}{\numberline {5.6.4.6}x\_final}{50}{subsubsection.5.6.4.6}%
+\contentsline {subsubsection}{\numberline {5.6.4.7}y}{50}{subsubsection.5.6.4.7}%
+\contentsline {subsubsection}{\numberline {5.6.4.8}y\_final}{50}{subsubsection.5.6.4.8}%
+\contentsline {section}{\numberline {5.7}Referência da Classe Image}{50}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Descrição detalhada}{51}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Construtores e Destrutores}{51}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}Image()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{51}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}Image()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{51}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}$\sim $Image()}{52}{subsubsection.5.7.2.3}%
+\contentsline {subsection}{\numberline {5.7.3}Funções membros}{52}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}Draw()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{52}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}Draw()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{52}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}getBitmap()}{52}{subsubsection.5.7.3.3}%
+\contentsline {subsection}{\numberline {5.7.4}Atributos}{52}{subsection.5.7.4}%
+\contentsline {subsubsection}{\numberline {5.7.4.1}image}{53}{subsubsection.5.7.4.1}%
+\contentsline {subsubsection}{\numberline {5.7.4.2}x}{53}{subsubsection.5.7.4.2}%
+\contentsline {subsubsection}{\numberline {5.7.4.3}y}{53}{subsubsection.5.7.4.3}%
+\contentsline {section}{\numberline {5.8}Referência da Classe Leaderboard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu}{53}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Descrição detalhada}{54}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Construtores e Destrutores}{54}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}LeaderboardMenu()}{55}{subsubsection.5.8.2.1}%
+\contentsline {subsection}{\numberline {5.8.3}Funções membros}{55}{subsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.1}draw()}{55}{subsubsection.5.8.3.1}%
+\contentsline {subsubsection}{\numberline {5.8.3.2}enter()}{55}{subsubsection.5.8.3.2}%
+\contentsline {subsubsection}{\numberline {5.8.3.3}handle\_input()}{56}{subsubsection.5.8.3.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.4}update()}{56}{subsubsection.5.8.3.4}%
+\contentsline {subsection}{\numberline {5.8.4}Atributos}{57}{subsection.5.8.4}%
+\contentsline {subsubsection}{\numberline {5.8.4.1}campLeaderboard}{57}{subsubsection.5.8.4.1}%
+\contentsline {subsubsection}{\numberline {5.8.4.2}font}{57}{subsubsection.5.8.4.2}%
+\contentsline {section}{\numberline {5.9}Referência da Classe Load\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Name}{58}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Descrição detalhada}{59}{subsection.5.9.1}%
+\contentsline {subsection}{\numberline {5.9.2}Construtores e Destrutores}{59}{subsection.5.9.2}%
+\contentsline {subsubsection}{\numberline {5.9.2.1}LoadName()}{59}{subsubsection.5.9.2.1}%
+\contentsline {subsection}{\numberline {5.9.3}Funções membros}{59}{subsection.5.9.3}%
+\contentsline {subsubsection}{\numberline {5.9.3.1}draw()}{59}{subsubsection.5.9.3.1}%
+\contentsline {subsubsection}{\numberline {5.9.3.2}enter()}{60}{subsubsection.5.9.3.2}%
+\contentsline {subsubsection}{\numberline {5.9.3.3}handle\_input()}{60}{subsubsection.5.9.3.3}%
+\contentsline {subsubsection}{\numberline {5.9.3.4}update()}{61}{subsubsection.5.9.3.4}%
+\contentsline {subsection}{\numberline {5.9.4}Atributos}{62}{subsection.5.9.4}%
+\contentsline {subsubsection}{\numberline {5.9.4.1}buttonBackDeselect}{62}{subsubsection.5.9.4.1}%
+\contentsline {subsubsection}{\numberline {5.9.4.2}buttonBackSelect}{62}{subsubsection.5.9.4.2}%
+\contentsline {subsubsection}{\numberline {5.9.4.3}buttonInsertDeselect}{62}{subsubsection.5.9.4.3}%
+\contentsline {subsubsection}{\numberline {5.9.4.4}buttonInsertSelect}{62}{subsubsection.5.9.4.4}%
+\contentsline {subsubsection}{\numberline {5.9.4.5}buttonPositionSelected}{62}{subsubsection.5.9.4.5}%
+\contentsline {subsubsection}{\numberline {5.9.4.6}errorFont}{62}{subsubsection.5.9.4.6}%
+\contentsline {subsubsection}{\numberline {5.9.4.7}errorSituation}{62}{subsubsection.5.9.4.7}%
+\contentsline {subsubsection}{\numberline {5.9.4.8}menuButtons}{63}{subsubsection.5.9.4.8}%
+\contentsline {subsubsection}{\numberline {5.9.4.9}nameCampDeselect}{63}{subsubsection.5.9.4.9}%
+\contentsline {subsubsection}{\numberline {5.9.4.10}nameCampSelect}{63}{subsubsection.5.9.4.10}%
+\contentsline {subsubsection}{\numberline {5.9.4.11}nameFont}{63}{subsubsection.5.9.4.11}%
+\contentsline {subsubsection}{\numberline {5.9.4.12}playerNameString}{63}{subsubsection.5.9.4.12}%
+\contentsline {section}{\numberline {5.10}Referência da Classe Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu}{64}{section.5.10}%
+\contentsline {subsection}{\numberline {5.10.1}Descrição detalhada}{65}{subsection.5.10.1}%
+\contentsline {subsection}{\numberline {5.10.2}Construtores e Destrutores}{65}{subsection.5.10.2}%
+\contentsline {subsubsection}{\numberline {5.10.2.1}MainMenu()}{65}{subsubsection.5.10.2.1}%
+\contentsline {subsection}{\numberline {5.10.3}Funções membros}{65}{subsection.5.10.3}%
+\contentsline {subsubsection}{\numberline {5.10.3.1}draw()}{65}{subsubsection.5.10.3.1}%
+\contentsline {subsubsection}{\numberline {5.10.3.2}enter()}{66}{subsubsection.5.10.3.2}%
+\contentsline {subsubsection}{\numberline {5.10.3.3}handle\_input()}{66}{subsubsection.5.10.3.3}%
+\contentsline {subsubsection}{\numberline {5.10.3.4}update()}{67}{subsubsection.5.10.3.4}%
+\contentsline {subsection}{\numberline {5.10.4}Atributos}{67}{subsection.5.10.4}%
+\contentsline {subsubsection}{\numberline {5.10.4.1}buttonDifficultyDeselect}{67}{subsubsection.5.10.4.1}%
+\contentsline {subsubsection}{\numberline {5.10.4.2}buttonDifficultySelect}{67}{subsubsection.5.10.4.2}%
+\contentsline {subsubsection}{\numberline {5.10.4.3}buttonExitDeselect}{68}{subsubsection.5.10.4.3}%
+\contentsline {subsubsection}{\numberline {5.10.4.4}buttonExitSelect}{68}{subsubsection.5.10.4.4}%
+\contentsline {subsubsection}{\numberline {5.10.4.5}buttonLeaderboardDeselect}{68}{subsubsection.5.10.4.5}%
+\contentsline {subsubsection}{\numberline {5.10.4.6}buttonLeaderboardSelect}{68}{subsubsection.5.10.4.6}%
+\contentsline {subsubsection}{\numberline {5.10.4.7}buttonLoadGameDeselect}{68}{subsubsection.5.10.4.7}%
+\contentsline {subsubsection}{\numberline {5.10.4.8}buttonLoadGameSelect}{68}{subsubsection.5.10.4.8}%
+\contentsline {subsubsection}{\numberline {5.10.4.9}buttonNewGameDeselect}{68}{subsubsection.5.10.4.9}%
+\contentsline {subsubsection}{\numberline {5.10.4.10}buttonNewGameSelect}{68}{subsubsection.5.10.4.10}%
+\contentsline {subsubsection}{\numberline {5.10.4.11}buttonPositionSelected}{69}{subsubsection.5.10.4.11}%
+\contentsline {subsubsection}{\numberline {5.10.4.12}buttonSettingsDeselect}{69}{subsubsection.5.10.4.12}%
+\contentsline {subsubsection}{\numberline {5.10.4.13}buttonSettingsSelect}{69}{subsubsection.5.10.4.13}%
+\contentsline {subsubsection}{\numberline {5.10.4.14}logoNormal}{69}{subsubsection.5.10.4.14}%
+\contentsline {subsubsection}{\numberline {5.10.4.15}menuButtons}{69}{subsubsection.5.10.4.15}%
+\contentsline {section}{\numberline {5.11}Referência da Classe Motion}{69}{section.5.11}%
+\contentsline {subsection}{\numberline {5.11.1}Descrição detalhada}{71}{subsection.5.11.1}%
+\contentsline {subsection}{\numberline {5.11.2}Construtores e Destrutores}{71}{subsection.5.11.2}%
+\contentsline {subsubsection}{\numberline {5.11.2.1}Motion()}{71}{subsubsection.5.11.2.1}%
+\contentsline {subsection}{\numberline {5.11.3}Funções membros}{71}{subsection.5.11.3}%
+\contentsline {subsubsection}{\numberline {5.11.3.1}draw()}{71}{subsubsection.5.11.3.1}%
+\contentsline {subsubsection}{\numberline {5.11.3.2}setController()}{72}{subsubsection.5.11.3.2}%
+\contentsline {subsubsection}{\numberline {5.11.3.3}update()}{72}{subsubsection.5.11.3.3}%
+\contentsline {subsection}{\numberline {5.11.4}Atributos}{73}{subsection.5.11.4}%
+\contentsline {subsubsection}{\numberline {5.11.4.1}background}{73}{subsubsection.5.11.4.1}%
+\contentsline {subsubsection}{\numberline {5.11.4.2}background\_rain}{73}{subsubsection.5.11.4.2}%
+\contentsline {subsubsection}{\numberline {5.11.4.3}background\_snow}{73}{subsubsection.5.11.4.3}%
+\contentsline {subsubsection}{\numberline {5.11.4.4}bird1}{73}{subsubsection.5.11.4.4}%
+\contentsline {subsubsection}{\numberline {5.11.4.5}bird2}{73}{subsubsection.5.11.4.5}%
+\contentsline {subsubsection}{\numberline {5.11.4.6}bird3}{73}{subsubsection.5.11.4.6}%
+\contentsline {subsubsection}{\numberline {5.11.4.7}clouds}{73}{subsubsection.5.11.4.7}%
+\contentsline {subsubsection}{\numberline {5.11.4.8}clouds2}{74}{subsubsection.5.11.4.8}%
+\contentsline {subsubsection}{\numberline {5.11.4.9}cont}{74}{subsubsection.5.11.4.9}%
+\contentsline {subsubsection}{\numberline {5.11.4.10}contB}{74}{subsubsection.5.11.4.10}%
+\contentsline {subsubsection}{\numberline {5.11.4.11}contF}{74}{subsubsection.5.11.4.11}%
+\contentsline {subsubsection}{\numberline {5.11.4.12}controll}{74}{subsubsection.5.11.4.12}%
+\contentsline {subsubsection}{\numberline {5.11.4.13}controller}{74}{subsubsection.5.11.4.13}%
+\contentsline {subsubsection}{\numberline {5.11.4.14}drips1}{74}{subsubsection.5.11.4.14}%
+\contentsline {subsubsection}{\numberline {5.11.4.15}drips2}{74}{subsubsection.5.11.4.15}%
+\contentsline {subsubsection}{\numberline {5.11.4.16}flakesBig}{75}{subsubsection.5.11.4.16}%
+\contentsline {subsubsection}{\numberline {5.11.4.17}flakesLittle}{75}{subsubsection.5.11.4.17}%
+\contentsline {subsubsection}{\numberline {5.11.4.18}flakesLittle2}{75}{subsubsection.5.11.4.18}%
+\contentsline {subsubsection}{\numberline {5.11.4.19}ground}{75}{subsubsection.5.11.4.19}%
+\contentsline {subsubsection}{\numberline {5.11.4.20}ground2}{75}{subsubsection.5.11.4.20}%
+\contentsline {subsubsection}{\numberline {5.11.4.21}lights}{75}{subsubsection.5.11.4.21}%
+\contentsline {subsubsection}{\numberline {5.11.4.22}little}{75}{subsubsection.5.11.4.22}%
+\contentsline {subsubsection}{\numberline {5.11.4.23}little2}{75}{subsubsection.5.11.4.23}%
+\contentsline {subsubsection}{\numberline {5.11.4.24}little3}{76}{subsubsection.5.11.4.24}%
+\contentsline {subsubsection}{\numberline {5.11.4.25}positionB\_x}{76}{subsubsection.5.11.4.25}%
+\contentsline {subsubsection}{\numberline {5.11.4.26}positionC\_x}{76}{subsubsection.5.11.4.26}%
+\contentsline {subsubsection}{\numberline {5.11.4.27}positionCC\_x}{76}{subsubsection.5.11.4.27}%
+\contentsline {subsubsection}{\numberline {5.11.4.28}positionF}{76}{subsubsection.5.11.4.28}%
+\contentsline {subsubsection}{\numberline {5.11.4.29}positionF2}{76}{subsubsection.5.11.4.29}%
+\contentsline {subsubsection}{\numberline {5.11.4.30}positionF2\_x}{76}{subsubsection.5.11.4.30}%
+\contentsline {subsubsection}{\numberline {5.11.4.31}positionF3}{76}{subsubsection.5.11.4.31}%
+\contentsline {subsubsection}{\numberline {5.11.4.32}positionF\_x}{77}{subsubsection.5.11.4.32}%
+\contentsline {subsubsection}{\numberline {5.11.4.33}positionL\_x}{77}{subsubsection.5.11.4.33}%
+\contentsline {subsubsection}{\numberline {5.11.4.34}positionR1}{77}{subsubsection.5.11.4.34}%
+\contentsline {subsubsection}{\numberline {5.11.4.35}positionR2}{77}{subsubsection.5.11.4.35}%
+\contentsline {subsubsection}{\numberline {5.11.4.36}speed\_cloud}{77}{subsubsection.5.11.4.36}%
+\contentsline {subsubsection}{\numberline {5.11.4.37}speed\_floor}{77}{subsubsection.5.11.4.37}%
+\contentsline {subsubsection}{\numberline {5.11.4.38}speed\_light}{77}{subsubsection.5.11.4.38}%
+\contentsline {subsubsection}{\numberline {5.11.4.39}speed\_little}{77}{subsubsection.5.11.4.39}%
+\contentsline {subsubsection}{\numberline {5.11.4.40}speedFlakes}{78}{subsubsection.5.11.4.40}%
+\contentsline {subsubsection}{\numberline {5.11.4.41}speedFlakes2}{78}{subsubsection.5.11.4.41}%
+\contentsline {subsubsection}{\numberline {5.11.4.42}speedRain}{78}{subsubsection.5.11.4.42}%
+\contentsline {subsubsection}{\numberline {5.11.4.43}thunder}{78}{subsubsection.5.11.4.43}%
+\contentsline {subsubsection}{\numberline {5.11.4.44}thunder1}{78}{subsubsection.5.11.4.44}%
+\contentsline {subsubsection}{\numberline {5.11.4.45}value}{78}{subsubsection.5.11.4.45}%
+\contentsline {section}{\numberline {5.12}Referência da Classe Music}{78}{section.5.12}%
+\contentsline {subsection}{\numberline {5.12.1}Descrição detalhada}{79}{subsection.5.12.1}%
+\contentsline {subsection}{\numberline {5.12.2}Construtores e Destrutores}{79}{subsection.5.12.2}%
+\contentsline {subsubsection}{\numberline {5.12.2.1}Music()}{79}{subsubsection.5.12.2.1}%
+\contentsline {subsubsection}{\numberline {5.12.2.2}$\sim $Music()}{79}{subsubsection.5.12.2.2}%
+\contentsline {subsection}{\numberline {5.12.3}Funções membros}{80}{subsection.5.12.3}%
+\contentsline {subsubsection}{\numberline {5.12.3.1}playMusic()}{80}{subsubsection.5.12.3.1}%
+\contentsline {subsection}{\numberline {5.12.4}Atributos}{80}{subsection.5.12.4}%
+\contentsline {subsubsection}{\numberline {5.12.4.1}music}{80}{subsubsection.5.12.4.1}%
+\contentsline {section}{\numberline {5.13}Referência da Classe Pipe}{80}{section.5.13}%
+\contentsline {subsection}{\numberline {5.13.1}Descrição detalhada}{81}{subsection.5.13.1}%
+\contentsline {subsection}{\numberline {5.13.2}Construtores e Destrutores}{82}{subsection.5.13.2}%
+\contentsline {subsubsection}{\numberline {5.13.2.1}Pipe()}{82}{subsubsection.5.13.2.1}%
+\contentsline {subsection}{\numberline {5.13.3}Funções membros}{82}{subsection.5.13.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.1}check\_score()}{82}{subsubsection.5.13.3.1}%
+\contentsline {subsubsection}{\numberline {5.13.3.2}draw()}{83}{subsubsection.5.13.3.2}%
+\contentsline {subsubsection}{\numberline {5.13.3.3}get\_y()}{83}{subsubsection.5.13.3.3}%
+\contentsline {subsubsection}{\numberline {5.13.3.4}is\_off\_screen()}{83}{subsubsection.5.13.3.4}%
+\contentsline {subsubsection}{\numberline {5.13.3.5}set\_vx()}{83}{subsubsection.5.13.3.5}%
+\contentsline {subsubsection}{\numberline {5.13.3.6}set\_y()}{84}{subsubsection.5.13.3.6}%
+\contentsline {subsubsection}{\numberline {5.13.3.7}update()}{84}{subsubsection.5.13.3.7}%
+\contentsline {subsection}{\numberline {5.13.4}Atributos}{84}{subsection.5.13.4}%
+\contentsline {subsubsection}{\numberline {5.13.4.1}scored}{84}{subsubsection.5.13.4.1}%
+\contentsline {subsubsection}{\numberline {5.13.4.2}vx}{84}{subsubsection.5.13.4.2}%
+\contentsline {section}{\numberline {5.14}Referência da Classe Pipe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}List}{85}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Descrição detalhada}{86}{subsection.5.14.1}%
+\contentsline {subsection}{\numberline {5.14.2}Construtores e Destrutores}{86}{subsection.5.14.2}%
+\contentsline {subsubsection}{\numberline {5.14.2.1}PipeList()}{86}{subsubsection.5.14.2.1}%
+\contentsline {subsection}{\numberline {5.14.3}Funções membros}{86}{subsection.5.14.3}%
+\contentsline {subsubsection}{\numberline {5.14.3.1}add\_pipe\_pair()}{86}{subsubsection.5.14.3.1}%
+\contentsline {subsubsection}{\numberline {5.14.3.2}check\_collision()}{87}{subsubsection.5.14.3.2}%
+\contentsline {subsubsection}{\numberline {5.14.3.3}check\_score()}{87}{subsubsection.5.14.3.3}%
+\contentsline {subsubsection}{\numberline {5.14.3.4}delete\_pipe\_pair()}{88}{subsubsection.5.14.3.4}%
+\contentsline {subsubsection}{\numberline {5.14.3.5}draw()}{88}{subsubsection.5.14.3.5}%
+\contentsline {subsubsection}{\numberline {5.14.3.6}get\_pipe\_pairs()}{89}{subsubsection.5.14.3.6}%
+\contentsline {subsubsection}{\numberline {5.14.3.7}get\_points()}{89}{subsubsection.5.14.3.7}%
+\contentsline {subsubsection}{\numberline {5.14.3.8}reset()}{89}{subsubsection.5.14.3.8}%
+\contentsline {subsubsection}{\numberline {5.14.3.9}set\_difficulty()}{90}{subsubsection.5.14.3.9}%
+\contentsline {subsubsection}{\numberline {5.14.3.10}set\_start()}{90}{subsubsection.5.14.3.10}%
+\contentsline {subsubsection}{\numberline {5.14.3.11}set\_vx()}{91}{subsubsection.5.14.3.11}%
+\contentsline {subsubsection}{\numberline {5.14.3.12}update()}{91}{subsubsection.5.14.3.12}%
+\contentsline {subsection}{\numberline {5.14.4}Atributos}{91}{subsection.5.14.4}%
+\contentsline {subsubsection}{\numberline {5.14.4.1}difficulty\_pipe}{91}{subsubsection.5.14.4.1}%
+\contentsline {subsubsection}{\numberline {5.14.4.2}gen}{92}{subsubsection.5.14.4.2}%
+\contentsline {subsubsection}{\numberline {5.14.4.3}pipe1}{92}{subsubsection.5.14.4.3}%
+\contentsline {subsubsection}{\numberline {5.14.4.4}Pipes}{92}{subsubsection.5.14.4.4}%
+\contentsline {subsubsection}{\numberline {5.14.4.5}points}{92}{subsubsection.5.14.4.5}%
+\contentsline {subsubsection}{\numberline {5.14.4.6}start}{92}{subsubsection.5.14.4.6}%
+\contentsline {section}{\numberline {5.15}Referência da Classe Pipe\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Pair}{93}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Descrição detalhada}{93}{subsection.5.15.1}%
+\contentsline {subsection}{\numberline {5.15.2}Construtores e Destrutores}{94}{subsection.5.15.2}%
+\contentsline {subsubsection}{\numberline {5.15.2.1}PipePair()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{94}{subsubsection.5.15.2.1}%
+\contentsline {subsubsection}{\numberline {5.15.2.2}PipePair()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{94}{subsubsection.5.15.2.2}%
+\contentsline {subsection}{\numberline {5.15.3}Atributos}{94}{subsection.5.15.3}%
+\contentsline {subsubsection}{\numberline {5.15.3.1}bottom}{94}{subsubsection.5.15.3.1}%
+\contentsline {subsubsection}{\numberline {5.15.3.2}movement}{95}{subsubsection.5.15.3.2}%
+\contentsline {subsubsection}{\numberline {5.15.3.3}signal}{95}{subsubsection.5.15.3.3}%
+\contentsline {subsubsection}{\numberline {5.15.3.4}top}{95}{subsubsection.5.15.3.4}%
+\contentsline {section}{\numberline {5.16}Referência da Classe Play}{95}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Descrição detalhada}{96}{subsection.5.16.1}%
+\contentsline {subsection}{\numberline {5.16.2}Construtores e Destrutores}{97}{subsection.5.16.2}%
+\contentsline {subsubsection}{\numberline {5.16.2.1}Play()}{97}{subsubsection.5.16.2.1}%
+\contentsline {subsection}{\numberline {5.16.3}Funções membros}{97}{subsection.5.16.3}%
+\contentsline {subsubsection}{\numberline {5.16.3.1}draw()}{97}{subsubsection.5.16.3.1}%
+\contentsline {subsubsection}{\numberline {5.16.3.2}enter()}{97}{subsubsection.5.16.3.2}%
+\contentsline {subsubsection}{\numberline {5.16.3.3}handle\_input()}{98}{subsubsection.5.16.3.3}%
+\contentsline {subsubsection}{\numberline {5.16.3.4}update()}{99}{subsubsection.5.16.3.4}%
+\contentsline {subsection}{\numberline {5.16.4}Atributos}{99}{subsection.5.16.4}%
+\contentsline {subsubsection}{\numberline {5.16.4.1}buttonExitDeselect}{99}{subsubsection.5.16.4.1}%
+\contentsline {subsubsection}{\numberline {5.16.4.2}buttonExitSelect}{99}{subsubsection.5.16.4.2}%
+\contentsline {subsubsection}{\numberline {5.16.4.3}buttonPause}{100}{subsubsection.5.16.4.3}%
+\contentsline {subsubsection}{\numberline {5.16.4.4}buttonPositionSelected}{100}{subsubsection.5.16.4.4}%
+\contentsline {subsubsection}{\numberline {5.16.4.5}buttonTryagainDeselect}{100}{subsubsection.5.16.4.5}%
+\contentsline {subsubsection}{\numberline {5.16.4.6}buttonTryagainSelect}{100}{subsubsection.5.16.4.6}%
+\contentsline {subsubsection}{\numberline {5.16.4.7}flappy}{100}{subsubsection.5.16.4.7}%
+\contentsline {subsubsection}{\numberline {5.16.4.8}font}{100}{subsubsection.5.16.4.8}%
+\contentsline {subsubsection}{\numberline {5.16.4.9}logoGameOver}{100}{subsubsection.5.16.4.9}%
+\contentsline {subsubsection}{\numberline {5.16.4.10}menuButtons}{101}{subsubsection.5.16.4.10}%
+\contentsline {subsubsection}{\numberline {5.16.4.11}status}{101}{subsubsection.5.16.4.11}%
+\contentsline {section}{\numberline {5.17}Referência da Classe Player}{101}{section.5.17}%
+\contentsline {subsection}{\numberline {5.17.1}Descrição detalhada}{102}{subsection.5.17.1}%
+\contentsline {subsection}{\numberline {5.17.2}Construtores e Destrutores}{102}{subsection.5.17.2}%
+\contentsline {subsubsection}{\numberline {5.17.2.1}Player()}{102}{subsubsection.5.17.2.1}%
+\contentsline {subsection}{\numberline {5.17.3}Funções membros}{102}{subsection.5.17.3}%
+\contentsline {subsubsection}{\numberline {5.17.3.1}CheckingName()}{102}{subsubsection.5.17.3.1}%
+\contentsline {subsubsection}{\numberline {5.17.3.2}GetName()}{103}{subsubsection.5.17.3.2}%
+\contentsline {subsubsection}{\numberline {5.17.3.3}GetScore()}{104}{subsubsection.5.17.3.3}%
+\contentsline {subsubsection}{\numberline {5.17.3.4}operator$<$()}{104}{subsubsection.5.17.3.4}%
+\contentsline {subsubsection}{\numberline {5.17.3.5}ReadLeaderboard()}{104}{subsubsection.5.17.3.5}%
+\contentsline {subsubsection}{\numberline {5.17.3.6}SaveLeaderboard()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{105}{subsubsection.5.17.3.6}%
+\contentsline {subsubsection}{\numberline {5.17.3.7}SaveLeaderboard()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{106}{subsubsection.5.17.3.7}%
+\contentsline {subsubsection}{\numberline {5.17.3.8}SetScore()}{106}{subsubsection.5.17.3.8}%
+\contentsline {subsubsection}{\numberline {5.17.3.9}ShowLeaderboard()}{107}{subsubsection.5.17.3.9}%
+\contentsline {subsubsection}{\numberline {5.17.3.10}SortLeaderboard()}{107}{subsubsection.5.17.3.10}%
+\contentsline {subsection}{\numberline {5.17.4}Atributos}{107}{subsection.5.17.4}%
+\contentsline {subsubsection}{\numberline {5.17.4.1}name}{107}{subsubsection.5.17.4.1}%
+\contentsline {subsubsection}{\numberline {5.17.4.2}score}{107}{subsubsection.5.17.4.2}%
+\contentsline {section}{\numberline {5.18}Referência da Classe Settings\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Menu}{108}{section.5.18}%
+\contentsline {subsection}{\numberline {5.18.1}Descrição detalhada}{109}{subsection.5.18.1}%
+\contentsline {subsection}{\numberline {5.18.2}Construtores e Destrutores}{109}{subsection.5.18.2}%
+\contentsline {subsubsection}{\numberline {5.18.2.1}SettingsMenu()}{109}{subsubsection.5.18.2.1}%
+\contentsline {subsection}{\numberline {5.18.3}Funções membros}{109}{subsection.5.18.3}%
+\contentsline {subsubsection}{\numberline {5.18.3.1}draw()}{109}{subsubsection.5.18.3.1}%
+\contentsline {subsubsection}{\numberline {5.18.3.2}enter()}{110}{subsubsection.5.18.3.2}%
+\contentsline {subsubsection}{\numberline {5.18.3.3}handle\_input()}{110}{subsubsection.5.18.3.3}%
+\contentsline {subsubsection}{\numberline {5.18.3.4}update()}{111}{subsubsection.5.18.3.4}%
+\contentsline {subsection}{\numberline {5.18.4}Atributos}{111}{subsection.5.18.4}%
+\contentsline {subsubsection}{\numberline {5.18.4.1}buttonBackDeselect}{111}{subsubsection.5.18.4.1}%
+\contentsline {subsubsection}{\numberline {5.18.4.2}buttonBackSelect}{112}{subsubsection.5.18.4.2}%
+\contentsline {subsubsection}{\numberline {5.18.4.3}buttonMusicDaySelect}{112}{subsubsection.5.18.4.3}%
+\contentsline {subsubsection}{\numberline {5.18.4.4}buttonMusicRainSelect}{112}{subsubsection.5.18.4.4}%
+\contentsline {subsubsection}{\numberline {5.18.4.5}buttonMusicSelect}{112}{subsubsection.5.18.4.5}%
+\contentsline {subsubsection}{\numberline {5.18.4.6}buttonMusicSnowSelect}{112}{subsubsection.5.18.4.6}%
+\contentsline {subsubsection}{\numberline {5.18.4.7}buttonNoMusicDaySelect}{112}{subsubsection.5.18.4.7}%
+\contentsline {subsubsection}{\numberline {5.18.4.8}buttonNoMusicRainSelect}{112}{subsubsection.5.18.4.8}%
+\contentsline {subsubsection}{\numberline {5.18.4.9}buttonNoMusicSnowSelect}{112}{subsubsection.5.18.4.9}%
+\contentsline {subsubsection}{\numberline {5.18.4.10}buttonPositionSelected}{113}{subsubsection.5.18.4.10}%
+\contentsline {subsubsection}{\numberline {5.18.4.11}campSettingsMusic}{113}{subsubsection.5.18.4.11}%
+\contentsline {subsubsection}{\numberline {5.18.4.12}campSettingsNoMusic}{113}{subsubsection.5.18.4.12}%
+\contentsline {subsubsection}{\numberline {5.18.4.13}font}{113}{subsubsection.5.18.4.13}%
+\contentsline {subsubsection}{\numberline {5.18.4.14}menuButtons}{113}{subsubsection.5.18.4.14}%
+\contentsline {subsubsection}{\numberline {5.18.4.15}musicState}{113}{subsubsection.5.18.4.15}%
+\contentsline {subsubsection}{\numberline {5.18.4.16}weatherSelected}{114}{subsubsection.5.18.4.16}%
+\contentsline {section}{\numberline {5.19}Referência da Classe Sound}{114}{section.5.19}%
+\contentsline {subsection}{\numberline {5.19.1}Descrição detalhada}{114}{subsection.5.19.1}%
+\contentsline {subsection}{\numberline {5.19.2}Construtores e Destrutores}{114}{subsection.5.19.2}%
+\contentsline {subsubsection}{\numberline {5.19.2.1}Sound()}{114}{subsubsection.5.19.2.1}%
+\contentsline {subsubsection}{\numberline {5.19.2.2}$\sim $Sound()}{115}{subsubsection.5.19.2.2}%
+\contentsline {subsection}{\numberline {5.19.3}Funções membros}{115}{subsection.5.19.3}%
+\contentsline {subsubsection}{\numberline {5.19.3.1}playSound()}{115}{subsubsection.5.19.3.1}%
+\contentsline {subsection}{\numberline {5.19.4}Atributos}{115}{subsection.5.19.4}%
+\contentsline {subsubsection}{\numberline {5.19.4.1}sound}{115}{subsubsection.5.19.4.1}%
+\contentsline {section}{\numberline {5.20}Referência da Classe State}{116}{section.5.20}%
+\contentsline {subsection}{\numberline {5.20.1}Descrição detalhada}{116}{subsection.5.20.1}%
+\contentsline {subsection}{\numberline {5.20.2}Construtores e Destrutores}{116}{subsection.5.20.2}%
+\contentsline {subsubsection}{\numberline {5.20.2.1}$\sim $State()}{116}{subsubsection.5.20.2.1}%
+\contentsline {subsection}{\numberline {5.20.3}Funções membros}{117}{subsection.5.20.3}%
+\contentsline {subsubsection}{\numberline {5.20.3.1}draw()}{117}{subsubsection.5.20.3.1}%
+\contentsline {subsubsection}{\numberline {5.20.3.2}enter()}{117}{subsubsection.5.20.3.2}%
+\contentsline {subsubsection}{\numberline {5.20.3.3}handle\_input()}{117}{subsubsection.5.20.3.3}%
+\contentsline {subsubsection}{\numberline {5.20.3.4}setGlobals()}{117}{subsubsection.5.20.3.4}%
+\contentsline {subsubsection}{\numberline {5.20.3.5}update()}{118}{subsubsection.5.20.3.5}%
+\contentsline {subsection}{\numberline {5.20.4}Atributos}{118}{subsection.5.20.4}%
+\contentsline {subsubsection}{\numberline {5.20.4.1}display}{118}{subsubsection.5.20.4.1}%
+\contentsline {subsubsection}{\numberline {5.20.4.2}ev}{118}{subsubsection.5.20.4.2}%
+\contentsline {subsubsection}{\numberline {5.20.4.3}queue}{118}{subsubsection.5.20.4.3}%
+\contentsline {section}{\numberline {5.21}Referência da Classe Text\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Font}{118}{section.5.21}%
+\contentsline {subsection}{\numberline {5.21.1}Descrição detalhada}{119}{subsection.5.21.1}%
+\contentsline {subsection}{\numberline {5.21.2}Construtores e Destrutores}{119}{subsection.5.21.2}%
+\contentsline {subsubsection}{\numberline {5.21.2.1}TextFont()}{119}{subsubsection.5.21.2.1}%
+\contentsline {subsubsection}{\numberline {5.21.2.2}$\sim $TextFont()}{119}{subsubsection.5.21.2.2}%
+\contentsline {subsection}{\numberline {5.21.3}Funções membros}{119}{subsection.5.21.3}%
+\contentsline {subsubsection}{\numberline {5.21.3.1}setColor()}{120}{subsubsection.5.21.3.1}%
+\contentsline {subsubsection}{\numberline {5.21.3.2}writeText()}{120}{subsubsection.5.21.3.2}%
+\contentsline {subsection}{\numberline {5.21.4}Atributos}{120}{subsection.5.21.4}%
+\contentsline {subsubsection}{\numberline {5.21.4.1}b}{120}{subsubsection.5.21.4.1}%
+\contentsline {subsubsection}{\numberline {5.21.4.2}font}{120}{subsubsection.5.21.4.2}%
+\contentsline {subsubsection}{\numberline {5.21.4.3}g}{120}{subsubsection.5.21.4.3}%
+\contentsline {subsubsection}{\numberline {5.21.4.4}r}{121}{subsubsection.5.21.4.4}%
+\contentsline {chapter}{\numberline {6}Arquivos}{123}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Referência do Arquivo docs/mainpage.dox}{123}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Referência do Arquivo include/allegro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.hpp}{123}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Descrição detalhada}{124}{subsection.6.2.1}%
+\contentsline {section}{\numberline {6.3}Referência do Arquivo include/assets.hpp}{124}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Descrição detalhada}{125}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Funções}{125}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}loadGlobalAssets()}{125}{subsubsection.6.3.2.1}%
+\contentsline {subsubsection}{\numberline {6.3.2.2}unloadGlobalAssets()}{126}{subsubsection.6.3.2.2}%
+\contentsline {subsection}{\numberline {6.3.3}Variáveis}{126}{subsection.6.3.3}%
+\contentsline {subsubsection}{\numberline {6.3.3.1}selectSound}{126}{subsubsection.6.3.3.1}%
+\contentsline {section}{\numberline {6.4}Referência do Arquivo include/bird.hpp}{126}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Descrição detalhada}{127}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}Referência do Arquivo include/defines.hpp}{127}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Descrição detalhada}{128}{subsection.6.5.1}%
+\contentsline {subsection}{\numberline {6.5.2}Definições e macros}{129}{subsection.6.5.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.1}BIRD\_VEL}{129}{subsubsection.6.5.2.1}%
+\contentsline {subsubsection}{\numberline {6.5.2.2}FPS}{129}{subsubsection.6.5.2.2}%
+\contentsline {subsubsection}{\numberline {6.5.2.3}GAP\_SIZE}{129}{subsubsection.6.5.2.3}%
+\contentsline {subsubsection}{\numberline {6.5.2.4}GAP\_X}{129}{subsubsection.6.5.2.4}%
+\contentsline {subsubsection}{\numberline {6.5.2.5}GRAVITY}{129}{subsubsection.6.5.2.5}%
+\contentsline {subsubsection}{\numberline {6.5.2.6}JUMP\_FORCE}{129}{subsubsection.6.5.2.6}%
+\contentsline {subsubsection}{\numberline {6.5.2.7}MAX\_INPUT\_LENGTH}{129}{subsubsection.6.5.2.7}%
+\contentsline {subsubsection}{\numberline {6.5.2.8}OSCILATION}{130}{subsubsection.6.5.2.8}%
+\contentsline {subsubsection}{\numberline {6.5.2.9}PIPE\_SPEED}{130}{subsubsection.6.5.2.9}%
+\contentsline {subsubsection}{\numberline {6.5.2.10}PIPE\_VERTICAL\_SPEED}{130}{subsubsection.6.5.2.10}%
+\contentsline {subsubsection}{\numberline {6.5.2.11}ROTATION}{130}{subsubsection.6.5.2.11}%
+\contentsline {subsubsection}{\numberline {6.5.2.12}SCREEN\_H}{130}{subsubsection.6.5.2.12}%
+\contentsline {subsubsection}{\numberline {6.5.2.13}SCREEN\_W}{130}{subsubsection.6.5.2.13}%
+\contentsline {subsubsection}{\numberline {6.5.2.14}TETO\_BIRD}{130}{subsubsection.6.5.2.14}%
+\contentsline {subsubsection}{\numberline {6.5.2.15}TIME\_GIF\_BIRD}{130}{subsubsection.6.5.2.15}%
+\contentsline {subsubsection}{\numberline {6.5.2.16}X\_INIT}{131}{subsubsection.6.5.2.16}%
+\contentsline {subsection}{\numberline {6.5.3}Enumerações}{131}{subsection.6.5.3}%
+\contentsline {subsubsection}{\numberline {6.5.3.1}ScreenState}{131}{subsubsection.6.5.3.1}%
+\contentsline {subsection}{\numberline {6.5.4}Variáveis}{131}{subsection.6.5.4}%
+\contentsline {subsubsection}{\numberline {6.5.4.1}MAX\_ROTATION\_DOWN}{131}{subsubsection.6.5.4.1}%
+\contentsline {subsubsection}{\numberline {6.5.4.2}MAX\_ROTATION\_UP}{131}{subsubsection.6.5.4.2}%
+\contentsline {section}{\numberline {6.6}Referência do Arquivo include/flappy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bird\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}controller.hpp}{131}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Descrição detalhada}{132}{subsection.6.6.1}%
+\contentsline {section}{\numberline {6.7}Referência do Arquivo include/game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object.hpp}{132}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Descrição detalhada}{133}{subsection.6.7.1}%
+\contentsline {section}{\numberline {6.8}Referência do Arquivo include/init.hpp}{133}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Descrição detalhada}{134}{subsection.6.8.1}%
+\contentsline {subsection}{\numberline {6.8.2}Funções}{135}{subsection.6.8.2}%
+\contentsline {subsubsection}{\numberline {6.8.2.1}deinit()}{135}{subsubsection.6.8.2.1}%
+\contentsline {subsubsection}{\numberline {6.8.2.2}init()}{135}{subsubsection.6.8.2.2}%
+\contentsline {subsection}{\numberline {6.8.3}Variáveis}{136}{subsection.6.8.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.1}backgroundMusic}{136}{subsubsection.6.8.3.1}%
+\contentsline {subsubsection}{\numberline {6.8.3.2}difficulty}{136}{subsubsection.6.8.3.2}%
+\contentsline {subsubsection}{\numberline {6.8.3.3}display}{136}{subsubsection.6.8.3.3}%
+\contentsline {subsubsection}{\numberline {6.8.3.4}event\_queue}{136}{subsubsection.6.8.3.4}%
+\contentsline {subsubsection}{\numberline {6.8.3.5}font}{136}{subsubsection.6.8.3.5}%
+\contentsline {subsubsection}{\numberline {6.8.3.6}g\_sound\_on}{137}{subsubsection.6.8.3.6}%
+\contentsline {subsubsection}{\numberline {6.8.3.7}icon}{137}{subsubsection.6.8.3.7}%
+\contentsline {subsubsection}{\numberline {6.8.3.8}keystate}{137}{subsubsection.6.8.3.8}%
+\contentsline {subsubsection}{\numberline {6.8.3.9}player}{137}{subsubsection.6.8.3.9}%
+\contentsline {subsubsection}{\numberline {6.8.3.10}ranking}{137}{subsubsection.6.8.3.10}%
+\contentsline {subsubsection}{\numberline {6.8.3.11}selectSound}{137}{subsubsection.6.8.3.11}%
+\contentsline {subsubsection}{\numberline {6.8.3.12}timer\_FPS}{137}{subsubsection.6.8.3.12}%
+\contentsline {section}{\numberline {6.9}Referência do Arquivo include/motion.hpp}{138}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Descrição detalhada}{138}{subsection.6.9.1}%
+\contentsline {section}{\numberline {6.10}Referência do Arquivo include/pipe.hpp}{138}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Descrição detalhada}{139}{subsection.6.10.1}%
+\contentsline {section}{\numberline {6.11}Referência do Arquivo include/player.hpp}{140}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Descrição detalhada}{140}{subsection.6.11.1}%
+\contentsline {section}{\numberline {6.12}Referência do Arquivo include/state.hpp}{140}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Descrição detalhada}{141}{subsection.6.12.1}%
+\contentsline {section}{\numberline {6.13}Referência do Arquivo include/states/difficulty\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.hpp}{141}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Descrição detalhada}{142}{subsection.6.13.1}%
+\contentsline {section}{\numberline {6.14}Referência do Arquivo include/states/leaderboard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.hpp}{142}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Descrição detalhada}{143}{subsection.6.14.1}%
+\contentsline {section}{\numberline {6.15}Referência do Arquivo include/states/load\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}game.hpp}{143}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Descrição detalhada}{144}{subsection.6.15.1}%
+\contentsline {subsection}{\numberline {6.15.2}Enumerações}{144}{subsection.6.15.2}%
+\contentsline {subsubsection}{\numberline {6.15.2.1}insertNameSituations}{144}{subsubsection.6.15.2.1}%
+\contentsline {section}{\numberline {6.16}Referência do Arquivo include/states/main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.hpp}{145}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Descrição detalhada}{145}{subsection.6.16.1}%
+\contentsline {subsection}{\numberline {6.16.2}Variáveis}{145}{subsection.6.16.2}%
+\contentsline {subsubsection}{\numberline {6.16.2.1}inputNameScreen}{146}{subsubsection.6.16.2.1}%
+\contentsline {section}{\numberline {6.17}Referência do Arquivo include/states/play.hpp}{146}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Descrição detalhada}{146}{subsection.6.17.1}%
+\contentsline {section}{\numberline {6.18}Referência do Arquivo include/states/settings\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.hpp}{147}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Descrição detalhada}{147}{subsection.6.18.1}%
+\contentsline {section}{\numberline {6.19}Referência do Arquivo README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md}{148}{section.6.19}%
+\contentsline {section}{\numberline {6.20}Referência do Arquivo src/allegro\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}interface.cpp}{148}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Descrição detalhada}{148}{subsection.6.20.1}%
+\contentsline {section}{\numberline {6.21}Referência do Arquivo src/assets.cpp}{148}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Descrição detalhada}{149}{subsection.6.21.1}%
+\contentsline {subsection}{\numberline {6.21.2}Funções}{149}{subsection.6.21.2}%
+\contentsline {subsubsection}{\numberline {6.21.2.1}loadGlobalAssets()}{149}{subsubsection.6.21.2.1}%
+\contentsline {subsubsection}{\numberline {6.21.2.2}unloadGlobalAssets()}{149}{subsubsection.6.21.2.2}%
+\contentsline {subsection}{\numberline {6.21.3}Variáveis}{150}{subsection.6.21.3}%
+\contentsline {subsubsection}{\numberline {6.21.3.1}selectSound}{150}{subsubsection.6.21.3.1}%
+\contentsline {section}{\numberline {6.22}Referência do Arquivo src/bird.cpp}{150}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Descrição detalhada}{150}{subsection.6.22.1}%
+\contentsline {section}{\numberline {6.23}Referência do Arquivo src/flappy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}bird\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}controller.cpp}{150}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Descrição detalhada}{151}{subsection.6.23.1}%
+\contentsline {section}{\numberline {6.24}Referência do Arquivo src/game\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object.cpp}{151}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Descrição detalhada}{151}{subsection.6.24.1}%
+\contentsline {section}{\numberline {6.25}Referência do Arquivo src/init.cpp}{151}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Descrição detalhada}{152}{subsection.6.25.1}%
+\contentsline {subsection}{\numberline {6.25.2}Definições e macros}{152}{subsection.6.25.2}%
+\contentsline {subsubsection}{\numberline {6.25.2.1}LOG}{152}{subsubsection.6.25.2.1}%
+\contentsline {subsection}{\numberline {6.25.3}Funções}{152}{subsection.6.25.3}%
+\contentsline {subsubsection}{\numberline {6.25.3.1}deinit()}{153}{subsubsection.6.25.3.1}%
+\contentsline {subsubsection}{\numberline {6.25.3.2}init()}{153}{subsubsection.6.25.3.2}%
+\contentsline {subsection}{\numberline {6.25.4}Variáveis}{154}{subsection.6.25.4}%
+\contentsline {subsubsection}{\numberline {6.25.4.1}backgroundMusic}{154}{subsubsection.6.25.4.1}%
+\contentsline {subsubsection}{\numberline {6.25.4.2}difficulty}{154}{subsubsection.6.25.4.2}%
+\contentsline {subsubsection}{\numberline {6.25.4.3}display}{154}{subsubsection.6.25.4.3}%
+\contentsline {subsubsection}{\numberline {6.25.4.4}event\_queue}{154}{subsubsection.6.25.4.4}%
+\contentsline {subsubsection}{\numberline {6.25.4.5}font}{154}{subsubsection.6.25.4.5}%
+\contentsline {subsubsection}{\numberline {6.25.4.6}g\_sound\_on}{155}{subsubsection.6.25.4.6}%
+\contentsline {subsubsection}{\numberline {6.25.4.7}icon}{155}{subsubsection.6.25.4.7}%
+\contentsline {subsubsection}{\numberline {6.25.4.8}player}{155}{subsubsection.6.25.4.8}%
+\contentsline {subsubsection}{\numberline {6.25.4.9}ranking}{155}{subsubsection.6.25.4.9}%
+\contentsline {subsubsection}{\numberline {6.25.4.10}timer\_FPS}{155}{subsubsection.6.25.4.10}%
+\contentsline {section}{\numberline {6.26}Referência do Arquivo src/main.cpp}{155}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Descrição detalhada}{156}{subsection.6.26.1}%
+\contentsline {subsection}{\numberline {6.26.2}Funções}{156}{subsection.6.26.2}%
+\contentsline {subsubsection}{\numberline {6.26.2.1}main()}{156}{subsubsection.6.26.2.1}%
+\contentsline {section}{\numberline {6.27}Referência do Arquivo src/motion.cpp}{156}{section.6.27}%
+\contentsline {subsection}{\numberline {6.27.1}Descrição detalhada}{157}{subsection.6.27.1}%
+\contentsline {section}{\numberline {6.28}Referência do Arquivo src/pipe.cpp}{157}{section.6.28}%
+\contentsline {subsection}{\numberline {6.28.1}Descrição detalhada}{157}{subsection.6.28.1}%
+\contentsline {section}{\numberline {6.29}Referência do Arquivo src/player.cpp}{157}{section.6.29}%
+\contentsline {subsection}{\numberline {6.29.1}Descrição detalhada}{158}{subsection.6.29.1}%
+\contentsline {subsection}{\numberline {6.29.2}Funções}{158}{subsection.6.29.2}%
+\contentsline {subsubsection}{\numberline {6.29.2.1}operator$<$$<$()}{158}{subsubsection.6.29.2.1}%
+\contentsline {section}{\numberline {6.30}Referência do Arquivo src/state.cpp}{158}{section.6.30}%
+\contentsline {subsection}{\numberline {6.30.1}Descrição detalhada}{159}{subsection.6.30.1}%
+\contentsline {section}{\numberline {6.31}Referência do Arquivo src/states/difficulty\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.cpp}{159}{section.6.31}%
+\contentsline {subsection}{\numberline {6.31.1}Descrição detalhada}{159}{subsection.6.31.1}%
+\contentsline {section}{\numberline {6.32}Referência do Arquivo src/states/leaderboard\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.cpp}{159}{section.6.32}%
+\contentsline {subsection}{\numberline {6.32.1}Descrição detalhada}{160}{subsection.6.32.1}%
+\contentsline {section}{\numberline {6.33}Referência do Arquivo src/states/load\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}game.cpp}{160}{section.6.33}%
+\contentsline {subsection}{\numberline {6.33.1}Descrição detalhada}{160}{subsection.6.33.1}%
+\contentsline {section}{\numberline {6.34}Referência do Arquivo src/states/main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.cpp}{160}{section.6.34}%
+\contentsline {subsection}{\numberline {6.34.1}Descrição detalhada}{161}{subsection.6.34.1}%
+\contentsline {subsection}{\numberline {6.34.2}Variáveis}{161}{subsection.6.34.2}%
+\contentsline {subsubsection}{\numberline {6.34.2.1}inputNameScreen}{161}{subsubsection.6.34.2.1}%
+\contentsline {section}{\numberline {6.35}Referência do Arquivo src/states/play.cpp}{161}{section.6.35}%
+\contentsline {subsection}{\numberline {6.35.1}Descrição detalhada}{162}{subsection.6.35.1}%
+\contentsline {section}{\numberline {6.36}Referência do Arquivo src/states/settings\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}menu.cpp}{162}{section.6.36}%
+\contentsline {subsection}{\numberline {6.36.1}Descrição detalhada}{162}{subsection.6.36.1}%
+\contentsline {chapter}{\'Indice Remissivo}{163}{section*.256}%

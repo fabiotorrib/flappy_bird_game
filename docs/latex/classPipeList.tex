@@ -1,0 +1,388 @@
+\hypertarget{classPipeList}{}\doxysection{Referência da Classe Pipe\+List}
+\label{classPipeList}\index{PipeList@{PipeList}}
+
+
+Gerencia vetor de \mbox{\hyperlink{classPipePair}{Pipe\+Pair}}\+: spawn, atualização, colisão e score.  
+
+
+
+
+{\ttfamily \#include $<$pipe.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPipeList_abbc695a85ae51b64290c2fab6ade36f6}{Pipe\+List}} (ALLEGRO\+\_\+\+BITMAP $\ast$img)
+\begin{DoxyCompactList}\small\item\em Construct a list manager. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipeList_a4ba16ab542cc297017747954866e800a}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Draw every pipe pair. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipeList_a1c8417430dd4a796ccc25481c0c1139d}{set\+\_\+vx}} (float vel)
+\begin{DoxyCompactList}\small\item\em Set uniform horizontal velocity for all pipes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipeList_ad8b071b9187819c0d3d38f22452d6db0}{update}} ()
+\begin{DoxyCompactList}\small\item\em Update positions of all pipes and handle vertical motion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipeList_a3fa0a58e8017e08d80a5b9cabbff7385}{add\+\_\+pipe\+\_\+pair}} ()
+\begin{DoxyCompactList}\small\item\em Spawn a new pair if gap condition is satisfied. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipeList_ab588b7f5e210c66b0cfe754550ca4f09}{delete\+\_\+pipe\+\_\+pair}} ()
+\begin{DoxyCompactList}\small\item\em Remove pipes that left the screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipeList_a993d7ac941ceba1eff657032df7e8fd4}{check\+\_\+collision}} (\mbox{\hyperlink{classGameObject}{Game\+Object}} \&bird)
+\begin{DoxyCompactList}\small\item\em Check bird collision against any pipe. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipeList_a05148696dde39f9b1b3bdd3154b1a67f}{check\+\_\+score}} (float bird\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Check if any pipe pair increments the score. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipeList_a6a9ef3aaee030f0ff01c21121c549a24}{set\+\_\+start}} ()
+\begin{DoxyCompactList}\small\item\em Begin spawning logic (first call after game starts). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPipeList_a1cb8ddd5cf7c71189070d14699a26b6a}{get\+\_\+points}} ()
+\begin{DoxyCompactList}\small\item\em Get current score. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipeList_ac50083f33c6f14425302c76ff6e17650}{set\+\_\+difficulty}} (int diff)
+\begin{DoxyCompactList}\small\item\em Configure difficulty (1 = static, 2 = vertical movers). \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classPipePair}{Pipe\+Pair}} $>$ \& \mbox{\hyperlink{classPipeList_a8ccd09dadff5cfd9419c88fece81921b}{get\+\_\+pipe\+\_\+pairs}} () const
+\begin{DoxyCompactList}\small\item\em Expose internal pipe vector (read-\/only). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipeList_a542ce3b33a138db92365d668fd9f6e28}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Clear list and reset all counters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{classPipeList_a9886322d7893389a5b9eca3e2f29098a}{pipe1}} = nullptr
+\begin{DoxyCompactList}\small\item\em bitmap reference for new pipes \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classPipePair}{Pipe\+Pair}} $>$ \mbox{\hyperlink{classPipeList_a23f3e5354a9c54dab4f8b3224bade650}{Pipes}}
+\begin{DoxyCompactList}\small\item\em active pipe pairs \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipeList_a18914a6e11ee573fd454fd1f837f11eb}{start}} = false
+\begin{DoxyCompactList}\small\item\em true after first pipe is spawned \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPipeList_aac78cdd7d49f7f5309dad86597c7192a}{points}} = 0
+\begin{DoxyCompactList}\small\item\em current score \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPipeList_a4521887bd41e7cf2fd81d4cf33470141}{difficulty\+\_\+pipe}} = 1
+\begin{DoxyCompactList}\small\item\em 1 = static, 2 = with movers \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::mt19937 \mbox{\hyperlink{classPipeList_affe044de57cc6fdf15adfbd89a92ce2e}{gen}} \{std\+::random\+\_\+device\{\}()\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia vetor de \mbox{\hyperlink{classPipePair}{Pipe\+Pair}}\+: spawn, atualização, colisão e score. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPipeList_abbc695a85ae51b64290c2fab6ade36f6}\label{classPipeList_abbc695a85ae51b64290c2fab6ade36f6}} 
+\index{PipeList@{PipeList}!PipeList@{PipeList}}
+\index{PipeList@{PipeList}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{PipeList()}{PipeList()}}
+{\footnotesize\ttfamily Pipe\+List\+::\+Pipe\+List (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{img }\end{DoxyParamCaption})}
+
+
+
+Construct a list manager. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em img} & Bitmap to use when spawning new pipe pairs. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPipeList_a3fa0a58e8017e08d80a5b9cabbff7385}\label{classPipeList_a3fa0a58e8017e08d80a5b9cabbff7385}} 
+\index{PipeList@{PipeList}!add\_pipe\_pair@{add\_pipe\_pair}}
+\index{add\_pipe\_pair@{add\_pipe\_pair}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{add\_pipe\_pair()}{add\_pipe\_pair()}}
+{\footnotesize\ttfamily void Pipe\+List\+::add\+\_\+pipe\+\_\+pair (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Spawn a new pair if gap condition is satisfied. 
+
+Spawna novo par de canos conforme distância do último. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPipeList_a3fa0a58e8017e08d80a5b9cabbff7385_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_a993d7ac941ceba1eff657032df7e8fd4}\label{classPipeList_a993d7ac941ceba1eff657032df7e8fd4}} 
+\index{PipeList@{PipeList}!check\_collision@{check\_collision}}
+\index{check\_collision@{check\_collision}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{check\_collision()}{check\_collision()}}
+{\footnotesize\ttfamily bool Pipe\+List\+::check\+\_\+collision (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGameObject}{Game\+Object}} \&}]{bird }\end{DoxyParamCaption})}
+
+
+
+Check bird collision against any pipe. 
+
+Verifica colisão do pássaro com qualquer cano ativo.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bird} & \mbox{\hyperlink{classPlayer}{Player}} object (as \mbox{\hyperlink{classGameObject}{Game\+Object}}). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true if a collision is detected. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPipeList_a993d7ac941ceba1eff657032df7e8fd4_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPipeList_a993d7ac941ceba1eff657032df7e8fd4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_a05148696dde39f9b1b3bdd3154b1a67f}\label{classPipeList_a05148696dde39f9b1b3bdd3154b1a67f}} 
+\index{PipeList@{PipeList}!check\_score@{check\_score}}
+\index{check\_score@{check\_score}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{check\_score()}{check\_score()}}
+{\footnotesize\ttfamily bool Pipe\+List\+::check\+\_\+score (\begin{DoxyParamCaption}\item[{float}]{bird\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+Check if any pipe pair increments the score. 
+
+Atualiza pontuação se o pássaro ultrapassar algum cano.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bird\+\_\+x} & \mbox{\hyperlink{classBird}{Bird}} x coordinate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true if score increases. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPipeList_a05148696dde39f9b1b3bdd3154b1a67f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_ab588b7f5e210c66b0cfe754550ca4f09}\label{classPipeList_ab588b7f5e210c66b0cfe754550ca4f09}} 
+\index{PipeList@{PipeList}!delete\_pipe\_pair@{delete\_pipe\_pair}}
+\index{delete\_pipe\_pair@{delete\_pipe\_pair}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{delete\_pipe\_pair()}{delete\_pipe\_pair()}}
+{\footnotesize\ttfamily void Pipe\+List\+::delete\+\_\+pipe\+\_\+pair (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Remove pipes that left the screen. 
+
+Remove canos que saíram da tela. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPipeList_ab588b7f5e210c66b0cfe754550ca4f09_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_a4ba16ab542cc297017747954866e800a}\label{classPipeList_a4ba16ab542cc297017747954866e800a}} 
+\index{PipeList@{PipeList}!draw@{draw}}
+\index{draw@{draw}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Pipe\+List\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Draw every pipe pair. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classPipeList_a4ba16ab542cc297017747954866e800a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_a8ccd09dadff5cfd9419c88fece81921b}\label{classPipeList_a8ccd09dadff5cfd9419c88fece81921b}} 
+\index{PipeList@{PipeList}!get\_pipe\_pairs@{get\_pipe\_pairs}}
+\index{get\_pipe\_pairs@{get\_pipe\_pairs}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{get\_pipe\_pairs()}{get\_pipe\_pairs()}}
+{\footnotesize\ttfamily const std\+::vector$<$\mbox{\hyperlink{classPipePair}{Pipe\+Pair}}$>$\& Pipe\+List\+::get\+\_\+pipe\+\_\+pairs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Expose internal pipe vector (read-\/only). 
+
+\mbox{\Hypertarget{classPipeList_a1cb8ddd5cf7c71189070d14699a26b6a}\label{classPipeList_a1cb8ddd5cf7c71189070d14699a26b6a}} 
+\index{PipeList@{PipeList}!get\_points@{get\_points}}
+\index{get\_points@{get\_points}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{get\_points()}{get\_points()}}
+{\footnotesize\ttfamily int Pipe\+List\+::get\+\_\+points (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get current score. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPipeList_a1cb8ddd5cf7c71189070d14699a26b6a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_a542ce3b33a138db92365d668fd9f6e28}\label{classPipeList_a542ce3b33a138db92365d668fd9f6e28}} 
+\index{PipeList@{PipeList}!reset@{reset}}
+\index{reset@{reset}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Pipe\+List\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear list and reset all counters. 
+
+Limpa lista de canos e zera pontos. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classPipeList_a542ce3b33a138db92365d668fd9f6e28_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_ac50083f33c6f14425302c76ff6e17650}\label{classPipeList_ac50083f33c6f14425302c76ff6e17650}} 
+\index{PipeList@{PipeList}!set\_difficulty@{set\_difficulty}}
+\index{set\_difficulty@{set\_difficulty}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{set\_difficulty()}{set\_difficulty()}}
+{\footnotesize\ttfamily void Pipe\+List\+::set\+\_\+difficulty (\begin{DoxyParamCaption}\item[{int}]{diff }\end{DoxyParamCaption})}
+
+
+
+Configure difficulty (1 = static, 2 = vertical movers). 
+
+Define dificuldade (1 estático, 2 com movimento vertical). Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classPipeList_ac50083f33c6f14425302c76ff6e17650_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_a6a9ef3aaee030f0ff01c21121c549a24}\label{classPipeList_a6a9ef3aaee030f0ff01c21121c549a24}} 
+\index{PipeList@{PipeList}!set\_start@{set\_start}}
+\index{set\_start@{set\_start}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{set\_start()}{set\_start()}}
+{\footnotesize\ttfamily bool Pipe\+List\+::set\+\_\+start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Begin spawning logic (first call after game starts). 
+
+Ativa geração de canos na primeira chamada.
+
+\begin{DoxyReturn}{Retorna}
+true on first activation, false otherwise. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=329pt]{classPipeList_a6a9ef3aaee030f0ff01c21121c549a24_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_a1c8417430dd4a796ccc25481c0c1139d}\label{classPipeList_a1c8417430dd4a796ccc25481c0c1139d}} 
+\index{PipeList@{PipeList}!set\_vx@{set\_vx}}
+\index{set\_vx@{set\_vx}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{set\_vx()}{set\_vx()}}
+{\footnotesize\ttfamily void Pipe\+List\+::set\+\_\+vx (\begin{DoxyParamCaption}\item[{float}]{vel }\end{DoxyParamCaption})}
+
+
+
+Set uniform horizontal velocity for all pipes. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classPipeList_a1c8417430dd4a796ccc25481c0c1139d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPipeList_ad8b071b9187819c0d3d38f22452d6db0}\label{classPipeList_ad8b071b9187819c0d3d38f22452d6db0}} 
+\index{PipeList@{PipeList}!update@{update}}
+\index{update@{update}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Pipe\+List\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Update positions of all pipes and handle vertical motion. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{classPipeList_ad8b071b9187819c0d3d38f22452d6db0_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classPipeList_a4521887bd41e7cf2fd81d4cf33470141}\label{classPipeList_a4521887bd41e7cf2fd81d4cf33470141}} 
+\index{PipeList@{PipeList}!difficulty\_pipe@{difficulty\_pipe}}
+\index{difficulty\_pipe@{difficulty\_pipe}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{difficulty\_pipe}{difficulty\_pipe}}
+{\footnotesize\ttfamily int Pipe\+List\+::difficulty\+\_\+pipe = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+1 = static, 2 = with movers 
+
+\mbox{\Hypertarget{classPipeList_affe044de57cc6fdf15adfbd89a92ce2e}\label{classPipeList_affe044de57cc6fdf15adfbd89a92ce2e}} 
+\index{PipeList@{PipeList}!gen@{gen}}
+\index{gen@{gen}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{gen}{gen}}
+{\footnotesize\ttfamily std\+::mt19937 Pipe\+List\+::gen \{std\+::random\+\_\+device\{\}()\}\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}, {\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPipeList_a9886322d7893389a5b9eca3e2f29098a}\label{classPipeList_a9886322d7893389a5b9eca3e2f29098a}} 
+\index{PipeList@{PipeList}!pipe1@{pipe1}}
+\index{pipe1@{pipe1}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{pipe1}{pipe1}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP$\ast$ Pipe\+List\+::pipe1 = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+bitmap reference for new pipes 
+
+\mbox{\Hypertarget{classPipeList_a23f3e5354a9c54dab4f8b3224bade650}\label{classPipeList_a23f3e5354a9c54dab4f8b3224bade650}} 
+\index{PipeList@{PipeList}!Pipes@{Pipes}}
+\index{Pipes@{Pipes}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{Pipes}{Pipes}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classPipePair}{Pipe\+Pair}}$>$ Pipe\+List\+::\+Pipes\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+active pipe pairs 
+
+\mbox{\Hypertarget{classPipeList_aac78cdd7d49f7f5309dad86597c7192a}\label{classPipeList_aac78cdd7d49f7f5309dad86597c7192a}} 
+\index{PipeList@{PipeList}!points@{points}}
+\index{points@{points}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{points}{points}}
+{\footnotesize\ttfamily int Pipe\+List\+::points = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+current score 
+
+\mbox{\Hypertarget{classPipeList_a18914a6e11ee573fd454fd1f837f11eb}\label{classPipeList_a18914a6e11ee573fd454fd1f837f11eb}} 
+\index{PipeList@{PipeList}!start@{start}}
+\index{start@{start}!PipeList@{PipeList}}
+\doxysubsubsection{\texorpdfstring{start}{start}}
+{\footnotesize\ttfamily bool Pipe\+List\+::start = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+true after first pipe is spawned 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pipe_8hpp}{pipe.\+hpp}}\item 
+src/\mbox{\hyperlink{pipe_8cpp}{pipe.\+cpp}}\end{DoxyCompactItemize}

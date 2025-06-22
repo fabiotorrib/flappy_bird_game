@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/states/play.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d451e3adc68fdcbbaffa01a2ce5a922.html">states</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">play.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="play_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;../flappy_bird_controller.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;../state.hpp&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classPlay.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classPlay.html">Play</a> : <span class="keyword">public</span> <a class="code" href="classState.html">State</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classPlay.html#a5ee12e368a6bd441098676d1670e4ffd">   19</a></span>&#160;  std::unique_ptr&lt;FlappyBird&gt; <a class="code" href="classPlay.html#a5ee12e368a6bd441098676d1670e4ffd">flappy</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classPlay.html#a6db98544543844d86a17d0e02cb379b5">   20</a></span>&#160;  <a class="code" href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a> <a class="code" href="classPlay.html#a6db98544543844d86a17d0e02cb379b5">status</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classPlay.html#a84be978be0d48c8c1d3499108f481f03">   21</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classPlay.html#a84be978be0d48c8c1d3499108f481f03">logoGameOver</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classPlay.html#aab22e9f49ac1bbdba720e5039081d54a">   22</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classPlay.html#aab22e9f49ac1bbdba720e5039081d54a">buttonTryagainSelect</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classPlay.html#a3033a5e1f341d495e556be4f7d04aba2">   23</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classPlay.html#a3033a5e1f341d495e556be4f7d04aba2">buttonTryagainDeselect</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classPlay.html#a1d7f14198df0ce285346aa450d6b67b7">   24</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classPlay.html#a1d7f14198df0ce285346aa450d6b67b7">buttonExitSelect</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classPlay.html#a94592e9effdc0936b085d51a28c7a1e0">   25</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classPlay.html#a94592e9effdc0936b085d51a28c7a1e0">buttonExitDeselect</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classPlay.html#a86a3f21cb7780abe1869a5219b8a9048">   26</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classPlay.html#a86a3f21cb7780abe1869a5219b8a9048">buttonPause</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classPlay.html#a48c6a9089b92aca41c06b17764c08252">   27</a></span>&#160;  std::unique_ptr&lt;TextFont&gt; <a class="code" href="classPlay.html#a48c6a9089b92aca41c06b17764c08252">font</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classPlay.html#a7fee11d91650a500c40f645970cc439f">   28</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classPlay.html#a7fee11d91650a500c40f645970cc439f">buttonPositionSelected</a> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classPlay.html#a5b7d0cdb13088e950869b09f36a58f64">   29</a></span>&#160;  std::vector&lt;Button&gt; <a class="code" href="classPlay.html#a5b7d0cdb13088e950869b09f36a58f64">menuButtons</a> = {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      {<span class="stringliteral">&quot;TryAgain&quot;</span>, 1}, {<span class="stringliteral">&quot;Exit&quot;</span>, 0}};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="comment">// Declaração do método enter</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classPlay.html#a76a5561a1738d962b3aaa340aa0a6bd7">enter</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// Supondo a nova arquitetura</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classPlay.html#ab197358b4dd6188ad340d584ddb11846">handle_input</a>(<span class="keyword">const</span> ALLEGRO_EVENT&amp; <a class="code" href="classState.html#a87442fa864f5080096f0055856ced22b">ev</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classPlay.html#a5315ef30e6e278d20cc07c5fc5e07bdf">update</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classPlay.html#a658ac92ca655bfd00d475e9c0402f2c5">draw</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classPlay.html#a0088438837d29378e35a2beed04e64df">Play</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="ttc" id="aclassMotion_html"><div class="ttname"><a href="classMotion.html">Motion</a></div><div class="ttdoc">Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.</div><div class="ttdef"><b>Definition:</b> motion.hpp:20</div></div>
+<div class="ttc" id="aclassPlay_html"><div class="ttname"><a href="classPlay.html">Play</a></div><div class="ttdoc">Estado principal de jogo: controla loop ativo, pontuação e game over.</div><div class="ttdef"><b>Definition:</b> play.hpp:17</div></div>
+<div class="ttc" id="aclassPlay_html_a0088438837d29378e35a2beed04e64df"><div class="ttname"><a href="classPlay.html#a0088438837d29378e35a2beed04e64df">Play::Play</a></div><div class="ttdeci">Play()</div><div class="ttdoc">Construtor padrao.</div><div class="ttdef"><b>Definition:</b> play.cpp:17</div></div>
+<div class="ttc" id="aclassPlay_html_a1d7f14198df0ce285346aa450d6b67b7"><div class="ttname"><a href="classPlay.html#a1d7f14198df0ce285346aa450d6b67b7">Play::buttonExitSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonExitSelect</div><div class="ttdef"><b>Definition:</b> play.hpp:24</div></div>
+<div class="ttc" id="aclassPlay_html_a3033a5e1f341d495e556be4f7d04aba2"><div class="ttname"><a href="classPlay.html#a3033a5e1f341d495e556be4f7d04aba2">Play::buttonTryagainDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonTryagainDeselect</div><div class="ttdef"><b>Definition:</b> play.hpp:23</div></div>
+<div class="ttc" id="aclassPlay_html_a48c6a9089b92aca41c06b17764c08252"><div class="ttname"><a href="classPlay.html#a48c6a9089b92aca41c06b17764c08252">Play::font</a></div><div class="ttdeci">std::unique_ptr&lt; TextFont &gt; font</div><div class="ttdef"><b>Definition:</b> play.hpp:27</div></div>
+<div class="ttc" id="aclassPlay_html_a5315ef30e6e278d20cc07c5fc5e07bdf"><div class="ttname"><a href="classPlay.html#a5315ef30e6e278d20cc07c5fc5e07bdf">Play::update</a></div><div class="ttdeci">State * update(Motion &amp;motion) override</div><div class="ttdoc">Atualiza simulacao do jogo.</div><div class="ttdef"><b>Definition:</b> play.cpp:136</div></div>
+<div class="ttc" id="aclassPlay_html_a5b7d0cdb13088e950869b09f36a58f64"><div class="ttname"><a href="classPlay.html#a5b7d0cdb13088e950869b09f36a58f64">Play::menuButtons</a></div><div class="ttdeci">std::vector&lt; Button &gt; menuButtons</div><div class="ttdef"><b>Definition:</b> play.hpp:29</div></div>
+<div class="ttc" id="aclassPlay_html_a5ee12e368a6bd441098676d1670e4ffd"><div class="ttname"><a href="classPlay.html#a5ee12e368a6bd441098676d1670e4ffd">Play::flappy</a></div><div class="ttdeci">std::unique_ptr&lt; FlappyBird &gt; flappy</div><div class="ttdef"><b>Definition:</b> play.hpp:19</div></div>
+<div class="ttc" id="aclassPlay_html_a658ac92ca655bfd00d475e9c0402f2c5"><div class="ttname"><a href="classPlay.html#a658ac92ca655bfd00d475e9c0402f2c5">Play::draw</a></div><div class="ttdeci">void draw(Motion &amp;motion) override</div><div class="ttdoc">Renderiza cena completa.</div><div class="ttdef"><b>Definition:</b> play.cpp:161</div></div>
+<div class="ttc" id="aclassPlay_html_a6db98544543844d86a17d0e02cb379b5"><div class="ttname"><a href="classPlay.html#a6db98544543844d86a17d0e02cb379b5">Play::status</a></div><div class="ttdeci">ScreenState status</div><div class="ttdef"><b>Definition:</b> play.hpp:20</div></div>
+<div class="ttc" id="aclassPlay_html_a76a5561a1738d962b3aaa340aa0a6bd7"><div class="ttname"><a href="classPlay.html#a76a5561a1738d962b3aaa340aa0a6bd7">Play::enter</a></div><div class="ttdeci">void enter() override</div><div class="ttdoc">Inicia ou reinicia a partida.</div><div class="ttdef"><b>Definition:</b> play.cpp:36</div></div>
+<div class="ttc" id="aclassPlay_html_a7fee11d91650a500c40f645970cc439f"><div class="ttname"><a href="classPlay.html#a7fee11d91650a500c40f645970cc439f">Play::buttonPositionSelected</a></div><div class="ttdeci">int buttonPositionSelected</div><div class="ttdef"><b>Definition:</b> play.hpp:28</div></div>
+<div class="ttc" id="aclassPlay_html_a84be978be0d48c8c1d3499108f481f03"><div class="ttname"><a href="classPlay.html#a84be978be0d48c8c1d3499108f481f03">Play::logoGameOver</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; logoGameOver</div><div class="ttdef"><b>Definition:</b> play.hpp:21</div></div>
+<div class="ttc" id="aclassPlay_html_a86a3f21cb7780abe1869a5219b8a9048"><div class="ttname"><a href="classPlay.html#a86a3f21cb7780abe1869a5219b8a9048">Play::buttonPause</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonPause</div><div class="ttdef"><b>Definition:</b> play.hpp:26</div></div>
+<div class="ttc" id="aclassPlay_html_a94592e9effdc0936b085d51a28c7a1e0"><div class="ttname"><a href="classPlay.html#a94592e9effdc0936b085d51a28c7a1e0">Play::buttonExitDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonExitDeselect</div><div class="ttdef"><b>Definition:</b> play.hpp:25</div></div>
+<div class="ttc" id="aclassPlay_html_aab22e9f49ac1bbdba720e5039081d54a"><div class="ttname"><a href="classPlay.html#aab22e9f49ac1bbdba720e5039081d54a">Play::buttonTryagainSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonTryagainSelect</div><div class="ttdef"><b>Definition:</b> play.hpp:22</div></div>
+<div class="ttc" id="aclassPlay_html_ab197358b4dd6188ad340d584ddb11846"><div class="ttname"><a href="classPlay.html#ab197358b4dd6188ad340d584ddb11846">Play::handle_input</a></div><div class="ttdeci">State * handle_input(const ALLEGRO_EVENT &amp;ev) override</div><div class="ttdoc">Processa entrada do usuario.</div><div class="ttdef"><b>Definition:</b> play.cpp:52</div></div>
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Define a interface que cada tela/estado deve implementar.</div><div class="ttdef"><b>Definition:</b> state.hpp:15</div></div>
+<div class="ttc" id="aclassState_html_a87442fa864f5080096f0055856ced22b"><div class="ttname"><a href="classState.html#a87442fa864f5080096f0055856ced22b">State::ev</a></div><div class="ttdeci">static ALLEGRO_EVENT ev</div><div class="ttdef"><b>Definition:</b> state.hpp:31</div></div>
+<div class="ttc" id="adefines_8hpp_html_a5fc5d61fa8521ce5476183998579fa9b"><div class="ttname"><a href="defines_8hpp.html#a5fc5d61fa8521ce5476183998579fa9b">ScreenState</a></div><div class="ttdeci">ScreenState</div><div class="ttdef"><b>Definition:</b> defines.hpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

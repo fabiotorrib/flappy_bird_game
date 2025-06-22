@@ -2,6 +2,15 @@
 
 #include "init.hpp"
 
+/**
+ * @file game_object.hpp
+ * @brief Classe base abstrata para todos os objetos renderizáveis.
+ *
+ * Define posição, dimensões e interface para atualização/desenho.
+ * Todas as entidades que podem colidir ou ser renderizadas devem herdar
+ * desta classe e implementar os métodos puros `update()` e `draw()`.
+ */
+
 class GameObject {
  protected:
   ALLEGRO_BITMAP* obj_sprite;
@@ -11,6 +20,13 @@ class GameObject {
   float y_final, x_final;
 
  public:
+  /**
+   * @class GameObject
+   * @brief Objeto genérico do jogo contendo posição, sprite e hitbox.
+   *
+   * Fornece utilidades de colisão com retângulos e getters padronizados. As
+   * coordenadas `(x, y)` representam o canto superior-esquerdo do sprite.
+   */
   GameObject(ALLEGRO_BITMAP* img, float x, float y, float width, float height)
       : obj_sprite(img), x(x), y(y), width(width), height(height) {
   }

@@ -9,6 +9,11 @@
 #include "../flappy_bird_controller.hpp"
 #include "../state.hpp"
 
+/**
+ * @class Play
+ * @brief Estado principal de jogo: controla loop ativo, pontuação e game over.
+ */
+
 class Play : public State {
  private:
   std::unique_ptr<FlappyBird> flappy;

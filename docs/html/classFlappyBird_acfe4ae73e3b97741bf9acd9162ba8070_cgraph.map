@@ -1,0 +1,17 @@
+<map id="FlappyBird::update" name="FlappyBird::update">
+<area shape="rect" id="node1" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,225,151,251"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#aa01d41a7f7d403671d958f422e8788eb" title="Aumenta velocidade conforme pontuacao." alt="" coords="199,5,345,47"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#a4984ed1f498df20ac647f427fae92e5d" title="Adiciona / remove canos conforme necessidade." alt="" coords="199,71,345,112"/>
+<area shape="rect" id="node6" href="$classGameObject.html#a5d5fbd225b26550e9ace43672184e50b" title="Obtém coordenada X." alt="" coords="415,139,561,166"/>
+<area shape="rect" id="node7" href="$classPipeList.html#a6a9ef3aaee030f0ff01c21121c549a24" title="Begin spawning logic (first call after game starts)." alt="" coords="203,254,341,281"/>
+<area shape="rect" id="node8" href="$classPipeList.html#a1c8417430dd4a796ccc25481c0c1139d" title="Set uniform horizontal velocity for all pipes." alt="" coords="210,305,334,331"/>
+<area shape="rect" id="node9" href="$classBird.html#ae2718aad2ef1de73e399482ab6068324" title="Atualiza fisica e posicao." alt="" coords="221,355,323,382"/>
+<area shape="rect" id="node12" href="$classPipeList.html#ad8b071b9187819c0d3d38f22452d6db0" title="Update positions of all pipes and handle vertical motion." alt="" coords="209,406,335,433"/>
+<area shape="rect" id="node13" href="$classFlappyBird.html#a4458c5b09023ad145b787be7aea53605" title="Atualiza pontuacao quando passaro passa canos." alt="" coords="199,188,345,229"/>
+<area shape="rect" id="node4" href="$classPipeList.html#a3fa0a58e8017e08d80a5b9cabbff7385" title="Spawn a new pair if gap condition is satisfied." alt="" coords="402,33,574,59"/>
+<area shape="rect" id="node5" href="$classPipeList.html#ab588b7f5e210c66b0cfe754550ca4f09" title="Remove pipes that left the screen." alt="" coords="393,83,583,110"/>
+<area shape="rect" id="node10" href="$classBird.html#af260e4528dadc8849a349b1221d41160" title="Atualiza coordenada by (usada na HUD ou limites)." alt="" coords="439,330,537,357"/>
+<area shape="rect" id="node11" href="$classGameObject.html#ad94cabd831719e862ee43d9a39839215" title="Atualiza limites inferiores (x_final, y_final) para colisão." alt="" coords="401,381,575,407"/>
+<area shape="rect" id="node14" href="$classPipeList.html#a05148696dde39f9b1b3bdd3154b1a67f" title="Check if any pipe pair increments the score." alt="" coords="407,194,569,221"/>
+<area shape="rect" id="node15" href="$classPipeList.html#a1cb8ddd5cf7c71189070d14699a26b6a" title="Get current score." alt="" coords="413,245,563,271"/>
+</map>

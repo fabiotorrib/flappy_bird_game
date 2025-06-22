@@ -1,0 +1,138 @@
+\hypertarget{classTextFont}{}\doxysection{Referência da Classe Text\+Font}
+\label{classTextFont}\index{TextFont@{TextFont}}
+
+
+Wrapper para fontes bitmap/\+TTF e texto colorido.  
+
+
+
+
+{\ttfamily \#include $<$assets.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTextFont_a7789d5b58924d561719e0da3320177ee}{Text\+Font}} (const char $\ast$diretorio, int size)
+\begin{DoxyCompactList}\small\item\em Carrega uma fonte bitmap. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextFont_a5982232ad2a38c47e792f5a0f8c38a2f}{set\+Color}} (int \mbox{\hyperlink{classTextFont_a2d0a08a6decdae89f4a5d5043ab20ac3}{r}}, int \mbox{\hyperlink{classTextFont_aedaa7241065bcd5f8e70ad0427ada00c}{g}}, int \mbox{\hyperlink{classTextFont_a908d4d7ac3cc9996cec4182cd52b15e5}{b}})
+\begin{DoxyCompactList}\small\item\em Define a cor utilizada nos próximos desenhos de texto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classTextFont_ab8783b7786e2de0357e10bc8c758648d}{write\+Text}} (const char $\ast$texto, int alinhamento, float x, float y)
+\begin{DoxyCompactList}\small\item\em Desenha texto na tela. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classTextFont_afbd66b50c68b85627168568350bdcddb}{$\sim$\+Text\+Font}} ()
+\begin{DoxyCompactList}\small\item\em Libera a fonte carregada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+ALLEGRO\+\_\+\+FONT $\ast$ \mbox{\hyperlink{classTextFont_a4ca8c1a997fc8fed24b31381271b69c9}{font}} = NULL
+\item 
+int \mbox{\hyperlink{classTextFont_a2d0a08a6decdae89f4a5d5043ab20ac3}{r}}
+\item 
+int \mbox{\hyperlink{classTextFont_aedaa7241065bcd5f8e70ad0427ada00c}{g}}
+\item 
+int \mbox{\hyperlink{classTextFont_a908d4d7ac3cc9996cec4182cd52b15e5}{b}} = 0
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Wrapper para fontes bitmap/\+TTF e texto colorido. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classTextFont_a7789d5b58924d561719e0da3320177ee}\label{classTextFont_a7789d5b58924d561719e0da3320177ee}} 
+\index{TextFont@{TextFont}!TextFont@{TextFont}}
+\index{TextFont@{TextFont}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{TextFont()}{TextFont()}}
+{\footnotesize\ttfamily Text\+Font\+::\+Text\+Font (\begin{DoxyParamCaption}\item[{const char $\ast$}]{diretorio,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Carrega uma fonte bitmap. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em diretorio} & Caminho para o arquivo de fonte. \\
+\hline
+{\em size} & Tamanho em pontos. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::bad\+\_\+alloc} & Se a fonte não puder ser carregada. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classTextFont_afbd66b50c68b85627168568350bdcddb}\label{classTextFont_afbd66b50c68b85627168568350bdcddb}} 
+\index{TextFont@{TextFont}!````~TextFont@{$\sim$TextFont}}
+\index{````~TextFont@{$\sim$TextFont}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{$\sim$TextFont()}{~TextFont()}}
+{\footnotesize\ttfamily Text\+Font\+::$\sim$\+Text\+Font (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera a fonte carregada. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classTextFont_a5982232ad2a38c47e792f5a0f8c38a2f}\label{classTextFont_a5982232ad2a38c47e792f5a0f8c38a2f}} 
+\index{TextFont@{TextFont}!setColor@{setColor}}
+\index{setColor@{setColor}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{setColor()}{setColor()}}
+{\footnotesize\ttfamily void Text\+Font\+::set\+Color (\begin{DoxyParamCaption}\item[{int}]{r,  }\item[{int}]{g,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+
+
+Define a cor utilizada nos próximos desenhos de texto. 
+
+\mbox{\Hypertarget{classTextFont_ab8783b7786e2de0357e10bc8c758648d}\label{classTextFont_ab8783b7786e2de0357e10bc8c758648d}} 
+\index{TextFont@{TextFont}!writeText@{writeText}}
+\index{writeText@{writeText}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{writeText()}{writeText()}}
+{\footnotesize\ttfamily void Text\+Font\+::write\+Text (\begin{DoxyParamCaption}\item[{const char $\ast$}]{texto,  }\item[{int}]{alinhamento,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Desenha texto na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em texto} & Conteúdo a ser escrito. \\
+\hline
+{\em alinhamento} & ALLEGRO\+\_\+\+ALIGN\+\_\+\+LEFT/\+CENTRE/\+RIGHT. \\
+\hline
+{\em x} & Coordenada X. \\
+\hline
+{\em y} & Coordenada Y. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classTextFont_a908d4d7ac3cc9996cec4182cd52b15e5}\label{classTextFont_a908d4d7ac3cc9996cec4182cd52b15e5}} 
+\index{TextFont@{TextFont}!b@{b}}
+\index{b@{b}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily int Text\+Font\+::b = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTextFont_a4ca8c1a997fc8fed24b31381271b69c9}\label{classTextFont_a4ca8c1a997fc8fed24b31381271b69c9}} 
+\index{TextFont@{TextFont}!font@{font}}
+\index{font@{font}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+FONT$\ast$ Text\+Font\+::font = NULL\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTextFont_aedaa7241065bcd5f8e70ad0427ada00c}\label{classTextFont_aedaa7241065bcd5f8e70ad0427ada00c}} 
+\index{TextFont@{TextFont}!g@{g}}
+\index{g@{g}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily int Text\+Font\+::g\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classTextFont_a2d0a08a6decdae89f4a5d5043ab20ac3}\label{classTextFont_a2d0a08a6decdae89f4a5d5043ab20ac3}} 
+\index{TextFont@{TextFont}!r@{r}}
+\index{r@{r}!TextFont@{TextFont}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily int Text\+Font\+::r\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{assets_8hpp}{assets.\+hpp}}\item 
+src/\mbox{\hyperlink{assets_8cpp}{assets.\+cpp}}\end{DoxyCompactItemize}

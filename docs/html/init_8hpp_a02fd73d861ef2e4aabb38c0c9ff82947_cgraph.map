@@ -1,0 +1,5 @@
+<map id="init" name="init">
+<area shape="rect" id="node1" title="Inicializa Allegro, janela, áudio e recursos globais." alt="" coords="5,31,48,57"/>
+<area shape="rect" id="node2" href="$assets_8hpp.html#aaccab0735d858c388c02f026c7641c08" title="Carrega recursos globais utilizados em múltiplas cenas." alt="" coords="96,5,231,32"/>
+<area shape="rect" id="node3" href="$classState.html#a1af78c005ab63f5dcbd9bcd1c44bd0e6" title="Configura ponteiros globais de display e fila de eventos." alt="" coords="97,56,230,83"/>
+</map>

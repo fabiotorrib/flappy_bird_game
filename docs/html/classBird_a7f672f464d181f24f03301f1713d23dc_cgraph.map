@@ -1,0 +1,4 @@
+<map id="Bird::draw" name="Bird::draw">
+<area shape="rect" id="node1" title="Desenha sprite atual com rotacao." alt="" coords="5,5,93,32"/>
+<area shape="rect" id="node2" href="$classBird.html#a2d551d652ad508b6ba3e5702a0bdb34d" title="Gera animacao de bater de asas." alt="" coords="141,5,299,32"/>
+</map>

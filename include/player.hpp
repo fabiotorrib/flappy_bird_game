@@ -1,6 +1,15 @@
 #pragma once
-
 #include "init.hpp"
+
+/**
+ * @file player.hpp
+ * @brief Modela um jogador e operações de ranking.
+ */
+
+/**
+ * @class Player
+ * @brief Armazena nome e pontuação e provê utilidades para ranking.
+ */
 
 class Player {
  private:

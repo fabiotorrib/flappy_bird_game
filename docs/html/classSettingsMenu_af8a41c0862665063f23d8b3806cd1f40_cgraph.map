@@ -1,0 +1,5 @@
+<map id="SettingsMenu::update" name="SettingsMenu::update">
+<area shape="rect" id="node1" title="Atualiza a lógica do estado de movimento/animação de fundo." alt="" coords="5,31,169,57"/>
+<area shape="rect" id="node2" href="$classMotion.html#aa551dae9dbe0eb2b833bfb778f2007b9" title="Seleciona o cenário (1 = dia, 2 = neve, 3 = chuva)." alt="" coords="217,5,376,32"/>
+<area shape="rect" id="node3" href="$classMotion.html#a01805ce60c0e4c9aae97979dd884b59c" title="Atualiza posições dos elementos de background conforme cenário." alt="" coords="237,56,357,83"/>
+</map>

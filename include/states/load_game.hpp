@@ -23,6 +23,10 @@ enum insertNameSituations
     successInsert
 };
 
+/**
+ * @class LoadName
+ * @brief Tela de inserção de nome usada por Novo Jogo e Carregar Jogo.
+ */
 class LoadName : public State {
  public:
   State* handle_input(const ALLEGRO_EVENT& ev) override;

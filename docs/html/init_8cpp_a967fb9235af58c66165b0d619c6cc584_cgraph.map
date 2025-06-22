@@ -1,0 +1,4 @@
+<map id="deinit" name="deinit">
+<area shape="rect" id="node1" title="Libera todos os recursos e encerra o subsistema Allegro." alt="" coords="5,5,64,32"/>
+<area shape="rect" id="node2" href="$assets_8hpp.html#a4fd458c14651187b5d4541e2c281b587" title="Libera os recursos globais previamente carregados." alt="" coords="112,5,263,32"/>
+</map>

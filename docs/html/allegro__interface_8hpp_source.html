@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/allegro_interface.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">allegro_interface.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="allegro__interface_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="flappy__bird__controller_8hpp.html">flappy_bird_controller.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="init_8hpp.html">init.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="state_8hpp.html">state.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classAllegroController.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classAllegroController.html">AllegroController</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classAllegroController.html#acd5b23d9652c46a8d1d4d3cc5fd66414">   21</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classAllegroController.html#acd5b23d9652c46a8d1d4d3cc5fd66414">screen_width</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classAllegroController.html#ad08bef3ebe3d4d650455687f297f925b">   22</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classAllegroController.html#ad08bef3ebe3d4d650455687f297f925b">screen_height</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classAllegroController.html#acd7881d3ddc1ddd4f176eabebd4bdaf8">   24</a></span>&#160;  std::unique_ptr&lt;State&gt; <a class="code" href="classAllegroController.html#acd7881d3ddc1ddd4f176eabebd4bdaf8">current_state</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classAllegroController.html#ad9fe2798eb5c80ba0557304bc8a3f593">   25</a></span>&#160;  std::unique_ptr&lt;Motion&gt; <a class="code" href="classAllegroController.html#ad9fe2798eb5c80ba0557304bc8a3f593">motion</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classAllegroController.html#a699e0d51932fbe3c3d01b7b50c3f95bd">   26</a></span>&#160;  <a class="code" href="classFlappyBird.html">FlappyBird</a> <a class="code" href="classAllegroController.html#a699e0d51932fbe3c3d01b7b50c3f95bd">game</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <a class="code" href="classAllegroController.html#a80121624b294817e55607f951fd7a572">AllegroController</a>(<span class="keywordtype">float</span> screen_w, <span class="keywordtype">float</span> screen_h);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;  <a class="code" href="classAllegroController.html#afcf1f6a237eabecff71aa77ae08f66d6">~AllegroController</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classAllegroController.html#a57a3631acc6a06468a248d14e8326ff3">   32</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classAllegroController.html#a57a3631acc6a06468a248d14e8326ff3">initialize</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classAllegroController.html#aa49718fee7e580bf05acbc13880daac1">   33</a></span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classAllegroController.html#aa49718fee7e580bf05acbc13880daac1">load</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classAllegroController.html#a7ef655d56af0ed8b94b35d24675cda25">   34</a></span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classAllegroController.html#a7ef655d56af0ed8b94b35d24675cda25">cleanup</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">// Métodos de renderização</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classAllegroController.html#a4c68802b8463cf74323d7c4aa6e4597b">run</a>();</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
+<div class="ttc" id="aclassAllegroController_html"><div class="ttname"><a href="classAllegroController.html">AllegroController</a></div><div class="ttdoc">Gerencia display, eventos e transições de estados do jogo.</div><div class="ttdef"><b>Definition:</b> allegro_interface.hpp:19</div></div>
+<div class="ttc" id="aclassAllegroController_html_a4c68802b8463cf74323d7c4aa6e4597b"><div class="ttname"><a href="classAllegroController.html#a4c68802b8463cf74323d7c4aa6e4597b">AllegroController::run</a></div><div class="ttdeci">void run()</div><div class="ttdoc">Executa o loop principal do jogo.</div><div class="ttdef"><b>Definition:</b> allegro_interface.cpp:42</div></div>
+<div class="ttc" id="aclassAllegroController_html_a57a3631acc6a06468a248d14e8326ff3"><div class="ttname"><a href="classAllegroController.html#a57a3631acc6a06468a248d14e8326ff3">AllegroController::initialize</a></div><div class="ttdeci">bool initialize()</div></div>
+<div class="ttc" id="aclassAllegroController_html_a699e0d51932fbe3c3d01b7b50c3f95bd"><div class="ttname"><a href="classAllegroController.html#a699e0d51932fbe3c3d01b7b50c3f95bd">AllegroController::game</a></div><div class="ttdeci">FlappyBird game</div><div class="ttdef"><b>Definition:</b> allegro_interface.hpp:26</div></div>
+<div class="ttc" id="aclassAllegroController_html_a7ef655d56af0ed8b94b35d24675cda25"><div class="ttname"><a href="classAllegroController.html#a7ef655d56af0ed8b94b35d24675cda25">AllegroController::cleanup</a></div><div class="ttdeci">void cleanup()</div></div>
+<div class="ttc" id="aclassAllegroController_html_a80121624b294817e55607f951fd7a572"><div class="ttname"><a href="classAllegroController.html#a80121624b294817e55607f951fd7a572">AllegroController::AllegroController</a></div><div class="ttdeci">AllegroController(float screen_w, float screen_h)</div><div class="ttdef"><b>Definition:</b> allegro_interface.cpp:15</div></div>
+<div class="ttc" id="aclassAllegroController_html_aa49718fee7e580bf05acbc13880daac1"><div class="ttname"><a href="classAllegroController.html#aa49718fee7e580bf05acbc13880daac1">AllegroController::load</a></div><div class="ttdeci">bool load()</div></div>
+<div class="ttc" id="aclassAllegroController_html_acd5b23d9652c46a8d1d4d3cc5fd66414"><div class="ttname"><a href="classAllegroController.html#acd5b23d9652c46a8d1d4d3cc5fd66414">AllegroController::screen_width</a></div><div class="ttdeci">int screen_width</div><div class="ttdef"><b>Definition:</b> allegro_interface.hpp:21</div></div>
+<div class="ttc" id="aclassAllegroController_html_acd7881d3ddc1ddd4f176eabebd4bdaf8"><div class="ttname"><a href="classAllegroController.html#acd7881d3ddc1ddd4f176eabebd4bdaf8">AllegroController::current_state</a></div><div class="ttdeci">std::unique_ptr&lt; State &gt; current_state</div><div class="ttdef"><b>Definition:</b> allegro_interface.hpp:24</div></div>
+<div class="ttc" id="aclassAllegroController_html_ad08bef3ebe3d4d650455687f297f925b"><div class="ttname"><a href="classAllegroController.html#ad08bef3ebe3d4d650455687f297f925b">AllegroController::screen_height</a></div><div class="ttdeci">int screen_height</div><div class="ttdef"><b>Definition:</b> allegro_interface.hpp:22</div></div>
+<div class="ttc" id="aclassAllegroController_html_ad9fe2798eb5c80ba0557304bc8a3f593"><div class="ttname"><a href="classAllegroController.html#ad9fe2798eb5c80ba0557304bc8a3f593">AllegroController::motion</a></div><div class="ttdeci">std::unique_ptr&lt; Motion &gt; motion</div><div class="ttdef"><b>Definition:</b> allegro_interface.hpp:25</div></div>
+<div class="ttc" id="aclassAllegroController_html_afcf1f6a237eabecff71aa77ae08f66d6"><div class="ttname"><a href="classAllegroController.html#afcf1f6a237eabecff71aa77ae08f66d6">AllegroController::~AllegroController</a></div><div class="ttdeci">~AllegroController()</div><div class="ttdoc">Destrói o controlador Allegro liberando recursos.</div><div class="ttdef"><b>Definition:</b> allegro_interface.cpp:22</div></div>
+<div class="ttc" id="aclassFlappyBird_html"><div class="ttname"><a href="classFlappyBird.html">FlappyBird</a></div><div class="ttdoc">Controlador principal do jogo: orquestra objetos, HUD, pontuação e fluxo de estados.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:22</div></div>
+<div class="ttc" id="aflappy__bird__controller_8hpp_html"><div class="ttname"><a href="flappy__bird__controller_8hpp.html">flappy_bird_controller.hpp</a></div><div class="ttdoc">Declaracao da classe FlappyBird (controlador principal).</div></div>
+<div class="ttc" id="ainit_8hpp_html"><div class="ttname"><a href="init_8hpp.html">init.hpp</a></div><div class="ttdoc">Declara funções de inicialização e finalização do Allegro.</div></div>
+<div class="ttc" id="astate_8hpp_html"><div class="ttname"><a href="state_8hpp.html">state.hpp</a></div><div class="ttdoc">Interface base para estados da máquina de estados do jogo.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

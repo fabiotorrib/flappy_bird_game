@@ -1,3 +1,10 @@
+/**
+ * @file assets.hpp
+ * @brief Declara classes utilitárias para carregar e usar imagens, sons e fontes no Allegro.
+ *
+ * Fornece wrappers RAII (`Image`, `Sound`, `Music`, `TextFont`) e helpers para
+ * assets globais utilizados em vários estados da aplicação.
+ */
 #pragma once
 
 // Bibliotecas C++
@@ -26,6 +33,10 @@ void loadGlobalAssets();
 void unloadGlobalAssets();
 
 // Classes para utilização dos Assets
+/**
+ * @class Image
+ * @brief Encapsula carregamento e desenho de bitmaps.
+ */
 class Image {
  private:
   ALLEGRO_BITMAP *image = NULL;
@@ -42,6 +53,10 @@ class Image {
   }
 };
 
+/**
+ * @class Music
+ * @brief Gerencia reprodução em loop de faixas de áudio.
+ */
 class Music {
  private:
   ALLEGRO_AUDIO_STREAM *music = NULL;
@@ -52,6 +67,10 @@ class Music {
   ~Music();
 };
 
+/**
+ * @class Sound
+ * @brief Carrega e reproduz samples de efeito sonoro.
+ */
 class Sound {
  private:
   ALLEGRO_SAMPLE *sound = NULL;
@@ -62,6 +81,10 @@ class Sound {
   ~Sound();
 };
 
+/**
+ * @class TextFont
+ * @brief Wrapper para fontes bitmap/TTF e texto colorido.
+ */
 class TextFont {
  private:
   ALLEGRO_FONT *font = NULL;

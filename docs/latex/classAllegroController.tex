@@ -1,0 +1,171 @@
+\hypertarget{classAllegroController}{}\doxysection{Referência da Classe Allegro\+Controller}
+\label{classAllegroController}\index{AllegroController@{AllegroController}}
+
+
+Gerencia display, eventos e transições de estados do jogo.  
+
+
+
+
+{\ttfamily \#include $<$allegro\+\_\+interface.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Allegro\+Controller\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classAllegroController__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAllegroController_a80121624b294817e55607f951fd7a572}{Allegro\+Controller}} (float screen\+\_\+w, float screen\+\_\+h)
+\item 
+\mbox{\hyperlink{classAllegroController_afcf1f6a237eabecff71aa77ae08f66d6}{$\sim$\+Allegro\+Controller}} ()
+\begin{DoxyCompactList}\small\item\em Destrói o controlador Allegro liberando recursos. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAllegroController_a57a3631acc6a06468a248d14e8326ff3}{initialize}} ()
+\item 
+bool \mbox{\hyperlink{classAllegroController_aa49718fee7e580bf05acbc13880daac1}{load}} ()
+\item 
+void \mbox{\hyperlink{classAllegroController_a7ef655d56af0ed8b94b35d24675cda25}{cleanup}} ()
+\item 
+void \mbox{\hyperlink{classAllegroController_a4c68802b8463cf74323d7c4aa6e4597b}{run}} ()
+\begin{DoxyCompactList}\small\item\em Executa o loop principal do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classAllegroController_acd5b23d9652c46a8d1d4d3cc5fd66414}{screen\+\_\+width}}
+\item 
+int \mbox{\hyperlink{classAllegroController_ad08bef3ebe3d4d650455687f297f925b}{screen\+\_\+height}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classState}{State}} $>$ \mbox{\hyperlink{classAllegroController_acd7881d3ddc1ddd4f176eabebd4bdaf8}{current\+\_\+state}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classMotion}{Motion}} $>$ \mbox{\hyperlink{classAllegroController_ad9fe2798eb5c80ba0557304bc8a3f593}{motion}}
+\item 
+\mbox{\hyperlink{classFlappyBird}{Flappy\+Bird}} \mbox{\hyperlink{classAllegroController_a699e0d51932fbe3c3d01b7b50c3f95bd}{game}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia display, eventos e transições de estados do jogo. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classAllegroController_a80121624b294817e55607f951fd7a572}\label{classAllegroController_a80121624b294817e55607f951fd7a572}} 
+\index{AllegroController@{AllegroController}!AllegroController@{AllegroController}}
+\index{AllegroController@{AllegroController}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{AllegroController()}{AllegroController()}}
+{\footnotesize\ttfamily Allegro\+Controller\+::\+Allegro\+Controller (\begin{DoxyParamCaption}\item[{float}]{screen\+\_\+w,  }\item[{float}]{screen\+\_\+h }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAllegroController_afcf1f6a237eabecff71aa77ae08f66d6}\label{classAllegroController_afcf1f6a237eabecff71aa77ae08f66d6}} 
+\index{AllegroController@{AllegroController}!````~AllegroController@{$\sim$AllegroController}}
+\index{````~AllegroController@{$\sim$AllegroController}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{$\sim$AllegroController()}{~AllegroController()}}
+{\footnotesize\ttfamily Allegro\+Controller\+::$\sim$\+Allegro\+Controller (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destrói o controlador Allegro liberando recursos. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classAllegroController_a7ef655d56af0ed8b94b35d24675cda25}\label{classAllegroController_a7ef655d56af0ed8b94b35d24675cda25}} 
+\index{AllegroController@{AllegroController}!cleanup@{cleanup}}
+\index{cleanup@{cleanup}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{cleanup()}{cleanup()}}
+{\footnotesize\ttfamily void Allegro\+Controller\+::cleanup (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAllegroController_a57a3631acc6a06468a248d14e8326ff3}\label{classAllegroController_a57a3631acc6a06468a248d14e8326ff3}} 
+\index{AllegroController@{AllegroController}!initialize@{initialize}}
+\index{initialize@{initialize}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily bool Allegro\+Controller\+::initialize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAllegroController_aa49718fee7e580bf05acbc13880daac1}\label{classAllegroController_aa49718fee7e580bf05acbc13880daac1}} 
+\index{AllegroController@{AllegroController}!load@{load}}
+\index{load@{load}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily bool Allegro\+Controller\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{classAllegroController_a4c68802b8463cf74323d7c4aa6e4597b}\label{classAllegroController_a4c68802b8463cf74323d7c4aa6e4597b}} 
+\index{AllegroController@{AllegroController}!run@{run}}
+\index{run@{run}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void Allegro\+Controller\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Executa o loop principal do jogo. 
+
+O método é dividido em quatro fases recorrentes\+:
+\begin{DoxyEnumerate}
+\item {\bfseries{Input}} – aguarda um {\ttfamily ALLEGRO\+\_\+\+EVENT} na fila e encaminha-\/o ao estado ativo para tratamento de entrada.
+\item {\bfseries{Update}} – em eventos de timer, avança a lógica do jogo e dos objetos via \mbox{\hyperlink{classMotion}{Motion}}.
+\item {\bfseries{Render}} – redesenha a cena quando necessário e a fila de eventos está vazia.
+\item {\bfseries{\mbox{\hyperlink{classState}{State}} Transition}} – se o estado ativo retornar um ponteiro diferente, realiza a troca, destruindo o estado anterior e chamando {\ttfamily enter()} no novo estado.
+\end{DoxyEnumerate}
+
+O loop continua até que {\ttfamily current\+\_\+state} se torne {\ttfamily nullptr} (por exemplo, quando o usuário fecha a janela). Inicializa os componentes que o controller gerencia.
+
+Chama o método de inicialização do primeiro estado.
+
+Espera por um novo evento na fila. O programa fica bloqueado aqui até que algo aconteça, economizando CPU.
+
+--- Fase 1\+: Processar Entradas (Input) --- Delega o tratamento do evento para o estado ativo atual.
+
+--- Fase 2\+: Atualizar a Lógica (Update) --- A lógica do jogo avança em resposta a um evento do timer.
+
+--- Tratamento de Eventos Globais ---
+
+--- Fase 3\+: Desenhar os Gráficos (Render) --- Só redesenha se necessário e se não houver mais eventos na fila.
+
+--- Fase 4\+: Transição de Estado --- Se handle\+\_\+input ou update retornaram um novo estado, fazemos a transição.Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=278pt]{classAllegroController_a4c68802b8463cf74323d7c4aa6e4597b_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classAllegroController_acd7881d3ddc1ddd4f176eabebd4bdaf8}\label{classAllegroController_acd7881d3ddc1ddd4f176eabebd4bdaf8}} 
+\index{AllegroController@{AllegroController}!current\_state@{current\_state}}
+\index{current\_state@{current\_state}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{current\_state}{current\_state}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classState}{State}}$>$ Allegro\+Controller\+::current\+\_\+state\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAllegroController_a699e0d51932fbe3c3d01b7b50c3f95bd}\label{classAllegroController_a699e0d51932fbe3c3d01b7b50c3f95bd}} 
+\index{AllegroController@{AllegroController}!game@{game}}
+\index{game@{game}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{game}{game}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classFlappyBird}{Flappy\+Bird}} Allegro\+Controller\+::game\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAllegroController_ad9fe2798eb5c80ba0557304bc8a3f593}\label{classAllegroController_ad9fe2798eb5c80ba0557304bc8a3f593}} 
+\index{AllegroController@{AllegroController}!motion@{motion}}
+\index{motion@{motion}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{motion}{motion}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classMotion}{Motion}}$>$ Allegro\+Controller\+::motion\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAllegroController_ad08bef3ebe3d4d650455687f297f925b}\label{classAllegroController_ad08bef3ebe3d4d650455687f297f925b}} 
+\index{AllegroController@{AllegroController}!screen\_height@{screen\_height}}
+\index{screen\_height@{screen\_height}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{screen\_height}{screen\_height}}
+{\footnotesize\ttfamily int Allegro\+Controller\+::screen\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classAllegroController_acd5b23d9652c46a8d1d4d3cc5fd66414}\label{classAllegroController_acd5b23d9652c46a8d1d4d3cc5fd66414}} 
+\index{AllegroController@{AllegroController}!screen\_width@{screen\_width}}
+\index{screen\_width@{screen\_width}!AllegroController@{AllegroController}}
+\doxysubsubsection{\texorpdfstring{screen\_width}{screen\_width}}
+{\footnotesize\ttfamily int Allegro\+Controller\+::screen\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{allegro__interface_8hpp}{allegro\+\_\+interface.\+hpp}}\item 
+src/\mbox{\hyperlink{allegro__interface_8cpp}{allegro\+\_\+interface.\+cpp}}\end{DoxyCompactItemize}

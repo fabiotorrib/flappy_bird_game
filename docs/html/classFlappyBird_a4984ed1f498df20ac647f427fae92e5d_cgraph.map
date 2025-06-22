@@ -1,0 +1,5 @@
+<map id="FlappyBird::control_pipes" name="FlappyBird::control_pipes">
+<area shape="rect" id="node1" title="Adiciona / remove canos conforme necessidade." alt="" coords="5,23,151,65"/>
+<area shape="rect" id="node2" href="$classPipeList.html#a3fa0a58e8017e08d80a5b9cabbff7385" title="Spawn a new pair if gap condition is satisfied." alt="" coords="207,5,379,32"/>
+<area shape="rect" id="node3" href="$classPipeList.html#ab588b7f5e210c66b0cfe754550ca4f09" title="Remove pipes that left the screen." alt="" coords="199,56,388,83"/>
+</map>

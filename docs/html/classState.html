@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Referência da Classe State</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pub-static-methods">Membros Públicos Estáticos</a> &#124;
+<a href="#pro-static-attribs">Atributos Estáticos Protegidos</a> &#124;
+<a href="classState-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe State<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Define a interface que cada tela/estado deve implementar.  
+ <a href="classState.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="state_8hpp_source.html">state.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia para State:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classState__inherit__graph.svg" width="734" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:a783d52422b544bb226e13de8ecfd6ad6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a783d52422b544bb226e13de8ecfd6ad6">~State</a> ()=default</td></tr>
+<tr class="separator:a783d52422b544bb226e13de8ecfd6ad6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6f6690bd4386c2264d5bd6a3b0e746b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#ab6f6690bd4386c2264d5bd6a3b0e746b">draw</a> (<a class="el" href="classMotion.html">Motion</a> &amp;motion)=0</td></tr>
+<tr class="separator:ab6f6690bd4386c2264d5bd6a3b0e746b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7f906fde44230c1b9741367de7a274a"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classState.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#ae7f906fde44230c1b9741367de7a274a">update</a> (<a class="el" href="classMotion.html">Motion</a> &amp;motion)=0</td></tr>
+<tr class="separator:ae7f906fde44230c1b9741367de7a274a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09f92cba8c60fb0eb0931e42613f8f64"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classState.html">State</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a09f92cba8c60fb0eb0931e42613f8f64">handle_input</a> (const ALLEGRO_EVENT &amp;<a class="el" href="classState.html#a87442fa864f5080096f0055856ced22b">ev</a>)=0</td></tr>
+<tr class="separator:a09f92cba8c60fb0eb0931e42613f8f64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f6c95c60d9c66bd1c5dd7425bfc764c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a4f6c95c60d9c66bd1c5dd7425bfc764c">enter</a> ()=0</td></tr>
+<tr class="separator:a4f6c95c60d9c66bd1c5dd7425bfc764c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Membros Públicos Estáticos</h2></td></tr>
+<tr class="memitem:a1af78c005ab63f5dcbd9bcd1c44bd0e6"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a1af78c005ab63f5dcbd9bcd1c44bd0e6">setGlobals</a> (ALLEGRO_DISPLAY *d, ALLEGRO_EVENT_QUEUE *q)</td></tr>
+<tr class="memdesc:a1af78c005ab63f5dcbd9bcd1c44bd0e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura ponteiros globais de display e fila de eventos.  <a href="classState.html#a1af78c005ab63f5dcbd9bcd1c44bd0e6">Mais...</a><br /></td></tr>
+<tr class="separator:a1af78c005ab63f5dcbd9bcd1c44bd0e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
+Atributos Estáticos Protegidos</h2></td></tr>
+<tr class="memitem:a464196f7580195a34f4c8457fcffc9e1"><td class="memItemLeft" align="right" valign="top">static ALLEGRO_DISPLAY *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a464196f7580195a34f4c8457fcffc9e1">display</a> = nullptr</td></tr>
+<tr class="separator:a464196f7580195a34f4c8457fcffc9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88792829012b2507033b9ed4ccf14a7"><td class="memItemLeft" align="right" valign="top">static ALLEGRO_EVENT_QUEUE *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#af88792829012b2507033b9ed4ccf14a7">queue</a> = nullptr</td></tr>
+<tr class="separator:af88792829012b2507033b9ed4ccf14a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87442fa864f5080096f0055856ced22b"><td class="memItemLeft" align="right" valign="top">static ALLEGRO_EVENT&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classState.html#a87442fa864f5080096f0055856ced22b">ev</a></td></tr>
+<tr class="separator:a87442fa864f5080096f0055856ced22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Define a interface que cada tela/estado deve implementar. </p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="a783d52422b544bb226e13de8ecfd6ad6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a783d52422b544bb226e13de8ecfd6ad6">&#9670;&nbsp;</a></span>~State()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual State::~State </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="ab6f6690bd4386c2264d5bd6a3b0e746b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6f6690bd4386c2264d5bd6a3b0e746b">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void State::draw </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMotion.html">Motion</a> &amp;&#160;</td>
+          <td class="paramname"><em>motion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementado por <a class="el" href="classSettingsMenu.html#afb7ad08f3b72956a39624f6667b7ebe1">SettingsMenu</a>, <a class="el" href="classPlay.html#a658ac92ca655bfd00d475e9c0402f2c5">Play</a>, <a class="el" href="classMainMenu.html#acb76d4f007c328dab0a34bfe379128e2">MainMenu</a>, <a class="el" href="classLoadName.html#a44a209d257f203588c151ceaf8d7607e">LoadName</a>, <a class="el" href="classLeaderboardMenu.html#af5be1d3eea81adbc7822eaa4697cd9c4">LeaderboardMenu</a> e <a class="el" href="classDifficultyMenu.html#acace55cbd6b946a87e133cfed19594f2">DifficultyMenu</a>.</p>
+
+</div>
+</div>
+<a id="a4f6c95c60d9c66bd1c5dd7425bfc764c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f6c95c60d9c66bd1c5dd7425bfc764c">&#9670;&nbsp;</a></span>enter()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void State::enter </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementado por <a class="el" href="classSettingsMenu.html#ac6d396cea151665ba193349de8562aaf">SettingsMenu</a>, <a class="el" href="classPlay.html#a76a5561a1738d962b3aaa340aa0a6bd7">Play</a>, <a class="el" href="classMainMenu.html#a69002a178254c429c2dd4adb24241ca4">MainMenu</a>, <a class="el" href="classLoadName.html#ae171ebd3932f6c31c018c851cc7105dc">LoadName</a>, <a class="el" href="classLeaderboardMenu.html#a7eb26a277cc3ff52e703921a69f24fe4">LeaderboardMenu</a> e <a class="el" href="classDifficultyMenu.html#a1f0520bf92dbfb6c965b436d14343961">DifficultyMenu</a>.</p>
+
+</div>
+</div>
+<a id="a09f92cba8c60fb0eb0931e42613f8f64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a09f92cba8c60fb0eb0931e42613f8f64">&#9670;&nbsp;</a></span>handle_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classState.html">State</a>* State::handle_input </td>
+          <td>(</td>
+          <td class="paramtype">const ALLEGRO_EVENT &amp;&#160;</td>
+          <td class="paramname"><em>ev</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementado por <a class="el" href="classSettingsMenu.html#ab56829575314f2fe3b6bb3dceb37dffa">SettingsMenu</a>, <a class="el" href="classPlay.html#ab197358b4dd6188ad340d584ddb11846">Play</a>, <a class="el" href="classMainMenu.html#ac248f0940004258153f8e4172a9a697b">MainMenu</a>, <a class="el" href="classLoadName.html#a5ce4fb95dd055fc1530a548149a15cda">LoadName</a>, <a class="el" href="classLeaderboardMenu.html#a12c79190706d52e31815cf3992ca9f35">LeaderboardMenu</a> e <a class="el" href="classDifficultyMenu.html#a280e5b4a774adb3df636a249e2d489b9">DifficultyMenu</a>.</p>
+
+</div>
+</div>
+<a id="a1af78c005ab63f5dcbd9bcd1c44bd0e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1af78c005ab63f5dcbd9bcd1c44bd0e6">&#9670;&nbsp;</a></span>setGlobals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void State::setGlobals </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_DISPLAY *&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ALLEGRO_EVENT_QUEUE *&#160;</td>
+          <td class="paramname"><em>q</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Configura ponteiros globais de display e fila de eventos. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classState_a1af78c005ab63f5dcbd9bcd1c44bd0e6_icgraph.svg" width="338" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ae7f906fde44230c1b9741367de7a274a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae7f906fde44230c1b9741367de7a274a">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classState.html">State</a>* State::update </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classMotion.html">Motion</a> &amp;&#160;</td>
+          <td class="paramname"><em>motion</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementado por <a class="el" href="classSettingsMenu.html#af8a41c0862665063f23d8b3806cd1f40">SettingsMenu</a>, <a class="el" href="classPlay.html#a5315ef30e6e278d20cc07c5fc5e07bdf">Play</a>, <a class="el" href="classMainMenu.html#a00df3d6357e26f276850cc02e5a9cc46">MainMenu</a>, <a class="el" href="classLoadName.html#a7eae3d9938449ae7c1f43b0261f62293">LoadName</a>, <a class="el" href="classLeaderboardMenu.html#a8e73c70836903711bc8599b8780be61b">LeaderboardMenu</a> e <a class="el" href="classDifficultyMenu.html#a024907d1a77fef3b969a90dc2cc2f26f">DifficultyMenu</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="a464196f7580195a34f4c8457fcffc9e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a464196f7580195a34f4c8457fcffc9e1">&#9670;&nbsp;</a></span>display</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_DISPLAY * State::display = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a87442fa864f5080096f0055856ced22b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87442fa864f5080096f0055856ced22b">&#9670;&nbsp;</a></span>ev</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_EVENT State::ev</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af88792829012b2507033b9ed4ccf14a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af88792829012b2507033b9ed4ccf14a7">&#9670;&nbsp;</a></span>queue</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_EVENT_QUEUE * State::queue = nullptr</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="state_8hpp_source.html">state.hpp</a></li>
+<li>src/<a class="el" href="state_8cpp.html">state.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

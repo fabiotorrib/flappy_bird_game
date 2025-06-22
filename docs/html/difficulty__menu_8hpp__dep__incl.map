@@ -1,0 +1,5 @@
+<map id="include/states/difficulty_menu.hpp" name="include/states/difficulty_menu.hpp">
+<area shape="rect" id="node1" title="Definição da classe DifficultyMenu, que representa o estado do menu de seleção de dificuldade." alt="" coords="89,5,263,47"/>
+<area shape="rect" id="node2" href="$difficulty__menu_8cpp.html" title="Implementação da classe DifficultyMenu, que gerencia a tela de seleção de dificuldade." alt="" coords="5,95,152,136"/>
+<area shape="rect" id="node3" href="$main__menu_8cpp.html" title="Implementação da classe MainMenu, o estado principal e tela inicial do jogo." alt="" coords="177,102,370,129"/>
+</map>

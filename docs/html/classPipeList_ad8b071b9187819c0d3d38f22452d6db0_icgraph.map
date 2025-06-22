@@ -1,0 +1,4 @@
+<map id="PipeList::update" name="PipeList::update">
+<area shape="rect" id="node1" title="Update positions of all pipes and handle vertical motion." alt="" coords="199,5,325,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,5,151,32"/>
+</map>

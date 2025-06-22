@@ -1,0 +1,109 @@
+\hypertarget{assets_8hpp}{}\doxysection{Referência do Arquivo include/assets.hpp}
+\label{assets_8hpp}\index{include/assets.hpp@{include/assets.hpp}}
+
+
+Declara classes utilitárias para carregar e usar imagens, sons e fontes no Allegro.  
+
+
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+acodec.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+audio.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+native\+\_\+dialog.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+primitives.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+ttf.\+h$>$}\newline
+Gráfico de dependência de inclusões para assets.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{assets_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{assets_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classImage}{Image}}
+\begin{DoxyCompactList}\small\item\em Encapsula carregamento e desenho de bitmaps. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classMusic}{Music}}
+\begin{DoxyCompactList}\small\item\em Gerencia reprodução em loop de faixas de áudio. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classSound}{Sound}}
+\begin{DoxyCompactList}\small\item\em Carrega e reproduz samples de efeito sonoro. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classTextFont}{Text\+Font}}
+\begin{DoxyCompactList}\small\item\em Wrapper para fontes bitmap/\+TTF e texto colorido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{assets_8hpp_aaccab0735d858c388c02f026c7641c08}{load\+Global\+Assets}} ()
+\begin{DoxyCompactList}\small\item\em Carrega recursos globais utilizados em múltiplas cenas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assets_8hpp_a4fd458c14651187b5d4541e2c281b587}{unload\+Global\+Assets}} ()
+\begin{DoxyCompactList}\small\item\em Libera os recursos globais previamente carregados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSound}{Sound}} $>$ \mbox{\hyperlink{assets_8hpp_aeaa41bb3528a365751d709ce587cef53}{select\+Sound}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Declara classes utilitárias para carregar e usar imagens, sons e fontes no Allegro. 
+
+Fornece wrappers RAII ({\ttfamily \mbox{\hyperlink{classImage}{Image}}}, {\ttfamily \mbox{\hyperlink{classSound}{Sound}}}, {\ttfamily \mbox{\hyperlink{classMusic}{Music}}}, {\ttfamily \mbox{\hyperlink{classTextFont}{Text\+Font}}}) e helpers para assets globais utilizados em vários estados da aplicação. 
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{assets_8hpp_aaccab0735d858c388c02f026c7641c08}\label{assets_8hpp_aaccab0735d858c388c02f026c7641c08}} 
+\index{assets.hpp@{assets.hpp}!loadGlobalAssets@{loadGlobalAssets}}
+\index{loadGlobalAssets@{loadGlobalAssets}!assets.hpp@{assets.hpp}}
+\doxysubsubsection{\texorpdfstring{loadGlobalAssets()}{loadGlobalAssets()}}
+{\footnotesize\ttfamily void load\+Global\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carrega recursos globais utilizados em múltiplas cenas. 
+
+Atualmente apenas o efeito de som de seleção de menu é carregado, porém a função pode ser estendida para outros assets compartilhados. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{assets_8hpp_aaccab0735d858c388c02f026c7641c08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{assets_8hpp_a4fd458c14651187b5d4541e2c281b587}\label{assets_8hpp_a4fd458c14651187b5d4541e2c281b587}} 
+\index{assets.hpp@{assets.hpp}!unloadGlobalAssets@{unloadGlobalAssets}}
+\index{unloadGlobalAssets@{unloadGlobalAssets}!assets.hpp@{assets.hpp}}
+\doxysubsubsection{\texorpdfstring{unloadGlobalAssets()}{unloadGlobalAssets()}}
+{\footnotesize\ttfamily void unload\+Global\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera os recursos globais previamente carregados. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{assets_8hpp_a4fd458c14651187b5d4541e2c281b587_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{assets_8hpp_aeaa41bb3528a365751d709ce587cef53}\label{assets_8hpp_aeaa41bb3528a365751d709ce587cef53}} 
+\index{assets.hpp@{assets.hpp}!selectSound@{selectSound}}
+\index{selectSound@{selectSound}!assets.hpp@{assets.hpp}}
+\doxysubsubsection{\texorpdfstring{selectSound}{selectSound}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classSound}{Sound}}$>$ select\+Sound\hspace{0.3cm}{\ttfamily [extern]}}
+

@@ -1,0 +1,94 @@
+\hypertarget{classSound}{}\doxysection{Referência da Classe Sound}
+\label{classSound}\index{Sound@{Sound}}
+
+
+Carrega e reproduz samples de efeito sonoro.  
+
+
+
+
+{\ttfamily \#include $<$assets.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classSound_a1c505aa8fccd6422b8eb69adbb933d59}{Sound}} (const char $\ast$diretorio)
+\begin{DoxyCompactList}\small\item\em Carrega um efeito sonoro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSound_a28ed6f8b69914467609f6682d3f776bd}{play\+Sound}} (float volume)
+\begin{DoxyCompactList}\small\item\em Reproduz o efeito sonoro uma única vez. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSound_a0907389078bf740be2a5763366ad3376}{$\sim$\+Sound}} ()
+\begin{DoxyCompactList}\small\item\em Libera o sample de áudio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+ALLEGRO\+\_\+\+SAMPLE $\ast$ \mbox{\hyperlink{classSound_ab84b6e7e172759e5188d2c294f7f90a4}{sound}} = NULL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Carrega e reproduz samples de efeito sonoro. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classSound_a1c505aa8fccd6422b8eb69adbb933d59}\label{classSound_a1c505aa8fccd6422b8eb69adbb933d59}} 
+\index{Sound@{Sound}!Sound@{Sound}}
+\index{Sound@{Sound}!Sound@{Sound}}
+\doxysubsubsection{\texorpdfstring{Sound()}{Sound()}}
+{\footnotesize\ttfamily Sound\+::\+Sound (\begin{DoxyParamCaption}\item[{const char $\ast$}]{diretorio }\end{DoxyParamCaption})}
+
+
+
+Carrega um efeito sonoro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em diretorio} & Caminho do arquivo de som. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::bad\+\_\+alloc} & Caso o sample não seja carregado. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classSound_a0907389078bf740be2a5763366ad3376}\label{classSound_a0907389078bf740be2a5763366ad3376}} 
+\index{Sound@{Sound}!````~Sound@{$\sim$Sound}}
+\index{````~Sound@{$\sim$Sound}!Sound@{Sound}}
+\doxysubsubsection{\texorpdfstring{$\sim$Sound()}{~Sound()}}
+{\footnotesize\ttfamily Sound\+::$\sim$\+Sound (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera o sample de áudio. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classSound_a28ed6f8b69914467609f6682d3f776bd}\label{classSound_a28ed6f8b69914467609f6682d3f776bd}} 
+\index{Sound@{Sound}!playSound@{playSound}}
+\index{playSound@{playSound}!Sound@{Sound}}
+\doxysubsubsection{\texorpdfstring{playSound()}{playSound()}}
+{\footnotesize\ttfamily void Sound\+::play\+Sound (\begin{DoxyParamCaption}\item[{float}]{volume }\end{DoxyParamCaption})}
+
+
+
+Reproduz o efeito sonoro uma única vez. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em volume} & Volume de 0.\+0 a 1.\+0. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classSound_ab84b6e7e172759e5188d2c294f7f90a4}\label{classSound_ab84b6e7e172759e5188d2c294f7f90a4}} 
+\index{Sound@{Sound}!sound@{sound}}
+\index{sound@{sound}!Sound@{Sound}}
+\doxysubsubsection{\texorpdfstring{sound}{sound}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+SAMPLE$\ast$ Sound\+::sound = NULL\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{assets_8hpp}{assets.\+hpp}}\item 
+src/\mbox{\hyperlink{assets_8cpp}{assets.\+cpp}}\end{DoxyCompactItemize}

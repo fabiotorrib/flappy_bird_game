@@ -1,0 +1,5 @@
+<map id="GameObject::check_bird_collision" name="GameObject::check_bird_collision">
+<area shape="rect" id="node1" title="Verifica colisão entre este objeto e outro." alt="" coords="488,5,669,47"/>
+<area shape="rect" id="node2" href="$classPipeList.html#a993d7ac941ceba1eff657032df7e8fd4" title="Check bird collision against any pipe." alt="" coords="260,13,440,39"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#a229cec49a07214226a449da13eb90f9d" title="Verifica colisao entre passaro, limites ou canos." alt="" coords="5,13,212,39"/>
+</map>

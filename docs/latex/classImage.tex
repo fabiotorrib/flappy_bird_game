@@ -1,0 +1,158 @@
+\hypertarget{classImage}{}\doxysection{Referência da Classe Image}
+\label{classImage}\index{Image@{Image}}
+
+
+Encapsula carregamento e desenho de bitmaps.  
+
+
+
+
+{\ttfamily \#include $<$assets.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classImage_abf12ec1606f2696d2936d6b71529ba2e}{Image}} (const char $\ast$diretorio)
+\begin{DoxyCompactList}\small\item\em Constrói uma imagem fora da tela. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a0b1935b6c3aaf36e9d21bcad49c81989}{Image}} (const char $\ast$diretorio, float \mbox{\hyperlink{classImage_a7e83840fc7b8e9cf561b27186bcc731d}{x}}, float \mbox{\hyperlink{classImage_af99b5fd2ca6260e569f114b56390b644}{y}})
+\begin{DoxyCompactList}\small\item\em Constrói uma imagem posicionada em coordenadas específicas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_aebdbe3b075aea9a5b792b3d587fc2141}{Draw}} (float \mbox{\hyperlink{classImage_a7e83840fc7b8e9cf561b27186bcc731d}{x}}, float \mbox{\hyperlink{classImage_af99b5fd2ca6260e569f114b56390b644}{y}})
+\begin{DoxyCompactList}\small\item\em Desenha a imagem nas coordenadas especificadas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classImage_a91bdaa8f38faaa8374ec4e6dc1810782}{Draw}} ()
+\begin{DoxyCompactList}\small\item\em Desenha a imagem usando as coordenadas internas armazenadas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classImage_a0294f63700543e11c0f0da85601c7ae5}{$\sim$\+Image}} ()
+\begin{DoxyCompactList}\small\item\em Libera o bitmap associado. \end{DoxyCompactList}\item 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{classImage_ad49ccd43ff580ca7a36812d9cbffdb40}{get\+Bitmap}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{classImage_a48911c76fc670b89a89b3a3d4dc5bd0e}{image}} = NULL
+\item 
+float \mbox{\hyperlink{classImage_a7e83840fc7b8e9cf561b27186bcc731d}{x}}
+\item 
+float \mbox{\hyperlink{classImage_af99b5fd2ca6260e569f114b56390b644}{y}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Encapsula carregamento e desenho de bitmaps. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classImage_abf12ec1606f2696d2936d6b71529ba2e}\label{classImage_abf12ec1606f2696d2936d6b71529ba2e}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{diretorio }\end{DoxyParamCaption})}
+
+
+
+Constrói uma imagem fora da tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em diretorio} & Caminho do arquivo de imagem.\\
+\hline
+\end{DoxyParams}
+Define a posição inicial fora da área visível para evitar flickering até que o programador defina coordenadas de desenho. 
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::bad\+\_\+alloc} & Se {\ttfamily diretorio} não puder ser carregado. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classImage_a0b1935b6c3aaf36e9d21bcad49c81989}\label{classImage_a0b1935b6c3aaf36e9d21bcad49c81989}} 
+\index{Image@{Image}!Image@{Image}}
+\index{Image@{Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Image()}{Image()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Image\+::\+Image (\begin{DoxyParamCaption}\item[{const char $\ast$}]{diretorio,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Constrói uma imagem posicionada em coordenadas específicas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em diretorio} & Caminho do bitmap. \\
+\hline
+{\em x} & Coordenada X. \\
+\hline
+{\em y} & Coordenada Y. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceções}
+{\em std\+::bad\+\_\+alloc} & Se a imagem não puder ser carregada. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classImage_a0294f63700543e11c0f0da85601c7ae5}\label{classImage_a0294f63700543e11c0f0da85601c7ae5}} 
+\index{Image@{Image}!````~Image@{$\sim$Image}}
+\index{````~Image@{$\sim$Image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{$\sim$Image()}{~Image()}}
+{\footnotesize\ttfamily Image\+::$\sim$\+Image (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera o bitmap associado. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classImage_a91bdaa8f38faaa8374ec4e6dc1810782}\label{classImage_a91bdaa8f38faaa8374ec4e6dc1810782}} 
+\index{Image@{Image}!Draw@{Draw}}
+\index{Draw@{Draw}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Image\+::\+Draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desenha a imagem usando as coordenadas internas armazenadas. 
+
+\mbox{\Hypertarget{classImage_aebdbe3b075aea9a5b792b3d587fc2141}\label{classImage_aebdbe3b075aea9a5b792b3d587fc2141}} 
+\index{Image@{Image}!Draw@{Draw}}
+\index{Draw@{Draw}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Image\+::\+Draw (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})}
+
+
+
+Desenha a imagem nas coordenadas especificadas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em x} & Posição X. \\
+\hline
+{\em y} & Posição Y. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classImage_ad49ccd43ff580ca7a36812d9cbffdb40}\label{classImage_ad49ccd43ff580ca7a36812d9cbffdb40}} 
+\index{Image@{Image}!getBitmap@{getBitmap}}
+\index{getBitmap@{getBitmap}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{getBitmap()}{getBitmap()}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP$\ast$ Image\+::get\+Bitmap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classImage_a48911c76fc670b89a89b3a3d4dc5bd0e}\label{classImage_a48911c76fc670b89a89b3a3d4dc5bd0e}} 
+\index{Image@{Image}!image@{image}}
+\index{image@{image}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{image}{image}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP$\ast$ Image\+::image = NULL\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classImage_a7e83840fc7b8e9cf561b27186bcc731d}\label{classImage_a7e83840fc7b8e9cf561b27186bcc731d}} 
+\index{Image@{Image}!x@{x}}
+\index{x@{x}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily float Image\+::x\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classImage_af99b5fd2ca6260e569f114b56390b644}\label{classImage_af99b5fd2ca6260e569f114b56390b644}} 
+\index{Image@{Image}!y@{y}}
+\index{y@{y}!Image@{Image}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily float Image\+::y\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{assets_8hpp}{assets.\+hpp}}\item 
+src/\mbox{\hyperlink{assets_8cpp}{assets.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,26 @@
+\hypertarget{allegro__interface_8cpp}{}\doxysection{Referência do Arquivo src/allegro\+\_\+interface.cpp}
+\label{allegro__interface_8cpp}\index{src/allegro\_interface.cpp@{src/allegro\_interface.cpp}}
+
+
+Implementação do controlador principal que integra Allegro às lógicas de estado do jogo.  
+
+
+{\ttfamily \#include \char`\"{}../include/allegro\+\_\+interface.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/init.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/state.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/states/main\+\_\+menu.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../include/states/play.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para allegro\+\_\+interface.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{allegro__interface_8cpp__incl}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação do controlador principal que integra Allegro às lógicas de estado do jogo. 
+
+Este arquivo contém a implementação do {\ttfamily \mbox{\hyperlink{classAllegroController}{Allegro\+Controller}}}, responsável por inicializar o primeiro estado, executar o loop de eventos da biblioteca Allegro e orquestrar transições de estado, atualizações e renderizações. 

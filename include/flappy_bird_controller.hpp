@@ -15,6 +15,10 @@
 #include "pipe.hpp"
 #include "player.hpp"
 
+/**
+ * @class FlappyBird
+ * @brief Controlador principal do jogo: orquestra objetos, HUD, pontuação e fluxo de estados.
+ */
 class FlappyBird {
  private:
   std::unique_ptr<Image> bird1;          //!< sprite 1 do passaro

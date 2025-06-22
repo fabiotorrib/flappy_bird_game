@@ -1,0 +1,5 @@
+<map id="Bird::update" name="Bird::update">
+<area shape="rect" id="node1" title="Atualiza fisica e posicao." alt="" coords="5,31,107,57"/>
+<area shape="rect" id="node2" href="$classBird.html#af260e4528dadc8849a349b1221d41160" title="Atualiza coordenada by (usada na HUD ou limites)." alt="" coords="192,5,291,32"/>
+<area shape="rect" id="node3" href="$classGameObject.html#ad94cabd831719e862ee43d9a39839215" title="Atualiza limites inferiores (x_final, y_final) para colisão." alt="" coords="155,56,328,83"/>
+</map>

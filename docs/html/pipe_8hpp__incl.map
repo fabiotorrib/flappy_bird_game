@@ -1,0 +1,31 @@
+<map id="include/pipe.hpp" name="include/pipe.hpp">
+<area shape="rect" id="node1" title="Declaration of pipe&#45;related classes (Pipe, PipePair, PipeList)." alt="" coords="907,5,1037,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="18,229,155,256"/>
+<area shape="rect" id="node3" title=" " alt="" coords="811,80,883,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="1786,461,1849,487"/>
+<area shape="rect" id="node5" href="$defines_8hpp.html" title="Constantes globais, macros e estruturas auxiliares do jogo." alt="" coords="1589,379,1686,405"/>
+<area shape="rect" id="node8" href="$game__object_8hpp.html" title="Classe base abstrata para todos os objetos renderizáveis." alt="" coords="958,80,1093,107"/>
+<area shape="rect" id="node9" href="$init_8hpp.html" title="Declara funções de inicialização e finalização do Allegro." alt="" coords="885,155,955,181"/>
+<area shape="rect" id="node6" title=" " alt="" coords="1607,461,1670,487"/>
+<area shape="rect" id="node7" title=" " alt="" coords="1695,461,1753,487"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1618,229,1686,256"/>
+<area shape="rect" id="node11" title=" " alt="" coords="281,229,367,256"/>
+<area shape="rect" id="node12" title=" " alt="" coords="391,229,465,256"/>
+<area shape="rect" id="node13" title=" " alt="" coords="5,461,85,487"/>
+<area shape="rect" id="node14" title=" " alt="" coords="540,229,583,256"/>
+<area shape="rect" id="node15" title=" " alt="" coords="607,229,657,256"/>
+<area shape="rect" id="node16" title=" " alt="" coords="109,461,187,487"/>
+<area shape="rect" id="node17" title=" " alt="" coords="732,229,807,256"/>
+<area shape="rect" id="node18" title=" " alt="" coords="1213,461,1349,487"/>
+<area shape="rect" id="node19" title=" " alt="" coords="211,461,400,487"/>
+<area shape="rect" id="node20" title=" " alt="" coords="424,461,603,487"/>
+<area shape="rect" id="node21" title=" " alt="" coords="627,461,811,487"/>
+<area shape="rect" id="node22" title=" " alt="" coords="835,453,1007,495"/>
+<area shape="rect" id="node23" title=" " alt="" coords="1084,229,1271,256"/>
+<area shape="rect" id="node24" title=" " alt="" coords="1374,461,1583,487"/>
+<area shape="rect" id="node25" title=" " alt="" coords="1032,461,1189,487"/>
+<area shape="rect" id="node26" href="$assets_8hpp.html" title="Declara classes utilitárias para carregar e usar imagens, sons e fontes no Allegro." alt="" coords="815,379,907,405"/>
+<area shape="rect" id="node27" href="$player_8hpp.html" title="Modela um jogador e operações de ranking." alt="" coords="1452,229,1543,256"/>
+<area shape="rect" id="node28" href="$state_8hpp.html" title="Interface base para estados da máquina de estados do jogo." alt="" coords="1345,229,1428,256"/>
+<area shape="rect" id="node29" href="$motion_8hpp.html" title="Gerencia efeitos de parallax e animações de cenário." alt="" coords="1359,304,1455,331"/>
+</map>

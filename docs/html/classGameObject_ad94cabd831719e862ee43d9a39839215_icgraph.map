@@ -1,0 +1,7 @@
+<map id="GameObject::set_finals" name="GameObject::set_finals">
+<area shape="rect" id="node1" title="Atualiza limites inferiores (x_final, y_final) para colisão." alt="" coords="349,56,523,83"/>
+<area shape="rect" id="node2" href="$classPipe.html#adc16cc6616f4990f272620cc41aad879" title="Construct a pipe object." alt="" coords="207,5,293,32"/>
+<area shape="rect" id="node3" href="$classBird.html#ae2718aad2ef1de73e399482ab6068324" title="Atualiza fisica e posicao." alt="" coords="199,56,301,83"/>
+<area shape="rect" id="node5" href="$classPipe.html#a5c21f37e6bf9ff0ee1c16fee62eb1039" title="Move the pipe horizontally and update bounding box." alt="" coords="199,107,301,133"/>
+<area shape="rect" id="node4" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,56,151,83"/>
+</map>

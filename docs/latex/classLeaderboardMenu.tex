@@ -1,0 +1,201 @@
+\hypertarget{classLeaderboardMenu}{}\doxysection{Referência da Classe Leaderboard\+Menu}
+\label{classLeaderboardMenu}\index{LeaderboardMenu@{LeaderboardMenu}}
+
+
+Exibe ranking de jogadores e permite retorno ao menu principal.  
+
+
+
+
+{\ttfamily \#include $<$leaderboard\+\_\+menu.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Leaderboard\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classLeaderboardMenu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Leaderboard\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=184pt]{classLeaderboardMenu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classLeaderboardMenu_a12c79190706d52e31815cf3992ca9f35}{handle\+\_\+input}} (const ALLEGRO\+\_\+\+EVENT \&\mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}}) override
+\begin{DoxyCompactList}\small\item\em Gerencia a entrada do usuário (teclado). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classLeaderboardMenu_a8e73c70836903711bc8599b8780be61b}{update}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Atualiza a lógica do estado do movimento/animação do fundo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLeaderboardMenu_af5be1d3eea81adbc7822eaa4697cd9c4}{draw}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Desenha todos os elementos visuais do estado na tela. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLeaderboardMenu_a7eb26a277cc3ff52e703921a69f24fe4}{enter}} () override
+\begin{DoxyCompactList}\small\item\em Executado uma vez ao entrar no estado do Leaderboard. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLeaderboardMenu_a5df2cd2dbc7208ccbea9e96271e93b59}{Leaderboard\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classLeaderboardMenu}{Leaderboard\+Menu}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTextFont}{Text\+Font}} $>$ \mbox{\hyperlink{classLeaderboardMenu_a65e0e18330c21078c97b5e7866c9d05a}{font}}
+\begin{DoxyCompactList}\small\item\em Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classLeaderboardMenu_a90c7aad9fd5c345a78f943a39bf03a2e}{camp\+Leaderboard}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Exibe ranking de jogadores e permite retorno ao menu principal. 
+
+Bibliotecas necessárias 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classLeaderboardMenu_a5df2cd2dbc7208ccbea9e96271e93b59}\label{classLeaderboardMenu_a5df2cd2dbc7208ccbea9e96271e93b59}} 
+\index{LeaderboardMenu@{LeaderboardMenu}!LeaderboardMenu@{LeaderboardMenu}}
+\index{LeaderboardMenu@{LeaderboardMenu}!LeaderboardMenu@{LeaderboardMenu}}
+\doxysubsubsection{\texorpdfstring{LeaderboardMenu()}{LeaderboardMenu()}}
+{\footnotesize\ttfamily Leaderboard\+Menu\+::\+Leaderboard\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{classLeaderboardMenu}{Leaderboard\+Menu}}. 
+
+Bibliotecas necessárias
+
+Carrega os recursos visuais necessários para a tela de ranking, como a imagem de fundo e a fonte do texto. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classLeaderboardMenu_af5be1d3eea81adbc7822eaa4697cd9c4}\label{classLeaderboardMenu_af5be1d3eea81adbc7822eaa4697cd9c4}} 
+\index{LeaderboardMenu@{LeaderboardMenu}!draw@{draw}}
+\index{draw@{draw}!LeaderboardMenu@{LeaderboardMenu}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Leaderboard\+Menu\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Desenha todos os elementos visuais do estado na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle para desenhar o fundo animado.\\
+\hline
+\end{DoxyParams}
+Renderiza a imagem de fundo e, em seguida, itera sobre o ranking para desenhar o nome e a pontuação de cada jogador em suas respectivas posições. 
+
+Implementa \mbox{\hyperlink{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classLeaderboardMenu_af5be1d3eea81adbc7822eaa4697cd9c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLeaderboardMenu_a7eb26a277cc3ff52e703921a69f24fe4}\label{classLeaderboardMenu_a7eb26a277cc3ff52e703921a69f24fe4}} 
+\index{LeaderboardMenu@{LeaderboardMenu}!enter@{enter}}
+\index{enter@{enter}!LeaderboardMenu@{LeaderboardMenu}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily void Leaderboard\+Menu\+::enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executado uma vez ao entrar no estado do Leaderboard. 
+
+Carrega os dados do placar a partir de um arquivo e os ordena para exibição. Isso garante que a leitura e ordenação ocorram apenas uma vez por visualização. 
+
+Implementa \mbox{\hyperlink{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLeaderboardMenu_a7eb26a277cc3ff52e703921a69f24fe4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLeaderboardMenu_a12c79190706d52e31815cf3992ca9f35}\label{classLeaderboardMenu_a12c79190706d52e31815cf3992ca9f35}} 
+\index{LeaderboardMenu@{LeaderboardMenu}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!LeaderboardMenu@{LeaderboardMenu}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Leaderboard\+Menu\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{const ALLEGRO\+\_\+\+EVENT \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gerencia a entrada do usuário (teclado). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ev} & O evento da Allegro a ser processado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um ponteiro para o próximo estado. Retorna \textquotesingle{}this\textquotesingle{} para continuar no estado atual, \textquotesingle{}nullptr\textquotesingle{} para fechar, ou um novo estado para transição. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_a09f92cba8c60fb0eb0931e42613f8f64}{State}}.
+
+\mbox{\Hypertarget{classLeaderboardMenu_a8e73c70836903711bc8599b8780be61b}\label{classLeaderboardMenu_a8e73c70836903711bc8599b8780be61b}} 
+\index{LeaderboardMenu@{LeaderboardMenu}!update@{update}}
+\index{update@{update}!LeaderboardMenu@{LeaderboardMenu}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Leaderboard\+Menu\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza a lógica do estado do movimento/animação do fundo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle de animação do fundo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna \textquotesingle{}this\textquotesingle{} para indicar a permanência no estado atual. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_ae7f906fde44230c1b9741367de7a274a}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLeaderboardMenu_a8e73c70836903711bc8599b8780be61b_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classLeaderboardMenu_a90c7aad9fd5c345a78f943a39bf03a2e}\label{classLeaderboardMenu_a90c7aad9fd5c345a78f943a39bf03a2e}} 
+\index{LeaderboardMenu@{LeaderboardMenu}!campLeaderboard@{campLeaderboard}}
+\index{campLeaderboard@{campLeaderboard}!LeaderboardMenu@{LeaderboardMenu}}
+\doxysubsubsection{\texorpdfstring{campLeaderboard}{campLeaderboard}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Leaderboard\+Menu\+::camp\+Leaderboard\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLeaderboardMenu_a65e0e18330c21078c97b5e7866c9d05a}\label{classLeaderboardMenu_a65e0e18330c21078c97b5e7866c9d05a}} 
+\index{LeaderboardMenu@{LeaderboardMenu}!font@{font}}
+\index{font@{font}!LeaderboardMenu@{LeaderboardMenu}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classTextFont}{Text\+Font}}$>$ Leaderboard\+Menu\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/states/\mbox{\hyperlink{leaderboard__menu_8hpp}{leaderboard\+\_\+menu.\+hpp}}\item 
+src/states/\mbox{\hyperlink{leaderboard__menu_8cpp}{leaderboard\+\_\+menu.\+cpp}}\end{DoxyCompactItemize}

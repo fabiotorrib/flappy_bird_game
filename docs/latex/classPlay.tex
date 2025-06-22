@@ -1,0 +1,279 @@
+\hypertarget{classPlay}{}\doxysection{Referência da Classe Play}
+\label{classPlay}\index{Play@{Play}}
+
+
+Estado principal de jogo\+: controla loop ativo, pontuação e game over.  
+
+
+
+
+{\ttfamily \#include $<$play.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Play\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{classPlay__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Play\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=122pt]{classPlay__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classPlay_a76a5561a1738d962b3aaa340aa0a6bd7}{enter}} () override
+\begin{DoxyCompactList}\small\item\em Inicia ou reinicia a partida. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classPlay_ab197358b4dd6188ad340d584ddb11846}{handle\+\_\+input}} (const ALLEGRO\+\_\+\+EVENT \&\mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}}) override
+\begin{DoxyCompactList}\small\item\em Processa entrada do usuario. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classPlay_a5315ef30e6e278d20cc07c5fc5e07bdf}{update}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Atualiza simulacao do jogo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlay_a658ac92ca655bfd00d475e9c0402f2c5}{draw}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Renderiza cena completa. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlay_a0088438837d29378e35a2beed04e64df}{Play}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classFlappyBird}{Flappy\+Bird}} $>$ \mbox{\hyperlink{classPlay_a5ee12e368a6bd441098676d1670e4ffd}{flappy}}
+\item 
+\mbox{\hyperlink{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9b}{Screen\+State}} \mbox{\hyperlink{classPlay_a6db98544543844d86a17d0e02cb379b5}{status}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classPlay_a84be978be0d48c8c1d3499108f481f03}{logo\+Game\+Over}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classPlay_aab22e9f49ac1bbdba720e5039081d54a}{button\+Tryagain\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classPlay_a3033a5e1f341d495e556be4f7d04aba2}{button\+Tryagain\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classPlay_a1d7f14198df0ce285346aa450d6b67b7}{button\+Exit\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classPlay_a94592e9effdc0936b085d51a28c7a1e0}{button\+Exit\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classPlay_a86a3f21cb7780abe1869a5219b8a9048}{button\+Pause}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTextFont}{Text\+Font}} $>$ \mbox{\hyperlink{classPlay_a48c6a9089b92aca41c06b17764c08252}{font}}
+\item 
+int \mbox{\hyperlink{classPlay_a7fee11d91650a500c40f645970cc439f}{button\+Position\+Selected}} = 0
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structButton}{Button}} $>$ \mbox{\hyperlink{classPlay_a5b7d0cdb13088e950869b09f36a58f64}{menu\+Buttons}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Estado principal de jogo\+: controla loop ativo, pontuação e game over. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPlay_a0088438837d29378e35a2beed04e64df}\label{classPlay_a0088438837d29378e35a2beed04e64df}} 
+\index{Play@{Play}!Play@{Play}}
+\index{Play@{Play}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{Play()}{Play()}}
+{\footnotesize\ttfamily Play\+::\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrao. 
+
+Carrega todos os bitmaps, botoes e fontes exigidos durante o estado de jogo. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPlay_a658ac92ca655bfd00d475e9c0402f2c5}\label{classPlay_a658ac92ca655bfd00d475e9c0402f2c5}} 
+\index{Play@{Play}!draw@{draw}}
+\index{draw@{draw}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Play\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Renderiza cena completa. 
+
+Desenha fundo, personagem, menus de pausa ou game over conforme o estado em curso. 
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Sistema de camera/transformacoes usado na renderizacao. \\
+\hline
+\end{DoxyParams}
+
+
+Implementa \mbox{\hyperlink{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=263pt]{classPlay_a658ac92ca655bfd00d475e9c0402f2c5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlay_a76a5561a1738d962b3aaa340aa0a6bd7}\label{classPlay_a76a5561a1738d962b3aaa340aa0a6bd7}} 
+\index{Play@{Play}!enter@{enter}}
+\index{enter@{enter}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily void Play\+::enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Inicia ou reinicia a partida. 
+
+Cria um novo \mbox{\hyperlink{classFlappyBird}{Flappy\+Bird}}, limpa pontuacao e define status PLAY. 
+
+Implementa \mbox{\hyperlink{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}{State}}.
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classPlay_a76a5561a1738d962b3aaa340aa0a6bd7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlay_ab197358b4dd6188ad340d584ddb11846}\label{classPlay_ab197358b4dd6188ad340d584ddb11846}} 
+\index{Play@{Play}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Play\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{const ALLEGRO\+\_\+\+EVENT \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processa entrada do usuario. 
+
+Mapeia teclas para pulo, pausa, retomada e menu de game over. 
+\begin{DoxyParams}{Parâmetros}
+{\em ev} & Evento Allegro recebido da fila. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para o estado resultante apos o processamento. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_a09f92cba8c60fb0eb0931e42613f8f64}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classPlay_ab197358b4dd6188ad340d584ddb11846_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlay_a5315ef30e6e278d20cc07c5fc5e07bdf}\label{classPlay_a5315ef30e6e278d20cc07c5fc5e07bdf}} 
+\index{Play@{Play}!update@{update}}
+\index{update@{update}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Play\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza simulacao do jogo. 
+
+Avanca objetos quando status eh PLAY e detecta colisoes para transicionar a GAME\+\_\+\+OVER. 
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Sistema de camera/transformacoes para parallax ou shake. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Ponteiro para o estado atual para continuidade. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_ae7f906fde44230c1b9741367de7a274a}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classPlay_a5315ef30e6e278d20cc07c5fc5e07bdf_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classPlay_a94592e9effdc0936b085d51a28c7a1e0}\label{classPlay_a94592e9effdc0936b085d51a28c7a1e0}} 
+\index{Play@{Play}!buttonExitDeselect@{buttonExitDeselect}}
+\index{buttonExitDeselect@{buttonExitDeselect}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{buttonExitDeselect}{buttonExitDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Play\+::button\+Exit\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a1d7f14198df0ce285346aa450d6b67b7}\label{classPlay_a1d7f14198df0ce285346aa450d6b67b7}} 
+\index{Play@{Play}!buttonExitSelect@{buttonExitSelect}}
+\index{buttonExitSelect@{buttonExitSelect}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{buttonExitSelect}{buttonExitSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Play\+::button\+Exit\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a86a3f21cb7780abe1869a5219b8a9048}\label{classPlay_a86a3f21cb7780abe1869a5219b8a9048}} 
+\index{Play@{Play}!buttonPause@{buttonPause}}
+\index{buttonPause@{buttonPause}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{buttonPause}{buttonPause}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Play\+::button\+Pause\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a7fee11d91650a500c40f645970cc439f}\label{classPlay_a7fee11d91650a500c40f645970cc439f}} 
+\index{Play@{Play}!buttonPositionSelected@{buttonPositionSelected}}
+\index{buttonPositionSelected@{buttonPositionSelected}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{buttonPositionSelected}{buttonPositionSelected}}
+{\footnotesize\ttfamily int Play\+::button\+Position\+Selected = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a3033a5e1f341d495e556be4f7d04aba2}\label{classPlay_a3033a5e1f341d495e556be4f7d04aba2}} 
+\index{Play@{Play}!buttonTryagainDeselect@{buttonTryagainDeselect}}
+\index{buttonTryagainDeselect@{buttonTryagainDeselect}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{buttonTryagainDeselect}{buttonTryagainDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Play\+::button\+Tryagain\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_aab22e9f49ac1bbdba720e5039081d54a}\label{classPlay_aab22e9f49ac1bbdba720e5039081d54a}} 
+\index{Play@{Play}!buttonTryagainSelect@{buttonTryagainSelect}}
+\index{buttonTryagainSelect@{buttonTryagainSelect}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{buttonTryagainSelect}{buttonTryagainSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Play\+::button\+Tryagain\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a5ee12e368a6bd441098676d1670e4ffd}\label{classPlay_a5ee12e368a6bd441098676d1670e4ffd}} 
+\index{Play@{Play}!flappy@{flappy}}
+\index{flappy@{flappy}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{flappy}{flappy}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classFlappyBird}{Flappy\+Bird}}$>$ Play\+::flappy\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a48c6a9089b92aca41c06b17764c08252}\label{classPlay_a48c6a9089b92aca41c06b17764c08252}} 
+\index{Play@{Play}!font@{font}}
+\index{font@{font}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classTextFont}{Text\+Font}}$>$ Play\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a84be978be0d48c8c1d3499108f481f03}\label{classPlay_a84be978be0d48c8c1d3499108f481f03}} 
+\index{Play@{Play}!logoGameOver@{logoGameOver}}
+\index{logoGameOver@{logoGameOver}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{logoGameOver}{logoGameOver}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Play\+::logo\+Game\+Over\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlay_a5b7d0cdb13088e950869b09f36a58f64}\label{classPlay_a5b7d0cdb13088e950869b09f36a58f64}} 
+\index{Play@{Play}!menuButtons@{menuButtons}}
+\index{menuButtons@{menuButtons}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{menuButtons}{menuButtons}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structButton}{Button}}$>$ Play\+::menu\+Buttons\hspace{0.3cm}{\ttfamily [private]}}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"{}TryAgain"{}}, 1\}, \{\textcolor{stringliteral}{"{}Exit"{}}, 0\}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classPlay_a6db98544543844d86a17d0e02cb379b5}\label{classPlay_a6db98544543844d86a17d0e02cb379b5}} 
+\index{Play@{Play}!status@{status}}
+\index{status@{status}!Play@{Play}}
+\doxysubsubsection{\texorpdfstring{status}{status}}
+{\footnotesize\ttfamily \mbox{\hyperlink{defines_8hpp_a5fc5d61fa8521ce5476183998579fa9b}{Screen\+State}} Play\+::status\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/states/\mbox{\hyperlink{play_8hpp}{play.\+hpp}}\item 
+src/states/\mbox{\hyperlink{play_8cpp}{play.\+cpp}}\end{DoxyCompactItemize}

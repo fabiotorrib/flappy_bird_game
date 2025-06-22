@@ -1,0 +1,292 @@
+\hypertarget{classLoadName}{}\doxysection{Referência da Classe Load\+Name}
+\label{classLoadName}\index{LoadName@{LoadName}}
+
+
+Tela de inserção de nome usada por Novo Jogo e Carregar Jogo.  
+
+
+
+
+{\ttfamily \#include $<$load\+\_\+game.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Load\+Name\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classLoadName__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Load\+Name\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=149pt]{classLoadName__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classLoadName_a5ce4fb95dd055fc1530a548149a15cda}{handle\+\_\+input}} (const ALLEGRO\+\_\+\+EVENT \&\mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}}) override
+\begin{DoxyCompactList}\small\item\em Gerencia toda a entrada de teclado do usuário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classLoadName_a7eae3d9938449ae7c1f43b0261f62293}{update}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Atualiza a lógica do estado do movimento/animação de fundo a cada quadro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadName_a44a209d257f203588c151ceaf8d7607e}{draw}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Desenha todos os elementos visuais do estado na tela. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classLoadName_ae171ebd3932f6c31c018c851cc7105dc}{enter}} () override
+\begin{DoxyCompactList}\small\item\em Executado ao entrar no estado. Prepara a tela para uma nova interação. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classLoadName_a9b613b5e400238abdf695939e56536c2}{Load\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classLoadName}{Load\+Name}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classLoadName_a198b63bd2b7a3698c50d09d740610760}{player\+Name\+String}} = \char`\"{}\char`\"{}
+\item 
+int \mbox{\hyperlink{classLoadName_a160515b94a39b7f6adb4ffcf36bcaef0}{button\+Position\+Selected}} = 2
+\item 
+int \mbox{\hyperlink{classLoadName_a013982548c528540bf38c7deb005ef77}{error\+Situation}} = \mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b}{no\+Error}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structButton}{Button}} $>$ \mbox{\hyperlink{classLoadName_aeb29a4a5f9841c1502fa0fa87b6cb414}{menu\+Buttons}}
+\begin{DoxyCompactList}\small\item\em Vetor que armazena os botões do menu e seus estados de seleção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classLoadName_a246441e49fab7a8e0b82efbf5bbd821f}{button\+Back\+Select}}
+\begin{DoxyCompactList}\small\item\em Ponteiros inteligentes para os recursos visuais (imagens e fontes) da tela. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classLoadName_accaca34b2afb86c7b1a3b90eb18b2d86}{button\+Back\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classLoadName_a1f7b8a31c5ce3e56da0af6e5c326fce0}{button\+Insert\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classLoadName_a227524c1f326e92a62875942d5e8815b}{button\+Insert\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classLoadName_a25719a3bc235eb47cc8f9dcd5a8c7c66}{name\+Camp\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classLoadName_a95af00184e9e36de17e6592ec7f772da}{name\+Camp\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTextFont}{Text\+Font}} $>$ \mbox{\hyperlink{classLoadName_ae05a8419ec594f7163339d2b446a1cf7}{name\+Font}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTextFont}{Text\+Font}} $>$ \mbox{\hyperlink{classLoadName_a6592476d13533ab634782064d1ffaec1}{error\+Font}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Tela de inserção de nome usada por Novo Jogo e Carregar Jogo. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classLoadName_a9b613b5e400238abdf695939e56536c2}\label{classLoadName_a9b613b5e400238abdf695939e56536c2}} 
+\index{LoadName@{LoadName}!LoadName@{LoadName}}
+\index{LoadName@{LoadName}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{LoadName()}{LoadName()}}
+{\footnotesize\ttfamily Load\+Name\+::\+Load\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{classLoadName}{Load\+Name}}. 
+
+Bibliotecas necessárias
+
+Carrega todos os recursos gráficos (imagens, fontes) e sonoros necessários para a tela de inserção de nome. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classLoadName_a44a209d257f203588c151ceaf8d7607e}\label{classLoadName_a44a209d257f203588c151ceaf8d7607e}} 
+\index{LoadName@{LoadName}!draw@{draw}}
+\index{draw@{draw}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Load\+Name\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Desenha todos os elementos visuais do estado na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência para desenhar o fundo animado.\\
+\hline
+\end{DoxyParams}
+Renderiza os botões, o campo de texto com o nome do jogador e as mensagens de erro, se houver, com base no estado atual da interação. 
+
+Implementa \mbox{\hyperlink{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{classLoadName_a44a209d257f203588c151ceaf8d7607e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLoadName_ae171ebd3932f6c31c018c851cc7105dc}\label{classLoadName_ae171ebd3932f6c31c018c851cc7105dc}} 
+\index{LoadName@{LoadName}!enter@{enter}}
+\index{enter@{enter}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily void Load\+Name\+::enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executado ao entrar no estado. Prepara a tela para uma nova interação. 
+
+Limpa o nome do jogador e qualquer mensagem de erro de uma visita anterior e redefine o foco do menu para o campo de inserção de nome. 
+
+Implementa \mbox{\hyperlink{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}{State}}.
+
+\mbox{\Hypertarget{classLoadName_a5ce4fb95dd055fc1530a548149a15cda}\label{classLoadName_a5ce4fb95dd055fc1530a548149a15cda}} 
+\index{LoadName@{LoadName}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Load\+Name\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{const ALLEGRO\+\_\+\+EVENT \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gerencia toda a entrada de teclado do usuário. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ev} & O evento da Allegro a ser processado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+State$\ast$ Ponteiro para o próximo estado. Retorna \textquotesingle{}nullptr\textquotesingle{} para fechar, \textquotesingle{}new \mbox{\hyperlink{classMainMenu}{Main\+Menu()}}\textquotesingle{} ou \textquotesingle{}new \mbox{\hyperlink{classPlay}{Play()}}\textquotesingle{} para transição, ou \textquotesingle{}this\textquotesingle{} para permanecer. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_a09f92cba8c60fb0eb0931e42613f8f64}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classLoadName_a5ce4fb95dd055fc1530a548149a15cda_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classLoadName_a7eae3d9938449ae7c1f43b0261f62293}\label{classLoadName_a7eae3d9938449ae7c1f43b0261f62293}} 
+\index{LoadName@{LoadName}!update@{update}}
+\index{update@{update}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Load\+Name\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza a lógica do estado do movimento/animação de fundo a cada quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle de animação do fundo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+State$\ast$ Retorna \textquotesingle{}this\textquotesingle{} para indicar a permanência no estado atual. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_ae7f906fde44230c1b9741367de7a274a}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classLoadName_a7eae3d9938449ae7c1f43b0261f62293_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classLoadName_accaca34b2afb86c7b1a3b90eb18b2d86}\label{classLoadName_accaca34b2afb86c7b1a3b90eb18b2d86}} 
+\index{LoadName@{LoadName}!buttonBackDeselect@{buttonBackDeselect}}
+\index{buttonBackDeselect@{buttonBackDeselect}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{buttonBackDeselect}{buttonBackDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Load\+Name\+::button\+Back\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLoadName_a246441e49fab7a8e0b82efbf5bbd821f}\label{classLoadName_a246441e49fab7a8e0b82efbf5bbd821f}} 
+\index{LoadName@{LoadName}!buttonBackSelect@{buttonBackSelect}}
+\index{buttonBackSelect@{buttonBackSelect}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{buttonBackSelect}{buttonBackSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Load\+Name\+::button\+Back\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ponteiros inteligentes para os recursos visuais (imagens e fontes) da tela. 
+
+\mbox{\Hypertarget{classLoadName_a227524c1f326e92a62875942d5e8815b}\label{classLoadName_a227524c1f326e92a62875942d5e8815b}} 
+\index{LoadName@{LoadName}!buttonInsertDeselect@{buttonInsertDeselect}}
+\index{buttonInsertDeselect@{buttonInsertDeselect}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{buttonInsertDeselect}{buttonInsertDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Load\+Name\+::button\+Insert\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLoadName_a1f7b8a31c5ce3e56da0af6e5c326fce0}\label{classLoadName_a1f7b8a31c5ce3e56da0af6e5c326fce0}} 
+\index{LoadName@{LoadName}!buttonInsertSelect@{buttonInsertSelect}}
+\index{buttonInsertSelect@{buttonInsertSelect}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{buttonInsertSelect}{buttonInsertSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Load\+Name\+::button\+Insert\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLoadName_a160515b94a39b7f6adb4ffcf36bcaef0}\label{classLoadName_a160515b94a39b7f6adb4ffcf36bcaef0}} 
+\index{LoadName@{LoadName}!buttonPositionSelected@{buttonPositionSelected}}
+\index{buttonPositionSelected@{buttonPositionSelected}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{buttonPositionSelected}{buttonPositionSelected}}
+{\footnotesize\ttfamily int Load\+Name\+::button\+Position\+Selected = 2}
+
+\mbox{\Hypertarget{classLoadName_a6592476d13533ab634782064d1ffaec1}\label{classLoadName_a6592476d13533ab634782064d1ffaec1}} 
+\index{LoadName@{LoadName}!errorFont@{errorFont}}
+\index{errorFont@{errorFont}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{errorFont}{errorFont}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classTextFont}{Text\+Font}}$>$ Load\+Name\+::error\+Font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLoadName_a013982548c528540bf38c7deb005ef77}\label{classLoadName_a013982548c528540bf38c7deb005ef77}} 
+\index{LoadName@{LoadName}!errorSituation@{errorSituation}}
+\index{errorSituation@{errorSituation}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{errorSituation}{errorSituation}}
+{\footnotesize\ttfamily int Load\+Name\+::error\+Situation = \mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b}{no\+Error}}}
+
+\mbox{\Hypertarget{classLoadName_aeb29a4a5f9841c1502fa0fa87b6cb414}\label{classLoadName_aeb29a4a5f9841c1502fa0fa87b6cb414}} 
+\index{LoadName@{LoadName}!menuButtons@{menuButtons}}
+\index{menuButtons@{menuButtons}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{menuButtons}{menuButtons}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structButton}{Button}}$>$ Load\+Name\+::menu\+Buttons}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"{}Back"{}}, 0\}, \{\textcolor{stringliteral}{"{}Insert"{}}, 0\}, \{\textcolor{stringliteral}{"{}NameCamp"{}}, 1\}\}}
+
+\end{DoxyCode}
+
+
+Vetor que armazena os botões do menu e seus estados de seleção. 
+
+\mbox{\Hypertarget{classLoadName_a95af00184e9e36de17e6592ec7f772da}\label{classLoadName_a95af00184e9e36de17e6592ec7f772da}} 
+\index{LoadName@{LoadName}!nameCampDeselect@{nameCampDeselect}}
+\index{nameCampDeselect@{nameCampDeselect}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{nameCampDeselect}{nameCampDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Load\+Name\+::name\+Camp\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLoadName_a25719a3bc235eb47cc8f9dcd5a8c7c66}\label{classLoadName_a25719a3bc235eb47cc8f9dcd5a8c7c66}} 
+\index{LoadName@{LoadName}!nameCampSelect@{nameCampSelect}}
+\index{nameCampSelect@{nameCampSelect}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{nameCampSelect}{nameCampSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Load\+Name\+::name\+Camp\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLoadName_ae05a8419ec594f7163339d2b446a1cf7}\label{classLoadName_ae05a8419ec594f7163339d2b446a1cf7}} 
+\index{LoadName@{LoadName}!nameFont@{nameFont}}
+\index{nameFont@{nameFont}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{nameFont}{nameFont}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classTextFont}{Text\+Font}}$>$ Load\+Name\+::name\+Font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classLoadName_a198b63bd2b7a3698c50d09d740610760}\label{classLoadName_a198b63bd2b7a3698c50d09d740610760}} 
+\index{LoadName@{LoadName}!playerNameString@{playerNameString}}
+\index{playerNameString@{playerNameString}!LoadName@{LoadName}}
+\doxysubsubsection{\texorpdfstring{playerNameString}{playerNameString}}
+{\footnotesize\ttfamily std\+::string Load\+Name\+::player\+Name\+String = \char`\"{}\char`\"{}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/states/\mbox{\hyperlink{load__game_8hpp}{load\+\_\+game.\+hpp}}\item 
+src/states/\mbox{\hyperlink{load__game_8cpp}{load\+\_\+game.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,4 @@
+<map id="DifficultyMenu::draw" name="DifficultyMenu::draw">
+<area shape="rect" id="node1" title="Desenha todos os elementos visuais do estado na tela." alt="" coords="5,5,163,32"/>
+<area shape="rect" id="node2" href="$classMotion.html#a46829bd1f7372cf081940219db77a114" title="Desenha todos os elementos do background baseado no cenário ativo." alt="" coords="211,5,317,32"/>
+</map>

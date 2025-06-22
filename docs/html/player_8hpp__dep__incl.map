@@ -1,0 +1,30 @@
+<map id="include/player.hpp" name="include/player.hpp">
+<area shape="rect" id="node1" title="Modela um jogador e operações de ranking." alt="" coords="1614,5,1755,32"/>
+<area shape="rect" id="node2" href="$flappy__bird__controller_8hpp.html" title="Declaracao da classe FlappyBird (controlador principal)." alt="" coords="1575,333,1720,375"/>
+<area shape="rect" id="node10" href="$init_8hpp.html" title="Declara funções de inicialização e finalização do Allegro." alt="" coords="1319,80,1442,107"/>
+<area shape="rect" id="node28" href="$player_8cpp.html" title="Implementação da classe Player e utilidades de ranking." alt="" coords="1933,162,2045,189"/>
+<area shape="rect" id="node3" href="$allegro__interface_8hpp.html" title="Declara o controlador que integra Allegro e a máquina de estados." alt="" coords="1857,423,2067,449"/>
+<area shape="rect" id="node6" href="$play_8hpp.html" title="Declaracao da classe Play, responsavel pelo estado de jogo ativo." alt="" coords="954,423,1125,449"/>
+<area shape="rect" id="node9" href="$flappy__bird__controller_8cpp.html" title="Controlador de fluxo do jogo (pontuação, eventos globais)." alt="" coords="1568,423,1780,449"/>
+<area shape="rect" id="node4" href="$allegro__interface_8cpp.html" title="Implementação do controlador principal que integra Allegro às lógicas de estado do jogo." alt="" coords="1117,497,1300,524"/>
+<area shape="rect" id="node5" href="$main_8cpp.html" title="Ponto de entrada do jogo Flappy Bird." alt="" coords="2008,497,2113,524"/>
+<area shape="rect" id="node7" href="$load__game_8cpp.html" title="Implementação da classe LoadName, responsável pela tela de inserção de nome do jogador." alt="" coords="356,497,544,524"/>
+<area shape="rect" id="node8" href="$play_8cpp.html" title="Implementacao da classe Play." alt="" coords="921,497,1064,524"/>
+<area shape="rect" id="node11" href="$game__object_8hpp.html" title="Classe base abstrata para todos os objetos renderizáveis." alt="" coords="1621,162,1807,189"/>
+<area shape="rect" id="node14" href="$pipe_8hpp.html" title="Declaration of pipe&#45;related classes (Pipe, PipePair, PipeList)." alt="" coords="1416,251,1545,278"/>
+<area shape="rect" id="node17" href="$difficulty__menu_8hpp.html" title="Definição da classe DifficultyMenu, que representa o estado do menu de seleção de dificuldade." alt="" coords="268,155,443,196"/>
+<area shape="rect" id="node18" href="$difficulty__menu_8cpp.html" title="Implementação da classe DifficultyMenu, que gerencia a tela de seleção de dificuldade." alt="" coords="490,244,637,285"/>
+<area shape="rect" id="node19" href="$main__menu_8cpp.html" title="Implementação da classe MainMenu, o estado principal e tela inicial do jogo." alt="" coords="265,251,459,278"/>
+<area shape="rect" id="node20" href="$leaderboard__menu_8hpp.html" title="Definição da classe LeaderboardMenu, que representa o estado da tela de ranking." alt="" coords="467,155,662,196"/>
+<area shape="rect" id="node21" href="$leaderboard__menu_8cpp.html" title="Implementação da classe LeaderboardMenu, responsável por exibir a tela de ranking." alt="" coords="712,244,879,285"/>
+<area shape="rect" id="node22" href="$load__game_8hpp.html" title="Definição da classe LoadName, que representa o estado de inserção de nome." alt="" coords="47,155,192,196"/>
+<area shape="rect" id="node23" href="$main__menu_8hpp.html" title="Definição da classe MainMenu, o estado que representa o menu principal do jogo." alt="" coords="737,155,888,196"/>
+<area shape="rect" id="node24" href="$settings__menu_8cpp.html" title="Implementação da classe SettingsMenu, que gerencia a tela de configurações do jogo." alt="" coords="1199,244,1341,285"/>
+<area shape="rect" id="node25" href="$settings__menu_8hpp.html" title="Definição da classe SettingsMenu, que representa o estado do menu de configurações." alt="" coords="912,155,1081,196"/>
+<area shape="rect" id="node26" href="$init_8cpp.html" title="Inicialização de Allegro, fontes, addons e recursos globais." alt="" coords="1106,162,1199,189"/>
+<area shape="rect" id="node27" href="$motion_8cpp.html" title="Implementação da classe Motion (parallax e clima)." alt="" coords="1224,162,1343,189"/>
+<area shape="rect" id="node12" href="$bird_8hpp.html" title="Declaracao da classe Bird (personagem controlavel)." alt="" coords="1904,251,2031,278"/>
+<area shape="rect" id="node16" href="$game__object_8cpp.html" title="Métodos utilitários da classe base GameObject." alt="" coords="1672,251,1828,278"/>
+<area shape="rect" id="node13" href="$bird_8cpp.html" title="Implementação da classe Bird (animação, física e colisões)." alt="" coords="1919,341,2016,367"/>
+<area shape="rect" id="node15" href="$pipe_8cpp.html" title="Implementação das classes Pipe, PipePair e PipeList." alt="" coords="1431,341,1531,367"/>
+</map>

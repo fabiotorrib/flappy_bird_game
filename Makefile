@@ -34,7 +34,7 @@ ALL_TEST_OBJ  := $(TEST_GAME_OBJ) $(TEST_TEST_OBJ)
 
 # ---------------- REGRAS PRINCIPAIS ------------------------------------
 # O .PHONY diz ao make que 'all', 'clean' e 'test' não são nomes de arquivos.
-.PHONY: all clean test
+.PHONY: all clean test doc clean-doc
 
 # 'make' ou 'make all' irá compilar o jogo principal.
 all: $(TARGET)
@@ -78,3 +78,12 @@ clean:
 
 # Inclui os arquivos de dependência gerados pelo -MMD
 -include $(DEP)
+
+# ---------------- DOCUMENTAÇÃO (Doxygen) ----------------
+# Gera a documentação removendo qualquer versão anterior primeiro
+doc: clean-doc
+	doxygen Doxyfile
+	$(MAKE) -C docs/latex
+
+clean-doc:
+	rm -rf docs/html docs/latex

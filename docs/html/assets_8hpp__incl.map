@@ -1,0 +1,13 @@
+<map id="include/assets.hpp" name="include/assets.hpp">
+<area shape="rect" id="node1" title="Declara classes utilitárias para carregar e usar imagens, sons e fontes no Allegro." alt="" coords="581,5,723,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,87,85,114"/>
+<area shape="rect" id="node3" title=" " alt="" coords="109,87,187,114"/>
+<area shape="rect" id="node4" title=" " alt="" coords="211,87,269,114"/>
+<area shape="rect" id="node5" title=" " alt="" coords="293,87,429,114"/>
+<area shape="rect" id="node6" title=" " alt="" coords="453,87,643,114"/>
+<area shape="rect" id="node7" title=" " alt="" coords="667,87,845,114"/>
+<area shape="rect" id="node8" title=" " alt="" coords="869,87,1053,114"/>
+<area shape="rect" id="node9" title=" " alt="" coords="1078,80,1250,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="1274,87,1483,114"/>
+<area shape="rect" id="node11" title=" " alt="" coords="1508,87,1665,114"/>
+</map>

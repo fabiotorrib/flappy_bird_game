@@ -1,0 +1,4 @@
+<map id="FlappyBird::set_playerscore" name="FlappyBird::set_playerscore">
+<area shape="rect" id="node1" title="Atualiza score no objeto Player." alt="" coords="5,5,208,32"/>
+<area shape="rect" id="node2" href="$classPlayer.html#aef973d65cfb24e3e88d72585087232ae" title="Atualiza (sobrescreve) a pontuação do jogador." alt="" coords="256,5,384,32"/>
+</map>

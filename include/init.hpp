@@ -1,3 +1,10 @@
+/**
+ * @file init.hpp
+ * @brief Declara funções de inicialização e finalização do Allegro.
+ *
+ * Externa ponteiros globais de display, fila de eventos, timer, fontes e
+ * ranking de jogadores para serem utilizados em todo o projeto.
+ */
 #pragma once
 // libs
 #include <math.h>

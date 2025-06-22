@@ -1,0 +1,5 @@
+<map id="PipePair" name="PipePair">
+<area shape="rect" id="node1" title="Agrupa dois canos (superior e inferior) podendo ter movimento vertical." alt="" coords="19,185,94,212"/>
+<area shape="rect" id="node2" href="$classPipe.html" title="Obstáculo individual que se move horizontalmente e gera pontuação." alt="" coords="31,81,82,108"/>
+<area shape="rect" id="node3" href="$classGameObject.html" title="Objeto genérico do jogo contendo posição, sprite e hitbox." alt="" coords="5,5,108,32"/>
+</map>

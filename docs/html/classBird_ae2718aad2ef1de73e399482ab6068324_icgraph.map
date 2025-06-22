@@ -1,0 +1,4 @@
+<map id="Bird::update" name="Bird::update">
+<area shape="rect" id="node1" title="Atualiza fisica e posicao." alt="" coords="199,5,300,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,5,151,32"/>
+</map>

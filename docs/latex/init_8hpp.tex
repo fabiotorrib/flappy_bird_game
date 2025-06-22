@@ -1,0 +1,214 @@
+\hypertarget{init_8hpp}{}\doxysection{Referência do Arquivo include/init.hpp}
+\label{init_8hpp}\index{include/init.hpp@{include/init.hpp}}
+
+
+Declara funções de inicialização e finalização do Allegro.  
+
+
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$algorithm$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$list$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+acodec.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+audio.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+native\+\_\+dialog.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+physfs.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+primitives.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/allegro\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$allegro5/bitmap.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}assets.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}defines.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}player.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}state.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para init.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{init_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{init_8hpp_a02fd73d861ef2e4aabb38c0c9ff82947}{init}} ()
+\begin{DoxyCompactList}\small\item\em Inicializa Allegro, janela, áudio e recursos globais. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{init_8hpp_a967fb9235af58c66165b0d619c6cc584}{deinit}} ()
+\begin{DoxyCompactList}\small\item\em Libera todos os recursos e encerra o subsistema Allegro. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+ALLEGRO\+\_\+\+DISPLAY $\ast$ \mbox{\hyperlink{init_8hpp_af64cc6c8a47e5ddbf510b5aa92e062b9}{display}}
+\item 
+ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$ \mbox{\hyperlink{init_8hpp_a1b547b3fd150c01ccf92506cf719a14d}{event\+\_\+queue}}
+\item 
+ALLEGRO\+\_\+\+TIMER $\ast$ \mbox{\hyperlink{init_8hpp_a22045c356beccd98008e6234d1c5f2d1}{timer\+\_\+\+FPS}}
+\item 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{init_8hpp_a210f30a47fa4a1aea60a3bc0238fc1b7}{icon}}
+\item 
+ALLEGRO\+\_\+\+KEYBOARD\+\_\+\+STATE \mbox{\hyperlink{init_8hpp_a974476a13f92b90b823bd4dfcc104917}{keystate}}
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} \mbox{\hyperlink{init_8hpp_af61d6983a9396a11078805087518af88}{player}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \mbox{\hyperlink{init_8hpp_ab54dcbf6721b2315ef1e65ed98ee9863}{ranking}}
+\item 
+bool \mbox{\hyperlink{init_8hpp_ab7cab289aa610b31d3e8688bff55528b}{g\+\_\+sound\+\_\+on}}
+\item 
+int \mbox{\hyperlink{init_8hpp_a016a5d341f375d13639c75bf5987fb23}{difficulty}}
+\item 
+ALLEGRO\+\_\+\+FONT $\ast$ \mbox{\hyperlink{init_8hpp_ae4254615de94af5fc74d43e8b676dcf9}{font}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSound}{Sound}} $>$ \mbox{\hyperlink{init_8hpp_aeaa41bb3528a365751d709ce587cef53}{select\+Sound}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classMusic}{Music}} $>$ \mbox{\hyperlink{init_8hpp_a19178a66a4a1d00d504b8a29aa6b5139}{background\+Music}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Declara funções de inicialização e finalização do Allegro. 
+
+Externa ponteiros globais de display, fila de eventos, timer, fontes e ranking de jogadores para serem utilizados em todo o projeto. 
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{init_8hpp_a967fb9235af58c66165b0d619c6cc584}\label{init_8hpp_a967fb9235af58c66165b0d619c6cc584}} 
+\index{init.hpp@{init.hpp}!deinit@{deinit}}
+\index{deinit@{deinit}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{deinit()}{deinit()}}
+{\footnotesize\ttfamily void deinit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera todos os recursos e encerra o subsistema Allegro. 
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=273pt]{init_8hpp_a967fb9235af58c66165b0d619c6cc584_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=201pt]{init_8hpp_a967fb9235af58c66165b0d619c6cc584_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{init_8hpp_a02fd73d861ef2e4aabb38c0c9ff82947}\label{init_8hpp_a02fd73d861ef2e4aabb38c0c9ff82947}} 
+\index{init.hpp@{init.hpp}!init@{init}}
+\index{init@{init}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Inicializa Allegro, janela, áudio e recursos globais. 
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{init_8hpp_a02fd73d861ef2e4aabb38c0c9ff82947_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=189pt]{init_8hpp_a02fd73d861ef2e4aabb38c0c9ff82947_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{init_8hpp_a19178a66a4a1d00d504b8a29aa6b5139}\label{init_8hpp_a19178a66a4a1d00d504b8a29aa6b5139}} 
+\index{init.hpp@{init.hpp}!backgroundMusic@{backgroundMusic}}
+\index{backgroundMusic@{backgroundMusic}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{backgroundMusic}{backgroundMusic}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classMusic}{Music}}$>$ background\+Music\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_a016a5d341f375d13639c75bf5987fb23}\label{init_8hpp_a016a5d341f375d13639c75bf5987fb23}} 
+\index{init.hpp@{init.hpp}!difficulty@{difficulty}}
+\index{difficulty@{difficulty}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{difficulty}{difficulty}}
+{\footnotesize\ttfamily int difficulty\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_af64cc6c8a47e5ddbf510b5aa92e062b9}\label{init_8hpp_af64cc6c8a47e5ddbf510b5aa92e062b9}} 
+\index{init.hpp@{init.hpp}!display@{display}}
+\index{display@{display}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+DISPLAY$\ast$ display\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_a1b547b3fd150c01ccf92506cf719a14d}\label{init_8hpp_a1b547b3fd150c01ccf92506cf719a14d}} 
+\index{init.hpp@{init.hpp}!event\_queue@{event\_queue}}
+\index{event\_queue@{event\_queue}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{event\_queue}{event\_queue}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE$\ast$ event\+\_\+queue\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_ae4254615de94af5fc74d43e8b676dcf9}\label{init_8hpp_ae4254615de94af5fc74d43e8b676dcf9}} 
+\index{init.hpp@{init.hpp}!font@{font}}
+\index{font@{font}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+FONT$\ast$ font\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_ab7cab289aa610b31d3e8688bff55528b}\label{init_8hpp_ab7cab289aa610b31d3e8688bff55528b}} 
+\index{init.hpp@{init.hpp}!g\_sound\_on@{g\_sound\_on}}
+\index{g\_sound\_on@{g\_sound\_on}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{g\_sound\_on}{g\_sound\_on}}
+{\footnotesize\ttfamily bool g\+\_\+sound\+\_\+on\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_a210f30a47fa4a1aea60a3bc0238fc1b7}\label{init_8hpp_a210f30a47fa4a1aea60a3bc0238fc1b7}} 
+\index{init.hpp@{init.hpp}!icon@{icon}}
+\index{icon@{icon}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{icon}{icon}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP$\ast$ icon\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_a974476a13f92b90b823bd4dfcc104917}\label{init_8hpp_a974476a13f92b90b823bd4dfcc104917}} 
+\index{init.hpp@{init.hpp}!keystate@{keystate}}
+\index{keystate@{keystate}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{keystate}{keystate}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+KEYBOARD\+\_\+\+STATE keystate\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_af61d6983a9396a11078805087518af88}\label{init_8hpp_af61d6983a9396a11078805087518af88}} 
+\index{init.hpp@{init.hpp}!player@{player}}
+\index{player@{player}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}} player\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_ab54dcbf6721b2315ef1e65ed98ee9863}\label{init_8hpp_ab54dcbf6721b2315ef1e65ed98ee9863}} 
+\index{init.hpp@{init.hpp}!ranking@{ranking}}
+\index{ranking@{ranking}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{ranking}{ranking}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classPlayer}{Player}}$>$ ranking\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_aeaa41bb3528a365751d709ce587cef53}\label{init_8hpp_aeaa41bb3528a365751d709ce587cef53}} 
+\index{init.hpp@{init.hpp}!selectSound@{selectSound}}
+\index{selectSound@{selectSound}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{selectSound}{selectSound}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classSound}{Sound}}$>$ select\+Sound\hspace{0.3cm}{\ttfamily [extern]}}
+
+\mbox{\Hypertarget{init_8hpp_a22045c356beccd98008e6234d1c5f2d1}\label{init_8hpp_a22045c356beccd98008e6234d1c5f2d1}} 
+\index{init.hpp@{init.hpp}!timer\_FPS@{timer\_FPS}}
+\index{timer\_FPS@{timer\_FPS}!init.hpp@{init.hpp}}
+\doxysubsubsection{\texorpdfstring{timer\_FPS}{timer\_FPS}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+TIMER$\ast$ timer\+\_\+\+FPS\hspace{0.3cm}{\ttfamily [extern]}}
+

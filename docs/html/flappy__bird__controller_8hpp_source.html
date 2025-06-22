@@ -1,0 +1,222 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/flappy_bird_controller.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">flappy_bird_controller.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="flappy__bird__controller_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="assets_8hpp.html">assets.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="bird_8hpp.html">bird.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defines_8hpp.html">defines.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="game__object_8hpp.html">game_object.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="init_8hpp.html">init.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pipe_8hpp.html">pipe.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="player_8hpp.html">player.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classFlappyBird.html">   22</a></span>&#160;<span class="keyword">class </span><a class="code" href="classFlappyBird.html">FlappyBird</a> {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a70b19ca7aa1dff85f6f9a726fb2e6528">   24</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classFlappyBird.html#a70b19ca7aa1dff85f6f9a726fb2e6528">bird1</a>;          </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classFlappyBird.html#af0c7b336f136b67f19f30c065571d5ad">   25</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classFlappyBird.html#af0c7b336f136b67f19f30c065571d5ad">bird2</a>;          </div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classFlappyBird.html#afc9051f6e0a3508b1d494b7c4683e16e">   26</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classFlappyBird.html#afc9051f6e0a3508b1d494b7c4683e16e">bird3</a>;          </div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classFlappyBird.html#ae033a810b25df49fd09dd49edd3999b7">   27</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classFlappyBird.html#ae033a810b25df49fd09dd49edd3999b7">pipe</a>;           </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classFlappyBird.html#aec3c9f69d1413415da87c6aaca30f4ab">   28</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classFlappyBird.html#aec3c9f69d1413415da87c6aaca30f4ab">ground</a>;         </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a919409449e1fae13177ab2cb5d0caadc">   29</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classFlappyBird.html#a919409449e1fae13177ab2cb5d0caadc">ground2</a>;        </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a69181dbd24db50754e3b04bfcb5e7b7e">   30</a></span>&#160;  std::unique_ptr&lt;Sound&gt; <a class="code" href="classFlappyBird.html#a69181dbd24db50754e3b04bfcb5e7b7e">pointSound</a>;     </div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classFlappyBird.html#abfa3fe83236ee34bae3eb227642d8c93">   31</a></span>&#160;  std::unique_ptr&lt;Sound&gt; <a class="code" href="classFlappyBird.html#abfa3fe83236ee34bae3eb227642d8c93">gameOverSound</a>;  </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a3f8219ab1a08de553f4e072799c0b6e6">   33</a></span>&#160;  <a class="code" href="classBird.html">Bird</a> <a class="code" href="classFlappyBird.html#a3f8219ab1a08de553f4e072799c0b6e6">flappy_obj</a>;       </div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a4f9ba32011df4b04bb65c6af77a3221e">   34</a></span>&#160;  <a class="code" href="classPipeList.html">PipeList</a> <a class="code" href="classFlappyBird.html#a4f9ba32011df4b04bb65c6af77a3221e">pipelist</a>;     </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="comment">/* variaveis de estado e pontuacao */</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a7ab4415f9ff0301d36897572f1b8c60a">   37</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFlappyBird.html#a7ab4415f9ff0301d36897572f1b8c60a">state</a>   = 0;       </div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classFlappyBird.html#ae26fe02695675b9fe186faf1fd4b6ade">   38</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classFlappyBird.html#ae26fe02695675b9fe186faf1fd4b6ade">time</a>  = 0;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a395f1262f8a9a12b41cfd40ddbcd0471">   39</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classFlappyBird.html#a395f1262f8a9a12b41cfd40ddbcd0471">velocity</a> = <a class="code" href="defines_8hpp.html#a0d676224ec1857dc51cb4e1601ff8102">PIPE_SPEED</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a342288af2d65e2003b7666635e8b115d">   40</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classFlappyBird.html#a342288af2d65e2003b7666635e8b115d">velocity_backup</a> = 0;</div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a94f4c7846637cd30588b7cbe9fb3b049">   41</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFlappyBird.html#a94f4c7846637cd30588b7cbe9fb3b049">score</a>   = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="comment">/* animacao de solo */</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classFlappyBird.html#ab578ec0b7d91b69199a867d837518219">   44</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classFlappyBird.html#ab578ec0b7d91b69199a867d837518219">positionF_x</a>  = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classFlappyBird.html#ae3d3f0fe288f4ca0864cadd1c72d0e62">   45</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classFlappyBird.html#ae3d3f0fe288f4ca0864cadd1c72d0e62">positionF2_x</a> = <a class="code" href="defines_8hpp.html#a9b6bc9242882d1e758e06ed751a2e8ec">SCREEN_W</a>;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a2bd456cc2ccdc270a91d659f5cfc98b6">   47</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFlappyBird.html#a2bd456cc2ccdc270a91d659f5cfc98b6">change_vel</a>      = 2;      </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a2d3609f8947295f28241fc67121dd978">   48</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFlappyBird.html#a2d3609f8947295f28241fc67121dd978">difficulty_game</a> = <a class="code" href="init_8hpp.html#a016a5d341f375d13639c75bf5987fb23">difficulty</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classFlappyBird.html#a46e4f0c13265076a12b37ed933d615b6">   50</a></span>&#160;  <a class="code" href="classPlayer.html">Player</a>* <a class="code" href="classFlappyBird.html#a46e4f0c13265076a12b37ed933d615b6">currentPlayer</a> = <span class="keyword">nullptr</span>; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <a class="code" href="classFlappyBird.html#ae163f4bf81ce73fd0de694b5d0fbed33">FlappyBird</a>();</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="comment">/* ---------------------------- metodos principais ----------------------- */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a5cc95b67d5bf558a744e81d64c8bdd9c">draw</a>();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070">update</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a185beae77101e7a8be97f7a4ac6a19d8">reset</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a2b785e0cadd0341a44f596035d16bf97">set_current_player</a>(<a class="code" href="classPlayer.html">Player</a>&amp; <a class="code" href="init_8hpp.html#af61d6983a9396a11078805087518af88">player</a>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a5e5b5440c5ddd780e8011536f28058b5">saveCurrentPlayerScore</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <span class="keywordtype">bool</span> <a class="code" href="classFlappyBird.html#a229cec49a07214226a449da13eb90f9d">check_collisions</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="comment">/* ------------------------------- acoes ---------------------------------- */</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#adfe007f047a54586cbada405fdf3a277">jump</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#ab327a6cfe8d4afd6382070d98c7d00c0">starter</a>();</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a4984ed1f498df20ac647f427fae92e5d">control_pipes</a>();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a0c449363de8ddf536688491afb74ad74">draw_intial_text</a>();</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a4458c5b09023ad145b787be7aea53605">update_score</a>();</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#aa01d41a7f7d403671d958f422e8788eb">change_velocity</a>();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#ad7cf0c94eeb27e71d5abc64357870247">draw_HUD</a>();</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#ac88fcc78ac50475800b005bf3aceb8d5">draw_animated_ground</a>(<span class="keywordtype">float</span> <a class="code" href="classFlappyBird.html#a395f1262f8a9a12b41cfd40ddbcd0471">velocity</a>);</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a23bf3f77850cabdfa4a6bb9a7e9bfbe2">breaker</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#afbf176f9bfba9a2eb43f29e5e665d239">unbreaker</a>();</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;  <span class="comment">/* ------------------------------ auxiliares ----------------------------- */</span></div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classFlappyBird.html#af0b147af9fcd32cfaddfe696f209605d">get_state</a>();</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classFlappyBird.html#a04721bca58a8ce945a9bbbc56f9f49c4">set_playerscore</a>();</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  <span class="comment">/* getters */</span></div>
+<div class="line"><a name="l00126"></a><span class="lineno"><a class="line" href="classFlappyBird.html#ae9e55384026b7bc6e10faa3046dc3f56">  126</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classBird.html">Bird</a>&amp; <a class="code" href="classFlappyBird.html#ae9e55384026b7bc6e10faa3046dc3f56">get_bird</a>()<span class="keyword">  const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFlappyBird.html#a3f8219ab1a08de553f4e072799c0b6e6">flappy_obj</a>; }</div>
+<div class="line"><a name="l00127"></a><span class="lineno"><a class="line" href="classFlappyBird.html#afd602e95ae46652f7f4a5f50ef3bb919">  127</a></span>&#160;  <span class="keyword">const</span> <a class="code" href="classPipeList.html">PipeList</a>&amp; <a class="code" href="classFlappyBird.html#afd602e95ae46652f7f4a5f50ef3bb919">get_pipes</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="classFlappyBird.html#a4f9ba32011df4b04bb65c6af77a3221e">pipelist</a>; }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;};</div>
+<div class="ttc" id="aassets_8hpp_html"><div class="ttname"><a href="assets_8hpp.html">assets.hpp</a></div><div class="ttdoc">Declara classes utilitárias para carregar e usar imagens, sons e fontes no Allegro.</div></div>
+<div class="ttc" id="abird_8hpp_html"><div class="ttname"><a href="bird_8hpp.html">bird.hpp</a></div><div class="ttdoc">Declaracao da classe Bird (personagem controlavel).</div></div>
+<div class="ttc" id="aclassBird_html"><div class="ttname"><a href="classBird.html">Bird</a></div><div class="ttdoc">Personagem controlável: gerencia movimento, animação de asas, pulo e detecção de colisões.</div><div class="ttdef"><b>Definition:</b> bird.hpp:17</div></div>
+<div class="ttc" id="aclassFlappyBird_html"><div class="ttname"><a href="classFlappyBird.html">FlappyBird</a></div><div class="ttdoc">Controlador principal do jogo: orquestra objetos, HUD, pontuação e fluxo de estados.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:22</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a04721bca58a8ce945a9bbbc56f9f49c4"><div class="ttname"><a href="classFlappyBird.html#a04721bca58a8ce945a9bbbc56f9f49c4">FlappyBird::set_playerscore</a></div><div class="ttdeci">void set_playerscore()</div><div class="ttdoc">Atualiza score no objeto Player.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:109</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a0c449363de8ddf536688491afb74ad74"><div class="ttname"><a href="classFlappyBird.html#a0c449363de8ddf536688491afb74ad74">FlappyBird::draw_intial_text</a></div><div class="ttdeci">void draw_intial_text()</div><div class="ttdoc">Desenha texto inicial &quot;PRESS SPACE TO PLAY&quot;.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:169</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a185beae77101e7a8be97f7a4ac6a19d8"><div class="ttname"><a href="classFlappyBird.html#a185beae77101e7a8be97f7a4ac6a19d8">FlappyBird::reset</a></div><div class="ttdeci">void reset()</div><div class="ttdoc">Reseta jogo para configuracao inicial.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:84</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a229cec49a07214226a449da13eb90f9d"><div class="ttname"><a href="classFlappyBird.html#a229cec49a07214226a449da13eb90f9d">FlappyBird::check_collisions</a></div><div class="ttdeci">bool check_collisions()</div><div class="ttdoc">Verifica colisao entre passaro, limites ou canos.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:125</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a23bf3f77850cabdfa4a6bb9a7e9bfbe2"><div class="ttname"><a href="classFlappyBird.html#a23bf3f77850cabdfa4a6bb9a7e9bfbe2">FlappyBird::breaker</a></div><div class="ttdeci">void breaker()</div><div class="ttdoc">Pausa fisica e anima passaro colidido.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:230</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a2b785e0cadd0341a44f596035d16bf97"><div class="ttname"><a href="classFlappyBird.html#a2b785e0cadd0341a44f596035d16bf97">FlappyBird::set_current_player</a></div><div class="ttdeci">void set_current_player(Player &amp;player)</div><div class="ttdoc">Define jogador atual (para leaderboard).</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:103</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a2bd456cc2ccdc270a91d659f5cfc98b6"><div class="ttname"><a href="classFlappyBird.html#a2bd456cc2ccdc270a91d659f5cfc98b6">FlappyBird::change_vel</a></div><div class="ttdeci">int change_vel</div><div class="ttdoc">frequencia de aumento de velocidade</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:47</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a2d3609f8947295f28241fc67121dd978"><div class="ttname"><a href="classFlappyBird.html#a2d3609f8947295f28241fc67121dd978">FlappyBird::difficulty_game</a></div><div class="ttdeci">int difficulty_game</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:48</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a342288af2d65e2003b7666635e8b115d"><div class="ttname"><a href="classFlappyBird.html#a342288af2d65e2003b7666635e8b115d">FlappyBird::velocity_backup</a></div><div class="ttdeci">float velocity_backup</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:40</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a395f1262f8a9a12b41cfd40ddbcd0471"><div class="ttname"><a href="classFlappyBird.html#a395f1262f8a9a12b41cfd40ddbcd0471">FlappyBird::velocity</a></div><div class="ttdeci">float velocity</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:39</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a3f8219ab1a08de553f4e072799c0b6e6"><div class="ttname"><a href="classFlappyBird.html#a3f8219ab1a08de553f4e072799c0b6e6">FlappyBird::flappy_obj</a></div><div class="ttdeci">Bird flappy_obj</div><div class="ttdoc">instancia controlavel do passaro</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:33</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a4458c5b09023ad145b787be7aea53605"><div class="ttname"><a href="classFlappyBird.html#a4458c5b09023ad145b787be7aea53605">FlappyBird::update_score</a></div><div class="ttdeci">void update_score()</div><div class="ttdoc">Atualiza pontuacao quando passaro passa canos.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:180</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a46e4f0c13265076a12b37ed933d615b6"><div class="ttname"><a href="classFlappyBird.html#a46e4f0c13265076a12b37ed933d615b6">FlappyBird::currentPlayer</a></div><div class="ttdeci">Player * currentPlayer</div><div class="ttdoc">ponteiro para jogador atual</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:50</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a4984ed1f498df20ac647f427fae92e5d"><div class="ttname"><a href="classFlappyBird.html#a4984ed1f498df20ac647f427fae92e5d">FlappyBird::control_pipes</a></div><div class="ttdeci">void control_pipes()</div><div class="ttdoc">Adiciona / remove canos conforme necessidade.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:161</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a4f9ba32011df4b04bb65c6af77a3221e"><div class="ttname"><a href="classFlappyBird.html#a4f9ba32011df4b04bb65c6af77a3221e">FlappyBird::pipelist</a></div><div class="ttdeci">PipeList pipelist</div><div class="ttdoc">lista de canos ativos</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:34</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a5cc95b67d5bf558a744e81d64c8bdd9c"><div class="ttname"><a href="classFlappyBird.html#a5cc95b67d5bf558a744e81d64c8bdd9c">FlappyBird::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">Desenha cena completa conforme estado.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:30</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a5e5b5440c5ddd780e8011536f28058b5"><div class="ttname"><a href="classFlappyBird.html#a5e5b5440c5ddd780e8011536f28058b5">FlappyBird::saveCurrentPlayerScore</a></div><div class="ttdeci">void saveCurrentPlayerScore()</div><div class="ttdoc">Salva pontuacao no leaderboard externo.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:116</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a69181dbd24db50754e3b04bfcb5e7b7e"><div class="ttname"><a href="classFlappyBird.html#a69181dbd24db50754e3b04bfcb5e7b7e">FlappyBird::pointSound</a></div><div class="ttdeci">std::unique_ptr&lt; Sound &gt; pointSound</div><div class="ttdoc">som de pontuacao</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:30</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a70b19ca7aa1dff85f6f9a726fb2e6528"><div class="ttname"><a href="classFlappyBird.html#a70b19ca7aa1dff85f6f9a726fb2e6528">FlappyBird::bird1</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; bird1</div><div class="ttdoc">sprite 1 do passaro</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:24</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a7ab4415f9ff0301d36897572f1b8c60a"><div class="ttname"><a href="classFlappyBird.html#a7ab4415f9ff0301d36897572f1b8c60a">FlappyBird::state</a></div><div class="ttdeci">int state</div><div class="ttdoc">0 = intro, 1 = aguardando, 2 = jogando</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:37</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a919409449e1fae13177ab2cb5d0caadc"><div class="ttname"><a href="classFlappyBird.html#a919409449e1fae13177ab2cb5d0caadc">FlappyBird::ground2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; ground2</div><div class="ttdoc">sprite do solo (loop)</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:29</div></div>
+<div class="ttc" id="aclassFlappyBird_html_a94f4c7846637cd30588b7cbe9fb3b049"><div class="ttname"><a href="classFlappyBird.html#a94f4c7846637cd30588b7cbe9fb3b049">FlappyBird::score</a></div><div class="ttdeci">int score</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:41</div></div>
+<div class="ttc" id="aclassFlappyBird_html_aa01d41a7f7d403671d958f422e8788eb"><div class="ttname"><a href="classFlappyBird.html#aa01d41a7f7d403671d958f422e8788eb">FlappyBird::change_velocity</a></div><div class="ttdeci">void change_velocity()</div><div class="ttdoc">Aumenta velocidade conforme pontuacao.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:190</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ab327a6cfe8d4afd6382070d98c7d00c0"><div class="ttname"><a href="classFlappyBird.html#ab327a6cfe8d4afd6382070d98c7d00c0">FlappyBird::starter</a></div><div class="ttdeci">void starter()</div><div class="ttdoc">Transita do estado 1 para 2 e aplica primeiro pulo.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:150</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ab578ec0b7d91b69199a867d837518219"><div class="ttname"><a href="classFlappyBird.html#ab578ec0b7d91b69199a867d837518219">FlappyBird::positionF_x</a></div><div class="ttdeci">float positionF_x</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:44</div></div>
+<div class="ttc" id="aclassFlappyBird_html_abfa3fe83236ee34bae3eb227642d8c93"><div class="ttname"><a href="classFlappyBird.html#abfa3fe83236ee34bae3eb227642d8c93">FlappyBird::gameOverSound</a></div><div class="ttdeci">std::unique_ptr&lt; Sound &gt; gameOverSound</div><div class="ttdoc">som de game over</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:31</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ac88fcc78ac50475800b005bf3aceb8d5"><div class="ttname"><a href="classFlappyBird.html#ac88fcc78ac50475800b005bf3aceb8d5">FlappyBird::draw_animated_ground</a></div><div class="ttdeci">void draw_animated_ground(float velocity)</div><div class="ttdoc">Desenha solo em loop para criar efeito de movimento.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:211</div></div>
+<div class="ttc" id="aclassFlappyBird_html_acfe4ae73e3b97741bf9acd9162ba8070"><div class="ttname"><a href="classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070">FlappyBird::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Atualiza logica principal (estado, objetos, pipes).</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:54</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ad7cf0c94eeb27e71d5abc64357870247"><div class="ttname"><a href="classFlappyBird.html#ad7cf0c94eeb27e71d5abc64357870247">FlappyBird::draw_HUD</a></div><div class="ttdeci">void draw_HUD()</div><div class="ttdoc">Desenha HUD de pontuacao.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:202</div></div>
+<div class="ttc" id="aclassFlappyBird_html_adfe007f047a54586cbada405fdf3a277"><div class="ttname"><a href="classFlappyBird.html#adfe007f047a54586cbada405fdf3a277">FlappyBird::jump</a></div><div class="ttdeci">void jump()</div><div class="ttdoc">Comanda pulo do passaro (estado 2).</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:141</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ae033a810b25df49fd09dd49edd3999b7"><div class="ttname"><a href="classFlappyBird.html#ae033a810b25df49fd09dd49edd3999b7">FlappyBird::pipe</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; pipe</div><div class="ttdoc">sprite do cano</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:27</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ae163f4bf81ce73fd0de694b5d0fbed33"><div class="ttname"><a href="classFlappyBird.html#ae163f4bf81ce73fd0de694b5d0fbed33">FlappyBird::FlappyBird</a></div><div class="ttdeci">FlappyBird()</div><div class="ttdoc">Construtor padrao.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:12</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ae26fe02695675b9fe186faf1fd4b6ade"><div class="ttname"><a href="classFlappyBird.html#ae26fe02695675b9fe186faf1fd4b6ade">FlappyBird::time</a></div><div class="ttdeci">float time</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:38</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ae3d3f0fe288f4ca0864cadd1c72d0e62"><div class="ttname"><a href="classFlappyBird.html#ae3d3f0fe288f4ca0864cadd1c72d0e62">FlappyBird::positionF2_x</a></div><div class="ttdeci">float positionF2_x</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:45</div></div>
+<div class="ttc" id="aclassFlappyBird_html_ae9e55384026b7bc6e10faa3046dc3f56"><div class="ttname"><a href="classFlappyBird.html#ae9e55384026b7bc6e10faa3046dc3f56">FlappyBird::get_bird</a></div><div class="ttdeci">const Bird &amp; get_bird() const</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:126</div></div>
+<div class="ttc" id="aclassFlappyBird_html_aec3c9f69d1413415da87c6aaca30f4ab"><div class="ttname"><a href="classFlappyBird.html#aec3c9f69d1413415da87c6aaca30f4ab">FlappyBird::ground</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; ground</div><div class="ttdoc">sprite do solo</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:28</div></div>
+<div class="ttc" id="aclassFlappyBird_html_af0b147af9fcd32cfaddfe696f209605d"><div class="ttname"><a href="classFlappyBird.html#af0b147af9fcd32cfaddfe696f209605d">FlappyBird::get_state</a></div><div class="ttdeci">int get_state()</div><div class="ttdoc">Retorna estado atual (0,1,2).</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:249</div></div>
+<div class="ttc" id="aclassFlappyBird_html_af0c7b336f136b67f19f30c065571d5ad"><div class="ttname"><a href="classFlappyBird.html#af0c7b336f136b67f19f30c065571d5ad">FlappyBird::bird2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; bird2</div><div class="ttdoc">sprite 2 do passaro</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:25</div></div>
+<div class="ttc" id="aclassFlappyBird_html_afbf176f9bfba9a2eb43f29e5e665d239"><div class="ttname"><a href="classFlappyBird.html#afbf176f9bfba9a2eb43f29e5e665d239">FlappyBird::unbreaker</a></div><div class="ttdeci">void unbreaker()</div><div class="ttdoc">Retoma jogo apos pausa.</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.cpp:239</div></div>
+<div class="ttc" id="aclassFlappyBird_html_afc9051f6e0a3508b1d494b7c4683e16e"><div class="ttname"><a href="classFlappyBird.html#afc9051f6e0a3508b1d494b7c4683e16e">FlappyBird::bird3</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; bird3</div><div class="ttdoc">sprite 3 do passaro</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:26</div></div>
+<div class="ttc" id="aclassFlappyBird_html_afd602e95ae46652f7f4a5f50ef3bb919"><div class="ttname"><a href="classFlappyBird.html#afd602e95ae46652f7f4a5f50ef3bb919">FlappyBird::get_pipes</a></div><div class="ttdeci">const PipeList &amp; get_pipes() const</div><div class="ttdef"><b>Definition:</b> flappy_bird_controller.hpp:127</div></div>
+<div class="ttc" id="aclassPipeList_html"><div class="ttname"><a href="classPipeList.html">PipeList</a></div><div class="ttdoc">Gerencia vetor de PipePair: spawn, atualização, colisão e score.</div><div class="ttdef"><b>Definition:</b> pipe.hpp:121</div></div>
+<div class="ttc" id="aclassPlayer_html"><div class="ttname"><a href="classPlayer.html">Player</a></div><div class="ttdoc">Armazena nome e pontuação e provê utilidades para ranking.</div><div class="ttdef"><b>Definition:</b> player.hpp:14</div></div>
+<div class="ttc" id="adefines_8hpp_html"><div class="ttname"><a href="defines_8hpp.html">defines.hpp</a></div><div class="ttdoc">Constantes globais, macros e estruturas auxiliares do jogo.</div></div>
+<div class="ttc" id="adefines_8hpp_html_a0d676224ec1857dc51cb4e1601ff8102"><div class="ttname"><a href="defines_8hpp.html#a0d676224ec1857dc51cb4e1601ff8102">PIPE_SPEED</a></div><div class="ttdeci">#define PIPE_SPEED</div><div class="ttdef"><b>Definition:</b> defines.hpp:60</div></div>
+<div class="ttc" id="adefines_8hpp_html_a9b6bc9242882d1e758e06ed751a2e8ec"><div class="ttname"><a href="defines_8hpp.html#a9b6bc9242882d1e758e06ed751a2e8ec">SCREEN_W</a></div><div class="ttdeci">#define SCREEN_W</div><div class="ttdef"><b>Definition:</b> defines.hpp:15</div></div>
+<div class="ttc" id="agame__object_8hpp_html"><div class="ttname"><a href="game__object_8hpp.html">game_object.hpp</a></div><div class="ttdoc">Classe base abstrata para todos os objetos renderizáveis.</div></div>
+<div class="ttc" id="ainit_8hpp_html"><div class="ttname"><a href="init_8hpp.html">init.hpp</a></div><div class="ttdoc">Declara funções de inicialização e finalização do Allegro.</div></div>
+<div class="ttc" id="ainit_8hpp_html_a016a5d341f375d13639c75bf5987fb23"><div class="ttname"><a href="init_8hpp.html#a016a5d341f375d13639c75bf5987fb23">difficulty</a></div><div class="ttdeci">int difficulty</div><div class="ttdef"><b>Definition:</b> init.cpp:18</div></div>
+<div class="ttc" id="ainit_8hpp_html_af61d6983a9396a11078805087518af88"><div class="ttname"><a href="init_8hpp.html#af61d6983a9396a11078805087518af88">player</a></div><div class="ttdeci">Player player</div><div class="ttdef"><b>Definition:</b> init.cpp:15</div></div>
+<div class="ttc" id="apipe_8hpp_html"><div class="ttname"><a href="pipe_8hpp.html">pipe.hpp</a></div><div class="ttdoc">Declaration of pipe-related classes (Pipe, PipePair, PipeList).</div></div>
+<div class="ttc" id="aplayer_8hpp_html"><div class="ttname"><a href="player_8hpp.html">player.hpp</a></div><div class="ttdoc">Modela um jogador e operações de ranking.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

@@ -1,0 +1,135 @@
+\hypertarget{classPipePair}{}\doxysection{Referência da Classe Pipe\+Pair}
+\label{classPipePair}\index{PipePair@{PipePair}}
+
+
+Agrupa dois canos (superior e inferior) podendo ter movimento vertical.  
+
+
+
+
+{\ttfamily \#include $<$pipe.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Pipe\+Pair\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=158pt]{classPipePair__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPipePair_a1f3f4c94594a4494590a482d44cfa605}{Pipe\+Pair}} (ALLEGRO\+\_\+\+BITMAP $\ast$img, float x, float y)
+\begin{DoxyCompactList}\small\item\em Create a static pair of pipes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPipePair_a5ac3114ff697bcd726705961e0fc613b}{Pipe\+Pair}} (ALLEGRO\+\_\+\+BITMAP $\ast$img, float x, float y, bool type, bool direction)
+\begin{DoxyCompactList}\small\item\em Create a pair that can optionally move up/down. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPipe}{Pipe}} \mbox{\hyperlink{classPipePair_a0bdf6c1801011833d553190810df5de2}{bottom}}
+\begin{DoxyCompactList}\small\item\em lower pipe \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPipe}{Pipe}} \mbox{\hyperlink{classPipePair_aec7c444a27e5238b147eda343bbc434c}{top}}
+\begin{DoxyCompactList}\small\item\em upper pipe \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipePair_aebe9987f8c95e69c5caea31b7f8bec96}{movement}} = false
+\begin{DoxyCompactList}\small\item\em true if pair moves vertically \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPipePair_a2e9a0aa1c954f38a06234262dbafa7c6}{signal}} = 1.\+0
+\begin{DoxyCompactList}\small\item\em direction multiplier for vertical motion \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Agrupa dois canos (superior e inferior) podendo ter movimento vertical. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPipePair_a1f3f4c94594a4494590a482d44cfa605}\label{classPipePair_a1f3f4c94594a4494590a482d44cfa605}} 
+\index{PipePair@{PipePair}!PipePair@{PipePair}}
+\index{PipePair@{PipePair}!PipePair@{PipePair}}
+\doxysubsubsection{\texorpdfstring{PipePair()}{PipePair()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Pipe\+Pair\+::\+Pipe\+Pair (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{img,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a static pair of pipes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em img} & Bitmap shared by both pipes. \\
+\hline
+{\em x} & Initial x coordinate. \\
+\hline
+{\em y} & Bottom pipe y coordinate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPipePair_a5ac3114ff697bcd726705961e0fc613b}\label{classPipePair_a5ac3114ff697bcd726705961e0fc613b}} 
+\index{PipePair@{PipePair}!PipePair@{PipePair}}
+\index{PipePair@{PipePair}!PipePair@{PipePair}}
+\doxysubsubsection{\texorpdfstring{PipePair()}{PipePair()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Pipe\+Pair\+::\+Pipe\+Pair (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{img,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{bool}]{type,  }\item[{bool}]{direction }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Create a pair that can optionally move up/down. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em img} & Bitmap shared by both pipes. \\
+\hline
+{\em x} & Initial x coordinate. \\
+\hline
+{\em y} & Bottom pipe y coordinate. \\
+\hline
+{\em type} & Enable vertical movement. \\
+\hline
+{\em direction} & Initial movement direction (true = upward). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classPipePair_a0bdf6c1801011833d553190810df5de2}\label{classPipePair_a0bdf6c1801011833d553190810df5de2}} 
+\index{PipePair@{PipePair}!bottom@{bottom}}
+\index{bottom@{bottom}!PipePair@{PipePair}}
+\doxysubsubsection{\texorpdfstring{bottom}{bottom}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPipe}{Pipe}} Pipe\+Pair\+::bottom}
+
+
+
+lower pipe 
+
+\mbox{\Hypertarget{classPipePair_aebe9987f8c95e69c5caea31b7f8bec96}\label{classPipePair_aebe9987f8c95e69c5caea31b7f8bec96}} 
+\index{PipePair@{PipePair}!movement@{movement}}
+\index{movement@{movement}!PipePair@{PipePair}}
+\doxysubsubsection{\texorpdfstring{movement}{movement}}
+{\footnotesize\ttfamily bool Pipe\+Pair\+::movement = false}
+
+
+
+true if pair moves vertically 
+
+\mbox{\Hypertarget{classPipePair_a2e9a0aa1c954f38a06234262dbafa7c6}\label{classPipePair_a2e9a0aa1c954f38a06234262dbafa7c6}} 
+\index{PipePair@{PipePair}!signal@{signal}}
+\index{signal@{signal}!PipePair@{PipePair}}
+\doxysubsubsection{\texorpdfstring{signal}{signal}}
+{\footnotesize\ttfamily float Pipe\+Pair\+::signal = 1.\+0}
+
+
+
+direction multiplier for vertical motion 
+
+\mbox{\Hypertarget{classPipePair_aec7c444a27e5238b147eda343bbc434c}\label{classPipePair_aec7c444a27e5238b147eda343bbc434c}} 
+\index{PipePair@{PipePair}!top@{top}}
+\index{top@{top}!PipePair@{PipePair}}
+\doxysubsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPipe}{Pipe}} Pipe\+Pair\+::top}
+
+
+
+upper pipe 
+
+
+
+A documentação para essa classe foi gerada a partir do seguinte arquivo\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pipe_8hpp}{pipe.\+hpp}}\end{DoxyCompactItemize}

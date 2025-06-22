@@ -1,0 +1,4 @@
+<map id="Player::ReadLeaderboard" name="Player::ReadLeaderboard">
+<area shape="rect" id="node1" title="Lê arquivo de ranking e retorna vetor de jogadores." alt="" coords="5,5,191,32"/>
+<area shape="rect" id="node2" href="$classPlayer.html#a1b1eb725b1cd830c7ccb0d03459044f2" title="Constrói um jogador com nome e pontuação inicial." alt="" coords="239,5,351,32"/>
+</map>

@@ -1,0 +1,463 @@
+\hypertarget{classMotion}{}\doxysection{Referência da Classe Motion}
+\label{classMotion}\index{Motion@{Motion}}
+
+
+Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.  
+
+
+
+
+{\ttfamily \#include $<$motion.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classMotion_a46829bd1f7372cf081940219db77a114}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Desenha todos os elementos do background baseado no cenário ativo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMotion_a01805ce60c0e4c9aae97979dd884b59c}{update}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza posições dos elementos de background conforme cenário. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMotion_a444a2569aaadd10d76b4e6e6bfb3df0c}{Motion}} ()
+\item 
+void \mbox{\hyperlink{classMotion_aa551dae9dbe0eb2b833bfb778f2007b9}{set\+Controller}} (int)
+\begin{DoxyCompactList}\small\item\em Seleciona o cenário (1 = dia, 2 = neve, 3 = chuva). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classMotion_aa3ce13f9416af13548740dd426e2ed32}{controller}} = 1
+\item 
+float \mbox{\hyperlink{classMotion_ace3f3c9bb3b5f72887cd483dcd990a43}{controll}} = 0
+\item 
+float \mbox{\hyperlink{classMotion_aa06c1b7cd98ae40d8cd58b02e32a7fa7}{contF}} = 0
+\item 
+float \mbox{\hyperlink{classMotion_a49e1aa2518eaeec8aa91719026a68e4e}{contB}} = 400
+\item 
+float \mbox{\hyperlink{classMotion_a76601c0fb9e6dfb673f02299f220207f}{speed\+Rain}} = 6
+\item 
+float \mbox{\hyperlink{classMotion_af8e8ae231f4a6ae6b339df0b4d54ecf4}{position\+R1}} = 400
+\item 
+float \mbox{\hyperlink{classMotion_ae6bae14f527e7594938fe621ea9bd4e5}{position\+R2}} = -\/320
+\item 
+float \mbox{\hyperlink{classMotion_aef09d2e9111464349fdaed8760011af8}{speed\+Flakes}} = 1.\+0
+\item 
+float \mbox{\hyperlink{classMotion_a903b3962fb6adcf86f300034be042115}{positionF}} = 500
+\item 
+float \mbox{\hyperlink{classMotion_a6dc2fe6da4b6a6b937654261df37a3d3}{position\+F2}} = 550
+\item 
+float \mbox{\hyperlink{classMotion_a3c9f9c3407ea12ca2966cb1b27376c5b}{position\+F3}} = -\/210
+\item 
+float \mbox{\hyperlink{classMotion_a332c05cae943f4e396d76a7371fd85ae}{speed\+Flakes2}} = 0.\+4
+\item 
+float \mbox{\hyperlink{classMotion_aaea40126950822e29416adaef000eb43}{position\+L\+\_\+x}} = 0
+\item 
+float \mbox{\hyperlink{classMotion_aa5aa3a7fdcbf073f303ed42006a9cdab}{speed\+\_\+light}} = 0.\+5
+\item 
+float \mbox{\hyperlink{classMotion_af4060e5529d11db125650172b7335b1a}{position\+C\+\_\+x}} = 0
+\item 
+float \mbox{\hyperlink{classMotion_a6fbea8cc4e620c7c467cf5aa5c99c456}{position\+CC\+\_\+x}} = -\/1280
+\item 
+float \mbox{\hyperlink{classMotion_a7b1b06ee5964dfb16b08e6f9df691af0}{speed\+\_\+cloud}} = 0.\+6
+\item 
+float \mbox{\hyperlink{classMotion_a7649128e3cb3fda075596ee7a12b8f3c}{position\+B\+\_\+x}} = 0
+\item 
+float \mbox{\hyperlink{classMotion_a2e68b1d6492e9ecfa89af726dc891384}{speed\+\_\+little}} = 1
+\item 
+float \mbox{\hyperlink{classMotion_ad3b886e72cdd92407903e8142c514bd1}{cont}} = 16
+\item 
+float \mbox{\hyperlink{classMotion_a5b33f6e22d61f0f870670364e1cbfe4e}{value}} = 0
+\item 
+float \mbox{\hyperlink{classMotion_a86125821ec50d1452c993c56469a901d}{position\+F\+\_\+x}} = 1280
+\item 
+float \mbox{\hyperlink{classMotion_ae1101a068026e60190a6e3a146f92658}{position\+F2\+\_\+x}} = 0
+\item 
+float \mbox{\hyperlink{classMotion_ae921ee84c9257bcdf0cd3862ba44d430}{speed\+\_\+floor}} = 2.\+5
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a69ce880add3cd0698e0b1352d79f72ae}{background\+\_\+rain}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a194dbf8d147b144a8989c4cb03df6169}{drips1}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a7c23545f80a0381a19097ecbdfc725b0}{drips2}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a523b6b378cfdb2c04918cca98c0f9de7}{thunder}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_ac8cb0423c746f03c8847ca4c3e75a408}{thunder1}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_aebbd0bb96b82df72bdc38b12302f36c0}{background\+\_\+snow}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a6991d858447ac9b4bdb479c4a34bee7b}{flakes\+Little}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a79b401175cbb9233d71dc53b8786eb95}{flakes\+Little2}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a88966856f79ce8f33ea28a155f247577}{flakes\+Big}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_aef1cc2d84b5552f48eddcdf404f15fec}{background}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a4dd7028c401df39dd9b09388d854a004}{lights}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_aa9e601f65f70cc9515e73c70046484dd}{clouds}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_acd8fefbc15793bf7a73696187c672761}{clouds2}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a020fe42b52383822ddcb9a79a0323e61}{little}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_a536629d5893ba6902b026d1cbe9685d8}{little2}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_ad05b75421d34f09966b2040d2b1e68d8}{little3}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_aaa0753cfeddbe15bbf396254bea0f319}{bird1}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_af3274dd28f81e92ae0294e679b577ad0}{bird2}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_aaa8db2b9ab96bfe2c7ed97b4107e272c}{bird3}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_aa3d13367d79e5a3e85729163af867621}{ground}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMotion_aa19cee7edec2db1a0f1eb7a592082399}{ground2}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classMotion_a444a2569aaadd10d76b4e6e6bfb3df0c}\label{classMotion_a444a2569aaadd10d76b4e6e6bfb3df0c}} 
+\index{Motion@{Motion}!Motion@{Motion}}
+\index{Motion@{Motion}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{Motion()}{Motion()}}
+{\footnotesize\ttfamily Motion\+::\+Motion (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMotion_a46829bd1f7372cf081940219db77a114}\label{classMotion_a46829bd1f7372cf081940219db77a114}} 
+\index{Motion@{Motion}!draw@{draw}}
+\index{draw@{draw}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Motion\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desenha todos os elementos do background baseado no cenário ativo. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classMotion_a46829bd1f7372cf081940219db77a114_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMotion_aa551dae9dbe0eb2b833bfb778f2007b9}\label{classMotion_aa551dae9dbe0eb2b833bfb778f2007b9}} 
+\index{Motion@{Motion}!setController@{setController}}
+\index{setController@{setController}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{setController()}{setController()}}
+{\footnotesize\ttfamily void Motion\+::set\+Controller (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+Seleciona o cenário (1 = dia, 2 = neve, 3 = chuva). 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMotion_aa551dae9dbe0eb2b833bfb778f2007b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMotion_a01805ce60c0e4c9aae97979dd884b59c}\label{classMotion_a01805ce60c0e4c9aae97979dd884b59c}} 
+\index{Motion@{Motion}!update@{update}}
+\index{update@{update}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Motion\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Atualiza posições dos elementos de background conforme cenário. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classMotion_a01805ce60c0e4c9aae97979dd884b59c_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classMotion_aef1cc2d84b5552f48eddcdf404f15fec}\label{classMotion_aef1cc2d84b5552f48eddcdf404f15fec}} 
+\index{Motion@{Motion}!background@{background}}
+\index{background@{background}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::background\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a69ce880add3cd0698e0b1352d79f72ae}\label{classMotion_a69ce880add3cd0698e0b1352d79f72ae}} 
+\index{Motion@{Motion}!background\_rain@{background\_rain}}
+\index{background\_rain@{background\_rain}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{background\_rain}{background\_rain}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::background\+\_\+rain\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aebbd0bb96b82df72bdc38b12302f36c0}\label{classMotion_aebbd0bb96b82df72bdc38b12302f36c0}} 
+\index{Motion@{Motion}!background\_snow@{background\_snow}}
+\index{background\_snow@{background\_snow}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{background\_snow}{background\_snow}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::background\+\_\+snow\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aaa0753cfeddbe15bbf396254bea0f319}\label{classMotion_aaa0753cfeddbe15bbf396254bea0f319}} 
+\index{Motion@{Motion}!bird1@{bird1}}
+\index{bird1@{bird1}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{bird1}{bird1}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::bird1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_af3274dd28f81e92ae0294e679b577ad0}\label{classMotion_af3274dd28f81e92ae0294e679b577ad0}} 
+\index{Motion@{Motion}!bird2@{bird2}}
+\index{bird2@{bird2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{bird2}{bird2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::bird2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aaa8db2b9ab96bfe2c7ed97b4107e272c}\label{classMotion_aaa8db2b9ab96bfe2c7ed97b4107e272c}} 
+\index{Motion@{Motion}!bird3@{bird3}}
+\index{bird3@{bird3}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{bird3}{bird3}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::bird3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aa9e601f65f70cc9515e73c70046484dd}\label{classMotion_aa9e601f65f70cc9515e73c70046484dd}} 
+\index{Motion@{Motion}!clouds@{clouds}}
+\index{clouds@{clouds}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{clouds}{clouds}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::clouds\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_acd8fefbc15793bf7a73696187c672761}\label{classMotion_acd8fefbc15793bf7a73696187c672761}} 
+\index{Motion@{Motion}!clouds2@{clouds2}}
+\index{clouds2@{clouds2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{clouds2}{clouds2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::clouds2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_ad3b886e72cdd92407903e8142c514bd1}\label{classMotion_ad3b886e72cdd92407903e8142c514bd1}} 
+\index{Motion@{Motion}!cont@{cont}}
+\index{cont@{cont}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{cont}{cont}}
+{\footnotesize\ttfamily float Motion\+::cont = 16\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a49e1aa2518eaeec8aa91719026a68e4e}\label{classMotion_a49e1aa2518eaeec8aa91719026a68e4e}} 
+\index{Motion@{Motion}!contB@{contB}}
+\index{contB@{contB}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{contB}{contB}}
+{\footnotesize\ttfamily float Motion\+::contB = 400\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aa06c1b7cd98ae40d8cd58b02e32a7fa7}\label{classMotion_aa06c1b7cd98ae40d8cd58b02e32a7fa7}} 
+\index{Motion@{Motion}!contF@{contF}}
+\index{contF@{contF}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{contF}{contF}}
+{\footnotesize\ttfamily float Motion\+::contF = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_ace3f3c9bb3b5f72887cd483dcd990a43}\label{classMotion_ace3f3c9bb3b5f72887cd483dcd990a43}} 
+\index{Motion@{Motion}!controll@{controll}}
+\index{controll@{controll}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{controll}{controll}}
+{\footnotesize\ttfamily float Motion\+::controll = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aa3ce13f9416af13548740dd426e2ed32}\label{classMotion_aa3ce13f9416af13548740dd426e2ed32}} 
+\index{Motion@{Motion}!controller@{controller}}
+\index{controller@{controller}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{controller}{controller}}
+{\footnotesize\ttfamily int Motion\+::controller = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a194dbf8d147b144a8989c4cb03df6169}\label{classMotion_a194dbf8d147b144a8989c4cb03df6169}} 
+\index{Motion@{Motion}!drips1@{drips1}}
+\index{drips1@{drips1}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{drips1}{drips1}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::drips1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a7c23545f80a0381a19097ecbdfc725b0}\label{classMotion_a7c23545f80a0381a19097ecbdfc725b0}} 
+\index{Motion@{Motion}!drips2@{drips2}}
+\index{drips2@{drips2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{drips2}{drips2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::drips2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a88966856f79ce8f33ea28a155f247577}\label{classMotion_a88966856f79ce8f33ea28a155f247577}} 
+\index{Motion@{Motion}!flakesBig@{flakesBig}}
+\index{flakesBig@{flakesBig}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{flakesBig}{flakesBig}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::flakes\+Big\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a6991d858447ac9b4bdb479c4a34bee7b}\label{classMotion_a6991d858447ac9b4bdb479c4a34bee7b}} 
+\index{Motion@{Motion}!flakesLittle@{flakesLittle}}
+\index{flakesLittle@{flakesLittle}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{flakesLittle}{flakesLittle}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::flakes\+Little\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a79b401175cbb9233d71dc53b8786eb95}\label{classMotion_a79b401175cbb9233d71dc53b8786eb95}} 
+\index{Motion@{Motion}!flakesLittle2@{flakesLittle2}}
+\index{flakesLittle2@{flakesLittle2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{flakesLittle2}{flakesLittle2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::flakes\+Little2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aa3d13367d79e5a3e85729163af867621}\label{classMotion_aa3d13367d79e5a3e85729163af867621}} 
+\index{Motion@{Motion}!ground@{ground}}
+\index{ground@{ground}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{ground}{ground}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::ground\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aa19cee7edec2db1a0f1eb7a592082399}\label{classMotion_aa19cee7edec2db1a0f1eb7a592082399}} 
+\index{Motion@{Motion}!ground2@{ground2}}
+\index{ground2@{ground2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{ground2}{ground2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::ground2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a4dd7028c401df39dd9b09388d854a004}\label{classMotion_a4dd7028c401df39dd9b09388d854a004}} 
+\index{Motion@{Motion}!lights@{lights}}
+\index{lights@{lights}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{lights}{lights}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::lights\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a020fe42b52383822ddcb9a79a0323e61}\label{classMotion_a020fe42b52383822ddcb9a79a0323e61}} 
+\index{Motion@{Motion}!little@{little}}
+\index{little@{little}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{little}{little}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::little\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a536629d5893ba6902b026d1cbe9685d8}\label{classMotion_a536629d5893ba6902b026d1cbe9685d8}} 
+\index{Motion@{Motion}!little2@{little2}}
+\index{little2@{little2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{little2}{little2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::little2\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_ad05b75421d34f09966b2040d2b1e68d8}\label{classMotion_ad05b75421d34f09966b2040d2b1e68d8}} 
+\index{Motion@{Motion}!little3@{little3}}
+\index{little3@{little3}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{little3}{little3}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::little3\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a7649128e3cb3fda075596ee7a12b8f3c}\label{classMotion_a7649128e3cb3fda075596ee7a12b8f3c}} 
+\index{Motion@{Motion}!positionB\_x@{positionB\_x}}
+\index{positionB\_x@{positionB\_x}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionB\_x}{positionB\_x}}
+{\footnotesize\ttfamily float Motion\+::position\+B\+\_\+x = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_af4060e5529d11db125650172b7335b1a}\label{classMotion_af4060e5529d11db125650172b7335b1a}} 
+\index{Motion@{Motion}!positionC\_x@{positionC\_x}}
+\index{positionC\_x@{positionC\_x}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionC\_x}{positionC\_x}}
+{\footnotesize\ttfamily float Motion\+::position\+C\+\_\+x = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a6fbea8cc4e620c7c467cf5aa5c99c456}\label{classMotion_a6fbea8cc4e620c7c467cf5aa5c99c456}} 
+\index{Motion@{Motion}!positionCC\_x@{positionCC\_x}}
+\index{positionCC\_x@{positionCC\_x}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionCC\_x}{positionCC\_x}}
+{\footnotesize\ttfamily float Motion\+::position\+CC\+\_\+x = -\/1280\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a903b3962fb6adcf86f300034be042115}\label{classMotion_a903b3962fb6adcf86f300034be042115}} 
+\index{Motion@{Motion}!positionF@{positionF}}
+\index{positionF@{positionF}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionF}{positionF}}
+{\footnotesize\ttfamily float Motion\+::positionF = 500\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a6dc2fe6da4b6a6b937654261df37a3d3}\label{classMotion_a6dc2fe6da4b6a6b937654261df37a3d3}} 
+\index{Motion@{Motion}!positionF2@{positionF2}}
+\index{positionF2@{positionF2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionF2}{positionF2}}
+{\footnotesize\ttfamily float Motion\+::position\+F2 = 550\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_ae1101a068026e60190a6e3a146f92658}\label{classMotion_ae1101a068026e60190a6e3a146f92658}} 
+\index{Motion@{Motion}!positionF2\_x@{positionF2\_x}}
+\index{positionF2\_x@{positionF2\_x}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionF2\_x}{positionF2\_x}}
+{\footnotesize\ttfamily float Motion\+::position\+F2\+\_\+x = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a3c9f9c3407ea12ca2966cb1b27376c5b}\label{classMotion_a3c9f9c3407ea12ca2966cb1b27376c5b}} 
+\index{Motion@{Motion}!positionF3@{positionF3}}
+\index{positionF3@{positionF3}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionF3}{positionF3}}
+{\footnotesize\ttfamily float Motion\+::position\+F3 = -\/210\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a86125821ec50d1452c993c56469a901d}\label{classMotion_a86125821ec50d1452c993c56469a901d}} 
+\index{Motion@{Motion}!positionF\_x@{positionF\_x}}
+\index{positionF\_x@{positionF\_x}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionF\_x}{positionF\_x}}
+{\footnotesize\ttfamily float Motion\+::position\+F\+\_\+x = 1280\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aaea40126950822e29416adaef000eb43}\label{classMotion_aaea40126950822e29416adaef000eb43}} 
+\index{Motion@{Motion}!positionL\_x@{positionL\_x}}
+\index{positionL\_x@{positionL\_x}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionL\_x}{positionL\_x}}
+{\footnotesize\ttfamily float Motion\+::position\+L\+\_\+x = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_af8e8ae231f4a6ae6b339df0b4d54ecf4}\label{classMotion_af8e8ae231f4a6ae6b339df0b4d54ecf4}} 
+\index{Motion@{Motion}!positionR1@{positionR1}}
+\index{positionR1@{positionR1}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionR1}{positionR1}}
+{\footnotesize\ttfamily float Motion\+::position\+R1 = 400\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_ae6bae14f527e7594938fe621ea9bd4e5}\label{classMotion_ae6bae14f527e7594938fe621ea9bd4e5}} 
+\index{Motion@{Motion}!positionR2@{positionR2}}
+\index{positionR2@{positionR2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{positionR2}{positionR2}}
+{\footnotesize\ttfamily float Motion\+::position\+R2 = -\/320\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a7b1b06ee5964dfb16b08e6f9df691af0}\label{classMotion_a7b1b06ee5964dfb16b08e6f9df691af0}} 
+\index{Motion@{Motion}!speed\_cloud@{speed\_cloud}}
+\index{speed\_cloud@{speed\_cloud}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{speed\_cloud}{speed\_cloud}}
+{\footnotesize\ttfamily float Motion\+::speed\+\_\+cloud = 0.\+6\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_ae921ee84c9257bcdf0cd3862ba44d430}\label{classMotion_ae921ee84c9257bcdf0cd3862ba44d430}} 
+\index{Motion@{Motion}!speed\_floor@{speed\_floor}}
+\index{speed\_floor@{speed\_floor}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{speed\_floor}{speed\_floor}}
+{\footnotesize\ttfamily float Motion\+::speed\+\_\+floor = 2.\+5\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aa5aa3a7fdcbf073f303ed42006a9cdab}\label{classMotion_aa5aa3a7fdcbf073f303ed42006a9cdab}} 
+\index{Motion@{Motion}!speed\_light@{speed\_light}}
+\index{speed\_light@{speed\_light}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{speed\_light}{speed\_light}}
+{\footnotesize\ttfamily float Motion\+::speed\+\_\+light = 0.\+5\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a2e68b1d6492e9ecfa89af726dc891384}\label{classMotion_a2e68b1d6492e9ecfa89af726dc891384}} 
+\index{Motion@{Motion}!speed\_little@{speed\_little}}
+\index{speed\_little@{speed\_little}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{speed\_little}{speed\_little}}
+{\footnotesize\ttfamily float Motion\+::speed\+\_\+little = 1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_aef09d2e9111464349fdaed8760011af8}\label{classMotion_aef09d2e9111464349fdaed8760011af8}} 
+\index{Motion@{Motion}!speedFlakes@{speedFlakes}}
+\index{speedFlakes@{speedFlakes}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{speedFlakes}{speedFlakes}}
+{\footnotesize\ttfamily float Motion\+::speed\+Flakes = 1.\+0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a332c05cae943f4e396d76a7371fd85ae}\label{classMotion_a332c05cae943f4e396d76a7371fd85ae}} 
+\index{Motion@{Motion}!speedFlakes2@{speedFlakes2}}
+\index{speedFlakes2@{speedFlakes2}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{speedFlakes2}{speedFlakes2}}
+{\footnotesize\ttfamily float Motion\+::speed\+Flakes2 = 0.\+4\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a76601c0fb9e6dfb673f02299f220207f}\label{classMotion_a76601c0fb9e6dfb673f02299f220207f}} 
+\index{Motion@{Motion}!speedRain@{speedRain}}
+\index{speedRain@{speedRain}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{speedRain}{speedRain}}
+{\footnotesize\ttfamily float Motion\+::speed\+Rain = 6\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a523b6b378cfdb2c04918cca98c0f9de7}\label{classMotion_a523b6b378cfdb2c04918cca98c0f9de7}} 
+\index{Motion@{Motion}!thunder@{thunder}}
+\index{thunder@{thunder}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{thunder}{thunder}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::thunder\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_ac8cb0423c746f03c8847ca4c3e75a408}\label{classMotion_ac8cb0423c746f03c8847ca4c3e75a408}} 
+\index{Motion@{Motion}!thunder1@{thunder1}}
+\index{thunder1@{thunder1}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{thunder1}{thunder1}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Motion\+::thunder1\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMotion_a5b33f6e22d61f0f870670364e1cbfe4e}\label{classMotion_a5b33f6e22d61f0f870670364e1cbfe4e}} 
+\index{Motion@{Motion}!value@{value}}
+\index{value@{value}!Motion@{Motion}}
+\doxysubsubsection{\texorpdfstring{value}{value}}
+{\footnotesize\ttfamily float Motion\+::value = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{motion_8hpp}{motion.\+hpp}}\item 
+src/\mbox{\hyperlink{motion_8cpp}{motion.\+cpp}}\end{DoxyCompactItemize}

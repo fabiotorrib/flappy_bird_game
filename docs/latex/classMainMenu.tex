@@ -1,0 +1,309 @@
+\hypertarget{classMainMenu}{}\doxysection{Referência da Classe Main\+Menu}
+\label{classMainMenu}\index{MainMenu@{MainMenu}}
+
+
+Tela inicial do jogo, centraliza navegação para demais estados.  
+
+
+
+
+{\ttfamily \#include $<$main\+\_\+menu.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Main\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classMainMenu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Main\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=148pt]{classMainMenu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classMainMenu_ac248f0940004258153f8e4172a9a697b}{handle\+\_\+input}} (const ALLEGRO\+\_\+\+EVENT \&\mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}}) override
+\begin{DoxyCompactList}\small\item\em Gerencia a entrada do teclado para navegar e selecionar opções no menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classMainMenu_a00df3d6357e26f276850cc02e5a9cc46}{update}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Atualiza a lógica do estado do movimento/animação de fundo a cada quadro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainMenu_acb76d4f007c328dab0a34bfe379128e2}{draw}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Desenha todos os elementos visuais do menu principal na tela. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classMainMenu_a69002a178254c429c2dd4adb24241ca4}{enter}} () override
+\begin{DoxyCompactList}\small\item\em Prepara o menu para exibição. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classMainMenu_a53eecf9d5ffd094f54ac4193e7e57eaf}{Main\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classMainMenu}{Main\+Menu}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classMainMenu_aad4e8a1e88b5dfc4136ff0e9fd7a9a6a}{button\+Position\+Selected}} = 0
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structButton}{Button}} $>$ \mbox{\hyperlink{classMainMenu_a6967bad09fcf2a73f7335cce35312cc2}{menu\+Buttons}}
+\begin{DoxyCompactList}\small\item\em Vetor que armazena os botões do menu e seus estados de seleção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a1a162acae2a1a4001f28175a5671d3bd}{logo\+Normal}}
+\begin{DoxyCompactList}\small\item\em Ponteiros inteligentes para todos os recursos visuais (imagens) do menu. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a98320800f1ce7577ddcacb563c63de3b}{button\+New\+Game\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_adcef91f6926fb97c7753480e6deb3e27}{button\+New\+Game\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a911a3a930b3a28d6bb3184abe815ce03}{button\+Load\+Game\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a2a9986ede9723400702482a6465b800c}{button\+Load\+Game\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a52bb9916982dd1a9cb5755093e83f746}{button\+Settings\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a639271a61c51f44a4b1ba1e302ff6f0b}{button\+Settings\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_aaf200307201bcbd75d2c59babddcc5bc}{button\+Difficulty\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a7ea1edad9bf02670d4a0cd48e1e61e15}{button\+Difficulty\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a3387544de3a7df64483ba1b0b6a15120}{button\+Leaderboard\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_a60ccb6f54c614a620c379f0bf40a4188}{button\+Leaderboard\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_ade7276932c7b47ecd4d10af74fb9efb3}{button\+Exit\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classMainMenu_acecbb360baf96daed7baf8759a5132d4}{button\+Exit\+Deselect}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Tela inicial do jogo, centraliza navegação para demais estados. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classMainMenu_a53eecf9d5ffd094f54ac4193e7e57eaf}\label{classMainMenu_a53eecf9d5ffd094f54ac4193e7e57eaf}} 
+\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\index{MainMenu@{MainMenu}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{MainMenu()}{MainMenu()}}
+{\footnotesize\ttfamily Main\+Menu\+::\+Main\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{classMainMenu}{Main\+Menu}}. 
+
+Bibliotecas necessárias
+
+Carrega todos os recursos visuais necessários para a tela do menu, incluindo o logo e as imagens para cada botão nos estados selecionado e não selecionado. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classMainMenu_acb76d4f007c328dab0a34bfe379128e2}\label{classMainMenu_acb76d4f007c328dab0a34bfe379128e2}} 
+\index{MainMenu@{MainMenu}!draw@{draw}}
+\index{draw@{draw}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Main\+Menu\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Desenha todos os elementos visuais do menu principal na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência para desenhar o fundo animado.\\
+\hline
+\end{DoxyParams}
+Renderiza o logo, o fundo e cada um dos botões com base na interação do usuário. 
+
+Implementa \mbox{\hyperlink{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=294pt]{classMainMenu_acb76d4f007c328dab0a34bfe379128e2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classMainMenu_a69002a178254c429c2dd4adb24241ca4}\label{classMainMenu_a69002a178254c429c2dd4adb24241ca4}} 
+\index{MainMenu@{MainMenu}!enter@{enter}}
+\index{enter@{enter}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily void Main\+Menu\+::enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Prepara o menu para exibição. 
+
+Esta função é chamada toda vez que o \mbox{\hyperlink{classMainMenu}{Main\+Menu}} se torna o estado ativo. Ela garante que o menu seja resetado para um estado inicial consistente, com o primeiro botão selecionado. 
+
+Implementa \mbox{\hyperlink{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}{State}}.
+
+\mbox{\Hypertarget{classMainMenu_ac248f0940004258153f8e4172a9a697b}\label{classMainMenu_ac248f0940004258153f8e4172a9a697b}} 
+\index{MainMenu@{MainMenu}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Main\+Menu\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{const ALLEGRO\+\_\+\+EVENT \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gerencia a entrada do teclado para navegar e selecionar opções no menu. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ev} & O evento da Allegro a ser processado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um ponteiro para o próximo estado do jogo, ou nullptr para sair. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_a09f92cba8c60fb0eb0931e42613f8f64}{State}}.
+
+\mbox{\Hypertarget{classMainMenu_a00df3d6357e26f276850cc02e5a9cc46}\label{classMainMenu_a00df3d6357e26f276850cc02e5a9cc46}} 
+\index{MainMenu@{MainMenu}!update@{update}}
+\index{update@{update}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Main\+Menu\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza a lógica do estado do movimento/animação de fundo a cada quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle de animação do fundo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna \textquotesingle{}this\textquotesingle{} para indicar a permanência no estado atual. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_ae7f906fde44230c1b9741367de7a274a}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=313pt]{classMainMenu_a00df3d6357e26f276850cc02e5a9cc46_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classMainMenu_a7ea1edad9bf02670d4a0cd48e1e61e15}\label{classMainMenu_a7ea1edad9bf02670d4a0cd48e1e61e15}} 
+\index{MainMenu@{MainMenu}!buttonDifficultyDeselect@{buttonDifficultyDeselect}}
+\index{buttonDifficultyDeselect@{buttonDifficultyDeselect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonDifficultyDeselect}{buttonDifficultyDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Difficulty\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_aaf200307201bcbd75d2c59babddcc5bc}\label{classMainMenu_aaf200307201bcbd75d2c59babddcc5bc}} 
+\index{MainMenu@{MainMenu}!buttonDifficultySelect@{buttonDifficultySelect}}
+\index{buttonDifficultySelect@{buttonDifficultySelect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonDifficultySelect}{buttonDifficultySelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Difficulty\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_acecbb360baf96daed7baf8759a5132d4}\label{classMainMenu_acecbb360baf96daed7baf8759a5132d4}} 
+\index{MainMenu@{MainMenu}!buttonExitDeselect@{buttonExitDeselect}}
+\index{buttonExitDeselect@{buttonExitDeselect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonExitDeselect}{buttonExitDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Exit\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_ade7276932c7b47ecd4d10af74fb9efb3}\label{classMainMenu_ade7276932c7b47ecd4d10af74fb9efb3}} 
+\index{MainMenu@{MainMenu}!buttonExitSelect@{buttonExitSelect}}
+\index{buttonExitSelect@{buttonExitSelect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonExitSelect}{buttonExitSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Exit\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_a60ccb6f54c614a620c379f0bf40a4188}\label{classMainMenu_a60ccb6f54c614a620c379f0bf40a4188}} 
+\index{MainMenu@{MainMenu}!buttonLeaderboardDeselect@{buttonLeaderboardDeselect}}
+\index{buttonLeaderboardDeselect@{buttonLeaderboardDeselect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonLeaderboardDeselect}{buttonLeaderboardDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Leaderboard\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_a3387544de3a7df64483ba1b0b6a15120}\label{classMainMenu_a3387544de3a7df64483ba1b0b6a15120}} 
+\index{MainMenu@{MainMenu}!buttonLeaderboardSelect@{buttonLeaderboardSelect}}
+\index{buttonLeaderboardSelect@{buttonLeaderboardSelect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonLeaderboardSelect}{buttonLeaderboardSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Leaderboard\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_a2a9986ede9723400702482a6465b800c}\label{classMainMenu_a2a9986ede9723400702482a6465b800c}} 
+\index{MainMenu@{MainMenu}!buttonLoadGameDeselect@{buttonLoadGameDeselect}}
+\index{buttonLoadGameDeselect@{buttonLoadGameDeselect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonLoadGameDeselect}{buttonLoadGameDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Load\+Game\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_a911a3a930b3a28d6bb3184abe815ce03}\label{classMainMenu_a911a3a930b3a28d6bb3184abe815ce03}} 
+\index{MainMenu@{MainMenu}!buttonLoadGameSelect@{buttonLoadGameSelect}}
+\index{buttonLoadGameSelect@{buttonLoadGameSelect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonLoadGameSelect}{buttonLoadGameSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Load\+Game\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_adcef91f6926fb97c7753480e6deb3e27}\label{classMainMenu_adcef91f6926fb97c7753480e6deb3e27}} 
+\index{MainMenu@{MainMenu}!buttonNewGameDeselect@{buttonNewGameDeselect}}
+\index{buttonNewGameDeselect@{buttonNewGameDeselect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonNewGameDeselect}{buttonNewGameDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+New\+Game\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_a98320800f1ce7577ddcacb563c63de3b}\label{classMainMenu_a98320800f1ce7577ddcacb563c63de3b}} 
+\index{MainMenu@{MainMenu}!buttonNewGameSelect@{buttonNewGameSelect}}
+\index{buttonNewGameSelect@{buttonNewGameSelect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonNewGameSelect}{buttonNewGameSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+New\+Game\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_aad4e8a1e88b5dfc4136ff0e9fd7a9a6a}\label{classMainMenu_aad4e8a1e88b5dfc4136ff0e9fd7a9a6a}} 
+\index{MainMenu@{MainMenu}!buttonPositionSelected@{buttonPositionSelected}}
+\index{buttonPositionSelected@{buttonPositionSelected}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonPositionSelected}{buttonPositionSelected}}
+{\footnotesize\ttfamily int Main\+Menu\+::button\+Position\+Selected = 0}
+
+\mbox{\Hypertarget{classMainMenu_a639271a61c51f44a4b1ba1e302ff6f0b}\label{classMainMenu_a639271a61c51f44a4b1ba1e302ff6f0b}} 
+\index{MainMenu@{MainMenu}!buttonSettingsDeselect@{buttonSettingsDeselect}}
+\index{buttonSettingsDeselect@{buttonSettingsDeselect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonSettingsDeselect}{buttonSettingsDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Settings\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_a52bb9916982dd1a9cb5755093e83f746}\label{classMainMenu_a52bb9916982dd1a9cb5755093e83f746}} 
+\index{MainMenu@{MainMenu}!buttonSettingsSelect@{buttonSettingsSelect}}
+\index{buttonSettingsSelect@{buttonSettingsSelect}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{buttonSettingsSelect}{buttonSettingsSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::button\+Settings\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classMainMenu_a1a162acae2a1a4001f28175a5671d3bd}\label{classMainMenu_a1a162acae2a1a4001f28175a5671d3bd}} 
+\index{MainMenu@{MainMenu}!logoNormal@{logoNormal}}
+\index{logoNormal@{logoNormal}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{logoNormal}{logoNormal}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Main\+Menu\+::logo\+Normal\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ponteiros inteligentes para todos os recursos visuais (imagens) do menu. 
+
+\mbox{\Hypertarget{classMainMenu_a6967bad09fcf2a73f7335cce35312cc2}\label{classMainMenu_a6967bad09fcf2a73f7335cce35312cc2}} 
+\index{MainMenu@{MainMenu}!menuButtons@{menuButtons}}
+\index{menuButtons@{menuButtons}!MainMenu@{MainMenu}}
+\doxysubsubsection{\texorpdfstring{menuButtons}{menuButtons}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structButton}{Button}}$>$ Main\+Menu\+::menu\+Buttons}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{\{\textcolor{stringliteral}{"{}NewGame"{}}, 1\},     \{\textcolor{stringliteral}{"{}LoadGame"{}}, 0\},}
+\DoxyCodeLine{                                     \{\textcolor{stringliteral}{"{}Settings"{}}, 0\},    \{\textcolor{stringliteral}{"{}Difficulty"{}}, 0\},}
+\DoxyCodeLine{                                     \{\textcolor{stringliteral}{"{}Leaderboard"{}}, 0\}, \{\textcolor{stringliteral}{"{}Exit"{}}, 0\}\}}
+
+\end{DoxyCode}
+
+
+Vetor que armazena os botões do menu e seus estados de seleção. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/states/\mbox{\hyperlink{main__menu_8hpp}{main\+\_\+menu.\+hpp}}\item 
+src/states/\mbox{\hyperlink{main__menu_8cpp}{main\+\_\+menu.\+cpp}}\end{DoxyCompactItemize}

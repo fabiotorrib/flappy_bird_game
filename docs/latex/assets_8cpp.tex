@@ -1,0 +1,82 @@
+\hypertarget{assets_8cpp}{}\doxysection{Referência do Arquivo src/assets.cpp}
+\label{assets_8cpp}\index{src/assets.cpp@{src/assets.cpp}}
+
+
+Carregamento e gerenciamento de assets gráficos/áudio.  
+
+
+{\ttfamily \#include \char`\"{}../include/assets.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Gráfico de dependência de inclusões para assets.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{assets_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{assets_8cpp_aaccab0735d858c388c02f026c7641c08}{load\+Global\+Assets}} ()
+\begin{DoxyCompactList}\small\item\em Carrega recursos globais utilizados em múltiplas cenas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{assets_8cpp_a4fd458c14651187b5d4541e2c281b587}{unload\+Global\+Assets}} ()
+\begin{DoxyCompactList}\small\item\em Libera os recursos globais previamente carregados. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSound}{Sound}} $>$ \mbox{\hyperlink{assets_8cpp_aeaa41bb3528a365751d709ce587cef53}{select\+Sound}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Carregamento e gerenciamento de assets gráficos/áudio. 
+
+
+
+\doxysubsection{Funções}
+\mbox{\Hypertarget{assets_8cpp_aaccab0735d858c388c02f026c7641c08}\label{assets_8cpp_aaccab0735d858c388c02f026c7641c08}} 
+\index{assets.cpp@{assets.cpp}!loadGlobalAssets@{loadGlobalAssets}}
+\index{loadGlobalAssets@{loadGlobalAssets}!assets.cpp@{assets.cpp}}
+\doxysubsubsection{\texorpdfstring{loadGlobalAssets()}{loadGlobalAssets()}}
+{\footnotesize\ttfamily void load\+Global\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carrega recursos globais utilizados em múltiplas cenas. 
+
+Atualmente apenas o efeito de som de seleção de menu é carregado, porém a função pode ser estendida para outros assets compartilhados. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=326pt]{assets_8cpp_aaccab0735d858c388c02f026c7641c08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{assets_8cpp_a4fd458c14651187b5d4541e2c281b587}\label{assets_8cpp_a4fd458c14651187b5d4541e2c281b587}} 
+\index{assets.cpp@{assets.cpp}!unloadGlobalAssets@{unloadGlobalAssets}}
+\index{unloadGlobalAssets@{unloadGlobalAssets}!assets.cpp@{assets.cpp}}
+\doxysubsubsection{\texorpdfstring{unloadGlobalAssets()}{unloadGlobalAssets()}}
+{\footnotesize\ttfamily void unload\+Global\+Assets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera os recursos globais previamente carregados. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{assets_8cpp_a4fd458c14651187b5d4541e2c281b587_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{assets_8cpp_aeaa41bb3528a365751d709ce587cef53}\label{assets_8cpp_aeaa41bb3528a365751d709ce587cef53}} 
+\index{assets.cpp@{assets.cpp}!selectSound@{selectSound}}
+\index{selectSound@{selectSound}!assets.cpp@{assets.cpp}}
+\doxysubsubsection{\texorpdfstring{selectSound}{selectSound}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classSound}{Sound}}$>$ select\+Sound}
+

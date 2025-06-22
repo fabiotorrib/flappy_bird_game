@@ -1,0 +1,1173 @@
+\begin{theindex}
+
+  \item {$\sim$AllegroController}
+    \subitem {AllegroController}, \hyperpage{10}
+  \item {$\sim$Bird}
+    \subitem {Bird}, \hyperpage{15}
+  \item {$\sim$GameObject}
+    \subitem {GameObject}, \hyperpage{45}
+  \item {$\sim$Image}
+    \subitem {Image}, \hyperpage{52}
+  \item {$\sim$Music}
+    \subitem {Music}, \hyperpage{79}
+  \item {$\sim$Sound}
+    \subitem {Sound}, \hyperpage{115}
+  \item {$\sim$State}
+    \subitem {State}, \hyperpage{116}
+  \item {$\sim$TextFont}
+    \subitem {TextFont}, \hyperpage{119}
+
+  \indexspace
+
+  \item {add\_pipe\_pair}
+    \subitem {PipeList}, \hyperpage{86}
+  \item {AllegroController}, \hyperpage{9}
+    \subitem {$\sim$AllegroController}, \hyperpage{10}
+    \subitem {AllegroController}, \hyperpage{10}
+    \subitem {cleanup}, \hyperpage{10}
+    \subitem {current\_state}, \hyperpage{12}
+    \subitem {game}, \hyperpage{12}
+    \subitem {initialize}, \hyperpage{11}
+    \subitem {load}, \hyperpage{11}
+    \subitem {motion}, \hyperpage{12}
+    \subitem {run}, \hyperpage{11}
+    \subitem {screen\_height}, \hyperpage{12}
+    \subitem {screen\_width}, \hyperpage{12}
+  \item {assets.cpp}
+    \subitem {loadGlobalAssets}, \hyperpage{149}
+    \subitem {selectSound}, \hyperpage{150}
+    \subitem {unloadGlobalAssets}, \hyperpage{149}
+  \item {assets.hpp}
+    \subitem {loadGlobalAssets}, \hyperpage{125}
+    \subitem {selectSound}, \hyperpage{126}
+    \subitem {unloadGlobalAssets}, \hyperpage{125}
+
+  \indexspace
+
+  \item {b}
+    \subitem {TextFont}, \hyperpage{120}
+  \item {background}
+    \subitem {Motion}, \hyperpage{73}
+  \item {background\_rain}
+    \subitem {Motion}, \hyperpage{73}
+  \item {background\_snow}
+    \subitem {Motion}, \hyperpage{73}
+  \item {backgroundMusic}
+    \subitem {init.cpp}, \hyperpage{154}
+    \subitem {init.hpp}, \hyperpage{136}
+  \item {Bird}, \hyperpage{13}
+    \subitem {$\sim$Bird}, \hyperpage{15}
+    \subitem {Bird}, \hyperpage{14}
+    \subitem {breakanimation}, \hyperpage{20}
+    \subitem {check\_bird\_collision}, \hyperpage{15}
+    \subitem {contB}, \hyperpage{20}
+    \subitem {destroy\_bitmaps}, \hyperpage{16}
+    \subitem {draw}, \hyperpage{16}
+    \subitem {frame1}, \hyperpage{21}
+    \subitem {frame2}, \hyperpage{21}
+    \subitem {frame3}, \hyperpage{21}
+    \subitem {frames}, \hyperpage{21}
+    \subitem {gravity}, \hyperpage{21}
+    \subitem {jump}, \hyperpage{17}
+    \subitem {jumpForce}, \hyperpage{21}
+    \subitem {loop\_animation}, \hyperpage{17}
+    \subitem {reset\_xy}, \hyperpage{18}
+    \subitem {rotation}, \hyperpage{22}
+    \subitem {set\_break}, \hyperpage{18}
+    \subitem {set\_by}, \hyperpage{19}
+    \subitem {update}, \hyperpage{19}
+    \subitem {valueB}, \hyperpage{22}
+    \subitem {vy}, \hyperpage{22}
+  \item {bird1}
+    \subitem {FlappyBird}, \hyperpage{40}
+    \subitem {Motion}, \hyperpage{73}
+  \item {bird2}
+    \subitem {FlappyBird}, \hyperpage{40}
+    \subitem {Motion}, \hyperpage{73}
+  \item {bird3}
+    \subitem {FlappyBird}, \hyperpage{40}
+    \subitem {Motion}, \hyperpage{73}
+  \item {BIRD\_VEL}
+    \subitem {defines.hpp}, \hyperpage{129}
+  \item {bottom}
+    \subitem {PipePair}, \hyperpage{94}
+  \item {breakanimation}
+    \subitem {Bird}, \hyperpage{20}
+  \item {breaker}
+    \subitem {FlappyBird}, \hyperpage{31}
+  \item {Button}, \hyperpage{22}
+    \subitem {buttonSelectState}, \hyperpage{23}
+    \subitem {name}, \hyperpage{23}
+  \item {buttonBackDeselect}
+    \subitem {LoadName}, \hyperpage{62}
+    \subitem {SettingsMenu}, \hyperpage{111}
+  \item {buttonBackSelect}
+    \subitem {LoadName}, \hyperpage{62}
+    \subitem {SettingsMenu}, \hyperpage{111}
+  \item {buttonDifficultyDeselect}
+    \subitem {MainMenu}, \hyperpage{67}
+  \item {buttonDifficultyEasy}
+    \subitem {DifficultyMenu}, \hyperpage{27}
+  \item {buttonDifficultyHard}
+    \subitem {DifficultyMenu}, \hyperpage{27}
+  \item {buttonDifficultyNormal}
+    \subitem {DifficultyMenu}, \hyperpage{27}
+  \item {buttonDifficultySelect}
+    \subitem {MainMenu}, \hyperpage{67}
+  \item {buttonExitDeselect}
+    \subitem {MainMenu}, \hyperpage{67}
+    \subitem {Play}, \hyperpage{99}
+  \item {buttonExitSelect}
+    \subitem {MainMenu}, \hyperpage{68}
+    \subitem {Play}, \hyperpage{99}
+  \item {buttonInsertDeselect}
+    \subitem {LoadName}, \hyperpage{62}
+  \item {buttonInsertSelect}
+    \subitem {LoadName}, \hyperpage{62}
+  \item {buttonLeaderboardDeselect}
+    \subitem {MainMenu}, \hyperpage{68}
+  \item {buttonLeaderboardSelect}
+    \subitem {MainMenu}, \hyperpage{68}
+  \item {buttonLoadGameDeselect}
+    \subitem {MainMenu}, \hyperpage{68}
+  \item {buttonLoadGameSelect}
+    \subitem {MainMenu}, \hyperpage{68}
+  \item {buttonMusicDaySelect}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonMusicRainSelect}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonMusicSelect}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonMusicSnowSelect}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonNewGameDeselect}
+    \subitem {MainMenu}, \hyperpage{68}
+  \item {buttonNewGameSelect}
+    \subitem {MainMenu}, \hyperpage{68}
+  \item {buttonNoMusicDaySelect}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonNoMusicRainSelect}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonNoMusicSnowSelect}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonPause}
+    \subitem {Play}, \hyperpage{99}
+  \item {buttonPositionSelected}
+    \subitem {DifficultyMenu}, \hyperpage{27}
+    \subitem {LoadName}, \hyperpage{62}
+    \subitem {MainMenu}, \hyperpage{68}
+    \subitem {Play}, \hyperpage{100}
+    \subitem {SettingsMenu}, \hyperpage{112}
+  \item {buttonSaveDeselect}
+    \subitem {DifficultyMenu}, \hyperpage{28}
+  \item {buttonSaveSelect}
+    \subitem {DifficultyMenu}, \hyperpage{28}
+  \item {buttonSelectState}
+    \subitem {Button}, \hyperpage{23}
+  \item {buttonSettingsDeselect}
+    \subitem {MainMenu}, \hyperpage{69}
+  \item {buttonSettingsSelect}
+    \subitem {MainMenu}, \hyperpage{69}
+  \item {buttonTryagainDeselect}
+    \subitem {Play}, \hyperpage{100}
+  \item {buttonTryagainSelect}
+    \subitem {Play}, \hyperpage{100}
+  \item {by}
+    \subitem {GameObject}, \hyperpage{49}
+
+  \indexspace
+
+  \item {campLeaderboard}
+    \subitem {LeaderboardMenu}, \hyperpage{57}
+  \item {campSettingsMusic}
+    \subitem {SettingsMenu}, \hyperpage{113}
+  \item {campSettingsNoMusic}
+    \subitem {SettingsMenu}, \hyperpage{113}
+  \item {change\_vel}
+    \subitem {FlappyBird}, \hyperpage{40}
+  \item {change\_velocity}
+    \subitem {FlappyBird}, \hyperpage{31}
+  \item {check\_bird\_collision}
+    \subitem {Bird}, \hyperpage{15}
+    \subitem {GameObject}, \hyperpage{45}
+  \item {check\_collision}
+    \subitem {PipeList}, \hyperpage{86}
+  \item {check\_collision\_with\_boundaries}
+    \subitem {GameObject}, \hyperpage{45}
+  \item {check\_collisions}
+    \subitem {FlappyBird}, \hyperpage{32}
+  \item {check\_score}
+    \subitem {Pipe}, \hyperpage{82}
+    \subitem {PipeList}, \hyperpage{87}
+  \item {CheckingName}
+    \subitem {Player}, \hyperpage{102}
+  \item {cleanup}
+    \subitem {AllegroController}, \hyperpage{10}
+  \item {clouds}
+    \subitem {Motion}, \hyperpage{73}
+  \item {clouds2}
+    \subitem {Motion}, \hyperpage{73}
+  \item {cont}
+    \subitem {Motion}, \hyperpage{74}
+  \item {contB}
+    \subitem {Bird}, \hyperpage{20}
+    \subitem {Motion}, \hyperpage{74}
+  \item {contF}
+    \subitem {Motion}, \hyperpage{74}
+  \item {control\_pipes}
+    \subitem {FlappyBird}, \hyperpage{32}
+  \item {controll}
+    \subitem {Motion}, \hyperpage{74}
+  \item {controller}
+    \subitem {Motion}, \hyperpage{74}
+  \item {current\_state}
+    \subitem {AllegroController}, \hyperpage{12}
+  \item {currentPlayer}
+    \subitem {FlappyBird}, \hyperpage{40}
+
+  \indexspace
+
+  \item {defines.hpp}
+    \subitem {BIRD\_VEL}, \hyperpage{129}
+    \subitem {FPS}, \hyperpage{129}
+    \subitem {GAME\_OVER}, \hyperpage{131}
+    \subitem {GAP\_SIZE}, \hyperpage{129}
+    \subitem {GAP\_X}, \hyperpage{129}
+    \subitem {GRAVITY}, \hyperpage{129}
+    \subitem {JUMP\_FORCE}, \hyperpage{129}
+    \subitem {MAX\_INPUT\_LENGTH}, \hyperpage{129}
+    \subitem {MAX\_ROTATION\_DOWN}, \hyperpage{131}
+    \subitem {MAX\_ROTATION\_UP}, \hyperpage{131}
+    \subitem {OSCILATION}, \hyperpage{129}
+    \subitem {PAUSE}, \hyperpage{131}
+    \subitem {PIPE\_SPEED}, \hyperpage{130}
+    \subitem {PIPE\_VERTICAL\_SPEED}, \hyperpage{130}
+    \subitem {PLAY}, \hyperpage{131}
+    \subitem {ROTATION}, \hyperpage{130}
+    \subitem {SCREEN\_H}, \hyperpage{130}
+    \subitem {SCREEN\_W}, \hyperpage{130}
+    \subitem {ScreenState}, \hyperpage{131}
+    \subitem {TETO\_BIRD}, \hyperpage{130}
+    \subitem {TIME\_GIF\_BIRD}, \hyperpage{130}
+    \subitem {X\_INIT}, \hyperpage{130}
+  \item {deinit}
+    \subitem {init.cpp}, \hyperpage{152}
+    \subitem {init.hpp}, \hyperpage{135}
+  \item {delete\_pipe\_pair}
+    \subitem {PipeList}, \hyperpage{88}
+  \item {destroy\_bitmaps}
+    \subitem {Bird}, \hyperpage{16}
+  \item {difficulty}
+    \subitem {init.cpp}, \hyperpage{154}
+    \subitem {init.hpp}, \hyperpage{136}
+  \item {difficulty\_game}
+    \subitem {FlappyBird}, \hyperpage{41}
+  \item {difficulty\_pipe}
+    \subitem {PipeList}, \hyperpage{91}
+  \item {DifficultyMenu}, \hyperpage{23}
+    \subitem {buttonDifficultyEasy}, \hyperpage{27}
+    \subitem {buttonDifficultyHard}, \hyperpage{27}
+    \subitem {buttonDifficultyNormal}, \hyperpage{27}
+    \subitem {buttonPositionSelected}, \hyperpage{27}
+    \subitem {buttonSaveDeselect}, \hyperpage{28}
+    \subitem {buttonSaveSelect}, \hyperpage{28}
+    \subitem {DifficultyMenu}, \hyperpage{25}
+    \subitem {difficultySelected}, \hyperpage{28}
+    \subitem {draw}, \hyperpage{25}
+    \subitem {enter}, \hyperpage{26}
+    \subitem {font}, \hyperpage{28}
+    \subitem {handle\_input}, \hyperpage{26}
+    \subitem {menuButtons}, \hyperpage{28}
+    \subitem {update}, \hyperpage{26}
+  \item {difficultySelected}
+    \subitem {DifficultyMenu}, \hyperpage{28}
+  \item {display}
+    \subitem {init.cpp}, \hyperpage{154}
+    \subitem {init.hpp}, \hyperpage{136}
+    \subitem {State}, \hyperpage{118}
+  \item {docs/mainpage.dox}, \hyperpage{123}
+  \item {Draw}
+    \subitem {Image}, \hyperpage{52}
+  \item {draw}
+    \subitem {Bird}, \hyperpage{16}
+    \subitem {DifficultyMenu}, \hyperpage{25}
+    \subitem {FlappyBird}, \hyperpage{33}
+    \subitem {GameObject}, \hyperpage{46}
+    \subitem {LeaderboardMenu}, \hyperpage{55}
+    \subitem {LoadName}, \hyperpage{59}
+    \subitem {MainMenu}, \hyperpage{65}
+    \subitem {Motion}, \hyperpage{71}
+    \subitem {Pipe}, \hyperpage{83}
+    \subitem {PipeList}, \hyperpage{88}
+    \subitem {Play}, \hyperpage{97}
+    \subitem {SettingsMenu}, \hyperpage{109}
+    \subitem {State}, \hyperpage{117}
+  \item {draw\_animated\_ground}
+    \subitem {FlappyBird}, \hyperpage{34}
+  \item {draw\_HUD}
+    \subitem {FlappyBird}, \hyperpage{34}
+  \item {draw\_intial\_text}
+    \subitem {FlappyBird}, \hyperpage{35}
+  \item {drips1}
+    \subitem {Motion}, \hyperpage{74}
+  \item {drips2}
+    \subitem {Motion}, \hyperpage{74}
+
+  \indexspace
+
+  \item {enter}
+    \subitem {DifficultyMenu}, \hyperpage{26}
+    \subitem {LeaderboardMenu}, \hyperpage{55}
+    \subitem {LoadName}, \hyperpage{60}
+    \subitem {MainMenu}, \hyperpage{66}
+    \subitem {Play}, \hyperpage{97}
+    \subitem {SettingsMenu}, \hyperpage{110}
+    \subitem {State}, \hyperpage{117}
+  \item {errorFont}
+    \subitem {LoadName}, \hyperpage{62}
+  \item {errorSituation}
+    \subitem {LoadName}, \hyperpage{62}
+  \item {ev}
+    \subitem {State}, \hyperpage{118}
+  \item {event\_queue}
+    \subitem {init.cpp}, \hyperpage{154}
+    \subitem {init.hpp}, \hyperpage{136}
+  \item {existName}
+    \subitem {load\_game.hpp}, \hyperpage{144}
+
+  \indexspace
+
+  \item {flakesBig}
+    \subitem {Motion}, \hyperpage{74}
+  \item {flakesLittle}
+    \subitem {Motion}, \hyperpage{75}
+  \item {flakesLittle2}
+    \subitem {Motion}, \hyperpage{75}
+  \item {flappy}
+    \subitem {Play}, \hyperpage{100}
+  \item {flappy\_obj}
+    \subitem {FlappyBird}, \hyperpage{41}
+  \item {FlappyBird}, \hyperpage{29}
+    \subitem {bird1}, \hyperpage{40}
+    \subitem {bird2}, \hyperpage{40}
+    \subitem {bird3}, \hyperpage{40}
+    \subitem {breaker}, \hyperpage{31}
+    \subitem {change\_vel}, \hyperpage{40}
+    \subitem {change\_velocity}, \hyperpage{31}
+    \subitem {check\_collisions}, \hyperpage{32}
+    \subitem {control\_pipes}, \hyperpage{32}
+    \subitem {currentPlayer}, \hyperpage{40}
+    \subitem {difficulty\_game}, \hyperpage{41}
+    \subitem {draw}, \hyperpage{33}
+    \subitem {draw\_animated\_ground}, \hyperpage{34}
+    \subitem {draw\_HUD}, \hyperpage{34}
+    \subitem {draw\_intial\_text}, \hyperpage{35}
+    \subitem {flappy\_obj}, \hyperpage{41}
+    \subitem {FlappyBird}, \hyperpage{31}
+    \subitem {gameOverSound}, \hyperpage{41}
+    \subitem {get\_bird}, \hyperpage{35}
+    \subitem {get\_pipes}, \hyperpage{35}
+    \subitem {get\_state}, \hyperpage{35}
+    \subitem {ground}, \hyperpage{41}
+    \subitem {ground2}, \hyperpage{41}
+    \subitem {jump}, \hyperpage{36}
+    \subitem {pipe}, \hyperpage{41}
+    \subitem {pipelist}, \hyperpage{42}
+    \subitem {pointSound}, \hyperpage{42}
+    \subitem {positionF2\_x}, \hyperpage{42}
+    \subitem {positionF\_x}, \hyperpage{42}
+    \subitem {reset}, \hyperpage{36}
+    \subitem {saveCurrentPlayerScore}, \hyperpage{36}
+    \subitem {score}, \hyperpage{42}
+    \subitem {set\_current\_player}, \hyperpage{37}
+    \subitem {set\_playerscore}, \hyperpage{37}
+    \subitem {starter}, \hyperpage{37}
+    \subitem {state}, \hyperpage{42}
+    \subitem {time}, \hyperpage{42}
+    \subitem {unbreaker}, \hyperpage{38}
+    \subitem {update}, \hyperpage{38}
+    \subitem {update\_score}, \hyperpage{39}
+    \subitem {velocity}, \hyperpage{43}
+    \subitem {velocity\_backup}, \hyperpage{43}
+  \item {font}
+    \subitem {DifficultyMenu}, \hyperpage{28}
+    \subitem {init.cpp}, \hyperpage{154}
+    \subitem {init.hpp}, \hyperpage{136}
+    \subitem {LeaderboardMenu}, \hyperpage{57}
+    \subitem {Play}, \hyperpage{100}
+    \subitem {SettingsMenu}, \hyperpage{113}
+    \subitem {TextFont}, \hyperpage{120}
+  \item {FPS}
+    \subitem {defines.hpp}, \hyperpage{129}
+  \item {frame1}
+    \subitem {Bird}, \hyperpage{21}
+  \item {frame2}
+    \subitem {Bird}, \hyperpage{21}
+  \item {frame3}
+    \subitem {Bird}, \hyperpage{21}
+  \item {frames}
+    \subitem {Bird}, \hyperpage{21}
+
+  \indexspace
+
+  \item {g}
+    \subitem {TextFont}, \hyperpage{120}
+  \item {g\_sound\_on}
+    \subitem {init.cpp}, \hyperpage{154}
+    \subitem {init.hpp}, \hyperpage{136}
+  \item {game}
+    \subitem {AllegroController}, \hyperpage{12}
+  \item {GAME\_OVER}
+    \subitem {defines.hpp}, \hyperpage{131}
+  \item {GameObject}, \hyperpage{43}
+    \subitem {$\sim$GameObject}, \hyperpage{45}
+    \subitem {by}, \hyperpage{49}
+    \subitem {check\_bird\_collision}, \hyperpage{45}
+    \subitem {check\_collision\_with\_boundaries}, \hyperpage{45}
+    \subitem {draw}, \hyperpage{46}
+    \subitem {GameObject}, \hyperpage{44}
+    \subitem {get\_height}, \hyperpage{46}
+    \subitem {get\_width}, \hyperpage{46}
+    \subitem {get\_x}, \hyperpage{47}
+    \subitem {get\_x\_final}, \hyperpage{47}
+    \subitem {get\_y}, \hyperpage{47}
+    \subitem {height}, \hyperpage{49}
+    \subitem {obj\_sprite}, \hyperpage{49}
+    \subitem {set\_finals}, \hyperpage{48}
+    \subitem {set\_x}, \hyperpage{48}
+    \subitem {set\_y}, \hyperpage{48}
+    \subitem {update}, \hyperpage{49}
+    \subitem {width}, \hyperpage{49}
+    \subitem {x}, \hyperpage{49}
+    \subitem {x\_final}, \hyperpage{50}
+    \subitem {y}, \hyperpage{50}
+    \subitem {y\_final}, \hyperpage{50}
+  \item {gameOverSound}
+    \subitem {FlappyBird}, \hyperpage{41}
+  \item {GAP\_SIZE}
+    \subitem {defines.hpp}, \hyperpage{129}
+  \item {GAP\_X}
+    \subitem {defines.hpp}, \hyperpage{129}
+  \item {gen}
+    \subitem {PipeList}, \hyperpage{91}
+  \item {get\_bird}
+    \subitem {FlappyBird}, \hyperpage{35}
+  \item {get\_height}
+    \subitem {GameObject}, \hyperpage{46}
+  \item {get\_pipe\_pairs}
+    \subitem {PipeList}, \hyperpage{88}
+  \item {get\_pipes}
+    \subitem {FlappyBird}, \hyperpage{35}
+  \item {get\_points}
+    \subitem {PipeList}, \hyperpage{89}
+  \item {get\_state}
+    \subitem {FlappyBird}, \hyperpage{35}
+  \item {get\_width}
+    \subitem {GameObject}, \hyperpage{46}
+  \item {get\_x}
+    \subitem {GameObject}, \hyperpage{47}
+  \item {get\_x\_final}
+    \subitem {GameObject}, \hyperpage{47}
+  \item {get\_y}
+    \subitem {GameObject}, \hyperpage{47}
+    \subitem {Pipe}, \hyperpage{83}
+  \item {getBitmap}
+    \subitem {Image}, \hyperpage{52}
+  \item {GetName}
+    \subitem {Player}, \hyperpage{103}
+  \item {GetScore}
+    \subitem {Player}, \hyperpage{103}
+  \item {GRAVITY}
+    \subitem {defines.hpp}, \hyperpage{129}
+  \item {gravity}
+    \subitem {Bird}, \hyperpage{21}
+  \item {ground}
+    \subitem {FlappyBird}, \hyperpage{41}
+    \subitem {Motion}, \hyperpage{75}
+  \item {ground2}
+    \subitem {FlappyBird}, \hyperpage{41}
+    \subitem {Motion}, \hyperpage{75}
+
+  \indexspace
+
+  \item {handle\_input}
+    \subitem {DifficultyMenu}, \hyperpage{26}
+    \subitem {LeaderboardMenu}, \hyperpage{56}
+    \subitem {LoadName}, \hyperpage{60}
+    \subitem {MainMenu}, \hyperpage{66}
+    \subitem {Play}, \hyperpage{98}
+    \subitem {SettingsMenu}, \hyperpage{110}
+    \subitem {State}, \hyperpage{117}
+  \item {height}
+    \subitem {GameObject}, \hyperpage{49}
+
+  \indexspace
+
+  \item {icon}
+    \subitem {init.cpp}, \hyperpage{155}
+    \subitem {init.hpp}, \hyperpage{137}
+  \item {Image}, \hyperpage{50}
+    \subitem {$\sim$Image}, \hyperpage{52}
+    \subitem {Draw}, \hyperpage{52}
+    \subitem {getBitmap}, \hyperpage{52}
+    \subitem {Image}, \hyperpage{51}
+    \subitem {image}, \hyperpage{52}
+    \subitem {x}, \hyperpage{53}
+    \subitem {y}, \hyperpage{53}
+  \item {image}
+    \subitem {Image}, \hyperpage{52}
+  \item {include/allegro\_interface.hpp}, \hyperpage{123}
+  \item {include/assets.hpp}, \hyperpage{124}
+  \item {include/bird.hpp}, \hyperpage{126}
+  \item {include/defines.hpp}, \hyperpage{127}
+  \item {include/flappy\_bird\_controller.hpp}, \hyperpage{131}
+  \item {include/game\_object.hpp}, \hyperpage{132}
+  \item {include/init.hpp}, \hyperpage{133}
+  \item {include/motion.hpp}, \hyperpage{138}
+  \item {include/pipe.hpp}, \hyperpage{138}
+  \item {include/player.hpp}, \hyperpage{140}
+  \item {include/state.hpp}, \hyperpage{140}
+  \item {include/states/difficulty\_menu.hpp}, \hyperpage{141}
+  \item {include/states/leaderboard\_menu.hpp}, \hyperpage{142}
+  \item {include/states/load\_game.hpp}, \hyperpage{143}
+  \item {include/states/main\_menu.hpp}, \hyperpage{145}
+  \item {include/states/play.hpp}, \hyperpage{146}
+  \item {include/states/settings\_menu.hpp}, \hyperpage{147}
+  \item {init}
+    \subitem {init.cpp}, \hyperpage{153}
+    \subitem {init.hpp}, \hyperpage{135}
+  \item {init.cpp}
+    \subitem {backgroundMusic}, \hyperpage{154}
+    \subitem {deinit}, \hyperpage{152}
+    \subitem {difficulty}, \hyperpage{154}
+    \subitem {display}, \hyperpage{154}
+    \subitem {event\_queue}, \hyperpage{154}
+    \subitem {font}, \hyperpage{154}
+    \subitem {g\_sound\_on}, \hyperpage{154}
+    \subitem {icon}, \hyperpage{155}
+    \subitem {init}, \hyperpage{153}
+    \subitem {LOG}, \hyperpage{152}
+    \subitem {player}, \hyperpage{155}
+    \subitem {ranking}, \hyperpage{155}
+    \subitem {timer\_FPS}, \hyperpage{155}
+  \item {init.hpp}
+    \subitem {backgroundMusic}, \hyperpage{136}
+    \subitem {deinit}, \hyperpage{135}
+    \subitem {difficulty}, \hyperpage{136}
+    \subitem {display}, \hyperpage{136}
+    \subitem {event\_queue}, \hyperpage{136}
+    \subitem {font}, \hyperpage{136}
+    \subitem {g\_sound\_on}, \hyperpage{136}
+    \subitem {icon}, \hyperpage{137}
+    \subitem {init}, \hyperpage{135}
+    \subitem {keystate}, \hyperpage{137}
+    \subitem {player}, \hyperpage{137}
+    \subitem {ranking}, \hyperpage{137}
+    \subitem {selectSound}, \hyperpage{137}
+    \subitem {timer\_FPS}, \hyperpage{137}
+  \item {initialize}
+    \subitem {AllegroController}, \hyperpage{11}
+  \item {inputNameScreen}
+    \subitem {main\_menu.cpp}, \hyperpage{161}
+    \subitem {main\_menu.hpp}, \hyperpage{145}
+  \item {insertNameSituations}
+    \subitem {load\_game.hpp}, \hyperpage{144}
+  \item {is\_off\_screen}
+    \subitem {Pipe}, \hyperpage{83}
+
+  \indexspace
+
+  \item {jump}
+    \subitem {Bird}, \hyperpage{17}
+    \subitem {FlappyBird}, \hyperpage{36}
+  \item {JUMP\_FORCE}
+    \subitem {defines.hpp}, \hyperpage{129}
+  \item {jumpForce}
+    \subitem {Bird}, \hyperpage{21}
+
+  \indexspace
+
+  \item {keystate}
+    \subitem {init.hpp}, \hyperpage{137}
+
+  \indexspace
+
+  \item {LeaderboardMenu}, \hyperpage{53}
+    \subitem {campLeaderboard}, \hyperpage{57}
+    \subitem {draw}, \hyperpage{55}
+    \subitem {enter}, \hyperpage{55}
+    \subitem {font}, \hyperpage{57}
+    \subitem {handle\_input}, \hyperpage{56}
+    \subitem {LeaderboardMenu}, \hyperpage{54}
+    \subitem {update}, \hyperpage{56}
+  \item {lights}
+    \subitem {Motion}, \hyperpage{75}
+  \item {little}
+    \subitem {Motion}, \hyperpage{75}
+  \item {little2}
+    \subitem {Motion}, \hyperpage{75}
+  \item {little3}
+    \subitem {Motion}, \hyperpage{75}
+  \item {load}
+    \subitem {AllegroController}, \hyperpage{11}
+  \item {load\_game.hpp}
+    \subitem {existName}, \hyperpage{144}
+    \subitem {insertNameSituations}, \hyperpage{144}
+    \subitem {noError}, \hyperpage{144}
+    \subitem {noexistName}, \hyperpage{144}
+    \subitem {noName}, \hyperpage{144}
+    \subitem {successInsert}, \hyperpage{144}
+  \item {loadGlobalAssets}
+    \subitem {assets.cpp}, \hyperpage{149}
+    \subitem {assets.hpp}, \hyperpage{125}
+  \item {LoadName}, \hyperpage{58}
+    \subitem {buttonBackDeselect}, \hyperpage{62}
+    \subitem {buttonBackSelect}, \hyperpage{62}
+    \subitem {buttonInsertDeselect}, \hyperpage{62}
+    \subitem {buttonInsertSelect}, \hyperpage{62}
+    \subitem {buttonPositionSelected}, \hyperpage{62}
+    \subitem {draw}, \hyperpage{59}
+    \subitem {enter}, \hyperpage{60}
+    \subitem {errorFont}, \hyperpage{62}
+    \subitem {errorSituation}, \hyperpage{62}
+    \subitem {handle\_input}, \hyperpage{60}
+    \subitem {LoadName}, \hyperpage{59}
+    \subitem {menuButtons}, \hyperpage{62}
+    \subitem {nameCampDeselect}, \hyperpage{63}
+    \subitem {nameCampSelect}, \hyperpage{63}
+    \subitem {nameFont}, \hyperpage{63}
+    \subitem {playerNameString}, \hyperpage{63}
+    \subitem {update}, \hyperpage{61}
+  \item {LOG}
+    \subitem {init.cpp}, \hyperpage{152}
+  \item {logoGameOver}
+    \subitem {Play}, \hyperpage{100}
+  \item {logoNormal}
+    \subitem {MainMenu}, \hyperpage{69}
+  \item {loop\_animation}
+    \subitem {Bird}, \hyperpage{17}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{156}
+  \item {main.cpp}
+    \subitem {main}, \hyperpage{156}
+  \item {main\_menu.cpp}
+    \subitem {inputNameScreen}, \hyperpage{161}
+  \item {main\_menu.hpp}
+    \subitem {inputNameScreen}, \hyperpage{145}
+  \item {MainMenu}, \hyperpage{64}
+    \subitem {buttonDifficultyDeselect}, \hyperpage{67}
+    \subitem {buttonDifficultySelect}, \hyperpage{67}
+    \subitem {buttonExitDeselect}, \hyperpage{67}
+    \subitem {buttonExitSelect}, \hyperpage{68}
+    \subitem {buttonLeaderboardDeselect}, \hyperpage{68}
+    \subitem {buttonLeaderboardSelect}, \hyperpage{68}
+    \subitem {buttonLoadGameDeselect}, \hyperpage{68}
+    \subitem {buttonLoadGameSelect}, \hyperpage{68}
+    \subitem {buttonNewGameDeselect}, \hyperpage{68}
+    \subitem {buttonNewGameSelect}, \hyperpage{68}
+    \subitem {buttonPositionSelected}, \hyperpage{68}
+    \subitem {buttonSettingsDeselect}, \hyperpage{69}
+    \subitem {buttonSettingsSelect}, \hyperpage{69}
+    \subitem {draw}, \hyperpage{65}
+    \subitem {enter}, \hyperpage{66}
+    \subitem {handle\_input}, \hyperpage{66}
+    \subitem {logoNormal}, \hyperpage{69}
+    \subitem {MainMenu}, \hyperpage{65}
+    \subitem {menuButtons}, \hyperpage{69}
+    \subitem {update}, \hyperpage{67}
+  \item {MAX\_INPUT\_LENGTH}
+    \subitem {defines.hpp}, \hyperpage{129}
+  \item {MAX\_ROTATION\_DOWN}
+    \subitem {defines.hpp}, \hyperpage{131}
+  \item {MAX\_ROTATION\_UP}
+    \subitem {defines.hpp}, \hyperpage{131}
+  \item {menuButtons}
+    \subitem {DifficultyMenu}, \hyperpage{28}
+    \subitem {LoadName}, \hyperpage{62}
+    \subitem {MainMenu}, \hyperpage{69}
+    \subitem {Play}, \hyperpage{100}
+    \subitem {SettingsMenu}, \hyperpage{113}
+  \item {Motion}, \hyperpage{69}
+    \subitem {background}, \hyperpage{73}
+    \subitem {background\_rain}, \hyperpage{73}
+    \subitem {background\_snow}, \hyperpage{73}
+    \subitem {bird1}, \hyperpage{73}
+    \subitem {bird2}, \hyperpage{73}
+    \subitem {bird3}, \hyperpage{73}
+    \subitem {clouds}, \hyperpage{73}
+    \subitem {clouds2}, \hyperpage{73}
+    \subitem {cont}, \hyperpage{74}
+    \subitem {contB}, \hyperpage{74}
+    \subitem {contF}, \hyperpage{74}
+    \subitem {controll}, \hyperpage{74}
+    \subitem {controller}, \hyperpage{74}
+    \subitem {draw}, \hyperpage{71}
+    \subitem {drips1}, \hyperpage{74}
+    \subitem {drips2}, \hyperpage{74}
+    \subitem {flakesBig}, \hyperpage{74}
+    \subitem {flakesLittle}, \hyperpage{75}
+    \subitem {flakesLittle2}, \hyperpage{75}
+    \subitem {ground}, \hyperpage{75}
+    \subitem {ground2}, \hyperpage{75}
+    \subitem {lights}, \hyperpage{75}
+    \subitem {little}, \hyperpage{75}
+    \subitem {little2}, \hyperpage{75}
+    \subitem {little3}, \hyperpage{75}
+    \subitem {Motion}, \hyperpage{71}
+    \subitem {positionB\_x}, \hyperpage{76}
+    \subitem {positionC\_x}, \hyperpage{76}
+    \subitem {positionCC\_x}, \hyperpage{76}
+    \subitem {positionF}, \hyperpage{76}
+    \subitem {positionF2}, \hyperpage{76}
+    \subitem {positionF2\_x}, \hyperpage{76}
+    \subitem {positionF3}, \hyperpage{76}
+    \subitem {positionF\_x}, \hyperpage{76}
+    \subitem {positionL\_x}, \hyperpage{77}
+    \subitem {positionR1}, \hyperpage{77}
+    \subitem {positionR2}, \hyperpage{77}
+    \subitem {setController}, \hyperpage{71}
+    \subitem {speed\_cloud}, \hyperpage{77}
+    \subitem {speed\_floor}, \hyperpage{77}
+    \subitem {speed\_light}, \hyperpage{77}
+    \subitem {speed\_little}, \hyperpage{77}
+    \subitem {speedFlakes}, \hyperpage{77}
+    \subitem {speedFlakes2}, \hyperpage{78}
+    \subitem {speedRain}, \hyperpage{78}
+    \subitem {thunder}, \hyperpage{78}
+    \subitem {thunder1}, \hyperpage{78}
+    \subitem {update}, \hyperpage{72}
+    \subitem {value}, \hyperpage{78}
+  \item {motion}
+    \subitem {AllegroController}, \hyperpage{12}
+  \item {movement}
+    \subitem {PipePair}, \hyperpage{95}
+  \item {Music}, \hyperpage{78}
+    \subitem {$\sim$Music}, \hyperpage{79}
+    \subitem {Music}, \hyperpage{79}
+    \subitem {music}, \hyperpage{80}
+    \subitem {playMusic}, \hyperpage{80}
+  \item {music}
+    \subitem {Music}, \hyperpage{80}
+  \item {musicState}
+    \subitem {SettingsMenu}, \hyperpage{113}
+
+  \indexspace
+
+  \item {name}
+    \subitem {Button}, \hyperpage{23}
+    \subitem {Player}, \hyperpage{107}
+  \item {nameCampDeselect}
+    \subitem {LoadName}, \hyperpage{63}
+  \item {nameCampSelect}
+    \subitem {LoadName}, \hyperpage{63}
+  \item {nameFont}
+    \subitem {LoadName}, \hyperpage{63}
+  \item {noError}
+    \subitem {load\_game.hpp}, \hyperpage{144}
+  \item {noexistName}
+    \subitem {load\_game.hpp}, \hyperpage{144}
+  \item {noName}
+    \subitem {load\_game.hpp}, \hyperpage{144}
+
+  \indexspace
+
+  \item {obj\_sprite}
+    \subitem {GameObject}, \hyperpage{49}
+  \item {operator$<$}
+    \subitem {Player}, \hyperpage{104}
+  \item {operator$<$$<$}
+    \subitem {player.cpp}, \hyperpage{158}
+  \item {OSCILATION}
+    \subitem {defines.hpp}, \hyperpage{129}
+
+  \indexspace
+
+  \item {PAUSE}
+    \subitem {defines.hpp}, \hyperpage{131}
+  \item {Pipe}, \hyperpage{80}
+    \subitem {check\_score}, \hyperpage{82}
+    \subitem {draw}, \hyperpage{83}
+    \subitem {get\_y}, \hyperpage{83}
+    \subitem {is\_off\_screen}, \hyperpage{83}
+    \subitem {Pipe}, \hyperpage{82}
+    \subitem {scored}, \hyperpage{84}
+    \subitem {set\_vx}, \hyperpage{83}
+    \subitem {set\_y}, \hyperpage{83}
+    \subitem {update}, \hyperpage{84}
+    \subitem {vx}, \hyperpage{84}
+  \item {pipe}
+    \subitem {FlappyBird}, \hyperpage{41}
+  \item {pipe1}
+    \subitem {PipeList}, \hyperpage{92}
+  \item {PIPE\_SPEED}
+    \subitem {defines.hpp}, \hyperpage{130}
+  \item {PIPE\_VERTICAL\_SPEED}
+    \subitem {defines.hpp}, \hyperpage{130}
+  \item {PipeList}, \hyperpage{85}
+    \subitem {add\_pipe\_pair}, \hyperpage{86}
+    \subitem {check\_collision}, \hyperpage{86}
+    \subitem {check\_score}, \hyperpage{87}
+    \subitem {delete\_pipe\_pair}, \hyperpage{88}
+    \subitem {difficulty\_pipe}, \hyperpage{91}
+    \subitem {draw}, \hyperpage{88}
+    \subitem {gen}, \hyperpage{91}
+    \subitem {get\_pipe\_pairs}, \hyperpage{88}
+    \subitem {get\_points}, \hyperpage{89}
+    \subitem {pipe1}, \hyperpage{92}
+    \subitem {PipeList}, \hyperpage{86}
+    \subitem {Pipes}, \hyperpage{92}
+    \subitem {points}, \hyperpage{92}
+    \subitem {reset}, \hyperpage{89}
+    \subitem {set\_difficulty}, \hyperpage{89}
+    \subitem {set\_start}, \hyperpage{90}
+    \subitem {set\_vx}, \hyperpage{90}
+    \subitem {start}, \hyperpage{92}
+    \subitem {update}, \hyperpage{91}
+  \item {pipelist}
+    \subitem {FlappyBird}, \hyperpage{42}
+  \item {PipePair}, \hyperpage{93}
+    \subitem {bottom}, \hyperpage{94}
+    \subitem {movement}, \hyperpage{95}
+    \subitem {PipePair}, \hyperpage{94}
+    \subitem {signal}, \hyperpage{95}
+    \subitem {top}, \hyperpage{95}
+  \item {Pipes}
+    \subitem {PipeList}, \hyperpage{92}
+  \item {PLAY}
+    \subitem {defines.hpp}, \hyperpage{131}
+  \item {Play}, \hyperpage{95}
+    \subitem {buttonExitDeselect}, \hyperpage{99}
+    \subitem {buttonExitSelect}, \hyperpage{99}
+    \subitem {buttonPause}, \hyperpage{99}
+    \subitem {buttonPositionSelected}, \hyperpage{100}
+    \subitem {buttonTryagainDeselect}, \hyperpage{100}
+    \subitem {buttonTryagainSelect}, \hyperpage{100}
+    \subitem {draw}, \hyperpage{97}
+    \subitem {enter}, \hyperpage{97}
+    \subitem {flappy}, \hyperpage{100}
+    \subitem {font}, \hyperpage{100}
+    \subitem {handle\_input}, \hyperpage{98}
+    \subitem {logoGameOver}, \hyperpage{100}
+    \subitem {menuButtons}, \hyperpage{100}
+    \subitem {Play}, \hyperpage{97}
+    \subitem {status}, \hyperpage{101}
+    \subitem {update}, \hyperpage{98}
+  \item {Player}, \hyperpage{101}
+    \subitem {CheckingName}, \hyperpage{102}
+    \subitem {GetName}, \hyperpage{103}
+    \subitem {GetScore}, \hyperpage{103}
+    \subitem {name}, \hyperpage{107}
+    \subitem {operator$<$}, \hyperpage{104}
+    \subitem {Player}, \hyperpage{102}
+    \subitem {ReadLeaderboard}, \hyperpage{104}
+    \subitem {SaveLeaderboard}, \hyperpage{105}
+    \subitem {score}, \hyperpage{107}
+    \subitem {SetScore}, \hyperpage{106}
+    \subitem {ShowLeaderboard}, \hyperpage{107}
+    \subitem {SortLeaderboard}, \hyperpage{107}
+  \item {player}
+    \subitem {init.cpp}, \hyperpage{155}
+    \subitem {init.hpp}, \hyperpage{137}
+  \item {player.cpp}
+    \subitem {operator$<$$<$}, \hyperpage{158}
+  \item {playerNameString}
+    \subitem {LoadName}, \hyperpage{63}
+  \item {playMusic}
+    \subitem {Music}, \hyperpage{80}
+  \item {playSound}
+    \subitem {Sound}, \hyperpage{115}
+  \item {points}
+    \subitem {PipeList}, \hyperpage{92}
+  \item {pointSound}
+    \subitem {FlappyBird}, \hyperpage{42}
+  \item {positionB\_x}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionC\_x}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionCC\_x}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionF}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionF2}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionF2\_x}
+    \subitem {FlappyBird}, \hyperpage{42}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionF3}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionF\_x}
+    \subitem {FlappyBird}, \hyperpage{42}
+    \subitem {Motion}, \hyperpage{76}
+  \item {positionL\_x}
+    \subitem {Motion}, \hyperpage{77}
+  \item {positionR1}
+    \subitem {Motion}, \hyperpage{77}
+  \item {positionR2}
+    \subitem {Motion}, \hyperpage{77}
+
+  \indexspace
+
+  \item {queue}
+    \subitem {State}, \hyperpage{118}
+
+  \indexspace
+
+  \item {r}
+    \subitem {TextFont}, \hyperpage{120}
+  \item {ranking}
+    \subitem {init.cpp}, \hyperpage{155}
+    \subitem {init.hpp}, \hyperpage{137}
+  \item {ReadLeaderboard}
+    \subitem {Player}, \hyperpage{104}
+  \item {README.md}, \hyperpage{148}
+  \item {reset}
+    \subitem {FlappyBird}, \hyperpage{36}
+    \subitem {PipeList}, \hyperpage{89}
+  \item {reset\_xy}
+    \subitem {Bird}, \hyperpage{18}
+  \item {ROTATION}
+    \subitem {defines.hpp}, \hyperpage{130}
+  \item {rotation}
+    \subitem {Bird}, \hyperpage{22}
+  \item {run}
+    \subitem {AllegroController}, \hyperpage{11}
+
+  \indexspace
+
+  \item {saveCurrentPlayerScore}
+    \subitem {FlappyBird}, \hyperpage{36}
+  \item {SaveLeaderboard}
+    \subitem {Player}, \hyperpage{105}
+  \item {score}
+    \subitem {FlappyBird}, \hyperpage{42}
+    \subitem {Player}, \hyperpage{107}
+  \item {scored}
+    \subitem {Pipe}, \hyperpage{84}
+  \item {SCREEN\_H}
+    \subitem {defines.hpp}, \hyperpage{130}
+  \item {screen\_height}
+    \subitem {AllegroController}, \hyperpage{12}
+  \item {SCREEN\_W}
+    \subitem {defines.hpp}, \hyperpage{130}
+  \item {screen\_width}
+    \subitem {AllegroController}, \hyperpage{12}
+  \item {ScreenState}
+    \subitem {defines.hpp}, \hyperpage{131}
+  \item {selectSound}
+    \subitem {assets.cpp}, \hyperpage{150}
+    \subitem {assets.hpp}, \hyperpage{126}
+    \subitem {init.hpp}, \hyperpage{137}
+  \item {set\_break}
+    \subitem {Bird}, \hyperpage{18}
+  \item {set\_by}
+    \subitem {Bird}, \hyperpage{19}
+  \item {set\_current\_player}
+    \subitem {FlappyBird}, \hyperpage{37}
+  \item {set\_difficulty}
+    \subitem {PipeList}, \hyperpage{89}
+  \item {set\_finals}
+    \subitem {GameObject}, \hyperpage{48}
+  \item {set\_playerscore}
+    \subitem {FlappyBird}, \hyperpage{37}
+  \item {set\_start}
+    \subitem {PipeList}, \hyperpage{90}
+  \item {set\_vx}
+    \subitem {Pipe}, \hyperpage{83}
+    \subitem {PipeList}, \hyperpage{90}
+  \item {set\_x}
+    \subitem {GameObject}, \hyperpage{48}
+  \item {set\_y}
+    \subitem {GameObject}, \hyperpage{48}
+    \subitem {Pipe}, \hyperpage{83}
+  \item {setColor}
+    \subitem {TextFont}, \hyperpage{119}
+  \item {setController}
+    \subitem {Motion}, \hyperpage{71}
+  \item {setGlobals}
+    \subitem {State}, \hyperpage{117}
+  \item {SetScore}
+    \subitem {Player}, \hyperpage{106}
+  \item {SettingsMenu}, \hyperpage{108}
+    \subitem {buttonBackDeselect}, \hyperpage{111}
+    \subitem {buttonBackSelect}, \hyperpage{111}
+    \subitem {buttonMusicDaySelect}, \hyperpage{112}
+    \subitem {buttonMusicRainSelect}, \hyperpage{112}
+    \subitem {buttonMusicSelect}, \hyperpage{112}
+    \subitem {buttonMusicSnowSelect}, \hyperpage{112}
+    \subitem {buttonNoMusicDaySelect}, \hyperpage{112}
+    \subitem {buttonNoMusicRainSelect}, \hyperpage{112}
+    \subitem {buttonNoMusicSnowSelect}, \hyperpage{112}
+    \subitem {buttonPositionSelected}, \hyperpage{112}
+    \subitem {campSettingsMusic}, \hyperpage{113}
+    \subitem {campSettingsNoMusic}, \hyperpage{113}
+    \subitem {draw}, \hyperpage{109}
+    \subitem {enter}, \hyperpage{110}
+    \subitem {font}, \hyperpage{113}
+    \subitem {handle\_input}, \hyperpage{110}
+    \subitem {menuButtons}, \hyperpage{113}
+    \subitem {musicState}, \hyperpage{113}
+    \subitem {SettingsMenu}, \hyperpage{109}
+    \subitem {update}, \hyperpage{111}
+    \subitem {weatherSelected}, \hyperpage{113}
+  \item {ShowLeaderboard}
+    \subitem {Player}, \hyperpage{107}
+  \item {signal}
+    \subitem {PipePair}, \hyperpage{95}
+  \item {SortLeaderboard}
+    \subitem {Player}, \hyperpage{107}
+  \item {Sound}, \hyperpage{114}
+    \subitem {$\sim$Sound}, \hyperpage{115}
+    \subitem {playSound}, \hyperpage{115}
+    \subitem {Sound}, \hyperpage{114}
+    \subitem {sound}, \hyperpage{115}
+  \item {sound}
+    \subitem {Sound}, \hyperpage{115}
+  \item {speed\_cloud}
+    \subitem {Motion}, \hyperpage{77}
+  \item {speed\_floor}
+    \subitem {Motion}, \hyperpage{77}
+  \item {speed\_light}
+    \subitem {Motion}, \hyperpage{77}
+  \item {speed\_little}
+    \subitem {Motion}, \hyperpage{77}
+  \item {speedFlakes}
+    \subitem {Motion}, \hyperpage{77}
+  \item {speedFlakes2}
+    \subitem {Motion}, \hyperpage{78}
+  \item {speedRain}
+    \subitem {Motion}, \hyperpage{78}
+  \item {src/allegro\_interface.cpp}, \hyperpage{148}
+  \item {src/assets.cpp}, \hyperpage{148}
+  \item {src/bird.cpp}, \hyperpage{150}
+  \item {src/flappy\_bird\_controller.cpp}, \hyperpage{150}
+  \item {src/game\_object.cpp}, \hyperpage{151}
+  \item {src/init.cpp}, \hyperpage{151}
+  \item {src/main.cpp}, \hyperpage{155}
+  \item {src/motion.cpp}, \hyperpage{156}
+  \item {src/pipe.cpp}, \hyperpage{157}
+  \item {src/player.cpp}, \hyperpage{157}
+  \item {src/state.cpp}, \hyperpage{158}
+  \item {src/states/difficulty\_menu.cpp}, \hyperpage{159}
+  \item {src/states/leaderboard\_menu.cpp}, \hyperpage{159}
+  \item {src/states/load\_game.cpp}, \hyperpage{160}
+  \item {src/states/main\_menu.cpp}, \hyperpage{160}
+  \item {src/states/play.cpp}, \hyperpage{161}
+  \item {src/states/settings\_menu.cpp}, \hyperpage{162}
+  \item {start}
+    \subitem {PipeList}, \hyperpage{92}
+  \item {starter}
+    \subitem {FlappyBird}, \hyperpage{37}
+  \item {State}, \hyperpage{116}
+    \subitem {$\sim$State}, \hyperpage{116}
+    \subitem {display}, \hyperpage{118}
+    \subitem {draw}, \hyperpage{117}
+    \subitem {enter}, \hyperpage{117}
+    \subitem {ev}, \hyperpage{118}
+    \subitem {handle\_input}, \hyperpage{117}
+    \subitem {queue}, \hyperpage{118}
+    \subitem {setGlobals}, \hyperpage{117}
+    \subitem {update}, \hyperpage{117}
+  \item {state}
+    \subitem {FlappyBird}, \hyperpage{42}
+  \item {status}
+    \subitem {Play}, \hyperpage{101}
+  \item {successInsert}
+    \subitem {load\_game.hpp}, \hyperpage{144}
+
+  \indexspace
+
+  \item {TETO\_BIRD}
+    \subitem {defines.hpp}, \hyperpage{130}
+  \item {TextFont}, \hyperpage{118}
+    \subitem {$\sim$TextFont}, \hyperpage{119}
+    \subitem {b}, \hyperpage{120}
+    \subitem {font}, \hyperpage{120}
+    \subitem {g}, \hyperpage{120}
+    \subitem {r}, \hyperpage{120}
+    \subitem {setColor}, \hyperpage{119}
+    \subitem {TextFont}, \hyperpage{119}
+    \subitem {writeText}, \hyperpage{120}
+  \item {thunder}
+    \subitem {Motion}, \hyperpage{78}
+  \item {thunder1}
+    \subitem {Motion}, \hyperpage{78}
+  \item {time}
+    \subitem {FlappyBird}, \hyperpage{42}
+  \item {TIME\_GIF\_BIRD}
+    \subitem {defines.hpp}, \hyperpage{130}
+  \item {timer\_FPS}
+    \subitem {init.cpp}, \hyperpage{155}
+    \subitem {init.hpp}, \hyperpage{137}
+  \item {top}
+    \subitem {PipePair}, \hyperpage{95}
+
+  \indexspace
+
+  \item {unbreaker}
+    \subitem {FlappyBird}, \hyperpage{38}
+  \item {unloadGlobalAssets}
+    \subitem {assets.cpp}, \hyperpage{149}
+    \subitem {assets.hpp}, \hyperpage{125}
+  \item {update}
+    \subitem {Bird}, \hyperpage{19}
+    \subitem {DifficultyMenu}, \hyperpage{26}
+    \subitem {FlappyBird}, \hyperpage{38}
+    \subitem {GameObject}, \hyperpage{49}
+    \subitem {LeaderboardMenu}, \hyperpage{56}
+    \subitem {LoadName}, \hyperpage{61}
+    \subitem {MainMenu}, \hyperpage{67}
+    \subitem {Motion}, \hyperpage{72}
+    \subitem {Pipe}, \hyperpage{84}
+    \subitem {PipeList}, \hyperpage{91}
+    \subitem {Play}, \hyperpage{98}
+    \subitem {SettingsMenu}, \hyperpage{111}
+    \subitem {State}, \hyperpage{117}
+  \item {update\_score}
+    \subitem {FlappyBird}, \hyperpage{39}
+
+  \indexspace
+
+  \item {value}
+    \subitem {Motion}, \hyperpage{78}
+  \item {valueB}
+    \subitem {Bird}, \hyperpage{22}
+  \item {velocity}
+    \subitem {FlappyBird}, \hyperpage{43}
+  \item {velocity\_backup}
+    \subitem {FlappyBird}, \hyperpage{43}
+  \item {vx}
+    \subitem {Pipe}, \hyperpage{84}
+  \item {vy}
+    \subitem {Bird}, \hyperpage{22}
+
+  \indexspace
+
+  \item {weatherSelected}
+    \subitem {SettingsMenu}, \hyperpage{113}
+  \item {width}
+    \subitem {GameObject}, \hyperpage{49}
+  \item {writeText}
+    \subitem {TextFont}, \hyperpage{120}
+
+  \indexspace
+
+  \item {x}
+    \subitem {GameObject}, \hyperpage{49}
+    \subitem {Image}, \hyperpage{53}
+  \item {x\_final}
+    \subitem {GameObject}, \hyperpage{50}
+  \item {X\_INIT}
+    \subitem {defines.hpp}, \hyperpage{130}
+
+  \indexspace
+
+  \item {y}
+    \subitem {GameObject}, \hyperpage{50}
+    \subitem {Image}, \hyperpage{53}
+  \item {y\_final}
+    \subitem {GameObject}, \hyperpage{50}
+
+\end{theindex}

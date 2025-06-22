@@ -1,0 +1,7 @@
+<map id="FlappyBird::reset" name="FlappyBird::reset">
+<area shape="rect" id="node1" title="Reseta jogo para configuracao inicial." alt="" coords="5,81,139,108"/>
+<area shape="rect" id="node2" href="$classPipeList.html#a542ce3b33a138db92365d668fd9f6e28" title="Clear list and reset all counters." alt="" coords="212,5,327,32"/>
+<area shape="rect" id="node3" href="$classBird.html#a36a1dad86634842ebd97e869a2732aaf" title="Reseta posicao inicial e velocidade." alt="" coords="213,56,325,83"/>
+<area shape="rect" id="node4" href="$classBird.html#a567645317bcf90078d9cad97cadfc1ec" title="Habilita/desabilita animacao apos colisao." alt="" coords="209,107,329,133"/>
+<area shape="rect" id="node5" href="$classPipeList.html#ac50083f33c6f14425302c76ff6e17650" title="Configure difficulty (1 = static, 2 = vertical movers)." alt="" coords="187,157,352,184"/>
+</map>

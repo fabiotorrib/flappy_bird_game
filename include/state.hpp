@@ -3,6 +3,15 @@
 #include "defines.hpp"
 #include "motion.hpp"
 
+/**
+ * @file state.hpp
+ * @brief Interface base para estados da máquina de estados do jogo.
+ */
+
+/**
+ * @class State
+ * @brief Define a interface que cada tela/estado deve implementar.
+ */
 class State {
  public:
   virtual ~State() = default;

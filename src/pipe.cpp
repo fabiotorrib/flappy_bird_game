@@ -1,29 +1,36 @@
 /**
  * @file pipe.cpp
- * @brief Implementation of Pipe, PipePair and PipeList methods.
- * @details Contains movement logic, collision checking and score handling
- *          for the pipe obstacle system.
+ * @brief Implementação das classes Pipe, PipePair e PipeList.
+ * @details Contém a lógica de movimento, verificação de colisão e contagem
+ *          de pontos do sistema de obstáculos (canos).
  */
 
 #include "../include/pipe.hpp"
 
-//classe Pipe
+/**
+ * @brief Atualiza posição horizontal do cano.
+ */
 void Pipe::update(){
     x-=vx;
     set_finals();
 }
 
+/** @brief Desenha o cano. */
 void Pipe::draw() {
     al_draw_bitmap(obj_sprite,x,y,0);
 }
 
-// para quem implementar a geracao dos pipes esse metodo pode ser usado para
-// deletar pipes fora da tela
+/**
+ * @brief Verifica se o cano saiu da tela pela esquerda.
+ */
 bool Pipe::is_off_screen() const {
     return x_final < 0;
 }
 
-// checa se o bird passou por essa instancia
+/**
+ * @brief Gera pontuação quando o pássaro passa o cano.
+ * @param bird_x Coordenada X do pássaro.
+ */
 bool Pipe::check_score(float bird_x) {
     if (!scored && bird_x > x_final) {
         scored = true;
@@ -31,12 +38,15 @@ bool Pipe::check_score(float bird_x) {
     }
     return false;
 }
+/** @brief Define velocidade horizontal dos canos. */
 void Pipe::set_vx(float vel){
     vx = vel;
 }
+/** @brief Força nova posição Y. */
 void Pipe::set_y(float new_y){
     y = new_y;
 }
+/** @brief Retorna posição Y atual. */
 float Pipe::get_y(){
     return y;
 }
@@ -77,6 +87,9 @@ float Pipe::get_y(){
         }
     }
 
+    /**
+     * @brief Spawna novo par de canos conforme distância do último.
+     */
     void PipeList::add_pipe_pair() {
         if (!Pipes.empty() && start){
             if(SCREEN_W - Pipes.back().bottom.get_x_final() >= GAP_X){
@@ -108,6 +121,7 @@ float Pipe::get_y(){
         }
     }
 
+    /** @brief Remove canos que saíram da tela. */
     void PipeList::delete_pipe_pair() {
         if (!Pipes.empty()){
             if (Pipes.begin()->bottom.is_off_screen()){
@@ -116,6 +130,9 @@ float Pipe::get_y(){
         }
     }
 
+    /**
+     * @brief Verifica colisão do pássaro com qualquer cano ativo.
+     */
     bool PipeList::check_collision(GameObject& bird){
         for (PipePair& pair : Pipes){
             if (bird.check_bird_collision(pair.bottom) || bird.check_bird_collision(pair.top)){
@@ -125,6 +142,9 @@ float Pipe::get_y(){
         return false;
     }
 
+    /**
+     * @brief Atualiza pontuação se o pássaro ultrapassar algum cano.
+     */
     bool PipeList::check_score(float bird_x) {
         for (PipePair& pair : Pipes) {
             if (pair.bottom.check_score(bird_x)) {
@@ -136,6 +156,9 @@ float Pipe::get_y(){
         return false;
     }
 
+    /**
+     * @brief Ativa geração de canos na primeira chamada.
+     */
     bool PipeList::set_start(){
         if (!start){
             start = true;
@@ -148,12 +171,14 @@ float Pipe::get_y(){
         return points;
     }
 
+    /** @brief Limpa lista de canos e zera pontos. */
     void PipeList::reset(){
         Pipes.clear();
         points = 0;
         start = false;
     }
 
+    /** @brief Define dificuldade (1 estático, 2 com movimento vertical). */
     void PipeList::set_difficulty(int diff){
         difficulty_pipe = diff;
     }

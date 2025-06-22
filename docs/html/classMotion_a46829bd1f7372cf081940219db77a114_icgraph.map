@@ -1,0 +1,9 @@
+<map id="Motion::draw" name="Motion::draw">
+<area shape="rect" id="node1" title="Desenha todos os elementos do background baseado no cenário ativo." alt="" coords="232,132,339,159"/>
+<area shape="rect" id="node2" href="$classDifficultyMenu.html#acace55cbd6b946a87e133cfed19594f2" title="Desenha todos os elementos visuais do estado na tela." alt="" coords="16,5,173,32"/>
+<area shape="rect" id="node3" href="$classLeaderboardMenu.html#af5be1d3eea81adbc7822eaa4697cd9c4" title="Desenha todos os elementos visuais do estado na tela." alt="" coords="5,56,184,83"/>
+<area shape="rect" id="node4" href="$classLoadName.html#a44a209d257f203588c151ceaf8d7607e" title="Desenha todos os elementos visuais do estado na tela." alt="" coords="29,107,161,133"/>
+<area shape="rect" id="node5" href="$classMainMenu.html#acb76d4f007c328dab0a34bfe379128e2" title="Desenha todos os elementos visuais do menu principal na tela." alt="" coords="29,157,160,184"/>
+<area shape="rect" id="node6" href="$classPlay.html#a658ac92ca655bfd00d475e9c0402f2c5" title="Renderiza cena completa." alt="" coords="50,208,139,235"/>
+<area shape="rect" id="node7" href="$classSettingsMenu.html#afb7ad08f3b72956a39624f6667b7ebe1" title="Desenha todos os elementos visuais do estado na tela." alt="" coords="19,259,170,285"/>
+</map>

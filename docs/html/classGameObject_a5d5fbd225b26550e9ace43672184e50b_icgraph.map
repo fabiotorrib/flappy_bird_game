@@ -1,0 +1,6 @@
+<map id="GameObject::get_x" name="GameObject::get_x">
+<area shape="rect" id="node1" title="Obtém coordenada X." alt="" coords="433,56,580,83"/>
+<area shape="rect" id="node2" href="$classBird.html#a5b63706c73ef35ac37a8c01495abf4e3" title="Verifica colisao com outro GameObject." alt="" coords="199,5,385,32"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,85,151,112"/>
+<area shape="rect" id="node4" href="$classFlappyBird.html#a4458c5b09023ad145b787be7aea53605" title="Atualiza pontuacao quando passaro passa canos." alt="" coords="219,107,365,149"/>
+</map>

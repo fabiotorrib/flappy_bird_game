@@ -1,0 +1,4 @@
+<map id="PipeList::reset" name="PipeList::reset">
+<area shape="rect" id="node1" title="Clear list and reset all counters." alt="" coords="187,5,301,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a185beae77101e7a8be97f7a4ac6a19d8" title="Reseta jogo para configuracao inicial." alt="" coords="5,5,139,32"/>
+</map>

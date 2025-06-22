@@ -1,6 +1,17 @@
+/**
+ * @file bird.cpp
+ * @brief Implementação da classe Bird (animação, física e colisões).
+ */
+
 #include "../include/bird.hpp"
 
 void Bird::update() {
+  /**
+   * @brief Atualiza física e posição do pássaro.
+   *
+   * Move horizontalmente durante a animação de entrada até alcançar
+   * `X_INIT`. Depois aplica gravidade e velocidade vertical `vy`.
+   */
   this->set_by();
   this->set_finals();
   if (x < X_INIT) {
@@ -14,6 +25,12 @@ void Bird::update() {
 }
 
 void Bird::draw() {
+  /**
+   * @brief Desenha o pássaro com a animação ou rotação correspondente.
+   *
+   * Seleciona entre a animação de entrada ou de voo conforme o estado do
+   * jogo e controla a rotação baseada em `vy`.
+   */
   if (x < X_INIT) {
     loop_animation(1);
   } else if (breakanimation) {
@@ -37,6 +54,11 @@ void Bird::draw() {
 }
 
 void Bird::loop_animation(int type) {
+  /**
+   * @brief Muda os frames de sprite para simular bater de asas.
+   * @param type 1 = animação de intro (pássaro voando da esquerda);
+   *             2 = animação durante o jogo.
+   */
   if (type == 1) {
     // Cicla os frames de 1 em 1 a cada repetição para atualizar na tela
     frames = frames + 1;
@@ -123,12 +145,18 @@ void Bird::loop_animation(int type) {
 }
 
 void Bird::jump() {
+  /**
+   * @brief Aplica impulso vertical quando o jogador pressiona pular.
+   */
   if (x >= X_INIT) {
     vy = jumpForce;
   }
 }
 
 void Bird::destroy_bitmaps() {
+  /**
+   * @brief Destrói o bitmap principal para liberar memória.
+   */
   if (obj_sprite) {
     al_destroy_bitmap(obj_sprite);
     obj_sprite = nullptr;
@@ -136,19 +164,34 @@ void Bird::destroy_bitmaps() {
 }
 
 void Bird::set_by() {
+  /**
+   * @brief Atualiza a coordenada inferior `by` com base na altura.
+   */
   by = y + height * TETO_BIRD;
 }
 
 void Bird::set_break(bool value) {
+  /**
+   * @brief Ativa/desativa a animação após colisão.
+   * @param value `true` para pausar a animação.
+   */
   breakanimation = value;
 }
 
 void Bird::reset_xy() {
+  /**
+   * @brief Reseta posição e velocidade do pássaro para valores iniciais.
+   */
   x = -100;
   y = 200;
   vy = 0;
 }
 bool Bird::check_bird_collision(const GameObject& other) const {
+  /**
+   * @brief Verifica colisão com outro objeto considerando uma hitbox reduzida.
+   * @param other Objeto alvo.
+   * @return `true` se as hitboxes se sobrepõem.
+   */
   const float HORIZONTAL_INSET = 8.0f;       // Diminui X pixels de cada lado
   const float VERTICAL_INSET_TOP = 10.0f;    // Diminui X pixels do topo
   const float VERTICAL_INSET_BOTTOM = 6.0f;  // Diminui X pixels de baixo

@@ -1,0 +1,148 @@
+\hypertarget{classState}{}\doxysection{Referência da Classe State}
+\label{classState}\index{State@{State}}
+
+
+Define a interface que cada tela/estado deve implementar.  
+
+
+
+
+{\ttfamily \#include $<$state.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para State\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classState__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classState_a783d52422b544bb226e13de8ecfd6ad6}{$\sim$\+State}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}{draw}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion)=0
+\item 
+virtual \mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classState_ae7f906fde44230c1b9741367de7a274a}{update}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion)=0
+\item 
+virtual \mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classState_a09f92cba8c60fb0eb0931e42613f8f64}{handle\+\_\+input}} (const ALLEGRO\+\_\+\+EVENT \&\mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}})=0
+\item 
+virtual void \mbox{\hyperlink{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}{enter}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classState_a1af78c005ab63f5dcbd9bcd1c44bd0e6}{set\+Globals}} (ALLEGRO\+\_\+\+DISPLAY $\ast$d, ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$q)
+\begin{DoxyCompactList}\small\item\em Configura ponteiros globais de display e fila de eventos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Estáticos Protegidos}
+\begin{DoxyCompactItemize}
+\item 
+static ALLEGRO\+\_\+\+DISPLAY $\ast$ \mbox{\hyperlink{classState_a464196f7580195a34f4c8457fcffc9e1}{display}} = nullptr
+\item 
+static ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$ \mbox{\hyperlink{classState_af88792829012b2507033b9ed4ccf14a7}{queue}} = nullptr
+\item 
+static ALLEGRO\+\_\+\+EVENT \mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Define a interface que cada tela/estado deve implementar. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classState_a783d52422b544bb226e13de8ecfd6ad6}\label{classState_a783d52422b544bb226e13de8ecfd6ad6}} 
+\index{State@{State}!````~State@{$\sim$State}}
+\index{````~State@{$\sim$State}!State@{State}}
+\doxysubsubsection{\texorpdfstring{$\sim$State()}{~State()}}
+{\footnotesize\ttfamily virtual State\+::$\sim$\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}\label{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}} 
+\index{State@{State}!draw@{draw}}
+\index{draw@{draw}!State@{State}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily virtual void State\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementado por \mbox{\hyperlink{classSettingsMenu_afb7ad08f3b72956a39624f6667b7ebe1}{Settings\+Menu}}, \mbox{\hyperlink{classPlay_a658ac92ca655bfd00d475e9c0402f2c5}{Play}}, \mbox{\hyperlink{classMainMenu_acb76d4f007c328dab0a34bfe379128e2}{Main\+Menu}}, \mbox{\hyperlink{classLoadName_a44a209d257f203588c151ceaf8d7607e}{Load\+Name}}, \mbox{\hyperlink{classLeaderboardMenu_af5be1d3eea81adbc7822eaa4697cd9c4}{Leaderboard\+Menu}} e \mbox{\hyperlink{classDifficultyMenu_acace55cbd6b946a87e133cfed19594f2}{Difficulty\+Menu}}.
+
+\mbox{\Hypertarget{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}\label{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}} 
+\index{State@{State}!enter@{enter}}
+\index{enter@{enter}!State@{State}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily virtual void State\+::enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementado por \mbox{\hyperlink{classSettingsMenu_ac6d396cea151665ba193349de8562aaf}{Settings\+Menu}}, \mbox{\hyperlink{classPlay_a76a5561a1738d962b3aaa340aa0a6bd7}{Play}}, \mbox{\hyperlink{classMainMenu_a69002a178254c429c2dd4adb24241ca4}{Main\+Menu}}, \mbox{\hyperlink{classLoadName_ae171ebd3932f6c31c018c851cc7105dc}{Load\+Name}}, \mbox{\hyperlink{classLeaderboardMenu_a7eb26a277cc3ff52e703921a69f24fe4}{Leaderboard\+Menu}} e \mbox{\hyperlink{classDifficultyMenu_a1f0520bf92dbfb6c965b436d14343961}{Difficulty\+Menu}}.
+
+\mbox{\Hypertarget{classState_a09f92cba8c60fb0eb0931e42613f8f64}\label{classState_a09f92cba8c60fb0eb0931e42613f8f64}} 
+\index{State@{State}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!State@{State}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classState}{State}}$\ast$ State\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{const ALLEGRO\+\_\+\+EVENT \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementado por \mbox{\hyperlink{classSettingsMenu_ab56829575314f2fe3b6bb3dceb37dffa}{Settings\+Menu}}, \mbox{\hyperlink{classPlay_ab197358b4dd6188ad340d584ddb11846}{Play}}, \mbox{\hyperlink{classMainMenu_ac248f0940004258153f8e4172a9a697b}{Main\+Menu}}, \mbox{\hyperlink{classLoadName_a5ce4fb95dd055fc1530a548149a15cda}{Load\+Name}}, \mbox{\hyperlink{classLeaderboardMenu_a12c79190706d52e31815cf3992ca9f35}{Leaderboard\+Menu}} e \mbox{\hyperlink{classDifficultyMenu_a280e5b4a774adb3df636a249e2d489b9}{Difficulty\+Menu}}.
+
+\mbox{\Hypertarget{classState_a1af78c005ab63f5dcbd9bcd1c44bd0e6}\label{classState_a1af78c005ab63f5dcbd9bcd1c44bd0e6}} 
+\index{State@{State}!setGlobals@{setGlobals}}
+\index{setGlobals@{setGlobals}!State@{State}}
+\doxysubsubsection{\texorpdfstring{setGlobals()}{setGlobals()}}
+{\footnotesize\ttfamily void State\+::set\+Globals (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+DISPLAY $\ast$}]{d,  }\item[{ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$}]{q }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Configura ponteiros globais de display e fila de eventos. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classState_a1af78c005ab63f5dcbd9bcd1c44bd0e6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classState_ae7f906fde44230c1b9741367de7a274a}\label{classState_ae7f906fde44230c1b9741367de7a274a}} 
+\index{State@{State}!update@{update}}
+\index{update@{update}!State@{State}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily virtual \mbox{\hyperlink{classState}{State}}$\ast$ State\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implementado por \mbox{\hyperlink{classSettingsMenu_af8a41c0862665063f23d8b3806cd1f40}{Settings\+Menu}}, \mbox{\hyperlink{classPlay_a5315ef30e6e278d20cc07c5fc5e07bdf}{Play}}, \mbox{\hyperlink{classMainMenu_a00df3d6357e26f276850cc02e5a9cc46}{Main\+Menu}}, \mbox{\hyperlink{classLoadName_a7eae3d9938449ae7c1f43b0261f62293}{Load\+Name}}, \mbox{\hyperlink{classLeaderboardMenu_a8e73c70836903711bc8599b8780be61b}{Leaderboard\+Menu}} e \mbox{\hyperlink{classDifficultyMenu_a024907d1a77fef3b969a90dc2cc2f26f}{Difficulty\+Menu}}.
+
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classState_a464196f7580195a34f4c8457fcffc9e1}\label{classState_a464196f7580195a34f4c8457fcffc9e1}} 
+\index{State@{State}!display@{display}}
+\index{display@{display}!State@{State}}
+\doxysubsubsection{\texorpdfstring{display}{display}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+DISPLAY $\ast$ State\+::display = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classState_a87442fa864f5080096f0055856ced22b}\label{classState_a87442fa864f5080096f0055856ced22b}} 
+\index{State@{State}!ev@{ev}}
+\index{ev@{ev}!State@{State}}
+\doxysubsubsection{\texorpdfstring{ev}{ev}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+EVENT State\+::ev\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+\mbox{\Hypertarget{classState_af88792829012b2507033b9ed4ccf14a7}\label{classState_af88792829012b2507033b9ed4ccf14a7}} 
+\index{State@{State}!queue@{queue}}
+\index{queue@{queue}!State@{State}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+EVENT\+\_\+\+QUEUE $\ast$ State\+::queue = nullptr\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [protected]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{state_8hpp}{state.\+hpp}}\item 
+src/\mbox{\hyperlink{state_8cpp}{state.\+cpp}}\end{DoxyCompactItemize}

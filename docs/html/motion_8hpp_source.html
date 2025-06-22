@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/motion.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">motion.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="motion_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_primitives.h&gt;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="assets_8hpp.html">assets.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defines_8hpp.html">defines.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classMotion.html">   20</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMotion.html">Motion</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <span class="comment">// Posição e velocidade de cada imagem</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classMotion.html#aa3ce13f9416af13548740dd426e2ed32">   23</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classMotion.html#aa3ce13f9416af13548740dd426e2ed32">controller</a> = 1;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classMotion.html#ace3f3c9bb3b5f72887cd483dcd990a43">   25</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#ace3f3c9bb3b5f72887cd483dcd990a43">controll</a> = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classMotion.html#aa06c1b7cd98ae40d8cd58b02e32a7fa7">   26</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#aa06c1b7cd98ae40d8cd58b02e32a7fa7">contF</a> = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classMotion.html#a49e1aa2518eaeec8aa91719026a68e4e">   27</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a49e1aa2518eaeec8aa91719026a68e4e">contB</a> = 400;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  </div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classMotion.html#a76601c0fb9e6dfb673f02299f220207f">   29</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a76601c0fb9e6dfb673f02299f220207f">speedRain</a> = 6;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classMotion.html#af8e8ae231f4a6ae6b339df0b4d54ecf4">   30</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#af8e8ae231f4a6ae6b339df0b4d54ecf4">positionR1</a> = 400;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classMotion.html#ae6bae14f527e7594938fe621ea9bd4e5">   31</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#ae6bae14f527e7594938fe621ea9bd4e5">positionR2</a> = -320;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classMotion.html#aef09d2e9111464349fdaed8760011af8">   33</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#aef09d2e9111464349fdaed8760011af8">speedFlakes</a> = 1.0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classMotion.html#a903b3962fb6adcf86f300034be042115">   34</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a903b3962fb6adcf86f300034be042115">positionF</a> = 500;</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classMotion.html#a6dc2fe6da4b6a6b937654261df37a3d3">   35</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a6dc2fe6da4b6a6b937654261df37a3d3">positionF2</a> = 550;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classMotion.html#a3c9f9c3407ea12ca2966cb1b27376c5b">   36</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a3c9f9c3407ea12ca2966cb1b27376c5b">positionF3</a> = -210;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classMotion.html#a332c05cae943f4e396d76a7371fd85ae">   37</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a332c05cae943f4e396d76a7371fd85ae">speedFlakes2</a> = 0.4;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classMotion.html#aaea40126950822e29416adaef000eb43">   39</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#aaea40126950822e29416adaef000eb43">positionL_x</a> = 0;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classMotion.html#aa5aa3a7fdcbf073f303ed42006a9cdab">   40</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#aa5aa3a7fdcbf073f303ed42006a9cdab">speed_light</a> = 0.5;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classMotion.html#af4060e5529d11db125650172b7335b1a">   42</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#af4060e5529d11db125650172b7335b1a">positionC_x</a> = 0;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classMotion.html#a6fbea8cc4e620c7c467cf5aa5c99c456">   43</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a6fbea8cc4e620c7c467cf5aa5c99c456">positionCC_x</a> = -1280;</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classMotion.html#a7b1b06ee5964dfb16b08e6f9df691af0">   44</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a7b1b06ee5964dfb16b08e6f9df691af0">speed_cloud</a> = 0.6;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="classMotion.html#a7649128e3cb3fda075596ee7a12b8f3c">   46</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a7649128e3cb3fda075596ee7a12b8f3c">positionB_x</a> = 0;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classMotion.html#a2e68b1d6492e9ecfa89af726dc891384">   47</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a2e68b1d6492e9ecfa89af726dc891384">speed_little</a> = 1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classMotion.html#ad3b886e72cdd92407903e8142c514bd1">   48</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#ad3b886e72cdd92407903e8142c514bd1">cont</a> = 16;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classMotion.html#a5b33f6e22d61f0f870670364e1cbfe4e">   49</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a5b33f6e22d61f0f870670364e1cbfe4e">value</a> = 0;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classMotion.html#a86125821ec50d1452c993c56469a901d">   51</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#a86125821ec50d1452c993c56469a901d">positionF_x</a> = 1280;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classMotion.html#ae1101a068026e60190a6e3a146f92658">   52</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#ae1101a068026e60190a6e3a146f92658">positionF2_x</a> = 0;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classMotion.html#ae921ee84c9257bcdf0cd3862ba44d430">   53</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classMotion.html#ae921ee84c9257bcdf0cd3862ba44d430">speed_floor</a> = 2.5;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno"><a class="line" href="classMotion.html#a69ce880add3cd0698e0b1352d79f72ae">   55</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a69ce880add3cd0698e0b1352d79f72ae">background_rain</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno"><a class="line" href="classMotion.html#a194dbf8d147b144a8989c4cb03df6169">   56</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a194dbf8d147b144a8989c4cb03df6169">drips1</a>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classMotion.html#a7c23545f80a0381a19097ecbdfc725b0">   57</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a7c23545f80a0381a19097ecbdfc725b0">drips2</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="classMotion.html#a523b6b378cfdb2c04918cca98c0f9de7">   58</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a523b6b378cfdb2c04918cca98c0f9de7">thunder</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classMotion.html#ac8cb0423c746f03c8847ca4c3e75a408">   59</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#ac8cb0423c746f03c8847ca4c3e75a408">thunder1</a>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classMotion.html#aebbd0bb96b82df72bdc38b12302f36c0">   60</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#aebbd0bb96b82df72bdc38b12302f36c0">background_snow</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classMotion.html#a6991d858447ac9b4bdb479c4a34bee7b">   61</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a6991d858447ac9b4bdb479c4a34bee7b">flakesLittle</a>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classMotion.html#a79b401175cbb9233d71dc53b8786eb95">   62</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a79b401175cbb9233d71dc53b8786eb95">flakesLittle2</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classMotion.html#a88966856f79ce8f33ea28a155f247577">   63</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a88966856f79ce8f33ea28a155f247577">flakesBig</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classMotion.html#aef1cc2d84b5552f48eddcdf404f15fec">   64</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#aef1cc2d84b5552f48eddcdf404f15fec">background</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno"><a class="line" href="classMotion.html#a4dd7028c401df39dd9b09388d854a004">   65</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a4dd7028c401df39dd9b09388d854a004">lights</a>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="classMotion.html#aa9e601f65f70cc9515e73c70046484dd">   66</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#aa9e601f65f70cc9515e73c70046484dd">clouds</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classMotion.html#acd8fefbc15793bf7a73696187c672761">   67</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#acd8fefbc15793bf7a73696187c672761">clouds2</a>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno"><a class="line" href="classMotion.html#a020fe42b52383822ddcb9a79a0323e61">   68</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a020fe42b52383822ddcb9a79a0323e61">little</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="classMotion.html#a536629d5893ba6902b026d1cbe9685d8">   69</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#a536629d5893ba6902b026d1cbe9685d8">little2</a>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno"><a class="line" href="classMotion.html#ad05b75421d34f09966b2040d2b1e68d8">   70</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#ad05b75421d34f09966b2040d2b1e68d8">little3</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classMotion.html#aaa0753cfeddbe15bbf396254bea0f319">   71</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#aaa0753cfeddbe15bbf396254bea0f319">bird1</a>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="classMotion.html#af3274dd28f81e92ae0294e679b577ad0">   72</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#af3274dd28f81e92ae0294e679b577ad0">bird2</a>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="classMotion.html#aaa8db2b9ab96bfe2c7ed97b4107e272c">   73</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#aaa8db2b9ab96bfe2c7ed97b4107e272c">bird3</a>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classMotion.html#aa3d13367d79e5a3e85729163af867621">   74</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#aa3d13367d79e5a3e85729163af867621">ground</a>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classMotion.html#aa19cee7edec2db1a0f1eb7a592082399">   75</a></span>&#160;  std::unique_ptr&lt;Image&gt; <a class="code" href="classMotion.html#aa19cee7edec2db1a0f1eb7a592082399">ground2</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  <span class="comment">// Metodos para desenhar e atualiza a posição da imagem</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMotion.html#a46829bd1f7372cf081940219db77a114">draw</a>();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMotion.html#a01805ce60c0e4c9aae97979dd884b59c">update</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  <a class="code" href="classMotion.html#a444a2569aaadd10d76b4e6e6bfb3df0c">Motion</a>();</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMotion.html#aa551dae9dbe0eb2b833bfb778f2007b9">setController</a>(<span class="keywordtype">int</span>);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
+<div class="ttc" id="aassets_8hpp_html"><div class="ttname"><a href="assets_8hpp.html">assets.hpp</a></div><div class="ttdoc">Declara classes utilitárias para carregar e usar imagens, sons e fontes no Allegro.</div></div>
+<div class="ttc" id="aclassMotion_html"><div class="ttname"><a href="classMotion.html">Motion</a></div><div class="ttdoc">Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.</div><div class="ttdef"><b>Definition:</b> motion.hpp:20</div></div>
+<div class="ttc" id="aclassMotion_html_a01805ce60c0e4c9aae97979dd884b59c"><div class="ttname"><a href="classMotion.html#a01805ce60c0e4c9aae97979dd884b59c">Motion::update</a></div><div class="ttdeci">void update()</div><div class="ttdoc">Atualiza posições dos elementos de background conforme cenário.</div><div class="ttdef"><b>Definition:</b> motion.cpp:50</div></div>
+<div class="ttc" id="aclassMotion_html_a020fe42b52383822ddcb9a79a0323e61"><div class="ttname"><a href="classMotion.html#a020fe42b52383822ddcb9a79a0323e61">Motion::little</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; little</div><div class="ttdef"><b>Definition:</b> motion.hpp:68</div></div>
+<div class="ttc" id="aclassMotion_html_a194dbf8d147b144a8989c4cb03df6169"><div class="ttname"><a href="classMotion.html#a194dbf8d147b144a8989c4cb03df6169">Motion::drips1</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; drips1</div><div class="ttdef"><b>Definition:</b> motion.hpp:56</div></div>
+<div class="ttc" id="aclassMotion_html_a2e68b1d6492e9ecfa89af726dc891384"><div class="ttname"><a href="classMotion.html#a2e68b1d6492e9ecfa89af726dc891384">Motion::speed_little</a></div><div class="ttdeci">float speed_little</div><div class="ttdef"><b>Definition:</b> motion.hpp:47</div></div>
+<div class="ttc" id="aclassMotion_html_a332c05cae943f4e396d76a7371fd85ae"><div class="ttname"><a href="classMotion.html#a332c05cae943f4e396d76a7371fd85ae">Motion::speedFlakes2</a></div><div class="ttdeci">float speedFlakes2</div><div class="ttdef"><b>Definition:</b> motion.hpp:37</div></div>
+<div class="ttc" id="aclassMotion_html_a3c9f9c3407ea12ca2966cb1b27376c5b"><div class="ttname"><a href="classMotion.html#a3c9f9c3407ea12ca2966cb1b27376c5b">Motion::positionF3</a></div><div class="ttdeci">float positionF3</div><div class="ttdef"><b>Definition:</b> motion.hpp:36</div></div>
+<div class="ttc" id="aclassMotion_html_a444a2569aaadd10d76b4e6e6bfb3df0c"><div class="ttname"><a href="classMotion.html#a444a2569aaadd10d76b4e6e6bfb3df0c">Motion::Motion</a></div><div class="ttdeci">Motion()</div><div class="ttdef"><b>Definition:</b> motion.cpp:14</div></div>
+<div class="ttc" id="aclassMotion_html_a46829bd1f7372cf081940219db77a114"><div class="ttname"><a href="classMotion.html#a46829bd1f7372cf081940219db77a114">Motion::draw</a></div><div class="ttdeci">void draw()</div><div class="ttdoc">Desenha todos os elementos do background baseado no cenário ativo.</div><div class="ttdef"><b>Definition:</b> motion.cpp:137</div></div>
+<div class="ttc" id="aclassMotion_html_a49e1aa2518eaeec8aa91719026a68e4e"><div class="ttname"><a href="classMotion.html#a49e1aa2518eaeec8aa91719026a68e4e">Motion::contB</a></div><div class="ttdeci">float contB</div><div class="ttdef"><b>Definition:</b> motion.hpp:27</div></div>
+<div class="ttc" id="aclassMotion_html_a4dd7028c401df39dd9b09388d854a004"><div class="ttname"><a href="classMotion.html#a4dd7028c401df39dd9b09388d854a004">Motion::lights</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; lights</div><div class="ttdef"><b>Definition:</b> motion.hpp:65</div></div>
+<div class="ttc" id="aclassMotion_html_a523b6b378cfdb2c04918cca98c0f9de7"><div class="ttname"><a href="classMotion.html#a523b6b378cfdb2c04918cca98c0f9de7">Motion::thunder</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; thunder</div><div class="ttdef"><b>Definition:</b> motion.hpp:58</div></div>
+<div class="ttc" id="aclassMotion_html_a536629d5893ba6902b026d1cbe9685d8"><div class="ttname"><a href="classMotion.html#a536629d5893ba6902b026d1cbe9685d8">Motion::little2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; little2</div><div class="ttdef"><b>Definition:</b> motion.hpp:69</div></div>
+<div class="ttc" id="aclassMotion_html_a5b33f6e22d61f0f870670364e1cbfe4e"><div class="ttname"><a href="classMotion.html#a5b33f6e22d61f0f870670364e1cbfe4e">Motion::value</a></div><div class="ttdeci">float value</div><div class="ttdef"><b>Definition:</b> motion.hpp:49</div></div>
+<div class="ttc" id="aclassMotion_html_a6991d858447ac9b4bdb479c4a34bee7b"><div class="ttname"><a href="classMotion.html#a6991d858447ac9b4bdb479c4a34bee7b">Motion::flakesLittle</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; flakesLittle</div><div class="ttdef"><b>Definition:</b> motion.hpp:61</div></div>
+<div class="ttc" id="aclassMotion_html_a69ce880add3cd0698e0b1352d79f72ae"><div class="ttname"><a href="classMotion.html#a69ce880add3cd0698e0b1352d79f72ae">Motion::background_rain</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; background_rain</div><div class="ttdef"><b>Definition:</b> motion.hpp:55</div></div>
+<div class="ttc" id="aclassMotion_html_a6dc2fe6da4b6a6b937654261df37a3d3"><div class="ttname"><a href="classMotion.html#a6dc2fe6da4b6a6b937654261df37a3d3">Motion::positionF2</a></div><div class="ttdeci">float positionF2</div><div class="ttdef"><b>Definition:</b> motion.hpp:35</div></div>
+<div class="ttc" id="aclassMotion_html_a6fbea8cc4e620c7c467cf5aa5c99c456"><div class="ttname"><a href="classMotion.html#a6fbea8cc4e620c7c467cf5aa5c99c456">Motion::positionCC_x</a></div><div class="ttdeci">float positionCC_x</div><div class="ttdef"><b>Definition:</b> motion.hpp:43</div></div>
+<div class="ttc" id="aclassMotion_html_a7649128e3cb3fda075596ee7a12b8f3c"><div class="ttname"><a href="classMotion.html#a7649128e3cb3fda075596ee7a12b8f3c">Motion::positionB_x</a></div><div class="ttdeci">float positionB_x</div><div class="ttdef"><b>Definition:</b> motion.hpp:46</div></div>
+<div class="ttc" id="aclassMotion_html_a76601c0fb9e6dfb673f02299f220207f"><div class="ttname"><a href="classMotion.html#a76601c0fb9e6dfb673f02299f220207f">Motion::speedRain</a></div><div class="ttdeci">float speedRain</div><div class="ttdef"><b>Definition:</b> motion.hpp:29</div></div>
+<div class="ttc" id="aclassMotion_html_a79b401175cbb9233d71dc53b8786eb95"><div class="ttname"><a href="classMotion.html#a79b401175cbb9233d71dc53b8786eb95">Motion::flakesLittle2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; flakesLittle2</div><div class="ttdef"><b>Definition:</b> motion.hpp:62</div></div>
+<div class="ttc" id="aclassMotion_html_a7b1b06ee5964dfb16b08e6f9df691af0"><div class="ttname"><a href="classMotion.html#a7b1b06ee5964dfb16b08e6f9df691af0">Motion::speed_cloud</a></div><div class="ttdeci">float speed_cloud</div><div class="ttdef"><b>Definition:</b> motion.hpp:44</div></div>
+<div class="ttc" id="aclassMotion_html_a7c23545f80a0381a19097ecbdfc725b0"><div class="ttname"><a href="classMotion.html#a7c23545f80a0381a19097ecbdfc725b0">Motion::drips2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; drips2</div><div class="ttdef"><b>Definition:</b> motion.hpp:57</div></div>
+<div class="ttc" id="aclassMotion_html_a86125821ec50d1452c993c56469a901d"><div class="ttname"><a href="classMotion.html#a86125821ec50d1452c993c56469a901d">Motion::positionF_x</a></div><div class="ttdeci">float positionF_x</div><div class="ttdef"><b>Definition:</b> motion.hpp:51</div></div>
+<div class="ttc" id="aclassMotion_html_a88966856f79ce8f33ea28a155f247577"><div class="ttname"><a href="classMotion.html#a88966856f79ce8f33ea28a155f247577">Motion::flakesBig</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; flakesBig</div><div class="ttdef"><b>Definition:</b> motion.hpp:63</div></div>
+<div class="ttc" id="aclassMotion_html_a903b3962fb6adcf86f300034be042115"><div class="ttname"><a href="classMotion.html#a903b3962fb6adcf86f300034be042115">Motion::positionF</a></div><div class="ttdeci">float positionF</div><div class="ttdef"><b>Definition:</b> motion.hpp:34</div></div>
+<div class="ttc" id="aclassMotion_html_aa06c1b7cd98ae40d8cd58b02e32a7fa7"><div class="ttname"><a href="classMotion.html#aa06c1b7cd98ae40d8cd58b02e32a7fa7">Motion::contF</a></div><div class="ttdeci">float contF</div><div class="ttdef"><b>Definition:</b> motion.hpp:26</div></div>
+<div class="ttc" id="aclassMotion_html_aa19cee7edec2db1a0f1eb7a592082399"><div class="ttname"><a href="classMotion.html#aa19cee7edec2db1a0f1eb7a592082399">Motion::ground2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; ground2</div><div class="ttdef"><b>Definition:</b> motion.hpp:75</div></div>
+<div class="ttc" id="aclassMotion_html_aa3ce13f9416af13548740dd426e2ed32"><div class="ttname"><a href="classMotion.html#aa3ce13f9416af13548740dd426e2ed32">Motion::controller</a></div><div class="ttdeci">int controller</div><div class="ttdef"><b>Definition:</b> motion.hpp:23</div></div>
+<div class="ttc" id="aclassMotion_html_aa3d13367d79e5a3e85729163af867621"><div class="ttname"><a href="classMotion.html#aa3d13367d79e5a3e85729163af867621">Motion::ground</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; ground</div><div class="ttdef"><b>Definition:</b> motion.hpp:74</div></div>
+<div class="ttc" id="aclassMotion_html_aa551dae9dbe0eb2b833bfb778f2007b9"><div class="ttname"><a href="classMotion.html#aa551dae9dbe0eb2b833bfb778f2007b9">Motion::setController</a></div><div class="ttdeci">void setController(int)</div><div class="ttdoc">Seleciona o cenário (1 = dia, 2 = neve, 3 = chuva).</div><div class="ttdef"><b>Definition:</b> motion.cpp:43</div></div>
+<div class="ttc" id="aclassMotion_html_aa5aa3a7fdcbf073f303ed42006a9cdab"><div class="ttname"><a href="classMotion.html#aa5aa3a7fdcbf073f303ed42006a9cdab">Motion::speed_light</a></div><div class="ttdeci">float speed_light</div><div class="ttdef"><b>Definition:</b> motion.hpp:40</div></div>
+<div class="ttc" id="aclassMotion_html_aa9e601f65f70cc9515e73c70046484dd"><div class="ttname"><a href="classMotion.html#aa9e601f65f70cc9515e73c70046484dd">Motion::clouds</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; clouds</div><div class="ttdef"><b>Definition:</b> motion.hpp:66</div></div>
+<div class="ttc" id="aclassMotion_html_aaa0753cfeddbe15bbf396254bea0f319"><div class="ttname"><a href="classMotion.html#aaa0753cfeddbe15bbf396254bea0f319">Motion::bird1</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; bird1</div><div class="ttdef"><b>Definition:</b> motion.hpp:71</div></div>
+<div class="ttc" id="aclassMotion_html_aaa8db2b9ab96bfe2c7ed97b4107e272c"><div class="ttname"><a href="classMotion.html#aaa8db2b9ab96bfe2c7ed97b4107e272c">Motion::bird3</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; bird3</div><div class="ttdef"><b>Definition:</b> motion.hpp:73</div></div>
+<div class="ttc" id="aclassMotion_html_aaea40126950822e29416adaef000eb43"><div class="ttname"><a href="classMotion.html#aaea40126950822e29416adaef000eb43">Motion::positionL_x</a></div><div class="ttdeci">float positionL_x</div><div class="ttdef"><b>Definition:</b> motion.hpp:39</div></div>
+<div class="ttc" id="aclassMotion_html_ac8cb0423c746f03c8847ca4c3e75a408"><div class="ttname"><a href="classMotion.html#ac8cb0423c746f03c8847ca4c3e75a408">Motion::thunder1</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; thunder1</div><div class="ttdef"><b>Definition:</b> motion.hpp:59</div></div>
+<div class="ttc" id="aclassMotion_html_acd8fefbc15793bf7a73696187c672761"><div class="ttname"><a href="classMotion.html#acd8fefbc15793bf7a73696187c672761">Motion::clouds2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; clouds2</div><div class="ttdef"><b>Definition:</b> motion.hpp:67</div></div>
+<div class="ttc" id="aclassMotion_html_ace3f3c9bb3b5f72887cd483dcd990a43"><div class="ttname"><a href="classMotion.html#ace3f3c9bb3b5f72887cd483dcd990a43">Motion::controll</a></div><div class="ttdeci">float controll</div><div class="ttdef"><b>Definition:</b> motion.hpp:25</div></div>
+<div class="ttc" id="aclassMotion_html_ad05b75421d34f09966b2040d2b1e68d8"><div class="ttname"><a href="classMotion.html#ad05b75421d34f09966b2040d2b1e68d8">Motion::little3</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; little3</div><div class="ttdef"><b>Definition:</b> motion.hpp:70</div></div>
+<div class="ttc" id="aclassMotion_html_ad3b886e72cdd92407903e8142c514bd1"><div class="ttname"><a href="classMotion.html#ad3b886e72cdd92407903e8142c514bd1">Motion::cont</a></div><div class="ttdeci">float cont</div><div class="ttdef"><b>Definition:</b> motion.hpp:48</div></div>
+<div class="ttc" id="aclassMotion_html_ae1101a068026e60190a6e3a146f92658"><div class="ttname"><a href="classMotion.html#ae1101a068026e60190a6e3a146f92658">Motion::positionF2_x</a></div><div class="ttdeci">float positionF2_x</div><div class="ttdef"><b>Definition:</b> motion.hpp:52</div></div>
+<div class="ttc" id="aclassMotion_html_ae6bae14f527e7594938fe621ea9bd4e5"><div class="ttname"><a href="classMotion.html#ae6bae14f527e7594938fe621ea9bd4e5">Motion::positionR2</a></div><div class="ttdeci">float positionR2</div><div class="ttdef"><b>Definition:</b> motion.hpp:31</div></div>
+<div class="ttc" id="aclassMotion_html_ae921ee84c9257bcdf0cd3862ba44d430"><div class="ttname"><a href="classMotion.html#ae921ee84c9257bcdf0cd3862ba44d430">Motion::speed_floor</a></div><div class="ttdeci">float speed_floor</div><div class="ttdef"><b>Definition:</b> motion.hpp:53</div></div>
+<div class="ttc" id="aclassMotion_html_aebbd0bb96b82df72bdc38b12302f36c0"><div class="ttname"><a href="classMotion.html#aebbd0bb96b82df72bdc38b12302f36c0">Motion::background_snow</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; background_snow</div><div class="ttdef"><b>Definition:</b> motion.hpp:60</div></div>
+<div class="ttc" id="aclassMotion_html_aef09d2e9111464349fdaed8760011af8"><div class="ttname"><a href="classMotion.html#aef09d2e9111464349fdaed8760011af8">Motion::speedFlakes</a></div><div class="ttdeci">float speedFlakes</div><div class="ttdef"><b>Definition:</b> motion.hpp:33</div></div>
+<div class="ttc" id="aclassMotion_html_aef1cc2d84b5552f48eddcdf404f15fec"><div class="ttname"><a href="classMotion.html#aef1cc2d84b5552f48eddcdf404f15fec">Motion::background</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; background</div><div class="ttdef"><b>Definition:</b> motion.hpp:64</div></div>
+<div class="ttc" id="aclassMotion_html_af3274dd28f81e92ae0294e679b577ad0"><div class="ttname"><a href="classMotion.html#af3274dd28f81e92ae0294e679b577ad0">Motion::bird2</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; bird2</div><div class="ttdef"><b>Definition:</b> motion.hpp:72</div></div>
+<div class="ttc" id="aclassMotion_html_af4060e5529d11db125650172b7335b1a"><div class="ttname"><a href="classMotion.html#af4060e5529d11db125650172b7335b1a">Motion::positionC_x</a></div><div class="ttdeci">float positionC_x</div><div class="ttdef"><b>Definition:</b> motion.hpp:42</div></div>
+<div class="ttc" id="aclassMotion_html_af8e8ae231f4a6ae6b339df0b4d54ecf4"><div class="ttname"><a href="classMotion.html#af8e8ae231f4a6ae6b339df0b4d54ecf4">Motion::positionR1</a></div><div class="ttdeci">float positionR1</div><div class="ttdef"><b>Definition:</b> motion.hpp:30</div></div>
+<div class="ttc" id="adefines_8hpp_html"><div class="ttname"><a href="defines_8hpp.html">defines.hpp</a></div><div class="ttdoc">Constantes globais, macros e estruturas auxiliares do jogo.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

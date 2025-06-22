@@ -1,0 +1,20 @@
+/*! 
+@mainpage Flappy Bird Game
+
+Trabalho acadêmico desenvolvido em C++17 com a biblioteca Allegro 5.
+
+Funcionalidades principais:
+- Estados de jogo (menu, dificuldade, ranking, jogo, pausa e game-over).
+- Três temas climáticos: dia, neve e chuva (classe Motion).
+- Persistência de ranking em arquivo de texto.
+- Testes unitários com Doctest.
+- Documentação automática via Doxygen.
+
+Estrutura de diretórios:
+- **src/**: código-fonte (.cpp)
+- **include/**: headers (.hpp)
+- **assets/**: sprites, fontes e sons
+- **tests/**: casos de teste
+
+Use o menu da esquerda para navegar por classes, arquivos e módulos.
+*/ 

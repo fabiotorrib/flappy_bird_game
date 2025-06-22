@@ -1,0 +1,4 @@
+<map id="PipeList::check_collision" name="PipeList::check_collision">
+<area shape="rect" id="node1" title="Check bird collision against any pipe." alt="" coords="5,13,185,39"/>
+<area shape="rect" id="node2" href="$classGameObject.html#a55ee46cc9cd076b01fa26b6de065c9e3" title="Verifica colisão entre este objeto e outro." alt="" coords="233,5,415,47"/>
+</map>

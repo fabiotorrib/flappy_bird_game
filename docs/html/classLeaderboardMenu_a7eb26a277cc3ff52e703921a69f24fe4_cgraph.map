@@ -1,0 +1,6 @@
+<map id="LeaderboardMenu::enter" name="LeaderboardMenu::enter">
+<area shape="rect" id="node1" title="Executado uma vez ao entrar no estado do Leaderboard." alt="" coords="5,31,187,57"/>
+<area shape="rect" id="node2" href="$classPlayer.html#aef5308fd57957507968e971d23ac3fe6" title="Lê arquivo de ranking e retorna vetor de jogadores." alt="" coords="235,5,420,32"/>
+<area shape="rect" id="node4" href="$classPlayer.html#a821a6a7bbfeeabc956d063d24eb15889" title="Ordena vetor de jogadores por pontuação decrescente." alt="" coords="238,56,417,83"/>
+<area shape="rect" id="node3" href="$classPlayer.html#a1b1eb725b1cd830c7ccb0d03459044f2" title="Constrói um jogador com nome e pontuação inicial." alt="" coords="468,5,580,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="LeaderboardMenu::update" name="LeaderboardMenu::update">
+<area shape="rect" id="node1" title="Atualiza a lógica do estado do movimento/animação do fundo." alt="" coords="5,5,197,32"/>
+<area shape="rect" id="node2" href="$classMotion.html#a01805ce60c0e4c9aae97979dd884b59c" title="Atualiza posições dos elementos de background conforme cenário." alt="" coords="245,5,365,32"/>
+</map>

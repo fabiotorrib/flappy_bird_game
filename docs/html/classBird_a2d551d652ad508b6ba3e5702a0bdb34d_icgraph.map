@@ -1,0 +1,5 @@
+<map id="Bird::loop_animation" name="Bird::loop_animation">
+<area shape="rect" id="node1" title="Gera animacao de bater de asas." alt="" coords="321,5,479,32"/>
+<area shape="rect" id="node2" href="$classBird.html#a7f672f464d181f24f03301f1713d23dc" title="Desenha sprite atual com rotacao." alt="" coords="185,5,273,32"/>
+<area shape="rect" id="node3" href="$classFlappyBird.html#a5cc95b67d5bf558a744e81d64c8bdd9c" title="Desenha cena completa conforme estado." alt="" coords="5,5,137,32"/>
+</map>

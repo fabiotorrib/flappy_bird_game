@@ -1,0 +1,9 @@
+<map id="Motion::update" name="Motion::update">
+<area shape="rect" id="node1" title="Atualiza posições dos elementos de background conforme cenário." alt="" coords="245,132,365,159"/>
+<area shape="rect" id="node2" href="$classDifficultyMenu.html#a024907d1a77fef3b969a90dc2cc2f26f" title="Atualiza a lógica do estado a cada quadro." alt="" coords="16,5,187,32"/>
+<area shape="rect" id="node3" href="$classLeaderboardMenu.html#a8e73c70836903711bc8599b8780be61b" title="Atualiza a lógica do estado do movimento/animação do fundo." alt="" coords="5,56,197,83"/>
+<area shape="rect" id="node4" href="$classLoadName.html#a7eae3d9938449ae7c1f43b0261f62293" title="Atualiza a lógica do estado do movimento/animação de fundo a cada quadro." alt="" coords="29,107,174,133"/>
+<area shape="rect" id="node5" href="$classMainMenu.html#a00df3d6357e26f276850cc02e5a9cc46" title="Atualiza a lógica do estado do movimento/animação de fundo a cada quadro." alt="" coords="30,157,173,184"/>
+<area shape="rect" id="node6" href="$classPlay.html#a5315ef30e6e278d20cc07c5fc5e07bdf" title="Atualiza simulacao do jogo." alt="" coords="50,208,153,235"/>
+<area shape="rect" id="node7" href="$classSettingsMenu.html#af8a41c0862665063f23d8b3806cd1f40" title="Atualiza a lógica do estado de movimento/animação de fundo." alt="" coords="19,259,183,285"/>
+</map>

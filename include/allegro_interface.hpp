@@ -4,6 +4,18 @@
 #include "init.hpp"
 #include "state.hpp"
 
+/**
+ * @file allegro_interface.hpp
+ * @brief Declara o controlador que integra Allegro e a máquina de estados.
+ *
+ * Responsável por instanciar `FlappyBird`, gerir fila de eventos Allegro e
+ * realizar o loop principal de execução.
+ */
+
+/**
+ * @class AllegroController
+ * @brief Gerencia display, eventos e transições de estados do jogo.
+ */
 class AllegroController {
  private:
   int screen_width;

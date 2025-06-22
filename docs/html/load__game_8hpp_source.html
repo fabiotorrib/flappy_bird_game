@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/states/load_game.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_8d451e3adc68fdcbbaffa01a2ce5a922.html">states</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">load_game.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="load__game_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &quot;../defines.hpp&quot;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &quot;../init.hpp&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &quot;../state.hpp&quot;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &quot;../../include/assets.hpp&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">// Enumeração para representar os possíveis resultados e erros da tela de inserção de nome. </span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7ec">   17</a></span>&#160;<span class="keyword">enum</span> <a class="code" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7ec">insertNameSituations</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca2854c3629f4ac0621b51317bcfa6144c">   19</a></span>&#160;    <a class="code" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca2854c3629f4ac0621b51317bcfa6144c">noName</a>,</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca3265442edb6bc8c70c3c059ce49f7075">   20</a></span>&#160;    <a class="code" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca3265442edb6bc8c70c3c059ce49f7075">existName</a>,</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca5972948e5f8ecbc0b179096f9b7edf33">   21</a></span>&#160;    <a class="code" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca5972948e5f8ecbc0b179096f9b7edf33">noexistName</a>,</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b">   22</a></span>&#160;    <a class="code" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b">noError</a>,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca2ee0a3e7fa0049a95494d5498c81177f">successInsert</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca2ee0a3e7fa0049a95494d5498c81177f">   24</a></span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classLoadName.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLoadName.html">LoadName</a> : <span class="keyword">public</span> <a class="code" href="classState.html">State</a> {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classLoadName.html#a5ce4fb95dd055fc1530a548149a15cda">handle_input</a>(<span class="keyword">const</span> ALLEGRO_EVENT&amp; <a class="code" href="classState.html#a87442fa864f5080096f0055856ced22b">ev</a>) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classState.html">State</a>* <a class="code" href="classLoadName.html#a7eae3d9938449ae7c1f43b0261f62293">update</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLoadName.html#a44a209d257f203588c151ceaf8d7607e">draw</a>(<a class="code" href="classMotion.html">Motion</a>&amp; motion) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classLoadName.html#ae171ebd3932f6c31c018c851cc7105dc">enter</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classLoadName.html#a9b613b5e400238abdf695939e56536c2">LoadName</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classLoadName.html#a198b63bd2b7a3698c50d09d740610760">   37</a></span>&#160;  std::string <a class="code" href="classLoadName.html#a198b63bd2b7a3698c50d09d740610760">playerNameString</a> = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classLoadName.html#a160515b94a39b7f6adb4ffcf36bcaef0">   38</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classLoadName.html#a160515b94a39b7f6adb4ffcf36bcaef0">buttonPositionSelected</a> = 2;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classLoadName.html#a013982548c528540bf38c7deb005ef77">   39</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classLoadName.html#a013982548c528540bf38c7deb005ef77">errorSituation</a> = <a class="code" href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b">noError</a>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classLoadName.html#aeb29a4a5f9841c1502fa0fa87b6cb414">   42</a></span>&#160;  std::vector&lt;Button&gt; <a class="code" href="classLoadName.html#aeb29a4a5f9841c1502fa0fa87b6cb414">menuButtons</a> = {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      {<span class="stringliteral">&quot;Back&quot;</span>, 0}, {<span class="stringliteral">&quot;Insert&quot;</span>, 0}, {<span class="stringliteral">&quot;NameCamp&quot;</span>, 1}};</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classLoadName.html#a246441e49fab7a8e0b82efbf5bbd821f">   47</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classLoadName.html#a246441e49fab7a8e0b82efbf5bbd821f">buttonBackSelect</a>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classLoadName.html#accaca34b2afb86c7b1a3b90eb18b2d86">   48</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classLoadName.html#accaca34b2afb86c7b1a3b90eb18b2d86">buttonBackDeselect</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classLoadName.html#a1f7b8a31c5ce3e56da0af6e5c326fce0">   49</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classLoadName.html#a1f7b8a31c5ce3e56da0af6e5c326fce0">buttonInsertSelect</a>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="classLoadName.html#a227524c1f326e92a62875942d5e8815b">   50</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classLoadName.html#a227524c1f326e92a62875942d5e8815b">buttonInsertDeselect</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classLoadName.html#a25719a3bc235eb47cc8f9dcd5a8c7c66">   51</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classLoadName.html#a25719a3bc235eb47cc8f9dcd5a8c7c66">nameCampSelect</a>;</div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classLoadName.html#a95af00184e9e36de17e6592ec7f772da">   52</a></span>&#160;    std::unique_ptr&lt;Image&gt; <a class="code" href="classLoadName.html#a95af00184e9e36de17e6592ec7f772da">nameCampDeselect</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classLoadName.html#ae05a8419ec594f7163339d2b446a1cf7">   53</a></span>&#160;    std::unique_ptr&lt;TextFont&gt; <a class="code" href="classLoadName.html#ae05a8419ec594f7163339d2b446a1cf7">nameFont</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="classLoadName.html#a6592476d13533ab634782064d1ffaec1">   54</a></span>&#160;    std::unique_ptr&lt;TextFont&gt; <a class="code" href="classLoadName.html#a6592476d13533ab634782064d1ffaec1">errorFont</a>;   </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="ttc" id="aclassLoadName_html"><div class="ttname"><a href="classLoadName.html">LoadName</a></div><div class="ttdoc">Tela de inserção de nome usada por Novo Jogo e Carregar Jogo.</div><div class="ttdef"><b>Definition:</b> load_game.hpp:30</div></div>
+<div class="ttc" id="aclassLoadName_html_a013982548c528540bf38c7deb005ef77"><div class="ttname"><a href="classLoadName.html#a013982548c528540bf38c7deb005ef77">LoadName::errorSituation</a></div><div class="ttdeci">int errorSituation</div><div class="ttdef"><b>Definition:</b> load_game.hpp:39</div></div>
+<div class="ttc" id="aclassLoadName_html_a160515b94a39b7f6adb4ffcf36bcaef0"><div class="ttname"><a href="classLoadName.html#a160515b94a39b7f6adb4ffcf36bcaef0">LoadName::buttonPositionSelected</a></div><div class="ttdeci">int buttonPositionSelected</div><div class="ttdef"><b>Definition:</b> load_game.hpp:38</div></div>
+<div class="ttc" id="aclassLoadName_html_a198b63bd2b7a3698c50d09d740610760"><div class="ttname"><a href="classLoadName.html#a198b63bd2b7a3698c50d09d740610760">LoadName::playerNameString</a></div><div class="ttdeci">std::string playerNameString</div><div class="ttdef"><b>Definition:</b> load_game.hpp:37</div></div>
+<div class="ttc" id="aclassLoadName_html_a1f7b8a31c5ce3e56da0af6e5c326fce0"><div class="ttname"><a href="classLoadName.html#a1f7b8a31c5ce3e56da0af6e5c326fce0">LoadName::buttonInsertSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonInsertSelect</div><div class="ttdef"><b>Definition:</b> load_game.hpp:49</div></div>
+<div class="ttc" id="aclassLoadName_html_a227524c1f326e92a62875942d5e8815b"><div class="ttname"><a href="classLoadName.html#a227524c1f326e92a62875942d5e8815b">LoadName::buttonInsertDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonInsertDeselect</div><div class="ttdef"><b>Definition:</b> load_game.hpp:50</div></div>
+<div class="ttc" id="aclassLoadName_html_a246441e49fab7a8e0b82efbf5bbd821f"><div class="ttname"><a href="classLoadName.html#a246441e49fab7a8e0b82efbf5bbd821f">LoadName::buttonBackSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonBackSelect</div><div class="ttdoc">Ponteiros inteligentes para os recursos visuais (imagens e fontes) da tela.</div><div class="ttdef"><b>Definition:</b> load_game.hpp:47</div></div>
+<div class="ttc" id="aclassLoadName_html_a25719a3bc235eb47cc8f9dcd5a8c7c66"><div class="ttname"><a href="classLoadName.html#a25719a3bc235eb47cc8f9dcd5a8c7c66">LoadName::nameCampSelect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; nameCampSelect</div><div class="ttdef"><b>Definition:</b> load_game.hpp:51</div></div>
+<div class="ttc" id="aclassLoadName_html_a44a209d257f203588c151ceaf8d7607e"><div class="ttname"><a href="classLoadName.html#a44a209d257f203588c151ceaf8d7607e">LoadName::draw</a></div><div class="ttdeci">void draw(Motion &amp;motion) override</div><div class="ttdoc">Desenha todos os elementos visuais do estado na tela.</div><div class="ttdef"><b>Definition:</b> load_game.cpp:213</div></div>
+<div class="ttc" id="aclassLoadName_html_a5ce4fb95dd055fc1530a548149a15cda"><div class="ttname"><a href="classLoadName.html#a5ce4fb95dd055fc1530a548149a15cda">LoadName::handle_input</a></div><div class="ttdeci">State * handle_input(const ALLEGRO_EVENT &amp;ev) override</div><div class="ttdoc">Gerencia toda a entrada de teclado do usuário.</div><div class="ttdef"><b>Definition:</b> load_game.cpp:67</div></div>
+<div class="ttc" id="aclassLoadName_html_a6592476d13533ab634782064d1ffaec1"><div class="ttname"><a href="classLoadName.html#a6592476d13533ab634782064d1ffaec1">LoadName::errorFont</a></div><div class="ttdeci">std::unique_ptr&lt; TextFont &gt; errorFont</div><div class="ttdef"><b>Definition:</b> load_game.hpp:54</div></div>
+<div class="ttc" id="aclassLoadName_html_a7eae3d9938449ae7c1f43b0261f62293"><div class="ttname"><a href="classLoadName.html#a7eae3d9938449ae7c1f43b0261f62293">LoadName::update</a></div><div class="ttdeci">State * update(Motion &amp;motion) override</div><div class="ttdoc">Atualiza a lógica do estado do movimento/animação de fundo a cada quadro.</div><div class="ttdef"><b>Definition:</b> load_game.cpp:202</div></div>
+<div class="ttc" id="aclassLoadName_html_a95af00184e9e36de17e6592ec7f772da"><div class="ttname"><a href="classLoadName.html#a95af00184e9e36de17e6592ec7f772da">LoadName::nameCampDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; nameCampDeselect</div><div class="ttdef"><b>Definition:</b> load_game.hpp:52</div></div>
+<div class="ttc" id="aclassLoadName_html_a9b613b5e400238abdf695939e56536c2"><div class="ttname"><a href="classLoadName.html#a9b613b5e400238abdf695939e56536c2">LoadName::LoadName</a></div><div class="ttdeci">LoadName()</div><div class="ttdoc">Construtor da classe LoadName.</div><div class="ttdef"><b>Definition:</b> load_game.cpp:23</div></div>
+<div class="ttc" id="aclassLoadName_html_accaca34b2afb86c7b1a3b90eb18b2d86"><div class="ttname"><a href="classLoadName.html#accaca34b2afb86c7b1a3b90eb18b2d86">LoadName::buttonBackDeselect</a></div><div class="ttdeci">std::unique_ptr&lt; Image &gt; buttonBackDeselect</div><div class="ttdef"><b>Definition:</b> load_game.hpp:48</div></div>
+<div class="ttc" id="aclassLoadName_html_ae05a8419ec594f7163339d2b446a1cf7"><div class="ttname"><a href="classLoadName.html#ae05a8419ec594f7163339d2b446a1cf7">LoadName::nameFont</a></div><div class="ttdeci">std::unique_ptr&lt; TextFont &gt; nameFont</div><div class="ttdef"><b>Definition:</b> load_game.hpp:53</div></div>
+<div class="ttc" id="aclassLoadName_html_ae171ebd3932f6c31c018c851cc7105dc"><div class="ttname"><a href="classLoadName.html#ae171ebd3932f6c31c018c851cc7105dc">LoadName::enter</a></div><div class="ttdeci">void enter() override</div><div class="ttdoc">Executado ao entrar no estado. Prepara a tela para uma nova interação.</div><div class="ttdef"><b>Definition:</b> load_game.cpp:47</div></div>
+<div class="ttc" id="aclassLoadName_html_aeb29a4a5f9841c1502fa0fa87b6cb414"><div class="ttname"><a href="classLoadName.html#aeb29a4a5f9841c1502fa0fa87b6cb414">LoadName::menuButtons</a></div><div class="ttdeci">std::vector&lt; Button &gt; menuButtons</div><div class="ttdoc">Vetor que armazena os botões do menu e seus estados de seleção.</div><div class="ttdef"><b>Definition:</b> load_game.hpp:42</div></div>
+<div class="ttc" id="aclassMotion_html"><div class="ttname"><a href="classMotion.html">Motion</a></div><div class="ttdoc">Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.</div><div class="ttdef"><b>Definition:</b> motion.hpp:20</div></div>
+<div class="ttc" id="aclassState_html"><div class="ttname"><a href="classState.html">State</a></div><div class="ttdoc">Define a interface que cada tela/estado deve implementar.</div><div class="ttdef"><b>Definition:</b> state.hpp:15</div></div>
+<div class="ttc" id="aclassState_html_a87442fa864f5080096f0055856ced22b"><div class="ttname"><a href="classState.html#a87442fa864f5080096f0055856ced22b">State::ev</a></div><div class="ttdeci">static ALLEGRO_EVENT ev</div><div class="ttdef"><b>Definition:</b> state.hpp:31</div></div>
+<div class="ttc" id="aload__game_8hpp_html_a18b16dd094a1f4586e538539d8d9c7ec"><div class="ttname"><a href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7ec">insertNameSituations</a></div><div class="ttdeci">insertNameSituations</div><div class="ttdef"><b>Definition:</b> load_game.hpp:18</div></div>
+<div class="ttc" id="aload__game_8hpp_html_a18b16dd094a1f4586e538539d8d9c7eca2854c3629f4ac0621b51317bcfa6144c"><div class="ttname"><a href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca2854c3629f4ac0621b51317bcfa6144c">noName</a></div><div class="ttdeci">@ noName</div><div class="ttdef"><b>Definition:</b> load_game.hpp:19</div></div>
+<div class="ttc" id="aload__game_8hpp_html_a18b16dd094a1f4586e538539d8d9c7eca2ee0a3e7fa0049a95494d5498c81177f"><div class="ttname"><a href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca2ee0a3e7fa0049a95494d5498c81177f">successInsert</a></div><div class="ttdeci">@ successInsert</div><div class="ttdef"><b>Definition:</b> load_game.hpp:23</div></div>
+<div class="ttc" id="aload__game_8hpp_html_a18b16dd094a1f4586e538539d8d9c7eca3265442edb6bc8c70c3c059ce49f7075"><div class="ttname"><a href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca3265442edb6bc8c70c3c059ce49f7075">existName</a></div><div class="ttdeci">@ existName</div><div class="ttdef"><b>Definition:</b> load_game.hpp:20</div></div>
+<div class="ttc" id="aload__game_8hpp_html_a18b16dd094a1f4586e538539d8d9c7eca5972948e5f8ecbc0b179096f9b7edf33"><div class="ttname"><a href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7eca5972948e5f8ecbc0b179096f9b7edf33">noexistName</a></div><div class="ttdeci">@ noexistName</div><div class="ttdef"><b>Definition:</b> load_game.hpp:21</div></div>
+<div class="ttc" id="aload__game_8hpp_html_a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b"><div class="ttname"><a href="load__game_8hpp.html#a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b">noError</a></div><div class="ttdeci">@ noError</div><div class="ttdef"><b>Definition:</b> load_game.hpp:22</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

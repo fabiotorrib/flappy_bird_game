@@ -1,0 +1,4 @@
+<map id="Player::ReadLeaderboard" name="Player::ReadLeaderboard">
+<area shape="rect" id="node1" title="Lê arquivo de ranking e retorna vetor de jogadores." alt="" coords="235,5,420,32"/>
+<area shape="rect" id="node2" href="$classLeaderboardMenu.html#a7eb26a277cc3ff52e703921a69f24fe4" title="Executado uma vez ao entrar no estado do Leaderboard." alt="" coords="5,5,187,32"/>
+</map>

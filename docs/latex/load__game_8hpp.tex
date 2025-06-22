@@ -1,0 +1,81 @@
+\hypertarget{load__game_8hpp}{}\doxysection{Referência do Arquivo include/states/load\+\_\+game.hpp}
+\label{load__game_8hpp}\index{include/states/load\_game.hpp@{include/states/load\_game.hpp}}
+
+
+Definição da classe \mbox{\hyperlink{classLoadName}{Load\+Name}}, que representa o estado de inserção de nome.  
+
+
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include \char`\"{}../defines.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../init.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../state.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/assets.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para load\+\_\+game.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{load__game_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{load__game_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classLoadName}{Load\+Name}}
+\begin{DoxyCompactList}\small\item\em Tela de inserção de nome usada por Novo Jogo e Carregar Jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerações}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ec}{insert\+Name\+Situations}} \{ \newline
+\mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca2854c3629f4ac0621b51317bcfa6144c}{no\+Name}}
+, \mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca3265442edb6bc8c70c3c059ce49f7075}{exist\+Name}}
+, \mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca5972948e5f8ecbc0b179096f9b7edf33}{noexist\+Name}}
+, \mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b}{no\+Error}}
+, \newline
+\mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca2ee0a3e7fa0049a95494d5498c81177f}{success\+Insert}}
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Definição da classe \mbox{\hyperlink{classLoadName}{Load\+Name}}, que representa o estado de inserção de nome. 
+
+Este cabeçalho declara a interface para a tela onde o jogador digita seu nome para criar um novo jogo ou carregar um jogo existente. 
+
+\doxysubsection{Enumerações}
+\mbox{\Hypertarget{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ec}\label{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ec}} 
+\index{load\_game.hpp@{load\_game.hpp}!insertNameSituations@{insertNameSituations}}
+\index{insertNameSituations@{insertNameSituations}!load\_game.hpp@{load\_game.hpp}}
+\doxysubsubsection{\texorpdfstring{insertNameSituations}{insertNameSituations}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ec}{insert\+Name\+Situations}}}
+
+Bibliotecas necessárias \begin{DoxyEnumFields}{Enumeradores}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{noName@{noName}!load\_game.hpp@{load\_game.hpp}}\index{load\_game.hpp@{load\_game.hpp}!noName@{noName}}}\mbox{\Hypertarget{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca2854c3629f4ac0621b51317bcfa6144c}\label{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca2854c3629f4ac0621b51317bcfa6144c}} 
+no\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{existName@{existName}!load\_game.hpp@{load\_game.hpp}}\index{load\_game.hpp@{load\_game.hpp}!existName@{existName}}}\mbox{\Hypertarget{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca3265442edb6bc8c70c3c059ce49f7075}\label{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca3265442edb6bc8c70c3c059ce49f7075}} 
+exist\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{noexistName@{noexistName}!load\_game.hpp@{load\_game.hpp}}\index{load\_game.hpp@{load\_game.hpp}!noexistName@{noexistName}}}\mbox{\Hypertarget{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca5972948e5f8ecbc0b179096f9b7edf33}\label{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca5972948e5f8ecbc0b179096f9b7edf33}} 
+noexist\+Name&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{noError@{noError}!load\_game.hpp@{load\_game.hpp}}\index{load\_game.hpp@{load\_game.hpp}!noError@{noError}}}\mbox{\Hypertarget{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b}\label{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7ecab22416d928134d1c6c7b2e8d2c31f20b}} 
+no\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{successInsert@{successInsert}!load\_game.hpp@{load\_game.hpp}}\index{load\_game.hpp@{load\_game.hpp}!successInsert@{successInsert}}}\mbox{\Hypertarget{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca2ee0a3e7fa0049a95494d5498c81177f}\label{load__game_8hpp_a18b16dd094a1f4586e538539d8d9c7eca2ee0a3e7fa0049a95494d5498c81177f}} 
+success\+Insert&\\
+\hline
+
+\end{DoxyEnumFields}

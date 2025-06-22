@@ -1,3 +1,8 @@
+/**
+ * @file motion.cpp
+ * @brief Implementação da classe Motion (parallax e clima).
+ */
+
 #include "../include/motion.hpp"
 #include <allegro5/allegro_primitives.h>
 #include <memory>
@@ -32,12 +37,16 @@ Motion::Motion() {
   ground2 = std::make_unique<Image>("assets/Ground.png");
 }
 
-// Variavel que muda o estado do clima de fundo
+/**
+ * @brief Seleciona o cenário (1 = dia, 2 = neve, 3 = chuva).
+ */
 void Motion::setController(int x) {
   controller = x;
 }
 
-// Animação de todos sprites da tela de fundo
+/**
+ * @brief Atualiza posições dos elementos de background conforme cenário.
+ */
 void Motion::update() {
 
   // Atualiza a posição do clima ensolarado
@@ -122,8 +131,9 @@ void Motion::update() {
   }
 }
 
-// Atualiza a tela com os frames andados
-// Redesenhando cada imagem com a nova posição
+/**
+ * @brief Desenha todos os elementos do background baseado no cenário ativo.
+ */
 void Motion::draw() {
 
   // Desenha animação ensolarada

@@ -1,0 +1,44 @@
+\hypertarget{pipe_8hpp}{}\doxysection{Referência do Arquivo include/pipe.hpp}
+\label{pipe_8hpp}\index{include/pipe.hpp@{include/pipe.hpp}}
+
+
+Declaration of pipe-\/related classes (\mbox{\hyperlink{classPipe}{Pipe}}, \mbox{\hyperlink{classPipePair}{Pipe\+Pair}}, \mbox{\hyperlink{classPipeList}{Pipe\+List}}).  
+
+
+{\ttfamily \#include $<$allegro5/bitmap.\+h$>$}\newline
+{\ttfamily \#include $<$random$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}defines.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}game\+\_\+object.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para pipe.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pipe_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{pipe_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classPipe}{Pipe}}
+\begin{DoxyCompactList}\small\item\em Obstáculo individual que se move horizontalmente e gera pontuação. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPipePair}{Pipe\+Pair}}
+\begin{DoxyCompactList}\small\item\em Agrupa dois canos (superior e inferior) podendo ter movimento vertical. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classPipeList}{Pipe\+List}}
+\begin{DoxyCompactList}\small\item\em Gerencia vetor de \mbox{\hyperlink{classPipePair}{Pipe\+Pair}}\+: spawn, atualização, colisão e score. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Declaration of pipe-\/related classes (\mbox{\hyperlink{classPipe}{Pipe}}, \mbox{\hyperlink{classPipePair}{Pipe\+Pair}}, \mbox{\hyperlink{classPipeList}{Pipe\+List}}). 
+
+These classes implement the obstacle logic\+: horizontal/vertical movement, collision detection, score handling and difficulty management for the Flappy-\/style game. 

@@ -1,0 +1,4 @@
+<map id="Play::update" name="Play::update">
+<area shape="rect" id="node1" title="Atualiza simulacao do jogo." alt="" coords="5,5,108,32"/>
+<area shape="rect" id="node2" href="$classMotion.html#a01805ce60c0e4c9aae97979dd884b59c" title="Atualiza posições dos elementos de background conforme cenário." alt="" coords="156,5,276,32"/>
+</map>

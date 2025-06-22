@@ -1,0 +1,460 @@
+\hypertarget{classBird}{}\doxysection{Referência da Classe Bird}
+\label{classBird}\index{Bird@{Bird}}
+
+
+Personagem controlável\+: gerencia movimento, animação de asas, pulo e detecção de colisões.  
+
+
+
+
+{\ttfamily \#include $<$bird.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Bird\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classBird__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Bird\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classBird__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBird_a896b0a544f439f1b43b171c0665832ea}{Bird}} (ALLEGRO\+\_\+\+BITMAP $\ast$img, float \mbox{\hyperlink{classGameObject_ad4976cd29785cf9bd791148ff397c41e}{x}}, float \mbox{\hyperlink{classGameObject_a9ac54f1c686ecf5656139a829ed62041}{y}}, ALLEGRO\+\_\+\+BITMAP $\ast$img2, ALLEGRO\+\_\+\+BITMAP $\ast$img3)
+\begin{DoxyCompactList}\small\item\em Construtor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBird_a31a45a161b401b28dc815d4a788a01e6}{$\sim$\+Bird}} ()=default
+\begin{DoxyCompactList}\small\item\em Destrutor padrao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_ae2718aad2ef1de73e399482ab6068324}{update}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza fisica e posicao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_a7f672f464d181f24f03301f1713d23dc}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Desenha sprite atual com rotacao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_aaf8f7cdda8f072ee9d2643da8dc71ad6}{jump}} ()
+\begin{DoxyCompactList}\small\item\em Aplica impulso de pulo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_a2d551d652ad508b6ba3e5702a0bdb34d}{loop\+\_\+animation}} (int type)
+\begin{DoxyCompactList}\small\item\em Gera animacao de bater de asas. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBird_a5b63706c73ef35ac37a8c01495abf4e3}{check\+\_\+bird\+\_\+collision}} (const \mbox{\hyperlink{classGameObject}{Game\+Object}} \&other) const
+\begin{DoxyCompactList}\small\item\em Verifica colisao com outro \mbox{\hyperlink{classGameObject}{Game\+Object}}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_a448b7fded4142e63b27c306b5a17e513}{destroy\+\_\+bitmaps}} ()
+\begin{DoxyCompactList}\small\item\em Libera bitmap principal (quando necessario). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_af260e4528dadc8849a349b1221d41160}{set\+\_\+by}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza coordenada by (usada na HUD ou limites). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_a567645317bcf90078d9cad97cadfc1ec}{set\+\_\+break}} (bool value)
+\begin{DoxyCompactList}\small\item\em Habilita/desabilita animacao apos colisao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBird_a36a1dad86634842ebd97e869a2732aaf}{reset\+\_\+xy}} ()
+\begin{DoxyCompactList}\small\item\em Reseta posicao inicial e velocidade. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classBird_ae8e3c99286c697b4d1fb46b5a1cdb0d4}{gravity}}
+\begin{DoxyCompactList}\small\item\em aceleracao gravitacional \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBird_acac9c8e88e1a92ca06440987794dcc62}{jump\+Force}}
+\begin{DoxyCompactList}\small\item\em impulso vertical ao pular \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBird_ad9ff3a9c1d413787563e16075ed9b571}{vy}} = 0
+\begin{DoxyCompactList}\small\item\em velocidade vertical \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBird_ae349b0c3de095131a88820721e6b2e8a}{rotation}} = 0
+\begin{DoxyCompactList}\small\item\em angulo de rotacao a desenhar \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBird_a1eadac7dc7f612629365ac3a56ddd632}{valueB}} = 0
+\begin{DoxyCompactList}\small\item\em indice da animacao \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBird_af66a92669f202a7b99aeaf07a83321c0}{contB}} = \mbox{\hyperlink{defines_8hpp_acec13f2cbd31bef90e1cbe72f1bf8d54}{TIME\+\_\+\+GIF\+\_\+\+BIRD}}
+\begin{DoxyCompactList}\small\item\em limite de frames por ciclo \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classBird_a9c57c5b1e3d9b4bdf6c3b3606488a962}{frames}} = 0
+\begin{DoxyCompactList}\small\item\em contador de frames \end{DoxyCompactList}\item 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{classBird_a000a1994dc84399164995071069e7b20}{frame1}}
+\begin{DoxyCompactList}\small\item\em sprite asa para cima \end{DoxyCompactList}\item 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{classBird_ae274e8a97e1bd2b2caaf2159475667b1}{frame2}}
+\begin{DoxyCompactList}\small\item\em sprite asa meio \end{DoxyCompactList}\item 
+ALLEGRO\+\_\+\+BITMAP $\ast$ \mbox{\hyperlink{classBird_ae0fffb275d3ddee41fad2f086be8950e}{frame3}}
+\begin{DoxyCompactList}\small\item\em sprite asa para baixo \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classBird_a8b147834e38f950f76fb74b76a306701}{breakanimation}} = false
+\begin{DoxyCompactList}\small\item\em pausa animacao (quando colide) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Personagem controlável\+: gerencia movimento, animação de asas, pulo e detecção de colisões. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classBird_a896b0a544f439f1b43b171c0665832ea}\label{classBird_a896b0a544f439f1b43b171c0665832ea}} 
+\index{Bird@{Bird}!Bird@{Bird}}
+\index{Bird@{Bird}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{Bird()}{Bird()}}
+{\footnotesize\ttfamily Bird\+::\+Bird (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{img,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{img2,  }\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{img3 }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construtor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em img} & primeiro frame \\
+\hline
+{\em x} & posicao inicial x \\
+\hline
+{\em y} & posicao inicial y \\
+\hline
+{\em img2} & segundo frame \\
+\hline
+{\em img3} & terceiro frame \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classBird_a31a45a161b401b28dc815d4a788a01e6}\label{classBird_a31a45a161b401b28dc815d4a788a01e6}} 
+\index{Bird@{Bird}!````~Bird@{$\sim$Bird}}
+\index{````~Bird@{$\sim$Bird}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{$\sim$Bird()}{~Bird()}}
+{\footnotesize\ttfamily Bird\+::$\sim$\+Bird (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+Destrutor padrao. 
+
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classBird_a5b63706c73ef35ac37a8c01495abf4e3}\label{classBird_a5b63706c73ef35ac37a8c01495abf4e3}} 
+\index{Bird@{Bird}!check\_bird\_collision@{check\_bird\_collision}}
+\index{check\_bird\_collision@{check\_bird\_collision}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{check\_bird\_collision()}{check\_bird\_collision()}}
+{\footnotesize\ttfamily bool Bird\+::check\+\_\+bird\+\_\+collision (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classGameObject}{Game\+Object}} \&}]{other }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Verifica colisao com outro \mbox{\hyperlink{classGameObject}{Game\+Object}}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em other} & objeto alvo \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se colisao detectada 
+\end{DoxyReturn}
+Verifica colisão com outro objeto considerando uma hitbox reduzida. 
+\begin{DoxyParams}{Parâmetros}
+{\em other} & Objeto alvo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+{\ttfamily true} se as hitboxes se sobrepõem.
+\end{DoxyReturn}
+
+
+Reimplementa \mbox{\hyperlink{classGameObject_a55ee46cc9cd076b01fa26b6de065c9e3}{Game\+Object}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBird_a5b63706c73ef35ac37a8c01495abf4e3_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBird_a448b7fded4142e63b27c306b5a17e513}\label{classBird_a448b7fded4142e63b27c306b5a17e513}} 
+\index{Bird@{Bird}!destroy\_bitmaps@{destroy\_bitmaps}}
+\index{destroy\_bitmaps@{destroy\_bitmaps}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{destroy\_bitmaps()}{destroy\_bitmaps()}}
+{\footnotesize\ttfamily void Bird\+::destroy\+\_\+bitmaps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libera bitmap principal (quando necessario). 
+
+Destrói o bitmap principal para liberar memória.\mbox{\Hypertarget{classBird_a7f672f464d181f24f03301f1713d23dc}\label{classBird_a7f672f464d181f24f03301f1713d23dc}} 
+\index{Bird@{Bird}!draw@{draw}}
+\index{draw@{draw}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Bird\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Desenha sprite atual com rotacao. 
+
+Desenha o pássaro com a animação ou rotação correspondente.
+
+Seleciona entre a animação de entrada ou de voo conforme o estado do jogo e controla a rotação baseada em {\ttfamily vy}.
+
+Implementa \mbox{\hyperlink{classGameObject_a59f11cba9071a39ba2f486a8364ed536}{Game\+Object}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classBird_a7f672f464d181f24f03301f1713d23dc_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{classBird_a7f672f464d181f24f03301f1713d23dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBird_aaf8f7cdda8f072ee9d2643da8dc71ad6}\label{classBird_aaf8f7cdda8f072ee9d2643da8dc71ad6}} 
+\index{Bird@{Bird}!jump@{jump}}
+\index{jump@{jump}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{jump()}{jump()}}
+{\footnotesize\ttfamily void Bird\+::jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aplica impulso de pulo. 
+
+Aplica impulso vertical quando o jogador pressiona pular.Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classBird_aaf8f7cdda8f072ee9d2643da8dc71ad6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBird_a2d551d652ad508b6ba3e5702a0bdb34d}\label{classBird_a2d551d652ad508b6ba3e5702a0bdb34d}} 
+\index{Bird@{Bird}!loop\_animation@{loop\_animation}}
+\index{loop\_animation@{loop\_animation}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{loop\_animation()}{loop\_animation()}}
+{\footnotesize\ttfamily void Bird\+::loop\+\_\+animation (\begin{DoxyParamCaption}\item[{int}]{type }\end{DoxyParamCaption})}
+
+
+
+Gera animacao de bater de asas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em type} & 1 = intro; 2 = jogo ativo \\
+\hline
+\end{DoxyParams}
+Muda os frames de sprite para simular bater de asas. 
+\begin{DoxyParams}{Parâmetros}
+{\em type} & 1 = animação de intro (pássaro voando da esquerda); 2 = animação durante o jogo.\\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBird_a2d551d652ad508b6ba3e5702a0bdb34d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBird_a36a1dad86634842ebd97e869a2732aaf}\label{classBird_a36a1dad86634842ebd97e869a2732aaf}} 
+\index{Bird@{Bird}!reset\_xy@{reset\_xy}}
+\index{reset\_xy@{reset\_xy}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{reset\_xy()}{reset\_xy()}}
+{\footnotesize\ttfamily void Bird\+::reset\+\_\+xy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reseta posicao inicial e velocidade. 
+
+Reseta posição e velocidade do pássaro para valores iniciais.Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{classBird_a36a1dad86634842ebd97e869a2732aaf_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBird_a567645317bcf90078d9cad97cadfc1ec}\label{classBird_a567645317bcf90078d9cad97cadfc1ec}} 
+\index{Bird@{Bird}!set\_break@{set\_break}}
+\index{set\_break@{set\_break}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{set\_break()}{set\_break()}}
+{\footnotesize\ttfamily void Bird\+::set\+\_\+break (\begin{DoxyParamCaption}\item[{bool}]{value }\end{DoxyParamCaption})}
+
+
+
+Habilita/desabilita animacao apos colisao. 
+
+Ativa/desativa a animação após colisão. 
+\begin{DoxyParams}{Parâmetros}
+{\em value} & {\ttfamily true} para pausar a animação.\\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBird_a567645317bcf90078d9cad97cadfc1ec_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBird_af260e4528dadc8849a349b1221d41160}\label{classBird_af260e4528dadc8849a349b1221d41160}} 
+\index{Bird@{Bird}!set\_by@{set\_by}}
+\index{set\_by@{set\_by}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{set\_by()}{set\_by()}}
+{\footnotesize\ttfamily void Bird\+::set\+\_\+by (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Atualiza coordenada by (usada na HUD ou limites). 
+
+Atualiza a coordenada inferior {\ttfamily by} com base na altura.Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBird_af260e4528dadc8849a349b1221d41160_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classBird_ae2718aad2ef1de73e399482ab6068324}\label{classBird_ae2718aad2ef1de73e399482ab6068324}} 
+\index{Bird@{Bird}!update@{update}}
+\index{update@{update}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Bird\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Atualiza fisica e posicao. 
+
+Atualiza física e posição do pássaro.
+
+Move horizontalmente durante a animação de entrada até alcançar {\ttfamily X\+\_\+\+INIT}. Depois aplica gravidade e velocidade vertical {\ttfamily vy}.
+
+Implementa \mbox{\hyperlink{classGameObject_ae83128d0e0efef691417779605ee037c}{Game\+Object}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classBird_ae2718aad2ef1de73e399482ab6068324_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classBird_ae2718aad2ef1de73e399482ab6068324_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classBird_a8b147834e38f950f76fb74b76a306701}\label{classBird_a8b147834e38f950f76fb74b76a306701}} 
+\index{Bird@{Bird}!breakanimation@{breakanimation}}
+\index{breakanimation@{breakanimation}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{breakanimation}{breakanimation}}
+{\footnotesize\ttfamily bool Bird\+::breakanimation = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+pausa animacao (quando colide) 
+
+\mbox{\Hypertarget{classBird_af66a92669f202a7b99aeaf07a83321c0}\label{classBird_af66a92669f202a7b99aeaf07a83321c0}} 
+\index{Bird@{Bird}!contB@{contB}}
+\index{contB@{contB}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{contB}{contB}}
+{\footnotesize\ttfamily float Bird\+::contB = \mbox{\hyperlink{defines_8hpp_acec13f2cbd31bef90e1cbe72f1bf8d54}{TIME\+\_\+\+GIF\+\_\+\+BIRD}}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+limite de frames por ciclo 
+
+\mbox{\Hypertarget{classBird_a000a1994dc84399164995071069e7b20}\label{classBird_a000a1994dc84399164995071069e7b20}} 
+\index{Bird@{Bird}!frame1@{frame1}}
+\index{frame1@{frame1}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{frame1}{frame1}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP$\ast$ Bird\+::frame1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite asa para cima 
+
+\mbox{\Hypertarget{classBird_ae274e8a97e1bd2b2caaf2159475667b1}\label{classBird_ae274e8a97e1bd2b2caaf2159475667b1}} 
+\index{Bird@{Bird}!frame2@{frame2}}
+\index{frame2@{frame2}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{frame2}{frame2}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP$\ast$ Bird\+::frame2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite asa meio 
+
+\mbox{\Hypertarget{classBird_ae0fffb275d3ddee41fad2f086be8950e}\label{classBird_ae0fffb275d3ddee41fad2f086be8950e}} 
+\index{Bird@{Bird}!frame3@{frame3}}
+\index{frame3@{frame3}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{frame3}{frame3}}
+{\footnotesize\ttfamily ALLEGRO\+\_\+\+BITMAP$\ast$ Bird\+::frame3\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite asa para baixo 
+
+\mbox{\Hypertarget{classBird_a9c57c5b1e3d9b4bdf6c3b3606488a962}\label{classBird_a9c57c5b1e3d9b4bdf6c3b3606488a962}} 
+\index{Bird@{Bird}!frames@{frames}}
+\index{frames@{frames}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{frames}{frames}}
+{\footnotesize\ttfamily float Bird\+::frames = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+contador de frames 
+
+\mbox{\Hypertarget{classBird_ae8e3c99286c697b4d1fb46b5a1cdb0d4}\label{classBird_ae8e3c99286c697b4d1fb46b5a1cdb0d4}} 
+\index{Bird@{Bird}!gravity@{gravity}}
+\index{gravity@{gravity}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{gravity}{gravity}}
+{\footnotesize\ttfamily float Bird\+::gravity\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+aceleracao gravitacional 
+
+\mbox{\Hypertarget{classBird_acac9c8e88e1a92ca06440987794dcc62}\label{classBird_acac9c8e88e1a92ca06440987794dcc62}} 
+\index{Bird@{Bird}!jumpForce@{jumpForce}}
+\index{jumpForce@{jumpForce}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{jumpForce}{jumpForce}}
+{\footnotesize\ttfamily float Bird\+::jump\+Force\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+impulso vertical ao pular 
+
+\mbox{\Hypertarget{classBird_ae349b0c3de095131a88820721e6b2e8a}\label{classBird_ae349b0c3de095131a88820721e6b2e8a}} 
+\index{Bird@{Bird}!rotation@{rotation}}
+\index{rotation@{rotation}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{rotation}{rotation}}
+{\footnotesize\ttfamily float Bird\+::rotation = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+angulo de rotacao a desenhar 
+
+\mbox{\Hypertarget{classBird_a1eadac7dc7f612629365ac3a56ddd632}\label{classBird_a1eadac7dc7f612629365ac3a56ddd632}} 
+\index{Bird@{Bird}!valueB@{valueB}}
+\index{valueB@{valueB}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{valueB}{valueB}}
+{\footnotesize\ttfamily float Bird\+::valueB = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+indice da animacao 
+
+\mbox{\Hypertarget{classBird_ad9ff3a9c1d413787563e16075ed9b571}\label{classBird_ad9ff3a9c1d413787563e16075ed9b571}} 
+\index{Bird@{Bird}!vy@{vy}}
+\index{vy@{vy}!Bird@{Bird}}
+\doxysubsubsection{\texorpdfstring{vy}{vy}}
+{\footnotesize\ttfamily float Bird\+::vy = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+velocidade vertical 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{bird_8hpp}{bird.\+hpp}}\item 
+src/\mbox{\hyperlink{bird_8cpp}{bird.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,35 @@
+\hypertarget{game__object_8hpp}{}\doxysection{Referência do Arquivo include/game\+\_\+object.hpp}
+\label{game__object_8hpp}\index{include/game\_object.hpp@{include/game\_object.hpp}}
+
+
+Classe base abstrata para todos os objetos renderizáveis.  
+
+
+{\ttfamily \#include \char`\"{}init.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para game\+\_\+object.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__object_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game__object_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classGameObject}{Game\+Object}}
+\begin{DoxyCompactList}\small\item\em Objeto genérico do jogo contendo posição, sprite e hitbox. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe base abstrata para todos os objetos renderizáveis. 
+
+Define posição, dimensões e interface para atualização/desenho. Todas as entidades que podem colidir ou ser renderizadas devem herdar desta classe e implementar os métodos puros {\ttfamily update()} e {\ttfamily draw()}. 

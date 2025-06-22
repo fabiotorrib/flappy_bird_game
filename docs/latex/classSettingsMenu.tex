@@ -1,0 +1,318 @@
+\hypertarget{classSettingsMenu}{}\doxysection{Referência da Classe Settings\+Menu}
+\label{classSettingsMenu}\index{SettingsMenu@{SettingsMenu}}
+
+
+Tela de configurações\+: permite alterar clima e habilitar/desabilitar música.  
+
+
+
+
+{\ttfamily \#include $<$settings\+\_\+menu.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Settings\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classSettingsMenu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Settings\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=163pt]{classSettingsMenu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classSettingsMenu_ab56829575314f2fe3b6bb3dceb37dffa}{handle\+\_\+input}} (const ALLEGRO\+\_\+\+EVENT \&\mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}}) override
+\begin{DoxyCompactList}\small\item\em Processa a entrada do usuário (teclado e mouse). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classSettingsMenu_af8a41c0862665063f23d8b3806cd1f40}{update}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Atualiza a lógica do estado de movimento/animação de fundo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSettingsMenu_afb7ad08f3b72956a39624f6667b7ebe1}{draw}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Desenha todos os elementos visuais do estado na tela. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSettingsMenu_ac6d396cea151665ba193349de8562aaf}{enter}} () override
+\begin{DoxyCompactList}\small\item\em Executa ações ao entrar neste estado. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classSettingsMenu_a951edfbd3cf728a1e91887fe08df8d7e}{Settings\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classSettingsMenu}{Settings\+Menu}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classSettingsMenu_a8d4cd7c6652c1c9d90a4435b99ebbfa0}{button\+Position\+Selected}} = 0
+\item 
+std\+::string \mbox{\hyperlink{classSettingsMenu_a72ce00b06e3e62ce1c1b15c24cbc244d}{weather\+Selected}} = \char`\"{}no\+One\char`\"{}
+\item 
+bool \mbox{\hyperlink{classSettingsMenu_a6700f2ea52a1fe41bfcdb4404696731c}{music\+State}} = true
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structButton}{Button}} $>$ \mbox{\hyperlink{classSettingsMenu_a5f2656db41178cb2cc1a5285098c3e24}{menu\+Buttons}}
+\begin{DoxyCompactList}\small\item\em Vetor que armazena os botões do menu e seus estados de seleção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_ad1df7be8fe74e59264c013644f04167f}{camp\+Settings\+Music}}
+\begin{DoxyCompactList}\small\item\em Ponteiros inteligentes para todos os recursos visuais (imagens e fontes) do menu. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_a1bfaa7973e0e1e5a63afb2a304a1dc09}{camp\+Settings\+No\+Music}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_a9fd987c1c0eb7ecc76ee94caf8c07ff1}{button\+Music\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_a8fe985eeb22e2bf7d9ee6630b2643a95}{button\+Music\+Day\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_aaa8cd44af680cbe8f9c72d77fa6ef964}{button\+Music\+Rain\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_a0d1cb64d259b1da419cbb49535b1501e}{button\+Music\+Snow\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_a7361ea39350efbcdf05d0b05f4496b4a}{button\+No\+Music\+Day\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_af5c2f00121040777c4f42b1bab1fbafa}{button\+No\+Music\+Rain\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_aad555fc693de963d8a5bc163b71d7ccb}{button\+No\+Music\+Snow\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_aef53b4d5b6b8852663c1f8d21c28c97e}{button\+Back\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classSettingsMenu_a0ef063271a0f6eff897f35c36d50d6a1}{button\+Back\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTextFont}{Text\+Font}} $>$ \mbox{\hyperlink{classSettingsMenu_ad54c852c954875dc7ec50cf14ae9471e}{font}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Tela de configurações\+: permite alterar clima e habilitar/desabilitar música. 
+
+Bibliotecas necessárias 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classSettingsMenu_a951edfbd3cf728a1e91887fe08df8d7e}\label{classSettingsMenu_a951edfbd3cf728a1e91887fe08df8d7e}} 
+\index{SettingsMenu@{SettingsMenu}!SettingsMenu@{SettingsMenu}}
+\index{SettingsMenu@{SettingsMenu}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{SettingsMenu()}{SettingsMenu()}}
+{\footnotesize\ttfamily Settings\+Menu\+::\+Settings\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{classSettingsMenu}{Settings\+Menu}}. 
+
+Bibliotecas necessárias
+
+Inicializa e carrega todos os recursos gráficos (imagens e fontes) necessários para a tela de configurações. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classSettingsMenu_afb7ad08f3b72956a39624f6667b7ebe1}\label{classSettingsMenu_afb7ad08f3b72956a39624f6667b7ebe1}} 
+\index{SettingsMenu@{SettingsMenu}!draw@{draw}}
+\index{draw@{draw}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Settings\+Menu\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Desenha todos os elementos visuais do estado na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle de movimento para desenhar o fundo.\\
+\hline
+\end{DoxyParams}
+A função renderiza o fundo, os botões e os textos informativos com base no estado atual das configurações (música ligada/desligada, botão selecionado). 
+
+Implementa \mbox{\hyperlink{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classSettingsMenu_afb7ad08f3b72956a39624f6667b7ebe1_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classSettingsMenu_ac6d396cea151665ba193349de8562aaf}\label{classSettingsMenu_ac6d396cea151665ba193349de8562aaf}} 
+\index{SettingsMenu@{SettingsMenu}!enter@{enter}}
+\index{enter@{enter}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily void Settings\+Menu\+::enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executa ações ao entrar neste estado. 
+
+Garante que o menu de configurações seja inicializado em um estado visual previsível, com o primeiro botão (\char`\"{}\+Música\char`\"{}) selecionado por padrão. 
+
+Implementa \mbox{\hyperlink{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}{State}}.
+
+\mbox{\Hypertarget{classSettingsMenu_ab56829575314f2fe3b6bb3dceb37dffa}\label{classSettingsMenu_ab56829575314f2fe3b6bb3dceb37dffa}} 
+\index{SettingsMenu@{SettingsMenu}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Settings\+Menu\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{const ALLEGRO\+\_\+\+EVENT \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processa a entrada do usuário (teclado e mouse). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ev} & O evento da Allegro a ser processado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um ponteiro para o próximo estado do jogo. Retorna {\ttfamily this} para continuar neste estado, {\ttfamily nullptr} para fechar a aplicação, ou um novo estado para transição. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_a09f92cba8c60fb0eb0931e42613f8f64}{State}}.
+
+\mbox{\Hypertarget{classSettingsMenu_af8a41c0862665063f23d8b3806cd1f40}\label{classSettingsMenu_af8a41c0862665063f23d8b3806cd1f40}} 
+\index{SettingsMenu@{SettingsMenu}!update@{update}}
+\index{update@{update}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Settings\+Menu\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza a lógica do estado de movimento/animação de fundo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle de movimento/animação do fundo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna {\ttfamily this} para indicar a permanência no estado atual. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_ae7f906fde44230c1b9741367de7a274a}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classSettingsMenu_af8a41c0862665063f23d8b3806cd1f40_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classSettingsMenu_a0ef063271a0f6eff897f35c36d50d6a1}\label{classSettingsMenu_a0ef063271a0f6eff897f35c36d50d6a1}} 
+\index{SettingsMenu@{SettingsMenu}!buttonBackDeselect@{buttonBackDeselect}}
+\index{buttonBackDeselect@{buttonBackDeselect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonBackDeselect}{buttonBackDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+Back\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_aef53b4d5b6b8852663c1f8d21c28c97e}\label{classSettingsMenu_aef53b4d5b6b8852663c1f8d21c28c97e}} 
+\index{SettingsMenu@{SettingsMenu}!buttonBackSelect@{buttonBackSelect}}
+\index{buttonBackSelect@{buttonBackSelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonBackSelect}{buttonBackSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+Back\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_a8fe985eeb22e2bf7d9ee6630b2643a95}\label{classSettingsMenu_a8fe985eeb22e2bf7d9ee6630b2643a95}} 
+\index{SettingsMenu@{SettingsMenu}!buttonMusicDaySelect@{buttonMusicDaySelect}}
+\index{buttonMusicDaySelect@{buttonMusicDaySelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonMusicDaySelect}{buttonMusicDaySelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+Music\+Day\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_aaa8cd44af680cbe8f9c72d77fa6ef964}\label{classSettingsMenu_aaa8cd44af680cbe8f9c72d77fa6ef964}} 
+\index{SettingsMenu@{SettingsMenu}!buttonMusicRainSelect@{buttonMusicRainSelect}}
+\index{buttonMusicRainSelect@{buttonMusicRainSelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonMusicRainSelect}{buttonMusicRainSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+Music\+Rain\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_a9fd987c1c0eb7ecc76ee94caf8c07ff1}\label{classSettingsMenu_a9fd987c1c0eb7ecc76ee94caf8c07ff1}} 
+\index{SettingsMenu@{SettingsMenu}!buttonMusicSelect@{buttonMusicSelect}}
+\index{buttonMusicSelect@{buttonMusicSelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonMusicSelect}{buttonMusicSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+Music\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_a0d1cb64d259b1da419cbb49535b1501e}\label{classSettingsMenu_a0d1cb64d259b1da419cbb49535b1501e}} 
+\index{SettingsMenu@{SettingsMenu}!buttonMusicSnowSelect@{buttonMusicSnowSelect}}
+\index{buttonMusicSnowSelect@{buttonMusicSnowSelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonMusicSnowSelect}{buttonMusicSnowSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+Music\+Snow\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_a7361ea39350efbcdf05d0b05f4496b4a}\label{classSettingsMenu_a7361ea39350efbcdf05d0b05f4496b4a}} 
+\index{SettingsMenu@{SettingsMenu}!buttonNoMusicDaySelect@{buttonNoMusicDaySelect}}
+\index{buttonNoMusicDaySelect@{buttonNoMusicDaySelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonNoMusicDaySelect}{buttonNoMusicDaySelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+No\+Music\+Day\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_af5c2f00121040777c4f42b1bab1fbafa}\label{classSettingsMenu_af5c2f00121040777c4f42b1bab1fbafa}} 
+\index{SettingsMenu@{SettingsMenu}!buttonNoMusicRainSelect@{buttonNoMusicRainSelect}}
+\index{buttonNoMusicRainSelect@{buttonNoMusicRainSelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonNoMusicRainSelect}{buttonNoMusicRainSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+No\+Music\+Rain\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_aad555fc693de963d8a5bc163b71d7ccb}\label{classSettingsMenu_aad555fc693de963d8a5bc163b71d7ccb}} 
+\index{SettingsMenu@{SettingsMenu}!buttonNoMusicSnowSelect@{buttonNoMusicSnowSelect}}
+\index{buttonNoMusicSnowSelect@{buttonNoMusicSnowSelect}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonNoMusicSnowSelect}{buttonNoMusicSnowSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::button\+No\+Music\+Snow\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_a8d4cd7c6652c1c9d90a4435b99ebbfa0}\label{classSettingsMenu_a8d4cd7c6652c1c9d90a4435b99ebbfa0}} 
+\index{SettingsMenu@{SettingsMenu}!buttonPositionSelected@{buttonPositionSelected}}
+\index{buttonPositionSelected@{buttonPositionSelected}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{buttonPositionSelected}{buttonPositionSelected}}
+{\footnotesize\ttfamily int Settings\+Menu\+::button\+Position\+Selected = 0}
+
+\mbox{\Hypertarget{classSettingsMenu_ad1df7be8fe74e59264c013644f04167f}\label{classSettingsMenu_ad1df7be8fe74e59264c013644f04167f}} 
+\index{SettingsMenu@{SettingsMenu}!campSettingsMusic@{campSettingsMusic}}
+\index{campSettingsMusic@{campSettingsMusic}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{campSettingsMusic}{campSettingsMusic}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::camp\+Settings\+Music\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ponteiros inteligentes para todos os recursos visuais (imagens e fontes) do menu. 
+
+\mbox{\Hypertarget{classSettingsMenu_a1bfaa7973e0e1e5a63afb2a304a1dc09}\label{classSettingsMenu_a1bfaa7973e0e1e5a63afb2a304a1dc09}} 
+\index{SettingsMenu@{SettingsMenu}!campSettingsNoMusic@{campSettingsNoMusic}}
+\index{campSettingsNoMusic@{campSettingsNoMusic}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{campSettingsNoMusic}{campSettingsNoMusic}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Settings\+Menu\+::camp\+Settings\+No\+Music\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_ad54c852c954875dc7ec50cf14ae9471e}\label{classSettingsMenu_ad54c852c954875dc7ec50cf14ae9471e}} 
+\index{SettingsMenu@{SettingsMenu}!font@{font}}
+\index{font@{font}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classTextFont}{Text\+Font}}$>$ Settings\+Menu\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classSettingsMenu_a5f2656db41178cb2cc1a5285098c3e24}\label{classSettingsMenu_a5f2656db41178cb2cc1a5285098c3e24}} 
+\index{SettingsMenu@{SettingsMenu}!menuButtons@{menuButtons}}
+\index{menuButtons@{menuButtons}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{menuButtons}{menuButtons}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structButton}{Button}}$>$ Settings\+Menu\+::menu\+Buttons}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"{}Music"{}}, 1\}, \{\textcolor{stringliteral}{"{}Day"{}}, 0\}, \{\textcolor{stringliteral}{"{}Snow"{}}, 0\}, \{\textcolor{stringliteral}{"{}Rain"{}}, 0\},\{\textcolor{stringliteral}{"{}Back"{}}, 0\}\}}
+
+\end{DoxyCode}
+
+
+Vetor que armazena os botões do menu e seus estados de seleção. 
+
+\mbox{\Hypertarget{classSettingsMenu_a6700f2ea52a1fe41bfcdb4404696731c}\label{classSettingsMenu_a6700f2ea52a1fe41bfcdb4404696731c}} 
+\index{SettingsMenu@{SettingsMenu}!musicState@{musicState}}
+\index{musicState@{musicState}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{musicState}{musicState}}
+{\footnotesize\ttfamily bool Settings\+Menu\+::music\+State = true}
+
+\mbox{\Hypertarget{classSettingsMenu_a72ce00b06e3e62ce1c1b15c24cbc244d}\label{classSettingsMenu_a72ce00b06e3e62ce1c1b15c24cbc244d}} 
+\index{SettingsMenu@{SettingsMenu}!weatherSelected@{weatherSelected}}
+\index{weatherSelected@{weatherSelected}!SettingsMenu@{SettingsMenu}}
+\doxysubsubsection{\texorpdfstring{weatherSelected}{weatherSelected}}
+{\footnotesize\ttfamily std\+::string Settings\+Menu\+::weather\+Selected = \char`\"{}no\+One\char`\"{}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/states/\mbox{\hyperlink{settings__menu_8hpp}{settings\+\_\+menu.\+hpp}}\item 
+src/states/\mbox{\hyperlink{settings__menu_8cpp}{settings\+\_\+menu.\+cpp}}\end{DoxyCompactItemize}

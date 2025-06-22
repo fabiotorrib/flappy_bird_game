@@ -1,0 +1,297 @@
+\hypertarget{classPlayer}{}\doxysection{Referência da Classe Player}
+\label{classPlayer}\index{Player@{Player}}
+
+
+Armazena nome e pontuação e provê utilidades para ranking.  
+
+
+
+
+{\ttfamily \#include $<$player.\+hpp$>$}
+
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_a1b1eb725b1cd830c7ccb0d03459044f2}{Player}} (std\+::string \mbox{\hyperlink{classPlayer_af9c920fabaafdeb7961a645315b521ff}{name}}, int \mbox{\hyperlink{classPlayer_ace6abae8d66534ad0a1fd6458f786a6e}{score}}=0)
+\begin{DoxyCompactList}\small\item\em Constrói um jogador com nome e pontuação inicial. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classPlayer_affddef50f994746a860e2366e412917f}{Get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Retorna o nome do jogador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classPlayer_a777fb06bddf27e2810053843cb0cc6f9}{Get\+Score}} () const
+\begin{DoxyCompactList}\small\item\em Retorna a pontuação atual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_aef973d65cfb24e3e88d72585087232ae}{Set\+Score}} (int points)
+\begin{DoxyCompactList}\small\item\em Atualiza (sobrescreve) a pontuação do jogador. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPlayer_a720e6e65bed8ef26a7e126e40612bd55}{operator$<$}} (const \mbox{\hyperlink{classPlayer}{Player}} \&other\+\_\+p) const
+\begin{DoxyCompactList}\small\item\em Define critério de ordenação decrescente por pontuação. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Membros Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{classPlayer_aeca0931abbc8d5333a8dbbd500d2359b}{Checking\+Name}} (std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&\mbox{\hyperlink{init_8cpp_ab54dcbf6721b2315ef1e65ed98ee9863}{ranking}}, std\+::string \&Name)
+\begin{DoxyCompactList}\small\item\em Verifica se um nome já existe no ranking. \end{DoxyCompactList}\item 
+static std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \mbox{\hyperlink{classPlayer_aef5308fd57957507968e971d23ac3fe6}{Read\+Leaderboard}} (std\+::string file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Lê arquivo de ranking e retorna vetor de jogadores. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classPlayer_a821a6a7bbfeeabc956d063d24eb15889}{Sort\+Leaderboard}} (std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&\mbox{\hyperlink{init_8cpp_ab54dcbf6721b2315ef1e65ed98ee9863}{ranking}})
+\begin{DoxyCompactList}\small\item\em Ordena vetor de jogadores por pontuação decrescente. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classPlayer_a1b05c0a0131a430ed63cc7c3c2cd99e2}{Save\+Leaderboard}} (std\+::string file\+Name, std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&\mbox{\hyperlink{init_8cpp_ab54dcbf6721b2315ef1e65ed98ee9863}{ranking}})
+\begin{DoxyCompactList}\small\item\em Salva lista de jogadores no arquivo, sobrescrevendo conteúdo. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classPlayer_aa1d3822725ad3678fde7a4de91887277}{Save\+Leaderboard}} (std\+::string file\+Name, std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&\mbox{\hyperlink{init_8cpp_ab54dcbf6721b2315ef1e65ed98ee9863}{ranking}}, const \mbox{\hyperlink{classPlayer}{Player}} \&new\+\_\+player)
+\begin{DoxyCompactList}\small\item\em Salva ranking adicionando ou atualizando um jogador. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classPlayer_a96278c3915928482a7780112498f7444}{Show\+Leaderboard}} (std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&\mbox{\hyperlink{init_8cpp_ab54dcbf6721b2315ef1e65ed98ee9863}{ranking}}, ALLEGRO\+\_\+\+FONT $\ast$\mbox{\hyperlink{init_8cpp_ae4254615de94af5fc74d43e8b676dcf9}{font}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classPlayer_af9c920fabaafdeb7961a645315b521ff}{name}}
+\item 
+int \mbox{\hyperlink{classPlayer_ace6abae8d66534ad0a1fd6458f786a6e}{score}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Armazena nome e pontuação e provê utilidades para ranking. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPlayer_a1b1eb725b1cd830c7ccb0d03459044f2}\label{classPlayer_a1b1eb725b1cd830c7ccb0d03459044f2}} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{std\+::string}]{name,  }\item[{int}]{score = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Constrói um jogador com nome e pontuação inicial. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome do jogador. \\
+\hline
+{\em score} & Pontuação inicial (0 por padrão). \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_a1b1eb725b1cd830c7ccb0d03459044f2_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPlayer_aeca0931abbc8d5333a8dbbd500d2359b}\label{classPlayer_aeca0931abbc8d5333a8dbbd500d2359b}} 
+\index{Player@{Player}!CheckingName@{CheckingName}}
+\index{CheckingName@{CheckingName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{CheckingName()}{CheckingName()}}
+{\footnotesize\ttfamily bool Player\+::\+Checking\+Name (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&}]{ranking,  }\item[{std\+::string \&}]{Name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Verifica se um nome já existe no ranking. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ranking} & Vetor de jogadores. \\
+\hline
+{\em Name} & Nome a procurar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se encontrado. 
+\end{DoxyReturn}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_aeca0931abbc8d5333a8dbbd500d2359b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_affddef50f994746a860e2366e412917f}\label{classPlayer_affddef50f994746a860e2366e412917f}} 
+\index{Player@{Player}!GetName@{GetName}}
+\index{GetName@{GetName}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetName()}{GetName()}}
+{\footnotesize\ttfamily std\+::string Player\+::\+Get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o nome do jogador. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_affddef50f994746a860e2366e412917f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a777fb06bddf27e2810053843cb0cc6f9}\label{classPlayer_a777fb06bddf27e2810053843cb0cc6f9}} 
+\index{Player@{Player}!GetScore@{GetScore}}
+\index{GetScore@{GetScore}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetScore()}{GetScore()}}
+{\footnotesize\ttfamily int Player\+::\+Get\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna a pontuação atual. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_a777fb06bddf27e2810053843cb0cc6f9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a720e6e65bed8ef26a7e126e40612bd55}\label{classPlayer_a720e6e65bed8ef26a7e126e40612bd55}} 
+\index{Player@{Player}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Player\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classPlayer}{Player}} \&}]{other\+\_\+p }\end{DoxyParamCaption}) const}
+
+
+
+Define critério de ordenação decrescente por pontuação. 
+
+\mbox{\Hypertarget{classPlayer_aef5308fd57957507968e971d23ac3fe6}\label{classPlayer_aef5308fd57957507968e971d23ac3fe6}} 
+\index{Player@{Player}!ReadLeaderboard@{ReadLeaderboard}}
+\index{ReadLeaderboard@{ReadLeaderboard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ReadLeaderboard()}{ReadLeaderboard()}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ Player\+::\+Read\+Leaderboard (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+\_\+name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Lê arquivo de ranking e retorna vetor de jogadores. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em file\+\_\+name} & Caminho do arquivo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Vetor de jogadores lido. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classPlayer_aef5308fd57957507968e971d23ac3fe6_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_aef5308fd57957507968e971d23ac3fe6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a1b05c0a0131a430ed63cc7c3c2cd99e2}\label{classPlayer_a1b05c0a0131a430ed63cc7c3c2cd99e2}} 
+\index{Player@{Player}!SaveLeaderboard@{SaveLeaderboard}}
+\index{SaveLeaderboard@{SaveLeaderboard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SaveLeaderboard()}{SaveLeaderboard()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Player\+::\+Save\+Leaderboard (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&}]{ranking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Salva lista de jogadores no arquivo, sobrescrevendo conteúdo. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_a1b05c0a0131a430ed63cc7c3c2cd99e2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_aa1d3822725ad3678fde7a4de91887277}\label{classPlayer_aa1d3822725ad3678fde7a4de91887277}} 
+\index{Player@{Player}!SaveLeaderboard@{SaveLeaderboard}}
+\index{SaveLeaderboard@{SaveLeaderboard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SaveLeaderboard()}{SaveLeaderboard()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Player\+::\+Save\+Leaderboard (\begin{DoxyParamCaption}\item[{std\+::string}]{file\+Name,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&}]{ranking,  }\item[{const \mbox{\hyperlink{classPlayer}{Player}} \&}]{new\+\_\+player }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Salva ranking adicionando ou atualizando um jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em new\+\_\+player} & Jogador a inserir/atualizar. \\
+\hline
+\end{DoxyParams}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_aa1d3822725ad3678fde7a4de91887277_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_aef973d65cfb24e3e88d72585087232ae}\label{classPlayer_aef973d65cfb24e3e88d72585087232ae}} 
+\index{Player@{Player}!SetScore@{SetScore}}
+\index{SetScore@{SetScore}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SetScore()}{SetScore()}}
+{\footnotesize\ttfamily void Player\+::\+Set\+Score (\begin{DoxyParamCaption}\item[{int}]{points }\end{DoxyParamCaption})}
+
+
+
+Atualiza (sobrescreve) a pontuação do jogador. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em points} & Novo valor de pontuação. \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_aef973d65cfb24e3e88d72585087232ae_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classPlayer_a96278c3915928482a7780112498f7444}\label{classPlayer_a96278c3915928482a7780112498f7444}} 
+\index{Player@{Player}!ShowLeaderboard@{ShowLeaderboard}}
+\index{ShowLeaderboard@{ShowLeaderboard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{ShowLeaderboard()}{ShowLeaderboard()}}
+{\footnotesize\ttfamily static void Player\+::\+Show\+Leaderboard (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&}]{ranking,  }\item[{ALLEGRO\+\_\+\+FONT $\ast$}]{font }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+\mbox{\Hypertarget{classPlayer_a821a6a7bbfeeabc956d063d24eb15889}\label{classPlayer_a821a6a7bbfeeabc956d063d24eb15889}} 
+\index{Player@{Player}!SortLeaderboard@{SortLeaderboard}}
+\index{SortLeaderboard@{SortLeaderboard}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{SortLeaderboard()}{SortLeaderboard()}}
+{\footnotesize\ttfamily void Player\+::\+Sort\+Leaderboard (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classPlayer}{Player}} $>$ \&}]{ranking }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Ordena vetor de jogadores por pontuação decrescente. 
+
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_a821a6a7bbfeeabc956d063d24eb15889_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classPlayer_af9c920fabaafdeb7961a645315b521ff}\label{classPlayer_af9c920fabaafdeb7961a645315b521ff}} 
+\index{Player@{Player}!name@{name}}
+\index{name@{name}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Player\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classPlayer_ace6abae8d66534ad0a1fd6458f786a6e}\label{classPlayer_ace6abae8d66534ad0a1fd6458f786a6e}} 
+\index{Player@{Player}!score@{score}}
+\index{score@{score}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int Player\+::score\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{player_8hpp}{player.\+hpp}}\item 
+src/\mbox{\hyperlink{player_8cpp}{player.\+cpp}}\end{DoxyCompactItemize}

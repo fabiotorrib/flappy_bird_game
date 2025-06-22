@@ -1,0 +1,7 @@
+<map id="FlappyBird::check_collisions" name="FlappyBird::check_collisions">
+<area shape="rect" id="node1" title="Verifica colisao entre passaro, limites ou canos." alt="" coords="5,71,212,98"/>
+<area shape="rect" id="node2" href="$classPipeList.html#a993d7ac941ceba1eff657032df7e8fd4" title="Check bird collision against any pipe." alt="" coords="275,13,455,39"/>
+<area shape="rect" id="node4" href="$classGameObject.html#a87de78d5ae334c22f45efb34f16a3b7f" title="Detecta colisão do objeto com o teto ou chão da tela." alt="" coords="260,64,471,105"/>
+<area shape="rect" id="node5" href="$classBird.html#a567645317bcf90078d9cad97cadfc1ec" title="Habilita/desabilita animacao apos colisao." alt="" coords="305,130,425,157"/>
+<area shape="rect" id="node3" href="$classGameObject.html#a55ee46cc9cd076b01fa26b6de065c9e3" title="Verifica colisão entre este objeto e outro." alt="" coords="519,5,700,47"/>
+</map>

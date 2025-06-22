@@ -1,0 +1,224 @@
+\hypertarget{classPipe}{}\doxysection{Referência da Classe Pipe}
+\label{classPipe}\index{Pipe@{Pipe}}
+
+
+Obstáculo individual que se move horizontalmente e gera pontuação.  
+
+
+
+
+{\ttfamily \#include $<$pipe.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Pipe\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classPipe__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Pipe\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=157pt]{classPipe__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPipe_adc16cc6616f4990f272620cc41aad879}{Pipe}} (ALLEGRO\+\_\+\+BITMAP $\ast$img, float \mbox{\hyperlink{classGameObject_ad4976cd29785cf9bd791148ff397c41e}{x}}, float \mbox{\hyperlink{classGameObject_a9ac54f1c686ecf5656139a829ed62041}{y}})
+\begin{DoxyCompactList}\small\item\em Construct a pipe object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipe_a5c21f37e6bf9ff0ee1c16fee62eb1039}{update}} () override
+\begin{DoxyCompactList}\small\item\em Move the pipe horizontally and update bounding box. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipe_a0628794f8a04c822434c4a44dc47743d}{draw}} () override
+\begin{DoxyCompactList}\small\item\em Draw the pipe sprite at its current position. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipe_a3661338c78dfbe36c9ad51747791352c}{is\+\_\+off\+\_\+screen}} () const
+\begin{DoxyCompactList}\small\item\em Check whether the pipe has left the visible screen. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipe_ab5ef42324f25c52e7a8481d18a1f944a}{check\+\_\+score}} (float bird\+\_\+x)
+\begin{DoxyCompactList}\small\item\em Evaluate score condition for this pipe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipe_a40790c328a29b1d1580eb907f2ddd053}{set\+\_\+vx}} (float vel)
+\begin{DoxyCompactList}\small\item\em Set horizontal velocity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPipe_afc19ff7b425a7b28a8fdc8f24ccd2932}{set\+\_\+y}} (float new\+\_\+y)
+\begin{DoxyCompactList}\small\item\em Force a new y position (used for vertical movement). \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classPipe_affc82240401af3a74141db43cf543427}{get\+\_\+y}} ()
+\begin{DoxyCompactList}\small\item\em Get current y position. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{classPipe_a6d04351548b18c1a4876f46d6a6592d6}{vx}} = 0
+\begin{DoxyCompactList}\small\item\em horizontal velocity (pixels per frame) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classPipe_a9902b7f9255f2c181977bf50689584d4}{scored}}
+\begin{DoxyCompactList}\small\item\em true after the bird has already scored on this pipe \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Obstáculo individual que se move horizontalmente e gera pontuação. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classPipe_adc16cc6616f4990f272620cc41aad879}\label{classPipe_adc16cc6616f4990f272620cc41aad879}} 
+\index{Pipe@{Pipe}!Pipe@{Pipe}}
+\index{Pipe@{Pipe}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{Pipe()}{Pipe()}}
+{\footnotesize\ttfamily Pipe\+::\+Pipe (\begin{DoxyParamCaption}\item[{ALLEGRO\+\_\+\+BITMAP $\ast$}]{img,  }\item[{float}]{x,  }\item[{float}]{y }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Construct a pipe object. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em img} & Pointer to loaded bitmap. \\
+\hline
+{\em x} & Initial x position. \\
+\hline
+{\em y} & Initial y position.\\
+\hline
+\end{DoxyParams}
+Initializes \mbox{\hyperlink{classGameObject}{Game\+Object}} base, sets velocity and score flag. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classPipe_adc16cc6616f4990f272620cc41aad879_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classPipe_ab5ef42324f25c52e7a8481d18a1f944a}\label{classPipe_ab5ef42324f25c52e7a8481d18a1f944a}} 
+\index{Pipe@{Pipe}!check\_score@{check\_score}}
+\index{check\_score@{check\_score}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{check\_score()}{check\_score()}}
+{\footnotesize\ttfamily bool Pipe\+::check\+\_\+score (\begin{DoxyParamCaption}\item[{float}]{bird\+\_\+x }\end{DoxyParamCaption})}
+
+
+
+Evaluate score condition for this pipe. 
+
+Gera pontuação quando o pássaro passa o cano.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em bird\+\_\+x} & x position of the bird. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true if the bird just passed the pipe for the first time.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em bird\+\_\+x} & Coordenada X do pássaro. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classPipe_a0628794f8a04c822434c4a44dc47743d}\label{classPipe_a0628794f8a04c822434c4a44dc47743d}} 
+\index{Pipe@{Pipe}!draw@{draw}}
+\index{draw@{draw}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Pipe\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Draw the pipe sprite at its current position. 
+
+Desenha o cano. 
+
+Implementa \mbox{\hyperlink{classGameObject_a59f11cba9071a39ba2f486a8364ed536}{Game\+Object}}.
+
+\mbox{\Hypertarget{classPipe_affc82240401af3a74141db43cf543427}\label{classPipe_affc82240401af3a74141db43cf543427}} 
+\index{Pipe@{Pipe}!get\_y@{get\_y}}
+\index{get\_y@{get\_y}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{get\_y()}{get\_y()}}
+{\footnotesize\ttfamily float Pipe\+::get\+\_\+y (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Get current y position. 
+
+Retorna posição Y atual. \mbox{\Hypertarget{classPipe_a3661338c78dfbe36c9ad51747791352c}\label{classPipe_a3661338c78dfbe36c9ad51747791352c}} 
+\index{Pipe@{Pipe}!is\_off\_screen@{is\_off\_screen}}
+\index{is\_off\_screen@{is\_off\_screen}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{is\_off\_screen()}{is\_off\_screen()}}
+{\footnotesize\ttfamily bool Pipe\+::is\+\_\+off\+\_\+screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Check whether the pipe has left the visible screen. 
+
+Verifica se o cano saiu da tela pela esquerda. \mbox{\Hypertarget{classPipe_a40790c328a29b1d1580eb907f2ddd053}\label{classPipe_a40790c328a29b1d1580eb907f2ddd053}} 
+\index{Pipe@{Pipe}!set\_vx@{set\_vx}}
+\index{set\_vx@{set\_vx}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{set\_vx()}{set\_vx()}}
+{\footnotesize\ttfamily void Pipe\+::set\+\_\+vx (\begin{DoxyParamCaption}\item[{float}]{vel }\end{DoxyParamCaption})}
+
+
+
+Set horizontal velocity. 
+
+Define velocidade horizontal dos canos. \mbox{\Hypertarget{classPipe_afc19ff7b425a7b28a8fdc8f24ccd2932}\label{classPipe_afc19ff7b425a7b28a8fdc8f24ccd2932}} 
+\index{Pipe@{Pipe}!set\_y@{set\_y}}
+\index{set\_y@{set\_y}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{set\_y()}{set\_y()}}
+{\footnotesize\ttfamily void Pipe\+::set\+\_\+y (\begin{DoxyParamCaption}\item[{float}]{new\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Force a new y position (used for vertical movement). 
+
+Força nova posição Y. \mbox{\Hypertarget{classPipe_a5c21f37e6bf9ff0ee1c16fee62eb1039}\label{classPipe_a5c21f37e6bf9ff0ee1c16fee62eb1039}} 
+\index{Pipe@{Pipe}!update@{update}}
+\index{update@{update}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Pipe\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Move the pipe horizontally and update bounding box. 
+
+Atualiza posição horizontal do cano. 
+
+Implementa \mbox{\hyperlink{classGameObject_ae83128d0e0efef691417779605ee037c}{Game\+Object}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{classPipe_a5c21f37e6bf9ff0ee1c16fee62eb1039_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classPipe_a9902b7f9255f2c181977bf50689584d4}\label{classPipe_a9902b7f9255f2c181977bf50689584d4}} 
+\index{Pipe@{Pipe}!scored@{scored}}
+\index{scored@{scored}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{scored}{scored}}
+{\footnotesize\ttfamily bool Pipe\+::scored\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+true after the bird has already scored on this pipe 
+
+\mbox{\Hypertarget{classPipe_a6d04351548b18c1a4876f46d6a6592d6}\label{classPipe_a6d04351548b18c1a4876f46d6a6592d6}} 
+\index{Pipe@{Pipe}!vx@{vx}}
+\index{vx@{vx}!Pipe@{Pipe}}
+\doxysubsubsection{\texorpdfstring{vx}{vx}}
+{\footnotesize\ttfamily float Pipe\+::vx = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+horizontal velocity (pixels per frame) 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{pipe_8hpp}{pipe.\+hpp}}\item 
+src/\mbox{\hyperlink{pipe_8cpp}{pipe.\+cpp}}\end{DoxyCompactItemize}

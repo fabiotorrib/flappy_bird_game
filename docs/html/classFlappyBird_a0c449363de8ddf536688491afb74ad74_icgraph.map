@@ -1,0 +1,4 @@
+<map id="FlappyBird::draw_intial_text" name="FlappyBird::draw_intial_text">
+<area shape="rect" id="node1" title="Desenha texto inicial &quot;PRESS SPACE TO PLAY&quot;." alt="" coords="185,5,391,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a5cc95b67d5bf558a744e81d64c8bdd9c" title="Desenha cena completa conforme estado." alt="" coords="5,5,137,32"/>
+</map>

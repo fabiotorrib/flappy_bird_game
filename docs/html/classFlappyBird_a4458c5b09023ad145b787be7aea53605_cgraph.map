@@ -1,0 +1,6 @@
+<map id="FlappyBird::update_score" name="FlappyBird::update_score">
+<area shape="rect" id="node1" title="Atualiza pontuacao quando passaro passa canos." alt="" coords="5,49,151,90"/>
+<area shape="rect" id="node2" href="$classPipeList.html#a05148696dde39f9b1b3bdd3154b1a67f" title="Check if any pipe pair increments the score." alt="" coords="199,5,360,32"/>
+<area shape="rect" id="node3" href="$classPipeList.html#a1cb8ddd5cf7c71189070d14699a26b6a" title="Get current score." alt="" coords="205,56,354,83"/>
+<area shape="rect" id="node4" href="$classGameObject.html#a5d5fbd225b26550e9ace43672184e50b" title="Obtém coordenada X." alt="" coords="206,107,353,133"/>
+</map>

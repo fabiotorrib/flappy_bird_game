@@ -1,0 +1,7 @@
+<map id="Bird::check_bird_collision" name="Bird::check_bird_collision">
+<area shape="rect" id="node1" title="Verifica colisao com outro GameObject." alt="" coords="5,81,192,108"/>
+<area shape="rect" id="node2" href="$classGameObject.html#a00d3a9c5ec66407ef577b2bbf70293bc" title=" " alt="" coords="240,5,420,32"/>
+<area shape="rect" id="node3" href="$classGameObject.html#a9d93ff9458cca274434ba7368533b786" title=" " alt="" coords="243,56,417,83"/>
+<area shape="rect" id="node4" href="$classGameObject.html#a5d5fbd225b26550e9ace43672184e50b" title="Obtém coordenada X." alt="" coords="257,107,403,133"/>
+<area shape="rect" id="node5" href="$classGameObject.html#a97c3a607cce50e5b2e23eb40f9dc77d3" title="Obtém coordenada Y." alt="" coords="257,157,403,184"/>
+</map>

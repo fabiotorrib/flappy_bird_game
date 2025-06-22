@@ -1,0 +1,9 @@
+<map id="Gráfico de Hierarquia de Classes" name="Gráfico de Hierarquia de Classes">
+<area shape="rect" id="node1" href="$classState.html" title="Define a interface que cada tela/estado deve implementar." alt="" coords="5,132,61,159"/>
+<area shape="rect" id="node2" href="$classDifficultyMenu.html" title="Gerencia a lógica e a renderização da tela de seleção de dificuldade." alt="" coords="120,5,237,32"/>
+<area shape="rect" id="node3" href="$classLeaderboardMenu.html" title="Exibe ranking de jogadores e permite retorno ao menu principal." alt="" coords="109,56,248,83"/>
+<area shape="rect" id="node4" href="$classLoadName.html" title="Tela de inserção de nome usada por Novo Jogo e Carregar Jogo." alt="" coords="133,107,225,133"/>
+<area shape="rect" id="node5" href="$classMainMenu.html" title="Tela inicial do jogo, centraliza navegação para demais estados." alt="" coords="133,157,224,184"/>
+<area shape="rect" id="node6" href="$classPlay.html" title="Estado principal de jogo: controla loop ativo, pontuação e game over." alt="" coords="153,208,204,235"/>
+<area shape="rect" id="node7" href="$classSettingsMenu.html" title="Tela de configurações: permite alterar clima e habilitar/desabilitar música." alt="" coords="123,259,234,285"/>
+</map>

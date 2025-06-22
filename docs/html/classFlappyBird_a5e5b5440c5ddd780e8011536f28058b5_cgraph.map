@@ -1,0 +1,4 @@
+<map id="FlappyBird::saveCurrentPlayerScore" name="FlappyBird::saveCurrentPlayerScore">
+<area shape="rect" id="node1" title="Salva pontuacao no leaderboard externo." alt="" coords="5,5,225,47"/>
+<area shape="rect" id="node2" href="$classPlayer.html#a1b05c0a0131a430ed63cc7c3c2cd99e2" title="Salva lista de jogadores no arquivo, sobrescrevendo conteúdo." alt="" coords="273,13,457,39"/>
+</map>

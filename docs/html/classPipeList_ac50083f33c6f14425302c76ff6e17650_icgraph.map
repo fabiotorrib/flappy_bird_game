@@ -1,0 +1,4 @@
+<map id="PipeList::set_difficulty" name="PipeList::set_difficulty">
+<area shape="rect" id="node1" title="Configure difficulty (1 = static, 2 = vertical movers)." alt="" coords="187,5,352,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a185beae77101e7a8be97f7a4ac6a19d8" title="Reseta jogo para configuracao inicial." alt="" coords="5,5,139,32"/>
+</map>

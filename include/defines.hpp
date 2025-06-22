@@ -1,3 +1,10 @@
+/**
+ * @file defines.hpp
+ * @brief Constantes globais, macros e estruturas auxiliares do jogo.
+ *
+ * Contém dimensões de tela, física do pássaro, velocidades, gaps dos canos
+ * e outros valores compartilhados entre módulos.
+ */
 #pragma once
 #include <cmath>
 #include <string>
@@ -17,6 +24,10 @@ enum ScreenState {
   GAME_OVER,
 };
 
+/**
+ * @struct Button
+ * @brief Estrutura auxiliar que representa um botão de menu e seu estado de seleção.
+ */
 // Botões menus
 struct Button {
   std::string name;

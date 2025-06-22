@@ -17,6 +17,10 @@
 /* -------------------------------------------------------------------------- */
 /*                               Class Pipe                                   */
 /* -------------------------------------------------------------------------- */
+/**
+ * @class Pipe
+ * @brief Obstáculo individual que se move horizontalmente e gera pontuação.
+ */
 class Pipe : public GameObject {
  private:
   float vx = 0;   //!< horizontal velocity (pixels per frame)
@@ -67,6 +71,10 @@ class Pipe : public GameObject {
 /* -------------------------------------------------------------------------- */
 /*                              Class PipePair                                */
 /* -------------------------------------------------------------------------- */
+/**
+ * @class PipePair
+ * @brief Agrupa dois canos (superior e inferior) podendo ter movimento vertical.
+ */
 class PipePair {
  public:
   Pipe bottom;        //!< lower pipe
@@ -106,6 +114,10 @@ class PipePair {
 /* -------------------------------------------------------------------------- */
 /*                              Class PipeList                                */
 /* -------------------------------------------------------------------------- */
+/**
+ * @class PipeList
+ * @brief Gerencia vetor de PipePair: spawn, atualização, colisão e score.
+ */
 class PipeList {
  private:
   ALLEGRO_BITMAP* pipe1 = nullptr;      //!< bitmap reference for new pipes

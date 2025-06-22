@@ -1,0 +1,264 @@
+\hypertarget{classDifficultyMenu}{}\doxysection{Referência da Classe Difficulty\+Menu}
+\label{classDifficultyMenu}\index{DifficultyMenu@{DifficultyMenu}}
+
+
+Gerencia a lógica e a renderização da tela de seleção de dificuldade.  
+
+
+
+
+{\ttfamily \#include $<$difficulty\+\_\+menu.\+hpp$>$}
+
+
+
+Diagrama de hierarquia para Difficulty\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classDifficultyMenu__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Diagrama de colaboração para Difficulty\+Menu\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classDifficultyMenu__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classDifficultyMenu_a280e5b4a774adb3df636a249e2d489b9}{handle\+\_\+input}} (const ALLEGRO\+\_\+\+EVENT \&\mbox{\hyperlink{classState_a87442fa864f5080096f0055856ced22b}{ev}}) override
+\begin{DoxyCompactList}\small\item\em Processa a entrada do usuário (teclado). \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classState}{State}} $\ast$ \mbox{\hyperlink{classDifficultyMenu_a024907d1a77fef3b969a90dc2cc2f26f}{update}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Atualiza a lógica do estado a cada quadro. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDifficultyMenu_acace55cbd6b946a87e133cfed19594f2}{draw}} (\mbox{\hyperlink{classMotion}{Motion}} \&motion) override
+\begin{DoxyCompactList}\small\item\em Desenha todos os elementos visuais do estado na tela. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDifficultyMenu_a1f0520bf92dbfb6c965b436d14343961}{enter}} () override
+\begin{DoxyCompactList}\small\item\em Executa ações ao entrar neste estado do menu. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classDifficultyMenu_a12db87e9ce6e4a5253384f71907d7820}{Difficulty\+Menu}} ()
+\begin{DoxyCompactList}\small\item\em Construtor da classe \mbox{\hyperlink{classDifficultyMenu}{Difficulty\+Menu}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classDifficultyMenu_a3a8d87022a680924c7d562d9bf268e8b}{button\+Position\+Selected}} = 1
+\item 
+std\+::string \mbox{\hyperlink{classDifficultyMenu_a6e9b1b7e2881b2cba8feb8fa4fadd6d4}{difficulty\+Selected}} = \char`\"{}no\+One\char`\"{}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{structButton}{Button}} $>$ \mbox{\hyperlink{classDifficultyMenu_a3293fb820081a3d09454305acb0a8f14}{menu\+Buttons}}
+\begin{DoxyCompactList}\small\item\em Vetor que armazena os botões do menu e seus estados de seleção. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classDifficultyMenu_a17313182b56bb366337055941131d7b6}{button\+Difficulty\+Easy}}
+\begin{DoxyCompactList}\small\item\em Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classDifficultyMenu_a327c4fcc0bc0911fadde75437c7eb84d}{button\+Difficulty\+Normal}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classDifficultyMenu_ad5d3ef38699673cff20b9e8995d0b60a}{button\+Difficulty\+Hard}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classDifficultyMenu_a4a8830dcf44c69a4b4d85a42b6ff9642}{button\+Save\+Select}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classDifficultyMenu_ae52c2e5d8cf8f7ee539f4daac0ae7e79}{button\+Save\+Deselect}}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classTextFont}{Text\+Font}} $>$ \mbox{\hyperlink{classDifficultyMenu_a10f161f8fff1fdeb225d9fcd1381906c}{font}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Outros membros herdados}
+
+
+\doxysubsection{Descrição detalhada}
+Gerencia a lógica e a renderização da tela de seleção de dificuldade. 
+
+Bibliotecas necessárias
+
+Herda da classe base \textquotesingle{}\mbox{\hyperlink{classState}{State}}\textquotesingle{} e implementa o comportamento específico para permitir que o usuário escolha e salve um nível de dificuldade para o jogo. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classDifficultyMenu_a12db87e9ce6e4a5253384f71907d7820}\label{classDifficultyMenu_a12db87e9ce6e4a5253384f71907d7820}} 
+\index{DifficultyMenu@{DifficultyMenu}!DifficultyMenu@{DifficultyMenu}}
+\index{DifficultyMenu@{DifficultyMenu}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{DifficultyMenu()}{DifficultyMenu()}}
+{\footnotesize\ttfamily Difficulty\+Menu\+::\+Difficulty\+Menu (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor da classe \mbox{\hyperlink{classDifficultyMenu}{Difficulty\+Menu}}. 
+
+Bibliotecas necessárias
+
+Inicializa e carrega todos os recursos gráficos (imagens e fontes) necessários para a tela de seleção de dificuldade. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classDifficultyMenu_acace55cbd6b946a87e133cfed19594f2}\label{classDifficultyMenu_acace55cbd6b946a87e133cfed19594f2}} 
+\index{DifficultyMenu@{DifficultyMenu}!draw@{draw}}
+\index{draw@{draw}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Difficulty\+Menu\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Desenha todos os elementos visuais do estado na tela. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle para desenhar o fundo animado.\\
+\hline
+\end{DoxyParams}
+Renderiza a imagem de fundo e os botões de acordo com a seleção atual do usuário, além de um texto informativo. 
+
+Implementa \mbox{\hyperlink{classState_ab6f6690bd4386c2264d5bd6a3b0e746b}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{classDifficultyMenu_acace55cbd6b946a87e133cfed19594f2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classDifficultyMenu_a1f0520bf92dbfb6c965b436d14343961}\label{classDifficultyMenu_a1f0520bf92dbfb6c965b436d14343961}} 
+\index{DifficultyMenu@{DifficultyMenu}!enter@{enter}}
+\index{enter@{enter}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{enter()}{enter()}}
+{\footnotesize\ttfamily void Difficulty\+Menu\+::enter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Executa ações ao entrar neste estado do menu. 
+
+Garante que o menu de dificuldade seja inicializado em um estado padrão, com a dificuldade \char`\"{}\+Normal\char`\"{} pré-\/selecionada. 
+
+Implementa \mbox{\hyperlink{classState_a4f6c95c60d9c66bd1c5dd7425bfc764c}{State}}.
+
+\mbox{\Hypertarget{classDifficultyMenu_a280e5b4a774adb3df636a249e2d489b9}\label{classDifficultyMenu_a280e5b4a774adb3df636a249e2d489b9}} 
+\index{DifficultyMenu@{DifficultyMenu}!handle\_input@{handle\_input}}
+\index{handle\_input@{handle\_input}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{handle\_input()}{handle\_input()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Difficulty\+Menu\+::handle\+\_\+input (\begin{DoxyParamCaption}\item[{const ALLEGRO\+\_\+\+EVENT \&}]{ev }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Processa a entrada do usuário (teclado). 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ev} & O evento da Allegro a ser processado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna um ponteiro para o próximo estado do jogo. Pode ser \textquotesingle{}this\textquotesingle{} para continuar neste estado, \textquotesingle{}nullptr\textquotesingle{} para fechar, ou um novo \mbox{\hyperlink{classMainMenu}{Main\+Menu}} para retornar. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_a09f92cba8c60fb0eb0931e42613f8f64}{State}}.
+
+\mbox{\Hypertarget{classDifficultyMenu_a024907d1a77fef3b969a90dc2cc2f26f}\label{classDifficultyMenu_a024907d1a77fef3b969a90dc2cc2f26f}} 
+\index{DifficultyMenu@{DifficultyMenu}!update@{update}}
+\index{update@{update}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classState}{State}} $\ast$ Difficulty\+Menu\+::update (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMotion}{Motion}} \&}]{motion }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Atualiza a lógica do estado a cada quadro. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em motion} & Referência ao objeto de controle de animação do fundo. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Retorna \textquotesingle{}this\textquotesingle{} para indicar a permanência no estado atual. 
+\end{DoxyReturn}
+
+
+Implementa \mbox{\hyperlink{classState_ae7f906fde44230c1b9741367de7a274a}{State}}.
+
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classDifficultyMenu_a024907d1a77fef3b969a90dc2cc2f26f_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classDifficultyMenu_a17313182b56bb366337055941131d7b6}\label{classDifficultyMenu_a17313182b56bb366337055941131d7b6}} 
+\index{DifficultyMenu@{DifficultyMenu}!buttonDifficultyEasy@{buttonDifficultyEasy}}
+\index{buttonDifficultyEasy@{buttonDifficultyEasy}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{buttonDifficultyEasy}{buttonDifficultyEasy}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Difficulty\+Menu\+::button\+Difficulty\+Easy\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Ponteiros inteligentes para os recursos visuais (imagens e fontes) do menu. 
+
+\mbox{\Hypertarget{classDifficultyMenu_ad5d3ef38699673cff20b9e8995d0b60a}\label{classDifficultyMenu_ad5d3ef38699673cff20b9e8995d0b60a}} 
+\index{DifficultyMenu@{DifficultyMenu}!buttonDifficultyHard@{buttonDifficultyHard}}
+\index{buttonDifficultyHard@{buttonDifficultyHard}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{buttonDifficultyHard}{buttonDifficultyHard}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Difficulty\+Menu\+::button\+Difficulty\+Hard\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDifficultyMenu_a327c4fcc0bc0911fadde75437c7eb84d}\label{classDifficultyMenu_a327c4fcc0bc0911fadde75437c7eb84d}} 
+\index{DifficultyMenu@{DifficultyMenu}!buttonDifficultyNormal@{buttonDifficultyNormal}}
+\index{buttonDifficultyNormal@{buttonDifficultyNormal}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{buttonDifficultyNormal}{buttonDifficultyNormal}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Difficulty\+Menu\+::button\+Difficulty\+Normal\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDifficultyMenu_a3a8d87022a680924c7d562d9bf268e8b}\label{classDifficultyMenu_a3a8d87022a680924c7d562d9bf268e8b}} 
+\index{DifficultyMenu@{DifficultyMenu}!buttonPositionSelected@{buttonPositionSelected}}
+\index{buttonPositionSelected@{buttonPositionSelected}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{buttonPositionSelected}{buttonPositionSelected}}
+{\footnotesize\ttfamily int Difficulty\+Menu\+::button\+Position\+Selected = 1}
+
+\mbox{\Hypertarget{classDifficultyMenu_ae52c2e5d8cf8f7ee539f4daac0ae7e79}\label{classDifficultyMenu_ae52c2e5d8cf8f7ee539f4daac0ae7e79}} 
+\index{DifficultyMenu@{DifficultyMenu}!buttonSaveDeselect@{buttonSaveDeselect}}
+\index{buttonSaveDeselect@{buttonSaveDeselect}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{buttonSaveDeselect}{buttonSaveDeselect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Difficulty\+Menu\+::button\+Save\+Deselect\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDifficultyMenu_a4a8830dcf44c69a4b4d85a42b6ff9642}\label{classDifficultyMenu_a4a8830dcf44c69a4b4d85a42b6ff9642}} 
+\index{DifficultyMenu@{DifficultyMenu}!buttonSaveSelect@{buttonSaveSelect}}
+\index{buttonSaveSelect@{buttonSaveSelect}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{buttonSaveSelect}{buttonSaveSelect}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Difficulty\+Menu\+::button\+Save\+Select\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDifficultyMenu_a6e9b1b7e2881b2cba8feb8fa4fadd6d4}\label{classDifficultyMenu_a6e9b1b7e2881b2cba8feb8fa4fadd6d4}} 
+\index{DifficultyMenu@{DifficultyMenu}!difficultySelected@{difficultySelected}}
+\index{difficultySelected@{difficultySelected}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{difficultySelected}{difficultySelected}}
+{\footnotesize\ttfamily std\+::string Difficulty\+Menu\+::difficulty\+Selected = \char`\"{}no\+One\char`\"{}}
+
+\mbox{\Hypertarget{classDifficultyMenu_a10f161f8fff1fdeb225d9fcd1381906c}\label{classDifficultyMenu_a10f161f8fff1fdeb225d9fcd1381906c}} 
+\index{DifficultyMenu@{DifficultyMenu}!font@{font}}
+\index{font@{font}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{font}{font}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classTextFont}{Text\+Font}}$>$ Difficulty\+Menu\+::font\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classDifficultyMenu_a3293fb820081a3d09454305acb0a8f14}\label{classDifficultyMenu_a3293fb820081a3d09454305acb0a8f14}} 
+\index{DifficultyMenu@{DifficultyMenu}!menuButtons@{menuButtons}}
+\index{menuButtons@{menuButtons}!DifficultyMenu@{DifficultyMenu}}
+\doxysubsubsection{\texorpdfstring{menuButtons}{menuButtons}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{structButton}{Button}}$>$ Difficulty\+Menu\+::menu\+Buttons}
+
+{\bfseries Valor inicial\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{= \{}
+\DoxyCodeLine{      \{\textcolor{stringliteral}{"{}Easy"{}}, 0\}, \{\textcolor{stringliteral}{"{}Normal"{}}, 1\}, \{\textcolor{stringliteral}{"{}Hard"{}}, 0\}, \{\textcolor{stringliteral}{"{}Save"{}}, 0\}\}}
+
+\end{DoxyCode}
+
+
+Vetor que armazena os botões do menu e seus estados de seleção. 
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/states/\mbox{\hyperlink{difficulty__menu_8hpp}{difficulty\+\_\+menu.\+hpp}}\item 
+src/states/\mbox{\hyperlink{difficulty__menu_8cpp}{difficulty\+\_\+menu.\+cpp}}\end{DoxyCompactItemize}

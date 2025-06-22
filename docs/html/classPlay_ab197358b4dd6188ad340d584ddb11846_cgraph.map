@@ -1,0 +1,4 @@
+<map id="Play::handle_input" name="Play::handle_input">
+<area shape="rect" id="node1" title="Processa entrada do usuario." alt="" coords="5,5,147,32"/>
+<area shape="rect" id="node2" href="$classPlay.html#a76a5561a1738d962b3aaa340aa0a6bd7" title="Inicia ou reinicia a partida." alt="" coords="195,5,285,32"/>
+</map>

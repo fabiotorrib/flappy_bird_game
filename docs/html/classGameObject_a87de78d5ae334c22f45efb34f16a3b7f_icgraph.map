@@ -1,0 +1,4 @@
+<map id="GameObject::check_collision_with_boundaries" name="GameObject::check_collision_with_boundaries">
+<area shape="rect" id="node1" title="Detecta colisão do objeto com o teto ou chão da tela." alt="" coords="260,5,471,47"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#a229cec49a07214226a449da13eb90f9d" title="Verifica colisao entre passaro, limites ou canos." alt="" coords="5,13,212,39"/>
+</map>

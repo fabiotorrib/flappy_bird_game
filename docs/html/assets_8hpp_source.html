@@ -1,0 +1,184 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Código-Fonte de include/assets.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">assets.hpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="assets_8hpp.html">Vá para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">// Bibliotecas C++</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">// Bibliotecas Allegro</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro.h&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_acodec.h&gt;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_audio.h&gt;</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_image.h&gt;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_native_dialog.h&gt;</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_primitives.h&gt;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;allegro5/allegro_ttf.h&gt;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="comment">// Declaração das classes</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">class </span><a class="code" href="classImage.html">Image</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">class </span><a class="code" href="classMusic.html">Music</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">class </span><a class="code" href="classSound.html">Sound</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">class </span><a class="code" href="classTextFont.html">TextFont</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="comment">// Iniciar e deletar assets globais</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">extern</span> std::unique_ptr&lt;Sound&gt; <a class="code" href="assets_8hpp.html#aeaa41bb3528a365751d709ce587cef53">selectSound</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">void</span> <a class="code" href="assets_8hpp.html#aaccab0735d858c388c02f026c7641c08">loadGlobalAssets</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">void</span> <a class="code" href="assets_8hpp.html#a4fd458c14651187b5d4541e2c281b587">unloadGlobalAssets</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="comment">// Classes para utilização dos Assets</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classImage.html">   40</a></span>&#160;<span class="comment"></span><span class="keyword">class </span><a class="code" href="classImage.html">Image</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classImage.html#a48911c76fc670b89a89b3a3d4dc5bd0e">   42</a></span>&#160;  ALLEGRO_BITMAP *<a class="code" href="classImage.html#a48911c76fc670b89a89b3a3d4dc5bd0e">image</a> = NULL;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classImage.html#a7e83840fc7b8e9cf561b27186bcc731d">   43</a></span>&#160;  <span class="keywordtype">float</span> <a class="code" href="classImage.html#a7e83840fc7b8e9cf561b27186bcc731d">x</a>, <a class="code" href="classImage.html#af99b5fd2ca6260e569f114b56390b644">y</a>;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classImage.html#abf12ec1606f2696d2936d6b71529ba2e">Image</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *diretorio);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classImage.html#abf12ec1606f2696d2936d6b71529ba2e">Image</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *diretorio, <span class="keywordtype">float</span> <a class="code" href="classImage.html#a7e83840fc7b8e9cf561b27186bcc731d">x</a>, <span class="keywordtype">float</span> <a class="code" href="classImage.html#af99b5fd2ca6260e569f114b56390b644">y</a>);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classImage.html#a91bdaa8f38faaa8374ec4e6dc1810782">Draw</a>(<span class="keywordtype">float</span> <a class="code" href="classImage.html#a7e83840fc7b8e9cf561b27186bcc731d">x</a>, <span class="keywordtype">float</span> <a class="code" href="classImage.html#af99b5fd2ca6260e569f114b56390b644">y</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classImage.html#a91bdaa8f38faaa8374ec4e6dc1810782">Draw</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">~Image</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="classImage.html#ad49ccd43ff580ca7a36812d9cbffdb40">   51</a></span>&#160;  ALLEGRO_BITMAP *<a class="code" href="classImage.html#ad49ccd43ff580ca7a36812d9cbffdb40">getBitmap</a>() {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="classImage.html#a48911c76fc670b89a89b3a3d4dc5bd0e">image</a>;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="classMusic.html">   60</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMusic.html">Music</a> {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classMusic.html#a1a160d33ec550acbcf560a63a65e9e28">   62</a></span>&#160;  ALLEGRO_AUDIO_STREAM *<a class="code" href="classMusic.html#a1a160d33ec550acbcf560a63a65e9e28">music</a> = NULL;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classMusic.html#a0411cb24f1fa6848d4a05fb5b2d6ba2e">Music</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *diretorio);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classMusic.html#a4b7c191c6bae70db92125b3886dbadd6">playMusic</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  <a class="code" href="classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe">~Music</a>();</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;};</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classSound.html">   74</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSound.html">Sound</a> {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="classSound.html#ab84b6e7e172759e5188d2c294f7f90a4">   76</a></span>&#160;  ALLEGRO_SAMPLE *<a class="code" href="classSound.html#ab84b6e7e172759e5188d2c294f7f90a4">sound</a> = NULL;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  <a class="code" href="classSound.html#a1c505aa8fccd6422b8eb69adbb933d59">Sound</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *diretorio);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classSound.html#a28ed6f8b69914467609f6682d3f776bd">playSound</a>(<span class="keywordtype">float</span> volume);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;  <a class="code" href="classSound.html#a0907389078bf740be2a5763366ad3376">~Sound</a>();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;};</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classTextFont.html">   88</a></span>&#160;<span class="keyword">class </span><a class="code" href="classTextFont.html">TextFont</a> {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classTextFont.html#a4ca8c1a997fc8fed24b31381271b69c9">   90</a></span>&#160;  ALLEGRO_FONT *<a class="code" href="classTextFont.html#a4ca8c1a997fc8fed24b31381271b69c9">font</a> = NULL;</div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="classTextFont.html#a908d4d7ac3cc9996cec4182cd52b15e5">   91</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classTextFont.html#a2d0a08a6decdae89f4a5d5043ab20ac3">r</a>, <a class="code" href="classTextFont.html#aedaa7241065bcd5f8e70ad0427ada00c">g</a>, <a class="code" href="classTextFont.html#a908d4d7ac3cc9996cec4182cd52b15e5">b</a> = 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  <a class="code" href="classTextFont.html#a7789d5b58924d561719e0da3320177ee">TextFont</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *diretorio, <span class="keywordtype">int</span> size);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classTextFont.html#a5982232ad2a38c47e792f5a0f8c38a2f">setColor</a>(<span class="keywordtype">int</span> <a class="code" href="classTextFont.html#a2d0a08a6decdae89f4a5d5043ab20ac3">r</a>, <span class="keywordtype">int</span> <a class="code" href="classTextFont.html#aedaa7241065bcd5f8e70ad0427ada00c">g</a>, <span class="keywordtype">int</span> <a class="code" href="classTextFont.html#a908d4d7ac3cc9996cec4182cd52b15e5">b</a>);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classTextFont.html#ab8783b7786e2de0357e10bc8c758648d">writeText</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *texto, <span class="keywordtype">int</span> alinhamento, <span class="keywordtype">float</span> x, <span class="keywordtype">float</span> y);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;  <a class="code" href="classTextFont.html#afbd66b50c68b85627168568350bdcddb">~TextFont</a>();</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;};</div>
+<div class="ttc" id="aassets_8hpp_html_a4fd458c14651187b5d4541e2c281b587"><div class="ttname"><a href="assets_8hpp.html#a4fd458c14651187b5d4541e2c281b587">unloadGlobalAssets</a></div><div class="ttdeci">void unloadGlobalAssets()</div><div class="ttdoc">Libera os recursos globais previamente carregados.</div><div class="ttdef"><b>Definition:</b> assets.cpp:26</div></div>
+<div class="ttc" id="aassets_8hpp_html_aaccab0735d858c388c02f026c7641c08"><div class="ttname"><a href="assets_8hpp.html#aaccab0735d858c388c02f026c7641c08">loadGlobalAssets</a></div><div class="ttdeci">void loadGlobalAssets()</div><div class="ttdoc">Carrega recursos globais utilizados em múltiplas cenas.</div><div class="ttdef"><b>Definition:</b> assets.cpp:19</div></div>
+<div class="ttc" id="aassets_8hpp_html_aeaa41bb3528a365751d709ce587cef53"><div class="ttname"><a href="assets_8hpp.html#aeaa41bb3528a365751d709ce587cef53">selectSound</a></div><div class="ttdeci">std::unique_ptr&lt; Sound &gt; selectSound</div><div class="ttdef"><b>Definition:</b> assets.cpp:11</div></div>
+<div class="ttc" id="aclassImage_html"><div class="ttname"><a href="classImage.html">Image</a></div><div class="ttdoc">Encapsula carregamento e desenho de bitmaps.</div><div class="ttdef"><b>Definition:</b> assets.hpp:40</div></div>
+<div class="ttc" id="aclassImage_html_a0294f63700543e11c0f0da85601c7ae5"><div class="ttname"><a href="classImage.html#a0294f63700543e11c0f0da85601c7ae5">Image::~Image</a></div><div class="ttdeci">~Image()</div><div class="ttdoc">Libera o bitmap associado.</div><div class="ttdef"><b>Definition:</b> assets.cpp:82</div></div>
+<div class="ttc" id="aclassImage_html_a48911c76fc670b89a89b3a3d4dc5bd0e"><div class="ttname"><a href="classImage.html#a48911c76fc670b89a89b3a3d4dc5bd0e">Image::image</a></div><div class="ttdeci">ALLEGRO_BITMAP * image</div><div class="ttdef"><b>Definition:</b> assets.hpp:42</div></div>
+<div class="ttc" id="aclassImage_html_a7e83840fc7b8e9cf561b27186bcc731d"><div class="ttname"><a href="classImage.html#a7e83840fc7b8e9cf561b27186bcc731d">Image::x</a></div><div class="ttdeci">float x</div><div class="ttdef"><b>Definition:</b> assets.hpp:43</div></div>
+<div class="ttc" id="aclassImage_html_a91bdaa8f38faaa8374ec4e6dc1810782"><div class="ttname"><a href="classImage.html#a91bdaa8f38faaa8374ec4e6dc1810782">Image::Draw</a></div><div class="ttdeci">void Draw()</div><div class="ttdoc">Desenha a imagem usando as coordenadas internas armazenadas.</div><div class="ttdef"><b>Definition:</b> assets.cpp:77</div></div>
+<div class="ttc" id="aclassImage_html_abf12ec1606f2696d2936d6b71529ba2e"><div class="ttname"><a href="classImage.html#abf12ec1606f2696d2936d6b71529ba2e">Image::Image</a></div><div class="ttdeci">Image(const char *diretorio)</div><div class="ttdoc">Constrói uma imagem fora da tela.</div><div class="ttdef"><b>Definition:</b> assets.cpp:38</div></div>
+<div class="ttc" id="aclassImage_html_ad49ccd43ff580ca7a36812d9cbffdb40"><div class="ttname"><a href="classImage.html#ad49ccd43ff580ca7a36812d9cbffdb40">Image::getBitmap</a></div><div class="ttdeci">ALLEGRO_BITMAP * getBitmap()</div><div class="ttdef"><b>Definition:</b> assets.hpp:51</div></div>
+<div class="ttc" id="aclassImage_html_af99b5fd2ca6260e569f114b56390b644"><div class="ttname"><a href="classImage.html#af99b5fd2ca6260e569f114b56390b644">Image::y</a></div><div class="ttdeci">float y</div><div class="ttdef"><b>Definition:</b> assets.hpp:43</div></div>
+<div class="ttc" id="aclassMusic_html"><div class="ttname"><a href="classMusic.html">Music</a></div><div class="ttdoc">Gerencia reprodução em loop de faixas de áudio.</div><div class="ttdef"><b>Definition:</b> assets.hpp:60</div></div>
+<div class="ttc" id="aclassMusic_html_a0411cb24f1fa6848d4a05fb5b2d6ba2e"><div class="ttname"><a href="classMusic.html#a0411cb24f1fa6848d4a05fb5b2d6ba2e">Music::Music</a></div><div class="ttdeci">Music(const char *diretorio)</div><div class="ttdoc">Constrói um objeto de música em loop.</div><div class="ttdef"><b>Definition:</b> assets.cpp:92</div></div>
+<div class="ttc" id="aclassMusic_html_a0b4f3b9a018207e0c08003505f1f87fe"><div class="ttname"><a href="classMusic.html#a0b4f3b9a018207e0c08003505f1f87fe">Music::~Music</a></div><div class="ttdeci">~Music()</div><div class="ttdoc">Libera o stream de áudio.</div><div class="ttdef"><b>Definition:</b> assets.cpp:112</div></div>
+<div class="ttc" id="aclassMusic_html_a1a160d33ec550acbcf560a63a65e9e28"><div class="ttname"><a href="classMusic.html#a1a160d33ec550acbcf560a63a65e9e28">Music::music</a></div><div class="ttdeci">ALLEGRO_AUDIO_STREAM * music</div><div class="ttdef"><b>Definition:</b> assets.hpp:62</div></div>
+<div class="ttc" id="aclassMusic_html_a4b7c191c6bae70db92125b3886dbadd6"><div class="ttname"><a href="classMusic.html#a4b7c191c6bae70db92125b3886dbadd6">Music::playMusic</a></div><div class="ttdeci">void playMusic()</div><div class="ttdoc">Inicia a reprodução da música.</div><div class="ttdef"><b>Definition:</b> assets.cpp:105</div></div>
+<div class="ttc" id="aclassSound_html"><div class="ttname"><a href="classSound.html">Sound</a></div><div class="ttdoc">Carrega e reproduz samples de efeito sonoro.</div><div class="ttdef"><b>Definition:</b> assets.hpp:74</div></div>
+<div class="ttc" id="aclassSound_html_a0907389078bf740be2a5763366ad3376"><div class="ttname"><a href="classSound.html#a0907389078bf740be2a5763366ad3376">Sound::~Sound</a></div><div class="ttdeci">~Sound()</div><div class="ttdoc">Libera o sample de áudio.</div><div class="ttdef"><b>Definition:</b> assets.cpp:141</div></div>
+<div class="ttc" id="aclassSound_html_a1c505aa8fccd6422b8eb69adbb933d59"><div class="ttname"><a href="classSound.html#a1c505aa8fccd6422b8eb69adbb933d59">Sound::Sound</a></div><div class="ttdeci">Sound(const char *diretorio)</div><div class="ttdoc">Carrega um efeito sonoro.</div><div class="ttdef"><b>Definition:</b> assets.cpp:122</div></div>
+<div class="ttc" id="aclassSound_html_a28ed6f8b69914467609f6682d3f776bd"><div class="ttname"><a href="classSound.html#a28ed6f8b69914467609f6682d3f776bd">Sound::playSound</a></div><div class="ttdeci">void playSound(float volume)</div><div class="ttdoc">Reproduz o efeito sonoro uma única vez.</div><div class="ttdef"><b>Definition:</b> assets.cpp:134</div></div>
+<div class="ttc" id="aclassSound_html_ab84b6e7e172759e5188d2c294f7f90a4"><div class="ttname"><a href="classSound.html#ab84b6e7e172759e5188d2c294f7f90a4">Sound::sound</a></div><div class="ttdeci">ALLEGRO_SAMPLE * sound</div><div class="ttdef"><b>Definition:</b> assets.hpp:76</div></div>
+<div class="ttc" id="aclassTextFont_html"><div class="ttname"><a href="classTextFont.html">TextFont</a></div><div class="ttdoc">Wrapper para fontes bitmap/TTF e texto colorido.</div><div class="ttdef"><b>Definition:</b> assets.hpp:88</div></div>
+<div class="ttc" id="aclassTextFont_html_a2d0a08a6decdae89f4a5d5043ab20ac3"><div class="ttname"><a href="classTextFont.html#a2d0a08a6decdae89f4a5d5043ab20ac3">TextFont::r</a></div><div class="ttdeci">int r</div><div class="ttdef"><b>Definition:</b> assets.hpp:91</div></div>
+<div class="ttc" id="aclassTextFont_html_a4ca8c1a997fc8fed24b31381271b69c9"><div class="ttname"><a href="classTextFont.html#a4ca8c1a997fc8fed24b31381271b69c9">TextFont::font</a></div><div class="ttdeci">ALLEGRO_FONT * font</div><div class="ttdef"><b>Definition:</b> assets.hpp:90</div></div>
+<div class="ttc" id="aclassTextFont_html_a5982232ad2a38c47e792f5a0f8c38a2f"><div class="ttname"><a href="classTextFont.html#a5982232ad2a38c47e792f5a0f8c38a2f">TextFont::setColor</a></div><div class="ttdeci">void setColor(int r, int g, int b)</div><div class="ttdoc">Define a cor utilizada nos próximos desenhos de texto.</div><div class="ttdef"><b>Definition:</b> assets.cpp:163</div></div>
+<div class="ttc" id="aclassTextFont_html_a7789d5b58924d561719e0da3320177ee"><div class="ttname"><a href="classTextFont.html#a7789d5b58924d561719e0da3320177ee">TextFont::TextFont</a></div><div class="ttdeci">TextFont(const char *diretorio, int size)</div><div class="ttdoc">Carrega uma fonte bitmap.</div><div class="ttdef"><b>Definition:</b> assets.cpp:152</div></div>
+<div class="ttc" id="aclassTextFont_html_a908d4d7ac3cc9996cec4182cd52b15e5"><div class="ttname"><a href="classTextFont.html#a908d4d7ac3cc9996cec4182cd52b15e5">TextFont::b</a></div><div class="ttdeci">int b</div><div class="ttdef"><b>Definition:</b> assets.hpp:91</div></div>
+<div class="ttc" id="aclassTextFont_html_ab8783b7786e2de0357e10bc8c758648d"><div class="ttname"><a href="classTextFont.html#ab8783b7786e2de0357e10bc8c758648d">TextFont::writeText</a></div><div class="ttdeci">void writeText(const char *texto, int alinhamento, float x, float y)</div><div class="ttdoc">Desenha texto na tela.</div><div class="ttdef"><b>Definition:</b> assets.cpp:176</div></div>
+<div class="ttc" id="aclassTextFont_html_aedaa7241065bcd5f8e70ad0427ada00c"><div class="ttname"><a href="classTextFont.html#aedaa7241065bcd5f8e70ad0427ada00c">TextFont::g</a></div><div class="ttdeci">int g</div><div class="ttdef"><b>Definition:</b> assets.hpp:91</div></div>
+<div class="ttc" id="aclassTextFont_html_afbd66b50c68b85627168568350bdcddb"><div class="ttname"><a href="classTextFont.html#afbd66b50c68b85627168568350bdcddb">TextFont::~TextFont</a></div><div class="ttdeci">~TextFont()</div><div class="ttdoc">Libera a fonte carregada.</div><div class="ttdef"><b>Definition:</b> assets.cpp:183</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

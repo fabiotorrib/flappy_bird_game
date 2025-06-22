@@ -1,0 +1,732 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Flappy Bird Game: Referência da Classe GameObject</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Flappy Bird Game
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'Busca','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','Busca');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros Públicos</a> &#124;
+<a href="#pro-attribs">Atributos Protegidos</a> &#124;
+<a href="classGameObject-members.html">Lista de todos os Membros</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência da Classe GameObject<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Objeto genérico do jogo contendo posição, sprite e hitbox.  
+ <a href="classGameObject.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="game__object_8hpp_source.html">game_object.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de hierarquia para GameObject:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject__inherit__graph.svg" width="134" height="112"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros Públicos</h2></td></tr>
+<tr class="memitem:ac477200ab0fffc6b62a9e5665840d0f0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#ac477200ab0fffc6b62a9e5665840d0f0">GameObject</a> (ALLEGRO_BITMAP *img, float <a class="el" href="classGameObject.html#ad4976cd29785cf9bd791148ff397c41e">x</a>, float <a class="el" href="classGameObject.html#a9ac54f1c686ecf5656139a829ed62041">y</a>, float <a class="el" href="classGameObject.html#af797cec05ff1d3cbc694fc7036add37b">width</a>, float <a class="el" href="classGameObject.html#a0ae9c255f47b6148c26d0333a72d0625">height</a>)</td></tr>
+<tr class="separator:ac477200ab0fffc6b62a9e5665840d0f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae83128d0e0efef691417779605ee037c"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#ae83128d0e0efef691417779605ee037c">update</a> ()=0</td></tr>
+<tr class="separator:ae83128d0e0efef691417779605ee037c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59f11cba9071a39ba2f486a8364ed536"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a59f11cba9071a39ba2f486a8364ed536">draw</a> ()=0</td></tr>
+<tr class="separator:a59f11cba9071a39ba2f486a8364ed536"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55ee46cc9cd076b01fa26b6de065c9e3"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a55ee46cc9cd076b01fa26b6de065c9e3">check_bird_collision</a> (const <a class="el" href="classGameObject.html">GameObject</a> &amp;other) const</td></tr>
+<tr class="memdesc:a55ee46cc9cd076b01fa26b6de065c9e3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Verifica colisão entre este objeto e outro.  <a href="classGameObject.html#a55ee46cc9cd076b01fa26b6de065c9e3">Mais...</a><br /></td></tr>
+<tr class="separator:a55ee46cc9cd076b01fa26b6de065c9e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87de78d5ae334c22f45efb34f16a3b7f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a87de78d5ae334c22f45efb34f16a3b7f">check_collision_with_boundaries</a> () const</td></tr>
+<tr class="memdesc:a87de78d5ae334c22f45efb34f16a3b7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Detecta colisão do objeto com o teto ou chão da tela.  <a href="classGameObject.html#a87de78d5ae334c22f45efb34f16a3b7f">Mais...</a><br /></td></tr>
+<tr class="separator:a87de78d5ae334c22f45efb34f16a3b7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52b8ccf30ae18be42acde8ab0a2327f2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a52b8ccf30ae18be42acde8ab0a2327f2">set_x</a> (float new_x)</td></tr>
+<tr class="memdesc:a52b8ccf30ae18be42acde8ab0a2327f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define coordenada X.  <a href="classGameObject.html#a52b8ccf30ae18be42acde8ab0a2327f2">Mais...</a><br /></td></tr>
+<tr class="separator:a52b8ccf30ae18be42acde8ab0a2327f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a63dd56be72ef925936e47c787ae7dc4f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a63dd56be72ef925936e47c787ae7dc4f">set_y</a> (float new_y)</td></tr>
+<tr class="memdesc:a63dd56be72ef925936e47c787ae7dc4f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Define coordenada Y.  <a href="classGameObject.html#a63dd56be72ef925936e47c787ae7dc4f">Mais...</a><br /></td></tr>
+<tr class="separator:a63dd56be72ef925936e47c787ae7dc4f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d5fbd225b26550e9ace43672184e50b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a5d5fbd225b26550e9ace43672184e50b">get_x</a> () const</td></tr>
+<tr class="memdesc:a5d5fbd225b26550e9ace43672184e50b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém coordenada X.  <a href="classGameObject.html#a5d5fbd225b26550e9ace43672184e50b">Mais...</a><br /></td></tr>
+<tr class="separator:a5d5fbd225b26550e9ace43672184e50b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97c3a607cce50e5b2e23eb40f9dc77d3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a97c3a607cce50e5b2e23eb40f9dc77d3">get_y</a> () const</td></tr>
+<tr class="memdesc:a97c3a607cce50e5b2e23eb40f9dc77d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obtém coordenada Y.  <a href="classGameObject.html#a97c3a607cce50e5b2e23eb40f9dc77d3">Mais...</a><br /></td></tr>
+<tr class="separator:a97c3a607cce50e5b2e23eb40f9dc77d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d93ff9458cca274434ba7368533b786"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a9d93ff9458cca274434ba7368533b786">get_width</a> () const</td></tr>
+<tr class="separator:a9d93ff9458cca274434ba7368533b786"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00d3a9c5ec66407ef577b2bbf70293bc"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a00d3a9c5ec66407ef577b2bbf70293bc">get_height</a> () const</td></tr>
+<tr class="separator:a00d3a9c5ec66407ef577b2bbf70293bc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad94cabd831719e862ee43d9a39839215"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#ad94cabd831719e862ee43d9a39839215">set_finals</a> ()</td></tr>
+<tr class="memdesc:ad94cabd831719e862ee43d9a39839215"><td class="mdescLeft">&#160;</td><td class="mdescRight">Atualiza limites inferiores (x_final, y_final) para colisão.  <a href="classGameObject.html#ad94cabd831719e862ee43d9a39839215">Mais...</a><br /></td></tr>
+<tr class="separator:ad94cabd831719e862ee43d9a39839215"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1311b3c72d7d25de5a85b2a03547e543"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a1311b3c72d7d25de5a85b2a03547e543">get_x_final</a> () const</td></tr>
+<tr class="memdesc:a1311b3c72d7d25de5a85b2a03547e543"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retorna coordenada X final (direita).  <a href="classGameObject.html#a1311b3c72d7d25de5a85b2a03547e543">Mais...</a><br /></td></tr>
+<tr class="separator:a1311b3c72d7d25de5a85b2a03547e543"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a224d4f6d9dd75c8a6f9d022eaf586fd9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a224d4f6d9dd75c8a6f9d022eaf586fd9">~GameObject</a> ()</td></tr>
+<tr class="separator:a224d4f6d9dd75c8a6f9d022eaf586fd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Atributos Protegidos</h2></td></tr>
+<tr class="memitem:a419a07416a54bd58e15027bb298870a3"><td class="memItemLeft" align="right" valign="top">ALLEGRO_BITMAP *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a419a07416a54bd58e15027bb298870a3">obj_sprite</a></td></tr>
+<tr class="separator:a419a07416a54bd58e15027bb298870a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4976cd29785cf9bd791148ff397c41e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#ad4976cd29785cf9bd791148ff397c41e">x</a></td></tr>
+<tr class="separator:ad4976cd29785cf9bd791148ff397c41e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ac54f1c686ecf5656139a829ed62041"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a9ac54f1c686ecf5656139a829ed62041">y</a></td></tr>
+<tr class="separator:a9ac54f1c686ecf5656139a829ed62041"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af35b120ca8cfab7167d8eb5c02d312a2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#af35b120ca8cfab7167d8eb5c02d312a2">by</a></td></tr>
+<tr class="separator:af35b120ca8cfab7167d8eb5c02d312a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af797cec05ff1d3cbc694fc7036add37b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#af797cec05ff1d3cbc694fc7036add37b">width</a></td></tr>
+<tr class="separator:af797cec05ff1d3cbc694fc7036add37b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ae9c255f47b6148c26d0333a72d0625"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a0ae9c255f47b6148c26d0333a72d0625">height</a></td></tr>
+<tr class="separator:a0ae9c255f47b6148c26d0333a72d0625"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aba2f202804c87b9383dd0caf02fb87a0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#aba2f202804c87b9383dd0caf02fb87a0">y_final</a></td></tr>
+<tr class="separator:aba2f202804c87b9383dd0caf02fb87a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a951230170ef7d06a29cf6880e3d31f46"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classGameObject.html#a951230170ef7d06a29cf6880e3d31f46">x_final</a></td></tr>
+<tr class="separator:a951230170ef7d06a29cf6880e3d31f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Objeto genérico do jogo contendo posição, sprite e hitbox. </p>
+<p>Fornece utilidades de colisão com retângulos e getters padronizados. As coordenadas <code>(x, y)</code> representam o canto superior-esquerdo do sprite. </p>
+</div><h2 class="groupheader">Construtores e Destrutores</h2>
+<a id="ac477200ab0fffc6b62a9e5665840d0f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac477200ab0fffc6b62a9e5665840d0f0">&#9670;&nbsp;</a></span>GameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">GameObject::GameObject </td>
+          <td>(</td>
+          <td class="paramtype">ALLEGRO_BITMAP *&#160;</td>
+          <td class="paramname"><em>img</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>y</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a224d4f6d9dd75c8a6f9d022eaf586fd9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a224d4f6d9dd75c8a6f9d022eaf586fd9">&#9670;&nbsp;</a></span>~GameObject()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual GameObject::~GameObject </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Funções membros</h2>
+<a id="a55ee46cc9cd076b01fa26b6de065c9e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55ee46cc9cd076b01fa26b6de065c9e3">&#9670;&nbsp;</a></span>check_bird_collision()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObject::check_bird_collision </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classGameObject.html">GameObject</a> &amp;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Verifica colisão entre este objeto e outro. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>Objeto alvo para teste de colisão. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Retorna</dt><dd>true se as áreas retangulares se sobrepõem. </dd></dl>
+
+<p>Reimplementado por <a class="el" href="classBird.html#a5b63706c73ef35ac37a8c01495abf4e3">Bird</a>.</p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject_a55ee46cc9cd076b01fa26b6de065c9e3_icgraph.svg" width="675" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a87de78d5ae334c22f45efb34f16a3b7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87de78d5ae334c22f45efb34f16a3b7f">&#9670;&nbsp;</a></span>check_collision_with_boundaries()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool GameObject::check_collision_with_boundaries </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Detecta colisão do objeto com o teto ou chão da tela. </p>
+<dl class="section return"><dt>Retorna</dt><dd>true se colidir. </dd></dl>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject_a87de78d5ae334c22f45efb34f16a3b7f_icgraph.svg" width="476" height="52"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a59f11cba9071a39ba2f486a8364ed536"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59f11cba9071a39ba2f486a8364ed536">&#9670;&nbsp;</a></span>draw()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GameObject::draw </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementado por <a class="el" href="classPipe.html#a0628794f8a04c822434c4a44dc47743d">Pipe</a> e <a class="el" href="classBird.html#a7f672f464d181f24f03301f1713d23dc">Bird</a>.</p>
+
+</div>
+</div>
+<a id="a00d3a9c5ec66407ef577b2bbf70293bc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a00d3a9c5ec66407ef577b2bbf70293bc">&#9670;&nbsp;</a></span>get_height()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::get_height </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject_a00d3a9c5ec66407ef577b2bbf70293bc_icgraph.svg" width="426" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a9d93ff9458cca274434ba7368533b786"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d93ff9458cca274434ba7368533b786">&#9670;&nbsp;</a></span>get_width()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::get_width </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject_a9d93ff9458cca274434ba7368533b786_icgraph.svg" width="420" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a5d5fbd225b26550e9ace43672184e50b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d5fbd225b26550e9ace43672184e50b">&#9670;&nbsp;</a></span>get_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::get_x </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém coordenada X. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject_a5d5fbd225b26550e9ace43672184e50b_icgraph.svg" width="586" height="155"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a1311b3c72d7d25de5a85b2a03547e543"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1311b3c72d7d25de5a85b2a03547e543">&#9670;&nbsp;</a></span>get_x_final()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::get_x_final </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retorna coordenada X final (direita). </p>
+
+</div>
+</div>
+<a id="a97c3a607cce50e5b2e23eb40f9dc77d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a97c3a607cce50e5b2e23eb40f9dc77d3">&#9670;&nbsp;</a></span>get_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::get_y </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Obtém coordenada Y. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject_a97c3a607cce50e5b2e23eb40f9dc77d3_icgraph.svg" width="392" height="38"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="ad94cabd831719e862ee43d9a39839215"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad94cabd831719e862ee43d9a39839215">&#9670;&nbsp;</a></span>set_finals()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObject::set_finals </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Atualiza limites inferiores (x_final, y_final) para colisão. </p>
+<div class="dynheader">
+Esse é o diagrama das funções que utilizam essa função:</div>
+<div class="dyncontent">
+<div class="center"><iframe scrolling="no" frameborder="0" src="classGameObject_ad94cabd831719e862ee43d9a39839215_icgraph.svg" width="528" height="139"><p><b>This browser is not able to show SVG: try Firefox, Chrome, Safari, or Opera instead.</b></p></iframe>
+</div>
+</div>
+
+</div>
+</div>
+<a id="a52b8ccf30ae18be42acde8ab0a2327f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52b8ccf30ae18be42acde8ab0a2327f2">&#9670;&nbsp;</a></span>set_x()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObject::set_x </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>new_x</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define coordenada X. </p>
+
+</div>
+</div>
+<a id="a63dd56be72ef925936e47c787ae7dc4f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a63dd56be72ef925936e47c787ae7dc4f">&#9670;&nbsp;</a></span>set_y()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GameObject::set_y </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>new_y</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Define coordenada Y. </p>
+
+</div>
+</div>
+<a id="ae83128d0e0efef691417779605ee037c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae83128d0e0efef691417779605ee037c">&#9670;&nbsp;</a></span>update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void GameObject::update </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implementado por <a class="el" href="classPipe.html#a5c21f37e6bf9ff0ee1c16fee62eb1039">Pipe</a> e <a class="el" href="classBird.html#ae2718aad2ef1de73e399482ab6068324">Bird</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Atributos</h2>
+<a id="af35b120ca8cfab7167d8eb5c02d312a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af35b120ca8cfab7167d8eb5c02d312a2">&#9670;&nbsp;</a></span>by</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::by</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0ae9c255f47b6148c26d0333a72d0625"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0ae9c255f47b6148c26d0333a72d0625">&#9670;&nbsp;</a></span>height</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::height</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a419a07416a54bd58e15027bb298870a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a419a07416a54bd58e15027bb298870a3">&#9670;&nbsp;</a></span>obj_sprite</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ALLEGRO_BITMAP* GameObject::obj_sprite</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af797cec05ff1d3cbc694fc7036add37b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af797cec05ff1d3cbc694fc7036add37b">&#9670;&nbsp;</a></span>width</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::width</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad4976cd29785cf9bd791148ff397c41e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4976cd29785cf9bd791148ff397c41e">&#9670;&nbsp;</a></span>x</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::x</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a951230170ef7d06a29cf6880e3d31f46"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a951230170ef7d06a29cf6880e3d31f46">&#9670;&nbsp;</a></span>x_final</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::x_final</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9ac54f1c686ecf5656139a829ed62041"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ac54f1c686ecf5656139a829ed62041">&#9670;&nbsp;</a></span>y</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::y</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aba2f202804c87b9383dd0caf02fb87a0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aba2f202804c87b9383dd0caf02fb87a0">&#9670;&nbsp;</a></span>y_final</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float GameObject::y_final</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<hr/>A documentação para essa classe foi gerada a partir dos seguintes arquivos:<ul>
+<li>include/<a class="el" href="game__object_8hpp_source.html">game_object.hpp</a></li>
+<li>src/<a class="el" href="game__object_8cpp.html">game_object.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+</small></address>
+</body>
+</html>

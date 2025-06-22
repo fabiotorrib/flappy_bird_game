@@ -1,0 +1,42 @@
+\hypertarget{main__menu_8cpp}{}\doxysection{Referência do Arquivo src/states/main\+\_\+menu.cpp}
+\label{main__menu_8cpp}\index{src/states/main\_menu.cpp@{src/states/main\_menu.cpp}}
+
+
+Implementação da classe \mbox{\hyperlink{classMainMenu}{Main\+Menu}}, o estado principal e tela inicial do jogo.  
+
+
+{\ttfamily \#include \char`\"{}../../include/states/main\+\_\+menu.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/init.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/states/difficulty\+\_\+menu.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/states/leaderboard\+\_\+menu.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/states/load\+\_\+game.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../../include/states/settings\+\_\+menu.\+hpp\char`\"{}}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+Gráfico de dependência de inclusões para main\+\_\+menu.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{main__menu_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Variáveis}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{main__menu_8cpp_abb4f17d516e1da993635edde4b77513c}{input\+Name\+Screen}} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Implementação da classe \mbox{\hyperlink{classMainMenu}{Main\+Menu}}, o estado principal e tela inicial do jogo. 
+
+Este módulo gerencia a navegação do menu principal, o carregamento de todos os recursos visuais da tela e a transição para outros estados do jogo (Novo Jogo, Carregar, Configurações, etc.). 
+
+\doxysubsection{Variáveis}
+\mbox{\Hypertarget{main__menu_8cpp_abb4f17d516e1da993635edde4b77513c}\label{main__menu_8cpp_abb4f17d516e1da993635edde4b77513c}} 
+\index{main\_menu.cpp@{main\_menu.cpp}!inputNameScreen@{inputNameScreen}}
+\index{inputNameScreen@{inputNameScreen}!main\_menu.cpp@{main\_menu.cpp}}
+\doxysubsubsection{\texorpdfstring{inputNameScreen}{inputNameScreen}}
+{\footnotesize\ttfamily std\+::string input\+Name\+Screen = \char`\"{}\char`\"{}}
+
+Bibliotecas necessárias 

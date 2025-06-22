@@ -1,0 +1,37 @@
+\hypertarget{allegro__interface_8hpp}{}\doxysection{Referência do Arquivo include/allegro\+\_\+interface.hpp}
+\label{allegro__interface_8hpp}\index{include/allegro\_interface.hpp@{include/allegro\_interface.hpp}}
+
+
+Declara o controlador que integra Allegro e a máquina de estados.  
+
+
+{\ttfamily \#include \char`\"{}flappy\+\_\+bird\+\_\+controller.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}init.\+hpp\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}state.\+hpp\char`\"{}}\newline
+Gráfico de dependência de inclusões para allegro\+\_\+interface.\+hpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{allegro__interface_8hpp__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais arquivos estão direta ou indiretamente relacionados com esse arquivo\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=314pt]{allegro__interface_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Componentes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classAllegroController}{Allegro\+Controller}}
+\begin{DoxyCompactList}\small\item\em Gerencia display, eventos e transições de estados do jogo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Declara o controlador que integra Allegro e a máquina de estados. 
+
+Responsável por instanciar {\ttfamily \mbox{\hyperlink{classFlappyBird}{Flappy\+Bird}}}, gerir fila de eventos Allegro e realizar o loop principal de execução. 

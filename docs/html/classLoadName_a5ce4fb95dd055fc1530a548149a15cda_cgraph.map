@@ -1,0 +1,5 @@
+<map id="LoadName::handle_input" name="LoadName::handle_input">
+<area shape="rect" id="node1" title="Gerencia toda a entrada de teclado do usuário." alt="" coords="5,31,189,57"/>
+<area shape="rect" id="node2" href="$classPlayer.html#aeca0931abbc8d5333a8dbbd500d2359b" title="Verifica se um nome já existe no ranking." alt="" coords="244,5,415,32"/>
+<area shape="rect" id="node3" href="$classPlayer.html#a1b05c0a0131a430ed63cc7c3c2cd99e2" title="Salva lista de jogadores no arquivo, sobrescrevendo conteúdo." alt="" coords="237,56,421,83"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="Pipe::Pipe" name="Pipe::Pipe">
+<area shape="rect" id="node1" title="Construct a pipe object." alt="" coords="5,5,92,32"/>
+<area shape="rect" id="node2" href="$classGameObject.html#ad94cabd831719e862ee43d9a39839215" title="Atualiza limites inferiores (x_final, y_final) para colisão." alt="" coords="140,5,313,32"/>
+</map>

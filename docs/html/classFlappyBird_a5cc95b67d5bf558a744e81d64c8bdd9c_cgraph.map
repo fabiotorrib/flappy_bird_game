@@ -1,0 +1,9 @@
+<map id="FlappyBird::draw" name="FlappyBird::draw">
+<area shape="rect" id="node1" title="Desenha cena completa conforme estado." alt="" coords="5,115,137,141"/>
+<area shape="rect" id="node2" href="$classPipeList.html#a4ba16ab542cc297017747954866e800a" title="Draw every pipe pair." alt="" coords="231,5,345,32"/>
+<area shape="rect" id="node3" href="$classBird.html#a7f672f464d181f24f03301f1713d23dc" title="Desenha sprite atual com rotacao." alt="" coords="244,56,332,83"/>
+<area shape="rect" id="node5" href="$classFlappyBird.html#ac88fcc78ac50475800b005bf3aceb8d5" title="Desenha solo em loop para criar efeito de movimento." alt="" coords="187,107,389,149"/>
+<area shape="rect" id="node6" href="$classFlappyBird.html#ad7cf0c94eeb27e71d5abc64357870247" title="Desenha HUD de pontuacao." alt="" coords="203,173,373,200"/>
+<area shape="rect" id="node7" href="$classFlappyBird.html#a0c449363de8ddf536688491afb74ad74" title="Desenha texto inicial &quot;PRESS SPACE TO PLAY&quot;." alt="" coords="185,224,391,251"/>
+<area shape="rect" id="node4" href="$classBird.html#a2d551d652ad508b6ba3e5702a0bdb34d" title="Gera animacao de bater de asas." alt="" coords="439,56,596,83"/>
+</map>

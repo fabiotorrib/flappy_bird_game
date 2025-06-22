@@ -1,0 +1,4 @@
+<map id="FlappyBird::update_score" name="FlappyBird::update_score">
+<area shape="rect" id="node1" title="Atualiza pontuacao quando passaro passa canos." alt="" coords="199,5,344,47"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,13,151,39"/>
+</map>

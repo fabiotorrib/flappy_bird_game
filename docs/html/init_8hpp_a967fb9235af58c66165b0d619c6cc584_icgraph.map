@@ -1,0 +1,4 @@
+<map id="deinit" name="deinit">
+<area shape="rect" id="node1" title="Libera todos os recursos e encerra o subsistema Allegro." alt="" coords="108,5,167,32"/>
+<area shape="rect" id="node2" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Função principal que inicializa, executa e encerra o jogo." alt="" coords="5,5,60,32"/>
+</map>

@@ -1,0 +1,668 @@
+\hypertarget{classFlappyBird}{}\doxysection{Referência da Classe Flappy\+Bird}
+\label{classFlappyBird}\index{FlappyBird@{FlappyBird}}
+
+
+Controlador principal do jogo\+: orquestra objetos, HUD, pontuação e fluxo de estados.  
+
+
+
+
+{\ttfamily \#include $<$flappy\+\_\+bird\+\_\+controller.\+hpp$>$}
+
+
+
+Diagrama de colaboração para Flappy\+Bird\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=315pt]{classFlappyBird__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFlappyBird_ae163f4bf81ce73fd0de694b5d0fbed33}{Flappy\+Bird}} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a5cc95b67d5bf558a744e81d64c8bdd9c}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Desenha cena completa conforme estado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_acfe4ae73e3b97741bf9acd9162ba8070}{update}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza logica principal (estado, objetos, pipes). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a185beae77101e7a8be97f7a4ac6a19d8}{reset}} ()
+\begin{DoxyCompactList}\small\item\em Reseta jogo para configuracao inicial. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a2b785e0cadd0341a44f596035d16bf97}{set\+\_\+current\+\_\+player}} (\mbox{\hyperlink{classPlayer}{Player}} \&\mbox{\hyperlink{init_8cpp_af61d6983a9396a11078805087518af88}{player}})
+\begin{DoxyCompactList}\small\item\em Define jogador atual (para leaderboard). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a5e5b5440c5ddd780e8011536f28058b5}{save\+Current\+Player\+Score}} ()
+\begin{DoxyCompactList}\small\item\em Salva pontuacao no leaderboard externo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classFlappyBird_a229cec49a07214226a449da13eb90f9d}{check\+\_\+collisions}} ()
+\begin{DoxyCompactList}\small\item\em Verifica colisao entre passaro, limites ou canos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_adfe007f047a54586cbada405fdf3a277}{jump}} ()
+\begin{DoxyCompactList}\small\item\em Comanda pulo do passaro (estado 2). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_ab327a6cfe8d4afd6382070d98c7d00c0}{starter}} ()
+\begin{DoxyCompactList}\small\item\em Transita do estado 1 para 2 e aplica primeiro pulo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a4984ed1f498df20ac647f427fae92e5d}{control\+\_\+pipes}} ()
+\begin{DoxyCompactList}\small\item\em Adiciona / remove canos conforme necessidade. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a0c449363de8ddf536688491afb74ad74}{draw\+\_\+intial\+\_\+text}} ()
+\begin{DoxyCompactList}\small\item\em Desenha texto inicial \char`\"{}\+PRESS SPACE TO PLAY\char`\"{}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a4458c5b09023ad145b787be7aea53605}{update\+\_\+score}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza pontuacao quando passaro passa canos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_aa01d41a7f7d403671d958f422e8788eb}{change\+\_\+velocity}} ()
+\begin{DoxyCompactList}\small\item\em Aumenta velocidade conforme pontuacao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_ad7cf0c94eeb27e71d5abc64357870247}{draw\+\_\+\+HUD}} ()
+\begin{DoxyCompactList}\small\item\em Desenha HUD de pontuacao. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_ac88fcc78ac50475800b005bf3aceb8d5}{draw\+\_\+animated\+\_\+ground}} (float \mbox{\hyperlink{classFlappyBird_a395f1262f8a9a12b41cfd40ddbcd0471}{velocity}})
+\begin{DoxyCompactList}\small\item\em Desenha solo em loop para criar efeito de movimento. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a23bf3f77850cabdfa4a6bb9a7e9bfbe2}{breaker}} ()
+\begin{DoxyCompactList}\small\item\em Pausa fisica e anima passaro colidido. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_afbf176f9bfba9a2eb43f29e5e665d239}{unbreaker}} ()
+\begin{DoxyCompactList}\small\item\em Retoma jogo apos pausa. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFlappyBird_af0b147af9fcd32cfaddfe696f209605d}{get\+\_\+state}} ()
+\begin{DoxyCompactList}\small\item\em Retorna estado atual (0,1,2). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classFlappyBird_a04721bca58a8ce945a9bbbc56f9f49c4}{set\+\_\+playerscore}} ()
+\begin{DoxyCompactList}\small\item\em Atualiza score no objeto \mbox{\hyperlink{classPlayer}{Player}}. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classBird}{Bird}} \& \mbox{\hyperlink{classFlappyBird_ae9e55384026b7bc6e10faa3046dc3f56}{get\+\_\+bird}} () const
+\item 
+const \mbox{\hyperlink{classPipeList}{Pipe\+List}} \& \mbox{\hyperlink{classFlappyBird_afd602e95ae46652f7f4a5f50ef3bb919}{get\+\_\+pipes}} () const
+\end{DoxyCompactItemize}
+\doxysubsection*{Atributos Privados}
+\begin{DoxyCompactItemize}
+\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classFlappyBird_a70b19ca7aa1dff85f6f9a726fb2e6528}{bird1}}
+\begin{DoxyCompactList}\small\item\em sprite 1 do passaro \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classFlappyBird_af0c7b336f136b67f19f30c065571d5ad}{bird2}}
+\begin{DoxyCompactList}\small\item\em sprite 2 do passaro \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classFlappyBird_afc9051f6e0a3508b1d494b7c4683e16e}{bird3}}
+\begin{DoxyCompactList}\small\item\em sprite 3 do passaro \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classFlappyBird_ae033a810b25df49fd09dd49edd3999b7}{pipe}}
+\begin{DoxyCompactList}\small\item\em sprite do cano \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classFlappyBird_aec3c9f69d1413415da87c6aaca30f4ab}{ground}}
+\begin{DoxyCompactList}\small\item\em sprite do solo \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classImage}{Image}} $>$ \mbox{\hyperlink{classFlappyBird_a919409449e1fae13177ab2cb5d0caadc}{ground2}}
+\begin{DoxyCompactList}\small\item\em sprite do solo (loop) \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSound}{Sound}} $>$ \mbox{\hyperlink{classFlappyBird_a69181dbd24db50754e3b04bfcb5e7b7e}{point\+Sound}}
+\begin{DoxyCompactList}\small\item\em som de pontuacao \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classSound}{Sound}} $>$ \mbox{\hyperlink{classFlappyBird_abfa3fe83236ee34bae3eb227642d8c93}{game\+Over\+Sound}}
+\begin{DoxyCompactList}\small\item\em som de game over \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classBird}{Bird}} \mbox{\hyperlink{classFlappyBird_a3f8219ab1a08de553f4e072799c0b6e6}{flappy\+\_\+obj}}
+\begin{DoxyCompactList}\small\item\em instancia controlavel do passaro \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPipeList}{Pipe\+List}} \mbox{\hyperlink{classFlappyBird_a4f9ba32011df4b04bb65c6af77a3221e}{pipelist}}
+\begin{DoxyCompactList}\small\item\em lista de canos ativos \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFlappyBird_a7ab4415f9ff0301d36897572f1b8c60a}{state}} = 0
+\begin{DoxyCompactList}\small\item\em 0 = intro, 1 = aguardando, 2 = jogando \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{classFlappyBird_ae26fe02695675b9fe186faf1fd4b6ade}{time}} = 0
+\item 
+float \mbox{\hyperlink{classFlappyBird_a395f1262f8a9a12b41cfd40ddbcd0471}{velocity}} = \mbox{\hyperlink{defines_8hpp_a0d676224ec1857dc51cb4e1601ff8102}{PIPE\+\_\+\+SPEED}}
+\item 
+float \mbox{\hyperlink{classFlappyBird_a342288af2d65e2003b7666635e8b115d}{velocity\+\_\+backup}} = 0
+\item 
+int \mbox{\hyperlink{classFlappyBird_a94f4c7846637cd30588b7cbe9fb3b049}{score}} = 0
+\item 
+float \mbox{\hyperlink{classFlappyBird_ab578ec0b7d91b69199a867d837518219}{position\+F\+\_\+x}} = 0
+\item 
+float \mbox{\hyperlink{classFlappyBird_ae3d3f0fe288f4ca0864cadd1c72d0e62}{position\+F2\+\_\+x}} = \mbox{\hyperlink{defines_8hpp_a9b6bc9242882d1e758e06ed751a2e8ec}{SCREEN\+\_\+W}}
+\item 
+int \mbox{\hyperlink{classFlappyBird_a2bd456cc2ccdc270a91d659f5cfc98b6}{change\+\_\+vel}} = 2
+\begin{DoxyCompactList}\small\item\em frequencia de aumento de velocidade \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classFlappyBird_a2d3609f8947295f28241fc67121dd978}{difficulty\+\_\+game}} = \mbox{\hyperlink{init_8cpp_a016a5d341f375d13639c75bf5987fb23}{difficulty}}
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} $\ast$ \mbox{\hyperlink{classFlappyBird_a46e4f0c13265076a12b37ed933d615b6}{current\+Player}} = nullptr
+\begin{DoxyCompactList}\small\item\em ponteiro para jogador atual \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Controlador principal do jogo\+: orquestra objetos, HUD, pontuação e fluxo de estados. 
+
+\doxysubsection{Construtores e Destrutores}
+\mbox{\Hypertarget{classFlappyBird_ae163f4bf81ce73fd0de694b5d0fbed33}\label{classFlappyBird_ae163f4bf81ce73fd0de694b5d0fbed33}} 
+\index{FlappyBird@{FlappyBird}!FlappyBird@{FlappyBird}}
+\index{FlappyBird@{FlappyBird}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{FlappyBird()}{FlappyBird()}}
+{\footnotesize\ttfamily Flappy\+Bird\+::\+Flappy\+Bird (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor padrao. 
+
+Carrega assets, inicializa objetos e listas. 
+
+\doxysubsection{Funções membros}
+\mbox{\Hypertarget{classFlappyBird_a23bf3f77850cabdfa4a6bb9a7e9bfbe2}\label{classFlappyBird_a23bf3f77850cabdfa4a6bb9a7e9bfbe2}} 
+\index{FlappyBird@{FlappyBird}!breaker@{breaker}}
+\index{breaker@{breaker}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{breaker()}{breaker()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::breaker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pausa fisica e anima passaro colidido. 
+
+Pausa o movimento (usado em menus). Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classFlappyBird_a23bf3f77850cabdfa4a6bb9a7e9bfbe2_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_aa01d41a7f7d403671d958f422e8788eb}\label{classFlappyBird_aa01d41a7f7d403671d958f422e8788eb}} 
+\index{FlappyBird@{FlappyBird}!change\_velocity@{change\_velocity}}
+\index{change\_velocity@{change\_velocity}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{change\_velocity()}{change\_velocity()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::change\+\_\+velocity (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Aumenta velocidade conforme pontuacao. 
+
+Aumenta gradualmente a velocidade dos canos conforme pontuação. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=335pt]{classFlappyBird_aa01d41a7f7d403671d958f422e8788eb_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a229cec49a07214226a449da13eb90f9d}\label{classFlappyBird_a229cec49a07214226a449da13eb90f9d}} 
+\index{FlappyBird@{FlappyBird}!check\_collisions@{check\_collisions}}
+\index{check\_collisions@{check\_collisions}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{check\_collisions()}{check\_collisions()}}
+{\footnotesize\ttfamily bool Flappy\+Bird\+::check\+\_\+collisions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica colisao entre passaro, limites ou canos. 
+
+Verifica colisões do pássaro com canos ou limites da tela.
+
+\begin{DoxyReturn}{Retorna}
+true se colisao final detectada.
+
+true se ocorrer colisão. 
+\end{DoxyReturn}
+Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_a229cec49a07214226a449da13eb90f9d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a4984ed1f498df20ac647f427fae92e5d}\label{classFlappyBird_a4984ed1f498df20ac647f427fae92e5d}} 
+\index{FlappyBird@{FlappyBird}!control\_pipes@{control\_pipes}}
+\index{control\_pipes@{control\_pipes}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{control\_pipes()}{control\_pipes()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::control\+\_\+pipes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Adiciona / remove canos conforme necessidade. 
+
+Gerencia criação e remoção de canos na tela. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_a4984ed1f498df20ac647f427fae92e5d_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classFlappyBird_a4984ed1f498df20ac647f427fae92e5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a5cc95b67d5bf558a744e81d64c8bdd9c}\label{classFlappyBird_a5cc95b67d5bf558a744e81d64c8bdd9c}} 
+\index{FlappyBird@{FlappyBird}!draw@{draw}}
+\index{draw@{draw}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desenha cena completa conforme estado. 
+
+Desenha todos os elementos do jogo de acordo com o estado atual. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_a5cc95b67d5bf558a744e81d64c8bdd9c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_ac88fcc78ac50475800b005bf3aceb8d5}\label{classFlappyBird_ac88fcc78ac50475800b005bf3aceb8d5}} 
+\index{FlappyBird@{FlappyBird}!draw\_animated\_ground@{draw\_animated\_ground}}
+\index{draw\_animated\_ground@{draw\_animated\_ground}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{draw\_animated\_ground()}{draw\_animated\_ground()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::draw\+\_\+animated\+\_\+ground (\begin{DoxyParamCaption}\item[{float}]{velocity }\end{DoxyParamCaption})}
+
+
+
+Desenha solo em loop para criar efeito de movimento. 
+
+Desenha o chão em rolagem contínua para efeito de movimento.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em velocity} & velocidade horizontal a aplicar.\\
+\hline
+{\em velocity} & Velocidade de deslocamento. \\
+\hline
+\end{DoxyParams}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_ac88fcc78ac50475800b005bf3aceb8d5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_ad7cf0c94eeb27e71d5abc64357870247}\label{classFlappyBird_ad7cf0c94eeb27e71d5abc64357870247}} 
+\index{FlappyBird@{FlappyBird}!draw\_HUD@{draw\_HUD}}
+\index{draw\_HUD@{draw\_HUD}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{draw\_HUD()}{draw\_HUD()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::draw\+\_\+\+HUD (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desenha HUD de pontuacao. 
+
+Desenha a pontuação atual na tela. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classFlappyBird_ad7cf0c94eeb27e71d5abc64357870247_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a0c449363de8ddf536688491afb74ad74}\label{classFlappyBird_a0c449363de8ddf536688491afb74ad74}} 
+\index{FlappyBird@{FlappyBird}!draw\_intial\_text@{draw\_intial\_text}}
+\index{draw\_intial\_text@{draw\_intial\_text}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{draw\_intial\_text()}{draw\_intial\_text()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::draw\+\_\+intial\+\_\+text (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Desenha texto inicial \char`\"{}\+PRESS SPACE TO PLAY\char`\"{}. 
+
+Desenha o texto piscante \char`\"{}\+PRESS SPACE TO PLAY\char`\"{}. Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_a0c449363de8ddf536688491afb74ad74_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_ae9e55384026b7bc6e10faa3046dc3f56}\label{classFlappyBird_ae9e55384026b7bc6e10faa3046dc3f56}} 
+\index{FlappyBird@{FlappyBird}!get\_bird@{get\_bird}}
+\index{get\_bird@{get\_bird}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{get\_bird()}{get\_bird()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classBird}{Bird}}\& Flappy\+Bird\+::get\+\_\+bird (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classFlappyBird_afd602e95ae46652f7f4a5f50ef3bb919}\label{classFlappyBird_afd602e95ae46652f7f4a5f50ef3bb919}} 
+\index{FlappyBird@{FlappyBird}!get\_pipes@{get\_pipes}}
+\index{get\_pipes@{get\_pipes}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{get\_pipes()}{get\_pipes()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classPipeList}{Pipe\+List}}\& Flappy\+Bird\+::get\+\_\+pipes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classFlappyBird_af0b147af9fcd32cfaddfe696f209605d}\label{classFlappyBird_af0b147af9fcd32cfaddfe696f209605d}} 
+\index{FlappyBird@{FlappyBird}!get\_state@{get\_state}}
+\index{get\_state@{get\_state}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{get\_state()}{get\_state()}}
+{\footnotesize\ttfamily int Flappy\+Bird\+::get\+\_\+state (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna estado atual (0,1,2). 
+
+Retorna o estado interno atual. \mbox{\Hypertarget{classFlappyBird_adfe007f047a54586cbada405fdf3a277}\label{classFlappyBird_adfe007f047a54586cbada405fdf3a277}} 
+\index{FlappyBird@{FlappyBird}!jump@{jump}}
+\index{jump@{jump}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{jump()}{jump()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::jump (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Comanda pulo do passaro (estado 2). 
+
+Solicita pulo do pássaro se o jogo estiver em andamento. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classFlappyBird_adfe007f047a54586cbada405fdf3a277_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a185beae77101e7a8be97f7a4ac6a19d8}\label{classFlappyBird_a185beae77101e7a8be97f7a4ac6a19d8}} 
+\index{FlappyBird@{FlappyBird}!reset@{reset}}
+\index{reset@{reset}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Reseta jogo para configuracao inicial. 
+
+Reinicia variáveis, pontos e objetos para começar uma nova partida. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=340pt]{classFlappyBird_a185beae77101e7a8be97f7a4ac6a19d8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a5e5b5440c5ddd780e8011536f28058b5}\label{classFlappyBird_a5e5b5440c5ddd780e8011536f28058b5}} 
+\index{FlappyBird@{FlappyBird}!saveCurrentPlayerScore@{saveCurrentPlayerScore}}
+\index{saveCurrentPlayerScore@{saveCurrentPlayerScore}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{saveCurrentPlayerScore()}{saveCurrentPlayerScore()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::save\+Current\+Player\+Score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Salva pontuacao no leaderboard externo. 
+
+Salva o placar do jogador corrente no arquivo de ranking. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_a5e5b5440c5ddd780e8011536f28058b5_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a2b785e0cadd0341a44f596035d16bf97}\label{classFlappyBird_a2b785e0cadd0341a44f596035d16bf97}} 
+\index{FlappyBird@{FlappyBird}!set\_current\_player@{set\_current\_player}}
+\index{set\_current\_player@{set\_current\_player}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{set\_current\_player()}{set\_current\_player()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::set\+\_\+current\+\_\+player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPlayer}{Player}} \&}]{player }\end{DoxyParamCaption})}
+
+
+
+Define jogador atual (para leaderboard). 
+
+Define o jogador que receberá pontuação ao final da partida.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em player} & referencia ao objeto \mbox{\hyperlink{classPlayer}{Player}}. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFlappyBird_a04721bca58a8ce945a9bbbc56f9f49c4}\label{classFlappyBird_a04721bca58a8ce945a9bbbc56f9f49c4}} 
+\index{FlappyBird@{FlappyBird}!set\_playerscore@{set\_playerscore}}
+\index{set\_playerscore@{set\_playerscore}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{set\_playerscore()}{set\_playerscore()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::set\+\_\+playerscore (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Atualiza score no objeto \mbox{\hyperlink{classPlayer}{Player}}. 
+
+Copia a pontuação atual do jogo para o objeto \mbox{\hyperlink{classPlayer}{Player}}. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_a04721bca58a8ce945a9bbbc56f9f49c4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_ab327a6cfe8d4afd6382070d98c7d00c0}\label{classFlappyBird_ab327a6cfe8d4afd6382070d98c7d00c0}} 
+\index{FlappyBird@{FlappyBird}!starter@{starter}}
+\index{starter@{starter}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{starter()}{starter()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::starter (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Transita do estado 1 para 2 e aplica primeiro pulo. 
+
+Inicia a partida a partir do estado de espera. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=290pt]{classFlappyBird_ab327a6cfe8d4afd6382070d98c7d00c0_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_afbf176f9bfba9a2eb43f29e5e665d239}\label{classFlappyBird_afbf176f9bfba9a2eb43f29e5e665d239}} 
+\index{FlappyBird@{FlappyBird}!unbreaker@{unbreaker}}
+\index{unbreaker@{unbreaker}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{unbreaker()}{unbreaker()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::unbreaker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retoma jogo apos pausa. 
+
+Restaura o movimento após pausa. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classFlappyBird_afbf176f9bfba9a2eb43f29e5e665d239_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_acfe4ae73e3b97741bf9acd9162ba8070}\label{classFlappyBird_acfe4ae73e3b97741bf9acd9162ba8070}} 
+\index{FlappyBird@{FlappyBird}!update@{update}}
+\index{update@{update}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Atualiza logica principal (estado, objetos, pipes). 
+
+Atualiza lógica do jogo segundo o estado e aplica física. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classFlappyBird_acfe4ae73e3b97741bf9acd9162ba8070_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classFlappyBird_a4458c5b09023ad145b787be7aea53605}\label{classFlappyBird_a4458c5b09023ad145b787be7aea53605}} 
+\index{FlappyBird@{FlappyBird}!update\_score@{update\_score}}
+\index{update\_score@{update\_score}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{update\_score()}{update\_score()}}
+{\footnotesize\ttfamily void Flappy\+Bird\+::update\+\_\+score (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Atualiza pontuacao quando passaro passa canos. 
+
+Atualiza contagem de pontos e toca som quando necessário. Este é o diagrama das funções utilizadas por essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classFlappyBird_a4458c5b09023ad145b787be7aea53605_cgraph}
+\end{center}
+\end{figure}
+Esse é o diagrama das funções que utilizam essa função\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classFlappyBird_a4458c5b09023ad145b787be7aea53605_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Atributos}
+\mbox{\Hypertarget{classFlappyBird_a70b19ca7aa1dff85f6f9a726fb2e6528}\label{classFlappyBird_a70b19ca7aa1dff85f6f9a726fb2e6528}} 
+\index{FlappyBird@{FlappyBird}!bird1@{bird1}}
+\index{bird1@{bird1}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{bird1}{bird1}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Flappy\+Bird\+::bird1\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite 1 do passaro 
+
+\mbox{\Hypertarget{classFlappyBird_af0c7b336f136b67f19f30c065571d5ad}\label{classFlappyBird_af0c7b336f136b67f19f30c065571d5ad}} 
+\index{FlappyBird@{FlappyBird}!bird2@{bird2}}
+\index{bird2@{bird2}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{bird2}{bird2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Flappy\+Bird\+::bird2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite 2 do passaro 
+
+\mbox{\Hypertarget{classFlappyBird_afc9051f6e0a3508b1d494b7c4683e16e}\label{classFlappyBird_afc9051f6e0a3508b1d494b7c4683e16e}} 
+\index{FlappyBird@{FlappyBird}!bird3@{bird3}}
+\index{bird3@{bird3}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{bird3}{bird3}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Flappy\+Bird\+::bird3\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite 3 do passaro 
+
+\mbox{\Hypertarget{classFlappyBird_a2bd456cc2ccdc270a91d659f5cfc98b6}\label{classFlappyBird_a2bd456cc2ccdc270a91d659f5cfc98b6}} 
+\index{FlappyBird@{FlappyBird}!change\_vel@{change\_vel}}
+\index{change\_vel@{change\_vel}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{change\_vel}{change\_vel}}
+{\footnotesize\ttfamily int Flappy\+Bird\+::change\+\_\+vel = 2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+frequencia de aumento de velocidade 
+
+\mbox{\Hypertarget{classFlappyBird_a46e4f0c13265076a12b37ed933d615b6}\label{classFlappyBird_a46e4f0c13265076a12b37ed933d615b6}} 
+\index{FlappyBird@{FlappyBird}!currentPlayer@{currentPlayer}}
+\index{currentPlayer@{currentPlayer}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{currentPlayer}{currentPlayer}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}}$\ast$ Flappy\+Bird\+::current\+Player = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+ponteiro para jogador atual 
+
+\mbox{\Hypertarget{classFlappyBird_a2d3609f8947295f28241fc67121dd978}\label{classFlappyBird_a2d3609f8947295f28241fc67121dd978}} 
+\index{FlappyBird@{FlappyBird}!difficulty\_game@{difficulty\_game}}
+\index{difficulty\_game@{difficulty\_game}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{difficulty\_game}{difficulty\_game}}
+{\footnotesize\ttfamily int Flappy\+Bird\+::difficulty\+\_\+game = \mbox{\hyperlink{init_8cpp_a016a5d341f375d13639c75bf5987fb23}{difficulty}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFlappyBird_a3f8219ab1a08de553f4e072799c0b6e6}\label{classFlappyBird_a3f8219ab1a08de553f4e072799c0b6e6}} 
+\index{FlappyBird@{FlappyBird}!flappy\_obj@{flappy\_obj}}
+\index{flappy\_obj@{flappy\_obj}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{flappy\_obj}{flappy\_obj}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classBird}{Bird}} Flappy\+Bird\+::flappy\+\_\+obj\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+instancia controlavel do passaro 
+
+\mbox{\Hypertarget{classFlappyBird_abfa3fe83236ee34bae3eb227642d8c93}\label{classFlappyBird_abfa3fe83236ee34bae3eb227642d8c93}} 
+\index{FlappyBird@{FlappyBird}!gameOverSound@{gameOverSound}}
+\index{gameOverSound@{gameOverSound}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{gameOverSound}{gameOverSound}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classSound}{Sound}}$>$ Flappy\+Bird\+::game\+Over\+Sound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+som de game over 
+
+\mbox{\Hypertarget{classFlappyBird_aec3c9f69d1413415da87c6aaca30f4ab}\label{classFlappyBird_aec3c9f69d1413415da87c6aaca30f4ab}} 
+\index{FlappyBird@{FlappyBird}!ground@{ground}}
+\index{ground@{ground}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{ground}{ground}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Flappy\+Bird\+::ground\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite do solo 
+
+\mbox{\Hypertarget{classFlappyBird_a919409449e1fae13177ab2cb5d0caadc}\label{classFlappyBird_a919409449e1fae13177ab2cb5d0caadc}} 
+\index{FlappyBird@{FlappyBird}!ground2@{ground2}}
+\index{ground2@{ground2}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{ground2}{ground2}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Flappy\+Bird\+::ground2\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite do solo (loop) 
+
+\mbox{\Hypertarget{classFlappyBird_ae033a810b25df49fd09dd49edd3999b7}\label{classFlappyBird_ae033a810b25df49fd09dd49edd3999b7}} 
+\index{FlappyBird@{FlappyBird}!pipe@{pipe}}
+\index{pipe@{pipe}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{pipe}{pipe}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classImage}{Image}}$>$ Flappy\+Bird\+::pipe\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+sprite do cano 
+
+\mbox{\Hypertarget{classFlappyBird_a4f9ba32011df4b04bb65c6af77a3221e}\label{classFlappyBird_a4f9ba32011df4b04bb65c6af77a3221e}} 
+\index{FlappyBird@{FlappyBird}!pipelist@{pipelist}}
+\index{pipelist@{pipelist}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{pipelist}{pipelist}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPipeList}{Pipe\+List}} Flappy\+Bird\+::pipelist\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+lista de canos ativos 
+
+\mbox{\Hypertarget{classFlappyBird_a69181dbd24db50754e3b04bfcb5e7b7e}\label{classFlappyBird_a69181dbd24db50754e3b04bfcb5e7b7e}} 
+\index{FlappyBird@{FlappyBird}!pointSound@{pointSound}}
+\index{pointSound@{pointSound}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{pointSound}{pointSound}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$\mbox{\hyperlink{classSound}{Sound}}$>$ Flappy\+Bird\+::point\+Sound\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+som de pontuacao 
+
+\mbox{\Hypertarget{classFlappyBird_ae3d3f0fe288f4ca0864cadd1c72d0e62}\label{classFlappyBird_ae3d3f0fe288f4ca0864cadd1c72d0e62}} 
+\index{FlappyBird@{FlappyBird}!positionF2\_x@{positionF2\_x}}
+\index{positionF2\_x@{positionF2\_x}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{positionF2\_x}{positionF2\_x}}
+{\footnotesize\ttfamily float Flappy\+Bird\+::position\+F2\+\_\+x = \mbox{\hyperlink{defines_8hpp_a9b6bc9242882d1e758e06ed751a2e8ec}{SCREEN\+\_\+W}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFlappyBird_ab578ec0b7d91b69199a867d837518219}\label{classFlappyBird_ab578ec0b7d91b69199a867d837518219}} 
+\index{FlappyBird@{FlappyBird}!positionF\_x@{positionF\_x}}
+\index{positionF\_x@{positionF\_x}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{positionF\_x}{positionF\_x}}
+{\footnotesize\ttfamily float Flappy\+Bird\+::position\+F\+\_\+x = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFlappyBird_a94f4c7846637cd30588b7cbe9fb3b049}\label{classFlappyBird_a94f4c7846637cd30588b7cbe9fb3b049}} 
+\index{FlappyBird@{FlappyBird}!score@{score}}
+\index{score@{score}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{score}{score}}
+{\footnotesize\ttfamily int Flappy\+Bird\+::score = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFlappyBird_a7ab4415f9ff0301d36897572f1b8c60a}\label{classFlappyBird_a7ab4415f9ff0301d36897572f1b8c60a}} 
+\index{FlappyBird@{FlappyBird}!state@{state}}
+\index{state@{state}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{state}{state}}
+{\footnotesize\ttfamily int Flappy\+Bird\+::state = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+0 = intro, 1 = aguardando, 2 = jogando 
+
+\mbox{\Hypertarget{classFlappyBird_ae26fe02695675b9fe186faf1fd4b6ade}\label{classFlappyBird_ae26fe02695675b9fe186faf1fd4b6ade}} 
+\index{FlappyBird@{FlappyBird}!time@{time}}
+\index{time@{time}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{time}{time}}
+{\footnotesize\ttfamily float Flappy\+Bird\+::time = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFlappyBird_a395f1262f8a9a12b41cfd40ddbcd0471}\label{classFlappyBird_a395f1262f8a9a12b41cfd40ddbcd0471}} 
+\index{FlappyBird@{FlappyBird}!velocity@{velocity}}
+\index{velocity@{velocity}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{velocity}{velocity}}
+{\footnotesize\ttfamily float Flappy\+Bird\+::velocity = \mbox{\hyperlink{defines_8hpp_a0d676224ec1857dc51cb4e1601ff8102}{PIPE\+\_\+\+SPEED}}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{classFlappyBird_a342288af2d65e2003b7666635e8b115d}\label{classFlappyBird_a342288af2d65e2003b7666635e8b115d}} 
+\index{FlappyBird@{FlappyBird}!velocity\_backup@{velocity\_backup}}
+\index{velocity\_backup@{velocity\_backup}!FlappyBird@{FlappyBird}}
+\doxysubsubsection{\texorpdfstring{velocity\_backup}{velocity\_backup}}
+{\footnotesize\ttfamily float Flappy\+Bird\+::velocity\+\_\+backup = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+include/\mbox{\hyperlink{flappy__bird__controller_8hpp}{flappy\+\_\+bird\+\_\+controller.\+hpp}}\item 
+src/\mbox{\hyperlink{flappy__bird__controller_8cpp}{flappy\+\_\+bird\+\_\+controller.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Player::Player" name="Player::Player">
+<area shape="rect" id="node1" title="Constrói um jogador com nome e pontuação inicial." alt="" coords="468,5,580,32"/>
+<area shape="rect" id="node2" href="$classPlayer.html#aef5308fd57957507968e971d23ac3fe6" title="Lê arquivo de ranking e retorna vetor de jogadores." alt="" coords="235,5,420,32"/>
+<area shape="rect" id="node3" href="$classLeaderboardMenu.html#a7eb26a277cc3ff52e703921a69f24fe4" title="Executado uma vez ao entrar no estado do Leaderboard." alt="" coords="5,5,187,32"/>
+</map>

@@ -1,0 +1,4 @@
+<map id="PipeList::set_start" name="PipeList::set_start">
+<area shape="rect" id="node1" title="Begin spawning logic (first call after game starts)." alt="" coords="199,5,337,32"/>
+<area shape="rect" id="node2" href="$classFlappyBird.html#acfe4ae73e3b97741bf9acd9162ba8070" title="Atualiza logica principal (estado, objetos, pipes)." alt="" coords="5,5,151,32"/>
+</map>
