@@ -1,6 +1,22 @@
 #include "../include/flappy_bird_controller.hpp"
 #include <allegro5/bitmap_draw.h>
 #include <iostream>
+#include "../include/bird.hpp"
+
+//contrutor
+FlappyBird::FlappyBird()
+    : bird1 (std::make_unique<Image>("assets/B1.png")),
+      bird2 (std::make_unique<Image>("assets/B2.png")),
+      bird3 (std::make_unique<Image>("assets/B3.png")),
+      pipe  (std::make_unique<Image>("assets/PipeWithBottom.png")),
+      ground(std::make_unique<Image>("assets/Ground.png")),
+      ground2(std::make_unique<Image>("assets/Ground.png")),
+      pointSound   (std::make_unique<Sound>("assets/Score.ogg")),
+      gameOverSound(std::make_unique<Sound>("assets/GameOver.ogg")),
+      flappy_obj(bird1->getBitmap(), -100, 200,
+                 bird2->getBitmap(), bird3->getBitmap()),
+      pipelist(pipe->getBitmap()) {}
+
 
 // funcao de desenhar as coisas
 void FlappyBird::draw() {
@@ -62,6 +78,7 @@ void FlappyBird::reset() {
   change_vel = 5;
   flappy_obj.reset_xy();
   flappy_obj.set_break(false);
+  pipelist.set_difficulty(difficulty_game);
   pipelist.reset();
 }
 
@@ -81,7 +98,7 @@ void FlappyBird::saveCurrentPlayerScore() {
 bool FlappyBird::check_collisions() {
   if ((flappy_obj.check_collision_with_boundaries() && velocity != 0) ||
       (pipelist.check_collision(flappy_obj))) {
-    // colocar audio de morte aqui e alguma pisca na tela
+    gameOverSound->playSound(1.0);
     velocity = 0;
     flappy_obj.set_break(true);
     return true;
@@ -119,14 +136,18 @@ void FlappyBird::draw_intial_text() {
 }
 
 void FlappyBird::update_score() {
-  pipelist.check_score(flappy_obj.get_x());
+  if(pipelist.check_score(flappy_obj.get_x())){
+    pointSound->playSound(0.3);
+  };
   score = pipelist.get_points();
 }
 
 void FlappyBird::change_velocity() {
-  if (score % change_vel == 0 && score != 0) {
-    velocity += 0.25;
-    change_vel += 2;
+  if (difficulty_game != 0){
+    if (score % change_vel == 0 && score != 0) {
+      velocity += 0.25;
+      change_vel += 2;
+    }
   }
 }
 
@@ -147,8 +168,8 @@ void FlappyBird::draw_animated_ground(float velocity) {
     positionF2_x = 1280;
   }
 
-  al_draw_bitmap(ground, positionF_x, 0, 0);
-  al_draw_bitmap(ground2, positionF2_x, 0, 0);
+  ground->Draw(positionF_x, 0);
+  ground2->Draw(positionF2_x, 0);
 }
 
 void FlappyBird::breaker() {

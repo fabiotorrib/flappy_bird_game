@@ -1,3 +1,7 @@
+#include "../../include/states/leaderboard_menu.hpp"
+#include "../../include/init.hpp"
+#include "../../include/states/main_menu.hpp"
+#include <memory>
 /**
  * @file leaderboard_menu.cpp
  * @brief Implementação da classe LeaderboardMenu, responsável por exibir a tela de ranking.
@@ -7,9 +11,9 @@
 
 /** Bibliotecas necessárias */
 #include <memory>
-#include "../include/states/leaderboard_menu.hpp"
-#include "../include/init.hpp"
-#include "../include/states/main_menu.hpp"
+#include "../../include/states/leaderboard_menu.hpp"
+#include "../../include/init.hpp"
+#include "../../include/states/main_menu.hpp"
 
 /**
  * @brief Construtor da classe LeaderboardMenu.

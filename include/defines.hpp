@@ -47,6 +47,7 @@ const float MAX_ROTATION_DOWN = M_PI / 6.0f;  // Limite para baixo (+90 graus)
 #define BIRD_VEL 3
 // velocidade dos pipes
 #define PIPE_SPEED 5.5
+#define PIPE_VERTICAL_SPEED 1.5
 // text oscilation
 #define OSCILATION 3.0
 // velocidade oscilation gif

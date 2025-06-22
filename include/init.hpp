@@ -38,27 +38,14 @@ extern ALLEGRO_KEYBOARD_STATE keystate;
 extern Player player;
 extern std::vector<Player> ranking;
 extern bool g_sound_on;
+extern int difficulty;
 
 // Fontes
 extern ALLEGRO_FONT *font;
 
 // Sons globais
 extern std::unique_ptr<Sound> selectSound;
-
-// Imagens
-extern ALLEGRO_BITMAP *background;
-extern ALLEGRO_BITMAP *icone;
-extern ALLEGRO_BITMAP *ground;
-extern ALLEGRO_BITMAP *ground2;
-extern ALLEGRO_BITMAP *campLeaderboard;
-extern ALLEGRO_BITMAP *flappy;
-extern ALLEGRO_BITMAP *pipe1;
-extern ALLEGRO_BITMAP *pipeout;
-extern ALLEGRO_BITMAP *bird1;
-extern ALLEGRO_BITMAP *bird2;
-extern ALLEGRO_BITMAP *bird3;
-extern ALLEGRO_BITMAP *clouds;
-extern ALLEGRO_BITMAP *clouds2;
+extern std::unique_ptr<Music> backgroundMusic;
 
 void init();
 void deinit();

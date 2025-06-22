@@ -7,9 +7,9 @@
 
 /** Bibliotecas necessárias */
 #include <memory>
-#include "../include/states/difficulty_menu.hpp"
-#include "../include/init.hpp"
-#include "../include/states/main_menu.hpp"
+#include "../../include/states/difficulty_menu.hpp"
+#include "../../include/init.hpp"
+#include "../../include/states/main_menu.hpp"
 
 /**
  * @brief Construtor da classe DifficultyMenu.
@@ -43,16 +43,19 @@ State* DifficultyMenu::handle_input(const ALLEGRO_EVENT& ev) {
     if (menuButtons[buttonPositionSelected].name == "Easy") {
       std::cout << "Dificuldade Easy selecionada!" << std::endl;
       difficultySelected = "Easy";
+      difficulty =  0;
       buttonPositionSelected = 3;
       menuButtons[buttonPositionSelected].buttonSelectState = 1;
     } else if (menuButtons[buttonPositionSelected].name == "Normal") {
       std::cout << "Dificuldade Normal selecionada!" << std::endl;
       difficultySelected = "Normal";
+      difficulty = 1;
       buttonPositionSelected = 3;
       menuButtons[buttonPositionSelected].buttonSelectState = 1;
     } else if (menuButtons[buttonPositionSelected].name == "Hard") {
       std::cout << "Dificuldade Hard selecionada!" << std::endl;
       difficultySelected = "Hard";
+      difficulty = 2;
       buttonPositionSelected = 3;
       menuButtons[buttonPositionSelected].buttonSelectState = 1;
     } else if (menuButtons[buttonPositionSelected].name == "Save") {

@@ -9,7 +9,6 @@ int main() {
   try {
     // Bloco principal do seu jogo
     init();
-
     AllegroController game_controller(SCREEN_W, SCREEN_H);
     game_controller.run();
     std::cout << "n passou ainda";

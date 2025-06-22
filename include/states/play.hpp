@@ -1,3 +1,10 @@
+/**
+ * @file play.hpp
+ * @brief Declaracao da classe Play, responsavel pelo estado de jogo ativo.
+ * @details Este cabecalho define a classe Play, que orquestra a jogatina,
+ *          incluindo controle de entrada, atualizacao de logica e renderizacao.
+ */
+
 #pragma once
 #include "../flappy_bird_controller.hpp"
 #include "../state.hpp"
@@ -12,7 +19,7 @@ class Play : public State {
   std::unique_ptr<Image> buttonExitSelect;
   std::unique_ptr<Image> buttonExitDeselect;
   std::unique_ptr<Image> buttonPause;
-  std::unique_ptr<TextFont> font;  
+  std::unique_ptr<TextFont> font;
   int buttonPositionSelected = 0;
   std::vector<Button> menuButtons = {
       {"TryAgain", 1}, {"Exit", 0}};

@@ -1,3 +1,4 @@
+
 /**
  * @file settings_menu.cpp
  * @brief Implementação da classe SettingsMenu, que gerencia a tela de configurações do jogo.
@@ -6,10 +7,10 @@
  */
 
 /** Bibliotecas necessárias */
+#include "../../include/states/settings_menu.hpp"
 #include <memory>
-#include "../include/states/settings_menu.hpp"
-#include "../include/init.hpp"
-#include "../include/states/main_menu.hpp"
+#include "../../include/init.hpp"
+#include "../../include/states/main_menu.hpp"
 
 /**
  * @brief Construtor da classe SettingsMenu.

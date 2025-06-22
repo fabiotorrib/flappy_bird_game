@@ -1,3 +1,4 @@
+
 /**
  * @file main_menu.cpp
  * @brief Implementação da classe MainMenu, o estado principal e tela inicial do jogo.
@@ -7,13 +8,13 @@
  */
 
 /** Bibliotecas necessárias */
+#include "../../include/states/main_menu.hpp"
+#include "../../include/init.hpp"
+#include "../../include/states/difficulty_menu.hpp"
+#include "../../include/states/leaderboard_menu.hpp"
+#include "../../include/states/load_game.hpp"
+#include "../../include/states/settings_menu.hpp"
 #include <memory>
-#include "../include/states/main_menu.hpp"
-#include "../include/init.hpp"
-#include "../include/states/difficulty_menu.hpp"
-#include "../include/states/leaderboard_menu.hpp"
-#include "../include/states/load_game.hpp"
-#include "../include/states/settings_menu.hpp"
 
 /**
  * @brief Construtor da classe MainMenu.

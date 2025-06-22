@@ -1,3 +1,5 @@
+#include "../../include/states/load_game.hpp"
+#include <memory>
 /**
  * @file load_game.cpp
  * @brief Implementação da classe LoadName, responsável pela tela de inserção de nome do jogador.
@@ -7,11 +9,11 @@
 
 /** Bibliotecas necessárias */
 #include <memory>
-#include "../include/states/load_game.hpp"
+#include "../../include/states/load_game.hpp"
 #include "../../include/assets.hpp"
-#include "../include/init.hpp"
-#include "../include/states/main_menu.hpp"
-#include "../include/states/play.hpp"
+#include "../../include/init.hpp"
+#include "../../include/states/main_menu.hpp"
+#include "../../include/states/play.hpp"
 
 /**
  * @brief Construtor da classe LoadName.

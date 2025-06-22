@@ -17,7 +17,7 @@ void Bird::draw() {
   if (x < X_INIT) {
     loop_animation(1);
   } else if (breakanimation) {
-    al_draw_rotated_bitmap(bird1, width / 2, height / 2, x + width / 2,
+    al_draw_rotated_bitmap(frame1, width / 2, height / 2, x + width / 2,
                            y + height / 2, rotation, 0);
   } else {
     rotation = vy * ROTATION;
@@ -44,7 +44,7 @@ void Bird::loop_animation(int type) {
     // Mantem o Bird com asa para cima durante 8 frames
     // Troca o value quando for igual a 8 para mudar para proxima imagem
     if ((frames <= contB) && (valueB == 0)) {
-      al_draw_bitmap(bird1, x, y, 0);
+      al_draw_bitmap(frame1, x, y, 0);
 
       if (frames == contB) {
         contB = contB + 8;
@@ -54,7 +54,7 @@ void Bird::loop_animation(int type) {
 
     // Troca a imagem para o Bird com asa no meio durante 8 frames
     if ((frames <= contB) && (valueB == 1)) {
-      al_draw_bitmap(bird2, x, y + 2, 0);
+      al_draw_bitmap(frame2, x, y + 2, 0);
 
       if (frames == contB) {
         contB = contB + TIME_GIF_BIRD;
@@ -64,7 +64,7 @@ void Bird::loop_animation(int type) {
 
     // Troca a imagem para o Bird com asa para baixo durante 8 frames
     if ((frames <= contB) && (valueB == 2)) {
-      al_draw_bitmap(bird3, x, y + 4, 0);
+      al_draw_bitmap(frame3, x, y + 4, 0);
 
       if (frames == contB) {
         contB = contB + TIME_GIF_BIRD;
@@ -75,7 +75,7 @@ void Bird::loop_animation(int type) {
     // Zera o value pra reiniciar o ciclo
     // Volta a imagem para o Bird com asa no meio para reiniciar o ciclo
     if ((frames <= contB) && (valueB == 3)) {
-      al_draw_bitmap(bird2, x, y + 2, 0);
+      al_draw_bitmap(frame2, x, y + 2, 0);
 
       if (frames == contB) {
         contB = contB + TIME_GIF_BIRD;
@@ -91,28 +91,28 @@ void Bird::loop_animation(int type) {
     frames = frames + 1;
 
     if ((frames <= contB) && (valueB == 0)) {
-      al_draw_rotated_bitmap(bird1, width / 2, height / 2, x + width / 2,
+      al_draw_rotated_bitmap(frame1, width / 2, height / 2, x + width / 2,
                              y + height / 2, rotation, 0);
       if (frames == contB) {
         contB = contB + 8;
         valueB++;
       }
     } else if ((frames <= contB) && (valueB == 1)) {
-      al_draw_rotated_bitmap(bird2, width / 2, height / 2, x + width / 2,
+      al_draw_rotated_bitmap(frame2, width / 2, height / 2, x + width / 2,
                              y + height / 2 + 2, rotation, 0);
       if (frames == contB) {
         contB = contB + TIME_GIF_BIRD;
         valueB++;
       }
     } else if ((frames <= contB) && (valueB == 2)) {
-      al_draw_rotated_bitmap(bird3, width / 2, height / 2, x + width / 2,
+      al_draw_rotated_bitmap(frame3, width / 2, height / 2, x + width / 2,
                              y + height / 2 + 4, rotation, 0);
       if (frames == contB) {
         contB = contB + TIME_GIF_BIRD;
         valueB++;
       }
     } else if ((frames <= contB) && (valueB == 3)) {
-      al_draw_rotated_bitmap(bird2, width / 2, height / 2, x + width / 2,
+      al_draw_rotated_bitmap(frame2, width / 2, height / 2, x + width / 2,
                              y + height / 2 + 2, rotation, 0);
       if (frames == contB) {
         contB = contB + TIME_GIF_BIRD;

@@ -1,6 +1,19 @@
+/**
+ * @file play.cpp
+ * @brief Implementacao da classe Play.
+ * @details Controla o loop principal de jogo: entrada, atualizacao e desenho,
+ *          alem de transicoes para pausa e game over.
+ */
+
 #include "../../include/states/play.hpp"
 #include "../../include/states/main_menu.hpp"  // Para 'new MainMenu()'
 
+
+/**
+ * @brief Construtor padrao.
+ * @details Carrega todos os bitmaps, botoes e fontes exigidos durante o estado
+ *          de jogo.
+ */
 Play::Play() {
   logoGameOver = std::make_unique<Image>("assets/logoGameOver.png", 0, -200);
   buttonTryagainSelect =
@@ -16,16 +29,26 @@ Play::Play() {
   font->setColor(255, 255, 255);
 }
 
+/**
+ * @brief Inicia ou reinicia a partida.
+ * @details Cria um novo FlappyBird, limpa pontuacao e define status PLAY.
+ */
 void Play::enter() {
   // Este código é chamado toda vez que o jogo começa.
   // Garante que cada partida seja nova e limpa.
   flappy = std::make_unique<FlappyBird>();
   flappy->reset();
   flappy->set_current_player(player);
+  al_set_blender(ALLEGRO_ADD, ALLEGRO_ALPHA, ALLEGRO_INVERSE_ALPHA);
   status = ScreenState::PLAY;  // Reseta o status interno para "play"
 }
 
-// O método agora usa o membro 'flappy' da própria classe.
+/**
+ * @brief Processa entrada do usuario.
+ * @details Mapeia teclas para pulo, pausa, retomada e menu de game over.
+ * @param ev Evento Allegro recebido da fila.
+ * @return Ponteiro para o estado resultante apos o processamento.
+ */
 State* Play::handle_input(const ALLEGRO_EVENT& ev) {
   if (ev.type == ALLEGRO_EVENT_KEY_DOWN) {
     switch (status) {
@@ -66,10 +89,12 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
             }
             buttonPositionSelected = 0;
             menuButtons[buttonPositionSelected].buttonSelectState = 1;
+            al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_INVERSE_ALPHA);
             return new MainMenu();
           }
 
         } else if (ev.keyboard.keycode == ALLEGRO_KEY_ESCAPE) {
+            al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_INVERSE_ALPHA);
           return new MainMenu();
         }
         if (ev.keyboard.keycode == ALLEGRO_KEY_UP ||
@@ -101,7 +126,13 @@ State* Play::handle_input(const ALLEGRO_EVENT& ev) {
   // atual.
   return this;
 }
-
+/**
+ * @brief Atualiza simulacao do jogo.
+ * @details Avanca objetos quando status eh PLAY e detecta colisoes para
+ *          transicionar a GAME_OVER.
+ * @param motion Sistema de camera/transformacoes para parallax ou shake.
+ * @return Ponteiro para o estado atual para continuidade.
+ */
 State* Play::update(Motion& motion) {
   // A lógica do jogo só avança se o status interno for PLAY.
   if (status == ScreenState::PLAY) {
@@ -121,6 +152,12 @@ State* Play::update(Motion& motion) {
   return this;
 }
 
+/**
+ * @brief Renderiza cena completa.
+ * @details Desenha fundo, personagem, menus de pausa ou game over
+ *          conforme o estado em curso.
+ * @param motion Sistema de camera/transformacoes usado na renderizacao.
+ */
 void Play::draw(Motion& motion) {
   motion.draw();
   flappy->draw();
