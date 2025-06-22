@@ -1,8 +1,3 @@
-/**
- * @file motion.cpp
- * @brief Implementação da classe Motion (parallax e clima).
- */
-
 #include "../include/motion.hpp"
 #include <allegro5/allegro_primitives.h>
 #include <memory>
@@ -37,16 +32,12 @@ Motion::Motion() {
   ground2 = std::make_unique<Image>("assets/Ground.png");
 }
 
-/**
- * @brief Seleciona o cenário (1 = dia, 2 = neve, 3 = chuva).
- */
+// Variavel que muda o estado do clima de fundo
 void Motion::setController(int x) {
   controller = x;
 }
 
-/**
- * @brief Atualiza posições dos elementos de background conforme cenário.
- */
+// Animação de todos sprites da tela de fundo
 void Motion::update() {
 
   // Atualiza a posição do clima ensolarado
@@ -131,9 +122,7 @@ void Motion::update() {
   }
 }
 
-/**
- * @brief Desenha todos os elementos do background baseado no cenário ativo.
- */
+// Redesenhando cada imagem com a nova posição
 void Motion::draw() {
 
   // Desenha animação ensolarada
@@ -141,6 +130,10 @@ void Motion::draw() {
 
     background->Draw(0, 0);
 
+    //Correção caso a posição do little bird ultrapasse o contador
+    if(positionB_x > cont){
+      cont = positionB_x + 5;
+    }
     // Animação dos passaros do fundo batendo as asas
     if ((positionB_x <= cont) && (value == 0)) {
       little->Draw(positionB_x - 1280, 0);
@@ -193,7 +186,6 @@ void Motion::draw() {
 
     if ((contF <= contB + 20) && (contF >= contB) && (controll == 1)) {
       thunder1->Draw(0, 0);
-      // std::cerr << "2" << std::endl;
 
       if (contF == contB + 20) {
         controll = 0;

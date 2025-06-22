@@ -3,19 +3,7 @@
 #include "assets.hpp"
 #include "defines.hpp"
 
-/**
- * @file motion.hpp
- * @brief Gerencia efeitos de parallax e animações de cenário.
- *
- * Responsável por atualizar posições de fundos, partículas (chuva, neve) e
- * elementos decorativos, possibilitando diferentes temas climáticos durante
- * o jogo.
- */
-
-/**
- * @class Motion
- * @brief Responsável por atualizar e desenhar efeitos de parallax, clima e piso animado.
- */
+//Classe que faz os efeitos de parallax e animações de cenário
 
 class Motion {
   // Posição e velocidade de cada imagem
