@@ -11,6 +11,10 @@
 #include <string>
 #include <vector>
 
+#ifndef M_PI
+#define M_PI 3.14159265358979323846
+#endif
+
 // resolucao
 #define SCREEN_H 720
 #define SCREEN_W 1280
