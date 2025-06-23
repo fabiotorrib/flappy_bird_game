@@ -1,33 +1,97 @@
-name: Build and Package for Testing
+name: Create Multi-platform Release
 
 on:
   push:
-    branches:
-      - 'test-workflow' # Gatilho para pushes na branch test-workflow
+    tags:
+      - 'v*' # Gatilho para tags como v1.0, v1.1, etc.
 
 jobs:
-  build-package:
+  build-linux:
+    name: Build for Linux
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout do código
-      uses: actions/checkout@v4
+      - name: Checkout do código
+        uses: actions/checkout@v4
 
-    - name: Instalar dependências (Allegro 5)
-      run: |
-        sudo apt-get update
-        sudo apt-get install -y g++ make liballegro5-dev liballegro-image5-dev liballegro-font5-dev liballegro-ttf5-dev liballegro-primitives5-dev liballegro-audio5-dev liballegro-acodec5-dev zip
+      - name: Instalar dependências do Linux
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make g++ liballegro5-dev liballegro-image5-dev liballegro-font5-dev liballegro-ttf5-dev liballegro-primitives5-dev liballegro-audio5-dev liballegro-acodec5-dev zip
 
-    - name: Compilar o jogo
-      run: make
+      - name: Compilar para Linux
+        run: make linux
 
-    - name: Empacotar a pasta de assets
-      run: zip -r assets.zip ./assets
+      - name: Empacotar Artefatos (Linux)
+        run: |
+          mkdir -p release/linux
+          mv flappy.bin release/linux/
+          zip -r release/assets.zip ./assets
+          mv release/assets.zip release/linux/
 
-    - name: Fazer upload dos artefatos para teste
-      uses: actions/upload-artifact@v4
-      with:
-        name: flappy-bird-build
-        path: |
-          flappy.exe
-          assets.zip 
+      - name: Fazer upload do build Linux
+        uses: actions/upload-artifact@v4
+        with:
+          name: linux-build
+          path: release/linux/
+
+  build-windows:
+    name: Build for Windows (Cross-compilation)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Instalar dependências de Cross-compilation
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y make g++-mingw-w64-x86-64 zip wget
+
+      - name: Baixar e preparar Allegro para Windows
+        run: |
+          wget https://github.com/liballeg/allegro5/releases/download/5.2.8.0/allegro-5.2.8.0-mingw-x86_64-static.zip -O allegro.zip
+          unzip allegro.zip
+          mv allegro-5.2.8.0-mingw-x86_64-static allegro-build
+
+      - name: Compilar para Windows
+        run: make windows
+
+      - name: Empacotar Artefatos (Windows)
+        run: |
+          mkdir -p release/windows
+          mv flappy.exe release/windows/
+          zip -r release/assets.zip ./assets
+          mv release/assets.zip release/windows/
+
+      - name: Fazer upload do build Windows
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-build
+          path: release/windows/
+
+  create-release:
+    name: Create GitHub Release
+    runs-on: ubuntu-latest
+    needs: [build-linux, build-windows] # Depende dos dois builds
+    permissions:
+      contents: write # Permissão para criar a release
+    steps:
+      - name: Baixar artefato do Linux
+        uses: actions/download-artifact@v4
+        with:
+          name: linux-build
+          path: release/linux
+
+      - name: Baixar artefato do Windows
+        uses: actions/download-artifact@v4
+        with:
+          name: windows-build
+          path: release/windows
+      
+      - name: Criar Release e fazer upload dos artefatos
+        uses: softprops/action-gh-release@v1
+        with:
+          files: |
+            release/linux/flappy.bin
+            release/linux/assets.zip
+            release/windows/flappy.exe
+            release/windows/assets.zip 
