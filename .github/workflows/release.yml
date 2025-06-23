@@ -16,7 +16,7 @@ jobs:
       - name: Instalar dependências do Linux
         run: |
           sudo apt-get update
-          sudo apt-get install -y make g++ liballegro5-dev liballegro-image5-dev liballegro-font5-dev liballegro-ttf5-dev liballegro-primitives5-dev liballegro-audio5-dev liballegro-acodec5-dev zip
+          sudo apt-get install -y make g++ liballegro*5-dev zip
 
       - name: Compilar para Linux
         run: make linux

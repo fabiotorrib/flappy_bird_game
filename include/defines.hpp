@@ -6,6 +6,7 @@
  * e outros valores compartilhados entre módulos.
  */
 #pragma once
+#define _USE_MATH_DEFINES
 #include <cmath>
 #include <string>
 #include <vector>
