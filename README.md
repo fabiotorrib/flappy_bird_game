@@ -31,6 +31,8 @@ O desenvolvimento do projeto apresentou desafios interessantes como:
 - **Sincronização dos Frames** Garantir que todas as máquinas estejam atualizando a tela na mesma taxa de atualização, para evitar diferentes velocidades nos jogos para clocks de máquinas diferentes.
 - **Primeiros Passos** Implementar e modelar a máquina de estados que armazena a lógica de diferentes telas do jogo.
 - **Jogo** Modelar a dinâmica de jogo, com diferentes movimentações, objetos, colisões, etc.
+- **Tratamento de Exceções e Sintaxe Complexa do Allegro** Tivemos dificuldades para tratar falhas no carregamento de assets devido à sintaxe extensa e pouco intuitiva do Allegro. Para resolver, criamos o módulo Assets, centralizando o carregamento e o tratamento de exceções de forma mais simples e legível. Além disso, utilizamos smart pointers para otimizar o gerenciamento de memória e evitar vazamentos.
+- **Layout Interativo com Navegação por Teclado** Tivemos dificuldades em criar uma navegação de menus totalmente via teclado. Escolhemos teclas intuitivas, como as direcionais para mover entre opções, Enter e Espaço para selecionar ações e ESC para voltar ou sair do jogo.
 
 ## Implementações Extras
 
