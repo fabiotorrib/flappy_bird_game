@@ -47,7 +47,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y make g++-mingw-w64-x86-64 zip wget pkg-config
 
-      - name: Baixar e preparar Allegro para Windows
+      - name: Baixar e preparar Allegro para Windows  
         run: |
           # Download da versão monolítica estática 5.2.9.0 (estável)
           wget https://github.com/liballeg/allegro5/releases/download/5.2.9.0/allegro-x86_64-w64-mingw32-gcc-13.2.0-posix-seh-static-5.2.9.0.zip -O allegro.zip
@@ -66,8 +66,6 @@ jobs:
           ls -la allegro-build/lib/
           echo "=== Headers no allegro-build/include ==="
           ls -la allegro-build/include/
-          echo "=== Verificar símbolos na biblioteca ==="
-          x86_64-w64-mingw32-nm -D allegro-build/lib/liballegro_monolith-static.a | head -20
 
       - name: Compilar para Windows
         run: make windows

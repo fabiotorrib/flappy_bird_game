@@ -23,7 +23,12 @@ else
         CXXFLAGS    := $(CXXFLAGS_COMMON) -I./allegro-build/include
         # Link estático para que o .exe seja portátil
         LDLIBS      := -L./allegro-build/lib \
-                       -Wl,--start-group -lallegro_monolith-static -Wl,--end-group \
+                       -Wl,--start-group \
+                       -lallegro-static -lallegro_main-static \
+                       -lallegro_image-static -lallegro_font-static \
+                       -lallegro_ttf-static -lallegro_primitives-static \
+                       -lallegro_audio-static -lallegro_acodec-static \
+                       -Wl,--end-group \
                        -static-libgcc -static-libstdc++ \
                        -lopengl32 -lgdi32 -luser32 -lkernel32 -lpsapi -lwinmm \
                        -luuid -lshlwapi -lole32 -lcomctl32 -lws2_32 -ldxguid -ldsound
