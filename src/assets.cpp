@@ -16,14 +16,14 @@ std::unique_ptr<Sound> selectSound;
  * Atualmente apenas o efeito de som de seleção de menu é carregado, porém a
  * função pode ser estendida para outros assets compartilhados.
  */
-void loadGlobalAssets(){
+void loadGlobalAssets() {
   selectSound = std::make_unique<Sound>("assets/selectSound.wav");
 }
 
 /**
  * @brief Libera os recursos globais previamente carregados.
  */
-void unloadGlobalAssets(){
+void unloadGlobalAssets() {
   selectSound.reset();
 }
 
@@ -37,13 +37,13 @@ void unloadGlobalAssets(){
  */
 Image::Image(const char *diretorio) {
   image = al_load_bitmap(diretorio);
-  this->x = -1000;
-  this->y = -1000;
   if (!image) {
     std::cout << "ERRO: Falha ao carregar a imagem em: " << diretorio
               << std::endl;
     throw std::bad_alloc();
   }
+  this->x = -1000;
+  this->y = -1000;
 }
 
 /**
@@ -55,13 +55,13 @@ Image::Image(const char *diretorio) {
  */
 Image::Image(const char *diretorio, float x, float y) {
   image = al_load_bitmap(diretorio);
-  this->x = x;
-  this->y = y;
   if (!image) {
     std::cout << "ERRO: Falha ao carregar a imagem em: " << diretorio
               << std::endl;
     throw std::bad_alloc();
   }
+  this->x = x;
+  this->y = y;
 }
 
 /**
@@ -69,19 +69,22 @@ Image::Image(const char *diretorio, float x, float y) {
  * @param x Posição X.
  * @param y Posição Y.
  */
-void Image::Draw(float x, float y) { al_draw_bitmap(image, x, y, 0); }
+void Image::Draw(float x, float y) {
+  al_draw_bitmap(image, x, y, 0);
+}
 
 /**
  * @brief Desenha a imagem usando as coordenadas internas armazenadas.
  */
-void Image::Draw() { al_draw_bitmap(image, x, y, 0); }
+void Image::Draw() {
+  al_draw_bitmap(image, x, y, 0);
+}
 
 /**
  * @brief Libera o bitmap associado.
  */
-Image::~Image() { 
-  if(image)
-  al_destroy_bitmap(image); 
+Image::~Image() {
+  if (image) al_destroy_bitmap(image);
 }
 
 /**
@@ -90,7 +93,7 @@ Image::~Image() {
  * @throw std::bad_alloc Se falhar ao carregar o stream.
  */
 Music::Music(const char *diretorio) {
-  music = al_load_audio_stream(diretorio, 8, 4096);
+  music = al_load_audio_stream(diretorio, 16, 8192);
   if (!music) {
     std::cout << "ERRO: Falha ao carregar a música em: " << diretorio
               << std::endl;
@@ -109,9 +112,8 @@ void Music::playMusic() {
 /**
  * @brief Libera o stream de áudio.
  */
-Music::~Music() { 
-  if(music)
-  al_destroy_audio_stream(music); 
+Music::~Music() {
+  if (music) al_destroy_audio_stream(music);
 }
 
 /**
@@ -138,9 +140,8 @@ void Sound::playSound(float volume) {
 /**
  * @brief Libera o sample de áudio.
  */
-Sound::~Sound() { 
-  if(sound)
-  al_destroy_sample(sound);
+Sound::~Sound() {
+  if (sound) al_destroy_sample(sound);
 }
 
 /**
@@ -180,7 +181,6 @@ void TextFont::writeText(const char *texto, int alinhamento, float x, float y) {
 /**
  * @brief Libera a fonte carregada.
  */
-TextFont::~TextFont() { 
-  if(font)
-  al_destroy_font(font); 
+TextFont::~TextFont() {
+  if (font) al_destroy_font(font);
 }
