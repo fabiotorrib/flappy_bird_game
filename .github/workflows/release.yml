@@ -15,24 +15,26 @@ jobs:
 
       - name: Instalar dependências do Linux
         run: |
+          sudo add-apt-repository universe
           sudo apt-get update
           sudo apt-get install -y make g++ liballegro5-dev liballegro-image5-dev liballegro-font5-dev liballegro-ttf5-dev liballegro-primitives5-dev liballegro-audio5-dev liballegro-acodec5-dev zip
 
       - name: Compilar para Linux
         run: make linux
 
-      - name: Empacotar Artefatos (Linux)
+      - name: Empacotar build para Linux
         run: |
-          mkdir -p release/linux
-          mv flappy.bin release/linux/
-          zip -r release/assets.zip ./assets
-          mv release/assets.zip release/linux/
-
+          mkdir package-linux
+          mv flappy.bin package-linux/
+          cp -r assets/ package-linux/
+          cd package-linux
+          zip -r ../linux-build.zip .
+      
       - name: Fazer upload do build Linux
         uses: actions/upload-artifact@v4
         with:
-          name: linux-build
-          path: release/linux/
+          name: linux-build-zip
+          path: linux-build.zip
 
   build-windows:
     name: Build for Windows (Cross-compilation)
@@ -48,25 +50,26 @@ jobs:
 
       - name: Baixar e preparar Allegro para Windows
         run: |
-          wget https://github.com/liballeg/allegro5/releases/download/5.2.8.0/allegro-5.2.8.0-mingw-x86_64-static.zip -O allegro.zip
+          wget https://github.com/liballeg/allegro5/releases/download/5.2.9.0/allegro-x86_64-w64-mingw32-gcc-13.2.0-posix-seh-static-5.2.9.0.zip -O allegro.zip
           unzip allegro.zip
-          mv allegro-5.2.8.0-mingw-x86_64-static allegro-build
+          mv allegro-x86_64-w64-mingw32-gcc-13.2.0-posix-seh-static-5.2.9.0 allegro-build
 
       - name: Compilar para Windows
         run: make windows
 
-      - name: Empacotar Artefatos (Windows)
+      - name: Empacotar build para Windows
         run: |
-          mkdir -p release/windows
-          mv flappy.exe release/windows/
-          zip -r release/assets.zip ./assets
-          mv release/assets.zip release/windows/
+          mkdir package-windows
+          mv flappy.exe package-windows/
+          cp -r assets/ package-windows/
+          cd package-windows
+          zip -r ../windows-build.zip .
 
       - name: Fazer upload do build Windows
         uses: actions/upload-artifact@v4
         with:
-          name: windows-build
-          path: release/windows/
+          name: windows-build-zip
+          path: windows-build.zip
 
   create-release:
     name: Create GitHub Release
@@ -78,20 +81,16 @@ jobs:
       - name: Baixar artefato do Linux
         uses: actions/download-artifact@v4
         with:
-          name: linux-build
-          path: release/linux
+          name: linux-build-zip
 
       - name: Baixar artefato do Windows
         uses: actions/download-artifact@v4
         with:
-          name: windows-build
-          path: release/windows
+          name: windows-build-zip
       
-      - name: Criar Release e fazer upload dos artefatos
+      - name: Criar Release e fazer upload dos pacotes
         uses: softprops/action-gh-release@v1
         with:
           files: |
-            release/linux/flappy.bin
-            release/linux/assets.zip
-            release/windows/flappy.exe
-            release/windows/assets.zip 
+            linux-build.zip
+            windows-build.zip 
