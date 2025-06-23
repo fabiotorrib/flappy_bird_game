@@ -28,6 +28,9 @@ O desenvolvimento do projeto apresentou desafios interessantes como:
 
 - **Produção de Sprites:** Produzir sprites que se encaixassem esteticamente nas animações e nos 3 climas criados.
 - **Sincronização de Animações:** Preserva a fluidez e em sincronizar as animações do clima de neve e chuva na tela de forma que os sprites sempre estejam na tela.
+- **Sincronização dos Frames** Garantir que todas as máquinas estejam atualizando a tela na mesma taxa de atualização, para evitar diferentes velocidades nos jogos para clocks de máquinas diferentes.
+- **Primeiros Passos** Implementar e modelar a máquina de estados que armazena a lógica de diferentes telas do jogo.
+- **Jogo** Modelar a dinâmica de jogo, com diferentes movimentações, objetos, colisões, etc.
 
 ## Implementações Extras
 
