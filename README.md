@@ -74,15 +74,52 @@ FlyUFMG requer a biblioteca Allegro 5 para rodar.
 
 Para compilar e executar o projeto, certifique-se de ter o `g++`(com suporte a C++17), `make` e a biblioteca `Allegro 5` devidamente instalados.
 
+### Compilação para Linux
+
 **Comando para compilar:**
 ```bash
-make
+make linux
 ```
 
 **Comando para executar:**
 ```bash
-./flappy.exe
+./flappy.bin
 ```
+
+### Cross-compilation para Windows
+
+O projeto suporta cross-compilation para Windows a partir de um ambiente Linux. O processo foi otimizado para resolver problemas de linkagem com dependências externas:
+
+**Pré-requisitos:**
+```bash
+sudo apt-get install make g++-mingw-w64-x86-64 zip wget
+```
+
+**Baixar Allegro para Windows:**
+```bash
+wget https://github.com/liballeg/allegro5/releases/download/5.2.10.0/allegro-x86_64-w64-mingw32-gcc-13.2.0-posix-seh-static-5.2.10.0.zip -O allegro.zip
+unzip allegro.zip
+mv allegro allegro-build
+```
+
+**Comando para compilar:**
+```bash
+make windows
+```
+
+**Executar no Windows:**
+```bash
+flappy.exe
+```
+
+### Correções de Build para Windows
+
+As seguintes melhorias foram implementadas para resolver problemas de linkagem:
+
+- **Atualização do Allegro:** Uso da versão 5.2.10.0 (mais recente)
+- **Linkagem otimizada:** Uso de `--start-group` e `--end-group` para resolver dependências circulares
+- **Bibliotecas do sistema:** Inclusão de todas as bibliotecas necessárias do Windows (DirectSound, OpenGL, etc.)
+- **Linkagem estática:** Garantia de executável portável sem dependências externas
 
 **Executando os testes:**
 O projeto utiliza a biblioteca `doctest` para os testes unitários. Para compilá-los e executá-los:

@@ -22,7 +22,11 @@ else
         CXX         := $(CXX_WINDOWS)
         CXXFLAGS    := $(CXXFLAGS_COMMON) -I./allegro-build/include
         # Link estático para que o .exe seja portátil
-        LDLIBS      := -L./allegro-build/lib -static -lallegro_monolith-static -lopengl32 -lgdi32 -luser32 -lkernel32 -lpsapi -lwinmm -lstdc++fs -luuid -lshlwapi
+        LDLIBS      := -L./allegro-build/lib \
+                       -Wl,--start-group -lallegro_monolith-static -Wl,--end-group \
+                       -static-libgcc -static-libstdc++ \
+                       -lopengl32 -lgdi32 -luser32 -lkernel32 -lpsapi -lwinmm \
+                       -luuid -lshlwapi -lole32 -lcomctl32 -lws2_32 -ldxguid -ldsound
         MAKECMDGOALS := all # Força o alvo 'all'
     else
         # Build padrão para Linux
