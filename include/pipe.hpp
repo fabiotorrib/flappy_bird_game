@@ -23,8 +23,8 @@
  */
 class Pipe : public GameObject {
  private:
-  float vx = 0;   //!< horizontal velocity (pixels per frame)
-  bool scored;    //!< true after the bird has already scored on this pipe
+  float vx = 0;  //!< horizontal velocity (pixels per frame)
+  bool scored;   //!< true after the bird has already scored on this pipe
 
  public:
   /**
@@ -73,12 +73,13 @@ class Pipe : public GameObject {
 /* -------------------------------------------------------------------------- */
 /**
  * @class PipePair
- * @brief Agrupa dois canos (superior e inferior) podendo ter movimento vertical.
+ * @brief Agrupa dois canos (superior e inferior) podendo ter movimento
+ * vertical.
  */
 class PipePair {
  public:
-  Pipe bottom;        //!< lower pipe
-  Pipe top;           //!< upper pipe
+  Pipe bottom;            //!< lower pipe
+  Pipe top;               //!< upper pipe
   bool movement = false;  //!< true if pair moves vertically
   float signal = 1.0;     //!< direction multiplier for vertical motion
 
@@ -120,18 +121,19 @@ class PipePair {
  */
 class PipeList {
  private:
-  ALLEGRO_BITMAP* pipe1 = nullptr;      //!< bitmap reference for new pipes
-  std::vector<PipePair> Pipes;          //!< active pipe pairs
-  bool start = false;                   //!< true after first pipe is spawned
-  int points = 0;                       //!< current score
+  ALLEGRO_BITMAP* pipe1 = nullptr;  //!< bitmap reference for new pipes
+  std::vector<PipePair> Pipes;      //!< active pipe pairs
+  bool start = false;               //!< true after first pipe is spawned
+  int points = 0;                   //!< current score
   inline static std::mt19937 gen{std::random_device{}()};
-  int difficulty_pipe = 1;              //!< 1 = static, 2 = with movers
+  int difficulty_pipe = 1;  //!< 1 = static, 2 = with movers
 
  public:
   /**
    * @brief Construct a list manager.
    * @param img Bitmap to use when spawning new pipe pairs.
    */
+  PipeList();
   PipeList(ALLEGRO_BITMAP* img);
 
   /** @brief Draw every pipe pair. */
@@ -176,7 +178,9 @@ class PipeList {
   void set_difficulty(int diff);
 
   /** @brief Expose internal pipe vector (read-only). */
-  const std::vector<PipePair>& get_pipe_pairs() const { return Pipes; }
+  const std::vector<PipePair>& get_pipe_pairs() const {
+    return Pipes;
+  }
 
   /** @brief Clear list and reset all counters. */
   void reset();

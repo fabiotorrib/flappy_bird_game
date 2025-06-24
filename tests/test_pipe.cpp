@@ -14,7 +14,6 @@ TEST_CASE("Testando a Classe Pipe e PipeList") {
     pipe.update();
     CHECK(pipe.get_x() == SCREEN_W - PIPE_SPEED);
 
-    // Teste de is_off_screen
     CHECK_FALSE(pipe.is_off_screen());
     pipe.set_x(-100);  // Força a saída da tela
     pipe.set_finals();
@@ -22,13 +21,12 @@ TEST_CASE("Testando a Classe Pipe e PipeList") {
   }
 
   SUBCASE("PipeList - Pontuação") {
-    PipeList list;
+    PipeList list(fake_bmp);
     list.reset();
     list.set_start();
     list.add_pipe_pair();  // Adiciona um cano na posição x = SCREEN_W
 
     // Verifica se o cano foi realmente adicionado
-    // REQUIRE é como o CHECK, mas para a execução do teste se ele falhar
     REQUIRE(list.get_pipe_pairs().empty() == false);
 
     // Pega o cano que acabamos de criar para inspecioná-lo
@@ -43,18 +41,14 @@ TEST_CASE("Testando a Classe Pipe e PipeList") {
     CHECK_FALSE(scored_too_early);
     CHECK(list.get_points() == 0);
 
-    // Agora, simulamos que o pássaro passou 1 pixel além da borda direita do
-    // cano
     bool scored_correctly = list.check_score(pipe_x_final + 1.0f);
 
-    // As verificações agora devem passar, independentemente da largura real da
-    // imagem do cano
     CHECK(scored_correctly == true);
     CHECK(list.get_points() == 1);
   }
 
   SUBCASE("PipeList - Colisão") {
-    PipeList list;
+    PipeList list(fake_bmp);
     list.reset();
     list.set_start();
     list.add_pipe_pair();  // Adiciona cano em x=1280, y=360, w=50, h=300
@@ -65,11 +59,9 @@ TEST_CASE("Testando a Classe Pipe e PipeList") {
     Bird bottom_crash_bird(fake_bird_bmp, SCREEN_W, 361, fake_bird_bmp,
                            fake_bird_bmp);
 
-    // ===== CORREÇÃO CRÍTICA AQUI =====
     // Inicializamos as fronteiras de colisão do pássaro antes de usar.
     bottom_crash_bird.set_finals();
     bottom_crash_bird.set_by();
-    // ===================================
 
     CHECK(list.check_collision(bottom_crash_bird) == true);
 
