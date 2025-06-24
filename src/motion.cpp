@@ -40,6 +40,12 @@ void Motion::setController(int x) {
 // Animação de todos sprites da tela de fundo
 void Motion::update() {
 
+  // Exceção
+  if(!(controller == 1 || controller == 2 || controller == 3)){
+    controller = 1;
+    std::cerr << "Valor invalido setado no controller!" << std::endl;
+  }
+
   // Atualiza a posição do clima ensolarado
   if (controller == 1) {
     // Altera a posição do feixe de luz
