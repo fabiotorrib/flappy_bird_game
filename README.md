@@ -9,7 +9,7 @@
 
 ## Visão Geral da Solução
 
-O jogo foi construído utilizando a linguagem C++ (padrão C++17) e a biblioteca gráfica Allegro 5 para manipulação de janelas, renderização, entrada de usuário (teclado e mouse) e áudio.
+O jogo foi construído utilizando a linguagem C++ (padrão C++17) e a biblioteca gráfica Allegro 5 para manipulação de janelas, renderização, entrada de usuário teclado e saida de áudio.
 
 ### Estrutura do Programa
 

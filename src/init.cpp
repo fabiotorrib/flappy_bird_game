@@ -81,7 +81,7 @@ void init() {
   al_register_event_source(event_queue, al_get_timer_event_source(timer_FPS));
 
   // titulo da janela
-  al_set_window_title(display, "Flappy Bird");
+  al_set_window_title(display, "FlyUFMG");
   al_set_blender(ALLEGRO_ADD, ALLEGRO_ONE, ALLEGRO_INVERSE_ALPHA);
 
   // associa display e a fila ao statico do estado
